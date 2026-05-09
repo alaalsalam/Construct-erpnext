@@ -366,3 +366,34 @@
 - Verified over-ownership validation blocks active ownership above 100 percent.
 - Verified inventory reports, Real Estate Inventory workspace, Executive Control Center, Reports & Analytics, and existing EVM/Cash Flow/IPC reports load.
 - Confirmed no tenant fields exist on Unit and no Lease Contract, Sales Contract, Reservation, Smart Matching, accounting documents, or El Salvador localization were introduced.
+
+## 2026-05-09 23:05:22 CEST
+
+- Created branch feature/unit-cost-profitability-foundation from feature/real-estate-inventory-foundation.
+- Inspected Real Estate Project, Building, Floor, Unit, Project Financial Snapshot, Project Cash Flow Forecast, Project EVM Metrics, Construction BOQ, Construction Work Item, Purchase Invoice, Stock Entry, Interim Payment Certificate, Contractor Account, and Project Cost Entry fields before implementation.
+- Added internal Unit Costing module.
+- Created DocTypes: Unit Cost Allocation and Unit Cost Allocation Line.
+- Updated Unit with latest_cost_allocation, allocated_cost_source, allocated_cost_date, and profitability_status fields while reusing existing allocated_cost, expected_sale_price, expected_monthly_rent, expected_margin, and expected_margin_percent fields.
+- Implemented construct_erpnext.unit_costing.allocation_utils for project cost source lookup, unit selection, allocation calculation, allocation application, unit profitability recalculation, and whitelisted allocation helpers.
+- Added an idempotent Unit Costing after_migrate workspace sync so installed Workspace records receive the new links reliably.
+- Added reports: Unit Cost Allocation Report, Unit Profitability Report, Real Estate Project Profitability Summary, and Building Profitability Summary.
+- Updated Real Estate Inventory, Executive Control Center, and Reports & Analytics workspace links.
+- Ran JSON validation, Python compile checks, migration, site cache clear, and website cache clear.
+- Updated retained Arabic validation units with requested area and expected sale values.
+- Created and applied Unit Cost Allocation UCA-2026-00001:
+  - Real Estate Project: REP-2026-00001 / مشروع البرج السكني المتكامل العقاري.
+  - Allocation basis: By Area.
+  - Cost source: BOQ Total.
+  - Source amount: 3500000.
+  - Total allocated amount: 3500000.
+  - Unallocated amount: 0.
+  - Remarks: توزيع تكلفة مشروع البرج السكني على الوحدات.
+- Verified unit profitability results:
+  - A-101 allocated 928030.303, margin 271969.697, margin percent 22.664141414, Profitable.
+  - A-102 allocated 861742.424, margin 288257.576, margin percent 25.065876153, Profitable.
+  - A-201 allocated 994318.182, margin 305681.818, margin percent 23.513986014, Profitable.
+  - A-G01 allocated 596590.909, margin 1203409.091, margin percent 66.856060606, Profitable.
+  - P-01 allocated 119318.182, margin 30681.818, margin percent 20.454545455, Profitable.
+- Verified project profitability summary: 5 units, total area 528, expected sales value 5600000, allocated cost 3500000, expected gross margin 2100000, expected margin 37.5 percent.
+- Verified Unit Costing reports, existing Unit Inventory Report, EVM report, IPC Register, and product workspaces load successfully.
+- Confirmed no tenant fields exist on Unit and no Lease Contract, Sales Contract, Reservation, Smart Matching, Journal Entries, accounting documents, Server Scripts, or El Salvador localization were introduced.

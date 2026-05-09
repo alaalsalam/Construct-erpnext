@@ -115,3 +115,11 @@
 - Property Ownership uses fieldname property_owner because owner is a reserved Frappe document metadata field.
 - Tenant is intentionally excluded from Unit and will be linked later through Lease Contract.
 - Sales Contract, Lease Contract, Reservation, Smart Matching, and Unit Cost Allocation are deferred to later phases.
+
+## ADR-016: Unit Cost Allocation As Management Layer
+
+- Unit Cost Allocation is a management/control layer that allocates project costs to real estate units without creating accounting entries.
+- ERPNext accounting remains the source of truth for GL, invoices, payments, and official financial postings.
+- Allocation documents preserve the allocation basis, source amount, unit lines, calculated percentages, and profitability status for review.
+- Applying an allocation updates Unit allocated_cost, latest allocation, margin, and profitability status for operational reporting.
+- Reversing or changing allocation policy must be handled as a controlled management update and must not erase accounting history.

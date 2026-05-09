@@ -62,3 +62,7 @@ Updated risks:
 - Property Ownership uses property_owner as the technical fieldname because owner is reserved by Frappe.
 - Unit status values such as Sold and Rented are inventory statuses only until Sales Contract and Lease Contract are implemented.
 - Unit allocated_cost is a placeholder and must not be treated as final profitability until Unit Cost Allocation is implemented.
+- Unit Cost Allocation is a management/control layer and must not be treated as GL or official accounting allocation.
+- Area-based allocation assumes the selected unit set and area values represent the intended allocation policy; parking, storage, common areas, and commercial units may need separate weighting rules later.
+- Applying a new allocation updates current Unit allocated_cost and profitability fields; historical allocation documents are retained, but reporting must distinguish current Unit values from previous allocations.
+- Unit Costing workspace links require the app-level after_migrate sync because installed Workspace records may not be overwritten by JSON changes alone.

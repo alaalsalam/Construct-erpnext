@@ -7,6 +7,7 @@ from construct_erpnext.real_estate_inventory.inventory_utils import (
 	sync_unit_status,
 	update_related_counts,
 )
+from construct_erpnext.unit_costing.allocation_utils import get_profitability_status
 
 
 class Unit(Document):
@@ -48,4 +49,7 @@ class Unit(Document):
 			self.expected_margin / flt(self.expected_sale_price) * 100
 			if flt(self.expected_sale_price)
 			else 0
+		)
+		self.profitability_status = get_profitability_status(
+			self.expected_sale_price, self.expected_margin_percent
 		)

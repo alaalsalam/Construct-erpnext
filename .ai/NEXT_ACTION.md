@@ -1,3 +1,3 @@
 # Next Action
 
-Design and implement Unit Cost Allocation and Unit Profitability foundation.
+Design and implement Reservation and Sales/Rental entry foundation.

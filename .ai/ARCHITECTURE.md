@@ -233,6 +233,34 @@ Real estate inventory reports:
 - Ownership Summary Report
 - Real Estate Project Summary
 
+## Unit Costing Foundation
+
+Internal module:
+
+- unit_costing
+
+DocTypes:
+
+- Unit Cost Allocation
+- Unit Cost Allocation Line
+
+Services:
+
+- allocation_utils calculates source project cost, unit allocation lines, unit margins, profitability status, and allocation application.
+
+Reports:
+
+- Unit Cost Allocation Report
+- Unit Profitability Report
+- Real Estate Project Profitability Summary
+- Building Profitability Summary
+
+Integration:
+
+- Unit Cost Allocation reads Real Estate Project, Unit, and Project Financial Snapshot data.
+- Applied allocations update Unit allocated_cost, latest_cost_allocation, allocated_cost_source, allocated_cost_date, expected_margin, expected_margin_percent, and profitability_status.
+- No accounting documents, Journal Entries, Sales Contracts, Lease Contracts, Reservations, or tenant fields are created in this phase.
+
 ## Role-Oriented Navigation
 
 - Executive / CFO: Executive Control Center, Reports & Analytics, selected Finance records.

@@ -100,5 +100,10 @@ Phase 8 deliverables:
 - Add inventory reports: Unit Inventory Report, Unit Availability Report, Ownership Summary Report, Real Estate Project Summary. Completed.
 - Add Real Estate Inventory workspace links and executive/reporting links. Completed.
 - Create retained Arabic validation inventory for مشروع البرج السكني المتكامل. Completed.
-- Tenant, Lease Contract, Sales Contract, Reservation, Smart Matching, and Unit Cost Allocation remain deferred.
-- Next Phase 8 extension: design and implement Unit Cost Allocation and Unit Profitability foundation.
+- Create Unit Cost Allocation and Unit Cost Allocation Line DocTypes. Completed.
+- Implement deterministic unit cost allocation by area, equal share, manual percentage, and manual amount. Completed.
+- Apply allocation to Unit allocated cost, margin, and profitability fields without accounting entries. Completed.
+- Add unit costing reports: Unit Cost Allocation Report, Unit Profitability Report, Real Estate Project Profitability Summary, Building Profitability Summary. Completed.
+- Add Unit Costing links to Real Estate Inventory, Executive Control Center, and Reports & Analytics workspaces. Completed.
+- Tenant, Lease Contract, Sales Contract, Reservation, and Smart Matching remain deferred.
+- Next Phase 9: design and implement Reservation and Sales/Rental entry foundation.

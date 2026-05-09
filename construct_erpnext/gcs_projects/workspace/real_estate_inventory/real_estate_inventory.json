@@ -22,11 +22,16 @@
   {"hidden": 0, "is_query_report": 0, "label": "Ownership", "link_count": 0, "onboard": 0, "type": "Card Break"},
   {"hidden": 0, "is_query_report": 0, "label": "Property Owner", "link_count": 0, "link_to": "Property Owner", "link_type": "DocType", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Property Ownership", "link_count": 0, "link_to": "Property Ownership", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Unit Cost Allocation", "link_count": 0, "link_to": "Unit Cost Allocation", "link_type": "DocType", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Inventory Reports", "link_count": 0, "onboard": 0, "type": "Card Break"},
   {"hidden": 0, "is_query_report": 1, "label": "Unit Inventory Report", "link_count": 0, "link_to": "Unit Inventory Report", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Unit Availability Report", "link_count": 0, "link_to": "Unit Availability Report", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Ownership Summary Report", "link_count": 0, "link_to": "Ownership Summary Report", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Real Estate Project Summary", "link_count": 0, "link_to": "Real Estate Project Summary", "link_type": "Report", "onboard": 0, "type": "Link"}
+  {"hidden": 0, "is_query_report": 1, "label": "Real Estate Project Summary", "link_count": 0, "link_to": "Real Estate Project Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Unit Cost Allocation Report", "link_count": 0, "link_to": "Unit Cost Allocation Report", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Unit Profitability Report", "link_count": 0, "link_to": "Unit Profitability Report", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Real Estate Project Profitability Summary", "link_count": 0, "link_to": "Real Estate Project Profitability Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Building Profitability Summary", "link_count": 0, "link_to": "Building Profitability Summary", "link_type": "Report", "onboard": 0, "type": "Link"}
  ],
  "modified": "2026-05-09 00:00:00.000000",
  "modified_by": "Administrator",

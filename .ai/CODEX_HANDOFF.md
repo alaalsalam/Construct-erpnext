@@ -189,4 +189,18 @@ Real Estate Inventory foundation status:
 - Property Ownership uses fieldname property_owner because owner is reserved by Frappe.
 - Inventory reports and product workspaces load.
 
-Next operational task: Design and implement Unit Cost Allocation and Unit Profitability foundation.
+Unit Cost Allocation and Unit Profitability foundation status:
+- Branch: feature/unit-cost-profitability-foundation.
+- New module: construct_erpnext/unit_costing.
+- New DocTypes: Unit Cost Allocation and Unit Cost Allocation Line.
+- Unit fields added: latest_cost_allocation, allocated_cost_source, allocated_cost_date, profitability_status.
+- Existing Unit fields reused: allocated_cost, expected_sale_price, expected_monthly_rent, expected_margin, expected_margin_percent.
+- Allocation service: construct_erpnext.unit_costing.allocation_utils.
+- New reports: Unit Cost Allocation Report, Unit Profitability Report, Real Estate Project Profitability Summary, Building Profitability Summary.
+- Unit Costing workspace links are synced through construct_erpnext.unit_costing.setup.after_migrate.
+- Validation allocation UCA-2026-00001 is retained for REP-2026-00001 with source amount 3500000, total allocated 3500000, and unallocated amount 0.
+- All five Arabic validation units are currently Profitable after allocation.
+- Unit Cost Allocation is operational management control only and creates no accounting entries.
+- No tenant fields, Lease Contract, Sales Contract, Reservation, or Smart Matching were created.
+
+Next operational task: Design and implement Reservation and Sales/Rental entry foundation.

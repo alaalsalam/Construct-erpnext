@@ -24,3 +24,6 @@ Updated risks:
 - Plain system python3 does not import bench editable apps; use the bench virtualenv Python for import smoke checks unless system Python is explicitly configured.
 - Legacy GCS module names remain in metadata even though user-facing workspaces are product-oriented; full module renaming remains postponed.
 - Workspace visibility for existing GCS records required a database patch because JSON sync alone did not update existing records.
+- Construction BOQ workflow must be kept in sync through after_migrate setup because Workflow records are not part of Frappe v15 model sync.
+- construction.yemenfrappe.com currently lacks normal baseline Company/Project data for full end-user BOQ entry validation; rollback-only validation used lightweight records and did not leave seed data.
+- Construction Work Item currently tracks planned and certified quantities only; procurement, stock, actual cost, Measurement Book, and IPC links still need implementation.

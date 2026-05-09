@@ -1,0 +1,10 @@
+{
+ "disabled": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "Construction BOQ",
+ "name": "Construction BOQ Cost Analysis",
+ "ref_doctype": "Construction BOQ",
+ "report_name": "Construction BOQ Cost Analysis",
+ "report_type": "Script Report"
+}

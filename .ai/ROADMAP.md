@@ -19,3 +19,13 @@ Phase 2 deliverables:
 - Keep useful construction finance/project DocTypes available under role-oriented workspaces. Completed for existing DocTypes/reports.
 - Do not create BOQ, IPC, or real estate DocTypes during Phase 2.
 - Keep construct_erpnext package name and existing construction modules working.
+
+Phase 3 deliverables:
+
+- Create Construction BOQ foundation. Completed.
+- Create Cost Code and WBS Element masters. Completed.
+- Create Construction BOQ and Construction BOQ Item planning structure. Completed.
+- Generate standalone Construction Work Items from approved BOQ rows. Completed.
+- Add BOQ cost analysis and variance reports. Completed.
+- Add BOQ links to Construction Control and Reports & Analytics workspaces. Completed.
+- Next Phase 3/4 bridge: link BOQ Work Items to procurement and site warehouse flows.

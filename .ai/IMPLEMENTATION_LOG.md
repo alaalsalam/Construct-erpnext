@@ -69,3 +69,18 @@
 - Verified 8 product workspaces are visible and 8 legacy GCS workspaces are hidden/non-public.
 - Verified existing construct DocType count remains 72 and no BOQ, IPC, Measurement Book, or Real Estate DocTypes were created.
 - Verified product workspace links resolve statically and cleared site/website cache.
+
+## 2026-05-09 17:01:22 CEST
+
+- Created branch feature/construction-boq-foundation from feature/product-delocalization.
+- Inspected existing Construction Budget, Budget Level, Project Cost Entry, Physical Advancement, Budget Change Order, Material Distribution, Insumo, and Insumo Price Scenario structures before implementing BOQ.
+- Added internal Construction BOQ module inside construct_erpnext without renaming the package.
+- Added DocTypes: Cost Code, WBS Element, Construction BOQ, Construction BOQ Item, and Construction Work Item.
+- Implemented Document Controllers for BOQ item calculations, BOQ category totals, BOQ variance, WBS validation, Cost Code restrictions, and Work Item tracking calculations.
+- Added Construction BOQ Approval Workflow through an idempotent after_migrate setup hook because Workflow records sync after DocType schema sync in Frappe v15.
+- Added Script Reports: Construction BOQ Cost Analysis and Construction BOQ Variance.
+- Updated Construction Control and Reports & Analytics workspace JSON with BOQ links.
+- Ran python compile and JSON validation checks successfully.
+- Ran bench migrate, clear-cache, and clear-website-cache on construction.yemenfrappe.com.
+- Verified new DocTypes, reports, workflow, workspace links, BOQ calculations, workflow approval, work-item generation, and report loading using rollback-only validation records.
+- Verified existing construct DocTypes remain accessible.

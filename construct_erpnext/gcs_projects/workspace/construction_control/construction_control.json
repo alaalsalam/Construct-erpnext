@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"cc_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Construction Control</b></span>\",\"col\":12}},{\"id\":\"cc_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Budgets & Schedule\",\"col\":4}},{\"id\":\"cc_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Progress & Costs\",\"col\":4}},{\"id\":\"cc_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Site Resources\",\"col\":4}}]",
+ "content": "[{\"id\":\"cc_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Construction Control</b></span>\",\"col\":12}},{\"id\":\"cc_c0\",\"type\":\"card\",\"data\":{\"card_name\":\"BOQ Foundation\",\"col\":3}},{\"id\":\"cc_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Budgets & Schedule\",\"col\":3}},{\"id\":\"cc_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Progress & Costs\",\"col\":3}},{\"id\":\"cc_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Site Resources\",\"col\":3}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,6 +13,11 @@
  "is_hidden": 0,
  "label": "Construction Control",
  "links": [
+  {"hidden": 0, "is_query_report": 0, "label": "BOQ Foundation", "link_count": 0, "onboard": 0, "type": "Card Break"},
+  {"hidden": 0, "is_query_report": 0, "label": "Construction BOQ", "link_count": 0, "link_to": "Construction BOQ", "link_type": "DocType", "onboard": 1, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Construction Work Item", "link_count": 0, "link_to": "Construction Work Item", "link_type": "DocType", "onboard": 1, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "WBS Element", "link_count": 0, "link_to": "WBS Element", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Cost Code", "link_count": 0, "link_to": "Cost Code", "link_type": "DocType", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Budgets & Schedule", "link_count": 0, "onboard": 0, "type": "Card Break"},
   {"hidden": 0, "is_query_report": 0, "label": "Construction Budget", "link_count": 0, "link_to": "Construction Budget", "link_type": "DocType", "onboard": 1, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Budget Level", "link_count": 0, "link_to": "Budget Level", "link_type": "DocType", "onboard": 0, "type": "Link"},
@@ -25,7 +30,7 @@
   {"hidden": 0, "is_query_report": 0, "label": "Labor Hour Entry", "link_count": 0, "link_to": "Labor Hour Entry", "link_type": "DocType", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Equipment Usage Log", "link_count": 0, "link_to": "Equipment Usage Log", "link_type": "DocType", "onboard": 0, "type": "Link"}
  ],
- "modified": "2026-05-09 00:00:00.000000",
+ "modified": "2026-05-09 17:00:06.000000",
  "modified_by": "Administrator",
  "module": "GCS Projects",
  "name": "Construction Control",

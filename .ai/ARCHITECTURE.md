@@ -27,6 +27,29 @@ Final user-facing workspace structure for the generic product base:
 - Sales & Rental: implemented as a product-facing placeholder Workspace.
 - Reports & Analytics: implemented as a product-facing Workspace.
 
+## Construction BOQ Foundation
+
+Implemented internal module: construction_boq / Construction BOQ.
+
+New planning and control DocTypes:
+
+- Cost Code: construction cost classification master.
+- WBS Element: project-level work breakdown master with project-scoped WBS code validation.
+- Construction BOQ: submittable BOQ header with editable child rows and calculated category totals.
+- Construction BOQ Item: child table for BOQ line items, quantities, rates, wastage, markup, and final amount.
+- Construction Work Item: operational work item generated from approved BOQ rows for future procurement, measurement, IPC, progress, and forecasting links.
+
+BOQ reports:
+
+- Construction BOQ Cost Analysis
+- Construction BOQ Variance
+
+Workflow:
+
+- Construction BOQ Approval Workflow is created idempotently after migration.
+- States: Draft, Under Review, Approved, Locked, Cancelled.
+- Approval transition to Approved submits the BOQ and generates Construction Work Items.
+
 Existing GCS workspaces are implementation-era navigation and are hidden from user-facing navigation through workspace JSON and a reversible patch. Keep the underlying construct_erpnext package and existing internal module folders for now; do not rename the Python package.
 
 ## Role-Oriented Navigation

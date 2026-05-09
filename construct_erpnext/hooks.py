@@ -10,6 +10,7 @@ required_apps = ["frappe", "erpnext", "hrms"]
 
 # --- After Install ---
 after_install = "construct_erpnext.setup.install.after_install"
+after_migrate = ["construct_erpnext.construction_boq.setup.ensure_construction_boq_workflow"]
 
 # --- Asset Bundles ---
 app_include_js = "/assets/construct_erpnext/js/construct_erpnext.bundle.js"

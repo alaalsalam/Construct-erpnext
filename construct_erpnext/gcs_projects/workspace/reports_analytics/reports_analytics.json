@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"ra_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Analytics</b></span>\",\"col\":12}},{\"id\":\"ra_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Budget & Cost Reports\",\"col\":4}},{\"id\":\"ra_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Progress Reports\",\"col\":4}},{\"id\":\"ra_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement & Contractor Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"ra_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Analytics</b></span>\",\"col\":12}},{\"id\":\"ra_c0\",\"type\":\"card\",\"data\":{\"card_name\":\"BOQ Reports\",\"col\":3}},{\"id\":\"ra_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Budget & Cost Reports\",\"col\":3}},{\"id\":\"ra_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Progress Reports\",\"col\":3}},{\"id\":\"ra_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement & Contractor Reports\",\"col\":3}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,6 +13,9 @@
  "is_hidden": 0,
  "label": "Reports & Analytics",
  "links": [
+  {"hidden": 0, "is_query_report": 0, "label": "BOQ Reports", "link_count": 0, "onboard": 0, "type": "Card Break"},
+  {"hidden": 0, "is_query_report": 1, "label": "Construction BOQ Cost Analysis", "link_count": 0, "link_to": "Construction BOQ Cost Analysis", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Construction BOQ Variance", "link_count": 0, "link_to": "Construction BOQ Variance", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Budget & Cost Reports", "link_count": 0, "onboard": 0, "type": "Card Break"},
   {"hidden": 0, "is_query_report": 1, "label": "Budget Variance Analysis", "link_count": 0, "link_to": "Budget Variance Analysis", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Budget vs Actual Cost", "link_count": 0, "link_to": "Budget vs Actual Cost", "link_type": "Report", "onboard": 0, "type": "Link"},
@@ -26,7 +29,7 @@
   {"hidden": 0, "is_query_report": 1, "label": "Subcontract Status", "link_count": 0, "link_to": "Subcontract Status", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Change Order History", "link_count": 0, "link_to": "Change Order History", "link_type": "Report", "onboard": 0, "type": "Link"}
  ],
- "modified": "2026-05-09 00:00:00.000000",
+ "modified": "2026-05-09 17:00:06.000000",
  "modified_by": "Administrator",
  "module": "GCS Projects",
  "name": "Reports & Analytics",

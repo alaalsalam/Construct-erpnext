@@ -32,3 +32,10 @@
 - Do not execute El Salvador tax setup, payroll setup, or sv_* custom-field creation during after_install.
 - Do not run El Salvador withholding logic from Purchase Invoice validate.
 - Implement taxes, payroll, and fiscal localization separately per deployment.
+
+## ADR-005: BOQ Rows Become Operational Work Items
+
+- BOQ items are edited inside Construction BOQ as child rows.
+- Approved Construction BOQs generate standalone Construction Work Items.
+- Construction Work Item is the future operational link point for procurement, site warehouses, progress, Measurement Book, IPC, actual costing, and forecasting.
+- Construction BOQ Workflow is created through an after_migrate setup hook for Frappe v15 compatibility.

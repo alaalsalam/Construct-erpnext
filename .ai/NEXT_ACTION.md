@@ -1,3 +1,3 @@
 # Next Action
 
-Design and implement Construction BOQ foundation.
+Implement BOQ linkage with procurement and site warehouses.

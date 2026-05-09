@@ -2,7 +2,7 @@
 
 Read project memory and working rules first, continue from NEXT_ACTION, implement one task at a time, update memory after every task.
 
-Current branch: feature/product-delocalization.
+Current branch: feature/construction-boq-foundation.
 
 Canonical repository path: /home/frappe/frappe-bench/apps/construct_erpnext.
 Old path /home/frappe/frappe-bench/apps/Construct-erpnext was removed by renaming the real repository folder.
@@ -31,6 +31,14 @@ construction.yemenfrappe.com installation status:
   - 8 product-facing workspaces are installed and visible.
   - 8 legacy GCS workspaces are retained but hidden/non-public.
   - Visibility is enforced by construct_erpnext.patches.hide_legacy_gcs_workspaces and is reversible.
-  - No BOQ, IPC, Measurement Book, or real estate DocTypes have been created yet.
+  - BOQ foundation is now implemented; IPC, Measurement Book, and real estate DocTypes have not been created yet.
 
-Next operational task: Design and implement Construction BOQ foundation.
+Construction BOQ foundation status:
+- New module: construct_erpnext/construction_boq.
+- New DocTypes: Cost Code, WBS Element, Construction BOQ, Construction BOQ Item, Construction Work Item.
+- New reports: Construction BOQ Cost Analysis, Construction BOQ Variance.
+- Workflow: Construction BOQ Approval Workflow is created after migration by construct_erpnext.construction_boq.setup.ensure_construction_boq_workflow.
+- Approved BOQs generate Construction Work Items from child BOQ rows.
+- Validation on construction.yemenfrappe.com passed with rollback-only records: totals calculated, workflow approval submitted the BOQ, work item generated, reports loaded, and workspace links appeared.
+
+Next operational task: Implement BOQ linkage with procurement and site warehouses.

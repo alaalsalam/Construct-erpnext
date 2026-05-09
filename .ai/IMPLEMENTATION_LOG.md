@@ -170,3 +170,14 @@
 - Verified Construction Work Item measurement values: measured_qty 25, measurement_progress_percent 25, measurement_status Partially Measured, certified_qty remains 0.
 - Verified procurement reports, measurement reports, product workspaces, Construction BOQ, and Construction Work Item still load.
 - Confirmed Interim Payment Certificate DocType was not created.
+
+## 2026-05-09 19:29:32 CEST
+
+- Performed a site health repair pass for construction.yemenfrappe.com before starting IPC foundation.
+- Verified installed site apps: frappe, erpnext, hrms, and construct_erpnext on branch feature/measurement-book-foundation.
+- Found scheduler disabled/inactive through bench doctor.
+- Enabled scheduler for construction.yemenfrappe.com.
+- Re-ran bench doctor and confirmed scheduler is no longer reported disabled/inactive; workers online: 2.
+- Cleared site cache and website cache.
+- Ran a read-only DocType fetch through bench execute to confirm site/database access is healthy.
+- No ERPNext core changes, schema changes, migrations, or new DocTypes were performed during this repair pass.

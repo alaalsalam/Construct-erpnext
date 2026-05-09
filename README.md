@@ -1,11 +1,11 @@
 # Construct ERPNext
 
-Custom Frappe app for ERPNext v16 targeting Latin American construction companies. Built to replicate [o4bi.com](https://o4bi.com) functionality. Primary deployment: **erp.gcs.sv** (GCS, El Salvador).
+Custom Frappe app for ERPNext v16, being adapted as a generic construction and real estate development ERP product.
 
 **License:** AGPL-3.0
 **Requires:** Frappe, ERPNext, HRMS
 **Currency:** USD
-**Locale:** El Salvador (es)
+**Localization:** Country-specific tax and payroll localization is disabled in this fork and will be implemented separately per deployment.
 
 ---
 
@@ -86,7 +86,6 @@ Custom Frappe app for ERPNext v16 targeting Latin American construction companie
 
 | DocType | Event | Handler |
 |---------|-------|---------|
-| Purchase Invoice | validate | Tax withholding calculation (ISR, IVA retention, generic) |
 | Purchase Invoice | on_submit | Invoice authorization gate |
 | Sales Invoice | on_submit | Payment reminder scheduling |
 | Stock Entry | on_submit | Material cost assignment to activities |
@@ -97,9 +96,11 @@ Custom Frappe app for ERPNext v16 targeting Latin American construction companie
 
 ---
 
-## El Salvador Localization
+## Country Localization
 
-Full localization for El Salvador tax, payroll, and fiscal requirements.
+Country-specific localization is disabled by default in this fork. Taxes, payroll, fiscal document fields, and statutory calculations must be implemented separately per deployment.
+
+Legacy El Salvador helper modules remain in the repository for reference and compatibility, but they are not executed by the install hook and the Purchase Invoice validation hook no longer calls the El Salvador withholding logic.
 
 ### Spanish Translations
 
@@ -113,11 +114,13 @@ Frappe's standard translation system. All user-facing strings in Python (`_()`),
 - Portal menu items
 - Error messages and alerts from all controllers
 - Email subjects and body text
-- El Salvador-specific terms (IVA, ISR, ISSS, AFP, Aguinaldo, etc.)
+- Legacy country-specific terms retained in translation history where present.
 
-### Tax System
+### Legacy Tax System
 
 **Files:** `construct_erpnext/setup/tax_setup.py`, `construct_erpnext/construct_admin/tax_withholding.py`
+
+Disabled by default. The generic product install does not create IVA/ISR accounts, tax categories, tax templates, or fiscal custom fields.
 
 #### IVA (Impuesto al Valor Agregado) -- 13%
 
@@ -135,9 +138,9 @@ Tax templates created automatically:
 - **IVA Compras 13%** -- Purchase tax template (adds 13% to net total)
 - **IVA Ventas 13%** -- Sales tax template (adds 13% to net total)
 
-#### Tax Withholding (3-tier system)
+#### Legacy Tax Withholding
 
-Applied automatically on Purchase Invoice validation:
+Not applied automatically on Purchase Invoice validation.
 
 | Tier | Rate | Condition |
 |------|------|-----------|
@@ -159,9 +162,11 @@ Custom field `sv_document_type` on Sales Invoice:
 | Nota de Debito | Debit notes |
 | Exportacion | Export invoices |
 
-### Payroll System
+### Legacy Payroll System
 
 **File:** `construct_erpnext/setup/payroll_setup.py`
+
+Disabled by default. The generic product install does not create ISSS, AFP, Aguinaldo, or ISR salary components.
 
 #### Salary Components Created
 
@@ -209,7 +214,7 @@ Paid between December 12--20. Daily salary = monthly base / 30.
 
 #### Vacation Rules
 
-When a Vacation Policy has country = "El Salvador" and no manual rules, it auto-applies:
+Legacy behavior: when a Vacation Policy has country = "El Salvador" and no manual rules, it auto-applies:
 
 - **15 calendar days** paid vacation after 1 year of continuous service
 - **30% bonus** on vacation pay (regular daily salary + 30%)
@@ -224,9 +229,9 @@ When a Vacation Policy has country = "El Salvador" and no manual rules, it auto-
 | Double | 2.0x | Generic double time |
 | Custom | Manual | User-entered multiplier |
 
-### Custom Fields on Stock DocTypes
+### Legacy Custom Fields on Stock DocTypes
 
-All fields use module `Construct Admin` and are exported via the fixtures system.
+Legacy `sv_*` fields are not created by the generic product install.
 
 #### Supplier
 
@@ -276,21 +281,13 @@ All fields use module `Construct Admin` and are exported via the fixtures system
 
 **File:** `construct_erpnext/setup/install.py`
 
-The `after_install` hook runs automatically when the app is installed. For each Company with country = "El Salvador":
+The `after_install` hook runs automatically when the app is installed and logs:
 
-1. Creates tax accounts and templates (`setup_el_salvador_taxes`)
-2. Creates salary components (`setup_el_salvador_payroll`)
-3. Creates custom fields on stock DocTypes (`_create_custom_fields`)
-
-To run manually for a specific company:
-
-```python
-from construct_erpnext.setup.tax_setup import setup_el_salvador_taxes
-from construct_erpnext.setup.payroll_setup import setup_el_salvador_payroll
-
-setup_el_salvador_taxes("My Company Name")
-setup_el_salvador_payroll("My Company Name")
+```text
+Generic product setup completed.
 ```
+
+Country-specific tax and payroll setup must be added explicitly per deployment. The generic install does not create `sv_*` fields, IVA/ISR accounts or templates, or ISSS/AFP/Aguinaldo salary components.
 
 ---
 
@@ -357,7 +354,7 @@ construct_erpnext/
   construct_portal/       # Portal API and utilities
   overrides/              # Stock DocType controller overrides
   public/js/              # Client scripts for stock DocTypes
-  setup/                  # El Salvador tax, payroll, and install hooks
+  setup/                  # Generic install hook and isolated legacy localization helpers
   translations/           # es.csv (Spanish)
   www/                    # Portal HTML templates
   hooks.py                # App configuration

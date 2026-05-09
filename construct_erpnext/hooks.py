@@ -43,7 +43,8 @@ doc_events = {
     },
     "Purchase Invoice": {
         "on_submit": "construct_erpnext.gcs_admin.invoice_auth.check_authorization",
-        "validate": "construct_erpnext.gcs_admin.tax_withholding.calculate_withholdings",
+        # El Salvador localization disabled for generic product build.
+        # Country-specific withholding must be enabled explicitly per deployment.
     },
     "Sales Invoice": {
         "on_submit": "construct_erpnext.gcs_admin.reminders.schedule_payment_reminders",

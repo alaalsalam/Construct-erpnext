@@ -1,0 +1,22 @@
+# Risks
+
+Initial risks:
+
+- Existing app contains El Salvador tax and payroll setup.
+- hooks.py contains overrides and document events on core ERPNext DocTypes.
+- Purchase Invoice and Salary Slip events may contain country-specific logic.
+- App package rename is risky and postponed.
+- BOQ, Measurement Book, IPC, and Forecasting must be built from scratch.
+
+Updated risks:
+
+- Legacy El Salvador modules still exist in setup/tax_setup.py, setup/payroll_setup.py, setup/custom_fields.json, and gcs_admin/tax_withholding.py, but are no longer called automatically.
+- Overtime Administration and Vacation Policy still contain El Salvador-specific behavior and should be reviewed before production use.
+- Existing sites may already have sv_* custom fields, IVA/ISR accounts, or ISSS/AFP/Aguinaldo salary components from previous installs.
+- Fixture export rules could capture existing country-specific Custom Fields if they exist in a configured site and are exported later.
+- Purchase Invoice authorization remains active and must be validated independently from the disabled withholding logic.
+- construction.yemenfrappe.com now has HRMS installed because construct_erpnext requires it; HRMS workflows and permissions should be reviewed for this product.
+- The installed construct_erpnext code comes from the local feature/product-delocalization working tree with uncommitted cleanup and .ai memory changes; commit and push before treating the deployment as reproducible.
+- The bench app registration uses apps/construct_erpnext as a symlink to apps/Construct-erpnext; keep this in mind for future path-sensitive operations.
+- Original upstream README may target v16, but current deployment is v15.
+- Need smoke test for all existing modules before adding BOQ/IPC.

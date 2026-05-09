@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OWN-.YYYY.-.#####",
+ "creation": "2026-05-09 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["real_estate_project", "unit", "property_owner", "ownership_percentage", "ownership_role", "start_date", "end_date", "status", "remarks"],
+ "fields": [
+  {"fieldname": "real_estate_project", "fieldtype": "Link", "in_standard_filter": 1, "label": "Real Estate Project", "options": "Real Estate Project"},
+  {"fieldname": "unit", "fieldtype": "Link", "in_list_view": 1, "in_standard_filter": 1, "label": "Unit", "options": "Unit", "reqd": 1},
+  {"fieldname": "property_owner", "fieldtype": "Link", "in_list_view": 1, "in_standard_filter": 1, "label": "Owner", "options": "Property Owner", "reqd": 1},
+  {"fieldname": "ownership_percentage", "fieldtype": "Percent", "in_list_view": 1, "label": "Ownership Percentage", "reqd": 1},
+  {"fieldname": "ownership_role", "fieldtype": "Select", "label": "Ownership Role", "options": "Main Owner\nCo-owner\nInvestor\nBeneficiary"},
+  {"fieldname": "start_date", "fieldtype": "Date", "label": "Start Date"},
+  {"fieldname": "end_date", "fieldtype": "Date", "label": "End Date"},
+  {"fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Active\nTransferred\nEnded\nCancelled"},
+  {"fieldname": "remarks", "fieldtype": "Text", "label": "Remarks"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-09 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate Inventory",
+ "name": "Property Ownership",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Projects Manager", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "unit",
+ "track_changes": 1
+}

@@ -171,4 +171,22 @@ EVM Metrics foundation status:
 - EVM reports and product workspaces load.
 - No scheduled jobs, accounting documents, Journal Entries, Real Estate Inventory, or Sales/Rental DocTypes were created.
 
-Next operational task: Design and implement Real Estate Inventory foundation.
+Real Estate Inventory foundation status:
+- Branch: feature/real-estate-inventory-foundation.
+- New module: construct_erpnext/real_estate_inventory.
+- New DocTypes: Real Estate Project, Building, Floor, Unit Type, Unit, Property Owner, Property Ownership.
+- Inventory services: construct_erpnext.real_estate_inventory.inventory_utils.
+- New reports: Unit Inventory Report, Unit Availability Report, Ownership Summary Report, Real Estate Project Summary.
+- Validation inventory is retained:
+  - Real Estate Project REP-2026-00001 / مشروع البرج السكني المتكامل العقاري.
+  - Building A / البرج A.
+  - Floors A-G, A-01, A-02.
+  - Units A-101, A-102, A-201, A-G01, P-01.
+  - Property Owner POWN-2026-00001 / مالك استثماري رئيسي.
+  - Property Ownership OWN-2026-00001 for A-101 at 100 percent.
+- Current inventory counts: total 5, available 3, reserved 1, sold 0, rented 1, blocked 0.
+- Tenant is not stored on Unit. Lease Contract, Sales Contract, Reservation, Smart Matching, and Unit Cost Allocation were not created.
+- Property Ownership uses fieldname property_owner because owner is reserved by Frappe.
+- Inventory reports and product workspaces load.
+
+Next operational task: Design and implement Unit Cost Allocation and Unit Profitability foundation.

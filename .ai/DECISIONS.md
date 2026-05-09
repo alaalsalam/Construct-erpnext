@@ -107,3 +107,11 @@
 - BAC is based on Construction Work Item planned amounts, EV on certified amounts, AC on invoiced actuals, and PV on BAC multiplied by planned progress percent.
 - Automated schedule-derived PV and scheduled recalculation are deferred until the scheduling model is stabilized.
 - Project EVM Metrics does not create or submit accounting documents and does not replace ERPNext accounting reports.
+
+## ADR-015: Unit As Stable Asset, Tenant Deferred
+
+- Unit is a standalone stable real estate asset/entity.
+- Owner is modeled as Property Owner, and ownership is modeled separately through Property Ownership with percentage support.
+- Property Ownership uses fieldname property_owner because owner is a reserved Frappe document metadata field.
+- Tenant is intentionally excluded from Unit and will be linked later through Lease Contract.
+- Sales Contract, Lease Contract, Reservation, Smart Matching, and Unit Cost Allocation are deferred to later phases.

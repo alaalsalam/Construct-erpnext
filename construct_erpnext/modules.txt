@@ -11,3 +11,4 @@ Procurement Control
 Measurement IPC
 Contractor Management
 CFO Analytics
+Real Estate Inventory

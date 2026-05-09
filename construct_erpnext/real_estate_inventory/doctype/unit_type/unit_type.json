@@ -1,0 +1,34 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:unit_type_name",
+ "creation": "2026-05-09 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["unit_type_name", "property_nature", "default_usage_purpose", "description", "disabled"],
+ "fields": [
+  {"fieldname": "unit_type_name", "fieldtype": "Data", "in_list_view": 1, "label": "Unit Type Name", "reqd": 1, "unique": 1},
+  {"fieldname": "property_nature", "fieldtype": "Select", "in_standard_filter": 1, "label": "Property Nature", "options": "Residential\nCommercial\nIndustrial\nLand\nHospitality\nSpecial"},
+  {"fieldname": "default_usage_purpose", "fieldtype": "Select", "label": "Default Usage Purpose", "options": "Sale\nLong Term Rent\nShort Term Rent\nInvestment\nDevelopment\nMixed"},
+  {"fieldname": "description", "fieldtype": "Small Text", "label": "Description"},
+  {"fieldname": "disabled", "fieldtype": "Check", "label": "Disabled"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-09 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate Inventory",
+ "name": "Unit Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Projects Manager", "share": 1, "write": 1},
+  {"read": 1, "report": 1, "role": "Sales Manager"}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "unit_type_name",
+ "track_changes": 1
+}

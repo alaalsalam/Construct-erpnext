@@ -92,3 +92,13 @@ Phase 7 deliverables:
 - Create retained Arabic validation EVM snapshot for مشروع البرج السكني المتكامل. Completed.
 - Automated schedule-derived PV, scheduled recalculation, AI forecasting, and Real Estate Inventory remain deferred.
 - Next Phase 8: design and implement Real Estate Inventory foundation.
+
+Phase 8 deliverables:
+
+- Create Real Estate Project, Building, Floor, Unit Type, Unit, Property Owner, and Property Ownership DocTypes. Completed.
+- Implement inventory services and controllers for unit counts, status alignment, margin calculation, and ownership percentage validation. Completed.
+- Add inventory reports: Unit Inventory Report, Unit Availability Report, Ownership Summary Report, Real Estate Project Summary. Completed.
+- Add Real Estate Inventory workspace links and executive/reporting links. Completed.
+- Create retained Arabic validation inventory for مشروع البرج السكني المتكامل. Completed.
+- Tenant, Lease Contract, Sales Contract, Reservation, Smart Matching, and Unit Cost Allocation remain deferred.
+- Next Phase 8 extension: design and implement Unit Cost Allocation and Unit Profitability foundation.

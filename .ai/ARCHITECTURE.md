@@ -209,6 +209,30 @@ EVM reports:
 - EVM Forecast Summary
 - Project Performance Dashboard Report
 
+## Real Estate Inventory Foundation
+
+Implemented internal module: real_estate_inventory / Real Estate Inventory.
+
+Inventory design:
+
+- Real Estate Project links the real estate inventory layer to an ERPNext Project.
+- Building and Floor provide the hierarchy under a Real Estate Project.
+- Unit is a standalone stable real estate asset/entity and is not a sales, lease, or reservation document.
+- Unit Type is the property classification master for unit nature and default usage.
+- Property Owner is an independent party profile.
+- Property Ownership links Property Owner to Unit with ownership percentage, role, dates, and status.
+- Tenant is intentionally excluded from Unit and will be linked later through Lease Contract.
+- Sales Contract, Lease Contract, Reservation, Smart Matching, and Unit Cost Allocation are not created in this phase.
+- Unit counts are recalculated on Real Estate Project, Building, and Floor from Unit status.
+- Unit expected margin and expected margin percent are calculated on Unit validation.
+
+Real estate inventory reports:
+
+- Unit Inventory Report
+- Unit Availability Report
+- Ownership Summary Report
+- Real Estate Project Summary
+
 ## Role-Oriented Navigation
 
 - Executive / CFO: Executive Control Center, Reports & Analytics, selected Finance records.

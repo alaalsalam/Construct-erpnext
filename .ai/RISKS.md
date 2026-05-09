@@ -58,3 +58,7 @@ Updated risks:
 - EVM actual cost currently prefers invoiced amounts, so CPI can look severe when procurement invoices are ahead of certified earned value.
 - EVM snapshots are point-in-time and must be regenerated after new BOQ, procurement, measurement, IPC, or payment activity.
 - EVM risk thresholds are deterministic and explainable but need CFO/project leadership review before KPI sign-off.
+- Building, Floor, and Unit are generic DocType names; future integrations should watch for naming collisions with other apps before installing additional property modules.
+- Property Ownership uses property_owner as the technical fieldname because owner is reserved by Frappe.
+- Unit status values such as Sold and Rented are inventory statuses only until Sales Contract and Lease Contract are implemented.
+- Unit allocated_cost is a placeholder and must not be treated as final profitability until Unit Cost Allocation is implemented.

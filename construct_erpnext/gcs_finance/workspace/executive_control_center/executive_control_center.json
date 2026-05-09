@@ -38,6 +38,8 @@
   {"hidden": 0, "is_query_report": 1, "label": "Project EVM Metrics Report", "link_count": 0, "link_to": "Project EVM Metrics Report", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "EVM Forecast Summary", "link_count": 0, "link_to": "EVM Forecast Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Project Performance Dashboard Report", "link_count": 0, "link_to": "Project Performance Dashboard Report", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Real Estate Project Summary", "link_count": 0, "link_to": "Real Estate Project Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Unit Availability Report", "link_count": 0, "link_to": "Unit Availability Report", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Financial Ratio", "link_count": 0, "link_to": "Financial Ratio", "link_type": "DocType", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Finance Controls", "link_count": 0, "onboard": 0, "type": "Card Break"},
   {"hidden": 0, "is_query_report": 0, "label": "Check Request", "link_count": 0, "link_to": "Check Request", "link_type": "DocType", "onboard": 0, "type": "Link"},

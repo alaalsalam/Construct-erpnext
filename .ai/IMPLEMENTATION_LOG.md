@@ -331,3 +331,38 @@
   - overall_evm_status At Risk
 - Verified EVM reports, existing Project Financial Snapshot, existing Cash Flow Forecast, existing IPC, existing Contractor Account, Executive Control Center, and Reports & Analytics load successfully.
 - No scheduled jobs, Journal Entries, accounting documents, Real Estate Inventory, Sales/Rental DocTypes, or El Salvador localization were created.
+
+## 2026-05-09 22:42:21 CEST
+
+- Created branch feature/real-estate-inventory-foundation from feature/evm-metrics-foundation.
+- Added internal Real Estate Inventory module.
+- Created DocTypes: Real Estate Project, Building, Floor, Unit Type, Unit, Property Owner, and Property Ownership.
+- Implemented inventory_utils and Document Controllers for:
+  - Real Estate Project uniqueness per ERPNext Project.
+  - Building code uniqueness per Real Estate Project.
+  - Floor code uniqueness per Building.
+  - Unit code uniqueness per Building/Floor.
+  - Unit status and marketing_status alignment.
+  - Unit expected margin and expected margin percent calculation.
+  - Real Estate Project, Building, and Floor unit count recalculation.
+  - Property Ownership percentage validation with active ownership total capped at 100 percent.
+- Corrected Property Ownership technical fieldname from owner to property_owner because owner is reserved by Frappe document metadata.
+- Added reports: Unit Inventory Report, Unit Availability Report, Ownership Summary Report, and Real Estate Project Summary.
+- Updated Real Estate Inventory, Executive Control Center, and Reports & Analytics workspace links.
+- Ran JSON validation, Python compile checks, migration, site cache clear, and website cache clear.
+- Created retained Arabic validation inventory:
+  - Real Estate Project: REP-2026-00001 / مشروع البرج السكني المتكامل العقاري.
+  - Building: A / البرج A.
+  - Floors: A-G الطابق الأرضي, A-01 الطابق الأول, A-02 الطابق الثاني.
+  - Unit Types: شقة سكنية, محل تجاري, موقف سيارة, مخزن.
+  - Units: A-101, A-102, A-201, A-G01, P-01.
+  - Property Owner: POWN-2026-00001 / مالك استثماري رئيسي.
+  - Property Ownership: OWN-2026-00001, A-101 owned 100 percent by مالك استثماري رئيسي.
+- Verified unit counts:
+  - Project total_units 5, available 3, reserved 1, sold 0, rented 1, blocked 0.
+  - Building A total_units 5.
+  - Floors A-G total_units 2, A-01 total_units 2, A-02 total_units 1.
+- Verified Unit margin calculations and status/marketing_status alignment.
+- Verified over-ownership validation blocks active ownership above 100 percent.
+- Verified inventory reports, Real Estate Inventory workspace, Executive Control Center, Reports & Analytics, and existing EVM/Cash Flow/IPC reports load.
+- Confirmed no tenant fields exist on Unit and no Lease Contract, Sales Contract, Reservation, Smart Matching, accounting documents, or El Salvador localization were introduced.

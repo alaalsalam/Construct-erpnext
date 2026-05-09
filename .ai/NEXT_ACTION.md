@@ -1,3 +1,3 @@
 # Next Action
 
-Design and implement Real Estate Inventory foundation.
+Design and implement Unit Cost Allocation and Unit Profitability foundation.

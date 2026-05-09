@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "POWN-.YYYY.-.#####",
+ "creation": "2026-05-09 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["owner_name", "owner_type", "customer", "supplier", "mobile_no", "email", "identification_no", "tax_id", "address", "status", "remarks"],
+ "fields": [
+  {"fieldname": "owner_name", "fieldtype": "Data", "in_list_view": 1, "label": "Owner Name", "reqd": 1},
+  {"fieldname": "owner_type", "fieldtype": "Select", "in_standard_filter": 1, "label": "Owner Type", "options": "Individual\nCompany\nInvestor\nGovernment\nOther"},
+  {"fieldname": "customer", "fieldtype": "Link", "label": "Customer", "options": "Customer"},
+  {"fieldname": "supplier", "fieldtype": "Link", "label": "Supplier", "options": "Supplier"},
+  {"fieldname": "mobile_no", "fieldtype": "Data", "label": "Mobile No"},
+  {"fieldname": "email", "fieldtype": "Data", "label": "Email"},
+  {"fieldname": "identification_no", "fieldtype": "Data", "label": "Identification No"},
+  {"fieldname": "tax_id", "fieldtype": "Data", "label": "Tax ID"},
+  {"fieldname": "address", "fieldtype": "Small Text", "label": "Address"},
+  {"fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Active\nInactive\nBlacklisted"},
+  {"fieldname": "remarks", "fieldtype": "Text", "label": "Remarks"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-09 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate Inventory",
+ "name": "Property Owner",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Projects Manager", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "owner_name",
+ "track_changes": 1
+}

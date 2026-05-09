@@ -59,4 +59,9 @@ Phase 6 deliverables:
 - Add draft Purchase Invoice creation from approved IPC. Completed.
 - Add IPC approval workflow and IPC reports. Completed.
 - Add IPC workspace links across Measurement & IPC, Contractor Management, Executive Control Center, and Reports & Analytics. Completed.
-- Next Phase 6 extension: design and implement Contractor Ledger and Retention Register foundation.
+- Create Contractor Account, Contractor Ledger Entry, Retention Register, Advance Register, and Guarantee Register foundation. Completed in code.
+- Integrate IPC, draft Purchase Invoice, and Payment Entry events with operational contractor ledger. Completed in code.
+- Add contractor account, retention, advance recovery, exposure, and guarantee reports. Completed in code.
+- Add contractor financial control links to Contractor Management, Executive Control Center, and Reports & Analytics workspaces. Completed in code.
+- Site migration, cache clear, existing IPC sync, contractor account totals, retention register, reports, and workspace checks completed after MariaDB service recovery.
+- Next Phase 7: design and implement Project Financial Snapshot and CFO Analytics foundation.

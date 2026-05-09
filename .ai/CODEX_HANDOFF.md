@@ -116,4 +116,22 @@ IPC foundation status:
   - Contractor Ledger, Contractor Contract, and Real Estate Unit DocTypes were not created.
 - Site repair note: construct_erpnext was added to /home/frappe/frappe-bench/sites/apps.txt because the app was installed on construction.yemenfrappe.com but missing from bench app module mapping.
 
-Next operational task: Design and implement Contractor Ledger and Retention Register foundation.
+Contractor Ledger and Retention foundation status:
+- Branch: feature/contractor-ledger-retention.
+- New module: construct_erpnext/contractor_management.
+- New DocTypes: Contractor Account, Contractor Ledger Entry, Retention Register, Advance Register, Guarantee Register.
+- Contractor Ledger is an operational subledger and does not replace ERPNext GL.
+- ERPNext Purchase Invoice and Payment Entry remain accounting source of truth.
+- IPC submission creates operational ledger and retention records.
+- Draft Purchase Invoice creation from IPC creates/updates operational ledger references only.
+- Payment Entry hooks read ERPNext allocations for linked IPC Purchase Invoices and update operational ledger/payment status without overriding standard Payment Entry behavior.
+- New reports: Contractor Account Statement, Retention Register Report, Advance Recovery Report, Contractor Exposure Summary, Guarantee Register Report.
+- Existing IPC records can be synchronized with construct_erpnext.contractor_management.ledger_utils.sync_ipc.
+- Migration and cache clears completed after MariaDB recovered from an OOM-kill failure.
+- Existing IPC IPC-2026-00001 was synchronized into Contractor Account CA-2026-00001.
+- Current contractor account totals: certified 875000, retention held 87500, invoiced 875000, paid 0, operational outstanding 787500.
+- Retention Register RET-2026-00001 exists for 87500 with release due date 2027-05-09.
+- Contractor reports and product workspaces load.
+- Purchase Invoice ACC-PINV-2026-00002 remains draft; Payment Entry validation remains pending until the invoice is submitted through ERPNext controls.
+
+Next operational task: Design and implement Project Financial Snapshot and CFO Analytics foundation.

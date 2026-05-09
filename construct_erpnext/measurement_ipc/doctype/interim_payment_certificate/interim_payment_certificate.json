@@ -6,7 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "company", "project", "contractor", "subcontract", "construction_boq", "measurement_book", "certificate_number", "certificate_sequence", "period_start", "period_end",
+  "company", "project", "contractor", "contractor_account", "subcontract", "construction_boq", "measurement_book", "certificate_number", "certificate_sequence", "period_start", "period_end",
   "workflow_section", "workflow_state", "status", "submitted_by", "submitted_on", "reviewed_by", "reviewed_on", "certified_by", "certified_on", "approved_by", "approved_on",
   "financial_section", "gross_amount", "previous_certified_amount", "current_certified_amount", "total_certified_amount", "retention_percent", "retention_amount", "advance_recovery_amount", "penalty_amount", "withholding_tax_amount", "other_deduction_amount", "net_payable",
   "invoice_section", "purchase_invoice", "paid_amount", "outstanding_amount", "payment_difference_amount", "payment_difference_reason", "expected_next_payment_date",
@@ -16,6 +16,7 @@
   {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
   {"fieldname": "project", "fieldtype": "Link", "in_list_view": 1, "in_standard_filter": 1, "label": "Project", "options": "Project", "reqd": 1},
   {"fieldname": "contractor", "fieldtype": "Link", "in_list_view": 1, "in_standard_filter": 1, "label": "Contractor", "options": "Supplier", "reqd": 1},
+  {"fieldname": "contractor_account", "fieldtype": "Link", "label": "Contractor Account", "options": "Contractor Account", "read_only": 1},
   {"fieldname": "subcontract", "fieldtype": "Link", "label": "Subcontract", "options": "Subcontract"},
   {"fieldname": "construction_boq", "fieldtype": "Link", "label": "Construction BOQ", "options": "Construction BOQ"},
   {"fieldname": "measurement_book", "fieldtype": "Link", "label": "Measurement Book", "options": "Measurement Book"},

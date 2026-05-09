@@ -119,6 +119,31 @@ IPC reports:
 - Measurement to IPC Traceability
 - Contractor IPC Summary
 
+## Contractor Ledger And Retention Foundation
+
+Implemented internal module: contractor_management / Contractor Management.
+
+Contractor financial control design:
+
+- Contractor Ledger is an operational subledger for contractor control and does not replace ERPNext GL accounting.
+- ERPNext Purchase Invoice and Payment Entry remain the accounting source of truth.
+- Contractor Account groups contractor/project/subcontract financial exposure.
+- Contractor Ledger Entry records auditable operational events such as IPC Certified, Retention Held, Advance Recovery, Purchase Invoice Created, Payment Made, and Payment Difference.
+- Retention Register tracks retention held from IPCs and future release eligibility without creating Journal Entries automatically.
+- Advance Register tracks contractor advances and recovery through IPCs without overriding ERPNext Payment Entry.
+- Guarantee Register tracks performance, advance payment, and retention guarantees without external bank integration.
+- IPC submission creates contractor ledger and retention records.
+- IPC Purchase Invoice creation creates/updates operational ledger references only; it does not submit the invoice.
+- Payment Entry hooks read ERPNext allocations to update contractor ledger and IPC payment status without changing standard payment behavior.
+
+Contractor control reports:
+
+- Contractor Account Statement
+- Retention Register Report
+- Advance Recovery Report
+- Contractor Exposure Summary
+- Guarantee Register Report
+
 ## Role-Oriented Navigation
 
 - Executive / CFO: Executive Control Center, Reports & Analytics, selected Finance records.

@@ -43,3 +43,7 @@ Updated risks:
 - IPC Purchase Invoice creation currently creates a draft invoice only; submitted Purchase Invoice authorization and payment application remain under ERPNext finance controls.
 - IPC retention, advance recovery, penalties, withholding, and other deductions are represented on the IPC but do not yet create ledger entries; this must be handled by the Contractor Ledger and Retention Register phase.
 - Partial payment validation was not executed because the IPC Purchase Invoice remains a draft; Payment Entry validation requires the standard ERPNext invoice submission/authorization path first.
+- Contractor Ledger is operational only and must not be treated as GL accounting; ERPNext Purchase Invoice and Payment Entry remain source of truth.
+- Retention Register and Advance Register do not create Journal Entries automatically; accounting treatment must be designed in a later finance integration phase.
+- Contractor ledger Payment Entry automation depends on submitted ERPNext Payment Entry references to linked Purchase Invoices; full payment validation remains pending because the IPC Purchase Invoice is still a draft under standard ERPNext authorization controls.
+- MariaDB recovered after an OOM-kill failure during the contractor ledger phase; monitor database memory stability before the next migration-heavy task.

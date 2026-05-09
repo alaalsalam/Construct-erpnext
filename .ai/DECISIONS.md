@@ -76,3 +76,11 @@
 - Existing Subcontract is sufficient as the optional contractor contract reference for this phase because it contains project, contractor, company, contract title, status, amount, activities, and dates.
 - Do not create Contractor Contract or Contractor Ledger until a separate contractor accounting phase is approved.
 - Purchase Invoice generation from IPC creates a draft ERPNext Purchase Invoice and does not submit it automatically.
+
+## ADR-011: Contractor Ledger As Operational Subledger
+
+- Contractor Ledger is an operational subledger that references ERPNext Purchase Invoice and Payment Entry but does not replace GL accounting.
+- ERPNext Purchase Invoice and Payment Entry remain the accounting source of truth for payables and payments.
+- Contractor Ledger Entry records contractor control events for certified amount, retention, advance recovery, purchase invoice creation, payment allocation, and payment difference.
+- Retention Register, Advance Register, and Guarantee Register are control registers only; they do not create Journal Entries automatically.
+- Existing IPC records can be synchronized through an explicit app-level helper rather than destructive resubmission.

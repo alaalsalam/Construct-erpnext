@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ADV-.YYYY.-.#####",
+ "creation": "2026-05-09 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["company", "project", "contractor", "contractor_account", "advance_date", "advance_amount", "recovered_amount", "outstanding_advance_amount", "status", "payment_entry", "remarks"],
+ "fields": [
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
+  {"fieldname": "project", "fieldtype": "Link", "in_standard_filter": 1, "label": "Project", "options": "Project", "reqd": 1},
+  {"fieldname": "contractor", "fieldtype": "Link", "in_standard_filter": 1, "label": "Contractor", "options": "Supplier", "reqd": 1},
+  {"fieldname": "contractor_account", "fieldtype": "Link", "label": "Contractor Account", "options": "Contractor Account"},
+  {"fieldname": "advance_date", "fieldtype": "Date", "in_list_view": 1, "label": "Advance Date"},
+  {"default": "0", "fieldname": "advance_amount", "fieldtype": "Currency", "in_list_view": 1, "label": "Advance Amount"},
+  {"default": "0", "fieldname": "recovered_amount", "fieldtype": "Currency", "label": "Recovered Amount", "read_only": 1},
+  {"default": "0", "fieldname": "outstanding_advance_amount", "fieldtype": "Currency", "label": "Outstanding Advance Amount", "read_only": 1},
+  {"default": "Active", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "in_standard_filter": 1, "label": "Status", "options": "Active\nFully Recovered\nCancelled"},
+  {"fieldname": "payment_entry", "fieldtype": "Link", "label": "Payment Entry", "options": "Payment Entry"},
+  {"fieldname": "remarks", "fieldtype": "Text", "label": "Remarks"}
+ ],
+ "links": [],
+ "modified": "2026-05-09 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contractor Management",
+ "name": "Advance Register",
+ "owner": "Administrator",
+ "permissions": [{"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1}, {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Accounts Manager", "share": 1, "write": 1}, {"email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Projects Manager", "share": 1}],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

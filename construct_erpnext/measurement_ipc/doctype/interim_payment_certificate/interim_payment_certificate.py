@@ -152,12 +152,18 @@ class InterimPaymentCertificate(Document):
 			self.db_set("workflow_state", "Approved", update_modified=False)
 		self.link_measurement_entries()
 		recalculate_work_items_from_ipc(self)
+		from construct_erpnext.contractor_management.ledger_utils import update_ledger_from_ipc
+
+		update_ledger_from_ipc(self)
 
 	def on_cancel(self):
 		if self.purchase_invoice and frappe.db.get_value("Purchase Invoice", self.purchase_invoice, "docstatus") == 1:
 			frappe.throw(_("Cannot cancel IPC because linked Purchase Invoice is submitted."))
 		self.release_measurement_entries()
 		recalculate_work_items_from_ipc(self)
+		from construct_erpnext.contractor_management.ledger_utils import reverse_ledger_for_reference
+
+		reverse_ledger_for_reference("Interim Payment Certificate", self.name)
 
 	def link_measurement_entries(self):
 		for line in self.lines:
@@ -234,6 +240,9 @@ class InterimPaymentCertificate(Document):
 		self.db_set("payment_difference_amount", self.net_payable)
 		self.db_set("status", "Invoice Created")
 		self.db_set("workflow_state", "Invoice Created")
+		from construct_erpnext.contractor_management.ledger_utils import update_ledger_from_purchase_invoice
+
+		update_ledger_from_purchase_invoice(invoice)
 		return invoice.name
 
 	@frappe.whitelist()

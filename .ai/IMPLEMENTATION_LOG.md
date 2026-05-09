@@ -210,3 +210,26 @@
 - Verified IPC status moved to Invoice Created and outstanding_amount is 787500 while Purchase Invoice is draft.
 - Verified IPC reports, measurement reports, procurement reports, and product workspaces load.
 - Confirmed Contractor Ledger, Contractor Contract, and Real Estate Unit DocTypes were not created.
+
+## 2026-05-09 21:41:05 CEST
+
+- Created branch feature/contractor-ledger-retention from feature/ipc-foundation.
+- Inspected contractor and finance context from existing app DocTypes and IPC implementation before coding.
+- Added internal Contractor Management module foundation.
+- Created DocTypes: Contractor Account, Contractor Ledger Entry, Retention Register, Advance Register, and Guarantee Register.
+- Implemented contractor_management.ledger_utils for idempotent contractor account creation, ledger entry creation, retention creation from IPC, advance recovery from IPC, Purchase Invoice sync, Payment Entry sync, account recalculation, reversal entries, and explicit existing IPC sync.
+- Integrated Interim Payment Certificate submission/cancellation and draft Purchase Invoice creation with the operational contractor ledger.
+- Added Payment Entry and Purchase Invoice hooks that read ERPNext accounting documents and update operational contractor controls without overriding standard accounting behavior.
+- Added Script Reports: Contractor Account Statement, Retention Register Report, Advance Recovery Report, Contractor Exposure Summary, and Guarantee Register Report.
+- Updated Contractor Management, Executive Control Center, and Reports & Analytics workspaces with contractor ledger and retention links.
+- No Journal Entry automation was added.
+- MariaDB recovered after an OOM-kill failure and the site migration completed successfully.
+- Cleared site cache and website cache.
+- Synchronized existing Arabic IPC IPC-2026-00001 into the contractor ledger through the explicit sync helper.
+- Created Contractor Account CA-2026-00001 for مقاول الأعمال الإنشائية and مشروع البرج السكني المتكامل.
+- Created ledger entries for IPC Certified, Retention Held, and Purchase Invoice Created.
+- Created Retention Register RET-2026-00001 with retention amount 87500, remaining retention 87500, and release due date 2027-05-09.
+- Verified Contractor Account totals: certified 875000, retention held 87500, invoiced 875000, paid 0, operational outstanding 787500.
+- Verified reports load: Contractor Account Statement, Retention Register Report, Advance Recovery Report, Contractor Exposure Summary, Guarantee Register Report.
+- Verified workspaces load: Contractor Management, Executive Control Center, Reports & Analytics.
+- Purchase Invoice ACC-PINV-2026-00002 remains draft; Payment Entry validation remains pending until standard invoice submission/authorization is completed.

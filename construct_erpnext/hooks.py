@@ -52,10 +52,18 @@ doc_events = {
         "on_submit": [
             "construct_erpnext.gcs_admin.invoice_auth.check_authorization",
             "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
+            "construct_erpnext.contractor_management.events.sync_purchase_invoice",
         ],
-        "on_cancel": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
+        "on_cancel": [
+            "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
+            "construct_erpnext.contractor_management.events.reverse_purchase_invoice",
+        ],
         # El Salvador localization disabled for generic product build.
         # Country-specific withholding must be enabled explicitly per deployment.
+    },
+    "Payment Entry": {
+        "on_submit": "construct_erpnext.contractor_management.events.sync_payment_entry",
+        "on_cancel": "construct_erpnext.contractor_management.events.reverse_payment_entry",
     },
     "Material Request": {
         "validate": "construct_erpnext.procurement_control.events.validate_procurement_doc",

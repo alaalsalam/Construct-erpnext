@@ -1,3 +1,3 @@
 # Next Action
 
-Design and implement Contractor Ledger and Retention Register foundation.
+Design and implement Project Financial Snapshot and CFO Analytics foundation.

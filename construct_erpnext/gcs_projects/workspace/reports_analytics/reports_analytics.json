@@ -40,7 +40,12 @@
   {"hidden": 0, "is_query_report": 1, "label": "IPC Register", "link_count": 0, "link_to": "IPC Register", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "IPC Line Details", "link_count": 0, "link_to": "IPC Line Details", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Measurement to IPC Traceability", "link_count": 0, "link_to": "Measurement to IPC Traceability", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Contractor IPC Summary", "link_count": 0, "link_to": "Contractor IPC Summary", "link_type": "Report", "onboard": 0, "type": "Link"}
+  {"hidden": 0, "is_query_report": 1, "label": "Contractor IPC Summary", "link_count": 0, "link_to": "Contractor IPC Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Contractor Account Statement", "link_count": 0, "link_to": "Contractor Account Statement", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Retention Register Report", "link_count": 0, "link_to": "Retention Register Report", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Advance Recovery Report", "link_count": 0, "link_to": "Advance Recovery Report", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Contractor Exposure Summary", "link_count": 0, "link_to": "Contractor Exposure Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Guarantee Register Report", "link_count": 0, "link_to": "Guarantee Register Report", "link_type": "Report", "onboard": 0, "type": "Link"}
  ],
  "modified": "2026-05-09 17:55:00.000000",
  "modified_by": "Administrator",

@@ -47,3 +47,9 @@
 - Procurement totals are recalculated from submitted ERPNext documents and exclude draft/cancelled documents.
 - Committed, invoiced, and consumed amounts are tracked separately from the existing actual_cost field to avoid accidental double counting.
 - Procurement budget blocking is disabled by default and controlled through Procurement Control Settings.
+
+## ADR-007: Operational Baseline Records
+
+- Operational baseline records are allowed on construction.yemenfrappe.com only when they are realistic, reusable, and documented.
+- The Al Nakheel baseline is kept for continued implementation validation instead of being removed.
+- Baseline records must not use disposable naming and must remain suitable for future BOQ, procurement, stock, and Measurement Book validation.

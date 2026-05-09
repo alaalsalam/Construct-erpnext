@@ -2,7 +2,7 @@
 
 Read project memory and working rules first, continue from NEXT_ACTION, implement one task at a time, update memory after every task.
 
-Current branch: feature/boq-procurement-control.
+Current branch: feature/operational-baseline-procurement-smoke.
 
 Canonical repository path: /home/frappe/frappe-bench/apps/construct_erpnext.
 Old path /home/frappe/frappe-bench/apps/Construct-erpnext was removed by renaming the real repository folder.
@@ -51,7 +51,30 @@ Procurement linkage status:
 - Stock Entry material assignment hook remains active.
 - Whitelisted Material Request generation exists at construct_erpnext.procurement_control.material_request.create_material_request_from_work_items.
 - New reports: Work Item Procurement Summary, BOQ Procurement Pipeline, Site Warehouse Consumption, Procurement Budget Control.
-- Normal Material Request validation on construction.yemenfrappe.com is blocked until baseline ERPNext masters such as Company, Item Group, UOM, and Item are configured.
-- Rollback-only validation confirmed metadata sync, submitted document recalculation, report loading, workspace links, and cache clearing.
+- Baseline ERPNext masters are now configured on construction.yemenfrappe.com.
+- Operational baseline records retained:
+  - Company: Yemen Construction & Real Estate Development
+  - Fiscal Year: 2026
+  - Project: Al Nakheel Tower Development / PROJ-0001
+  - Cost Center: Al Nakheel Tower Development - YCRE
+  - Site Warehouse: Al Nakheel Site Warehouse - YCRE
+  - Supplier: Al Amal Contracting
+  - Items: Concrete C30, Reinforcement Steel, Contractor Service
+  - Cost Code: STR-CONC
+  - WBS Element: PROJ-0001-01.01
+- System Settings language/time zone baseline: en / Asia/Aden.
+- Full procurement validation passed with retained submitted records:
+  - Construction BOQ: ANK-BOQ-FOUNDATION-001
+  - Construction Work Item: CWI-2026-00001
+  - Material Request: MAT-MR-2026-00001
+  - Purchase Order: PUR-ORD-2026-00003
+  - Purchase Receipt: MAT-PRE-2026-00001
+  - Purchase Invoice: ACC-PINV-2026-00001
+  - Stock Entry: MAT-STE-2026-00001
+- Work Item procurement totals after validation:
+  - requested_qty 100, ordered_qty 100, received_qty 100, invoiced_qty 100, consumed_qty 25
+  - committed_amount 3500000, invoiced_amount 3500000, consumed_amount 875000
+  - procurement_status Fully Invoiced
+- Reports and product workspaces loaded successfully after full procurement validation.
 
 Next operational task: Design and implement Measurement Book foundation.

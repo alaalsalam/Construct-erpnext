@@ -101,3 +101,39 @@
 - Ran migration and cache clears on construction.yemenfrappe.com.
 - Validated custom fields, settings, reports, workspaces, metadata sync, procurement recalculation, and report loading with rollback-only records.
 - Full normal Material Request workflow validation is pending baseline ERPNext Company, Item Group, UOM, and Item masters on the site.
+
+## 2026-05-09 17:42:32 CEST
+
+- Created branch feature/operational-baseline-procurement-smoke from feature/boq-procurement-control.
+- Inspected construction.yemenfrappe.com baseline masters and found no Company, Fiscal Year, Cost Center, Warehouse, UOM, Item Group, Item, Supplier, or Project records.
+- Created reusable operational baseline records:
+  - Company: Yemen Construction & Real Estate Development
+  - Fiscal Year: 2026
+  - UOM: Nos, m, m2, m3, kg
+  - Supplier Group: All Supplier Groups
+  - Item Groups: All Item Groups, Construction Materials, Construction Services
+  - Cost Center: Al Nakheel Tower Development - YCRE
+  - Site Warehouse: Al Nakheel Site Warehouse - YCRE
+  - Supplier: Al Amal Contracting
+  - Items: Concrete C30, Reinforcement Steel, Contractor Service
+  - Project: Al Nakheel Tower Development / PROJ-0001
+- Allowed ERPNext to create the standard chart of accounts and default company warehouses for YCRE, then configured Global Defaults and Procurement Control Settings.
+- Set System Settings language to en and time zone to Asia/Aden because amount-in-words generation was blocked when the locale was unset.
+- Created and retained BOQ validation records:
+  - Cost Code: STR-CONC
+  - WBS Element: PROJ-0001-01.01
+  - Construction BOQ: ANK-BOQ-FOUNDATION-001
+  - Construction Work Item: CWI-2026-00001
+- Ran full procurement validation through ERPNext documents:
+  - Material Request MAT-MR-2026-00001 submitted.
+  - Purchase Order PUR-ORD-2026-00003 submitted.
+  - Purchase Receipt MAT-PRE-2026-00001 submitted.
+  - Purchase Invoice ACC-PINV-2026-00001 submitted with Invoice Authorization IA-00001.
+  - Stock Entry MAT-STE-2026-00001 submitted for material issue/consumption.
+- Verified Construction Work Item procurement totals:
+  - requested_qty 100, ordered_qty 100, received_qty 100, invoiced_qty 100, consumed_qty 25.
+  - committed_amount 3500000, invoiced_amount 3500000, consumed_amount 875000.
+  - procurement_status Fully Invoiced.
+- Verified reports load: Work Item Procurement Summary, BOQ Procurement Pipeline, Site Warehouse Consumption, Procurement Budget Control, Construction BOQ Cost Analysis, Construction BOQ Variance.
+- Verified workspaces load: Executive Control Center, Construction Control, Procurement & Site Warehouses, Reports & Analytics.
+- Kept baseline and submitted validation records because they are realistic reusable implementation records needed for future validation.

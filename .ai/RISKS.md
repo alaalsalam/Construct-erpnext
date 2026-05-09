@@ -27,8 +27,10 @@ Updated risks:
 - Construction BOQ workflow must be kept in sync through after_migrate setup because Workflow records are not part of Frappe v15 model sync.
 - construction.yemenfrappe.com currently lacks normal baseline Company/Project data for full end-user BOQ entry validation; rollback-only validation used lightweight records and did not leave seed data.
 - Construction Work Item currently tracks planned and certified quantities only; procurement, stock, actual cost, Measurement Book, and IPC links still need implementation.
-- construction.yemenfrappe.com currently lacks baseline ERPNext Company, Item Group, UOM, and Item masters, so full normal Material Request generation/submission validation is blocked until operational masters are configured.
+- construction.yemenfrappe.com initially lacked baseline ERPNext Company, Item Group, UOM, Item, Supplier, Project, and Warehouse records; reusable operational baseline records were created on 2026-05-09.
 - Procurement Custom Fields are created through an idempotent after_migrate setup hook and must remain compatible with ERPNext v15 child table schemas.
 - Procurement totals currently assume standard ERPNext docstatus semantics: only submitted documents are counted, and cancelled/draft documents are excluded.
 - Stock consumption totals currently use submitted Stock Entry Detail rows with a source warehouse; transfer and manufacture semantics may need refinement once site warehouse operating procedures are finalized.
 - Work Item actual_cost is intentionally not updated by procurement sync yet; dashboards must use committed_amount, invoiced_amount, and consumed_amount until the actual-cost policy is finalized.
+- Site language and timezone were unset and blocked ERPNext amount-in-words generation; System Settings now use language en and time zone Asia/Aden.
+- Submitted procurement validation records are intentionally retained; future validation must account for existing submitted MR, PO, PR, PI, Stock Entry, and stock ledger impact.

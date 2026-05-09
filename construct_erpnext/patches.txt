@@ -1,0 +1,1 @@
+construct_erpnext.patches.hide_legacy_gcs_workspaces

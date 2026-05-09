@@ -18,16 +18,16 @@ Internal modules planned inside construct_erpnext:
 
 Final user-facing workspace structure for the generic product base:
 
-- Executive Control Center
-- Construction Control
-- Procurement & Site Warehouses
-- Measurement & IPC
-- Contractor Management
-- Real Estate Inventory
-- Sales & Rental
-- Reports & Analytics
+- Executive Control Center: implemented as a product-facing Workspace.
+- Construction Control: implemented as a product-facing Workspace.
+- Procurement & Site Warehouses: implemented as a product-facing Workspace.
+- Measurement & IPC: implemented as a product-facing placeholder Workspace.
+- Contractor Management: implemented as a product-facing Workspace.
+- Real Estate Inventory: implemented as a product-facing placeholder Workspace.
+- Sales & Rental: implemented as a product-facing placeholder Workspace.
+- Reports & Analytics: implemented as a product-facing Workspace.
 
-Existing GCS workspaces are implementation-era navigation and should be replaced or hidden from user-facing navigation. Keep the underlying construct_erpnext package and existing internal module folders for now; do not rename the Python package.
+Existing GCS workspaces are implementation-era navigation and are hidden from user-facing navigation through workspace JSON and a reversible patch. Keep the underlying construct_erpnext package and existing internal module folders for now; do not rename the Python package.
 
 ## Role-Oriented Navigation
 

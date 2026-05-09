@@ -59,3 +59,13 @@
 - Refreshed editable install with ./env/bin/pip install -e apps/construct_erpnext.
 - Verified bench virtualenv import path resolves to /home/frappe/frappe-bench/apps/construct_erpnext/construct_erpnext/__init__.py.
 - Plain system python3 import still fails because it is not using the bench virtualenv.
+
+## 2026-05-09 16:31:59 CEST
+
+- Implemented product-facing Workspace JSON fixtures for Executive Control Center, Construction Control, Procurement & Site Warehouses, Measurement & IPC, Contractor Management, Real Estate Inventory, Sales & Rental, and Reports & Analytics.
+- Marked legacy GCS workspace JSON files as hidden and non-public.
+- Added reversible patch construct_erpnext.patches.hide_legacy_gcs_workspaces because Frappe did not update existing workspace visibility from JSON alone.
+- Ran migration on construction.yemenfrappe.com to sync workspaces and execute the visibility patch.
+- Verified 8 product workspaces are visible and 8 legacy GCS workspaces are hidden/non-public.
+- Verified existing construct DocType count remains 72 and no BOQ, IPC, Measurement Book, or Real Estate DocTypes were created.
+- Verified product workspace links resolve statically and cleared site/website cache.

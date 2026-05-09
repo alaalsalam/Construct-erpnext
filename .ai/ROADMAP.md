@@ -14,8 +14,8 @@
 
 Phase 2 deliverables:
 
-- Replace GCS-facing navigation with product workspaces.
-- Hide manufacturing, maintenance, payroll, and security implementation workspaces from primary users.
-- Keep useful construction finance/project DocTypes available under role-oriented workspaces.
+- Replace GCS-facing navigation with product workspaces. Completed.
+- Hide manufacturing, maintenance, payroll, and security implementation workspaces from primary users. Completed through reversible patch.
+- Keep useful construction finance/project DocTypes available under role-oriented workspaces. Completed for existing DocTypes/reports.
 - Do not create BOQ, IPC, or real estate DocTypes during Phase 2.
 - Keep construct_erpnext package name and existing construction modules working.

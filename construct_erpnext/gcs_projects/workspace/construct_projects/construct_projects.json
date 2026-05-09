@@ -10,7 +10,7 @@
  "hide_custom": 0,
  "icon": "project",
  "idx": 0,
- "is_hidden": 0,
+ "is_hidden": 1,
  "label": "GCS Projects",
  "links": [
   {
@@ -362,7 +362,7 @@
  "name": "GCS Projects",
  "owner": "Administrator",
  "parent_page": "",
- "public": 1,
+ "public": 0,
  "restrict_to_domain": "",
  "roles": [],
  "sequence_id": 1,

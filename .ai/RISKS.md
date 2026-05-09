@@ -22,3 +22,5 @@ Updated risks:
 - Need smoke test for all existing modules before adding BOQ/IPC.
 - Site-level smoke testing currently depends on MariaDB availability; latest check failed with connection refused on 127.0.0.1.
 - Plain system python3 does not import bench editable apps; use the bench virtualenv Python for import smoke checks unless system Python is explicitly configured.
+- Legacy GCS module names remain in metadata even though user-facing workspaces are product-oriented; full module renaming remains postponed.
+- Workspace visibility for existing GCS records required a database patch because JSON sync alone did not update existing records.

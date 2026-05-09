@@ -27,5 +27,10 @@ construction.yemenfrappe.com installation status:
 - Path normalization status: apps/construct_erpnext is now the real git repository, not a symlink.
 - Bench venv import path: /home/frappe/frappe-bench/apps/construct_erpnext/construct_erpnext/__init__.py.
 - Plain system python3 import failed because it is not using the bench environment.
+- Product workspace cleanup status:
+  - 8 product-facing workspaces are installed and visible.
+  - 8 legacy GCS workspaces are retained but hidden/non-public.
+  - Visibility is enforced by construct_erpnext.patches.hide_legacy_gcs_workspaces and is reversible.
+  - No BOQ, IPC, Measurement Book, or real estate DocTypes have been created yet.
 
-Next operational task: Restore MariaDB service and rerun site-level smoke test before workspace changes.
+Next operational task: Design and implement Construction BOQ foundation.

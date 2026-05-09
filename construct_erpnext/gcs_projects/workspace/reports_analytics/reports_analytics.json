@@ -45,7 +45,11 @@
   {"hidden": 0, "is_query_report": 1, "label": "Retention Register Report", "link_count": 0, "link_to": "Retention Register Report", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Advance Recovery Report", "link_count": 0, "link_to": "Advance Recovery Report", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Contractor Exposure Summary", "link_count": 0, "link_to": "Contractor Exposure Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Guarantee Register Report", "link_count": 0, "link_to": "Guarantee Register Report", "link_type": "Report", "onboard": 0, "type": "Link"}
+  {"hidden": 0, "is_query_report": 1, "label": "Guarantee Register Report", "link_count": 0, "link_to": "Guarantee Register Report", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Project Financial Snapshot Report", "link_count": 0, "link_to": "Project Financial Snapshot Report", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "CFO Project Control Summary", "link_count": 0, "link_to": "CFO Project Control Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Work Item Financial Traceability", "link_count": 0, "link_to": "Work Item Financial Traceability", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Contractor Financial Exposure", "link_count": 0, "link_to": "Contractor Financial Exposure", "link_type": "Report", "onboard": 0, "type": "Link"}
  ],
  "modified": "2026-05-09 17:55:00.000000",
  "modified_by": "Administrator",

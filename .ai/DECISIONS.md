@@ -84,3 +84,10 @@
 - Contractor Ledger Entry records contractor control events for certified amount, retention, advance recovery, purchase invoice creation, payment allocation, and payment difference.
 - Retention Register, Advance Register, and Guarantee Register are control registers only; they do not create Journal Entries automatically.
 - Existing IPC records can be synchronized through an explicit app-level helper rather than destructive resubmission.
+
+## ADR-012: Project Financial Snapshot As CFO Aggregation Layer
+
+- Project Financial Snapshot is the first CFO aggregation layer and does not replace ERPNext accounting reports or GL.
+- The snapshot is point-in-time and deterministic; it reads from Construction Work Item, Interim Payment Certificate, Contractor Account, and Retention Register.
+- The snapshot does not submit accounting records, create Journal Entries, run Cash Flow Forecast automation, or create scheduled EVM calculations.
+- Risk statuses are intentionally simple and explainable until a separate forecasting and executive analytics phase is approved.

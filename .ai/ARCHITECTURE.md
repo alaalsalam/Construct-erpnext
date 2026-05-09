@@ -144,6 +144,28 @@ Contractor control reports:
 - Contractor Exposure Summary
 - Guarantee Register Report
 
+## Project Financial Snapshot And CFO Analytics Foundation
+
+Implemented internal module: cfo_analytics / CFO Analytics.
+
+CFO analytics design:
+
+- Project Financial Snapshot is the first point-in-time CFO aggregation layer.
+- It summarizes BOQ planned value, procurement commitments, invoiced and consumed amounts, measured progress, certified IPC amounts, retention, contractor paid amount, contractor outstanding exposure, variances, and simple risk indicators.
+- The snapshot reads operational values from Construction Work Item, Interim Payment Certificate, Contractor Account, and Retention Register.
+- It does not replace ERPNext accounting reports or GL.
+- It does not create Journal Entries, Cash Flow Forecast documents, or scheduled EVM automation.
+- Risk status is deterministic and explainable:
+  - Cost risk is Red if committed amount exceeds BOQ total, Yellow if committed amount is at least 90 percent of BOQ total, otherwise Green.
+  - Cash risk is Red if contractor outstanding is more than 75 percent of certified net amount, Yellow if more than 40 percent, otherwise Green.
+
+CFO reports:
+
+- Project Financial Snapshot Report
+- CFO Project Control Summary
+- Work Item Financial Traceability
+- Contractor Financial Exposure
+
 ## Role-Oriented Navigation
 
 - Executive / CFO: Executive Control Center, Reports & Analytics, selected Finance records.

@@ -134,4 +134,16 @@ Contractor Ledger and Retention foundation status:
 - Contractor reports and product workspaces load.
 - Purchase Invoice ACC-PINV-2026-00002 remains draft; Payment Entry validation remains pending until the invoice is submitted through ERPNext controls.
 
-Next operational task: Design and implement Project Financial Snapshot and CFO Analytics foundation.
+Project Financial Snapshot and CFO Analytics status:
+- Branch: feature/cfo-financial-snapshot.
+- New module: construct_erpnext/cfo_analytics.
+- New DocType: Project Financial Snapshot.
+- Aggregation service: construct_erpnext.cfo_analytics.project_financials.
+- Whitelisted methods: get_snapshot_data and create_snapshot.
+- New reports: Project Financial Snapshot Report, CFO Project Control Summary, Work Item Financial Traceability, Contractor Financial Exposure.
+- Validation snapshot PFS-2026-00001 was created for PROJ-0001 with Arabic title الملخص المالي لمشروع البرج السكني المتكامل.
+- Snapshot values: BOQ 3500000, committed 3500000, invoiced 3500000, consumed 875000, measured 875000, certified gross 875000, certified net 787500, retention 87500, contractor outstanding 787500, cost risk Yellow, cash risk Red, overall At Risk.
+- The CFO snapshot does not replace ERPNext accounting reports or GL and does not create Journal Entries.
+- Cash Flow Forecast full engine and scheduled EVM automation remain deferred.
+
+Next operational task: Design and implement Cash Flow Forecast foundation.

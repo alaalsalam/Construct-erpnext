@@ -47,3 +47,6 @@ Updated risks:
 - Retention Register and Advance Register do not create Journal Entries automatically; accounting treatment must be designed in a later finance integration phase.
 - Contractor ledger Payment Entry automation depends on submitted ERPNext Payment Entry references to linked Purchase Invoices; full payment validation remains pending because the IPC Purchase Invoice is still a draft under standard ERPNext authorization controls.
 - MariaDB recovered after an OOM-kill failure during the contractor ledger phase; monitor database memory stability before the next migration-heavy task.
+- Project Financial Snapshot is point-in-time and must be regenerated to reflect later procurement, IPC, or payment changes.
+- CFO risk status thresholds are intentionally simple in this phase and should be reviewed with finance leadership before production KPI sign-off.
+- Snapshot aggregation currently relies primarily on Construction Work Item operational totals; if direct ERPNext procurement documents are edited outside the Work Item linkage, reports may require reconciliation.

@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "creation": "2026-05-09 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_work_item_sync",
+  "enable_budget_warning",
+  "enable_budget_blocking",
+  "overrun_tolerance_percent",
+  "default_site_warehouse",
+  "require_work_item_on_project_purchase"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "enable_work_item_sync",
+   "fieldtype": "Check",
+   "label": "Enable Work Item Sync"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_budget_warning",
+   "fieldtype": "Check",
+   "label": "Enable Budget Warning"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_budget_blocking",
+   "fieldtype": "Check",
+   "label": "Enable Budget Blocking"
+  },
+  {
+   "default": "0",
+   "fieldname": "overrun_tolerance_percent",
+   "fieldtype": "Percent",
+   "label": "Overrun Tolerance Percent"
+  },
+  {
+   "fieldname": "default_site_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Site Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_work_item_on_project_purchase",
+   "fieldtype": "Check",
+   "label": "Require Work Item On Project Purchase"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-05-09 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Procurement Control",
+ "name": "Procurement Control Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Construction Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Budget Controller",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

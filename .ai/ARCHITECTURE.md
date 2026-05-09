@@ -52,6 +52,30 @@ Workflow:
 
 Existing GCS workspaces are implementation-era navigation and are hidden from user-facing navigation through workspace JSON and a reversible patch. Keep the underlying construct_erpnext package and existing internal module folders for now; do not rename the Python package.
 
+## Procurement Control Foundation
+
+Implemented internal module: procurement_control / Procurement Control.
+
+Procurement linkage design:
+
+- Construction Work Item is the operational link between BOQ planning and ERPNext procurement/stock transactions.
+- ERPNext procurement child rows are extended through app-level Custom Fields, not ERPNext core DocType edits.
+- Material Request Item, Purchase Order Item, Purchase Receipt Item, Purchase Invoice Item, and Stock Entry Detail can link to Construction Work Item, Construction BOQ, WBS Element, Cost Code, and Site Warehouse.
+- Warehouse can be marked as a site warehouse and linked to a construction project, site code, and site manager.
+- Procurement totals on Construction Work Item are recalculated from submitted ERPNext documents only.
+- Actual cost is not overwritten blindly; committed, invoiced, and consumed amounts are tracked separately for procurement control.
+
+New settings:
+
+- Procurement Control Settings: enables/disables Work Item sync, budget warnings, budget blocking, tolerance percentage, default site warehouse, and optional Work Item requirement for project purchases.
+
+Procurement reports:
+
+- Work Item Procurement Summary
+- BOQ Procurement Pipeline
+- Site Warehouse Consumption
+- Procurement Budget Control
+
 ## Role-Oriented Navigation
 
 - Executive / CFO: Executive Control Center, Reports & Analytics, selected Finance records.

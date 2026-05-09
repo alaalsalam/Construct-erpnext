@@ -39,3 +39,11 @@
 - Approved Construction BOQs generate standalone Construction Work Items.
 - Construction Work Item is the future operational link point for procurement, site warehouses, progress, Measurement Book, IPC, actual costing, and forecasting.
 - Construction BOQ Workflow is created through an after_migrate setup hook for Frappe v15 compatibility.
+
+## ADR-006: Construction Work Item Links BOQ To Procurement
+
+- Construction Work Item is the operational link between BOQ and ERPNext procurement/stock transactions.
+- Procurement child rows store references to Construction Work Item, Construction BOQ, WBS Element, Cost Code, and Site Warehouse through app-managed Custom Fields.
+- Procurement totals are recalculated from submitted ERPNext documents and exclude draft/cancelled documents.
+- Committed, invoiced, and consumed amounts are tracked separately from the existing actual_cost field to avoid accidental double counting.
+- Procurement budget blocking is disabled by default and controlled through Procurement Control Settings.

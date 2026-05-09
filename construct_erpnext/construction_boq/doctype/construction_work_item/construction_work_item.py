@@ -43,3 +43,9 @@ class ConstructionWorkItem(Document):
 			else 0
 		)
 		self.variance_amount = flt(self.planned_amount) - flt(self.actual_cost)
+		self.procurement_variance_qty = flt(self.planned_quantity) - flt(self.ordered_qty)
+		self.procurement_variance_amount = flt(self.planned_amount) - flt(
+			self.committed_amount
+		)
+		if not self.procurement_status:
+			self.procurement_status = "Not Requested"

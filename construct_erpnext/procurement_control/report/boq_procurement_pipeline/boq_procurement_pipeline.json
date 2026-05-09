@@ -1,0 +1,10 @@
+{
+ "disabled": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "Procurement Control",
+ "name": "BOQ Procurement Pipeline",
+ "ref_doctype": "Construction Work Item",
+ "report_name": "BOQ Procurement Pipeline",
+ "report_type": "Script Report"
+}

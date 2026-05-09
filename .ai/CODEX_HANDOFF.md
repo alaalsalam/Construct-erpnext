@@ -2,7 +2,7 @@
 
 Read project memory and working rules first, continue from NEXT_ACTION, implement one task at a time, update memory after every task.
 
-Current branch: feature/construction-boq-foundation.
+Current branch: feature/boq-procurement-control.
 
 Canonical repository path: /home/frappe/frappe-bench/apps/construct_erpnext.
 Old path /home/frappe/frappe-bench/apps/Construct-erpnext was removed by renaming the real repository folder.
@@ -41,4 +41,17 @@ Construction BOQ foundation status:
 - Approved BOQs generate Construction Work Items from child BOQ rows.
 - Validation on construction.yemenfrappe.com passed with rollback-only records: totals calculated, workflow approval submitted the BOQ, work item generated, reports loaded, and workspace links appeared.
 
-Next operational task: Implement BOQ linkage with procurement and site warehouses.
+Procurement linkage status:
+- New module: construct_erpnext/procurement_control.
+- New Single DocType: Procurement Control Settings.
+- App-managed Custom Fields link ERPNext procurement/stock child rows to Construction Work Item, Construction BOQ, WBS Element, Cost Code, and Site Warehouse.
+- Warehouse has site warehouse metadata fields.
+- Procurement hooks sync BOQ metadata on row validate and recalculate Work Item procurement totals on submit/cancel.
+- Purchase Invoice submit authorization remains active; El Salvador withholding remains disabled.
+- Stock Entry material assignment hook remains active.
+- Whitelisted Material Request generation exists at construct_erpnext.procurement_control.material_request.create_material_request_from_work_items.
+- New reports: Work Item Procurement Summary, BOQ Procurement Pipeline, Site Warehouse Consumption, Procurement Budget Control.
+- Normal Material Request validation on construction.yemenfrappe.com is blocked until baseline ERPNext masters such as Company, Item Group, UOM, and Item are configured.
+- Rollback-only validation confirmed metadata sync, submitted document recalculation, report loading, workspace links, and cache clearing.
+
+Next operational task: Design and implement Measurement Book foundation.

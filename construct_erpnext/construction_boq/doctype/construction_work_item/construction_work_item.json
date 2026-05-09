@@ -27,6 +27,13 @@
   "ordered_qty",
   "received_qty",
   "invoiced_qty",
+  "consumed_qty",
+  "committed_amount",
+  "invoiced_amount",
+  "consumed_amount",
+  "procurement_status",
+  "procurement_variance_qty",
+  "procurement_variance_amount",
   "measured_qty",
   "certified_qty",
   "remaining_qty",
@@ -170,6 +177,57 @@
    "fieldname": "invoiced_qty",
    "fieldtype": "Float",
    "label": "Invoiced Qty",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "consumed_qty",
+   "fieldtype": "Float",
+   "label": "Consumed Qty",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "committed_amount",
+   "fieldtype": "Currency",
+   "label": "Committed Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "invoiced_amount",
+   "fieldtype": "Currency",
+   "label": "Invoiced Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "consumed_amount",
+   "fieldtype": "Currency",
+   "label": "Consumed Amount",
+   "read_only": 1
+  },
+  {
+   "default": "Not Requested",
+   "fieldname": "procurement_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Procurement Status",
+   "options": "Not Requested\nPartially Requested\nFully Requested\nPartially Ordered\nFully Ordered\nPartially Received\nFully Received\nPartially Invoiced\nFully Invoiced\nOver Requested\nOver Ordered\nOver Received",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "procurement_variance_qty",
+   "fieldtype": "Float",
+   "label": "Procurement Variance Qty",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "procurement_variance_amount",
+   "fieldtype": "Currency",
+   "label": "Procurement Variance Amount",
    "read_only": 1
   },
   {

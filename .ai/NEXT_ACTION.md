@@ -1,3 +1,3 @@
 # Next Action
 
-Implement BOQ linkage with procurement and site warehouses.
+Design and implement Measurement Book foundation.

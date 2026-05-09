@@ -1,0 +1,10 @@
+{
+ "disabled": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "Procurement Control",
+ "name": "Procurement Budget Control",
+ "ref_doctype": "Construction Work Item",
+ "report_name": "Procurement Budget Control",
+ "report_type": "Script Report"
+}

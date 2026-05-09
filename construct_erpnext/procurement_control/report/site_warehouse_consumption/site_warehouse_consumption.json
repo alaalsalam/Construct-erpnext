@@ -1,0 +1,10 @@
+{
+ "disabled": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "Procurement Control",
+ "name": "Site Warehouse Consumption",
+ "ref_doctype": "Stock Entry",
+ "report_name": "Site Warehouse Consumption",
+ "report_type": "Script Report"
+}

@@ -7,3 +7,4 @@ GCS Payroll
 GCS Security
 GCS Portal
 Construction BOQ
+Procurement Control

@@ -84,3 +84,20 @@
 - Ran bench migrate, clear-cache, and clear-website-cache on construction.yemenfrappe.com.
 - Verified new DocTypes, reports, workflow, workspace links, BOQ calculations, workflow approval, work-item generation, and report loading using rollback-only validation records.
 - Verified existing construct DocTypes remain accessible.
+
+## 2026-05-09 17:21:02 CEST
+
+- Created branch feature/boq-procurement-control from feature/construction-boq-foundation.
+- Inspected ERPNext procurement, stock, and warehouse DocType fields before adding app-level Custom Fields.
+- Added internal Procurement Control module inside construct_erpnext without modifying ERPNext core.
+- Added Procurement Control Settings as a Single DocType for sync, warning, blocking, tolerance, and default site warehouse behavior.
+- Added idempotent Custom Field setup for Material Request Item, Purchase Order Item, Purchase Receipt Item, Purchase Invoice Item, Stock Entry Detail, and Warehouse.
+- Extended Construction Work Item with procurement quantity, amount, status, and variance tracking fields.
+- Added procurement hooks to auto-fill BOQ metadata on procurement rows and recalculate Work Item procurement totals after submit/cancel.
+- Preserved existing Purchase Invoice authorization and Stock Entry material hooks while keeping El Salvador withholding disabled.
+- Added draft Material Request generation from material Work Items as a whitelisted app method.
+- Added Script Reports: Work Item Procurement Summary, BOQ Procurement Pipeline, Site Warehouse Consumption, and Procurement Budget Control.
+- Updated Procurement & Site Warehouses and Reports & Analytics workspaces with procurement control links.
+- Ran migration and cache clears on construction.yemenfrappe.com.
+- Validated custom fields, settings, reports, workspaces, metadata sync, procurement recalculation, and report loading with rollback-only records.
+- Full normal Material Request workflow validation is pending baseline ERPNext Company, Item Group, UOM, and Item masters on the site.

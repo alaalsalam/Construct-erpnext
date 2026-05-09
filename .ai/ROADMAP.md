@@ -29,3 +29,13 @@ Phase 3 deliverables:
 - Add BOQ cost analysis and variance reports. Completed.
 - Add BOQ links to Construction Control and Reports & Analytics workspaces. Completed.
 - Next Phase 3/4 bridge: link BOQ Work Items to procurement and site warehouse flows.
+
+Phase 4 deliverables:
+
+- Link Construction Work Items to Material Request, Purchase Order, Purchase Receipt, Purchase Invoice, and Stock Entry rows. Completed.
+- Add site warehouse metadata to Warehouse. Completed.
+- Add Procurement Control Settings. Completed.
+- Add Work Item procurement recalculation from submitted procurement and stock documents. Completed.
+- Add draft Material Request generation from material Work Items. Completed as a whitelisted method.
+- Add procurement control reports and workspace links. Completed.
+- Next Phase 5: design and implement Measurement Book foundation.

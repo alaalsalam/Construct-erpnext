@@ -3,14 +3,17 @@ from frappe import _
 app_name = "construct_erpnext"
 app_title = "Construct ERPNext"
 app_publisher = "Sovereign IT Services"
-app_description = "Construction ERP portal for ERPNext v16 - replicating o4bi.com features"
+app_description = "Real Estate Development ERP for ERPNext v15"
 app_email = "git@sovit.xyz"
 app_license = "AGPL-3.0"
 required_apps = ["frappe", "erpnext", "hrms"]
 
 # --- After Install ---
 after_install = "construct_erpnext.setup.install.after_install"
-after_migrate = ["construct_erpnext.construction_boq.setup.ensure_construction_boq_workflow"]
+after_migrate = [
+    "construct_erpnext.construction_boq.setup.ensure_construction_boq_workflow",
+    "construct_erpnext.procurement_control.setup.after_migrate",
+]
 
 # --- Asset Bundles ---
 app_include_js = "/assets/construct_erpnext/js/construct_erpnext.bundle.js"
@@ -43,15 +46,40 @@ doc_events = {
         "on_trash": "construct_erpnext.gcs_security.audit.log_delete",
     },
     "Purchase Invoice": {
-        "on_submit": "construct_erpnext.gcs_admin.invoice_auth.check_authorization",
+        "validate": "construct_erpnext.procurement_control.events.validate_procurement_doc",
+        "on_submit": [
+            "construct_erpnext.gcs_admin.invoice_auth.check_authorization",
+            "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
+        ],
+        "on_cancel": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
         # El Salvador localization disabled for generic product build.
         # Country-specific withholding must be enabled explicitly per deployment.
+    },
+    "Material Request": {
+        "validate": "construct_erpnext.procurement_control.events.validate_procurement_doc",
+        "on_submit": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
+        "on_cancel": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
+    },
+    "Purchase Order": {
+        "validate": "construct_erpnext.procurement_control.events.validate_purchase_order",
+        "on_submit": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
+        "on_cancel": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
+    },
+    "Purchase Receipt": {
+        "validate": "construct_erpnext.procurement_control.events.validate_procurement_doc",
+        "on_submit": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
+        "on_cancel": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
     },
     "Sales Invoice": {
         "on_submit": "construct_erpnext.gcs_admin.reminders.schedule_payment_reminders",
     },
     "Stock Entry": {
-        "on_submit": "construct_erpnext.gcs_projects.material.assign_cost_to_activity",
+        "validate": "construct_erpnext.procurement_control.events.validate_procurement_doc",
+        "on_submit": [
+            "construct_erpnext.gcs_projects.material.assign_cost_to_activity",
+            "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
+        ],
+        "on_cancel": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
     },
     "Salary Slip": {
         "on_submit": "construct_erpnext.gcs_payroll.distribution.distribute_costs",

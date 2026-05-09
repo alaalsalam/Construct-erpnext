@@ -1,3 +1,3 @@
 # Next Action
 
-Design and implement EVM Metrics foundation.
+Design and implement Real Estate Inventory foundation.

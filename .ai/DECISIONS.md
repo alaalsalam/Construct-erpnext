@@ -100,3 +100,10 @@
 - Purchase Orders are counted only for their uninvoiced submitted amount.
 - Retention release is forecast from Retention Register release_due_date and remaining_retention_amount.
 - The forecast does not create Journal Entries, Payment Entries, Purchase Invoices, background jobs, or scheduled EVM automation.
+
+## ADR-014: EVM Snapshot Calculations
+
+- EVM foundation uses deterministic snapshot calculations from BOQ, IPC certification, actual cost, and planned progress percent.
+- BAC is based on Construction Work Item planned amounts, EV on certified amounts, AC on invoiced actuals, and PV on BAC multiplied by planned progress percent.
+- Automated schedule-derived PV and scheduled recalculation are deferred until the scheduling model is stabilized.
+- Project EVM Metrics does not create or submit accounting documents and does not replace ERPNext accounting reports.

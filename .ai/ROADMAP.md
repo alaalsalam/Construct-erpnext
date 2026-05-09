@@ -84,3 +84,11 @@ Phase 7 deliverables:
 - Create retained Arabic validation forecast for مشروع البرج السكني المتكامل. Completed.
 - Sales inflows, rental income, customer installments, full bank/cash integration, and scheduled EVM automation remain deferred.
 - Next Phase 7 extension: design and implement EVM Metrics foundation.
+- Create Project EVM Metrics DocType. Completed.
+- Add deterministic EVM service for BAC, EV, AC, PV, CV, SV, CPI, SPI, EAC, ETC, VAC, and TCPI. Completed.
+- Add whitelisted EVM data and snapshot creation methods. Completed.
+- Add EVM reports: Project EVM Metrics Report, EVM Forecast Summary, Project Performance Dashboard Report. Completed.
+- Add EVM links to Executive Control Center and Reports & Analytics. Completed.
+- Create retained Arabic validation EVM snapshot for مشروع البرج السكني المتكامل. Completed.
+- Automated schedule-derived PV, scheduled recalculation, AI forecasting, and Real Estate Inventory remain deferred.
+- Next Phase 8: design and implement Real Estate Inventory foundation.

@@ -54,3 +54,7 @@ Updated risks:
 - Current cash inflows are zero until Real Estate Sales, installments, rentals, and customer collections are implemented.
 - Forecast purchase invoice outflows use ERPNext outstanding_amount; unpaid historical validation invoices can make current cash risk appear higher until finance records payments or adjusts the scenario opening balance.
 - Forecast risk currently uses deterministic threshold rules and needs finance leadership review before being treated as a final treasury KPI.
+- EVM planned value currently depends on manually supplied planned_progress_percent or light schedule progress fields; automated schedule-derived PV is deferred.
+- EVM actual cost currently prefers invoiced amounts, so CPI can look severe when procurement invoices are ahead of certified earned value.
+- EVM snapshots are point-in-time and must be regenerated after new BOQ, procurement, measurement, IPC, or payment activity.
+- EVM risk thresholds are deterministic and explainable but need CFO/project leadership review before KPI sign-off.

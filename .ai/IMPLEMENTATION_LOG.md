@@ -296,3 +296,38 @@
   - cash_risk_status Red
 - Verified cash flow reports, existing Project Financial Snapshot, IPC, Contractor Account, Executive Control Center, and Reports & Analytics load successfully.
 - No Journal Entry, Payment Entry, Purchase Invoice submission, EVM scheduled task, Real Estate Inventory, Sales/Rental DocTypes, or El Salvador localization was created.
+
+## 2026-05-09 22:26:27 CEST
+
+- Created branch feature/evm-metrics-foundation from feature/cash-flow-forecast-foundation.
+- Inspected Project, Construction BOQ, Construction Work Item, Project Financial Snapshot, Project Cash Flow Forecast, IPC, Contractor Account, Contractor Ledger Entry, Purchase Invoice, Stock Entry Detail, Physical Advancement, Activity Schedule, Construction Budget, and Budget Level source fields before implementation.
+- Added Project EVM Metrics DocType inside cfo_analytics.
+- Implemented construct_erpnext.cfo_analytics.evm_metrics with deterministic BAC, EV, AC, PV, CV, SV, CPI, SPI, EAC, ETC, VAC, TCPI, actual progress, forecast overrun, and risk calculations.
+- Added whitelisted methods get_evm_data and create_evm_snapshot.
+- Added reports: Project EVM Metrics Report, EVM Forecast Summary, and Project Performance Dashboard Report.
+- Updated Executive Control Center and Reports & Analytics workspace links.
+- Ran JSON validation, Python compile checks, migration, site cache clear, and website cache clear.
+- Created retained Arabic validation EVM snapshot:
+  - Project EVM Metrics: EVM-2026-00001
+  - Title: مؤشرات القيمة المكتسبة لمشروع البرج السكني المتكامل
+  - Planned progress percent: 30
+- Verified EVM values:
+  - BAC 3500000
+  - EV 875000
+  - AC 3500000
+  - PV 1050000
+  - CV -2625000
+  - SV -175000
+  - CPI 0.25
+  - SPI 0.833333333
+  - EAC 14000000
+  - ETC 10500000
+  - VAC -10500000
+  - TCPI 0
+  - forecast_overrun_amount 10500000
+  - actual_progress_percent 25
+  - cost_status Red
+  - schedule_status Red
+  - overall_evm_status At Risk
+- Verified EVM reports, existing Project Financial Snapshot, existing Cash Flow Forecast, existing IPC, existing Contractor Account, Executive Control Center, and Reports & Analytics load successfully.
+- No scheduled jobs, Journal Entries, accounting documents, Real Estate Inventory, Sales/Rental DocTypes, or El Salvador localization were created.

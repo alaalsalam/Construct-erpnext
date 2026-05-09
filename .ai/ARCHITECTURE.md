@@ -189,6 +189,26 @@ Cash flow reports:
 - Contractor Payment Forecast
 - Retention Release Forecast
 
+## EVM Metrics Foundation
+
+Implemented inside internal module: cfo_analytics / CFO Analytics.
+
+Earned Value Management design:
+
+- Project EVM Metrics is a deterministic point-in-time performance snapshot.
+- BAC is sourced from Construction Work Item planned amounts, with Project Financial Snapshot as fallback.
+- EV is sourced from certified Construction Work Item amounts, with Interim Payment Certificate gross amount as fallback.
+- AC is sourced from Project Financial Snapshot procurement invoiced amount, then Work Item invoiced amount, then submitted ERPNext Purchase Invoices.
+- PV is calculated as BAC multiplied by planned_progress_percent; automated schedule-derived PV is deferred.
+- EVM formulas calculate CV, SV, CPI, SPI, EAC, ETC, VAC, TCPI, actual progress, forecast overrun, and simple risk statuses.
+- The EVM layer does not create accounting records, Journal Entries, background jobs, or scheduled recalculations.
+
+EVM reports:
+
+- Project EVM Metrics Report
+- EVM Forecast Summary
+- Project Performance Dashboard Report
+
 ## Role-Oriented Navigation
 
 - Executive / CFO: Executive Control Center, Reports & Analytics, selected Finance records.

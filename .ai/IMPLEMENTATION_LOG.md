@@ -137,3 +137,36 @@
 - Verified reports load: Work Item Procurement Summary, BOQ Procurement Pipeline, Site Warehouse Consumption, Procurement Budget Control, Construction BOQ Cost Analysis, Construction BOQ Variance.
 - Verified workspaces load: Executive Control Center, Construction Control, Procurement & Site Warehouses, Reports & Analytics.
 - Kept baseline and submitted validation records because they are realistic reusable implementation records needed for future validation.
+
+## 2026-05-09 18:32:29 CEST
+
+- Created branch feature/measurement-book-foundation from feature/operational-baseline-procurement-smoke.
+- Normalized reusable operational baseline records to clear Arabic, non-country-specific names:
+  - Company: شركة التطوير العقاري والبناء
+  - Project: مشروع البرج السكني المتكامل / PROJ-0001
+  - Cost Center: مركز تكلفة - مشروع البرج السكني المتكامل - RED
+  - Site Warehouse: مخزن موقع مشروع البرج السكني المتكامل - RED with site_code SITE-001
+  - Supplier: مقاول الأعمال الإنشائية
+  - Items: خرسانة جاهزة C30, حديد تسليح, خدمة مقاول أعمال إنشائية
+  - UOMs: عدد, متر, متر مربع, متر مكعب, كجم
+  - Item Groups: مواد البناء, خدمات المقاولين
+  - Cost Code: CC-CONC / أعمال الخرسانة الإنشائية
+  - WBS Element: PROJ-0001-01.01 / أعمال خرسانة الأساسات
+- Set System Settings language to ar and kept the existing timezone unchanged.
+- Retained ERPNext Company country value because Country is mandatory and no generic Country master exists.
+- Retained submitted Construction BOQ document number ANK-BOQ-FOUNDATION-001 because it is linked to submitted procurement records; Arabic title/description is stored in remarks.
+- Added internal Measurement IPC module and created DocTypes: Measurement Book and Measurement Entry.
+- Extended Construction Work Item with measured quantity, measurement amount, measurement progress, last measurement date, and measurement status fields.
+- Implemented Document Controllers and utility functions for measurement metadata fetch, quantity calculations, previous/cumulative/remaining quantities, Measurement Book totals, and Work Item measurement recalculation.
+- Added Measurement Book Verification Workflow through an idempotent after_migrate setup hook for Frappe v15 compatibility.
+- Added Script Reports: Measurement Book Register, Work Item Measurement Progress, and Measurement Verification Queue.
+- Updated Measurement & IPC and Reports & Analytics workspaces with measurement links.
+- Ran bench migrate, clear-cache, and clear-website-cache on construction.yemenfrappe.com.
+- Created and retained reusable Arabic measurement validation records:
+  - Measurement Book: MB-2026-00001 / قياسات أعمال خرسانة الأساسات
+  - Measurement Entry: ME-2026-00001 for CWI-2026-00001
+- Verified Measurement Book workflow transitions Draft -> Submitted -> Under Verification -> Verified.
+- Verified Measurement Entry calculations: accepted_qty 25, cumulative_measured_qty 25, remaining_qty 75, measured_amount 875000.
+- Verified Construction Work Item measurement values: measured_qty 25, measurement_progress_percent 25, measurement_status Partially Measured, certified_qty remains 0.
+- Verified procurement reports, measurement reports, product workspaces, Construction BOQ, and Construction Work Item still load.
+- Confirmed Interim Payment Certificate DocType was not created.

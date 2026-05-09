@@ -1,0 +1,10 @@
+{
+ "disabled": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "Measurement IPC",
+ "name": "Measurement Verification Queue",
+ "ref_doctype": "Measurement Entry",
+ "report_name": "Measurement Verification Queue",
+ "report_type": "Script Report"
+}

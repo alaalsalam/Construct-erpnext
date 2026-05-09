@@ -76,6 +76,26 @@ Procurement reports:
 - Site Warehouse Consumption
 - Procurement Budget Control
 
+## Measurement Book Foundation
+
+Implemented internal module: measurement_ipc / Measurement IPC.
+
+Measurement design:
+
+- Measurement Book groups field measurement activity by company, project, contractor, BOQ, and period.
+- Measurement Entry is a standalone operational record linked to Measurement Book and Construction Work Item.
+- Measurement Entries carry site/QS comments, location notes, image/file attachments, and optional GPS fields.
+- Quantities support Direct Quantity, Length, Area, Volume, Count, and Manual methods.
+- Verified/Locked Measurement Entries update Work Item measured quantity, measured amount, measurement progress, and measurement status.
+- Certified quantity is not updated in this phase; certification remains reserved for the future IPC foundation.
+- Future IPC generation must consume verified Measurement Entries rather than manually entered IPC lines.
+
+Measurement reports:
+
+- Measurement Book Register
+- Work Item Measurement Progress
+- Measurement Verification Queue
+
 ## Role-Oriented Navigation
 
 - Executive / CFO: Executive Control Center, Reports & Analytics, selected Finance records.

@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"ra_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Analytics</b></span>\",\"col\":12}},{\"id\":\"ra_c0\",\"type\":\"card\",\"data\":{\"card_name\":\"BOQ Reports\",\"col\":3}},{\"id\":\"ra_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Budget & Cost Reports\",\"col\":3}},{\"id\":\"ra_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Progress Reports\",\"col\":3}},{\"id\":\"ra_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement & Contractor Reports\",\"col\":3}}]",
+ "content": "[{\"id\":\"ra_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Analytics</b></span>\",\"col\":12}},{\"id\":\"ra_c0\",\"type\":\"card\",\"data\":{\"card_name\":\"BOQ Reports\",\"col\":3}},{\"id\":\"ra_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Budget & Cost Reports\",\"col\":3}},{\"id\":\"ra_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Progress Reports\",\"col\":3}},{\"id\":\"ra_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement & Contractor Reports\",\"col\":3}},{\"id\":\"ra_c4\",\"type\":\"card\",\"data\":{\"card_name\":\"Measurement Reports\",\"col\":3}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -31,9 +31,13 @@
   {"hidden": 0, "is_query_report": 1, "label": "Site Warehouse Consumption", "link_count": 0, "link_to": "Site Warehouse Consumption", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Procurement Budget Control", "link_count": 0, "link_to": "Procurement Budget Control", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Subcontract Status", "link_count": 0, "link_to": "Subcontract Status", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Change Order History", "link_count": 0, "link_to": "Change Order History", "link_type": "Report", "onboard": 0, "type": "Link"}
+  {"hidden": 0, "is_query_report": 1, "label": "Change Order History", "link_count": 0, "link_to": "Change Order History", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Measurement Reports", "link_count": 0, "onboard": 0, "type": "Card Break"},
+  {"hidden": 0, "is_query_report": 1, "label": "Measurement Book Register", "link_count": 0, "link_to": "Measurement Book Register", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Work Item Measurement Progress", "link_count": 0, "link_to": "Work Item Measurement Progress", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Measurement Verification Queue", "link_count": 0, "link_to": "Measurement Verification Queue", "link_type": "Report", "onboard": 0, "type": "Link"}
  ],
- "modified": "2026-05-09 17:20:00.000000",
+ "modified": "2026-05-09 17:55:00.000000",
  "modified_by": "Administrator",
  "module": "GCS Projects",
  "name": "Reports & Analytics",

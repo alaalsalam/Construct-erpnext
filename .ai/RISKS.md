@@ -34,3 +34,8 @@ Updated risks:
 - Work Item actual_cost is intentionally not updated by procurement sync yet; dashboards must use committed_amount, invoiced_amount, and consumed_amount until the actual-cost policy is finalized.
 - Site language and timezone were unset and blocked ERPNext amount-in-words generation; System Settings now use language en and time zone Asia/Aden.
 - Submitted procurement validation records are intentionally retained; future validation must account for existing submitted MR, PO, PR, PI, Stock Entry, and stock ledger impact.
+- Baseline operational names were normalized to Arabic and System Settings language is now ar; future validation should watch for ERPNext translation, PDF, and amount-in-words behavior in Arabic.
+- ERPNext Company country is mandatory; the existing Country value was retained because no generic Country master exists and no country-specific tax setup was added.
+- Submitted and linked document names such as ANK-BOQ-FOUNDATION-001 were not force-renamed; Arabic meaning is stored in visible title/description fields where safe.
+- Measurement Book updates Work Item measured progress but intentionally does not update certified_qty; IPC must be the certification layer.
+- Measurement Book workflow is created through after_migrate setup and depends on Workflow State and Workflow Action Master records being present or created idempotently.

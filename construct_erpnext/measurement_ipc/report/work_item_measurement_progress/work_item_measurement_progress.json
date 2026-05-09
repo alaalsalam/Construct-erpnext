@@ -1,0 +1,10 @@
+{
+ "disabled": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "Measurement IPC",
+ "name": "Work Item Measurement Progress",
+ "ref_doctype": "Construction Work Item",
+ "report_name": "Work Item Measurement Progress",
+ "report_type": "Script Report"
+}

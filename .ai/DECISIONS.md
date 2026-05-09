@@ -53,3 +53,17 @@
 - Operational baseline records are allowed on construction.yemenfrappe.com only when they are realistic, reusable, and documented.
 - The Al Nakheel baseline is kept for continued implementation validation instead of being removed.
 - Baseline records must not use disposable naming and must remain suitable for future BOQ, procurement, stock, and Measurement Book validation.
+
+## ADR-008: Arabic Operational Baseline, English Technical Model
+
+- Technical DocType names, Python modules, and internal APIs remain English for Frappe maintainability.
+- Operational records, titles, descriptions, item names, warehouse names, cost centers, project names, BOQ labels, and explanatory data should use clear Arabic names.
+- Operational baseline records must remain non-country-specific unless a deployment-specific localization plan is approved.
+- Submitted or linked ERPNext records are not force-renamed when doing so could disturb accounting, stock, or workflow history; visible Arabic fields are updated instead.
+
+## ADR-009: Measurement Entry Feeds Future IPC
+
+- Measurement Entry is a standalone operational record linked to Measurement Book and Construction Work Item.
+- Verified/Locked Measurement Entries update Work Item measurement progress.
+- Measurement Book does not certify payment quantities and does not update certified_qty.
+- Future IPC generation must be based on verified Measurement Entries rather than manual IPC line entry.

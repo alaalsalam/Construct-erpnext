@@ -1,0 +1,10 @@
+{
+ "disabled": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "Measurement IPC",
+ "name": "Measurement Book Register",
+ "ref_doctype": "Measurement Book",
+ "report_name": "Measurement Book Register",
+ "report_type": "Script Report"
+}

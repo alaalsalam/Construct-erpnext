@@ -39,3 +39,13 @@ Phase 4 deliverables:
 - Add draft Material Request generation from material Work Items. Completed as a whitelisted method.
 - Add procurement control reports and workspace links. Completed.
 - Next Phase 5: design and implement Measurement Book foundation.
+
+Phase 5 deliverables:
+
+- Normalize reusable operational baseline records to clear Arabic, non-country-specific names. Completed.
+- Create Measurement Book and Measurement Entry foundation. Completed.
+- Add Work Item measurement progress fields without changing certified_qty. Completed.
+- Add Measurement Book Verification Workflow. Completed.
+- Add measurement register, progress, and verification queue reports. Completed.
+- Add Measurement & IPC and Reports & Analytics workspace links for measurement. Completed.
+- Next Phase 6: design and implement Interim Payment Certificate foundation.

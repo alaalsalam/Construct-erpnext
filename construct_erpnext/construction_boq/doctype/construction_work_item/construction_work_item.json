@@ -35,6 +35,10 @@
   "procurement_variance_qty",
   "procurement_variance_amount",
   "measured_qty",
+  "measurement_amount",
+  "measurement_progress_percent",
+  "last_measurement_date",
+  "measurement_status",
   "certified_qty",
   "remaining_qty",
   "actual_cost",
@@ -235,6 +239,34 @@
    "fieldname": "measured_qty",
    "fieldtype": "Float",
    "label": "Measured Qty",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "measurement_amount",
+   "fieldtype": "Currency",
+   "label": "Measurement Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "measurement_progress_percent",
+   "fieldtype": "Percent",
+   "label": "Measurement Progress Percent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_measurement_date",
+   "fieldtype": "Date",
+   "label": "Last Measurement Date",
+   "read_only": 1
+  },
+  {
+   "default": "Not Measured",
+   "fieldname": "measurement_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Measurement Status",
+   "options": "Not Measured\nPartially Measured\nFully Measured\nOver Measured",
    "read_only": 1
   },
   {

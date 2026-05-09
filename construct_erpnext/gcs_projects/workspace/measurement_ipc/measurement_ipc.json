@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"mipc_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Measurement & IPC</b></span>\",\"col\":12}},{\"id\":\"mipc_h2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"text-muted\\\">Measurement Book and Interim Payment Certificate will be added in the next phases.</span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"mipc_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Measurement & IPC</b></span>\",\"col\":12}},{\"id\":\"mipc_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Measurement Control\",\"col\":4}},{\"id\":\"mipc_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Measurement Reports\",\"col\":4}},{\"id\":\"mipc_h2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"text-muted\\\">Interim Payment Certificate will be implemented after Measurement Book.</span>\",\"col\":12}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,8 +12,16 @@
  "idx": 0,
  "is_hidden": 0,
  "label": "Measurement & IPC",
- "links": [],
- "modified": "2026-05-09 00:00:00.000000",
+ "links": [
+  {"hidden": 0, "is_query_report": 0, "label": "Measurement Control", "link_count": 0, "onboard": 0, "type": "Card Break"},
+  {"hidden": 0, "is_query_report": 0, "label": "Measurement Book", "link_count": 0, "link_to": "Measurement Book", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Measurement Entry", "link_count": 0, "link_to": "Measurement Entry", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Measurement Reports", "link_count": 0, "onboard": 0, "type": "Card Break"},
+  {"hidden": 0, "is_query_report": 1, "label": "Measurement Book Register", "link_count": 0, "link_to": "Measurement Book Register", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Work Item Measurement Progress", "link_count": 0, "link_to": "Work Item Measurement Progress", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Measurement Verification Queue", "link_count": 0, "link_to": "Measurement Verification Queue", "link_type": "Report", "onboard": 0, "type": "Link"}
+ ],
+ "modified": "2026-05-09 17:55:00.000000",
  "modified_by": "Administrator",
  "module": "GCS Projects",
  "name": "Measurement & IPC",

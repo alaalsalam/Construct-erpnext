@@ -1,3 +1,3 @@
 # Next Action
 
-Design and implement Measurement Book foundation.
+Design and implement Interim Payment Certificate foundation.

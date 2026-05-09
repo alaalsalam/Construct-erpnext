@@ -2,7 +2,7 @@
 
 Read project memory and working rules first, continue from NEXT_ACTION, implement one task at a time, update memory after every task.
 
-Current branch: feature/operational-baseline-procurement-smoke.
+Current branch: feature/measurement-book-foundation.
 
 Canonical repository path: /home/frappe/frappe-bench/apps/construct_erpnext.
 Old path /home/frappe/frappe-bench/apps/Construct-erpnext was removed by renaming the real repository folder.
@@ -52,17 +52,19 @@ Procurement linkage status:
 - Whitelisted Material Request generation exists at construct_erpnext.procurement_control.material_request.create_material_request_from_work_items.
 - New reports: Work Item Procurement Summary, BOQ Procurement Pipeline, Site Warehouse Consumption, Procurement Budget Control.
 - Baseline ERPNext masters are now configured on construction.yemenfrappe.com.
-- Operational baseline records retained:
-  - Company: Yemen Construction & Real Estate Development
+- Operational baseline records retained and normalized to Arabic, non-country-specific names:
+  - Company: شركة التطوير العقاري والبناء
   - Fiscal Year: 2026
-  - Project: Al Nakheel Tower Development / PROJ-0001
-  - Cost Center: Al Nakheel Tower Development - YCRE
-  - Site Warehouse: Al Nakheel Site Warehouse - YCRE
-  - Supplier: Al Amal Contracting
-  - Items: Concrete C30, Reinforcement Steel, Contractor Service
-  - Cost Code: STR-CONC
-  - WBS Element: PROJ-0001-01.01
-- System Settings language/time zone baseline: en / Asia/Aden.
+  - Project: مشروع البرج السكني المتكامل / PROJ-0001
+  - Cost Center: مركز تكلفة - مشروع البرج السكني المتكامل - RED
+  - Site Warehouse: مخزن موقع مشروع البرج السكني المتكامل - RED / SITE-001
+  - Supplier: مقاول الأعمال الإنشائية
+  - Items: خرسانة جاهزة C30, حديد تسليح, خدمة مقاول أعمال إنشائية
+  - UOMs: عدد, متر, متر مربع, متر مكعب, كجم
+  - Item Groups: مواد البناء, خدمات المقاولين
+  - Cost Code: CC-CONC / أعمال الخرسانة الإنشائية
+  - WBS Element: PROJ-0001-01.01 / أعمال خرسانة الأساسات
+- System Settings language is ar; timezone was left unchanged.
 - Full procurement validation passed with retained submitted records:
   - Construction BOQ: ANK-BOQ-FOUNDATION-001
   - Construction Work Item: CWI-2026-00001
@@ -77,4 +79,18 @@ Procurement linkage status:
   - procurement_status Fully Invoiced
 - Reports and product workspaces loaded successfully after full procurement validation.
 
-Next operational task: Design and implement Measurement Book foundation.
+Measurement Book foundation status:
+- New module: construct_erpnext/measurement_ipc.
+- New DocTypes: Measurement Book and Measurement Entry.
+- Measurement Book Verification Workflow is created after migration by construct_erpnext.measurement_ipc.setup.ensure_measurement_book_workflow.
+- Measurement Entry is standalone and links Measurement Book to Construction Work Item for future IPC and field/mobile capture.
+- Construction Work Item now tracks measured_qty, measurement_amount, measurement_progress_percent, last_measurement_date, and measurement_status.
+- certified_qty is not updated by Measurement Book; certification remains reserved for IPC.
+- New reports: Measurement Book Register, Work Item Measurement Progress, Measurement Verification Queue.
+- Retained Arabic validation records:
+  - Measurement Book: MB-2026-00001 / قياسات أعمال خرسانة الأساسات
+  - Measurement Entry: ME-2026-00001 for CWI-2026-00001
+- Validation passed: Measurement Book workflow reached Verified, Work Item measured_qty is 25, measurement_progress_percent is 25, and certified_qty remains 0.
+- Interim Payment Certificate DocType has not been created.
+
+Next operational task: Design and implement Interim Payment Certificate foundation.

@@ -51,3 +51,5 @@ class ConstructionWorkItem(Document):
 			self.procurement_status = "Not Requested"
 		if not self.measurement_status:
 			self.measurement_status = "Not Measured"
+		if not self.certification_status:
+			self.certification_status = "Not Certified"

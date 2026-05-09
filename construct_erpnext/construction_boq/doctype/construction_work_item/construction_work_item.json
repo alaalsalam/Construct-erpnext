@@ -40,6 +40,11 @@
   "last_measurement_date",
   "measurement_status",
   "certified_qty",
+  "certified_amount",
+  "certification_progress_percent",
+  "last_ipc",
+  "last_certification_date",
+  "certification_status",
   "remaining_qty",
   "actual_cost",
   "variance_amount",
@@ -274,6 +279,41 @@
    "fieldname": "certified_qty",
    "fieldtype": "Float",
    "label": "Certified Qty",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "certified_amount",
+   "fieldtype": "Currency",
+   "label": "Certified Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "certification_progress_percent",
+   "fieldtype": "Percent",
+   "label": "Certification Progress Percent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_ipc",
+   "fieldtype": "Link",
+   "label": "Last IPC",
+   "options": "Interim Payment Certificate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_certification_date",
+   "fieldtype": "Date",
+   "label": "Last Certification Date",
+   "read_only": 1
+  },
+  {
+   "default": "Not Certified",
+   "fieldname": "certification_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Certification Status",
+   "options": "Not Certified\nPartially Certified\nFully Certified\nOver Certified",
    "read_only": 1
   },
   {

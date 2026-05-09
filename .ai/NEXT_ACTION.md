@@ -1,3 +1,3 @@
 # Next Action
 
-Design and implement Interim Payment Certificate foundation.
+Design and implement Contractor Ledger and Retention Register foundation.

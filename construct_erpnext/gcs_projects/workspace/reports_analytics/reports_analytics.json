@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"ra_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Analytics</b></span>\",\"col\":12}},{\"id\":\"ra_c0\",\"type\":\"card\",\"data\":{\"card_name\":\"BOQ Reports\",\"col\":3}},{\"id\":\"ra_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Budget & Cost Reports\",\"col\":3}},{\"id\":\"ra_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Progress Reports\",\"col\":3}},{\"id\":\"ra_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement & Contractor Reports\",\"col\":3}},{\"id\":\"ra_c4\",\"type\":\"card\",\"data\":{\"card_name\":\"Measurement Reports\",\"col\":3}}]",
+ "content": "[{\"id\":\"ra_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Analytics</b></span>\",\"col\":12}},{\"id\":\"ra_c0\",\"type\":\"card\",\"data\":{\"card_name\":\"BOQ Reports\",\"col\":3}},{\"id\":\"ra_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Budget & Cost Reports\",\"col\":3}},{\"id\":\"ra_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Progress Reports\",\"col\":3}},{\"id\":\"ra_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement & Contractor Reports\",\"col\":3}},{\"id\":\"ra_c4\",\"type\":\"card\",\"data\":{\"card_name\":\"Measurement Reports\",\"col\":3}},{\"id\":\"ra_c5\",\"type\":\"card\",\"data\":{\"card_name\":\"IPC Reports\",\"col\":3}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -35,7 +35,12 @@
   {"hidden": 0, "is_query_report": 0, "label": "Measurement Reports", "link_count": 0, "onboard": 0, "type": "Card Break"},
   {"hidden": 0, "is_query_report": 1, "label": "Measurement Book Register", "link_count": 0, "link_to": "Measurement Book Register", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Work Item Measurement Progress", "link_count": 0, "link_to": "Work Item Measurement Progress", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Measurement Verification Queue", "link_count": 0, "link_to": "Measurement Verification Queue", "link_type": "Report", "onboard": 0, "type": "Link"}
+  {"hidden": 0, "is_query_report": 1, "label": "Measurement Verification Queue", "link_count": 0, "link_to": "Measurement Verification Queue", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "IPC Reports", "link_count": 0, "onboard": 0, "type": "Card Break"},
+  {"hidden": 0, "is_query_report": 1, "label": "IPC Register", "link_count": 0, "link_to": "IPC Register", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "IPC Line Details", "link_count": 0, "link_to": "IPC Line Details", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Measurement to IPC Traceability", "link_count": 0, "link_to": "Measurement to IPC Traceability", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Contractor IPC Summary", "link_count": 0, "link_to": "Contractor IPC Summary", "link_type": "Report", "onboard": 0, "type": "Link"}
  ],
  "modified": "2026-05-09 17:55:00.000000",
  "modified_by": "Administrator",

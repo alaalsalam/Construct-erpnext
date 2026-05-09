@@ -67,3 +67,12 @@
 - Verified/Locked Measurement Entries update Work Item measurement progress.
 - Measurement Book does not certify payment quantities and does not update certified_qty.
 - Future IPC generation must be based on verified Measurement Entries rather than manual IPC line entry.
+
+## ADR-010: IPC From Verified Measurement Entries
+
+- Interim Payment Certificates are generated from Verified or Locked Measurement Entries through a verified Measurement Book.
+- IPC updates Construction Work Item certified_qty and certification progress separately from measured_qty and measurement progress.
+- A Measurement Entry linked to a submitted/non-cancelled IPC cannot be reused in another IPC.
+- Existing Subcontract is sufficient as the optional contractor contract reference for this phase because it contains project, contractor, company, contract title, status, amount, activities, and dates.
+- Do not create Contractor Contract or Contractor Ledger until a separate contractor accounting phase is approved.
+- Purchase Invoice generation from IPC creates a draft ERPNext Purchase Invoice and does not submit it automatically.

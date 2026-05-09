@@ -96,6 +96,29 @@ Measurement reports:
 - Work Item Measurement Progress
 - Measurement Verification Queue
 
+## Interim Payment Certificate Foundation
+
+Implemented inside internal module: measurement_ipc / Measurement IPC.
+
+IPC design:
+
+- IPC is generated from Verified or Locked Measurement Entries through a verified Measurement Book.
+- IPC is not entered manually from scratch for measured quantities.
+- Existing Subcontract is used as the optional contractor contract reference; no Contractor Contract DocType was created in this phase.
+- Interim Payment Certificate is submittable and uses Frappe Workflow for review, certification, and approval.
+- Interim Payment Certificate Line stores Measurement Entry traceability, Construction Work Item, WBS, Cost Code, BOQ quantity, previous/current/total certified quantities, retention, and net line amount.
+- IPC Deduction explains retention, advance recovery, penalty, withholding, and other deductions without forcing ledger/account treatment yet.
+- Approved/submitted IPCs update Construction Work Item certification fields separately from Measurement Book measured fields.
+- Purchase Invoice generation creates a draft ERPNext Purchase Invoice from an approved IPC and preserves the existing Purchase Invoice authorization process.
+- Payment status reads ERPNext Purchase Invoice state; full contractor ledger and retention register are deferred.
+
+IPC reports:
+
+- IPC Register
+- IPC Line Details
+- Measurement to IPC Traceability
+- Contractor IPC Summary
+
 ## Role-Oriented Navigation
 
 - Executive / CFO: Executive Control Center, Reports & Analytics, selected Finance records.

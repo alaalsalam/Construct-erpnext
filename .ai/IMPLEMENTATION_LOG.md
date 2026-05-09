@@ -181,3 +181,32 @@
 - Cleared site cache and website cache.
 - Ran a read-only DocType fetch through bench execute to confirm site/database access is healthy.
 - No ERPNext core changes, schema changes, migrations, or new DocTypes were performed during this repair pass.
+
+## 2026-05-09 19:57:46 CEST
+
+- Created branch feature/ipc-foundation from feature/measurement-book-foundation.
+- Inspected Subcontract, Subcontract Activity, Supplier, Construction Work Item, Measurement Book, Measurement Entry, Construction BOQ, Project Cost Entry, Invoice Authorization, Purchase Invoice, and Payment Entry context before coding.
+- Decided to use existing Subcontract as the optional contractor contract reference for IPC because it supports project, contractor, company, contract title, status, amount, activities, and dates.
+- Added Interim Payment Certificate, Interim Payment Certificate Line, and IPC Deduction DocTypes inside measurement_ipc.
+- Converted Measurement Entry interim_payment_certificate placeholder from Data to Link once IPC DocType existed; retained ipc_line_reference as Data for child-row traceability.
+- Added IPC generation from verified Measurement Book entries through construct_erpnext.measurement_ipc.ipc.create_ipc_from_measurement_book.
+- Implemented IPC controller calculations, duplicate Measurement Entry prevention, workflow/status sync, Measurement Entry linking/releasing, Work Item certification recalculation, draft Purchase Invoice creation, and payment status update hooks.
+- Extended Construction Work Item with certified_amount, certification_progress_percent, last_ipc, last_certification_date, and certification_status.
+- Added Interim Payment Certificate Approval Workflow through after_migrate setup.
+- Added Script Reports: IPC Register, IPC Line Details, Measurement to IPC Traceability, and Contractor IPC Summary.
+- Updated Measurement & IPC, Contractor Management, Executive Control Center, and Reports & Analytics workspace links for IPC.
+- Ran JSON validation, Python compile checks, migration, site cache clear, and website cache clear.
+- Fixed site module map by adding construct_erpnext to /home/frappe/frappe-bench/sites/apps.txt because the site had the app installed but the bench app list did not include it.
+- Created retained Arabic validation IPC:
+  - IPC: IPC-2026-00001
+  - Certificate number: IPC-001
+  - Remarks: مستخلص رقم 1 لأعمال خرسانة الأساسات
+  - Source Measurement Book: MB-2026-00001 / قياسات أعمال خرسانة الأساسات
+  - Measurement Entry: ME-2026-00001
+- Verified IPC workflow transitions Draft -> Submitted -> Under Review -> Certified -> Approved.
+- Verified IPC calculations: gross_amount 875000, retention_amount 87500, net_payable 787500.
+- Verified Work Item certification values: certified_qty 25, certified_amount 875000, certification_progress_percent 25, certification_status Partially Certified, remaining_qty 75.
+- Created draft Purchase Invoice ACC-PINV-2026-00002 from approved IPC; it remains unsubmitted to preserve existing Invoice Authorization controls.
+- Verified IPC status moved to Invoice Created and outstanding_amount is 787500 while Purchase Invoice is draft.
+- Verified IPC reports, measurement reports, procurement reports, and product workspaces load.
+- Confirmed Contractor Ledger, Contractor Contract, and Real Estate Unit DocTypes were not created.

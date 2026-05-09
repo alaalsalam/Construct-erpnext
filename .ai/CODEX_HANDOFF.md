@@ -2,7 +2,7 @@
 
 Read project memory and working rules first, continue from NEXT_ACTION, implement one task at a time, update memory after every task.
 
-Current branch: feature/measurement-book-foundation.
+Current branch: feature/ipc-foundation.
 
 Canonical repository path: /home/frappe/frappe-bench/apps/construct_erpnext.
 Old path /home/frappe/frappe-bench/apps/Construct-erpnext was removed by renaming the real repository folder.
@@ -91,6 +91,29 @@ Measurement Book foundation status:
   - Measurement Book: MB-2026-00001 / قياسات أعمال خرسانة الأساسات
   - Measurement Entry: ME-2026-00001 for CWI-2026-00001
 - Validation passed: Measurement Book workflow reached Verified, Work Item measured_qty is 25, measurement_progress_percent is 25, and certified_qty remains 0.
-- Interim Payment Certificate DocType has not been created.
+- Interim Payment Certificate foundation is now implemented.
 
-Next operational task: Design and implement Interim Payment Certificate foundation.
+IPC foundation status:
+- New DocTypes: Interim Payment Certificate, Interim Payment Certificate Line, IPC Deduction.
+- Existing Subcontract is used as the optional contractor contract reference; Contractor Contract was not created.
+- IPC generation method: construct_erpnext.measurement_ipc.ipc.create_ipc_from_measurement_book.
+- IPC must be generated from Verified or Locked Measurement Entries through a verified Measurement Book.
+- Measurement Entry now links to Interim Payment Certificate once included in a submitted/non-cancelled IPC.
+- Interim Payment Certificate Approval Workflow is created after migration by construct_erpnext.measurement_ipc.setup.ensure_interim_payment_certificate_workflow.
+- Approved IPC updates Construction Work Item certified_qty and certification fields separately from measured_qty.
+- Draft Purchase Invoice creation exists on approved IPC and does not submit automatically.
+- New reports: IPC Register, IPC Line Details, Measurement to IPC Traceability, Contractor IPC Summary.
+- Retained Arabic validation records:
+  - IPC: IPC-2026-00001 / IPC-001
+  - Remarks: مستخلص رقم 1 لأعمال خرسانة الأساسات
+  - Purchase Invoice draft: ACC-PINV-2026-00002
+- Validation passed:
+  - IPC workflow reached Approved and then status Invoice Created after draft PI creation.
+  - gross_amount 875000, retention_amount 87500, net_payable 787500.
+  - Construction Work Item CWI-2026-00001 certified_qty 25, certified_amount 875000, certification_status Partially Certified.
+  - Measurement Entry ME-2026-00001 is linked to IPC-2026-00001.
+  - Purchase Invoice ACC-PINV-2026-00002 is Draft and uses currency YER.
+  - Contractor Ledger, Contractor Contract, and Real Estate Unit DocTypes were not created.
+- Site repair note: construct_erpnext was added to /home/frappe/frappe-bench/sites/apps.txt because the app was installed on construction.yemenfrappe.com but missing from bench app module mapping.
+
+Next operational task: Design and implement Contractor Ledger and Retention Register foundation.

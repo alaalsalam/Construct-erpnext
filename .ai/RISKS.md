@@ -39,3 +39,7 @@ Updated risks:
 - Submitted and linked document names such as ANK-BOQ-FOUNDATION-001 were not force-renamed; Arabic meaning is stored in visible title/description fields where safe.
 - Measurement Book updates Work Item measured progress but intentionally does not update certified_qty; IPC must be the certification layer.
 - Measurement Book workflow is created through after_migrate setup and depends on Workflow State and Workflow Action Master records being present or created idempotently.
+- construction.yemenfrappe.com had construct_erpnext installed but missing from sites/apps.txt; the app was added back to apps.txt so Frappe can build the module map and load Measurement IPC controllers.
+- IPC Purchase Invoice creation currently creates a draft invoice only; submitted Purchase Invoice authorization and payment application remain under ERPNext finance controls.
+- IPC retention, advance recovery, penalties, withholding, and other deductions are represented on the IPC but do not yet create ledger entries; this must be handled by the Contractor Ledger and Retention Register phase.
+- Partial payment validation was not executed because the IPC Purchase Invoice remains a draft; Payment Entry validation requires the standard ERPNext invoice submission/authorization path first.

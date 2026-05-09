@@ -13,6 +13,7 @@ from construct_erpnext.measurement_ipc.measurement_utils import (
 class MeasurementEntry(Document):
 	def validate(self):
 		self.validate_locked_state()
+		self.validate_ipc_link()
 		self.pull_work_item_details()
 		self.calculate_quantities()
 		self.validate_status()
@@ -23,6 +24,18 @@ class MeasurementEntry(Document):
 		previous_status = frappe.db.get_value("Measurement Entry", self.name, "status")
 		if previous_status == "Locked" and "System Manager" not in frappe.get_roles():
 			frappe.throw(_("Locked Measurement Entries can only be changed by System Manager."))
+
+	def validate_ipc_link(self):
+		if not self.interim_payment_certificate:
+			return
+		ipc_status = frappe.db.get_value(
+			"Interim Payment Certificate",
+			self.interim_payment_certificate,
+			["docstatus", "status"],
+			as_dict=True,
+		)
+		if ipc_status and ipc_status.docstatus == 1 and "System Manager" not in frappe.get_roles():
+			frappe.throw(_("Measurement Entries linked to submitted IPCs cannot be changed."))
 
 	def pull_work_item_details(self):
 		if not self.construction_work_item:

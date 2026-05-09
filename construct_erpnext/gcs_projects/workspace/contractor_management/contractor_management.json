@@ -17,6 +17,10 @@
   {"hidden": 0, "is_query_report": 0, "label": "Subcontract", "link_count": 0, "link_to": "Subcontract", "link_type": "DocType", "onboard": 1, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Subcontract Activity", "link_count": 0, "link_to": "Subcontract Activity", "link_type": "DocType", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Payments & Controls", "link_count": 0, "onboard": 0, "type": "Card Break"},
+  {"hidden": 0, "is_query_report": 0, "label": "Interim Payment Certificate", "link_count": 0, "link_to": "Interim Payment Certificate", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Contractor IPC Summary", "link_count": 0, "link_to": "Contractor IPC Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Purchase Invoice", "link_count": 0, "link_to": "Purchase Invoice", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Payment Entry", "link_count": 0, "link_to": "Payment Entry", "link_type": "DocType", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Invoice Authorization", "link_count": 0, "link_to": "Invoice Authorization", "link_type": "DocType", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Check Request", "link_count": 0, "link_to": "Check Request", "link_type": "DocType", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Project Cost Entry", "link_count": 0, "link_to": "Project Cost Entry", "link_type": "DocType", "onboard": 0, "type": "Link"}

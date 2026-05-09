@@ -14,6 +14,7 @@ after_migrate = [
     "construct_erpnext.construction_boq.setup.ensure_construction_boq_workflow",
     "construct_erpnext.procurement_control.setup.after_migrate",
     "construct_erpnext.measurement_ipc.setup.ensure_measurement_book_workflow",
+    "construct_erpnext.measurement_ipc.setup.ensure_interim_payment_certificate_workflow",
 ]
 
 # --- Asset Bundles ---

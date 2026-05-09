@@ -62,7 +62,7 @@
   {"fieldname": "verified_on", "fieldtype": "Datetime", "label": "Verified On"},
   {"default": "Draft", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "in_standard_filter": 1, "label": "Status", "options": "Draft\nSubmitted\nVerified\nRejected\nLocked\nCancelled"},
   {"fieldname": "rejection_reason", "fieldtype": "Small Text", "label": "Rejection Reason"},
-  {"fieldname": "interim_payment_certificate", "fieldtype": "Data", "label": "Interim Payment Certificate"},
+  {"fieldname": "interim_payment_certificate", "fieldtype": "Link", "label": "Interim Payment Certificate", "options": "Interim Payment Certificate"},
   {"fieldname": "ipc_line_reference", "fieldtype": "Data", "label": "IPC Line Reference"}
  ],
  "index_web_pages_for_search": 1,

@@ -20,6 +20,8 @@
   {"hidden": 0, "is_query_report": 0, "label": "Progress & Revenue", "link_count": 0, "onboard": 0, "type": "Card Break"},
   {"hidden": 0, "is_query_report": 1, "label": "Advancement vs Cost", "link_count": 0, "link_to": "Advancement vs Cost", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Revenue vs Billing", "link_count": 0, "link_to": "Revenue vs Billing", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "IPC Register", "link_count": 0, "link_to": "IPC Register", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Contractor IPC Summary", "link_count": 0, "link_to": "Contractor IPC Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Financial Ratio", "link_count": 0, "link_to": "Financial Ratio", "link_type": "DocType", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Finance Controls", "link_count": 0, "onboard": 0, "type": "Card Break"},
   {"hidden": 0, "is_query_report": 0, "label": "Check Request", "link_count": 0, "link_to": "Check Request", "link_type": "DocType", "onboard": 0, "type": "Link"},

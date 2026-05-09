@@ -49,3 +49,14 @@ Phase 5 deliverables:
 - Add measurement register, progress, and verification queue reports. Completed.
 - Add Measurement & IPC and Reports & Analytics workspace links for measurement. Completed.
 - Next Phase 6: design and implement Interim Payment Certificate foundation.
+
+Phase 6 deliverables:
+
+- Inspect existing Subcontract/Subcontract Activity and decide contractor contract reference. Completed.
+- Create Interim Payment Certificate, Interim Payment Certificate Line, and IPC Deduction foundation. Completed.
+- Generate IPC from verified Measurement Entries through Measurement Book. Completed.
+- Update Work Item certified quantity and certification progress separately from measured quantity. Completed.
+- Add draft Purchase Invoice creation from approved IPC. Completed.
+- Add IPC approval workflow and IPC reports. Completed.
+- Add IPC workspace links across Measurement & IPC, Contractor Management, Executive Control Center, and Reports & Analytics. Completed.
+- Next Phase 6 extension: design and implement Contractor Ledger and Retention Register foundation.

@@ -17,7 +17,8 @@ Updated risks:
 - Purchase Invoice authorization remains active and must be validated independently from the disabled withholding logic.
 - construction.yemenfrappe.com now has HRMS installed because construct_erpnext requires it; HRMS workflows and permissions should be reviewed for this product.
 - The installed construct_erpnext code comes from the local feature/product-delocalization working tree with uncommitted cleanup and .ai memory changes; commit and push before treating the deployment as reproducible.
-- The bench app registration uses apps/construct_erpnext as a symlink to apps/Construct-erpnext; keep this in mind for future path-sensitive operations.
+- Previous path apps/Construct-erpnext was renamed to apps/construct_erpnext; older editor windows, shell sessions, or documentation may still point to the removed path.
 - Original upstream README may target v16, but current deployment is v15.
 - Need smoke test for all existing modules before adding BOQ/IPC.
 - Site-level smoke testing currently depends on MariaDB availability; latest check failed with connection refused on 127.0.0.1.
+- Plain system python3 does not import bench editable apps; use the bench virtualenv Python for import smoke checks unless system Python is explicitly configured.

@@ -49,3 +49,13 @@
 - Site-level smoke checks were blocked because MariaDB on 127.0.0.1 refused connections.
 - Static metadata check confirmed the requested DocType JSON files exist for Construction Budget, Budget Level, Physical Advancement, Project Cost Entry, Labor Hour Entry, Equipment Usage Log, Invoice Authorization, and Check Request.
 - Static hook inspection confirmed construct_erpnext overrides and document events load from hooks.py, with Purchase Invoice submit authorization active and no construct_erpnext Purchase Invoice validate withholding hook.
+
+## 2026-05-09 16:14:06 CEST
+
+- Stopped previous workspace cleanup thread to make final canonical path decision.
+- Verified apps/construct_erpnext was a symlink to apps/Construct-erpnext.
+- Removed the symlink and renamed the real repository folder from /home/frappe/frappe-bench/apps/Construct-erpnext to /home/frappe/frappe-bench/apps/construct_erpnext.
+- Verified branch feature/product-delocalization and clean git state after rename.
+- Refreshed editable install with ./env/bin/pip install -e apps/construct_erpnext.
+- Verified bench virtualenv import path resolves to /home/frappe/frappe-bench/apps/construct_erpnext/construct_erpnext/__init__.py.
+- Plain system python3 import still fails because it is not using the bench virtualenv.

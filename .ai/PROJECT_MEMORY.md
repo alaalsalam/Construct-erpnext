@@ -3,7 +3,7 @@
 - Product name: Real Estate Development ERP
 - Base app: construct_erpnext
 - Repository: alaalsalam/Construct-erpnext
-- Canonical repository path: /home/frappe/frappe-bench/apps/Construct-erpnext
+- Canonical repository path: /home/frappe/frappe-bench/apps/construct_erpnext
 - Target site: construction.yemenfrappe.com
 - Goal: Build a full Construction + Real Estate Development ERP system on ERPNext/Frappe.
 - Business flow:

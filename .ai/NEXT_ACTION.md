@@ -1,3 +1,3 @@
 # Next Action
 
-Implement reversible Workspace and UX cleanup for Real Estate Development ERP.
+Restore MariaDB service and rerun site-level smoke test before workspace changes.

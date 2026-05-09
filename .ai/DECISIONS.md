@@ -18,7 +18,14 @@
 - Do not upgrade to v16 now.
 - All development must remain compatible with ERPNext v15 unless a separate migration plan is approved.
 
-## ADR-003: Disable Automatic Country Localization
+## ADR-003: Canonical App Repository Path
+
+- Canonical app repository path normalized to /home/frappe/frappe-bench/apps/construct_erpnext to avoid confusion between app package name and repository folder.
+- Old path /home/frappe/frappe-bench/apps/Construct-erpnext was removed by renaming the real repository folder.
+- Do not use /home/frappe/frappe-bench/apps/Construct-erpnext as a working root anymore.
+- Keep the internal Python package folder /home/frappe/frappe-bench/apps/construct_erpnext/construct_erpnext.
+
+## ADR-004: Disable Automatic Country Localization
 
 - Make the product generic by default.
 - Keep legacy El Salvador setup helpers in setup/legacy_el_salvador.py for reference and compatibility.

@@ -4,8 +4,10 @@ Read project memory and working rules first, continue from NEXT_ACTION, implemen
 
 Current branch: feature/product-delocalization.
 
-Canonical repository path: /home/frappe/frappe-bench/apps/Construct-erpnext.
-Bench app path apps/construct_erpnext is a symlink to the canonical repository path.
+Canonical repository path: /home/frappe/frappe-bench/apps/construct_erpnext.
+Old path /home/frappe/frappe-bench/apps/Construct-erpnext was removed by renaming the real repository folder.
+Do not use Construct-erpnext as a working root anymore.
+Keep the internal Python package folder /home/frappe/frappe-bench/apps/construct_erpnext/construct_erpnext.
 
 El Salvador localization is disabled for the generic product build:
 - after_install logs "Generic product setup completed."
@@ -22,5 +24,8 @@ construction.yemenfrappe.com installation status:
 - Repository changes were committed and pushed on feature/product-delocalization:
   - 2606941 chore: initialize project memory and disable country-specific localization
 - v15 smoke test status: blocked at site/database level because MariaDB refused connections on 127.0.0.1. Static app metadata and hook inspection passed.
+- Path normalization status: apps/construct_erpnext is now the real git repository, not a symlink.
+- Bench venv import path: /home/frappe/frappe-bench/apps/construct_erpnext/construct_erpnext/__init__.py.
+- Plain system python3 import failed because it is not using the bench environment.
 
-Next operational task: Implement reversible Workspace and UX cleanup for Real Estate Development ERP.
+Next operational task: Restore MariaDB service and rerun site-level smoke test before workspace changes.

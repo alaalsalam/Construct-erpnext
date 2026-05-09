@@ -19,5 +19,8 @@ construction.yemenfrappe.com installation status:
 - Artifact verification found zero requested El Salvador fields, tax accounts/templates, or salary components.
 - Active hooks show Purchase Invoice submit authorization remains active and construct_erpnext SV withholding is not active on Purchase Invoice validate.
 - Current deployment target is ERPNext v15: Frappe 15.107.2, ERPNext 15.107.0, HRMS 15.58.2. Do not upgrade to v16 without a separate approved migration plan.
+- Repository changes were committed and pushed on feature/product-delocalization:
+  - 2606941 chore: initialize project memory and disable country-specific localization
+- v15 smoke test status: blocked at site/database level because MariaDB refused connections on 127.0.0.1. Static app metadata and hook inspection passed.
 
 Next operational task: Implement reversible Workspace and UX cleanup for Real Estate Development ERP.

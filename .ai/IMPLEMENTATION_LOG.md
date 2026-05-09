@@ -40,3 +40,12 @@
 - Recorded canonical repository path as /home/frappe/frappe-bench/apps/Construct-erpnext.
 - Recorded ERPNext v15 deployment decision for construction.yemenfrappe.com.
 - Prepared current project memory and delocalization changes for commit.
+
+## 2026-05-09 15:29:54 CEST
+
+- Committed project memory and delocalization changes as 2606941.
+- Pushed feature/product-delocalization to origin and set upstream tracking.
+- Started v15 compatibility smoke test for construction.yemenfrappe.com.
+- Site-level smoke checks were blocked because MariaDB on 127.0.0.1 refused connections.
+- Static metadata check confirmed the requested DocType JSON files exist for Construction Budget, Budget Level, Physical Advancement, Project Cost Entry, Labor Hour Entry, Equipment Usage Log, Invoice Authorization, and Check Request.
+- Static hook inspection confirmed construct_erpnext overrides and document events load from hooks.py, with Purchase Invoice submit authorization active and no construct_erpnext Purchase Invoice validate withholding hook.

@@ -20,3 +20,4 @@ Updated risks:
 - The bench app registration uses apps/construct_erpnext as a symlink to apps/Construct-erpnext; keep this in mind for future path-sensitive operations.
 - Original upstream README may target v16, but current deployment is v15.
 - Need smoke test for all existing modules before adding BOQ/IPC.
+- Site-level smoke testing currently depends on MariaDB availability; latest check failed with connection refused on 127.0.0.1.

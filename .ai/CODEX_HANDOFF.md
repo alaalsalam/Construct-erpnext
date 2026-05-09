@@ -146,4 +146,18 @@ Project Financial Snapshot and CFO Analytics status:
 - The CFO snapshot does not replace ERPNext accounting reports or GL and does not create Journal Entries.
 - Cash Flow Forecast full engine and scheduled EVM automation remain deferred.
 
-Next operational task: Design and implement Cash Flow Forecast foundation.
+Cash Flow Forecast foundation status:
+- Branch: feature/cash-flow-forecast-foundation.
+- New DocTypes: Project Cash Flow Forecast, Project Cash Flow Forecast Period.
+- Forecast service: construct_erpnext.cfo_analytics.cash_flow_forecast.
+- Whitelisted methods: get_forecast_data and create_forecast.
+- New reports: Project Cash Flow Forecast Report, Project Cash Requirement Summary, Contractor Payment Forecast, Retention Release Forecast.
+- Validation forecast PCF-2026-00001 was created for PROJ-0001 with Arabic title توقع التدفق النقدي لمشروع البرج السكني المتكامل.
+- Validation period: Monthly, 2026-05-01 to 2026-10-31, opening balance 0.
+- Forecast values: inflow 0, Purchase Order outflow 0, Purchase Invoice outflow 3500000, IPC outflow 787500, retention release 0, total outflow 4287500, net cash flow -4287500, lowest balance -4287500, risk Red.
+- Purchase Order outflow is zero because the submitted Purchase Order is fully invoiced.
+- IPC outflow is counted because the linked IPC Purchase Invoice is still draft; submitted Purchase Invoice outstanding is counted separately.
+- Retention release is outside the six-month validation range because due date is 2027-05-09.
+- No accounting documents, Journal Entries, EVM scheduled tasks, or Real Estate/Sales/Rental DocTypes were created.
+
+Next operational task: Design and implement EVM Metrics foundation.

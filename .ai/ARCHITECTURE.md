@@ -166,6 +166,29 @@ CFO reports:
 - Work Item Financial Traceability
 - Contractor Financial Exposure
 
+## Cash Flow Forecast Foundation
+
+Implemented inside internal module: cfo_analytics / CFO Analytics.
+
+Cash flow forecast design:
+
+- Project Cash Flow Forecast is a deterministic forecast snapshot for expected project cash movement over weekly, monthly, or quarterly periods.
+- Project Cash Flow Forecast Period stores period-level inflows, outflows, running balance, deficit, and source counts.
+- Current inflows are zero because Real Estate Sales, installments, rentals, and collections are not implemented yet.
+- Outflows are calculated from submitted Purchase Orders, submitted Purchase Invoices, IPC net payable, and Retention Register release due dates.
+- Double-counting prevention:
+  - Submitted Purchase Invoice outstanding is preferred over IPC for the same payable.
+  - IPC is counted only when it has no linked Purchase Invoice or the linked Purchase Invoice is not submitted.
+  - Purchase Orders are counted only for the uninvoiced portion.
+- The forecast does not create or submit accounting documents, Journal Entries, or background jobs.
+
+Cash flow reports:
+
+- Project Cash Flow Forecast Report
+- Project Cash Requirement Summary
+- Contractor Payment Forecast
+- Retention Release Forecast
+
 ## Role-Oriented Navigation
 
 - Executive / CFO: Executive Control Center, Reports & Analytics, selected Finance records.

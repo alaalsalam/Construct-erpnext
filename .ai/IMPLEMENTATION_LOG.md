@@ -268,3 +268,31 @@
   - overall_status At Risk
 - Verified new CFO reports, existing procurement report, measurement report, IPC report, Contractor Account Statement, Executive Control Center, and Reports & Analytics load successfully.
 - No Journal Entry, Cash Flow Forecast full engine, scheduled EVM automation, Real Estate Inventory, or El Salvador localization was created.
+
+## 2026-05-09 22:06:26 CEST
+
+- Created branch feature/cash-flow-forecast-foundation from feature/cfo-financial-snapshot.
+- Inspected live ERPNext and app field metadata for Purchase Order, Purchase Order Item, Purchase Invoice, Purchase Invoice Item, Payment Entry, Payment Entry Reference, IPC, Retention Register, Contractor Account, Contractor Ledger Entry, Project Financial Snapshot, Construction Work Item, and Construction BOQ.
+- Added Project Cash Flow Forecast and Project Cash Flow Forecast Period DocTypes inside cfo_analytics.
+- Implemented construct_erpnext.cfo_analytics.cash_flow_forecast with deterministic period building, source aggregation, double-counting prevention, running balance, deficit, and cash risk calculations.
+- Added whitelisted methods get_forecast_data and create_forecast.
+- Added reports: Project Cash Flow Forecast Report, Project Cash Requirement Summary, Contractor Payment Forecast, and Retention Release Forecast.
+- Updated Executive Control Center and Reports & Analytics with cash flow forecast links.
+- Ran migration, site cache clear, and website cache clear on construction.yemenfrappe.com.
+- Created retained Arabic validation forecast:
+  - Project Cash Flow Forecast: PCF-2026-00001
+  - Title: توقع التدفق النقدي لمشروع البرج السكني المتكامل
+  - Period: Monthly from 2026-05-01 to 2026-10-31
+  - Opening balance: 0
+- Verified forecast values:
+  - total_expected_inflow 0
+  - purchase_order_outflow 0 because the submitted Purchase Order is fully invoiced
+  - purchase_invoice_outflow 3500000 from submitted Purchase Invoice outstanding
+  - ipc_outflow 787500 because IPC-2026-00001 has only a draft linked Purchase Invoice
+  - retention_release_outflow 0 because retention release due date 2027-05-09 is outside the six-month validation range
+  - total_expected_outflow 4287500
+  - net_cash_flow -4287500
+  - lowest_projected_balance -4287500
+  - cash_risk_status Red
+- Verified cash flow reports, existing Project Financial Snapshot, IPC, Contractor Account, Executive Control Center, and Reports & Analytics load successfully.
+- No Journal Entry, Payment Entry, Purchase Invoice submission, EVM scheduled task, Real Estate Inventory, Sales/Rental DocTypes, or El Salvador localization was created.

@@ -91,3 +91,12 @@
 - The snapshot is point-in-time and deterministic; it reads from Construction Work Item, Interim Payment Certificate, Contractor Account, and Retention Register.
 - The snapshot does not submit accounting records, create Journal Entries, run Cash Flow Forecast automation, or create scheduled EVM calculations.
 - Risk statuses are intentionally simple and explainable until a separate forecasting and executive analytics phase is approved.
+
+## ADR-013: Cash Flow Forecast As Transaction-Based Projection
+
+- Cash Flow Forecast foundation uses deterministic transaction-based projections and does not replace ERPNext accounting or bank/cash reports.
+- Submitted Purchase Invoice outstanding is preferred over IPC payable when both represent the same contractor obligation.
+- IPC net payable is counted when no linked submitted Purchase Invoice exists.
+- Purchase Orders are counted only for their uninvoiced submitted amount.
+- Retention release is forecast from Retention Register release_due_date and remaining_retention_amount.
+- The forecast does not create Journal Entries, Payment Entries, Purchase Invoices, background jobs, or scheduled EVM automation.

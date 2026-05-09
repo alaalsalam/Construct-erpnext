@@ -49,7 +49,11 @@
   {"hidden": 0, "is_query_report": 1, "label": "Project Financial Snapshot Report", "link_count": 0, "link_to": "Project Financial Snapshot Report", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "CFO Project Control Summary", "link_count": 0, "link_to": "CFO Project Control Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Work Item Financial Traceability", "link_count": 0, "link_to": "Work Item Financial Traceability", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Contractor Financial Exposure", "link_count": 0, "link_to": "Contractor Financial Exposure", "link_type": "Report", "onboard": 0, "type": "Link"}
+  {"hidden": 0, "is_query_report": 1, "label": "Contractor Financial Exposure", "link_count": 0, "link_to": "Contractor Financial Exposure", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Project Cash Flow Forecast Report", "link_count": 0, "link_to": "Project Cash Flow Forecast Report", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Project Cash Requirement Summary", "link_count": 0, "link_to": "Project Cash Requirement Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Contractor Payment Forecast", "link_count": 0, "link_to": "Contractor Payment Forecast", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Retention Release Forecast", "link_count": 0, "link_to": "Retention Release Forecast", "link_type": "Report", "onboard": 0, "type": "Link"}
  ],
  "modified": "2026-05-09 17:55:00.000000",
  "modified_by": "Administrator",

@@ -1,3 +1,3 @@
 # Next Action
 
-Design and implement Cash Flow Forecast foundation.
+Design and implement EVM Metrics foundation.

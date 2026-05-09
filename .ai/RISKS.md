@@ -50,3 +50,7 @@ Updated risks:
 - Project Financial Snapshot is point-in-time and must be regenerated to reflect later procurement, IPC, or payment changes.
 - CFO risk status thresholds are intentionally simple in this phase and should be reviewed with finance leadership before production KPI sign-off.
 - Snapshot aggregation currently relies primarily on Construction Work Item operational totals; if direct ERPNext procurement documents are edited outside the Work Item linkage, reports may require reconciliation.
+- Cash Flow Forecast is point-in-time and must be regenerated after new invoices, IPCs, payments, or retention releases.
+- Current cash inflows are zero until Real Estate Sales, installments, rentals, and customer collections are implemented.
+- Forecast purchase invoice outflows use ERPNext outstanding_amount; unpaid historical validation invoices can make current cash risk appear higher until finance records payments or adjusts the scenario opening balance.
+- Forecast risk currently uses deterministic threshold rules and needs finance leadership review before being treated as a final treasury KPI.

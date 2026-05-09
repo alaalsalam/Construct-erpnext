@@ -76,3 +76,11 @@ Phase 7 deliverables:
 - Create retained Arabic validation snapshot for مشروع البرج السكني المتكامل. Completed.
 - Cash Flow Forecast full engine and scheduled EVM automation remain deferred.
 - Next Phase 7 extension: design and implement Cash Flow Forecast foundation.
+- Create Project Cash Flow Forecast and Project Cash Flow Forecast Period DocTypes. Completed.
+- Add deterministic cash flow forecast service based on Purchase Orders, Purchase Invoices, IPC payables, and Retention Register due dates. Completed.
+- Add whitelisted forecast data and forecast creation methods. Completed.
+- Add cash flow reports: Project Cash Flow Forecast Report, Project Cash Requirement Summary, Contractor Payment Forecast, Retention Release Forecast. Completed.
+- Add cash flow links to Executive Control Center and Reports & Analytics. Completed.
+- Create retained Arabic validation forecast for مشروع البرج السكني المتكامل. Completed.
+- Sales inflows, rental income, customer installments, full bank/cash integration, and scheduled EVM automation remain deferred.
+- Next Phase 7 extension: design and implement EVM Metrics foundation.

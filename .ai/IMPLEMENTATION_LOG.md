@@ -817,3 +817,30 @@
 - No Sales Invoice, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, GL backfill, or submitted accounting amendment was created during this review.
 - Added .ai/SALES_INVOICE_COLLECTIONS_READINESS_REVIEW.md with the blocked readiness decision.
 - NEXT_ACTION set to restore MariaDB service and rerun the Sales Invoice and Collections readiness validation before Lease Contract foundation.
+
+## 2026-05-10 CMD-24A Restore MariaDB and Rerun Sales Invoice Collections Readiness Validation
+
+- Diagnosed server memory and MariaDB state after CMD-24 was blocked.
+- Current memory snapshot: 11GiB RAM, 7.2GiB used, 3.8GiB free, 4.2GiB available; swap 4GiB with 1.7GiB used.
+- Disk space is not the blocker: root filesystem is about 56% used.
+- Highest memory users included code-server extension hosts, MariaDB, and several development assistant processes.
+- MariaDB was running again at validation time: `mariadb.service` active since 2026-05-10 20:47:40 CEST.
+- Prior OOM remains confirmed from service status; journal/dmesg details were limited by OS permissions.
+- `sudo -n systemctl start mariadb` still fails because sudo requires a password; future service restarts require the server owner to run `sudo systemctl start mariadb`.
+- DB connection validated:
+  - `bench --site construction.yemenfrappe.com mariadb -e "select 1"` passed.
+  - `bench --site construction.yemenfrappe.com list-apps` passed.
+- Live Sales Invoice/Collections readiness validation passed:
+  - Sales Invoice Collection Settings exists and auto-submit is disabled.
+  - Sales Contract SC-2026-00001 is Active.
+  - Draft Sales Invoice ACC-SINV-2026-00001 exists with docstatus 0.
+  - Invoice item carries unit A-101, project PROJ-0001, cost center Main - YCRE, sales_contract SC-2026-00001, installment reference erdmjjidfa, real estate project REP-2026-00001, and reservation RES-2026-00001.
+  - First installment is linked to ACC-SINV-2026-00001.
+  - Contract totals remain: invoiced 300,000; collected 0; outstanding 300,000; status Partially Invoiced.
+  - Unit dimension exists on Sales Invoice Item and GL Entry.
+  - No GL Entry, Payment Entry, or Journal Entry exists for the draft invoice.
+- Reports validated: all Sales Invoice/Collections reports plus key Sales Contract, Unit, GL, CFO, Cash Flow, and EVM reports loaded.
+- Workspaces and sales collection KPI cards validated.
+- Deferred scope confirmed: no Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, new Sales Invoice, Sales Invoice submission, Payment Entry, Journal Entry, GL backfill, or submitted accounting amendment.
+- Updated SALES_INVOICE_COLLECTIONS_READINESS_REVIEW.md with final passed CMD-24A decision.
+- NEXT_ACTION set to Start Lease Contract and Rent Schedule foundation.

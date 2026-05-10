@@ -103,3 +103,5 @@ Updated risks:
 - Unit revenue GL traceability is prepared through the Unit dimension on Sales Invoice Item, but GL validation remains pending until a Sales Invoice is submitted through normal ERPNext controls.
 - A site selling price list and non-stock sales item were created only as safe master setup for draft invoice generation; income account behavior should still be reviewed by accounting before submission.
 - CMD-24 readiness review was blocked because MariaDB was OOM-killed and refused connections on 127.0.0.1; restore database service and rerun live validation before Lease Contract work.
+- CMD-24A rerun passed after MariaDB recovered, but OOM risk remains; monitor MariaDB memory and reduce concurrent memory-heavy development/editor processes before migration-heavy tasks.
+- Non-interactive sudo is unavailable from the current shell; if MariaDB stops again, the server owner must run `sudo systemctl start mariadb`.

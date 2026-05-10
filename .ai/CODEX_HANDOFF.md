@@ -376,3 +376,12 @@ Sales Invoice and Collections readiness review status:
 - No business/accounting documents or new features were created during the review.
 - Current readiness decision: not safe to proceed to Lease Contract until MariaDB is restored and live Sales Invoice/Collections validation is rerun.
 - Next operational task: Restore MariaDB service and rerun Sales Invoice and Collections readiness validation before Lease Contract foundation.
+
+CMD-24A recovery and validation status:
+- MariaDB was active again at rerun time, but prior `oom-kill` remains a real operational risk.
+- Non-interactive sudo still cannot start MariaDB: server owner must run `sudo systemctl start mariadb` if the service stops again.
+- DB connection and app list checks passed.
+- Live validation passed for Sales Invoice Collection Settings, SC-2026-00001, ACC-SINV-2026-00001, installment link, contract totals, Unit dimension propagation, reports, workspaces, and KPI cards.
+- Draft invoice remains unsubmitted; no GL Entry, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, or GL backfill was created.
+- Readiness decision is now safe to proceed to Lease Contract and Rent Schedule foundation.
+- Next operational task: Start Lease Contract and Rent Schedule foundation.

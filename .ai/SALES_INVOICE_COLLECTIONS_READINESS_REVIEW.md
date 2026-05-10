@@ -175,3 +175,109 @@
 استعادة خدمة MariaDB أولاً، ثم إعادة تشغيل مراجعة Sales Invoice and Collections readiness على الموقع.
 
 بعد نجاح التحقق الحي من الفاتورة المسودة، بعد الوحدة، التقارير، البطاقات، وعدم وجود آثار محاسبية غير مقصودة، يمكن الانتقال إلى Lease Contract and Rent Schedule foundation.
+
+## 14. تحديث CMD-24A بعد استعادة MariaDB
+
+تمت إعادة فحص الخدمة في CMD-24A. كانت MariaDB تعمل مرة أخرى عند الفحص، مع بقاء دليل سابق على أن الخدمة فشلت بسبب `oom-kill`.
+
+نتائج التشخيص:
+
+- الذاكرة: 11GiB إجمالي، 7.2GiB مستخدم، 3.8GiB حر، 4.2GiB متاح.
+- Swap: 4GiB إجمالي، 1.7GiB مستخدم.
+- القرص: `/` مستخدم 56% تقريباً، ولا يوجد امتلاء قرص.
+- العمليات الأعلى استخداماً للذاكرة تضمنت code-server extension hosts و MariaDB.
+- `mariadb.service` أصبح `active (running)`.
+- قراءة journal و dmesg كانت محدودة بسبب صلاحيات النظام.
+- `sudo -n systemctl start mariadb` فشل لأن sudo يحتاج كلمة مرور، لذلك أي تشغيل يدوي مستقبلي يحتاج مالك الخادم.
+
+تم التحقق من اتصال قاعدة البيانات:
+
+- `bench --site construction.yemenfrappe.com mariadb -e "select 1"` نجح.
+- `bench --site construction.yemenfrappe.com list-apps` نجح.
+
+## 15. نتائج التحقق الحي بعد الاستعادة
+
+تم التحقق من العناصر التالية:
+
+- `Sales Invoice Collection Settings` موجودة وتعمل، و `auto_submit_sales_invoice` = 0.
+- `Sales Contract SC-2026-00001` موجود وحالته `Active`.
+- `Sales Invoice ACC-SINV-2026-00001` موجودة وحالتها Draft.
+- الفاتورة مرتبطة بـ:
+  - Sales Contract: `SC-2026-00001`
+  - Unit: `A-101`
+  - Real Estate Project: `REP-2026-00001`
+  - Project: `PROJ-0001`
+- بند الفاتورة يحمل:
+  - unit = `A-101`
+  - project = `PROJ-0001`
+  - cost_center = `Main - YCRE`
+  - sales_contract = `SC-2026-00001`
+  - sales_installment_reference = `erdmjjidfa`
+  - real_estate_project = `REP-2026-00001`
+  - unit_reservation = `RES-2026-00001`
+- أول قسط مرتبط بالفاتورة المسودة.
+- إجماليات العقد:
+  - total_invoiced_amount = `300,000`
+  - total_collected_amount = `0`
+  - total_outstanding_amount = `300,000`
+  - collection_status = `Partially Invoiced`
+- بعد Unit موجود على `Sales Invoice Item` و `GL Entry`.
+- لا توجد GL Entry لهذه الفاتورة لأنها Draft.
+- لا توجد Payment Entry مرتبطة بهذه الفاتورة.
+- لا توجد Journal Entry.
+
+## 16. التقارير ومساحات العمل بعد الاستعادة
+
+تم تحميل التقارير التالية بنجاح:
+
+- Sales Invoice from Installments Report
+- Sales Collection Report
+- Overdue Sales Installments
+- Unit Revenue Report
+- Sales Contract Collection Summary
+- Sales Contract Register
+- Installment Schedule Report
+- Unit Sales Pipeline
+- Sales Value Summary
+- Unit Profitability Report
+- Unit Financial Ledger
+- GL Dimension Traceability
+- Project Unit Cost Matrix
+- Project Financial Snapshot Report
+- Project Cash Flow Forecast Report
+- Project EVM Metrics Report
+
+تم التحقق من مساحات العمل:
+
+- Sales & Rental
+- Executive Presentation Center
+- Executive Control Center
+- Reports & Analytics
+
+وتم التحقق من بطاقات:
+
+- Total Invoiced Sales = `300,000`
+- Total Collected Sales = `0`
+- Outstanding Sales Amount = `300,000`
+- Overdue Installments Count = `0`
+- Overdue Installments Amount = `0`
+
+## 17. تأكيد عدم توسع النطاق
+
+- لم يتم إنشاء Lease Contract.
+- لم يتم إنشاء Rent Schedule.
+- لم يتم إنشاء Commission.
+- لم يتم إنشاء CRM Matching.
+- لم يتم إنشاء Portal.
+- لم يتم إنشاء Sales Invoice جديدة.
+- لم يتم ترحيل Sales Invoice.
+- لم يتم إنشاء Payment Entry.
+- لم يتم إنشاء Journal Entry.
+- لم يتم تشغيل GL backfill.
+- لم يتم تعديل مستندات محاسبية مرسلة.
+
+## 18. القرار النهائي بعد CMD-24A
+
+آمن للانتقال إلى Lease Contract and Rent Schedule foundation.
+
+القيد الوحيد المتبقي هو تشغيلي: يجب مراقبة استهلاك الذاكرة وسبب `oom-kill` قبل تشغيل عمليات migration أو validations ثقيلة لاحقاً.

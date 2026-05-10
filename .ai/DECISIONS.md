@@ -136,3 +136,10 @@
 - Contractor is already represented as Supplier/Party in ERPNext transactions.
 - Accounting Dimensions complement existing operational links and do not replace them.
 - No broad GL backfill is performed; dimensions apply prospectively and to draft-only sync.
+
+## ADR-018: Historical GL Dimension Backfill Deferred
+
+- Historical submitted GL rows created before Accounting Dimensions were enabled are not amended, reposted, or broadly backfilled.
+- Draft documents may be synchronized through controlled draft-only methods before normal submission.
+- Future submitted transactions should carry Accounting Dimensions prospectively through ERPNext Accounting Dimension fields and app-level validate hooks.
+- Unit-level GL validation is deferred until a legitimate unit-specific accounting flow exists, such as Sales/Rental or an approved unit-specific cost posting flow.

@@ -219,4 +219,14 @@ Financial Dimensions Traceability foundation status:
 - New reports: GL Dimension Traceability, Unit Financial Ledger, Work Item Financial Ledger, Cost Code Financial Analysis, Project Unit Cost Matrix.
 - Existing historical GL rows show blank new dimensions unless future controlled repost/backfill is approved.
 
-Next operational task: Run end-to-end traceability validation before Reservation and Sales/Rental foundation.
+End-to-end traceability validation status:
+- Branch: feature/end-to-end-traceability-validation.
+- Validation file: .ai/TRACEABILITY_VALIDATION.md.
+- Accounting Dimensions exist for Construction Work Item, Cost Code, and Unit.
+- Draft Purchase Invoice ACC-PINV-2026-00002 was synced with dimensions and remains Draft.
+- Do not submit ACC-PINV-2026-00002 until normal Invoice Authorization is completed.
+- Stock Entry MAT-STE-2026-00001 has operational row links, but its historical GL dimension fields are blank because it predates dimension activation.
+- Traceability reports load and degrade gracefully for historical blank GL dimensions.
+- No submitted documents were amended, no broad GL backfill was run, and no Reservation/Sales/Rental DocTypes were created.
+
+Next operational task: Design and implement Unit Reservation foundation.

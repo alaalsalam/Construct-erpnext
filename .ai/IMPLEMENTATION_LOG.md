@@ -438,3 +438,36 @@
 - Existing Project Financial Snapshot Report, Unit Profitability Report, and IPC Register still load successfully.
 - No Reservation, Sales Contract, Lease Contract, CRM Matching, accounting document, broad GL backfill, submitted-document amendment, utility-billing install, or El Salvador localization was introduced.
 - Arabic implementation note: تم تفعيل أبعاد مالية مبدئية تسمح بتحليل التكلفة حسب بند العمل، كود التكلفة، والوحدة العقارية، مع بقاء القياسات والمستخلصات كمسار تشغيلي مستقل.
+
+## 2026-05-10 09:32:24 CEST
+
+- Created branch feature/end-to-end-traceability-validation from feature/financial-dimensions-traceability.
+- Validated Accounting Dimensions on construction.yemenfrappe.com:
+  - Construction Work Item / construction_work_item.
+  - Cost Code / cost_code.
+  - Unit / unit.
+- Verified Financial Dimension Settings remains warning/non-blocking by default.
+- Verified expected dimension fields exist on Purchase Invoice Item, Stock Entry Detail, Journal Entry Account, GL Entry, and Sales Invoice Item.
+- Ran draft-only dimension backfill on ACC-PINV-2026-00002.
+- Confirmed ACC-PINV-2026-00002 remains Draft and its item row has construction_work_item CWI-2026-00001, cost_code CC-CONC, project PROJ-0001, construction_boq ANK-BOQ-FOUNDATION-001, and wbs_element PROJ-0001-01.01.
+- Unit remains blank on ACC-PINV-2026-00002 because this is a project-level contractor cost and blank Unit is allowed by settings.
+- Did not submit ACC-PINV-2026-00002 because Invoice Authorization is active and no Authorized Invoice Authorization exists for that invoice.
+- Verified MAT-STE-2026-00001 Stock Entry Detail is linked to CWI-2026-00001 and CC-CONC.
+- Documented that MAT-STE-2026-00001 GL rows have blank new dimension values because the Stock Entry was submitted before Accounting Dimensions were enabled.
+- Ran traceability reports and confirmed they load without errors:
+  - GL Dimension Traceability.
+  - Unit Financial Ledger.
+  - Work Item Financial Ledger.
+  - Cost Code Financial Analysis.
+  - Project Unit Cost Matrix.
+  - Work Item Procurement Summary.
+  - Construction BOQ Variance.
+  - Measurement to IPC Traceability.
+  - Contractor Account Statement.
+  - Project Financial Snapshot Report.
+  - Project Cash Flow Forecast Report.
+  - Project EVM Metrics Report.
+  - Unit Profitability Report.
+- Added .ai/TRACEABILITY_VALIDATION.md with the end-to-end checklist, known limitations, and recommendation to proceed.
+- No submitted documents were amended, no historical GL backfill was run, no accounting documents were created, and no Reservation/Sales/Rental DocTypes were created.
+- Arabic validation note: تم التحقق من مسار التتبع الكامل من جدول الكميات إلى بند العمل والمشتريات والمخزون والقياسات والمستخلصات والأبعاد المالية والتقارير، مع بقاء قيود دفتر الأستاذ التاريخية دون تعديل.

@@ -70,3 +70,6 @@ Updated risks:
 - ERPNext Accounting Dimension setup creates fields across many standard accounting_dimension_doctypes, not only the narrow reporting doctypes; this is standard ERPNext behavior and should be considered in UI review.
 - Existing operational links remain necessary because Accounting Dimensions do not replace BOQ, Measurement Book, IPC, Contractor Ledger, or Unit Cost Allocation workflows.
 - Dimension warnings/blocking are configurable but blocking is disabled by default; administrators must enable it deliberately after process validation.
+- End-to-end traceability validation confirmed historical submitted GL rows such as MAT-STE-2026-00001 remain blank for new dimensions because they predate Accounting Dimension activation.
+- Unit dimension exists for future GL traceability, but real Unit GL validation remains pending until Sales/Rental or another approved unit-specific accounting flow creates legitimate postings.
+- ACC-PINV-2026-00002 remains Draft because Invoice Authorization is active and must not be bypassed; Payment Entry validation remains blocked until normal Purchase Invoice authorization/submission is completed.

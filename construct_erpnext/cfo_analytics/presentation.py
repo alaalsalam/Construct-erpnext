@@ -77,6 +77,11 @@ def certified_gross_amount(filters=None):
 
 
 @frappe.whitelist()
+def certified_amount(filters=None):
+	return certified_gross_amount(filters)
+
+
+@frappe.whitelist()
 def net_payable(filters=None):
 	total = _sum("Interim Payment Certificate", "net_payable", {"docstatus": ["!=", 2]})
 	return _card(total, route=_report_route("IPC Register"))
@@ -118,6 +123,48 @@ def evm_spi(filters=None):
 def evm_overall_status(filters=None):
 	value = _latest_value("Project EVM Metrics", "overall_evm_status", {"status": ["!=", "Archived"]})
 	return _card(value or "N/A", "Data", _report_route("EVM Forecast Summary"))
+
+
+@frappe.whitelist()
+def work_items_count(filters=None):
+	return _card(_count("Construction Work Item", {"disabled": 0}), "Int", _report_route("Construction BOQ Cost Analysis"))
+
+
+@frappe.whitelist()
+def invoiced_amount(filters=None):
+	total = _sum("Project Financial Snapshot", "procurement_invoiced_amount", {"status": ["!=", "Archived"]})
+	if not total:
+		total = _sum("Construction Work Item", "invoiced_amount", {"disabled": 0})
+	return _card(total, route=_report_route("Work Item Procurement Summary"))
+
+
+@frappe.whitelist()
+def consumed_amount(filters=None):
+	total = _sum("Project Financial Snapshot", "consumed_amount", {"status": ["!=", "Archived"]})
+	if not total:
+		total = _sum("Construction Work Item", "consumed_amount", {"disabled": 0})
+	return _card(total, route=_report_route("Site Warehouse Consumption"))
+
+
+@frappe.whitelist()
+def measured_amount(filters=None):
+	total = _sum("Project Financial Snapshot", "measured_amount", {"status": ["!=", "Archived"]})
+	if not total:
+		total = _sum("Construction Work Item", "measurement_amount", {"disabled": 0})
+	return _card(total, route=_report_route("Work Item Measurement Progress"))
+
+
+@frappe.whitelist()
+def ipc_count(filters=None):
+	return _card(_count("Interim Payment Certificate", {"docstatus": ["!=", 2]}), "Int", _report_route("IPC Register"))
+
+
+@frappe.whitelist()
+def advance_balance(filters=None):
+	total = _sum("Advance Register", "outstanding_advance_amount", {"status": ["!=", "Cancelled"]})
+	if not total:
+		total = _sum("Contractor Account", "current_advance_balance", {"status": ["!=", "Closed"]})
+	return _card(total, route=_report_route("Advance Recovery Report"))
 
 
 @frappe.whitelist()

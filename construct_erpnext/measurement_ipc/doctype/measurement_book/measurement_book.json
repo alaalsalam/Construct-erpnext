@@ -6,40 +6,55 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "document_information_section",
+  "book_information_tab",
+  "book_information_section",
   "company",
-  "project_party_section",
+  "book_number",
+  "source",
+  "book_information_column_break",
+  "workflow_state",
+  "status",
+  "project__contractor__period_tab",
+  "project__contractor__period_section",
   "project",
   "contractor",
   "construction_boq",
-  "book_number",
-  "measurement_period_section",
+  "project__contractor__period_column_break",
   "measurement_period_start",
   "measurement_period_end",
-  "status_workflow_section",
-  "workflow_state",
-  "status",
+  "totals_tab",
   "totals_section",
   "total_entries",
   "total_current_measured_qty",
+  "totals_column_break",
   "total_accepted_qty",
   "total_measured_amount",
+  "verification_tab",
+  "verification_section",
   "measured_by",
   "submitted_by",
   "verified_by",
+  "verification_column_break",
   "verified_on",
   "locked_by",
   "locked_on",
-  "source",
+  "references_tab",
+  "references_section",
+  "amended_from",
+  "remarks_tab",
   "remarks_section",
-  "remarks",
-  "amended_from"
+  "remarks"
  ],
  "fields": [
   {
-   "fieldname": "document_information_section",
+   "fieldname": "book_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Book Information"
+  },
+  {
+   "fieldname": "book_information_section",
    "fieldtype": "Section Break",
-   "label": "Document Information"
+   "label": "Book Information"
   },
   {
    "fieldname": "company",
@@ -50,37 +65,6 @@
    "description": "Links this record to the related Company."
   },
   {
-   "fieldname": "project_party_section",
-   "fieldtype": "Section Break",
-   "label": "Project and Contractor"
-  },
-  {
-   "fieldname": "project",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Project",
-   "options": "Project",
-   "reqd": 1,
-   "description": "Links this record to the related Project."
-  },
-  {
-   "fieldname": "contractor",
-   "fieldtype": "Link",
-   "label": "Contractor",
-   "options": "Supplier",
-   "in_list_view": 1,
-   "description": "Links this record to the related Supplier."
-  },
-  {
-   "fieldname": "construction_boq",
-   "fieldtype": "Link",
-   "label": "Construction BOQ",
-   "options": "Construction BOQ",
-   "in_list_view": 0,
-   "description": "Links this record to the related Construction BOQ."
-  },
-  {
    "fieldname": "book_number",
    "fieldtype": "Data",
    "in_list_view": 0,
@@ -89,30 +73,16 @@
    "description": "Specifies the book number for this Measurement Book."
   },
   {
-   "fieldname": "measurement_period_section",
-   "fieldtype": "Section Break",
-   "label": "Measurement Period"
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "Manual Entry\nField Entry\nMobile Sync\nImported",
+   "in_list_view": 0,
+   "description": "Selects the source used for classification, workflow, or reporting."
   },
   {
-   "fieldname": "measurement_period_start",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Measurement Period Start",
-   "reqd": 1,
-   "description": "Specifies the measurement period start for this Measurement Book."
-  },
-  {
-   "fieldname": "measurement_period_end",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Measurement Period End",
-   "reqd": 1,
-   "description": "Specifies the measurement period end for this Measurement Book."
-  },
-  {
-   "fieldname": "status_workflow_section",
-   "fieldtype": "Section Break",
-   "label": "Status / Workflow"
+   "fieldname": "book_information_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "workflow_state",
@@ -131,6 +101,68 @@
    "label": "Status",
    "options": "Draft\nSubmitted\nUnder Verification\nVerified\nLocked\nCancelled",
    "description": "Operational status for measurement verification before IPC generation."
+  },
+  {
+   "fieldname": "project__contractor__period_tab",
+   "fieldtype": "Tab Break",
+   "label": "Project / Contractor / Period"
+  },
+  {
+   "fieldname": "project__contractor__period_section",
+   "fieldtype": "Section Break",
+   "label": "Project / Contractor / Period"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1,
+   "description": "Links this record to the related Project."
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "label": "Contractor",
+   "options": "Supplier",
+   "in_list_view": 1,
+   "description": "Links this record to the related Supplier.",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "construction_boq",
+   "fieldtype": "Link",
+   "label": "Construction BOQ",
+   "options": "Construction BOQ",
+   "in_list_view": 0,
+   "description": "Links this record to the related Construction BOQ."
+  },
+  {
+   "fieldname": "project__contractor__period_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "measurement_period_start",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Measurement Period Start",
+   "reqd": 1,
+   "description": "Specifies the measurement period start for this Measurement Book."
+  },
+  {
+   "fieldname": "measurement_period_end",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Measurement Period End",
+   "reqd": 1,
+   "description": "Specifies the measurement period end for this Measurement Book."
+  },
+  {
+   "fieldname": "totals_tab",
+   "fieldtype": "Tab Break",
+   "label": "Totals"
   },
   {
    "fieldname": "totals_section",
@@ -154,6 +186,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "totals_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "total_accepted_qty",
    "fieldtype": "Float",
    "label": "Total Accepted Qty",
@@ -168,6 +204,16 @@
    "read_only": 1,
    "description": "Sum of measured amounts from linked measurement entries.",
    "in_list_view": 1
+  },
+  {
+   "fieldname": "verification_tab",
+   "fieldtype": "Tab Break",
+   "label": "Verification"
+  },
+  {
+   "fieldname": "verification_section",
+   "fieldtype": "Section Break",
+   "label": "Verification"
   },
   {
    "fieldname": "measured_by",
@@ -194,6 +240,10 @@
    "description": "Links this record to the related User."
   },
   {
+   "fieldname": "verification_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "verified_on",
    "fieldtype": "Datetime",
    "label": "Verified On",
@@ -216,12 +266,28 @@
    "description": "Specifies the locked on for this Measurement Book."
   },
   {
-   "fieldname": "source",
-   "fieldtype": "Select",
-   "label": "Source",
-   "options": "Manual Entry\nField Entry\nMobile Sync\nImported",
+   "fieldname": "references_tab",
+   "fieldtype": "Tab Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Measurement Book",
+   "read_only": 1,
    "in_list_view": 0,
-   "description": "Selects the source used for classification, workflow, or reporting."
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "remarks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks_section",
@@ -234,15 +300,6 @@
    "label": "Remarks",
    "in_list_view": 0,
    "description": "Additional notes or explanation for this Measurement Book."
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "options": "Measurement Book",
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
   }
  ],
  "index_web_pages_for_search": 1,

@@ -631,3 +631,43 @@
   - Sales Contract, Lease Contract, Installment Plan, Rent Schedule, and CRM Matching DocTypes remain absent.
 - No new business features were implemented, no accounting documents were created, no submitted records were amended, and no GL backfill was run.
 - Final decision: safe to start Sales Contract and Installment Plan foundation.
+
+## 2026-05-10 Deep Form Workspace UX Hardening
+
+- Created branch feature/final-form-workspace-ux-hardening from feature/workspace-form-ux-completion after confirming it contains Unit Reservation, presentation UX, form UX, final readiness gate, financial dimensions, unit costing, EVM, cash flow, IPC, and contractor ledger commits.
+- Inspected Universal Standard:
+  - App exists at /home/frappe/frappe-bench/apps/universal_standard.
+  - App is not installed on construction.yemenfrappe.com.
+  - Used as read-only reference for Arabic translation file, RTL/font/language-toggle UX pattern, and non-business UI hardening approach.
+- Hardened layouts for 32 completed custom DocTypes:
+  - Added Tab Breaks to large forms.
+  - Added/normalized Section Breaks and Column Breaks.
+  - Preserved all business fieldnames, fieldtypes, required flags, and controller logic.
+  - Preserved 100 percent English field description coverage.
+- Hardened workspace presentation:
+  - Executive Presentation Center now follows Executive Overview -> End-to-End Flow -> Construction -> Procurement -> Measurement/IPC -> Contractor -> CFO -> Real Estate -> Profitability -> Reservation -> Financial Traceability.
+  - Added deterministic Number Cards to major operational workspaces where reliable app-level methods exist.
+  - Sales & Rental remains reservation-only and explicitly leaves contracts, installments, rent schedules, collections, CRM matching, and portal scope deferred.
+- Added deterministic KPI helper methods for Work Items Count, Certified Amount, Invoiced Amount, Consumed Amount, Measured Amount, IPC Count, and Advance Balance.
+- Expanded construct_erpnext/translations/ar.csv to 1645 rows and hardened Arabic translations for reviewed DocType labels, field labels, descriptions, sections/tabs, workspaces, reports, and Number Cards.
+- Created translation and UX gate documents:
+  - .ai/TRANSLATION_COVERAGE_AUDIT.md
+  - .ai/UX_HARDENING_GATE.md
+- Static translation audit results:
+  - 32 DocTypes reviewed.
+  - 616 user-facing fields reviewed.
+  - 100 percent field description coverage.
+  - 100 percent Arabic label/description/workspace/report/card coverage for reviewed scope.
+- Validation completed:
+  - JSON metadata and Arabic CSV parse successfully.
+  - python3 compileall passed.
+  - bench migrate passed on construction.yemenfrappe.com.
+  - clear-cache and clear-website-cache passed.
+  - Reviewed forms load with 98 Tab Breaks, 161 Section Breaks, and 78 Column Breaks across reviewed DocTypes.
+  - Single settings DocTypes load correctly through get_single.
+  - 9 product workspaces load with valid links.
+  - 25 deterministic Number Cards exist and returned values.
+  - 20 key reports loaded without errors.
+  - Sales Contract, Lease Contract, Installment Plan, Rent Schedule, and CRM Matching DocTypes remain absent.
+  - No visible GCS workspace label and no visible El Salvador workspace terminology were found.
+- No Sales Contract, Lease Contract, Installment Plan, Rent Schedule, CRM Matching, Portal, accounting document, submitted-document amendment, or GL backfill was introduced.

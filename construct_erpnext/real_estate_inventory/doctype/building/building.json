@@ -9,12 +9,13 @@
   "basic_information_section",
   "real_estate_project",
   "project",
+  "basic_information_column_break",
   "building_code",
   "building_name",
   "classification_section",
   "building_type",
-  "status_section",
   "status",
+  "classification_column_break",
   "number_of_floors",
   "total_units",
   "remarks_section",
@@ -46,6 +47,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "basic_information_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "building_code",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -75,17 +80,17 @@
    "description": "Selects the building type used for classification, workflow, or reporting."
   },
   {
-   "fieldname": "status_section",
-   "fieldtype": "Section Break",
-   "label": "Status"
-  },
-  {
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
    "options": "Planned\nUnder Construction\nReady\nOperating\nClosed",
-   "description": "Current status used to track this Building through its workflow or reporting lifecycle."
+   "description": "Current status used to track this Building through its workflow or reporting lifecycle.",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "classification_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "number_of_floors",

@@ -9,17 +9,17 @@
   "basic_information_section",
   "project",
   "wbs_code",
+  "basic_information_column_break",
   "wbs_name",
   "parent_wbs_element",
-  "column_break_dates",
+  "classification__relationship_section",
   "is_group",
-  "status_section",
   "disabled",
-  "schedule_section",
+  "planning_section",
   "planned_start_date",
   "planned_end_date",
   "progress_weight",
-  "notes_section",
+  "remarks_section",
   "description"
  ],
  "fields": [
@@ -48,6 +48,10 @@
    "description": "Specifies the wbs code for this WBS Element."
   },
   {
+   "fieldname": "basic_information_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "wbs_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -64,8 +68,9 @@
    "description": "Links this record to the related WBS Element."
   },
   {
-   "fieldname": "column_break_dates",
-   "fieldtype": "Column Break"
+   "fieldname": "classification__relationship_section",
+   "fieldtype": "Section Break",
+   "label": "Classification / Relationship"
   },
   {
    "fieldname": "is_group",
@@ -75,11 +80,6 @@
    "description": "Specifies the is group for this WBS Element."
   },
   {
-   "fieldname": "status_section",
-   "fieldtype": "Section Break",
-   "label": "Status"
-  },
-  {
    "fieldname": "disabled",
    "fieldtype": "Check",
    "label": "Disabled",
@@ -87,9 +87,9 @@
    "description": "Specifies the disabled for this WBS Element."
   },
   {
-   "fieldname": "schedule_section",
+   "fieldname": "planning_section",
    "fieldtype": "Section Break",
-   "label": "Schedule"
+   "label": "Planning"
   },
   {
    "fieldname": "planned_start_date",
@@ -113,9 +113,9 @@
    "description": "Specifies the progress weight for this WBS Element."
   },
   {
-   "fieldname": "notes_section",
+   "fieldname": "remarks_section",
    "fieldtype": "Section Break",
-   "label": "Notes"
+   "label": "Remarks"
   },
   {
    "fieldname": "description",

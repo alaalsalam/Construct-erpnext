@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Procurement & Site Warehouses</b></span>\",\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Settings</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"h3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Material Request / Purchase Flow</b></span>\",\"col\":12}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Material Request / Purchase Flow\",\"col\":4}},{\"id\":\"h4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Site Warehouses / Stock</b></span>\",\"col\":12}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Site Warehouses / Stock\",\"col\":4}},{\"id\":\"h5\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Procurement Reports</b></span>\",\"col\":12}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Procurement & Site Warehouses</b></span>\",\"col\":12}},{\"id\":\"nc1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Committed Amount\",\"col\":3}},{\"id\":\"nc2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Invoiced Amount\",\"col\":3}},{\"id\":\"nc3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Consumed Amount\",\"col\":3}},{\"id\":\"h_section_1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Procurement Settings</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement Settings\",\"col\":4}},{\"id\":\"h_section_2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Purchase Flow</b></span>\",\"col\":12}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Purchase Flow\",\"col\":4}},{\"id\":\"h_section_3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Site Warehouses & Stock</b></span>\",\"col\":12}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Site Warehouses & Stock\",\"col\":4}},{\"id\":\"h_section_4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Procurement Control Reports</b></span>\",\"col\":12}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement Control Reports\",\"col\":4}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -16,7 +16,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Settings",
+   "label": "Procurement Settings",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -64,7 +64,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Material Request / Purchase Flow",
+   "label": "Purchase Flow",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -112,7 +112,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Site Warehouses / Stock",
+   "label": "Site Warehouses & Stock",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -150,7 +150,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Procurement Reports",
+   "label": "Procurement Control Reports",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -208,5 +208,19 @@
  "sequence_id": 3,
  "shortcuts": [],
  "title": "Procurement & Site Warehouses",
- "type": "Workspace"
+ "type": "Workspace",
+ "number_cards": [
+  {
+   "label": "Committed Amount",
+   "number_card_name": "Committed Amount"
+  },
+  {
+   "label": "Invoiced Amount",
+   "number_card_name": "Invoiced Amount"
+  },
+  {
+   "label": "Consumed Amount",
+   "number_card_name": "Consumed Amount"
+  }
+ ]
 }

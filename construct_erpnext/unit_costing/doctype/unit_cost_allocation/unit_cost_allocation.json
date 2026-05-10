@@ -6,32 +6,44 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "document_information_section",
+  "allocation_information_tab",
+  "allocation_information_section",
   "company",
   "real_estate_project",
   "project",
+  "allocation_information_column_break",
   "allocation_number",
   "allocation_date",
-  "allocation_source_section",
-  "allocation_basis",
+  "allocation_status",
+  "source_cost_tab",
+  "source_cost_section",
   "cost_source",
   "project_financial_snapshot",
   "source_amount",
-  "calculated_totals_section",
+  "allocation_method_tab",
+  "allocation_method_section",
+  "allocation_basis",
+  "allocation_lines_tab",
+  "allocation_lines_section",
+  "lines",
+  "totals_tab",
+  "totals_section",
   "total_allocated_amount",
   "unallocated_amount",
-  "status_section",
-  "allocation_status",
+  "remarks_tab",
   "remarks_section",
-  "remarks",
-  "lines_section",
-  "lines"
+  "remarks"
  ],
  "fields": [
   {
-   "fieldname": "document_information_section",
+   "fieldname": "allocation_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Allocation Information"
+  },
+  {
+   "fieldname": "allocation_information_section",
    "fieldtype": "Section Break",
-   "label": "Document Information"
+   "label": "Allocation Information"
   },
   {
    "fieldname": "company",
@@ -62,6 +74,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "allocation_information_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "allocation_number",
    "fieldtype": "Data",
    "label": "Allocation Number",
@@ -77,18 +93,24 @@
    "description": "Specifies the allocation date for this Unit Cost Allocation."
   },
   {
-   "fieldname": "allocation_source_section",
-   "fieldtype": "Section Break",
-   "label": "Allocation Source"
-  },
-  {
-   "fieldname": "allocation_basis",
+   "default": "Draft",
+   "fieldname": "allocation_status",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Allocation Basis",
-   "options": "By Area\nEqual Share\nManual Percentage\nManual Amount",
-   "reqd": 1,
-   "description": "Method used to distribute source project cost across units."
+   "label": "Allocation Status",
+   "options": "Draft\nCalculated\nReviewed\nApplied\nCancelled",
+   "description": "Controls whether calculated allocation has been applied to Unit profitability fields.",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "source_cost_tab",
+   "fieldtype": "Tab Break",
+   "label": "Source Cost"
+  },
+  {
+   "fieldname": "source_cost_section",
+   "fieldtype": "Section Break",
+   "label": "Source Cost"
   },
   {
    "fieldname": "cost_source",
@@ -115,9 +137,51 @@
    "description": "Project cost amount selected for management allocation to units."
   },
   {
-   "fieldname": "calculated_totals_section",
+   "fieldname": "allocation_method_tab",
+   "fieldtype": "Tab Break",
+   "label": "Allocation Method"
+  },
+  {
+   "fieldname": "allocation_method_section",
    "fieldtype": "Section Break",
-   "label": "Calculated Totals"
+   "label": "Allocation Method"
+  },
+  {
+   "fieldname": "allocation_basis",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Allocation Basis",
+   "options": "By Area\nEqual Share\nManual Percentage\nManual Amount",
+   "reqd": 1,
+   "description": "Method used to distribute source project cost across units."
+  },
+  {
+   "fieldname": "allocation_lines_tab",
+   "fieldtype": "Tab Break",
+   "label": "Allocation Lines"
+  },
+  {
+   "fieldname": "allocation_lines_section",
+   "fieldtype": "Section Break",
+   "label": "Allocation Lines"
+  },
+  {
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "Lines",
+   "options": "Unit Cost Allocation Line",
+   "in_list_view": 0,
+   "description": "Child table used to record lines for this Unit Cost Allocation."
+  },
+  {
+   "fieldname": "totals_tab",
+   "fieldtype": "Tab Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "totals_section",
+   "fieldtype": "Section Break",
+   "label": "Totals"
   },
   {
    "fieldname": "total_allocated_amount",
@@ -136,18 +200,9 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "status_section",
-   "fieldtype": "Section Break",
-   "label": "Status"
-  },
-  {
-   "default": "Draft",
-   "fieldname": "allocation_status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Allocation Status",
-   "options": "Draft\nCalculated\nReviewed\nApplied\nCancelled",
-   "description": "Controls whether calculated allocation has been applied to Unit profitability fields."
+   "fieldname": "remarks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks_section",
@@ -160,19 +215,6 @@
    "label": "Remarks",
    "in_list_view": 0,
    "description": "Additional notes or explanation for this Unit Cost Allocation."
-  },
-  {
-   "fieldname": "lines_section",
-   "fieldtype": "Section Break",
-   "label": "Lines"
-  },
-  {
-   "fieldname": "lines",
-   "fieldtype": "Table",
-   "label": "Lines",
-   "options": "Unit Cost Allocation Line",
-   "in_list_view": 0,
-   "description": "Child table used to record lines for this Unit Cost Allocation."
   }
  ],
  "index_web_pages_for_search": 1,

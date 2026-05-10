@@ -1,402 +1,1645 @@
-Construction BOQ,جدول كميات البناء,
-Construction BOQ Item,بند جدول كميات البناء,
-Construction Work Item,بند عمل إنشائي,
-Cost Code,كود التكلفة,
-WBS Element,عنصر هيكل تجزئة العمل,
-Procurement Control Settings,إعدادات ضبط المشتريات,
-Measurement Book,دفتر القياسات,
-Measurement Entry,قيد قياس,
-Interim Payment Certificate,مستخلص مقاول,
-Interim Payment Certificate Line,بند مستخلص مقاول,
-IPC Deduction,استقطاع مستخلص,
-Contractor Account,حساب المقاول,
-Contractor Ledger Entry,حركة كشف المقاول,
-Retention Register,سجل المحتجزات,
-Advance Register,سجل الدفعات المقدمة,
-Guarantee Register,سجل الضمانات,
-Project Financial Snapshot,الملخص المالي للمشروع,
-Project Cash Flow Forecast,توقع التدفق النقدي للمشروع,
-Project Cash Flow Forecast Period,فترة توقع التدفق النقدي للمشروع,
-Project EVM Metrics,مؤشرات القيمة المكتسبة للمشروع,
-Real Estate Project,مشروع عقاري,
-Building,مبنى,
-Floor,طابق,
-Unit Type,نوع الوحدة,
-Unit,وحدة عقارية,
-Property Owner,مالك عقاري,
-Property Ownership,ملكية عقارية,
-Unit Cost Allocation,توزيع تكلفة الوحدات,
-Unit Cost Allocation Line,بند توزيع تكلفة الوحدات,
-Financial Dimension Settings,إعدادات الأبعاد المالية,
-Accounting Dimensions,الأبعاد المحاسبية,
-Executive Control Center,مركز التحكم التنفيذي,
-Construction Control,التحكم في البناء,
-Procurement & Site Warehouses,المشتريات ومخازن الموقع,
-Measurement & IPC,القياسات والمستخلصات,
-Contractor Management,إدارة المقاولين,
-Real Estate Inventory,المخزون العقاري,
-Sales & Rental,المبيعات والتأجير,
-Reports & Analytics,التقارير والتحليلات,
-Financial Snapshot,الملخص المالي,
-Cash Flow Forecast,توقع التدفق النقدي,
-EVM Metrics,مؤشرات القيمة المكتسبة,
-Contractor Exposure,تعرضات المقاولين,
-Unit Profitability,ربحية الوحدات,
-Project Performance Reports,تقارير أداء المشروع,
-Basic Information,المعلومات الأساسية,
-Classification,التصنيف,
-Project / Relationship,المشروع والعلاقة,
-Status,الحالة,
-Notes,ملاحظات,
-Document Information,بيانات المستند,
-Project and Contractor,المشروع والمقاول,
-Measurement Period,فترة القياس,
-Status / Workflow,الحالة وسير الاعتماد,
-Totals,الإجماليات,
-Project / Unit / Party Details,بيانات المشروع والوحدة والطرف,
-Operational Details,البيانات التشغيلية,
-Financial Summary,الملخص المالي,
-References,المراجع والروابط,
-Snapshot Information,بيانات اللقطة,
-Budget / Cost,الميزانية والتكلفة,
-Progress / Forecast,التقدم والتوقع,
-Risk Indicators,مؤشرات المخاطر,
-Executive Summary,الملخص التنفيذي,
-Recommendations,التوصيات,
-Unit Identification,تعريف الوحدة,
-Location Hierarchy,التسلسل المكاني,
-Usage & Status,الاستخدام والحالة,
-Financial Expectations,التوقعات المالية,
-Cost Allocation & Profitability,توزيع التكلفة والربحية,
-Classification / Attributes,التصنيف والخصائص,
-Reservation Information,بيانات الحجز,
-Unit Details,بيانات الوحدة,
-Customer / Lead Details,بيانات العميل أو المهتم,
-Commercial Details,البيانات التجارية,
-Conversion Placeholders,حقول التحويل المستقبلية,
-Status / Control,الحالة والتحكم,
-Setup / Masters,الإعدادات والبيانات الرئيسية,
-BOQ,جدول الكميات,
-Work Items,بنود العمل,
-Progress / Advancement,التقدم والإنجاز,
-Construction Reports,تقارير الإنشاء,
-Settings,الإعدادات,
-Material Request / Purchase Flow,طلبات المواد ومسار الشراء,
-Site Warehouses / Stock,مخازن الموقع والمخزون,
-Measurement Entries,قيود القياس,
-Traceability,التتبع,
-Contractor Accounts,حسابات المقاولين,
-Contractor Ledger,كشف المقاول,
-Retention,المحتجزات,
-Advances,السلف,
-Guarantees,الضمانات,
-Contractor Reports,تقارير المقاولين,
-Building / Floor / Unit,المبنى والطابق والوحدة,
-Unit Type,نوع الوحدة,
-Owners / Ownership,الملاك والملكية,
-Inventory Reports,تقارير المخزون,
-Executive / CFO,الإدارة التنفيذية والمدير المالي,
-BOQ / Construction,جدول الكميات والإنشاء,
-Procurement / Stock,المشتريات والمخزون,
-Measurement / IPC,القياسات والمستخلصات,
-Financial Dimensions / GL Traceability,الأبعاد المالية وتتبع دفتر الأستاذ,
-Additional Information,معلومات إضافية,
-Planned BOQ quantity for this operational work item.,كمية جدول الكميات المخططة لبند العمل التشغيلي.,
-Quantity financially certified through approved IPCs.,الكمية المعتمدة مالياً من خلال مستخلصات مقاول معتمدة.,
-Quantity measured and verified through Measurement Book entries.,الكمية المقاسة والمتحقق منها من خلال قيود دفتر القياسات.,
-Final accepted quantity after engineering/QS review.,الكمية النهائية المقبولة بعد مراجعة المهندس أو حاسب الكميات.,
-Quantity measured in this entry before cumulative calculation.,الكمية المقاسة في هذا القيد قبل الحساب التراكمي.,
-Amount payable after retention, advance recovery, penalties, and deductions.,المبلغ المستحق بعد المحتجزات واسترداد السلف والغرامات والاستقطاعات.,
-Management cost allocated to this unit for profitability analysis.,تكلفة إدارية موزعة على هذه الوحدة لتحليل الربحية.,
-Expected gross margin percentage based on allocated cost and expected sale price.,نسبة الهامش الإجمالي المتوقعة بناءً على التكلفة الموزعة وسعر البيع المتوقع.,
-Last date this reservation remains active before expiry.,آخر تاريخ يبقى فيه الحجز نشطاً قبل انتهاء الصلاحية.,
-Non-accounting reservation amount recorded for commercial tracking only.,مبلغ حجز غير محاسبي مسجل للمتابعة التجارية فقط.,
-If enabled, missing required dimensions may block transactions. Keep disabled until the team is ready.,عند التفعيل قد تمنع الأبعاد المطلوبة الناقصة حفظ المعاملات. يُفضّل إبقاؤه غير مفعل حتى يصبح الفريق جاهزاً.,
-BOQ & Work Items,جدول الكميات وبنود العمل,
-Budget & Schedule,الميزانية والجدول الزمني,
-Progress & Site Cost,التقدم وتكلفة الموقع,
-Financial Traceability,التتبع المالي,
-Procurement Controls,ضوابط المشتريات,
-Procurement Documents,مستندات المشتريات,
-Stock & Site Warehouses,المخزون ومخازن الموقع,
-Procurement Reports,تقارير المشتريات,
-Measurement,القياسات,
-IPC Certification,اعتماد المستخلصات,
-Traceability,التتبع,
-Reports,التقارير,
-Contractor Control,ضبط المقاولين,
-Retention & Advances,المحتجزات والدفعات المقدمة,
-Guarantees,الضمانات,
-Contractor Reports,تقارير المقاولين,
-Inventory Structure,هيكل المخزون العقاري,
-Ownership,الملكية,
-Unit Costing,تكلفة الوحدات,
-Unit Reports,تقارير الوحدات,
-Construction,البناء,
-Procurement,المشتريات,
-Contractor,المقاول,
-CFO,المدير المالي,
-Financial Dimensions,الأبعاد المالية,
-Future Sales & Rental Foundation,أساس المبيعات والتأجير القادم,
-Construction BOQ Cost Analysis,تحليل تكلفة جدول كميات البناء,
-Construction BOQ Variance,انحراف جدول كميات البناء,
-Work Item Procurement Summary,ملخص مشتريات بند العمل,
-BOQ Procurement Pipeline,مسار مشتريات جدول الكميات,
-Site Warehouse Consumption,استهلاك مخازن الموقع,
-Procurement Budget Control,ضبط ميزانية المشتريات,
-Measurement Book Register,سجل دفاتر القياس,
-Work Item Measurement Progress,تقدم قياس بند العمل,
-Measurement Verification Queue,قائمة انتظار تحقق القياسات,
-IPC Register,سجل مستخلصات المقاولين,
-IPC Line Details,تفاصيل بنود المستخلصات,
-Measurement to IPC Traceability,تتبع القياسات إلى المستخلصات,
-Contractor IPC Summary,ملخص مستخلصات المقاولين,
-Contractor Account Statement,كشف حساب المقاول,
-Retention Register Report,تقرير سجل المحتجزات,
-Advance Recovery Report,تقرير استرداد الدفعات المقدمة,
-Contractor Exposure Summary,ملخص تعرضات المقاولين,
-Guarantee Register Report,تقرير سجل الضمانات,
-Project Financial Snapshot Report,تقرير الملخص المالي للمشروع,
-CFO Project Control Summary,ملخص رقابة المشروع للمدير المالي,
-Work Item Financial Traceability,التتبع المالي لبند العمل,
-Contractor Financial Exposure,التعرض المالي للمقاول,
-Project Cash Flow Forecast Report,تقرير توقع التدفق النقدي للمشروع,
-Project Cash Requirement Summary,ملخص الاحتياج النقدي للمشروع,
-Contractor Payment Forecast,توقع دفعات المقاولين,
-Retention Release Forecast,توقع الإفراج عن المحتجزات,
-Project EVM Metrics Report,تقرير مؤشرات القيمة المكتسبة للمشروع,
-EVM Forecast Summary,ملخص توقعات القيمة المكتسبة,
-Project Performance Dashboard Report,تقرير لوحة أداء المشروع,
-Unit Inventory Report,تقرير مخزون الوحدات,
-Unit Availability Report,تقرير توفر الوحدات,
-Ownership Summary Report,تقرير ملخص الملكية,
-Real Estate Project Summary,ملخص المشروع العقاري,
-Unit Cost Allocation Report,تقرير توزيع تكلفة الوحدات,
-Unit Profitability Report,تقرير ربحية الوحدات,
-Real Estate Project Profitability Summary,ملخص ربحية المشروع العقاري,
-Building Profitability Summary,ملخص ربحية المبنى,
-GL Dimension Traceability,تتبع القيود حسب الأبعاد,
-Unit Financial Ledger,كشف مالي للوحدة,
-Work Item Financial Ledger,كشف مالي لبند العمل,
-Cost Code Financial Analysis,تحليل مالي حسب كود التكلفة,
-Project Unit Cost Matrix,مصفوفة تكلفة وحدات المشروع,
-Project Cost Summary,ملخص تكلفة المشروع,
-Budget vs Actual Cost,الميزانية مقابل التكلفة الفعلية,
-Budget Variance Analysis,تحليل انحراف الميزانية,
-Advancement vs Cost,التقدم مقابل التكلفة,
-Advancement vs Schedule,التقدم مقابل الجدول الزمني,
-Revenue vs Billing,الإيراد مقابل الفوترة,
-Material Acquisition Summary,ملخص توريد المواد,
-Subcontract Status,حالة عقود الباطن,
-Change Order History,سجل أوامر التغيير,
-Project,المشروع,
-Company,الشركة,
-Contractor,المقاول,
-Supplier,المورد,
-Status,الحالة,
-Workflow State,حالة سير العمل,
-BOQ,جدول الكميات,
-WBS,هيكل العمل,
-WBS Code,كود هيكل العمل,
-Category,الفئة,
-Quantity,الكمية,
-UOM,وحدة القياس,
-Unit Rate,سعر الوحدة,
-Amount,المبلغ,
-Final Amount,المبلغ النهائي,
-Planned Qty,الكمية المخططة,
-Requested Qty,الكمية المطلوبة,
-Ordered Qty,الكمية المطلوبة بالشراء,
-Received Qty,الكمية المستلمة,
-Invoiced Qty,الكمية المفوترة,
-Consumed Qty,الكمية المستهلكة,
-Measured Qty,الكمية المقاسة,
-Certified Qty,الكمية المعتمدة,
-Remaining Qty,الكمية المتبقية,
-Planned Amount,المبلغ المخطط,
-Committed Amount,مبلغ الالتزام,
-Invoiced Amount,المبلغ المفوتر,
-Consumed Amount,المبلغ المستهلك,
-Measured Amount,المبلغ المقاس,
-Certified Amount,المبلغ المعتمد,
-Variance Amount,مبلغ الانحراف,
-Variance %,نسبة الانحراف,
-Risk Status,حالة المخاطر,
-Gross Amount,إجمالي المبلغ,
-Net Payable,صافي المستحق,
-Retention Amount,مبلغ المحتجز,
-Retention Held,المحتجز المحجوز,
-Advance Recovery,استرداد الدفعة المقدمة,
-Penalties,الغرامات,
-Paid Amount,المبلغ المدفوع,
-Outstanding Amount,المبلغ المستحق,
-Outstanding Balance,الرصيد المستحق,
-Purchase Invoice,فاتورة شراء,
-Payment Entry,قيد دفع,
-Material Request,طلب مواد,
-Purchase Order,أمر شراء,
-Purchase Receipt,إيصال شراء,
-Stock Entry,قيد مخزون,
-Warehouse,مخزن,
-Site Warehouse,مخزن الموقع,
-Period Start,بداية الفترة,
-Period End,نهاية الفترة,
-Verified By,تم التحقق بواسطة,
-Verified On,تاريخ التحقق,
-Measured By,تم القياس بواسطة,
-Measurement Date,تاريخ القياس,
-Engineer Comment,تعليق المهندس,
-QS Comment,تعليق مهندس الكميات,
-BOQ Total,إجمالي جدول الكميات,
-Certified Value,القيمة المعتمدة,
-Actual Cost,التكلفة الفعلية,
-Planned Value,القيمة المخططة,
-Cost Variance,انحراف التكلفة,
-Schedule Variance,انحراف الجدول الزمني,
-Cash Risk,مخاطر النقدية,
-EVM Risk,مخاطر القيمة المكتسبة,
-Overall Status,الحالة العامة,
-Recommendation,التوصية,
-Recommendations,التوصيات,
-Expected Sale Price,سعر البيع المتوقع,
-Expected Rent,الإيجار المتوقع,
-Expected Monthly Rent,الإيجار الشهري المتوقع,
-Allocated Cost,التكلفة الموزعة,
-Expected Margin,الهامش المتوقع,
-Expected Margin %,نسبة الهامش المتوقع,
-Profitability Status,حالة الربحية,
-Available,متاحة,
-Reserved,محجوزة,
-Sold,مباعة,
-Rented,مؤجرة,
-Blocked,محظورة,
-Under Construction,تحت الإنشاء,
-Draft,مسودة,
-Submitted,مقدم,
-Under Review,قيد المراجعة,
-Approved,معتمد,
-Locked,مقفل,
-Cancelled,ملغي,
-Verified,تم التحقق,
-Rejected,مرفوض,
-Certified,معتمد للدفع,
-Invoice Created,تم إنشاء الفاتورة,
-Partially Paid,مدفوع جزئياً,
-Paid,مدفوع,
-Closed,مغلق,
-Generated,تم التوليد,
-Reviewed,تمت المراجعة,
-Archived,مؤرشف,
-Calculated,تم الحساب,
-Applied,مطبق,
-Held,محجوز,
-Eligible for Release,مؤهل للإفراج,
-Partially Released,مفرج عنه جزئياً,
-Released,مفرج عنه,
-Active,نشط,
-Suspended,معلق,
-Expired,منتهي,
-Expiring Soon,قارب على الانتهاء,
-Profitable,مربحة,
-Watch,تحت المراقبة,
-Loss Risk,خطر خسارة,
-Not Priced,غير مسعرة,
-Green,أخضر,
-Yellow,أصفر,
-Red,أحمر,
-On Track,ضمن المسار,
-At Risk,عالي المخاطر,
-Warning,تحذير,
-Blocking,منع,
-Silent,صامت,
-"Operational work item generated from an approved BOQ line. Used for procurement, measurement, IPC, and cost traceability.",بند عمل تشغيلي يتم توليده من بند معتمد في جدول الكميات ويستخدم للمشتريات والقياسات والمستخلصات وتتبع التكلفة.,
-"Groups verified field measurements for a project, contractor, BOQ, and period before IPC generation.",يجمع القياسات الميدانية المعتمدة للمشروع والمقاول وجدول الكميات والفترة قبل إنشاء المستخلص.,
-"Contractor payment certificate generated from verified measurement entries.",مستخلص دفع للمقاول يتم إنشاؤه من قيود قياس تم التحقق منها.,
-"Standalone real estate asset/unit used for inventory, cost allocation, sales, and rental workflows.",وحدة عقارية مستقلة تستخدم للمخزون وتوزيع التكلفة ومسارات البيع والتأجير.,
-"Management allocation of project cost to real estate units for profitability analysis. Does not create accounting entries.",توزيع إداري لتكلفة المشروع على الوحدات العقارية لتحليل الربحية ولا ينشئ قيوداً محاسبية.,
-"Sales, rental, reservation, collections, and CRM matching will be implemented in the next phases.",سيتم تنفيذ المبيعات والتأجير والحجوزات والتحصيلات والمطابقة مع العملاء في المراحل القادمة.,
-Unit Reservation,حجز وحدة عقارية,
-Unit Reservation Settings,إعدادات حجز الوحدات,
-Default Reservation Validity Days,مدة الحجز الافتراضية بالأيام,
-Auto Release Expired Reservations,تحرير الحجوزات المنتهية تلقائياً,
-Allow Reservation For Reserved Units,السماح بحجز الوحدات المحجوزة,
-Require Customer Or Lead,طلب عميل أو مهتم,
-Require Reservation Amount,طلب مبلغ الحجز,
-Warning Days Before Expiry,أيام التنبيه قبل انتهاء الحجز,
-Reservation Number Prefix,بادئة رقم الحجز,
-Reservation Number,رقم الحجز,
-Reservation Type,نوع الحجز,
-Reservation Date,تاريخ الحجز,
-Valid From,ساري من,
-Valid Until,ساري حتى,
-Party Name,اسم الطرف,
-Commercial Info,المعلومات التجارية,
-Reservation Amount,مبلغ الحجز,
-Reservation Terms,شروط الحجز,
-Future Conversion,التحويل المستقبلي,
-Converted To DocType,محول إلى نوع مستند,
-Converted To Document,محول إلى مستند,
-Converted On,تم التحويل في,
-Converted By,تم التحويل بواسطة,
-Previous Unit Status,حالة الوحدة السابقة,
-Previous Marketing Status,حالة التسويق السابقة,
-Cancelled Reason,سبب الإلغاء,
-Expiry Reason,سبب انتهاء الحجز,
-Converted,محول,
-Reserve,حجز,
-Convert,تحويل,
-Expire,إنهاء الصلاحية,
-Unit Reservation Workflow,مسار اعتماد حجز الوحدة,
-Unit Reservation Register,سجل حجوزات الوحدات,
-Active Unit Reservations,الحجوزات النشطة للوحدات,
-Expiring Unit Reservations,حجوزات الوحدات القريبة من الانتهاء,
-Unit Reservation Impact,أثر الحجز على الوحدات,
-Days Remaining,الأيام المتبقية,
-Within Days,خلال أيام,
-Reservation Rate %,نسبة الحجز %,
-Reservation Control,إدارة الحجز,
-Reservation Reports,تقارير الحجز,
-Reservation Visibility,متابعة الحجوزات,
-Reservation,الحجز,
-Sale,بيع,
-Rent,تأجير,
-Temporary reservation transaction for a real estate unit before Sales Contract or Lease Contract. Does not create accounting documents.,معاملة حجز مؤقتة لوحدة عقارية قبل عقد البيع أو عقد التأجير ولا تنشئ مستندات محاسبية.,
-"Controls real estate unit reservation behavior, validity, duplicate reservation rules, and release handling.",يضبط سلوك حجز الوحدات العقارية ومدة الصلاحية ومنع الحجز المكرر وآلية تحرير الوحدة.,
-Real estate unit being reserved.,الوحدة العقارية المطلوب حجزها.,
-Commercial intent of the temporary reservation.,الغرض التجاري من الحجز المؤقت.,
-Date until which the reservation remains valid.,التاريخ الذي يبقى الحجز سارياً حتى نهايته.,
-Non-accounting reservation amount for commercial tracking only.,مبلغ حجز غير محاسبي مخصص للمتابعة التجارية فقط.,
-"Unit reservation is available now. Sales contracts, lease contracts, installments, collections, and CRM matching will be implemented in the next phases.",أصبح حجز الوحدات متاحاً الآن. سيتم تنفيذ عقود البيع، عقود التأجير، الأقساط، التحصيلات، ومطابقة العملاء في المراحل القادمة.,
-Executive Presentation Center,مركز العرض التنفيذي,
-Project Overview,نظرة عامة على المشروع,
-Construction Cost Control,ضبط تكلفة الإنشاء,
-Procurement & Site Consumption,المشتريات واستهلاك الموقع,
-Contractor Financial Control,الرقابة المالية للمقاولين,
-CFO Forecasting,توقعات المدير المالي,
-Real Estate Inventory & Profitability,المخزون العقاري والربحية,
-Deep Financial Traceability,التتبع المالي التفصيلي,
-Presentation Flow,مسار العرض,
-End-to-End Development Flow,مسار التطوير الشامل,
-BOQ Total,إجمالي جدول الكميات,
-Committed Amount,قيمة الالتزامات,
-Certified Gross Amount,إجمالي القيمة المعتمدة,
-Certified Amount,القيمة المعتمدة,
-Net Payable,صافي المستحق,
-Retention Held,المحتجزات المحجوزة,
-Contractor Outstanding,رصيد المقاول المستحق,
-Cash Flow Risk,مخاطر التدفق النقدي,
-EVM CPI,مؤشر أداء التكلفة,
-EVM SPI,مؤشر أداء الجدول,
-EVM Overall Status,الحالة العامة للقيمة المكتسبة,
-Total Units,إجمالي الوحدات,
-Available Units,الوحدات المتاحة,
-Reserved Units,الوحدات المحجوزة,
-Rented Units,الوحدات المؤجرة,
-Expected Gross Margin,الهامش الإجمالي المتوقع,
-"Expected Margin %",نسبة الهامش المتوقعة,
-Active Reservations,الحجوزات النشطة,
-Expiring Reservations,الحجوزات القريبة من الانتهاء,
-Project Financial Overview,النظرة المالية للمشروع,
-Unit Status Distribution,توزيع حالات الوحدات,
-Contractor Exposure,تعرض المقاولين,
-Project Performance Reports,تقارير أداء المشروع,
+Construction BOQ,جدول كميات البناء
+Construction BOQ Item,بند جدول كميات البناء
+Construction Work Item,بند عمل إنشائي
+Cost Code,كود التكلفة
+WBS Element,عنصر هيكل تجزئة العمل
+Procurement Control Settings,إعدادات ضبط المشتريات
+Measurement Book,دفتر القياسات
+Measurement Entry,قيد قياس
+Interim Payment Certificate,مستخلص مقاول
+Interim Payment Certificate Line,بند مستخلص مقاول
+IPC Deduction,استقطاع مستخلص
+Contractor Account,حساب المقاول
+Contractor Ledger Entry,حركة كشف المقاول
+Retention Register,سجل المحتجزات
+Advance Register,سجل الدفعات المقدمة
+Guarantee Register,سجل الضمانات
+Project Financial Snapshot,الملخص المالي للمشروع
+Project Cash Flow Forecast,توقع التدفق النقدي للمشروع
+Project Cash Flow Forecast Period,فترة توقع التدفق النقدي للمشروع
+Project EVM Metrics,مؤشرات القيمة المكتسبة للمشروع
+Real Estate Project,مشروع عقاري
+Building,مبنى
+Floor,طابق
+Unit Type,نوع الوحدة
+Unit,وحدة عقارية
+Property Owner,مالك عقاري
+Property Ownership,ملكية عقارية
+Unit Cost Allocation,توزيع تكلفة الوحدات
+Unit Cost Allocation Line,بند توزيع تكلفة الوحدات
+Financial Dimension Settings,إعدادات الأبعاد المالية
+Accounting Dimensions,الأبعاد المحاسبية
+Executive Control Center,مركز التحكم التنفيذي
+Construction Control,التحكم في البناء
+Procurement & Site Warehouses,المشتريات ومخازن الموقع
+Measurement & IPC,القياسات والمستخلصات
+Contractor Management,إدارة المقاولين
+Real Estate Inventory,المخزون العقاري
+Sales & Rental,المبيعات والتأجير
+Reports & Analytics,التقارير والتحليلات
+Financial Snapshot,الملخص المالي
+Cash Flow Forecast,توقع التدفق النقدي
+EVM Metrics,مؤشرات القيمة المكتسبة
+Contractor Exposure,تعرضات المقاولين
+Unit Profitability,ربحية الوحدات
+Project Performance Reports,تقارير أداء المشروع
+Basic Information,المعلومات الأساسية
+Classification,التصنيف
+Project / Relationship,المشروع والعلاقة
+Status,الحالة
+Notes,ملاحظات
+Document Information,بيانات المستند
+Project and Contractor,المشروع والمقاول
+Measurement Period,فترة القياس
+Status / Workflow,الحالة وسير الاعتماد
+Totals,الإجماليات
+Project / Unit / Party Details,بيانات المشروع والوحدة والطرف
+Operational Details,البيانات التشغيلية
+Financial Summary,الملخص المالي
+References,المراجع والروابط
+Snapshot Information,بيانات اللقطة
+Budget / Cost,الميزانية والتكلفة
+Progress / Forecast,التقدم والتوقع
+Risk Indicators,مؤشرات المخاطر
+Executive Summary,الملخص التنفيذي
+Recommendations,التوصيات
+Unit Identification,تعريف الوحدة
+Location Hierarchy,التسلسل المكاني
+Usage & Status,الاستخدام والحالة
+Financial Expectations,التوقعات المالية
+Cost Allocation & Profitability,توزيع التكلفة والربحية
+Classification / Attributes,التصنيف والخصائص
+Reservation Information,بيانات الحجز
+Unit Details,بيانات الوحدة
+Customer / Lead Details,بيانات العميل أو المهتم
+Commercial Details,البيانات التجارية
+Conversion Placeholders,حقول التحويل المستقبلية
+Status / Control,الحالة والتحكم
+Setup / Masters,الإعدادات والبيانات الرئيسية
+BOQ,جدول الكميات
+Work Items,بنود العمل
+Progress / Advancement,التقدم والإنجاز
+Construction Reports,تقارير الإنشاء
+Settings,الإعدادات
+Material Request / Purchase Flow,طلبات المواد ومسار الشراء
+Site Warehouses / Stock,مخازن الموقع والمخزون
+Measurement Entries,قيود القياس
+Traceability,التتبع
+Contractor Accounts,حسابات المقاولين
+Contractor Ledger,كشف المقاول
+Retention,المحتجزات
+Advances,السلف
+Guarantees,الضمانات
+Contractor Reports,تقارير المقاولين
+Building / Floor / Unit,المبنى والطابق والوحدة
+Unit Type,نوع الوحدة
+Owners / Ownership,الملاك والملكية
+Inventory Reports,تقارير المخزون
+Executive / CFO,الإدارة التنفيذية والمدير المالي
+BOQ / Construction,جدول الكميات والإنشاء
+Procurement / Stock,المشتريات والمخزون
+Measurement / IPC,القياسات والمستخلصات
+Financial Dimensions / GL Traceability,الأبعاد المالية وتتبع دفتر الأستاذ
+Additional Information,معلومات إضافية
+Planned BOQ quantity for this operational work item.,كمية جدول الكميات المخططة لبند العمل التشغيلي.
+Quantity financially certified through approved IPCs.,الكمية المعتمدة مالياً من خلال مستخلصات مقاول معتمدة.
+Quantity measured and verified through Measurement Book entries.,الكمية المقاسة والمتحقق منها من خلال قيود دفتر القياسات.
+Final accepted quantity after engineering/QS review.,الكمية النهائية المقبولة بعد مراجعة المهندس أو حاسب الكميات.
+Quantity measured in this entry before cumulative calculation.,الكمية المقاسة في هذا القيد قبل الحساب التراكمي.
+Amount payable after retention, advance recovery
+Management cost allocated to this unit for profitability analysis.,تكلفة إدارية موزعة على هذه الوحدة لتحليل الربحية.
+Expected gross margin percentage based on allocated cost and expected sale price.,نسبة الهامش الإجمالي المتوقعة بناءً على التكلفة الموزعة وسعر البيع المتوقع.
+Last date this reservation remains active before expiry.,آخر تاريخ يبقى فيه الحجز نشطاً قبل انتهاء الصلاحية.
+Non-accounting reservation amount recorded for commercial tracking only.,مبلغ حجز غير محاسبي مسجل للمتابعة التجارية فقط.
+If enabled, missing required dimensions may block transactions. Keep disabled until the team is ready.
+BOQ & Work Items,جدول الكميات وبنود العمل
+Budget & Schedule,الميزانية والجدول الزمني
+Progress & Site Cost,التقدم وتكلفة الموقع
+Financial Traceability,التتبع المالي
+Procurement Controls,ضوابط المشتريات
+Procurement Documents,مستندات المشتريات
+Stock & Site Warehouses,المخزون ومخازن الموقع
+Procurement Reports,تقارير المشتريات
+Measurement,القياسات
+IPC Certification,اعتماد المستخلصات
+Traceability,التتبع
+Reports,التقارير
+Contractor Control,ضبط المقاولين
+Retention & Advances,المحتجزات والدفعات المقدمة
+Guarantees,الضمانات
+Contractor Reports,تقارير المقاولين
+Inventory Structure,هيكل المخزون العقاري
+Ownership,الملكية
+Unit Costing,تكلفة الوحدات
+Unit Reports,تقارير الوحدات
+Construction,البناء
+Procurement,المشتريات
+Contractor,المقاول
+CFO,المدير المالي
+Financial Dimensions,الأبعاد المالية
+Future Sales & Rental Foundation,أساس المبيعات والتأجير القادم
+Construction BOQ Cost Analysis,تحليل تكلفة جدول كميات البناء
+Construction BOQ Variance,انحراف جدول كميات البناء
+Work Item Procurement Summary,ملخص مشتريات بند العمل
+BOQ Procurement Pipeline,مسار مشتريات جدول الكميات
+Site Warehouse Consumption,استهلاك مخازن الموقع
+Procurement Budget Control,ضبط ميزانية المشتريات
+Measurement Book Register,سجل دفاتر القياس
+Work Item Measurement Progress,تقدم قياس بند العمل
+Measurement Verification Queue,قائمة انتظار تحقق القياسات
+IPC Register,سجل مستخلصات المقاولين
+IPC Line Details,تفاصيل بنود المستخلصات
+Measurement to IPC Traceability,تتبع القياسات إلى المستخلصات
+Contractor IPC Summary,ملخص مستخلصات المقاولين
+Contractor Account Statement,كشف حساب المقاول
+Retention Register Report,تقرير سجل المحتجزات
+Advance Recovery Report,تقرير استرداد الدفعات المقدمة
+Contractor Exposure Summary,ملخص تعرضات المقاولين
+Guarantee Register Report,تقرير سجل الضمانات
+Project Financial Snapshot Report,تقرير الملخص المالي للمشروع
+CFO Project Control Summary,ملخص رقابة المشروع للمدير المالي
+Work Item Financial Traceability,التتبع المالي لبند العمل
+Contractor Financial Exposure,التعرض المالي للمقاول
+Project Cash Flow Forecast Report,تقرير توقع التدفق النقدي للمشروع
+Project Cash Requirement Summary,ملخص الاحتياج النقدي للمشروع
+Contractor Payment Forecast,توقع دفعات المقاولين
+Retention Release Forecast,توقع الإفراج عن المحتجزات
+Project EVM Metrics Report,تقرير مؤشرات القيمة المكتسبة للمشروع
+EVM Forecast Summary,ملخص توقعات القيمة المكتسبة
+Project Performance Dashboard Report,تقرير لوحة أداء المشروع
+Unit Inventory Report,تقرير مخزون الوحدات
+Unit Availability Report,تقرير توفر الوحدات
+Ownership Summary Report,تقرير ملخص الملكية
+Real Estate Project Summary,ملخص المشروع العقاري
+Unit Cost Allocation Report,تقرير توزيع تكلفة الوحدات
+Unit Profitability Report,تقرير ربحية الوحدات
+Real Estate Project Profitability Summary,ملخص ربحية المشروع العقاري
+Building Profitability Summary,ملخص ربحية المبنى
+GL Dimension Traceability,تتبع القيود حسب الأبعاد
+Unit Financial Ledger,كشف مالي للوحدة
+Work Item Financial Ledger,كشف مالي لبند العمل
+Cost Code Financial Analysis,تحليل مالي حسب كود التكلفة
+Project Unit Cost Matrix,مصفوفة تكلفة وحدات المشروع
+Project Cost Summary,ملخص تكلفة المشروع
+Budget vs Actual Cost,الميزانية مقابل التكلفة الفعلية
+Budget Variance Analysis,تحليل انحراف الميزانية
+Advancement vs Cost,التقدم مقابل التكلفة
+Advancement vs Schedule,التقدم مقابل الجدول الزمني
+Revenue vs Billing,الإيراد مقابل الفوترة
+Material Acquisition Summary,ملخص توريد المواد
+Subcontract Status,حالة عقود الباطن
+Change Order History,سجل أوامر التغيير
+Project,المشروع
+Company,الشركة
+Contractor,المقاول
+Supplier,المورد
+Status,الحالة
+Workflow State,حالة سير العمل
+BOQ,جدول الكميات
+WBS,هيكل العمل
+WBS Code,كود هيكل العمل
+Category,الفئة
+Quantity,الكمية
+UOM,وحدة القياس
+Unit Rate,سعر الوحدة
+Amount,المبلغ
+Final Amount,المبلغ النهائي
+Planned Qty,الكمية المخططة
+Requested Qty,الكمية المطلوبة
+Ordered Qty,الكمية المطلوبة بالشراء
+Received Qty,الكمية المستلمة
+Invoiced Qty,الكمية المفوترة
+Consumed Qty,الكمية المستهلكة
+Measured Qty,الكمية المقاسة
+Certified Qty,الكمية المعتمدة
+Remaining Qty,الكمية المتبقية
+Planned Amount,المبلغ المخطط
+Committed Amount,مبلغ الالتزام
+Invoiced Amount,المبلغ المفوتر
+Consumed Amount,المبلغ المستهلك
+Measured Amount,المبلغ المقاس
+Certified Amount,المبلغ المعتمد
+Variance Amount,مبلغ الانحراف
+Variance %,نسبة الانحراف
+Risk Status,حالة المخاطر
+Gross Amount,إجمالي المبلغ
+Net Payable,صافي المستحق
+Retention Amount,مبلغ المحتجز
+Retention Held,المحتجز المحجوز
+Advance Recovery,استرداد الدفعة المقدمة
+Penalties,الغرامات
+Paid Amount,المبلغ المدفوع
+Outstanding Amount,المبلغ المستحق
+Outstanding Balance,الرصيد المستحق
+Purchase Invoice,فاتورة شراء
+Payment Entry,قيد دفع
+Material Request,طلب مواد
+Purchase Order,أمر شراء
+Purchase Receipt,إيصال شراء
+Stock Entry,قيد مخزون
+Warehouse,مخزن
+Site Warehouse,مخزن الموقع
+Period Start,بداية الفترة
+Period End,نهاية الفترة
+Verified By,تم التحقق بواسطة
+Verified On,تاريخ التحقق
+Measured By,تم القياس بواسطة
+Measurement Date,تاريخ القياس
+Engineer Comment,تعليق المهندس
+QS Comment,تعليق مهندس الكميات
+BOQ Total,إجمالي جدول الكميات
+Certified Value,القيمة المعتمدة
+Actual Cost,التكلفة الفعلية
+Planned Value,القيمة المخططة
+Cost Variance,انحراف التكلفة
+Schedule Variance,انحراف الجدول الزمني
+Cash Risk,مخاطر النقدية
+EVM Risk,مخاطر القيمة المكتسبة
+Overall Status,الحالة العامة
+Recommendation,التوصية
+Recommendations,التوصيات
+Expected Sale Price,سعر البيع المتوقع
+Expected Rent,الإيجار المتوقع
+Expected Monthly Rent,الإيجار الشهري المتوقع
+Allocated Cost,التكلفة الموزعة
+Expected Margin,الهامش المتوقع
+Expected Margin %,نسبة الهامش المتوقع
+Profitability Status,حالة الربحية
+Available,متاحة
+Reserved,محجوزة
+Sold,مباعة
+Rented,مؤجرة
+Blocked,محظورة
+Under Construction,تحت الإنشاء
+Draft,مسودة
+Submitted,مقدم
+Under Review,قيد المراجعة
+Approved,معتمد
+Locked,مقفل
+Cancelled,ملغي
+Verified,تم التحقق
+Rejected,مرفوض
+Certified,معتمد للدفع
+Invoice Created,تم إنشاء الفاتورة
+Partially Paid,مدفوع جزئياً
+Paid,مدفوع
+Closed,مغلق
+Generated,تم التوليد
+Reviewed,تمت المراجعة
+Archived,مؤرشف
+Calculated,تم الحساب
+Applied,مطبق
+Held,محجوز
+Eligible for Release,مؤهل للإفراج
+Partially Released,مفرج عنه جزئياً
+Released,مفرج عنه
+Active,نشط
+Suspended,معلق
+Expired,منتهي
+Expiring Soon,قارب على الانتهاء
+Profitable,مربحة
+Watch,تحت المراقبة
+Loss Risk,خطر خسارة
+Not Priced,غير مسعرة
+Green,أخضر
+Yellow,أصفر
+Red,أحمر
+On Track,ضمن المسار
+At Risk,عالي المخاطر
+Warning,تحذير
+Blocking,منع
+Silent,صامت
+"Operational work item generated from an approved BOQ line. Used for procurement, measurement, IPC, and cost traceability.",بند عمل تشغيلي يتم توليده من بند معتمد في جدول الكميات ويستخدم للمشتريات والقياسات والمستخلصات وتتبع التكلفة.
+"Groups verified field measurements for a project, contractor, BOQ, and period before IPC generation.",يجمع القياسات الميدانية المعتمدة للمشروع والمقاول وجدول الكميات والفترة قبل إنشاء المستخلص.
+Contractor payment certificate generated from verified measurement entries.,مستخلص دفع للمقاول يتم إنشاؤه من قيود قياس تم التحقق منها.
+"Standalone real estate asset/unit used for inventory, cost allocation, sales, and rental workflows.",وحدة عقارية مستقلة تستخدم للمخزون وتوزيع التكلفة ومسارات البيع والتأجير.
+Management allocation of project cost to real estate units for profitability analysis. Does not create accounting entries.,توزيع إداري لتكلفة المشروع على الوحدات العقارية لتحليل الربحية ولا ينشئ قيوداً محاسبية.
+"Sales, rental, reservation, collections, and CRM matching will be implemented in the next phases.",سيتم تنفيذ المبيعات والتأجير والحجوزات والتحصيلات والمطابقة مع العملاء في المراحل القادمة.
+Unit Reservation,حجز وحدة عقارية
+Unit Reservation Settings,إعدادات حجز الوحدات
+Default Reservation Validity Days,مدة الحجز الافتراضية بالأيام
+Auto Release Expired Reservations,تحرير الحجوزات المنتهية تلقائياً
+Allow Reservation For Reserved Units,السماح بحجز الوحدات المحجوزة
+Require Customer Or Lead,طلب عميل أو مهتم
+Require Reservation Amount,طلب مبلغ الحجز
+Warning Days Before Expiry,أيام التنبيه قبل انتهاء الحجز
+Reservation Number Prefix,بادئة رقم الحجز
+Reservation Number,رقم الحجز
+Reservation Type,نوع الحجز
+Reservation Date,تاريخ الحجز
+Valid From,ساري من
+Valid Until,ساري حتى
+Party Name,اسم الطرف
+Commercial Info,المعلومات التجارية
+Reservation Amount,مبلغ الحجز
+Reservation Terms,شروط الحجز
+Future Conversion,التحويل المستقبلي
+Converted To DocType,محول إلى نوع مستند
+Converted To Document,محول إلى مستند
+Converted On,تم التحويل في
+Converted By,تم التحويل بواسطة
+Previous Unit Status,حالة الوحدة السابقة
+Previous Marketing Status,حالة التسويق السابقة
+Cancelled Reason,سبب الإلغاء
+Expiry Reason,سبب انتهاء الحجز
+Converted,محول
+Reserve,حجز
+Convert,تحويل
+Expire,إنهاء الصلاحية
+Unit Reservation Workflow,مسار اعتماد حجز الوحدة
+Unit Reservation Register,سجل حجوزات الوحدات
+Active Unit Reservations,الحجوزات النشطة للوحدات
+Expiring Unit Reservations,حجوزات الوحدات القريبة من الانتهاء
+Unit Reservation Impact,أثر الحجز على الوحدات
+Days Remaining,الأيام المتبقية
+Within Days,خلال أيام
+Reservation Rate %,نسبة الحجز %
+Reservation Control,إدارة الحجز
+Reservation Reports,تقارير الحجز
+Reservation Visibility,متابعة الحجوزات
+Reservation,الحجز
+Sale,بيع
+Rent,تأجير
+Temporary reservation transaction for a real estate unit before Sales Contract or Lease Contract. Does not create accounting documents.,معاملة حجز مؤقتة لوحدة عقارية قبل عقد البيع أو عقد التأجير ولا تنشئ مستندات محاسبية.
+"Controls real estate unit reservation behavior, validity, duplicate reservation rules, and release handling.",يضبط سلوك حجز الوحدات العقارية ومدة الصلاحية ومنع الحجز المكرر وآلية تحرير الوحدة.
+Real estate unit being reserved.,الوحدة العقارية المطلوب حجزها.
+Commercial intent of the temporary reservation.,الغرض التجاري من الحجز المؤقت.
+Date until which the reservation remains valid.,التاريخ الذي يبقى الحجز سارياً حتى نهايته.
+Non-accounting reservation amount for commercial tracking only.,مبلغ حجز غير محاسبي مخصص للمتابعة التجارية فقط.
+"Unit reservation is available now. Sales contracts, lease contracts, installments, collections, and CRM matching will be implemented in the next phases.",أصبح حجز الوحدات متاحاً الآن. سيتم تنفيذ عقود البيع، عقود التأجير، الأقساط، التحصيلات، ومطابقة العملاء في المراحل القادمة.
+Executive Presentation Center,مركز العرض التنفيذي
+Project Overview,نظرة عامة على المشروع
+Construction Cost Control,ضبط تكلفة الإنشاء
+Procurement & Site Consumption,المشتريات واستهلاك الموقع
+Contractor Financial Control,الرقابة المالية للمقاولين
+CFO Forecasting,توقعات المدير المالي
+Real Estate Inventory & Profitability,المخزون العقاري والربحية
+Deep Financial Traceability,التتبع المالي التفصيلي
+Presentation Flow,مسار العرض
+End-to-End Development Flow,مسار التطوير الشامل
+BOQ Total,إجمالي جدول الكميات
+Committed Amount,قيمة الالتزامات
+Certified Gross Amount,إجمالي القيمة المعتمدة
+Certified Amount,القيمة المعتمدة
+Net Payable,صافي المستحق
+Retention Held,المحتجزات المحجوزة
+Contractor Outstanding,رصيد المقاول المستحق
+Cash Flow Risk,مخاطر التدفق النقدي
+EVM CPI,مؤشر أداء التكلفة
+EVM SPI,مؤشر أداء الجدول
+EVM Overall Status,الحالة العامة للقيمة المكتسبة
+Total Units,إجمالي الوحدات
+Available Units,الوحدات المتاحة
+Reserved Units,الوحدات المحجوزة
+Rented Units,الوحدات المؤجرة
+Expected Gross Margin,الهامش الإجمالي المتوقع
+Expected Margin %,نسبة الهامش المتوقعة
+Active Reservations,الحجوزات النشطة
+Expiring Reservations,الحجوزات القريبة من الانتهاء
+Project Financial Overview,النظرة المالية للمشروع
+Unit Status Distribution,توزيع حالات الوحدات
+Contractor Exposure,تعرض المقاولين
+Project Performance Reports,تقارير أداء المشروع
+% of Total,% of Total
+A Real Estate Project already exists for this ERPNext Project.,A المشروع العقاري already exists for this ERPNext المشروع.
+AC,AC
+AFP Employee Contribution 7.25%,AFP Employee Contribution 7.25%
+AFP Employer Contribution 8.75%,AFP Employer Contribution 8.75%
+Accepted Qty,الكمية المقبولة
+Accepted Qty cannot be negative.,Accepted Qty cannot be negative.
+Account,الحساب
+Account Information,بيانات الحساب
+Account Name,اسم الحساب
+Account {0} not found for company {1},Account {0} not found for company {1}
+Accounting Dimension for {0} already exists with fieldname {1}. Expected {2}.,Accounting Dimension for {0} already exists with fieldname {1}. Expected {2}.
+Accounting Dimensions / Traceability,الأبعاد المحاسبية والتتبع
+Active Guarantees,Active الضمانات
+Active ownership percentage for this Unit is {0}%.,Active ownership percentage for this الوحدة is {0}%.
+Activity,Activity
+Activity Schedule,جدول الأنشطة
+Actual Advancement %,Actual Advancement %
+Actual Progress %,Actual التقدم %
+Actual Progress Percent,Actual التقدم Percent
+Additional notes or explanation for this Advance Register.,ملاحظات أو توضيحات إضافية لهذا السجل: سجل السلف.
+Additional notes or explanation for this Building.,ملاحظات أو توضيحات إضافية لهذا السجل: المبنى.
+Additional notes or explanation for this Construction BOQ Item.,ملاحظات أو توضيحات إضافية لهذا السجل: بند جدول كميات البناء.
+Additional notes or explanation for this Construction BOQ.,ملاحظات أو توضيحات إضافية لهذا السجل: جدول كميات البناء.
+Additional notes or explanation for this Construction Work Item.,ملاحظات أو توضيحات إضافية لهذا السجل: بند عمل إنشائي.
+Additional notes or explanation for this Contractor Account.,ملاحظات أو توضيحات إضافية لهذا السجل: حساب المقاول.
+Additional notes or explanation for this Contractor Ledger Entry.,ملاحظات أو توضيحات إضافية لهذا السجل: حركة كشف المقاول.
+Additional notes or explanation for this Cost Code.,ملاحظات أو توضيحات إضافية لهذا السجل: كود التكلفة.
+Additional notes or explanation for this Floor.,ملاحظات أو توضيحات إضافية لهذا السجل: الطابق.
+Additional notes or explanation for this Guarantee Register.,ملاحظات أو توضيحات إضافية لهذا السجل: سجل الضمانات.
+Additional notes or explanation for this IPC Deduction.,ملاحظات أو توضيحات إضافية لهذا السجل: خصم مستخلص.
+Additional notes or explanation for this Interim Payment Certificate Line.,ملاحظات أو توضيحات إضافية لهذا السجل: بند مستخلص مقاول.
+Additional notes or explanation for this Interim Payment Certificate.,ملاحظات أو توضيحات إضافية لهذا السجل: مستخلص مقاول.
+Additional notes or explanation for this Measurement Book.,ملاحظات أو توضيحات إضافية لهذا السجل: دفتر القياسات.
+Additional notes or explanation for this Measurement Entry.,ملاحظات أو توضيحات إضافية لهذا السجل: قيد قياس.
+Additional notes or explanation for this Project Cash Flow Forecast Period.,ملاحظات أو توضيحات إضافية لهذا السجل: فترة توقع التدفق النقدي.
+Additional notes or explanation for this Project Cash Flow Forecast.,ملاحظات أو توضيحات إضافية لهذا السجل: توقع التدفق النقدي للمشروع.
+Additional notes or explanation for this Project EVM Metrics.,ملاحظات أو توضيحات إضافية لهذا السجل: مؤشرات القيمة المكتسبة للمشروع.
+Additional notes or explanation for this Project Financial Snapshot.,ملاحظات أو توضيحات إضافية لهذا السجل: الملخص المالي للمشروع.
+Additional notes or explanation for this Property Owner.,ملاحظات أو توضيحات إضافية لهذا السجل: مالك العقار.
+Additional notes or explanation for this Property Ownership.,ملاحظات أو توضيحات إضافية لهذا السجل: ملكية العقار.
+Additional notes or explanation for this Real Estate Project.,ملاحظات أو توضيحات إضافية لهذا السجل: المشروع العقاري.
+Additional notes or explanation for this Retention Register.,ملاحظات أو توضيحات إضافية لهذا السجل: سجل المحتجزات.
+Additional notes or explanation for this Unit Cost Allocation Line.,ملاحظات أو توضيحات إضافية لهذا السجل: بند توزيع تكلفة الوحدة.
+Additional notes or explanation for this Unit Cost Allocation.,ملاحظات أو توضيحات إضافية لهذا السجل: توزيع تكلفة الوحدات.
+Additional notes or explanation for this Unit Reservation.,ملاحظات أو توضيحات إضافية لهذا السجل: حجز وحدة.
+Additional notes or explanation for this Unit Type.,ملاحظات أو توضيحات إضافية لهذا السجل: نوع الوحدة.
+Additional notes or explanation for this Unit.,ملاحظات أو توضيحات إضافية لهذا السجل: الوحدة.
+Additional notes or explanation for this WBS Element.,ملاحظات أو توضيحات إضافية لهذا السجل: عنصر هيكل العمل.
+Address,العنوان
+Adjustment,Adjustment
+Advance,Advance
+Advance Amount,Advance المبلغ
+Advance Amounts,مبالغ السلفة
+Advance Balance,رصيد السلف
+Advance Date,تاريخ السلفة
+Advance Information,بيانات السلفة
+Advance Limit,حد السلفة
+Advance Outflow,تدفق الدفعات المقدمة الخارج
+Advance Paid,Advance Paid
+Advance Payment Guarantee,Advance Payment Guarantee
+Advance Recovery Amount,Advance Recovery المبلغ
+Advancement %,Advancement %
+Advancement % cannot be negative.,Advancement % cannot be negative.
+Advancement % cannot exceed 100.,Advancement % cannot exceed 100.
+Advancement Type,Advancement Type
+Advancement cannot go backwards. Current {0}% is less than previous {1}%.,Advancement cannot go backwards. Current {0}% is less than previous {1}%.
+Alert Before Days,التنبيه قبل عدد أيام
+All verified Measurement Entries are already linked to active IPCs.,All verified قيود القياس are already linked to active المستخلصs.
+Allocated Amount,Allocated المبلغ
+Allocated Cost Date,التكلفة الموزعة Date
+Allocated Cost Source,التكلفة الموزعة Source
+Allocation,Allocation
+Allocation Basis,أساس التوزيع
+Allocation Date,تاريخ التوزيع
+Allocation Details,تفاصيل التوزيع
+Allocation Information,بيانات التوزيع
+Allocation Lines,بنود التوزيع
+Allocation Method,طريقة التوزيع
+Allocation Number,رقم التوزيع
+Allocation Percent,نسبة التوزيع
+Allocation Status,Allocation الحالة
+Allocation must have lines before applying.,Allocation must have lines before applying.
+Allow Blank Unit For Project Level Cost,Allow Blank الوحدة For المشروع Level Cost
+Allow the daily expiry utility to expire overdue reservations and release units when safe.,يسمح لأداة الانتهاء اليومية بإنهاء الحجوزات المتأخرة وتحرير الوحدات عند توفر شروط الأمان.
+Allows project-level costs to remain without a Unit dimension when not unit-specific.,Allows project-level costs to remain without a الوحدة dimension when not unit-specific.
+Amended From,معدل من
+Amount Field is required,المبلغ Field is required
+Amount certified by the current IPC.,المبلغ certified by the current المستخلص.
+Amount must be greater than zero,المبلغ must be greater than zero
+Amount must be greater than zero.,المبلغ must be greater than zero.
+Amounts,المبالغ
+"An active Contractor Account already exists for this Project, Contractor, and Subcontract.","An active حساب المقاول already exists for this المشروع, المقاول, and Subcontract."
+Approval Date,Approval Date
+Approved BOQ that generated this operational work item.,جدول الكميات المعتمد الذي أنشأ بند العمل التشغيلي.
+Approved By,تمت الموافقة بواسطة
+Approved On,تاريخ الموافقة
+Area,المساحة
+Area UOM,المساحة وحدة القياس
+Area and Unit Counts,المساحات وعدد الوحدات
+Asset,Asset
+Asset Category,Asset Category
+Asset Name,Asset Name
+At least one Budget Level row is required.,At least one Budget Level row is required.
+At least one Construction Work Item is required.,At least one بند عمل إنشائي is required.
+At least one Distribution Item is required.,At least one Distribution Item is required.
+Attachment,المرفق
+Attachment used as supporting documentation for this Measurement Entry.,Attachment used as supporting documentation for this قيد قياس.
+"Auditable operational subledger entry for contractor certification, retention, invoices, payments, and differences.","Auditable operational subledger entry for contractor certification, retention, invoices, payments, and differences."
+Authorize Advancement,Authorize Advancement
+Auto JE Rule Skipped,Auto JE Rule Skipped
+Auto Journal Entry from {0}: {1},Auto Journal Entry from {0}: {1}
+Auto Reminder - {0},Auto Reminder - {0}
+Auto-created: authorization required before invoice submission,Auto-created: authorization required before invoice submission
+Automation,الأتمتة
+Availability %,Availability %
+BAC,BAC
+BOQ / Budget,جدول الكميات / الميزانية
+BOQ / WBS / Cost Code,جدول الكميات / هيكل العمل / كود التكلفة
+BOQ Date,تاريخ جدول الكميات
+BOQ Equipment Amount,BOQ Equipment المبلغ
+BOQ Item Row ID,معرف صف بند جدول الكميات
+BOQ Items,بنود جدول الكميات
+BOQ Labor Amount,BOQ Labor المبلغ
+BOQ Line Scope,نطاق بند جدول الكميات
+BOQ Material Amount,BOQ Material المبلغ
+BOQ Number,رقم جدول الكميات
+BOQ Number is required.,رقم جدول الكميات is required.
+BOQ Overhead Amount,BOQ Overhead المبلغ
+BOQ Planning,تخطيط جدول الكميات
+BOQ Qty,كمية جدول الكميات
+BOQ Subcontract Amount,BOQ Subcontract المبلغ
+BOQ Total Amount,BOQ إجمالي المبلغ
+BOQ Type,نوع جدول الكميات
+Balance,الرصيد
+Bank,Bank
+Bank Account is required to create a payment,Bank Account is required to create a payment
+Bank Account is required to submit,Bank Account is required to submit
+Bank Account is required to submit a Deposit Entry,Bank Account is required to submit a Deposit Entry
+Bank Account {0} does not have a linked GL account,Bank Account {0} does not have a linked GL account
+Basement,Basement
+Basis,Basis
+Bathrooms,دورات المياه
+Bedrooms,غرف النوم
+Beneficiary,Beneficiary
+Beneficiary is required,Beneficiary is required
+Billing %,Billing %
+Blacklisted,Blacklisted
+Blocked Units,Blocked الوحدةs
+Book Information,بيانات الدفتر
+Book Number,رقم الدفتر
+Both ratio_name and period are required,Both ratio_name and period are required
+Budget,Budget
+Budget Consumed %,Budget Consumed %
+Budget Level,مستوى الميزانية
+Budget Level Code,Budget Level Code
+Budget at Completion,الميزانية عند الإكمال
+Budget vs Certified Variance,Budget vs Certified الفروقات
+Budget vs Committed Variance,Budget vs Committed الفروقات
+Budget vs Invoiced Variance,Budget vs Invoiced الفروقات
+Building Code,المبنى Code
+Building Code must be unique per Real Estate Project.,المبنى Code must be unique per المشروع العقاري.
+Building Name,المبنى Name
+Building Name is required.,المبنى Name is required.
+Building Type,المبنى Type
+Building is required.,المبنى is required.
+"Building or tower within a Real Estate Project, used to group floors and units.","المبنى or tower within a المشروع العقاري, used to group floors and units."
+By Area,By المساحة
+CPI,CPI
+CPI = Earned Value / Actual Cost when Actual Cost is greater than zero.,مؤشر أداء التكلفة = القيمة المكتسبة / التكلفة الفعلية عندما تكون التكلفة الفعلية أكبر من صفر.
+CPI Status,CPI الحالة
+CV,CV
+Calculated Qty,الكمية المحسوبة
+Calculated cost allocated to this unit line.,تكلفة محسوبة موزعة على هذا البند من الوحدة.
+Calculated value updated automatically from linked records or document lines.,قيمة محسوبة يتم تحديثها تلقائياً من السجلات أو البنود المرتبطة.
+Calculation Date,تاريخ الحساب
+Cancel reason is required to cancel a Check Request,Cancel reason is required to cancel a Check Request
+Cancellation reason is required.,Cancellation reason is required.
+Cancelled Reason is required before cancelling a reservation.,سبب الإلغاء is required before cancelling a reservation.
+Cancelled Reason is required.,سبب الإلغاء is required.
+Cancelled allocations cannot be applied.,Cancelled allocations cannot be applied.
+Cannot approve IPC with no lines.,Cannot approve المستخلص with no lines.
+Cannot cancel IPC because linked Purchase Invoice is submitted.,Cannot cancel المستخلص because linked فاتورة الشراء is submitted.
+Cannot create Accounting Dimension {0}: field {1} already exists on {2} as {3} / {4}.,Cannot create Accounting Dimension {0}: field {1} already exists on {2} as {3} / {4}.
+Cash Deficit,عجز نقدي
+Cash Deficit Amount,Cash Deficit المبلغ
+Cash Risk Status,Cash المخاطر الحالة
+Center Line must be between Lower and Upper Control Limits.,Center Line must be between Lower and Upper Control Limits.
+Certificate Information,بيانات المستخلص
+Certificate Number,رقم المستخلص
+Certificate Sequence,تسلسل المستخلص
+Certification Progress %,Certification التقدم %
+Certification Progress Percent,Certification التقدم Percent
+Certification Status,Certification الحالة
+Certification Tracking,تتبع الاعتماد المالي
+Certified Amounts,المبالغ المعتمدة
+Certified By,تم الاعتماد بواسطة
+Certified Cost,Certified Cost
+Certified Gross,Certified Gross
+Certified Net,Certified Net
+Certified Net Amount,Certified Net المبلغ
+Certified On,تاريخ الاعتماد
+Certified Qty cannot exceed Planned Quantity.,Certified Qty cannot exceed Planned الكمية.
+Change Amount,Change المبلغ
+Change Order,Change Order
+Change Order Title,Change Order Title
+Change Type,Change Type
+Check Request,طلب شيك
+Child table used to record deductions for this Interim Payment Certificate.,Child table used to record deductions for this مستخلص مقاول.
+Child table used to record items for this Construction BOQ.,Child table used to record items for this جدول كميات البناء.
+Child table used to record lines for this Interim Payment Certificate.,جدول فرعي لتسجيل البنود المرتبطة بـمستخلص مقاول.
+Child table used to record lines for this Unit Cost Allocation.,جدول فرعي لتسجيل البنود المرتبطة بـتوزيع تكلفة الوحدات.
+Child table used to record periods for this Project Cash Flow Forecast.,Child table used to record periods for this توقع التدفق النقدي للمشروع.
+Christmas Bonus - Aguinaldo,Christmas Bonus - Aguinaldo
+Circular dependency detected in Activity Schedule for project {0}.,Circular dependency detected in Activity Schedule for project {0}.
+Classification / Relationship,التصنيف والعلاقات
+Co-owner,Co-owner
+Collection Document name is required,Collection Document name is required
+Commercial,Commercial
+"Commercial availability status used by inventory, reservation, sales, and rental workflows.",حالة الإتاحة التجارية المستخدمة في المخزون والحجز والبيع والتأجير.
+Committed,Committed
+Committed Cost,Committed Cost
+Committed amount from submitted Purchase Orders linked to this work item.,قيمة الالتزامات من أوامر الشراء المعتمدة المرتبطة ببند العمل هذا.
+Completed,Completed
+Construction Budget,ميزانية البناء
+Construction Budget is required to apply changes.,ميزانية البناء is required to apply changes.
+Construction Work Item already exists for this Construction BOQ item row.,بند عمل إنشائي already exists for this جدول كميات البناء item row.
+Construction Work Item {0} does not belong to Project {1}.,بند عمل إنشائي {0} does not belong to المشروع {1}.
+Consumed Cost,Consumed Cost
+Consumed vs Measured Variance,Consumed vs Measured الفروقات
+Contact Details,بيانات التواصل
+Contingency,Contingency
+Contract,Contract
+Contract Title,Contract Title
+Contractor Ledger Entries are immutable. Create a reversal entry instead.,المقاول الكشف Entries are immutable. Create a reversal entry instead.
+Contractor Name,المقاول Name
+Contractor Outstanding Amount,مستحقات المقاولين المبلغ
+Contractor Paid Amount,المقاول المبلغ المدفوع
+Contractor is required.,المقاول is required.
+Contractor payment certificate generated from verified measurement entries and used for certification and invoice preparation.,المقاول payment certificate generated from verified measurement entries and used for certification and invoice preparation.
+Contractor service item is required to create Purchase Invoice.,المقاول service item is required to create فاتورة الشراء.
+Controls,الضوابط
+"Controls Accounting Dimension synchronization, warnings, optional blocking, and project-level cost behavior.","الضوابط Accounting Dimension synchronization, warnings, optional blocking, and project-level cost behavior."
+"Controls BOQ work item synchronization, procurement warnings, and optional budget blocking behavior.","الضوابط BOQ work item synchronization, procurement warnings, and optional budget blocking behavior."
+Controls whether calculated allocation has been applied to Unit profitability fields.,الضوابط whether calculated allocation has been applied to الوحدة profitability fields.
+Corrective Action {0} created for out-of-control chart.,Corrective Action {0} created for out-of-control chart.
+Cost Allocation,توزيع التكلفة
+Cost Category,فئة التكلفة
+Cost Center,مركز التكلفة
+Cost Code Name,كود التكلفة Name
+Cost Performance Index,مؤشر أداء التكلفة
+Cost Rate,Cost Rate
+Cost Risk,Cost المخاطر
+Cost Risk Status,Cost المخاطر الحالة
+Cost Source,مصدر التكلفة
+Cost Status,Cost الحالة
+Cost Summary,ملخص التكلفة
+Cost Type,Cost Type
+Count,Count
+Credit,Credit
+Credit Account is required,Credit Account is required
+Crew Code,Crew Code
+Cumulative Measured Qty,إجمالي الكمية المقاسة تراكمياً
+Cumulative amount certified before this IPC.,Cumulative amount certified before this المستخلص.
+Currency,العملة
+Current Advance Balance,Current رصيد السلف
+Current Amount,Current المبلغ
+Current Certified Amount,Current المبلغ المعتمد
+Current Certified Qty,الكمية المعتمدة الحالية
+Current Measured Qty,الكمية المقاسة الحالية
+Current payable amount after retention and deductions.,المبلغ المستحق الحالي بعد المحتجزات والاستقطاعات.
+Current planned project value from BOQ/Work Items.,Current planned project value from BOQ/بنود العمل.
+Current status used to track this Advance Register through its workflow or reporting lifecycle.,Current status used to track this سجل السلف through its workflow or reporting lifecycle.
+Current status used to track this Building through its workflow or reporting lifecycle.,Current status used to track this المبنى through its workflow or reporting lifecycle.
+Current status used to track this Construction BOQ through its workflow or reporting lifecycle.,Current status used to track this جدول كميات البناء through its workflow or reporting lifecycle.
+Current status used to track this Construction Work Item through its workflow or reporting lifecycle.,Current status used to track this بند عمل إنشائي through its workflow or reporting lifecycle.
+Current status used to track this Contractor Account through its workflow or reporting lifecycle.,Current status used to track this حساب المقاول through its workflow or reporting lifecycle.
+Current status used to track this Guarantee Register through its workflow or reporting lifecycle.,Current status used to track this سجل الضمانات through its workflow or reporting lifecycle.
+Current status used to track this Interim Payment Certificate through its workflow or reporting lifecycle.,Current status used to track this مستخلص مقاول through its workflow or reporting lifecycle.
+Current status used to track this Measurement Book through its workflow or reporting lifecycle.,Current status used to track this دفتر القياسات through its workflow or reporting lifecycle.
+Current status used to track this Measurement Entry through its workflow or reporting lifecycle.,Current status used to track this قيد قياس through its workflow or reporting lifecycle.
+Current status used to track this Project Cash Flow Forecast through its workflow or reporting lifecycle.,Current status used to track this توقع التدفق النقدي للمشروع through its workflow or reporting lifecycle.
+Current status used to track this Project EVM Metrics through its workflow or reporting lifecycle.,Current status used to track this مؤشرات القيمة المكتسبة للمشروع through its workflow or reporting lifecycle.
+Current status used to track this Project Financial Snapshot through its workflow or reporting lifecycle.,Current status used to track this الملخص المالي للمشروع through its workflow or reporting lifecycle.
+Current status used to track this Property Owner through its workflow or reporting lifecycle.,Current status used to track this مالك العقار through its workflow or reporting lifecycle.
+Current status used to track this Property Ownership through its workflow or reporting lifecycle.,Current status used to track this ملكية العقار through its workflow or reporting lifecycle.
+Current status used to track this Real Estate Project through its workflow or reporting lifecycle.,Current status used to track this المشروع العقاري through its workflow or reporting lifecycle.
+Current status used to track this Retention Register through its workflow or reporting lifecycle.,Current status used to track this سجل المحتجزات through its workflow or reporting lifecycle.
+Current status used to track this Unit Cost Allocation Line through its workflow or reporting lifecycle.,Current status used to track this بند توزيع تكلفة الوحدة through its workflow or reporting lifecycle.
+Current status used to track this Unit Reservation through its workflow or reporting lifecycle.,Current status used to track this حجز وحدة through its workflow or reporting lifecycle.
+Current status used to track this Unit through its workflow or reporting lifecycle.,Current status used to track this الوحدة through its workflow or reporting lifecycle.
+Customer,العميل
+Customer is required,العميل is required
+Customer is required to apply collection,العميل is required to apply collection
+"Customer, Lead, or Party Name is required for a unit reservation.","العميل, المهتم, or اسم الطرف is required for a unit reservation."
+Date,Date
+Date Range Start must be before Date Range End.,Date Range Start must be before Date Range End.
+Dates & Alerts,التواريخ والتنبيهات
+Dates & Status,التواريخ والحالة
+Debit,Debit
+Debit Account is required,Debit Account is required
+Deduction,Deduction
+Deduction Amount,Deduction المبلغ
+Deduction Details,بيانات الخصم
+Deduction Type,نوع الخصم
+Deductions,الخصومات
+Default Dimension Mode,وضع الأبعاد الافتراضي
+Default Payable Account is not configured for company {0},Default Payable Account is not configured for company {0}
+Default Payable Account not configured for company {0},Default Payable Account not configured for company {0}
+Default Receivable Account not configured for company {0},Default Receivable Account not configured for company {0}
+Default Site Warehouse,مخزن الموقع الافتراضي
+Default Usage Purpose,غرض الاستخدام الافتراضي
+Default number of days a new reservation remains valid when no end date is provided.,عدد الأيام الافتراضي لبقاء الحجز الجديد صالحاً عند عدم إدخال تاريخ انتهاء.
+Defect Liability Months,أشهر ضمان العيوب
+Deficit,Deficit
+Deficit Amount,Deficit المبلغ
+Deposit Date is required,Deposit Date is required
+Deposit Entry {0},Deposit Entry {0}
+Description,الوصف
+Detailed,Detailed
+Detection,Detection
+Deterministic cash risk based on projected balances and deficits.,مستوى مخاطر نقدية محسوب بقواعد ثابتة بناء على الأرصدة المتوقعة والعجز المتوقع.
+"Deterministic project cash flow forecast based on current procurement, IPC, invoice, and retention obligations.","Deterministic project cash flow forecast based on current procurement, المستخلص, invoice, and retention obligations."
+Development,Development
+Development Type,نوع التطوير
+Direct Quantity,Direct الكمية
+Direction,الاتجاه
+Disabled,معطل
+Distribution,Distribution
+Distribution percentages must sum to 100%. Currently: {0}%,Distribution percentages must sum to 100%. Currently: {0}%
+Documents,Documents
+Downtime Cost,Downtime Cost
+Downtime Summary,Downtime الملخص
+Draft or submitted ERPNext Purchase Invoice created from this IPC.,Draft or submitted ERPNext فاتورة الشراء created from this المستخلص.
+Duration (Days),Duration (Days)
+Dynamic Attributes JSON,خصائص ديناميكية بصيغة JSON
+EAC,EAC
+ERPNext Project,ERPNext المشروع
+ETC,ETC
+EV,EV
+EVM Information,بيانات القيمة المكتسبة
+EVM Title,عنوان القيمة المكتسبة
+Earned Value,القيمة المكتسبة
+East,East
+"Editable BOQ line item for quantity, rate, wastage, markup, and category-level cost planning.","Editable BOQ line item for quantity, rate, wastage, markup, and category-level cost planning."
+El Salvador Payroll Setup Error,El Salvador Payroll Setup Error
+El Salvador Tax Setup Error,El Salvador Tax Setup Error
+El Salvador payroll components created for {0},El Salvador payroll components created for {0}
+El Salvador tax accounts and templates have been created for {0}.,El Salvador tax accounts and templates have been created for {0}.
+El Salvador vacation rules applied: 15 days after 1 year with 30% bonus.,El Salvador vacation rules applied: 15 days after 1 year with 30% bonus.
+Email,البريد الإلكتروني
+Employee,Employee
+Employee Loan {0} created.,Employee Loan {0} created.
+Employee Name,Employee Name
+Employee is required.,Employee is required.
+Enable Budget Blocking,تفعيل منع تجاوز الميزانية
+Enable Budget Warning,تفعيل تحذير الميزانية
+Enable Dimension Blocking,تفعيل منع نقص الأبعاد
+Enable Dimension Warnings,تفعيل تحذيرات الأبعاد
+Enable Financial Dimension Sync,تفعيل مزامنة الأبعاد المالية
+Enable Work Item Sync,تفعيل مزامنة بند العمل
+Encashment Completed,Encashment Completed
+Encashment Requested,Encashment Requested
+End Date,تاريخ النهاية
+End Date cannot be before Start Date.,End Date cannot be before Start Date.
+End-to-End Flow,المسار التشغيلي الكامل
+Ended,Ended
+Entry Information,بيانات القيد
+Equal Share,Equal Share
+Equipment,Equipment
+Equipment Usage Log,سجل استخدام المعدات
+Equipment Usage Report,تقرير استخدام المعدات
+Error evaluating formula: {0},Error evaluating formula: {0}
+Error evaluating formula: {0}. Expanded formula: {1},Error evaluating formula: {0}. Expanded formula: {1}
+Estimate at Completion,التقدير عند الإكمال
+Estimate to Complete,التقدير للإكمال
+Estimated,Estimated
+Estimated Total,Estimated Total
+Evidence document is required for Compliant status.,Evidence document is required for Compliant status.
+Executive Overview,نظرة تنفيذية عامة
+Existing customer interested in the reservation.,عميل قائم مهتم بالحجز.
+Expected Date,Expected Date
+Expected Inflow,Expected Inflow
+Expected Margin Percent,نسبة الهامش المتوقع
+Expected Next Payment Date,تاريخ الدفعة القادمة المتوقع
+Expected Other Inflow,تدفقات داخلة أخرى متوقعة
+Expected Payment Date,Expected Payment Date
+Expected Rent Inflow,تدفقات إيجار داخلة متوقعة
+Expected Sales Inflow,تدفقات مبيعات داخلة متوقعة
+Expected Sales Value,Expected Sales Value
+Expected margin divided by expected sale price when sale price is greater than zero.,الهامش المتوقع مقسوماً على سعر البيع المتوقع عندما يكون سعر البيع أكبر من صفر.
+Expense account is required to create Purchase Invoice.,Expense account is required to create فاتورة الشراء.
+Expiring Guarantees,Expiring الضمانات
+Expiry Date,تاريخ الانتهاء
+Expiry Reason is required.,سبب الانتهاء is required.
+"Explains retention, advance recovery, penalties, withholding, or other deductions on an IPC without creating accounting entries.","Explains retention, advance recovery, penalties, withholding, or other deductions on an المستخلص without creating accounting entries."
+Exported {0} records.,Exported {0} records.
+FMEA Report,تقرير تحليل أنماط وآثار الفشل
+Failure Mode,Failure Mode
+Field Documentation,توثيق الموقع
+Field Entry,Field Entry
+Final Quantity,Final الكمية
+Financial Ratio,نسبة مالية
+Financial Snapshot - {0} - {1},الملخص المالي - {0} - {1}
+Financial dimension backfill is allowed only for draft documents.,Financial dimension backfill is allowed only for draft documents.
+Finishing Status,Finishing الحالة
+Flag,Flag
+Floor Code,الطابق Code
+Floor Code must be unique per Building.,الطابق Code must be unique per المبنى.
+Floor Name,الطابق Name
+Floor Number,الطابق Number
+Floor Type,الطابق Type
+"Floor or level within a Building, used to group real estate units.","الطابق or level within a المبنى, used to group real estate units."
+Forecast,التوقع
+Forecast Date,التوقع Date
+Forecast Information,بيانات التوقع
+Forecast Overrun,التوقع Overrun
+Forecast Overrun Amount,التوقع Overrun المبلغ
+Forecast Period,التوقع Period
+Forecast Periods,فترات التوقع
+Forecast Title,التوقع Title
+"Formula is empty, cannot compute ratio","Formula is empty, cannot compute ratio"
+Formula is required for Calculated Insumo.,Formula is required for Calculated Insumo.
+Formula is required for Compound Insumo.,Formula is required for Compound Insumo.
+Formula is required for a Financial Ratio,Formula is required for a Financial Ratio
+Formula is required for {0} type Insumos.,Formula is required for {0} type Insumos.
+Formula must contain at least one {Account Name} reference,Formula must contain at least one {Account Name} reference
+Free Title,Free Title
+Fully Certified,Fully Certified
+Fully Finished,Fully Finished
+Fully Invoiced,Fully Invoiced
+Fully Measured,Fully Measured
+Fully Ordered,Fully Ordered
+Fully Received,Fully Received
+Fully Recovered,Fully Recovered
+Fully Requested,Fully Requested
+Furnished,Furnished
+Future target document type when reservation is converted.,نوع المستند المستهدف مستقبلاً عند تحويل الحجز.
+GL Cost,GL Cost
+GPS Accuracy,دقة GPS
+GPS Latitude,خط العرض GPS
+GPS Longitude,خط الطول GPS
+General Settings,الإعدادات العامة
+Government,Government
+Grid Or Zone,المحور أو المنطقة
+Gross certified amount before retention and deductions.,إجمالي المبلغ المعتمد قبل المحتجزات والاستقطاعات.
+Guarantee Amount,Guarantee المبلغ
+Guarantee Details,تفاصيل الضمان
+Guarantee Information,بيانات الضمان
+Guarantee Number,رقم الضمان
+Guarantee Type,نوع الضمان
+Has Parking,يوجد موقف
+Has Storage,يوجد مخزن
+Height,الارتفاع
+Historical,Historical
+Hospitality,Hospitality
+Hours,Hours
+Hours Used,Hours Used
+IPC,المستخلص
+IPC / Contractor,المستخلص / المقاول
+IPC Certified,المستخلص Certified
+IPC Count,عدد المستخلصات
+IPC Line Reference,المستخلص Line Reference
+IPC Link,رابط المستخلص
+IPC Outflow,المستخلص Outflow
+"IPC certification line linking measured work to BOQ, Work Item, quantities, retention, and net payable amount.","المستخلص certification line linking measured work to BOQ, Work Item, quantities, retention, and net payable amount."
+IPC reference once this verified measurement is certified for payment.,المستخلص reference once this verified measurement is certified for payment.
+ISR Withholding 10%,ISR Withholding 10%
+ISSS Employee Contribution 3%,ISSS Employee Contribution 3%
+ISSS Employer Contribution 7.5%,ISSS Employer Contribution 7.5%
+IVA 13%,IVA 13%
+IVA Compras 13%,IVA Compras 13%
+IVA Compras 13% - {0},IVA Compras 13% - {0}
+IVA Cr\u00e9dito Fiscal,IVA Cr\u00e9dito Fiscal
+IVA D\u00e9bito Fiscal,IVA D\u00e9bito Fiscal
+IVA Retention 1%,IVA المحتجزات 1%
+IVA Ventas 13%,IVA Ventas 13%
+IVA Ventas 13% - {0},IVA Ventas 13% - {0}
+Identification No,رقم التعريف
+Imported,Imported
+In Progress,In التقدم
+Inactive,Inactive
+Incident Count,Incident Count
+Income Tax Withholding,Income Tax Withholding
+Independent owner party profile used for real estate ownership tracking.,Independent owner party profile used for real estate ownership tracking.
+Indicates that operational Work Items have been generated from approved BOQ rows.,Indicates that operational بنود العمل have been generated from approved BOQ rows.
+Individual,Individual
+Industrial,Industrial
+Inflows,التدفقات الداخلة
+Installment Amount must be greater than zero.,Installment المبلغ must be greater than zero.
+Insumo,مدخل تكلفة
+Insumo Price Scenario,سيناريو سعر مدخل التكلفة
+"Invalid period format: {0}. Use YYYY-MM, YYYY-Q1..Q4, or YYYY","Invalid period format: {0}. Use YYYY-MM, YYYY-Q1..Q4, or YYYY"
+Invalid status transition from {0} to {1},Invalid status transition from {0} to {1}
+Invalid status {0}. Must be one of: {1},Invalid status {0}. Must be one of: {1}
+Inventory & Profitability Reports,تقارير المخزون والربحية
+"Inventory status only until Reservation, Sales Contract, and Lease Contract are implemented.","Inventory status only until الحجز, Sales Contract, and Lease Contract are implemented."
+Investment,Investment
+Investor,Investor
+Invoice Amount,Invoice المبلغ
+Invoice Authorization,اعتماد الفاتورة
+Invoiced,Invoiced
+Invoiced Cost,Invoiced Cost
+Invoices,Invoices
+Invoices & Payments,الفواتير والمدفوعات
+Is Group,مجموعة
+Is Reversed,معكوس
+Issue Date,تاريخ الإصدار
+Issuing Bank,البنك المصدر
+Item,Item
+Item Category,فئة البند
+Item Code,كود الصنف
+Item Name,Item Name
+Items,البنود
+Key Risks,Key المخاطرs
+Labor,Labor
+Labor Cost by Activity,تكلفة العمالة حسب النشاط
+Labor Hour Entry,قيد ساعات العمل
+Labor cost from Salary Slip {0} for {1},Labor cost from Salary Slip {0} for {1}
+Land,Land
+Land Development,Land Development
+Last Certification Date,تاريخ آخر اعتماد
+Last IPC,Last المستخلص
+Last Measurement Date,Last القياسات Date
+Last Transaction Date,تاريخ آخر حركة
+Latest Cost Allocation,Latest توزيع التكلفة
+Latest Date,Latest Date
+Latest management cost allocation applied to this Unit. Not an accounting entry.,Latest management cost allocation applied to this الوحدة. Not an accounting entry.
+Lead,المهتم
+Ledger,الكشف
+Ledger Information,بيانات الحركة
+Legal Status,Legal الحالة
+Length,الطول
+Level Code,Level Code
+Level Name,Level Name
+Level Type,Level Type
+Lines,البنود
+Links this record to the related Account.,يربط هذا السجل بـAccount المرتبط.
+Links this record to the related Budget Level.,يربط هذا السجل بـBudget Level المرتبط.
+Links this record to the related Building.,يربط هذا السجل بـالمبنى المرتبط.
+Links this record to the related Company.,يربط هذا السجل بـالشركة المرتبط.
+Links this record to the related Construction BOQ.,يربط هذا السجل بـجدول كميات البناء المرتبط.
+Links this record to the related Construction Work Item.,يربط هذا السجل بـبند عمل إنشائي المرتبط.
+Links this record to the related Contractor Account.,يربط هذا السجل بـحساب المقاول المرتبط.
+Links this record to the related Contractor Ledger Entry.,يربط هذا السجل بـحركة كشف المقاول المرتبط.
+Links this record to the related Cost Center.,يربط هذا السجل بـمركز التكلفة المرتبط.
+Links this record to the related Cost Code.,يربط هذا السجل بـكود التكلفة المرتبط.
+Links this record to the related Currency.,يربط هذا السجل بـالعملة المرتبط.
+Links this record to the related Customer.,يربط هذا السجل بـالعميل المرتبط.
+Links this record to the related DocType.,يربط هذا السجل بـDocType المرتبط.
+Links this record to the related Floor.,يربط هذا السجل بـالطابق المرتبط.
+Links this record to the related Interim Payment Certificate.,يربط هذا السجل بـمستخلص مقاول المرتبط.
+Links this record to the related Item.,يربط هذا السجل بـItem المرتبط.
+Links this record to the related Journal Entry.,يربط هذا السجل بـJournal Entry المرتبط.
+Links this record to the related Measurement Book.,يربط هذا السجل بـدفتر القياسات المرتبط.
+Links this record to the related Measurement Entry.,يربط هذا السجل بـقيد قياس المرتبط.
+Links this record to the related Payment Entry.,يربط هذا السجل بـسند الدفع المرتبط.
+Links this record to the related Project Cash Flow Forecast.,يربط هذا السجل بـتوقع التدفق النقدي للمشروع المرتبط.
+Links this record to the related Project Financial Snapshot.,يربط هذا السجل بـالملخص المالي للمشروع المرتبط.
+Links this record to the related Project.,يربط هذا السجل بـالمشروع المرتبط.
+Links this record to the related Property Owner.,يربط هذا السجل بـمالك العقار المرتبط.
+Links this record to the related Purchase Invoice.,يربط هذا السجل بـفاتورة الشراء المرتبط.
+Links this record to the related Real Estate Project.,يربط هذا السجل بـالمشروع العقاري المرتبط.
+Links this record to the related Subcontract.,يربط هذا السجل بـSubcontract المرتبط.
+Links this record to the related Supplier.,يربط هذا السجل بـالمورد المرتبط.
+Links this record to the related UOM.,يربط هذا السجل بـوحدة القياس المرتبط.
+Links this record to the related Unit Type.,يربط هذا السجل بـنوع الوحدة المرتبط.
+Links this record to the related Unit.,يربط هذا السجل بـالوحدة المرتبط.
+Links this record to the related User.,يربط هذا السجل بـUser المرتبط.
+Links this record to the related WBS Element.,يربط هذا السجل بـعنصر هيكل العمل المرتبط.
+Links this record to the related Warehouse.,يربط هذا السجل بـWarehouse المرتبط.
+Links this record to the selected reference document.,يربط هذا السجل بالمستند المرجعي المحدد.
+Loan Amount must be greater than zero.,Loan المبلغ must be greater than zero.
+Location Summary,Location الملخص
+Locked By,تم القفل بواسطة
+Locked Measurement Books can only be changed by System Manager.,Locked دفاتر القياس can only be changed by System Manager.
+Locked Measurement Entries can only be changed by System Manager.,Locked قيود القياس can only be changed by System Manager.
+Locked On,تاريخ القفل
+Long Term Rent,Long Term Rent
+Loss Risk Units,Loss المخاطر الوحدةs
+Lower Control Limit must be less than Upper Control Limit.,Lower Control Limit must be less than Upper Control Limit.
+Lowest Balance,Lowest Balance
+Lowest Projected Balance,Lowest المشروعed Balance
+Main Owner,Main المالك
+Maintenance Cost by Asset,تكلفة الصيانة حسب الأصل
+Maintenance Email Failed,Maintenance Email Failed
+Manual,Manual
+Manual Amount,Manual المبلغ
+Manual Entry,Manual Entry
+Manual Percentage,Manual Percentage
+Margin %,Margin %
+Marketing Status,الحالة التسويقية
+Markup Percent,نسبة هامش الإضافة
+"Master classification for construction cost categories used in BOQ, procurement, measurement, IPC, and financial traceability.","Master classification for construction cost categories used in BOQ, procurement, measurement, المستخلص, and financial traceability."
+Master classification for real estate unit types and default usage purposes.,Master classification for real estate unit types and default usage purposes.
+Material,Material
+Material Distribution,توزيع المواد
+Material Distribution Report,تقرير توزيع المواد
+Measured,Measured
+Measured Progress Percent,Measured التقدم Percent
+Measurement Amount,القياسات المبلغ
+Measurement Book must be Verified or Locked before creating IPC.,دفتر القياسات must be Verified or Locked before creating المستخلص.
+Measurement Books,دفاتر القياس
+Measurement Calculation,حساب القياس
+Measurement Entries linked to submitted IPCs cannot be changed.,قيود القياس linked to submitted المستخلصs cannot be changed.
+Measurement Entry {0} is already linked to an active IPC.,قيد قياس {0} is already linked to an active المستخلص.
+Measurement Entry {0} is repeated in this IPC.,قيد قياس {0} is repeated in this المستخلص.
+Measurement Location,القياسات Location
+Measurement Method,القياسات Method
+Measurement Period End,القياسات Period End
+Measurement Period Start,القياسات Period Start
+Measurement Period Start cannot be after Measurement Period End.,القياسات Period Start cannot be after القياسات Period End.
+Measurement Progress Percent,القياسات التقدم Percent
+Measurement Setup,إعدادات القياس
+Measurement Source,مصدر القياس
+Measurement Status,القياسات الحالة
+Measurement Tracking,تتبع القياسات
+Method used to distribute source project cost across units.,الطريقة المستخدمة لتوزيع تكلفة المشروع المصدرية على الوحدات.
+Mixed,Mixed
+Mixed Use,Mixed Use
+Mobile No,رقم الجوال
+Mobile Sync,Mobile Sync
+Monthly,Monthly
+My Projects,My المشروعs
+Needs Maintenance,Needs Maintenance
+Negotiated Amount,Negotiated المبلغ
+Net Amount,Net المبلغ
+Net Cash Flow,صافي التدفق النقدي
+Net Cost,Net Cost
+Net Line Amount,Net Line المبلغ
+New Amount,New المبلغ
+No Units found for this Real Estate Project.,No الوحدةs found for this المشروع العقاري.
+No active Employee Loan found for {0}.,No active Employee Loan found for {0}.
+No default bank or cash account configured for company {0},No default bank or cash account configured for company {0}
+No email address found for customer {0} (Invoice {1}),No email address found for customer {0} (Invoice {1})
+No remaining amount to apply,No remaining amount to apply
+No requestable material Work Items were found.,No requestable material بنود العمل were found.
+No salary component mapping for movement type {0}.,No salary component mapping for movement type {0}.
+No verified Measurement Entries found for this Measurement Book.,No verified قيود القياس found for this دفتر القياسات.
+North,North
+North East,North East
+North West,North West
+Not Certified,Not Certified
+Not Finished,Not Finished
+Not Measured,Not Measured
+Not Priced Units,Not Priced الوحدةs
+Not Requested,Not Requested
+Number Of Units,Number Of الوحدةs
+Number of Floors,Number of الطابقs
+Number of days used by expiring reservation reports and alerts.,عدد الأيام المستخدم في تقارير وتنبيهات الحجوزات القريبة من الانتهاء.
+Occurrence,Occurrence
+Only active reservations can be converted.,Only active reservations can be converted.
+Opening Balance,الرصيد الافتتاحي
+Operating,Operating
+Operational contractor outstanding exposure from Contractor Accounts.,Operational contractor outstanding exposure from حسابات المقاولين.
+Operational financial control profile for contractor exposure by project and optional subcontract.,Operational financial control profile for contractor exposure by project and optional subcontract.
+"Operational outstanding balance after certified, retained, invoiced, and paid amounts.",الرصيد التشغيلي المستحق بعد المبالغ المعتمدة والمحتجزة والمفوترة والمدفوعة.
+Operational reservation status.,الحالة التشغيلية للحجز.
+Operational status for measurement verification before IPC generation.,Operational status for measurement verification before المستخلص generation.
+Optional existing construction budget used as a planning reference.,ميزانية بناء حالية اختيارية تستخدم كمرجع تخطيطي.
+Original Amount,Original المبلغ
+Other,Other
+Other Deduction Amount,Other Deduction المبلغ
+Other Outflow,تدفق خارج آخر
+Outflows,التدفقات الخارجة
+Outstanding,Outstanding
+Outstanding Advance,Outstanding Advance
+Outstanding Advance Amount,Outstanding Advance المبلغ
+Over Certified,Over Certified
+Over Measured,Over Measured
+Over Ordered,Over Ordered
+Over Received,Over Received
+Over Requested,Over Requested
+Overall EVM Status,Overall EVM الحالة
+Overall Recommendation,Overall Recommendation
+Overdue Maintenance: {0} for {1},Overdue Maintenance: {0} for {1}
+Overhead,Overhead
+Overrun Tolerance Percent,نسبة سماحية التجاوز
+Overview,نظرة عامة
+Owner,المالك
+Owner Name,المالك Name
+Owner Type,المالك Type
+Owner is required.,المالك is required.
+Owners & Ownership,الملاك والملكية
+Ownership %,المالكship %
+Ownership Information,بيانات الملكية
+Ownership Percentage,نسبة الملكية
+Ownership Percentage must be greater than 0 and up to 100.,نسبة الملكية must be greater than 0 and up to 100.
+Ownership Role,المالكship Role
+"Ownership link between Property Owner and Unit with ownership percentage, role, dates, and status.","المالكship link between مالك العقار and الوحدة with ownership percentage, role, dates, and status."
+PV,PV
+Parent Cost Code,Parent كود التكلفة
+Parent WBS Element,Parent عنصر هيكل العمل
+Parent WBS Element must belong to the same Project.,Parent عنصر هيكل العمل must belong to the same المشروع.
+Parking,Parking
+Parking Count,عدد المواقف
+Partially Certified,Partially Certified
+Partially Invoiced,Partially Invoiced
+Partially Measured,Partially Measured
+Partially Ordered,Partially Ordered
+Partially Received,Partially Received
+Partially Requested,Partially Requested
+Parts Cost,Parts Cost
+Party,Party
+Party Links,روابط الأطراف
+Payment Amount,Payment المبلغ
+Payment Difference,Payment Difference
+Payment Difference Amount,Payment Difference المبلغ
+Payment Difference Reason,سبب فرق السداد
+Payment Difference Reason is required when paid amount is below net payable.,Payment Difference Reason is required when paid amount is below net payable.
+Payment History,Payment History
+Payment Made,Payment Made
+Payment Reminder - No Email,Payment Reminder - No Email
+Payment Reminder Template Error,Payment Reminder Template Error
+Payment Reminder: Invoice {0},Payment Reminder: Invoice {0}
+Penalty,Penalty
+Penalty Amount,Penalty المبلغ
+Pending,Pending
+Pending Qty,Pending Qty
+Performance Guarantee,Performance Guarantee
+Performance Indices,مؤشرات الأداء
+Period,الفترة
+Period Date,Period Date
+Period End cannot be before Period Start.,Period End cannot be before Period Start.
+Period Information,بيانات الفترة
+Period Settings,إعدادات الفترة
+Period Start cannot be after Period End.,Period Start cannot be after Period End.
+Period Type,نوع الفترة
+Period Type is required.,Period Type is required.
+"Period-level cash flow row showing inflows, outflows, net movement, running balance, and source counts.","Period-level cash flow row showing inflows, outflows, net movement, running balance, and source counts."
+Periods,الفترات
+Photo,الصورة
+Physical Advancement,التقدم الفعلي
+Physical Advancement Report,تقرير التقدم الفعلي
+Physical Details,البيانات المادية
+Pipeline Gap,Pipeline Gap
+Planned,Planned
+Planned %,Planned %
+Planned End,Planned End
+Planned End Date,Planned تاريخ النهاية
+Planned Progress %,Planned التقدم %
+Planned Progress Percent,Planned التقدم Percent
+Planned Progress Percent must be between 0 and 100.,Planned التقدم Percent must be between 0 and 100.
+Planned Quantity,Planned الكمية
+Planned Quantity cannot be negative.,Planned الكمية cannot be negative.
+Planned Scope,النطاق المخطط
+Planned Start,Planned Start
+Planned Start Date,Planned تاريخ البداية
+Planned progress used to calculate Planned Value until schedule-derived PV is implemented.,نسبة التقدم المخطط المستخدمة لحساب القيمة المخططة إلى حين تفعيل حسابها من الجدول الزمني.
+Planning,التخطيط
+Please set a Default Income Account in company {0} settings.,Please set a Default Income Account in company {0} settings.
+"Point-in-time CFO summary of project budget, commitments, measured value, certification, retention, exposure, and risk.","Point-in-time CFO summary of project budget, commitments, measured value, certification, retention, exposure, and risk."
+"Point-in-time Earned Value Management snapshot for BAC, EV, AC, PV, CPI, SPI, EAC, ETC, VAC, and risk.","Point-in-time Earned Value Management snapshot for BAC, EV, AC, PV, CPI, SPI, EAC, ETC, VAC, and risk."
+Posting Date,تاريخ الترحيل
+Potential customer from ERPNext CRM.,مهتم محتمل من نظام إدارة علاقات العملاء في ERPNext.
+Prefix used when generating reservation numbers.,البادئة المستخدمة عند توليد أرقام الحجز.
+Preliminary,Preliminary
+Previous Certified Amount,Previous المبلغ المعتمد
+Previous Certified Qty,الكمية المعتمدة السابقة
+Previous Measured Qty,الكمية المقاسة السابقة
+Previously verified quantity for the same Work Item.,الكمية التي تم التحقق منها سابقا لنفس بند العمل.
+Procurement Control Reports,تقارير رقابة المشتريات
+Procurement Invoiced Amount,المشتريات المبلغ المفوتر
+Procurement Progress Percent,المشتريات التقدم Percent
+Procurement Settings,إعدادات المشتريات
+Procurement Status,المشتريات الحالة
+Procurement Tracking,تتبع المشتريات
+Procurement Variance Amount,المشتريات مبلغ الفرق
+Procurement Variance Qty,المشتريات الفروقات Qty
+Procurement progress calculated from linked ERPNext procurement and stock transactions.,المشتريات progress calculated from linked ERPNext procurement and stock transactions.
+Profitability,الربحية
+Profitable Units,Profitable الوحدةs
+Progress,التقدم
+Progress %,التقدم %
+Progress & Advancement,التقدم والإنجاز
+Progress Percent,التقدم Percent
+Progress Weight,التقدم Weight
+Progress Weight must be between 0 and 100.,التقدم Weight must be between 0 and 100.
+Project & Budget,المشروع والميزانية
+Project / Contractor,المشروع / المقاول
+Project / Contractor / IPC,المشروع / المقاول / المستخلص
+Project / Contractor / Period,المشروع / المقاول / الفترة
+Project Cost Entry,المشروع Cost Entry
+Project Name Arabic,المشروع Name Arabic
+Project Revenue,المشروع Revenue
+"Project bill of quantities used to plan quantities, rates, categories, and approved construction cost baseline.","المشروع bill of quantities used to plan quantities, rates, categories, and approved construction cost baseline."
+Project cost amount selected for management allocation to units.,المشروع cost amount selected for management allocation to units.
+Project is required.,المشروع is required.
+"Project work breakdown element used to organize BOQ lines, work items, procurement, and measurement by execution structure.","المشروع work breakdown element used to organize BOQ lines, work items, procurement, and measurement by execution structure."
+Property Nature,طبيعة العقار
+Purchase Flow,مسار الشراء
+Purchase Invoice / Payment,فاتورة الشراء / السداد
+Purchase Invoice Count,فاتورة الشراء Count
+Purchase Invoice Created,فاتورة الشراء Created
+Purchase Invoice Outflow,فاتورة الشراء Outflow
+Purchase Invoice can only be created from an approved IPC.,فاتورة الشراء can only be created from an approved المستخلص.
+Purchase Invoice is required,فاتورة الشراء is required
+Purchase Order Count,عدد أوامر الشراء
+Purchase Order Outflow,تدفق أوامر الشراء الخارج
+Qty,Qty
+Quantities,الكميات
+Quantity & Rate,الكمية والسعر
+Quantity accepted by QS verification for this entry.,الكمية accepted by QS verification for this entry.
+Quantity certified through submitted IPCs. Kept separate from measured quantity.,الكمية certified through submitted المستخلصs. Kept separate from measured quantity.
+Quantity verified through Measurement Entries. Does not certify payment by itself.,الكمية verified through قيود القياس. Does not certify payment by itself.
+Quarterly,Quarterly
+RPN Score,RPN Score
+Rate,Rate
+Rates / Amounts,الأسعار والمبالغ
+Ready,Ready
+Ready for Rent,Ready for Rent
+Ready for Sale,Ready for Sale
+Real Estate Project is required.,المشروع العقاري is required.
+Real Total,Real Total
+"Real estate inventory layer linked to an ERPNext Project for buildings, floors, units, and profitability analysis.","Real estate inventory layer linked to an ERPNext المشروع for buildings, floors, units, and profitability analysis."
+Real estate project that contains the reserved unit.,المشروع العقاري الذي يحتوي على الوحدة المحجوزة.
+Received Amount,Received المبلغ
+Recommended Action,Recommended Action
+Recovered,Recovered
+Recovered Amount,Recovered المبلغ
+Recovered Amount cannot exceed Advance Amount.,Recovered المبلغ cannot exceed Advance المبلغ.
+Reference,Reference
+Reference DocType,نوع مستند المرجع
+Reference Name,اسم المرجع
+Rejection Reason,سبب الرفض
+Rejection Reason is required for rejected IPC.,Rejection Reason is required for rejected المستخلص.
+Rejection Reason is required for rejected Measurement Entries.,Rejection Reason is required for rejected قيود القياس.
+Release Due Date,تاريخ استحقاق الإفراج
+Release Journal Entry,قيد يومية الإفراج
+Release Payment Entry,Release سند الدفع
+Release References,مراجع الإفراج
+Release Schedule,جدول الإفراج
+Released Amount,Released المبلغ
+Released Amount cannot exceed Retention Amount.,Released المبلغ cannot exceed مبلغ المحتجز.
+Remaining Amount,Remaining المبلغ
+Remaining Retention,Remaining المحتجزات
+Remaining Retention Amount,Remaining مبلغ المحتجز
+Remarks,الملاحظات
+Remarks are required when releasing retention before Release Due Date.,الملاحظات are required when releasing retention before Release Due Date.
+Request Date,Request Date
+Requested Amount,Requested المبلغ
+Requested By,Requested By
+Require Cost Code On Project Purchase,Require كود التكلفة On المشروع Purchase
+"Require Customer, Lead, or Party Name before reserving a unit.","Require العميل, المهتم, or اسم الطرف before reserving a unit."
+Require Unit On Unit Specific Cost,Require الوحدة On الوحدة Specific Cost
+Require Work Item On Project Purchase,Require Work Item On المشروع Purchase
+Require a positive reservation amount. No accounting entry is created.,معلومة تجارية للمتابعة فقط ولا ينشأ عنها قيد محاسبي في هذه المرحلة.
+Reservation Amount cannot be negative.,مبلغ الحجز cannot be negative.
+Reservation Amount is required by reservation settings.,مبلغ الحجز is required by reservation settings.
+Reservation validity period has expired.,الحجز validity period has expired.
+Reserved summary of actual cost; procurement and certification amounts are tracked separately.,ملخص محفوظ للتكلفة الفعلية، بينما يتم تتبع مبالغ المشتريات والاعتماد المالي بشكل منفصل.
+Residential,Residential
+Retained On,تاريخ الاحتجاز
+Retenci\u00f3n ISR,Retenci\u00f3n ISR
+Retenci\u00f3n IVA 1%,Retenci\u00f3n IVA 1%
+Retention %,المحتجزات %
+Retention Amounts,مبالغ المحتجز
+Retention Count,المحتجزات Count
+Retention Due,المحتجزات Due
+Retention Guarantee,المحتجزات Guarantee
+Retention Held Amount,المحتجزات القائمة المبلغ
+Retention Information,بيانات المحتجز
+Retention Percent,المحتجزات Percent
+Retention Percent Default,المحتجزات Percent Default
+Retention Release,المحتجزات Release
+Retention Release Outflow,المحتجزات Release Outflow
+Retention Released,المحتجزات Released
+Retention Released Amount,المحتجزات Released المبلغ
+Retention amount still held and not yet released.,المحتجزات amount still held and not yet released.
+Revenue Name,Revenue Name
+Revenue Type,Revenue Type
+Reversal,العكس والتسوية
+Reversed Entry,الحركة المعكوسة
+Reviewed By,تمت المراجعة بواسطة
+Reviewed On,تاريخ المراجعة
+Revised,Revised
+Revision No,رقم المراجعة
+Risk,المخاطر
+Role,Role
+Roof,Roof
+Routine marked as performed. Next due: {0},Routine marked as performed. Next due: {0}
+Row {0},Row {0}
+Row {0}: Construction Work Item is required for project procurement.,Row {0}: بند عمل إنشائي is required for project procurement.
+Row {0}: Current Certified Qty cannot be negative.,Row {0}: Current Certified Qty cannot be negative.
+Row {0}: Disabled Cost Code {1} cannot be used.,Row {0}: Disabled كود التكلفة {1} cannot be used.
+Row {0}: Disabled WBS Element {1} cannot be used.,Row {0}: Disabled عنصر هيكل العمل {1} cannot be used.
+Row {0}: Group Cost Code {1} cannot be used for BOQ costing.,Row {0}: Group كود التكلفة {1} cannot be used for BOQ costing.
+Row {0}: Markup Percent cannot be negative.,Row {0}: Markup Percent cannot be negative.
+Row {0}: Measurement Entry must be Verified or Locked.,Row {0}: قيد قياس must be Verified or Locked.
+Row {0}: Purchase Order amount may exceed planned Work Item amount for {1}.,Row {0}: Purchase Order amount may exceed planned Work Item amount for {1}.
+Row {0}: Quantity cannot be negative.,Row {0}: الكمية cannot be negative.
+Row {0}: Remarks or Variation Reference is required when certified qty exceeds BOQ qty.,Row {0}: الملاحظات or Variation Reference is required when certified qty exceeds BOQ qty.
+Row {0}: Remarks or Variation Reference is required when certified qty exceeds accepted measurement qty.,Row {0}: الملاحظات or Variation Reference is required when certified qty exceeds accepted measurement qty.
+Row {0}: Unit Rate cannot be negative.,Row {0}: سعر الوحدة cannot be negative.
+Row {0}: WBS Element must belong to Project {1}.,Row {0}: عنصر هيكل العمل must belong to المشروع {1}.
+Row {0}: Wastage Percent cannot be negative.,Row {0}: Wastage Percent cannot be negative.
+Rule {0}: no company found on rule or document {1} {2},Rule {0}: no company found on rule or document {1} {2}
+Running Balance,الرصيد الجاري
+SPC Out of Control: {0},SPC Out of Control: {0}
+SPI,SPI
+SPI = Earned Value / Planned Value when Planned Value is greater than zero.,مؤشر أداء الجدول = القيمة المكتسبة / القيمة المخططة عندما تكون القيمة المخططة أكبر من صفر.
+SPI Status,SPI الحالة
+SV,SV
+Sales Invoice is required to apply collection,Sales Invoice is required to apply collection
+Sales Invoice {0} has no outstanding amount,Sales Invoice {0} has no outstanding amount
+Schedule Performance Index,مؤشر أداء الجدول
+Schedule Status,Schedule الحالة
+Section,القسم
+"Selects the allocated cost source used for classification, workflow, or reporting.",يحدد التكلفة الموزعة Source المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the boq type used for classification, workflow, or reporting.",يحدد Boq Type المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the building type used for classification, workflow, or reporting.",يحدد المبنى Type المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the cost category used for classification, workflow, or reporting.",يحدد Cost Category المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the deduction type used for classification, workflow, or reporting.",يحدد Deduction Type المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the default dimension mode used for classification, workflow, or reporting.",يحدد Default Dimension Mode المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the default usage purpose used for classification, workflow, or reporting.",يحدد Default Usage Purpose المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the development type used for classification, workflow, or reporting.",يحدد Development Type المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the direction used for classification, workflow, or reporting.",يحدد Direction المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the finishing status used for classification, workflow, or reporting.",يحدد Finishing الحالة المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the floor type used for classification, workflow, or reporting.",يحدد الطابق Type المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the guarantee type used for classification, workflow, or reporting.",يحدد Guarantee Type المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the item category used for classification, workflow, or reporting.",يحدد Item Category المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the legal status used for classification, workflow, or reporting.",يحدد Legal الحالة المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the measurement method used for classification, workflow, or reporting.",يحدد القياسات Method المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the owner type used for classification, workflow, or reporting.",يحدد المالك Type المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the ownership role used for classification, workflow, or reporting.",يحدد المالكship Role المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the period type used for classification, workflow, or reporting.",يحدد Period Type المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the property nature used for classification, workflow, or reporting.",يحدد Property Nature المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the source used for classification, workflow, or reporting.",يحدد Source المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the technical status used for classification, workflow, or reporting.",يحدد Technical الحالة المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the transaction type used for classification, workflow, or reporting.",يحدد Transaction Type المستخدم للتصنيف أو سير العمل أو التقارير.
+"Selects the usage purpose used for classification, workflow, or reporting.",يحدد Usage Purpose المستخدم للتصنيف أو سير العمل أو التقارير.
+Semi Finished,Semi Finished
+Service,Service
+Setup & Masters,الإعدادات والبيانات الأساسية
+Severity,Severity
+Shared,Shared
+Short Term Rent,Short Term Rent
+Simple CFO status based on deterministic risk rules.,حالة مالية تنفيذية مبسطة تعتمد على قواعد مخاطر ثابتة.
+Site Warehouses & Stock,مخازن الموقع والمخزون
+Snapshot Date,تاريخ اللقطة
+Snapshot Title,عنوان اللقطة
+Sold Units,Sold الوحدةs
+Source,المصدر
+Source Amount,Source المبلغ
+Source Amount must be greater than zero before Applied.,Source المبلغ must be greater than zero before Applied.
+Source Amount must be greater than zero before applying.,Source المبلغ must be greater than zero before applying.
+Source BOQ Revision,مراجعة جدول الكميات المصدر
+Source BOQ child row identifier used to prevent duplicate Work Items.,Source BOQ child row identifier used to prevent duplicate بنود العمل.
+Source Cost,مصدر التكلفة
+Source Counts,عدد سجلات المصادر
+Source Values,القيم المصدرية
+"Source amount used for allocation, such as BOQ total, committed cost, or financial snapshot.",مبلغ المصدر المستخدم للتوزيع مثل إجمالي جدول الكميات أو تكلفة الالتزام أو الملخص المالي.
+South,South
+South East,South East
+South West,South West
+Special,Special
+Specifies the account name for this Contractor Account.,يحدد Account Name لهذا السجل: حساب المقاول.
+Specifies the advance date for this Advance Register.,يحدد Advance Date لهذا السجل: سجل السلف.
+Specifies the advance limit for this Contractor Account.,يحدد Advance Limit لهذا السجل: حساب المقاول.
+Specifies the advance outflow for this Project Cash Flow Forecast Period.,يحدد Advance Outflow لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the alert before days for this Guarantee Register.,يحدد Alert Before Days لهذا السجل: سجل الضمانات.
+Specifies the allocated cost date for this Unit.,يحدد التكلفة الموزعة Date لهذا السجل: الوحدة.
+Specifies the allocation date for this Unit Cost Allocation.,يحدد Allocation Date لهذا السجل: توزيع تكلفة الوحدات.
+Specifies the allocation number for this Unit Cost Allocation.,يحدد Allocation Number لهذا السجل: توزيع تكلفة الوحدات.
+Specifies the allocation percent for this Unit Cost Allocation Line.,يحدد Allocation Percent لهذا السجل: بند توزيع تكلفة الوحدة.
+Specifies the amount for this IPC Deduction.,يحدد المبلغ لهذا السجل: خصم مستخلص.
+Specifies the area for this Unit Cost Allocation Line.,يحدد المساحة لهذا السجل: بند توزيع تكلفة الوحدة.
+Specifies the area for this Unit.,يحدد المساحة لهذا السجل: الوحدة.
+Specifies the bathrooms for this Unit.,يحدد Bathrooms لهذا السجل: الوحدة.
+Specifies the bedrooms for this Unit.,يحدد Bedrooms لهذا السجل: الوحدة.
+Specifies the book number for this Measurement Book.,يحدد Book Number لهذا السجل: دفتر القياسات.
+Specifies the boq date for this Construction BOQ.,يحدد Boq Date لهذا السجل: جدول كميات البناء.
+Specifies the boq number for this Construction BOQ.,يحدد Boq Number لهذا السجل: جدول كميات البناء.
+Specifies the building code for this Building.,يحدد المبنى Code لهذا السجل: المبنى.
+Specifies the building name for this Building.,يحدد المبنى Name لهذا السجل: المبنى.
+Specifies the calculation date for this Project EVM Metrics.,يحدد Calculation Date لهذا السجل: مؤشرات القيمة المكتسبة للمشروع.
+Specifies the certificate number for this Interim Payment Certificate.,يحدد Certificate Number لهذا السجل: مستخلص مقاول.
+Specifies the certificate sequence for this Interim Payment Certificate.,يحدد Certificate Sequence لهذا السجل: مستخلص مقاول.
+Specifies the cost code for this Cost Code.,يحدد كود التكلفة لهذا السجل: كود التكلفة.
+Specifies the cost code name for this Cost Code.,يحدد كود التكلفة Name لهذا السجل: كود التكلفة.
+Specifies the current certified qty for this Interim Payment Certificate Line.,يحدد Current Certified Qty لهذا السجل: بند مستخلص مقاول.
+Specifies the defect liability months for this Retention Register.,يحدد Defect Liability Months لهذا السجل: سجل المحتجزات.
+Specifies the description for this IPC Deduction.,يحدد الوصف لهذا السجل: خصم مستخلص.
+Specifies the disabled for this Construction Work Item.,يحدد Disabled لهذا السجل: بند عمل إنشائي.
+Specifies the disabled for this Cost Code.,يحدد Disabled لهذا السجل: كود التكلفة.
+Specifies the disabled for this Unit Type.,يحدد Disabled لهذا السجل: نوع الوحدة.
+Specifies the disabled for this WBS Element.,يحدد Disabled لهذا السجل: عنصر هيكل العمل.
+Specifies the dynamic attributes json for this Unit.,يحدد Dynamic Attributes Json لهذا السجل: الوحدة.
+Specifies the email for this Property Owner.,يحدد Email لهذا السجل: مالك العقار.
+Specifies the email for this Unit Reservation.,يحدد Email لهذا السجل: حجز وحدة.
+Specifies the enable budget blocking for this Procurement Control Settings.,يحدد Enable Budget Blocking لهذا السجل: إعدادات رقابة المشتريات.
+Specifies the enable budget warning for this Procurement Control Settings.,يحدد Enable Budget Warning لهذا السجل: إعدادات رقابة المشتريات.
+Specifies the enable dimension warnings for this Financial Dimension Settings.,يحدد Enable Dimension Warnings لهذا السجل: إعدادات الأبعاد المالية.
+Specifies the enable financial dimension sync for this Financial Dimension Settings.,يحدد Enable Financial Dimension Sync لهذا السجل: إعدادات الأبعاد المالية.
+Specifies the enable work item sync for this Procurement Control Settings.,يحدد Enable Work Item Sync لهذا السجل: إعدادات رقابة المشتريات.
+Specifies the end date for this Project Cash Flow Forecast.,يحدد End Date لهذا السجل: توقع التدفق النقدي للمشروع.
+Specifies the end date for this Property Ownership.,يحدد End Date لهذا السجل: ملكية العقار.
+Specifies the evm title for this Project EVM Metrics.,يحدد Evm Title لهذا السجل: مؤشرات القيمة المكتسبة للمشروع.
+Specifies the expected monthly rent for this Unit Cost Allocation Line.,يحدد الإيجار الشهري المتوقع لهذا السجل: بند توزيع تكلفة الوحدة.
+Specifies the expected monthly rent for this Unit.,يحدد الإيجار الشهري المتوقع لهذا السجل: الوحدة.
+Specifies the expected next payment date for this Interim Payment Certificate.,يحدد Expected Next Payment Date لهذا السجل: مستخلص مقاول.
+Specifies the expected other inflow for this Project Cash Flow Forecast Period.,يحدد Expected Other Inflow لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the expected rent inflow for this Project Cash Flow Forecast Period.,يحدد Expected Rent Inflow لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the expected sale price for this Unit Cost Allocation Line.,يحدد سعر البيع المتوقع لهذا السجل: بند توزيع تكلفة الوحدة.
+Specifies the expected sale price for this Unit.,يحدد سعر البيع المتوقع لهذا السجل: الوحدة.
+Specifies the expected sales inflow for this Project Cash Flow Forecast Period.,يحدد Expected Sales Inflow لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the expiry date for this Guarantee Register.,يحدد Expiry Date لهذا السجل: سجل الضمانات.
+Specifies the floor code for this Floor.,يحدد الطابق Code لهذا السجل: الطابق.
+Specifies the floor name for this Floor.,يحدد الطابق Name لهذا السجل: الطابق.
+Specifies the floor number for this Floor.,يحدد الطابق Number لهذا السجل: الطابق.
+Specifies the forecast date for this Project Cash Flow Forecast.,يحدد التوقع Date لهذا السجل: توقع التدفق النقدي للمشروع.
+Specifies the forecast title for this Project Cash Flow Forecast.,يحدد التوقع Title لهذا السجل: توقع التدفق النقدي للمشروع.
+Specifies the gps accuracy for this Measurement Entry.,يحدد Gps Accuracy لهذا السجل: قيد قياس.
+Specifies the gps latitude for this Measurement Entry.,يحدد Gps Latitude لهذا السجل: قيد قياس.
+Specifies the gps longitude for this Measurement Entry.,يحدد Gps Longitude لهذا السجل: قيد قياس.
+Specifies the grid or zone for this Measurement Entry.,يحدد Grid Or Zone لهذا السجل: قيد قياس.
+Specifies the guarantee number for this Guarantee Register.,يحدد Guarantee Number لهذا السجل: سجل الضمانات.
+Specifies the has parking for this Unit.,يحدد Has Parking لهذا السجل: الوحدة.
+Specifies the has storage for this Unit.,يحدد Has Storage لهذا السجل: الوحدة.
+Specifies the height for this Measurement Entry.,يحدد Height لهذا السجل: قيد قياس.
+Specifies the identification no for this Property Owner.,يحدد Identification No لهذا السجل: مالك العقار.
+Specifies the ipc count for this Project Cash Flow Forecast Period.,يحدد Ipc Count لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the ipc line reference for this Measurement Entry.,يحدد Ipc Line Reference لهذا السجل: قيد قياس.
+Specifies the ipc outflow for this Project Cash Flow Forecast Period.,يحدد Ipc Outflow لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the is group for this Cost Code.,يحدد Is Group لهذا السجل: كود التكلفة.
+Specifies the is group for this WBS Element.,يحدد Is Group لهذا السجل: عنصر هيكل العمل.
+Specifies the is reversed for this Contractor Ledger Entry.,يحدد Is Reversed لهذا السجل: حركة كشف المقاول.
+Specifies the issue date for this Guarantee Register.,يحدد Issue Date لهذا السجل: سجل الضمانات.
+Specifies the issuing bank for this Guarantee Register.,يحدد Issuing Bank لهذا السجل: سجل الضمانات.
+Specifies the length for this Measurement Entry.,يحدد Length لهذا السجل: قيد قياس.
+Specifies the location summary for this Real Estate Project.,يحدد Location الملخص لهذا السجل: المشروع العقاري.
+Specifies the locked on for this Measurement Book.,يحدد Locked On لهذا السجل: دفتر القياسات.
+Specifies the markup percent for this Construction BOQ Item.,يحدد Markup Percent لهذا السجل: بند جدول كميات البناء.
+Specifies the measurement date for this Measurement Entry.,يحدد القياسات Date لهذا السجل: قيد قياس.
+Specifies the measurement location for this Measurement Entry.,يحدد القياسات Location لهذا السجل: قيد قياس.
+Specifies the measurement period end for this Measurement Book.,يحدد القياسات Period End لهذا السجل: دفتر القياسات.
+Specifies the measurement period start for this Measurement Book.,يحدد القياسات Period Start لهذا السجل: دفتر القياسات.
+Specifies the mobile no for this Property Owner.,يحدد Mobile No لهذا السجل: مالك العقار.
+Specifies the mobile no for this Unit Reservation.,يحدد Mobile No لهذا السجل: حجز وحدة.
+Specifies the number of floors for this Building.,يحدد Number Of الطابقs لهذا السجل: المبنى.
+Specifies the number of units for this Measurement Entry.,يحدد Number Of الوحدةs لهذا السجل: قيد قياس.
+Specifies the other outflow for this Project Cash Flow Forecast Period.,يحدد Other Outflow لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the overrun tolerance percent for this Procurement Control Settings.,يحدد Overrun Tolerance Percent لهذا السجل: إعدادات رقابة المشتريات.
+Specifies the owner name for this Property Owner.,يحدد المالك Name لهذا السجل: مالك العقار.
+Specifies the ownership percentage for this Property Ownership.,يحدد نسبة الملكية لهذا السجل: ملكية العقار.
+Specifies the parking count for this Unit.,يحدد Parking Count لهذا السجل: الوحدة.
+Specifies the period end for this Interim Payment Certificate.,يحدد Period End لهذا السجل: مستخلص مقاول.
+Specifies the period end for this Project Cash Flow Forecast Period.,يحدد Period End لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the period for this Project Cash Flow Forecast Period.,يحدد Period لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the period start for this Interim Payment Certificate.,يحدد Period Start لهذا السجل: مستخلص مقاول.
+Specifies the period start for this Project Cash Flow Forecast Period.,يحدد Period Start لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the planned end date for this WBS Element.,يحدد Planned End Date لهذا السجل: عنصر هيكل العمل.
+Specifies the planned start date for this WBS Element.,يحدد Planned Start Date لهذا السجل: عنصر هيكل العمل.
+Specifies the posting date for this Contractor Ledger Entry.,يحدد تاريخ الترحيل لهذا السجل: حركة كشف المقاول.
+Specifies the progress weight for this WBS Element.,يحدد التقدم Weight لهذا السجل: عنصر هيكل العمل.
+Specifies the project name arabic for this Real Estate Project.,يحدد المشروع Name Arabic لهذا السجل: المشروع العقاري.
+Specifies the purchase invoice count for this Project Cash Flow Forecast Period.,يحدد فاتورة الشراء Count لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the purchase invoice outflow for this Project Cash Flow Forecast Period.,يحدد فاتورة الشراء Outflow لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the purchase order count for this Project Cash Flow Forecast Period.,يحدد Purchase Order Count لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the purchase order outflow for this Project Cash Flow Forecast Period.,يحدد Purchase Order Outflow لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the quantity for this Construction BOQ Item.,يحدد الكمية لهذا السجل: بند جدول كميات البناء.
+Specifies the release due date for this Retention Register.,يحدد Release Due Date لهذا السجل: سجل المحتجزات.
+Specifies the require cost code on project purchase for this Financial Dimension Settings.,يحدد Require كود التكلفة On المشروع Purchase لهذا السجل: إعدادات الأبعاد المالية.
+Specifies the require unit on unit specific cost for this Financial Dimension Settings.,يحدد Require الوحدة On الوحدة Specific Cost لهذا السجل: إعدادات الأبعاد المالية.
+Specifies the require work item on project purchase for this Financial Dimension Settings.,يحدد Require Work Item On المشروع Purchase لهذا السجل: إعدادات الأبعاد المالية.
+Specifies the require work item on project purchase for this Procurement Control Settings.,يحدد Require Work Item On المشروع Purchase لهذا السجل: إعدادات رقابة المشتريات.
+Specifies the reservation date for this Unit Reservation.,يحدد الحجز Date لهذا السجل: حجز وحدة.
+Specifies the retained on for this Retention Register.,يحدد Retained On لهذا السجل: سجل المحتجزات.
+Specifies the retention count for this Project Cash Flow Forecast Period.,يحدد المحتجزات Count لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the retention percent default for this Contractor Account.,يحدد المحتجزات Percent Default لهذا السجل: حساب المقاول.
+Specifies the retention percent for this Interim Payment Certificate Line.,يحدد المحتجزات Percent لهذا السجل: بند مستخلص مقاول.
+Specifies the retention percent for this Interim Payment Certificate.,يحدد المحتجزات Percent لهذا السجل: مستخلص مقاول.
+Specifies the retention percent for this Retention Register.,يحدد المحتجزات Percent لهذا السجل: سجل المحتجزات.
+Specifies the retention release outflow for this Project Cash Flow Forecast Period.,يحدد المحتجزات Release Outflow لهذا السجل: فترة توقع التدفق النقدي.
+Specifies the revision no for this Construction BOQ.,يحدد رقم المراجعة لهذا السجل: جدول كميات البناء.
+Specifies the section for this Construction BOQ Item.,يحدد القسم لهذا السجل: بند جدول كميات البناء.
+Specifies the snapshot date for this Project Financial Snapshot.,يحدد Snapshot Date لهذا السجل: الملخص المالي للمشروع.
+Specifies the snapshot title for this Project Financial Snapshot.,يحدد Snapshot Title لهذا السجل: الملخص المالي للمشروع.
+Specifies the source boq revision for this Construction Work Item.,يحدد Source Boq Revision لهذا السجل: بند عمل إنشائي.
+Specifies the start date for this Project Cash Flow Forecast.,يحدد Start Date لهذا السجل: توقع التدفق النقدي للمشروع.
+Specifies the start date for this Property Ownership.,يحدد Start Date لهذا السجل: ملكية العقار.
+Specifies the storage area for this Unit.,يحدد Storage المساحة لهذا السجل: الوحدة.
+Specifies the tax id for this Property Owner.,يحدد Tax Id لهذا السجل: مالك العقار.
+Specifies the unit code for this Unit.,يحدد رمز الوحدة لهذا السجل: الوحدة.
+Specifies the unit name for this Unit.,يحدد اسم الوحدة لهذا السجل: الوحدة.
+Specifies the unit rate for this Construction BOQ Item.,يحدد سعر الوحدة لهذا السجل: بند جدول كميات البناء.
+Specifies the unit rate for this Construction Work Item.,يحدد سعر الوحدة لهذا السجل: بند عمل إنشائي.
+Specifies the unit rate for this Interim Payment Certificate Line.,يحدد سعر الوحدة لهذا السجل: بند مستخلص مقاول.
+Specifies the unit rate for this Measurement Entry.,يحدد سعر الوحدة لهذا السجل: قيد قياس.
+Specifies the unit type name for this Unit Type.,يحدد نوع الوحدة Name لهذا السجل: نوع الوحدة.
+Specifies the valid from for this Unit Reservation.,يحدد صالح من لهذا السجل: حجز وحدة.
+Specifies the variation reference for this Interim Payment Certificate Line.,يحدد Variation Reference لهذا السجل: بند مستخلص مقاول.
+Specifies the verified on for this Measurement Book.,يحدد Verified On لهذا السجل: دفتر القياسات.
+Specifies the verified on for this Measurement Entry.,يحدد Verified On لهذا السجل: قيد قياس.
+Specifies the wastage percent for this Construction BOQ Item.,يحدد Wastage Percent لهذا السجل: بند جدول كميات البناء.
+Specifies the wbs code for this Construction BOQ Item.,يحدد Wbs Code لهذا السجل: بند جدول كميات البناء.
+Specifies the wbs code for this Construction Work Item.,يحدد Wbs Code لهذا السجل: بند عمل إنشائي.
+Specifies the wbs code for this WBS Element.,يحدد Wbs Code لهذا السجل: عنصر هيكل العمل.
+Specifies the wbs name for this WBS Element.,يحدد Wbs Name لهذا السجل: عنصر هيكل العمل.
+Specifies the width for this Measurement Entry.,يحدد Width لهذا السجل: قيد قياس.
+"Standalone field measurement linked to a Construction Work Item, with engineer and QS verification details.","Standalone field measurement linked to a بند عمل إنشائي, with engineer and QS verification details."
+Start Date,تاريخ البداية
+Start Date and End Date are required.,Start Date and End Date are required.
+Start Date cannot be after End Date.,Start Date cannot be after End Date.
+Starting cash position used for forecast running balance.,الرصيد النقدي الافتتاحي المستخدم لحساب الرصيد التراكمي في التوقع.
+Storage Area,Storage المساحة
+Subcontract,عقد مقاول الباطن
+Subcontract Activity,عقد مقاول الباطن Activity
+Submitted By,تم الإرسال بواسطة
+Submitted On,تاريخ التقديم
+Sum of accepted quantities from linked measurement entries.,مجموع الكميات المقبولة من قيود القياس المرتبطة.
+Sum of measured amounts from linked measurement entries.,مجموع مبالغ القياس من قيود القياس المرتبطة.
+Summary,الملخص
+Supplier Quote,المورد Quote
+Supplier is required,المورد is required
+TCPI,TCPI
+Tags,الوسوم
+Target document is required to convert a reservation.,Target document is required to convert a reservation.
+Task,Task
+Tax ID,الرقم الضريبي
+Tax Withholding ({0}%),Tax Withholding ({0}%)
+Technical Status,Technical الحالة
+To-Complete Performance Index,مؤشر الأداء المطلوب للإكمال
+Total Accepted Qty,إجمالي الكمية المقبولة
+Total Actual Cost,إجمالي التكلفة الفعلية
+Total Advance Paid,إجمالي السلف المدفوعة
+Total Advance Recovered,إجمالي السلف المستردة
+Total Allocated,Total Allocated
+Total Allocated Amount,Total Allocated المبلغ
+Total Allocated Amount cannot exceed Source Amount.,Total Allocated المبلغ cannot exceed Source المبلغ.
+Total Allocated Cost,Total التكلفة الموزعة
+Total Amount,إجمالي المبلغ
+Total Area,Total المساحة
+Total Built Up Area,Total Built Up المساحة
+Total Certified,Total Certified
+Total Certified Amount,Total المبلغ المعتمد
+Total Certified Qty,إجمالي الكمية المعتمدة
+Total Contingency Cost,إجمالي الاحتياطي
+Total Cost,Total Cost
+Total Cost Impact,Total Cost Impact
+Total Current Measured Qty,إجمالي الكمية المقاسة الحالية
+Total Deducted ({0}) cannot exceed Loan Amount ({1}).,Total Deducted ({0}) cannot exceed Loan المبلغ ({1}).
+Total Deducted cannot be negative.,Total Deducted cannot be negative.
+Total Deductions,إجمالي الخصومات
+Total Duration (Hours),Total Duration (Hours)
+Total Entries,إجمالي القيود
+Total Equipment Cost,إجمالي تكلفة المعدات
+Total Estimated,Total Estimated
+Total Expected Inflow,إجمالي التدفقات الداخلة المتوقعة
+Total Expected Outflow,إجمالي التدفقات الخارجة المتوقعة
+Total Expected Sales Value,Total Expected Sales Value
+Total Inflow,إجمالي التدفقات الداخلة
+Total Invoiced,Total Invoiced
+Total Invoiced Amount,Total المبلغ المفوتر
+Total Labor Cost,إجمالي تكلفة العمالة
+Total Land Area,Total Land المساحة
+Total Material Cost,إجمالي تكلفة المواد
+Total Measured Amount,Total المبلغ المقاس
+Total Outflow,إجمالي التدفقات الخارجة
+Total Overhead Cost,إجمالي المصاريف العامة
+Total Paid,Total Paid
+Total Paid Amount,Total المبلغ المدفوع
+Total Real Cost,Total Real Cost
+Total Retention Held,Total المحتجزات القائمة
+Total Retention Released,Total المحتجزات Released
+Total Subcontract Cost,إجمالي تكلفة مقاول الباطن
+Total Unit area is required for By Area allocation.,Total الوحدة area is required for By المساحة allocation.
+Total active ownership percentage for this Unit cannot exceed 100%.,Total active ownership percentage for this الوحدة cannot exceed 100%.
+Total deposit amount must be greater than zero,Total deposit amount must be greater than zero
+Total retention held through IPC control records.,Total retention held through المستخلص control records.
+Tracks contractor advances and recovery status without replacing ERPNext Payment Entry accounting.,Tracks contractor advances and recovery status without replacing ERPNext سند الدفع accounting.
+"Tracks contractor performance, advance payment, and retention guarantees for project financial control.","Tracks contractor performance, advance payment, and retention guarantees for project financial control."
+Tracks retention held from IPCs and future release eligibility without creating Journal Entries automatically.,قيمة يتم تحديثها تلقائياً من منطق النظام أو السجلات المرتبطة.
+Transaction Type,نوع الحركة
+Transaction Type is required.,Transaction Type is required.
+Transferred,Transferred
+Trigger DocType is required,Trigger DocType is required
+Trigger Event is required,Trigger Event is required
+Type,Type
+Unallocated,Unallocated
+Unallocated Amount,Unallocated المبلغ
+Under Maintenance,Under Maintenance
+Under Registration,Under Registration
+Under Verification,Under التحقق والاعتماد
+Unique reservation reference generated from reservation settings.,مرجع حجز فريد يتم توليده من إعدادات الحجز.
+Unit Code,رمز الوحدة
+Unit Code must be unique per Building and Floor.,رمز الوحدة must be unique per المبنى and الطابق.
+Unit Name,اسم الوحدة
+Unit Status,الوحدة الحالة
+Unit Type Name,نوع الوحدة Name
+Unit Types,أنواع الوحدات
+Unit is required.,الوحدة is required.
+Unit {0} already has active reservation {1}.,الوحدة {0} already has active reservation {1}.
+Unit {0} cannot be reserved because its status is {1}.,الوحدة {0} cannot be reserved because its status is {1}.
+Unit {0} is already marked as reserved.,الوحدة {0} is already marked as reserved.
+"Unit-level allocation row showing basis, allocated cost, expected revenue, margin, and profitability status.","الوحدة-level allocation row showing basis, allocated cost, expected revenue, margin, and profitability status."
+Units,الوحدةs
+Unknown,Unknown
+Unknown Insumo type: {0},Unknown Insumo type: {0}
+Usage Date,Usage Date
+Usage Purpose,غرض الاستخدام
+VAC,VAC
+Valid Until must be on or after Valid From.,صالح حتى must be on or after صالح من.
+Validation Rules,قواعد التحقق
+Variance,الفروقات
+Variance Percent,نسبة الفرق
+Variance Qty,الفروقات Qty
+Variance Reason,الفروقات Reason
+Variance Reason is required when measured quantity exceeds planned quantity.,الفروقات Reason is required when measured quantity exceeds planned quantity.
+Variance at Completion,الفروقات at Completion
+Variances,الفروقات
+Variation Reference,مرجع التغيير
+Verification,التحقق والاعتماد
+Verified Measurement Book used to generate this IPC.,Verified دفتر القياسات used to generate this المستخلص.
+Visible party name when Customer or Lead is not yet available.,Visible party name when العميل or المهتم is not yet available.
+Volume,Volume
+Voucher Count,Voucher Count
+Voucher No,Voucher No
+Voucher Type,Voucher Type
+WBS Code {0} already exists for Project {1}.,WBS Code {0} already exists for المشروع {1}.
+WBS Name,اسم عنصر هيكل العمل
+Wastage Percent,نسبة الهدر
+Watch Units,Watch الوحدةs
+Weekly,Weekly
+West,West
+"When disabled, a unit with an active reservation cannot be reserved again.",عند تعطيله، لا يمكن حجز وحدة لديها حجز نشط مرة أخرى.
+"When enabled by an administrator, missing required dimensions may block selected transactions.",عند تفعيلها من مسؤول النظام، قد تمنع الأبعاد المطلوبة غير المكتملة بعض المعاملات المحددة.
+Width,العرض
+Withholding Tax,Withholding Tax
+Withholding Tax Amount,Withholding Tax المبلغ
+Work Item,Work Item
+Work Item Details,بيانات بند العمل
+Work Item Overview,نظرة عامة على بند العمل
+Work Item being measured in the field.,بند العمل الذي يتم قياسه ميدانيا.
+Work Items Count,عدد بنود العمل
+Work Items Generated,تم إنشاء بنود العمل
+Workflow & Approval,سير الاعتماد والموافقة
+Workflow & Status,الحالة وسير الاعتماد
+{0} cannot be negative.,{0} cannot be negative.
+{0}: Construction Work Item is recommended for project financial traceability.,{0}: بند عمل إنشائي is recommended for project financial traceability.
+{0}: Cost Code is recommended for project financial traceability.,{0}: كود التكلفة is recommended for project financial traceability.
+{0}: Unit is required when unit-specific cost tracking is enabled.,{0}: الوحدة is required when unit-specific cost tracking is enabled.
+مستخلص مقاول عن قياسات معتمدة لأعمال المشروع,مستخلص مقاول عن قياسات معتمدة لأعمال المشروع

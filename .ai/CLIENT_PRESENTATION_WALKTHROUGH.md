@@ -366,3 +366,33 @@
 ## الخلاصة
 
 يمكن عرض المنتج بثقة كمنصة تنفيذية وتشغيلية للتحكم في تكلفة البناء والمقاولين وربحية المخزون العقاري وحجز الوحدات. بعد هذا العرض، الخطوة المنطقية التالية هي مراجعة جاهزية الحجز ثم البدء في Sales Contract foundation.
+
+## Final UX Hardening Route
+
+بعد تقوية النماذج ومساحات العمل، استخدم هذا المسار المختصر في العرض:
+
+1. Executive Presentation Center
+   - اعرض بطاقات KPI أولاً: BOQ Total، Committed Amount، Certified Amount، Net Payable، Retention Held، Contractor Outstanding، Cash Flow Risk، EVM CPI/SPI، Total Units، Available Units، Reserved Units، Expected Gross Margin.
+   - اشرح أن هذه بطاقات قراءة فقط مبنية على بيانات موجودة ولا تنشئ قيوداً أو مستندات.
+
+2. End-to-End Flow
+   - افتح الروابط بالترتيب: Construction BOQ، Construction Work Item، Measurement Book، Interim Payment Certificate، Unit، Unit Reservation.
+   - الهدف هو إثبات أن النظام يربط التخطيط والتنفيذ والقياس والمستخلص والمخزون العقاري والحجز.
+
+3. Construction Work Item
+   - استخدم التبويبات الجديدة لشرح Planned Scope، Procurement Tracking، Measurement Tracking، Certification Tracking، Financial Summary.
+
+4. Interim Payment Certificate
+   - استخدم التبويبات الجديدة لشرح مصدر القياس، بنود المستخلص، الملخص المالي، الفاتورة/السداد، وسير الاعتماد.
+
+5. Unit
+   - استخدم التبويبات الجديدة لشرح التسلسل المكاني، التفاصيل المادية، الحالة، التوقعات المالية، توزيع التكلفة والربحية.
+
+6. Unit Reservation
+   - استخدم التبويبات الجديدة لشرح بيانات الحجز، بيانات الوحدة، بيانات العميل أو المهتم، البيانات التجارية، ومراجع التحويل المستقبلية.
+
+### ملاحظات العرض
+
+- الترجمة العربية أصبحت أوسع وتشمل وصف الحقول المهمة، لكن يفضل إجراء click-through سريع بحساب مستخدم عربي قبل اجتماع العميل.
+- Dashboard Charts ما زالت مؤجلة، لذلك اعتمد على بطاقات KPI والتقارير التفصيلية.
+- لا تعرض Sales Contract أو Lease Contract أو Installment Plan أو Rent Schedule كميزات مكتملة؛ هذه هي المرحلة التالية.

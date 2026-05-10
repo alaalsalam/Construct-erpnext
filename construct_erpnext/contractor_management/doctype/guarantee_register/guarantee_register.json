@@ -6,29 +6,31 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "basic_information_section",
+  "guarantee_information_section",
   "company",
   "project",
   "contractor",
+  "guarantee_information_column_break",
   "contractor_account",
+  "status",
   "guarantee_details_section",
   "guarantee_type",
   "guarantee_number",
+  "guarantee_details_column_break",
   "issuing_bank",
   "guarantee_amount",
-  "validity_status_section",
+  "dates__alerts_section",
   "issue_date",
   "expiry_date",
-  "status",
   "alert_before_days",
   "remarks_section",
   "remarks"
  ],
  "fields": [
   {
-   "fieldname": "basic_information_section",
+   "fieldname": "guarantee_information_section",
    "fieldtype": "Section Break",
-   "label": "Basic Information"
+   "label": "Guarantee Information"
   },
   {
    "fieldname": "company",
@@ -59,12 +61,26 @@
    "description": "Links this record to the related Supplier."
   },
   {
+   "fieldname": "guarantee_information_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "contractor_account",
    "fieldtype": "Link",
    "label": "Contractor Account",
    "options": "Contractor Account",
    "in_list_view": 0,
    "description": "Links this record to the related Contractor Account."
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nExpiring Soon\nExpired\nReleased\nEncashment Requested\nEncashment Completed\nCancelled",
+   "description": "Current status used to track this Guarantee Register through its workflow or reporting lifecycle."
   },
   {
    "fieldname": "guarantee_details_section",
@@ -87,6 +103,10 @@
    "description": "Specifies the guarantee number for this Guarantee Register."
   },
   {
+   "fieldname": "guarantee_details_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "issuing_bank",
    "fieldtype": "Data",
    "label": "Issuing Bank",
@@ -102,9 +122,9 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "validity_status_section",
+   "fieldname": "dates__alerts_section",
    "fieldtype": "Section Break",
-   "label": "Validity and Status"
+   "label": "Dates & Alerts"
   },
   {
    "fieldname": "issue_date",
@@ -119,16 +139,6 @@
    "in_list_view": 1,
    "label": "Expiry Date",
    "description": "Specifies the expiry date for this Guarantee Register."
-  },
-  {
-   "default": "Active",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Status",
-   "options": "Active\nExpiring Soon\nExpired\nReleased\nEncashment Requested\nEncashment Completed\nCancelled",
-   "description": "Current status used to track this Guarantee Register through its workflow or reporting lifecycle."
   },
   {
    "default": "60",

@@ -10,6 +10,15 @@ Passed.
 
 The completed Real Estate Development ERP phases are ready for client presentation and safe to use as the baseline for the next development phase: Sales Contract and Installment Plan foundation.
 
+Correction added on 2026-05-10:
+
+The technical gate passed, but the user later observed that actual form and workspace UX still needed deeper hardening. This file should be read together with:
+
+- .ai/UX_HARDENING_GATE.md
+- .ai/TRANSLATION_COVERAGE_AUDIT.md
+
+The final go/no-go decision is now based on the deeper UX hardening gate, not only this technical readiness gate.
+
 ## 2. What Is Ready For Client Presentation
 
 - Workspaces load and follow the intended presentation/process order:

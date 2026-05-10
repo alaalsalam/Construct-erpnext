@@ -174,3 +174,13 @@
 - The phase does not change business logic, fieldnames, existing fieldtypes, required-field policy, accounting behavior, or submitted records.
 - Section Breaks and Column Breaks are allowed as layout metadata to make completed custom DocTypes easier to explain and use.
 - Sales Contract, Lease Contract, Installment Plan, Rent Schedule, CRM Matching, Portal, and accounting features remain deferred.
+
+## ADR-023: Deep UX Hardening Before Sales Foundation
+
+- The previous technical readiness gate is corrected by a deeper UX hardening phase before Sales Contract and Installment Plan work.
+- Large completed DocTypes may use Tab Breaks, Section Breaks, and Column Breaks as layout metadata only.
+- Fieldnames, fieldtypes, required flags, business logic, accounting behavior, and submitted records remain unchanged.
+- English remains the source language for labels and descriptions.
+- Arabic UX is hardened through `construct_erpnext/translations/ar.csv`, following the same source-text translation approach used by Universal Standard.
+- Universal Standard is used as a read-only reference because it exists in bench apps but is not installed on `construction.yemenfrappe.com`.
+- Sales Contract, Lease Contract, Installment Plan, Rent Schedule, CRM Matching, Portal, and accounting automation remain deferred until this UX layer passes validation.

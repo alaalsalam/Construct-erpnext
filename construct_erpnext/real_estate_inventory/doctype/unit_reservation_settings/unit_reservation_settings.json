@@ -8,15 +8,14 @@
  "field_order": [
   "general_settings_section",
   "default_reservation_validity_days",
+  "reservation_number_prefix",
   "automation_section",
   "auto_release_expired_reservations",
+  "warning_days_before_expiry",
   "validation_rules_section",
   "allow_reservation_for_reserved_units",
   "require_customer_or_lead",
-  "require_reservation_amount",
-  "warning_days_before_expiry",
-  "defaults_section",
-  "reservation_number_prefix"
+  "require_reservation_amount"
  ],
  "fields": [
   {
@@ -33,6 +32,14 @@
    "in_list_view": 0
   },
   {
+   "fieldname": "reservation_number_prefix",
+   "fieldtype": "Data",
+   "label": "Reservation Number Prefix",
+   "default": "RES",
+   "description": "Prefix used when generating reservation numbers.",
+   "in_list_view": 0
+  },
+  {
    "fieldname": "automation_section",
    "fieldtype": "Section Break",
    "label": "Automation"
@@ -43,6 +50,14 @@
    "label": "Auto Release Expired Reservations",
    "default": "1",
    "description": "Allow the daily expiry utility to expire overdue reservations and release units when safe.",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "warning_days_before_expiry",
+   "fieldtype": "Int",
+   "label": "Warning Days Before Expiry",
+   "default": "2",
+   "description": "Number of days used by expiring reservation reports and alerts.",
    "in_list_view": 0
   },
   {
@@ -72,27 +87,6 @@
    "label": "Require Reservation Amount",
    "default": "0",
    "description": "Require a positive reservation amount. No accounting entry is created.",
-   "in_list_view": 0
-  },
-  {
-   "fieldname": "warning_days_before_expiry",
-   "fieldtype": "Int",
-   "label": "Warning Days Before Expiry",
-   "default": "2",
-   "description": "Number of days used by expiring reservation reports and alerts.",
-   "in_list_view": 0
-  },
-  {
-   "fieldname": "defaults_section",
-   "fieldtype": "Section Break",
-   "label": "Defaults"
-  },
-  {
-   "fieldname": "reservation_number_prefix",
-   "fieldtype": "Data",
-   "label": "Reservation Number Prefix",
-   "default": "RES",
-   "description": "Prefix used when generating reservation numbers.",
    "in_list_view": 0
   }
  ],

@@ -4,41 +4,44 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "boq_line_scope_section",
   "section",
-  "work_scope_section",
   "wbs_element",
   "wbs_code",
   "cost_code",
+  "boq_line_scope_column_break",
   "item_code",
   "description",
   "item_category",
-  "quantity_rate_section",
+  "quantity__rate_section",
   "quantity",
   "uom",
   "unit_rate",
-  "amounts_section",
   "amount",
+  "quantity__rate_column_break",
   "wastage_percent",
   "markup_percent",
   "final_quantity",
   "final_amount",
+  "cost_allocation_section",
   "budget_level",
   "cost_center",
   "source",
+  "remarks_section",
   "remarks"
  ],
  "fields": [
+  {
+   "fieldname": "boq_line_scope_section",
+   "fieldtype": "Section Break",
+   "label": "BOQ Line Scope"
+  },
   {
    "fieldname": "section",
    "fieldtype": "Data",
    "label": "Section",
    "in_list_view": 0,
    "description": "Specifies the section for this Construction BOQ Item."
-  },
-  {
-   "fieldname": "work_scope_section",
-   "fieldtype": "Section Break",
-   "label": "Work Scope"
   },
   {
    "fieldname": "wbs_element",
@@ -62,6 +65,10 @@
    "options": "Cost Code",
    "in_list_view": 0,
    "description": "Links this record to the related Cost Code."
+  },
+  {
+   "fieldname": "boq_line_scope_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "item_code",
@@ -88,9 +95,9 @@
    "description": "Selects the item category used for classification, workflow, or reporting."
   },
   {
-   "fieldname": "quantity_rate_section",
+   "fieldname": "quantity__rate_section",
    "fieldtype": "Section Break",
-   "label": "Quantity and Rate"
+   "label": "Quantity & Rate"
   },
   {
    "fieldname": "quantity",
@@ -116,17 +123,16 @@
    "description": "Specifies the unit rate for this Construction BOQ Item."
   },
   {
-   "fieldname": "amounts_section",
-   "fieldtype": "Section Break",
-   "label": "Amounts"
-  },
-  {
    "fieldname": "amount",
    "fieldtype": "Currency",
    "in_list_view": 0,
    "label": "Amount",
    "read_only": 1,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "quantity__rate_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "wastage_percent",
@@ -159,6 +165,11 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "cost_allocation_section",
+   "fieldtype": "Section Break",
+   "label": "Cost Allocation"
+  },
+  {
    "fieldname": "budget_level",
    "fieldtype": "Link",
    "label": "Budget Level",
@@ -181,6 +192,11 @@
    "options": "Estimated\nHistorical\nSupplier Quote\nContract\nManual",
    "in_list_view": 0,
    "description": "Selects the source used for classification, workflow, or reporting."
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks",

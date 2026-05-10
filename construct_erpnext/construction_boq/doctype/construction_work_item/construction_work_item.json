@@ -6,61 +6,82 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "work_item_information_section",
+  "work_item_overview_tab",
+  "work_item_overview_section",
   "project",
+  "description",
+  "item_category",
+  "work_item_overview_column_break",
+  "status",
+  "disabled",
+  "boq__wbs__cost_code_tab",
+  "boq__wbs__cost_code_section",
   "construction_boq",
   "boq_item_row_id",
+  "source_boq_revision",
   "wbs_element",
+  "boq__wbs__cost_code_column_break",
   "wbs_code",
   "cost_code",
   "item_code",
-  "description",
-  "item_category",
-  "planning_section",
+  "planned_scope_tab",
+  "planned_scope_section",
   "planned_quantity",
   "uom",
   "unit_rate",
+  "planned_scope_column_break",
   "planned_amount",
   "budget_level",
   "cost_center",
-  "status",
-  "section_break_tracking",
+  "procurement_tracking_tab",
+  "procurement_tracking_section",
   "requested_qty",
   "ordered_qty",
   "received_qty",
   "invoiced_qty",
   "consumed_qty",
   "committed_amount",
+  "procurement_tracking_column_break",
   "invoiced_amount",
   "consumed_amount",
   "procurement_status",
   "procurement_variance_qty",
   "procurement_variance_amount",
-  "measurement_certification_section",
+  "measurement_tracking_tab",
+  "measurement_tracking_section",
   "measured_qty",
   "measurement_amount",
   "measurement_progress_percent",
+  "measurement_tracking_column_break",
   "last_measurement_date",
   "measurement_status",
+  "certification_tracking_tab",
+  "certification_tracking_section",
   "certified_qty",
   "certified_amount",
   "certification_progress_percent",
+  "certification_tracking_column_break",
   "last_ipc",
   "last_certification_date",
   "certification_status",
-  "cost_variance_section",
+  "financial_summary_tab",
+  "financial_summary_section",
   "remaining_qty",
   "actual_cost",
+  "financial_summary_column_break",
   "variance_amount",
-  "progress_percent",
-  "source_boq_revision",
-  "disabled"
+  "progress_percent"
  ],
  "fields": [
   {
-   "fieldname": "work_item_information_section",
+   "fieldname": "work_item_overview_tab",
+   "fieldtype": "Tab Break",
+   "label": "Work Item Overview"
+  },
+  {
+   "fieldname": "work_item_overview_section",
    "fieldtype": "Section Break",
-   "label": "Work Item Information"
+   "label": "Work Item Overview"
   },
   {
    "fieldname": "project",
@@ -71,6 +92,51 @@
    "options": "Project",
    "reqd": 1,
    "description": "Links this record to the related Project."
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Description",
+   "description": "Additional notes or explanation for this Construction Work Item."
+  },
+  {
+   "fieldname": "item_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Item Category",
+   "options": "Material\nLabor\nEquipment\nSubcontract\nOverhead\nContingency\nOther",
+   "description": "Selects the item category used for classification, workflow, or reporting."
+  },
+  {
+   "fieldname": "work_item_overview_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 0,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Planned\nActive\nIn Progress\nCompleted\nCancelled",
+   "description": "Current status used to track this Construction Work Item through its workflow or reporting lifecycle."
+  },
+  {
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled",
+   "in_list_view": 0,
+   "description": "Specifies the disabled for this Construction Work Item."
+  },
+  {
+   "fieldname": "boq__wbs__cost_code_tab",
+   "fieldtype": "Tab Break",
+   "label": "BOQ / WBS / Cost Code"
+  },
+  {
+   "fieldname": "boq__wbs__cost_code_section",
+   "fieldtype": "Section Break",
+   "label": "BOQ / WBS / Cost Code"
   },
   {
    "fieldname": "construction_boq",
@@ -90,12 +156,23 @@
    "in_list_view": 0
   },
   {
+   "fieldname": "source_boq_revision",
+   "fieldtype": "Int",
+   "label": "Source BOQ Revision",
+   "in_list_view": 0,
+   "description": "Specifies the source boq revision for this Construction Work Item."
+  },
+  {
    "fieldname": "wbs_element",
    "fieldtype": "Link",
    "label": "WBS Element",
    "options": "WBS Element",
    "in_list_view": 0,
    "description": "Links this record to the related WBS Element."
+  },
+  {
+   "fieldname": "boq__wbs__cost_code_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "wbs_code",
@@ -121,24 +198,14 @@
    "description": "Links this record to the related Item."
   },
   {
-   "fieldname": "description",
-   "fieldtype": "Text",
-   "in_list_view": 1,
-   "label": "Description",
-   "description": "Additional notes or explanation for this Construction Work Item."
+   "fieldname": "planned_scope_tab",
+   "fieldtype": "Tab Break",
+   "label": "Planned Scope"
   },
   {
-   "fieldname": "item_category",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Item Category",
-   "options": "Material\nLabor\nEquipment\nSubcontract\nOverhead\nContingency\nOther",
-   "description": "Selects the item category used for classification, workflow, or reporting."
-  },
-  {
-   "fieldname": "planning_section",
+   "fieldname": "planned_scope_section",
    "fieldtype": "Section Break",
-   "label": "Planning"
+   "label": "Planned Scope"
   },
   {
    "fieldname": "planned_quantity",
@@ -161,6 +228,10 @@
    "label": "Unit Rate",
    "in_list_view": 0,
    "description": "Specifies the unit rate for this Construction Work Item."
+  },
+  {
+   "fieldname": "planned_scope_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "planned_amount",
@@ -186,18 +257,14 @@
    "description": "Links this record to the related Cost Center."
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 0,
-   "in_standard_filter": 1,
-   "label": "Status",
-   "options": "Planned\nActive\nIn Progress\nCompleted\nCancelled",
-   "description": "Current status used to track this Construction Work Item through its workflow or reporting lifecycle."
+   "fieldname": "procurement_tracking_tab",
+   "fieldtype": "Tab Break",
+   "label": "Procurement Tracking"
   },
   {
-   "fieldname": "section_break_tracking",
+   "fieldname": "procurement_tracking_section",
    "fieldtype": "Section Break",
-   "label": "Tracking"
+   "label": "Procurement Tracking"
   },
   {
    "default": "0",
@@ -254,6 +321,10 @@
    "description": "Committed amount from submitted Purchase Orders linked to this work item."
   },
   {
+   "fieldname": "procurement_tracking_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "default": "0",
    "fieldname": "invoiced_amount",
    "fieldtype": "Currency",
@@ -301,9 +372,14 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "measurement_certification_section",
+   "fieldname": "measurement_tracking_tab",
+   "fieldtype": "Tab Break",
+   "label": "Measurement Tracking"
+  },
+  {
+   "fieldname": "measurement_tracking_section",
    "fieldtype": "Section Break",
-   "label": "Measurement and Certification"
+   "label": "Measurement Tracking"
   },
   {
    "default": "0",
@@ -332,6 +408,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "measurement_tracking_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "last_measurement_date",
    "fieldtype": "Date",
    "label": "Last Measurement Date",
@@ -349,6 +429,16 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Current status used to track this Construction Work Item through its workflow or reporting lifecycle."
+  },
+  {
+   "fieldname": "certification_tracking_tab",
+   "fieldtype": "Tab Break",
+   "label": "Certification Tracking"
+  },
+  {
+   "fieldname": "certification_tracking_section",
+   "fieldtype": "Section Break",
+   "label": "Certification Tracking"
   },
   {
    "default": "0",
@@ -375,6 +465,10 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "certification_tracking_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "last_ipc",
@@ -405,9 +499,14 @@
    "description": "Current status used to track this Construction Work Item through its workflow or reporting lifecycle."
   },
   {
-   "fieldname": "cost_variance_section",
+   "fieldname": "financial_summary_tab",
+   "fieldtype": "Tab Break",
+   "label": "Financial Summary"
+  },
+  {
+   "fieldname": "financial_summary_section",
    "fieldtype": "Section Break",
-   "label": "Cost and Variance"
+   "label": "Financial Summary"
   },
   {
    "fieldname": "remaining_qty",
@@ -427,6 +526,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "financial_summary_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "variance_amount",
    "fieldtype": "Currency",
    "label": "Variance Amount",
@@ -441,20 +544,6 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "source_boq_revision",
-   "fieldtype": "Int",
-   "label": "Source BOQ Revision",
-   "in_list_view": 0,
-   "description": "Specifies the source boq revision for this Construction Work Item."
-  },
-  {
-   "fieldname": "disabled",
-   "fieldtype": "Check",
-   "label": "Disabled",
-   "in_list_view": 0,
-   "description": "Specifies the disabled for this Construction Work Item."
   }
  ],
  "index_web_pages_for_search": 1,

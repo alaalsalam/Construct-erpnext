@@ -7,16 +7,16 @@
  "field_order": [
   "general_settings_section",
   "enable_financial_dimension_sync",
+  "default_dimension_mode",
   "validation_rules_section",
   "require_work_item_on_project_purchase",
   "require_cost_code_on_project_purchase",
+  "validation_rules_column_break",
   "require_unit_on_unit_specific_cost",
+  "allow_blank_unit_for_project_level_cost",
   "automation_section",
   "enable_dimension_warnings",
-  "enable_dimension_blocking",
-  "allow_blank_unit_for_project_level_cost",
-  "defaults_section",
-  "default_dimension_mode"
+  "enable_dimension_blocking"
  ],
  "fields": [
   {
@@ -31,6 +31,15 @@
    "label": "Enable Financial Dimension Sync",
    "in_list_view": 0,
    "description": "Specifies the enable financial dimension sync for this Financial Dimension Settings."
+  },
+  {
+   "default": "Warning",
+   "fieldname": "default_dimension_mode",
+   "fieldtype": "Select",
+   "label": "Default Dimension Mode",
+   "options": "Warning\nBlocking\nSilent",
+   "in_list_view": 0,
+   "description": "Selects the default dimension mode used for classification, workflow, or reporting."
   },
   {
    "fieldname": "validation_rules_section",
@@ -54,12 +63,24 @@
    "description": "Specifies the require cost code on project purchase for this Financial Dimension Settings."
   },
   {
+   "fieldname": "validation_rules_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "default": "0",
    "fieldname": "require_unit_on_unit_specific_cost",
    "fieldtype": "Check",
    "label": "Require Unit On Unit Specific Cost",
    "in_list_view": 0,
    "description": "Specifies the require unit on unit specific cost for this Financial Dimension Settings."
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_blank_unit_for_project_level_cost",
+   "fieldtype": "Check",
+   "label": "Allow Blank Unit For Project Level Cost",
+   "description": "Allows project-level costs to remain without a Unit dimension when not unit-specific.",
+   "in_list_view": 0
   },
   {
    "fieldname": "automation_section",
@@ -81,28 +102,6 @@
    "label": "Enable Dimension Blocking",
    "description": "When enabled by an administrator, missing required dimensions may block selected transactions.",
    "in_list_view": 0
-  },
-  {
-   "default": "1",
-   "fieldname": "allow_blank_unit_for_project_level_cost",
-   "fieldtype": "Check",
-   "label": "Allow Blank Unit For Project Level Cost",
-   "description": "Allows project-level costs to remain without a Unit dimension when not unit-specific.",
-   "in_list_view": 0
-  },
-  {
-   "fieldname": "defaults_section",
-   "fieldtype": "Section Break",
-   "label": "Defaults"
-  },
-  {
-   "default": "Warning",
-   "fieldname": "default_dimension_mode",
-   "fieldtype": "Select",
-   "label": "Default Dimension Mode",
-   "options": "Warning\nBlocking\nSilent",
-   "in_list_view": 0,
-   "description": "Selects the default dimension mode used for classification, workflow, or reporting."
   }
  ],
  "index_web_pages_for_search": 1,

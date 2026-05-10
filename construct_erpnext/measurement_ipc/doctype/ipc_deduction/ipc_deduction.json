@@ -10,6 +10,7 @@
   "deduction_type",
   "description",
   "amount",
+  "deduction_details_column_break",
   "account",
   "remarks"
  ],
@@ -40,6 +41,10 @@
    "in_list_view": 0,
    "label": "Amount",
    "description": "Specifies the amount for this IPC Deduction."
+  },
+  {
+   "fieldname": "deduction_details_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "account",

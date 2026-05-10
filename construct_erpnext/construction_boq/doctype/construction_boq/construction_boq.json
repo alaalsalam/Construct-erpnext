@@ -6,43 +6,58 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "document_information_section",
+  "overview_tab",
+  "overview_section",
   "company",
   "project",
   "construction_budget",
   "boq_number",
   "boq_type",
+  "overview_column_break",
   "revision_no",
   "boq_date",
-  "status_workflow_section",
   "workflow_state",
   "status",
+  "project__budget_tab",
+  "project__budget_section",
   "cost_center",
   "currency",
-  "section_break_totals",
+  "boq_items_tab",
+  "boq_items_section",
+  "items",
+  "cost_summary_tab",
+  "cost_summary_section",
   "total_material_cost",
   "total_labor_cost",
   "total_equipment_cost",
   "total_subcontract_cost",
-  "column_break_totals",
   "total_overhead_cost",
+  "cost_summary_column_break",
   "total_contingency_cost",
   "total_amount",
   "total_actual_cost",
   "variance_amount",
   "variance_percent",
+  "workflow__status_tab",
+  "workflow__status_section",
   "work_items_generated",
+  "references_tab",
+  "references_section",
+  "amended_from",
+  "remarks_tab",
   "remarks_section",
-  "remarks",
-  "section_break_items",
-  "items",
-  "amended_from"
+  "remarks"
  ],
  "fields": [
   {
-   "fieldname": "document_information_section",
+   "fieldname": "overview_tab",
+   "fieldtype": "Tab Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "overview_section",
    "fieldtype": "Section Break",
-   "label": "Document Information"
+   "label": "Overview"
   },
   {
    "fieldname": "company",
@@ -89,6 +104,10 @@
    "description": "Selects the boq type used for classification, workflow, or reporting."
   },
   {
+   "fieldname": "overview_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "default": "0",
    "fieldname": "revision_no",
    "fieldtype": "Int",
@@ -103,11 +122,6 @@
    "in_list_view": 0,
    "label": "BOQ Date",
    "description": "Specifies the boq date for this Construction BOQ."
-  },
-  {
-   "fieldname": "status_workflow_section",
-   "fieldtype": "Section Break",
-   "label": "Status / Workflow"
   },
   {
    "fieldname": "workflow_state",
@@ -127,6 +141,16 @@
    "description": "Current status used to track this Construction BOQ through its workflow or reporting lifecycle."
   },
   {
+   "fieldname": "project__budget_tab",
+   "fieldtype": "Tab Break",
+   "label": "Project & Budget"
+  },
+  {
+   "fieldname": "project__budget_section",
+   "fieldtype": "Section Break",
+   "label": "Project & Budget"
+  },
+  {
    "fieldname": "cost_center",
    "fieldtype": "Link",
    "label": "Cost Center",
@@ -143,9 +167,32 @@
    "description": "Links this record to the related Currency."
   },
   {
-   "fieldname": "section_break_totals",
+   "fieldname": "boq_items_tab",
+   "fieldtype": "Tab Break",
+   "label": "BOQ Items"
+  },
+  {
+   "fieldname": "boq_items_section",
    "fieldtype": "Section Break",
-   "label": "Totals"
+   "label": "BOQ Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Construction BOQ Item",
+   "in_list_view": 0,
+   "description": "Child table used to record items for this Construction BOQ."
+  },
+  {
+   "fieldname": "cost_summary_tab",
+   "fieldtype": "Tab Break",
+   "label": "Cost Summary"
+  },
+  {
+   "fieldname": "cost_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Cost Summary"
   },
   {
    "fieldname": "total_material_cost",
@@ -180,16 +227,16 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "column_break_totals",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "total_overhead_cost",
    "fieldtype": "Currency",
    "label": "Total Overhead Cost",
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "cost_summary_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "total_contingency_cost",
@@ -232,12 +279,48 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "workflow__status_tab",
+   "fieldtype": "Tab Break",
+   "label": "Workflow & Status"
+  },
+  {
+   "fieldname": "workflow__status_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow & Status"
+  },
+  {
    "fieldname": "work_items_generated",
    "fieldtype": "Check",
    "label": "Work Items Generated",
    "read_only": 1,
    "description": "Indicates that operational Work Items have been generated from approved BOQ rows.",
    "in_list_view": 1
+  },
+  {
+   "fieldname": "references_tab",
+   "fieldtype": "Tab Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Construction BOQ",
+   "print_hide": 1,
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "remarks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks_section",
@@ -250,30 +333,6 @@
    "label": "Remarks",
    "in_list_view": 0,
    "description": "Additional notes or explanation for this Construction BOQ."
-  },
-  {
-   "fieldname": "section_break_items",
-   "fieldtype": "Section Break",
-   "label": "Items"
-  },
-  {
-   "fieldname": "items",
-   "fieldtype": "Table",
-   "label": "Items",
-   "options": "Construction BOQ Item",
-   "in_list_view": 0,
-   "description": "Child table used to record items for this Construction BOQ."
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Construction BOQ",
-   "print_hide": 1,
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
   }
  ],
  "index_web_pages_for_search": 1,

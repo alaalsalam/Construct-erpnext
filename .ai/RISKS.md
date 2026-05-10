@@ -83,3 +83,5 @@ Updated risks:
 - Executive Presentation Center KPI Number Cards are deterministic management indicators, not accounting ledgers; finance leadership should still sign off on KPI wording and thresholds before production executive rollout.
 - Dashboard Charts remain deferred to avoid presenting unapproved chart definitions or thresholds as final CFO analytics.
 - Form layout polish adds Section Break metadata to many custom DocTypes; future schema work should preserve the improved field order and avoid overwriting descriptions accidentally.
+- Deep UX hardening now adds Tab Breaks and additional Column Breaks to large custom DocTypes; future DocType edits must preserve the improved field order and avoid removing layout-only fields accidentally.
+- Universal Standard is present on disk but not installed on construction.yemenfrappe.com; do not assume its runtime Arabic/RTL assets are active unless the app is deliberately installed later.

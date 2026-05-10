@@ -6,32 +6,47 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "forecast_information_tab",
   "forecast_information_section",
   "company",
   "project",
   "forecast_date",
+  "forecast_information_column_break",
   "forecast_title",
+  "status",
+  "period_settings_tab",
+  "period_settings_section",
   "period_type",
   "start_date",
+  "period_settings_column_break",
   "end_date",
-  "status",
-  "summary_section",
   "opening_balance",
+  "forecast_periods_tab",
+  "forecast_periods_section",
+  "periods",
+  "summary_tab",
+  "summary_section",
   "total_expected_inflow",
   "total_expected_outflow",
   "net_cash_flow",
+  "summary_column_break",
   "lowest_projected_balance",
   "cash_deficit_amount",
+  "risk_indicators_tab",
   "risk_indicators_section",
   "cash_risk_status",
-  "narrative_section",
+  "executive_summary_tab",
+  "executive_summary_section",
   "executive_summary",
   "key_risks",
-  "recommendations",
-  "periods_section",
-  "periods"
+  "recommendations"
  ],
  "fields": [
+  {
+   "fieldname": "forecast_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Forecast Information"
+  },
   {
    "fieldname": "forecast_information_section",
    "fieldtype": "Section Break",
@@ -64,11 +79,34 @@
    "description": "Specifies the forecast date for this Project Cash Flow Forecast."
   },
   {
+   "fieldname": "forecast_information_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "forecast_title",
    "fieldtype": "Data",
    "in_list_view": 0,
    "label": "Forecast Title",
    "description": "Specifies the forecast title for this Project Cash Flow Forecast."
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 0,
+   "label": "Status",
+   "options": "Draft\nGenerated\nReviewed\nArchived",
+   "description": "Current status used to track this Project Cash Flow Forecast through its workflow or reporting lifecycle."
+  },
+  {
+   "fieldname": "period_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Period Settings"
+  },
+  {
+   "fieldname": "period_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Period Settings"
   },
   {
    "default": "Monthly",
@@ -90,6 +128,10 @@
    "description": "Specifies the start date for this Project Cash Flow Forecast."
   },
   {
+   "fieldname": "period_settings_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "end_date",
    "fieldtype": "Date",
    "in_list_view": 0,
@@ -98,26 +140,40 @@
    "description": "Specifies the end date for this Project Cash Flow Forecast."
   },
   {
-   "default": "Draft",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 0,
-   "label": "Status",
-   "options": "Draft\nGenerated\nReviewed\nArchived",
-   "description": "Current status used to track this Project Cash Flow Forecast through its workflow or reporting lifecycle."
-  },
-  {
-   "fieldname": "summary_section",
-   "fieldtype": "Section Break",
-   "label": "Summary"
-  },
-  {
    "default": "0",
    "fieldname": "opening_balance",
    "fieldtype": "Currency",
    "label": "Opening Balance",
    "description": "Starting cash position used for forecast running balance.",
    "in_list_view": 0
+  },
+  {
+   "fieldname": "forecast_periods_tab",
+   "fieldtype": "Tab Break",
+   "label": "Forecast Periods"
+  },
+  {
+   "fieldname": "forecast_periods_section",
+   "fieldtype": "Section Break",
+   "label": "Forecast Periods"
+  },
+  {
+   "fieldname": "periods",
+   "fieldtype": "Table",
+   "label": "Periods",
+   "options": "Project Cash Flow Forecast Period",
+   "in_list_view": 0,
+   "description": "Child table used to record periods for this Project Cash Flow Forecast."
+  },
+  {
+   "fieldname": "summary_tab",
+   "fieldtype": "Tab Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
   },
   {
    "fieldname": "total_expected_inflow",
@@ -144,6 +200,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "summary_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "lowest_projected_balance",
    "fieldtype": "Currency",
    "label": "Lowest Projected Balance",
@@ -160,6 +220,11 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "risk_indicators_tab",
+   "fieldtype": "Tab Break",
+   "label": "Risk Indicators"
+  },
+  {
    "fieldname": "risk_indicators_section",
    "fieldtype": "Section Break",
    "label": "Risk Indicators"
@@ -171,12 +236,18 @@
    "label": "Cash Risk Status",
    "options": "Green\nYellow\nRed",
    "read_only": 1,
-   "description": "Deterministic cash risk based on projected balances and deficits."
+   "description": "Deterministic cash risk based on projected balances and deficits.",
+   "in_standard_filter": 1
   },
   {
-   "fieldname": "narrative_section",
+   "fieldname": "executive_summary_tab",
+   "fieldtype": "Tab Break",
+   "label": "Executive Summary"
+  },
+  {
+   "fieldname": "executive_summary_section",
    "fieldtype": "Section Break",
-   "label": "Narrative"
+   "label": "Executive Summary"
   },
   {
    "fieldname": "executive_summary",
@@ -198,19 +269,6 @@
    "label": "Recommendations",
    "in_list_view": 0,
    "description": "Additional notes or explanation for this Project Cash Flow Forecast."
-  },
-  {
-   "fieldname": "periods_section",
-   "fieldtype": "Section Break",
-   "label": "Forecast Periods"
-  },
-  {
-   "fieldname": "periods",
-   "fieldtype": "Table",
-   "label": "Periods",
-   "options": "Project Cash Flow Forecast Period",
-   "in_list_view": 0,
-   "description": "Child table used to record periods for this Project Cash Flow Forecast."
   }
  ],
  "index_web_pages_for_search": 1,

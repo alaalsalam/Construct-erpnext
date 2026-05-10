@@ -6,51 +6,68 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "unit_identification_tab",
   "unit_identification_section",
   "unit_code",
   "unit_name",
   "unit_type",
+  "location_hierarchy_tab",
   "location_hierarchy_section",
   "real_estate_project",
   "project",
+  "location_hierarchy_column_break",
   "building",
   "floor",
+  "physical_details_tab",
   "physical_details_section",
   "area",
   "area_uom",
   "bedrooms",
   "bathrooms",
   "direction",
+  "physical_details_column_break",
   "finishing_status",
   "has_parking",
   "parking_count",
   "has_storage",
   "storage_area",
-  "usage_status_section",
+  "usage__status_tab",
+  "usage__status_section",
   "status",
+  "marketing_status",
   "usage_purpose",
+  "usage__status_column_break",
   "property_nature",
   "legal_status",
   "technical_status",
-  "marketing_status",
+  "financial_expectations_tab",
   "financial_expectations_section",
   "expected_sale_price",
   "expected_monthly_rent",
-  "cost_profitability_section",
+  "cost_allocation__profitability_tab",
+  "cost_allocation__profitability_section",
   "allocated_cost",
   "allocated_cost_source",
   "allocated_cost_date",
   "latest_cost_allocation",
+  "cost_allocation__profitability_column_break",
   "expected_margin",
   "expected_margin_percent",
   "profitability_status",
-  "classification_attributes_section",
+  "accounting_dimensions__traceability_tab",
+  "accounting_dimensions__traceability_section",
   "tags",
   "dynamic_attributes_json",
+  "remarks_tab",
   "remarks_section",
   "remarks"
  ],
  "fields": [
+  {
+   "fieldname": "unit_identification_tab",
+   "fieldtype": "Tab Break",
+   "label": "Unit Identification"
+  },
   {
    "fieldname": "unit_identification_section",
    "fieldtype": "Section Break",
@@ -81,6 +98,11 @@
    "description": "Links this record to the related Unit Type."
   },
   {
+   "fieldname": "location_hierarchy_tab",
+   "fieldtype": "Tab Break",
+   "label": "Location Hierarchy"
+  },
+  {
    "fieldname": "location_hierarchy_section",
    "fieldtype": "Section Break",
    "label": "Location Hierarchy"
@@ -105,6 +127,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "location_hierarchy_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "building",
    "fieldtype": "Link",
    "in_standard_filter": 1,
@@ -121,6 +147,11 @@
    "options": "Floor",
    "in_list_view": 0,
    "description": "Links this record to the related Floor."
+  },
+  {
+   "fieldname": "physical_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Physical Details"
   },
   {
    "fieldname": "physical_details_section",
@@ -165,6 +196,10 @@
    "description": "Selects the direction used for classification, workflow, or reporting."
   },
   {
+   "fieldname": "physical_details_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "finishing_status",
    "fieldtype": "Select",
    "label": "Finishing Status",
@@ -201,7 +236,12 @@
    "description": "Specifies the storage area for this Unit."
   },
   {
-   "fieldname": "usage_status_section",
+   "fieldname": "usage__status_tab",
+   "fieldtype": "Tab Break",
+   "label": "Usage & Status"
+  },
+  {
+   "fieldname": "usage__status_section",
    "fieldtype": "Section Break",
    "label": "Usage & Status"
   },
@@ -215,6 +255,15 @@
    "description": "Inventory status only until Reservation, Sales Contract, and Lease Contract are implemented."
   },
   {
+   "fieldname": "marketing_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Marketing Status",
+   "options": "Available\nReserved\nSold\nRented\nBlocked",
+   "in_list_view": 1,
+   "description": "Commercial availability status used by inventory, reservation, sales, and rental workflows."
+  },
+  {
    "fieldname": "usage_purpose",
    "fieldtype": "Select",
    "in_standard_filter": 1,
@@ -222,6 +271,10 @@
    "options": "Sale\nLong Term Rent\nShort Term Rent\nInvestment\nDevelopment\nMixed",
    "in_list_view": 0,
    "description": "Selects the usage purpose used for classification, workflow, or reporting."
+  },
+  {
+   "fieldname": "usage__status_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "property_nature",
@@ -249,13 +302,9 @@
    "description": "Selects the technical status used for classification, workflow, or reporting."
   },
   {
-   "fieldname": "marketing_status",
-   "fieldtype": "Select",
-   "in_standard_filter": 1,
-   "label": "Marketing Status",
-   "options": "Available\nReserved\nSold\nRented\nBlocked",
-   "in_list_view": 1,
-   "description": "Commercial availability status used by inventory, reservation, sales, and rental workflows."
+   "fieldname": "financial_expectations_tab",
+   "fieldtype": "Tab Break",
+   "label": "Financial Expectations"
   },
   {
    "fieldname": "financial_expectations_section",
@@ -277,7 +326,12 @@
    "description": "Specifies the expected monthly rent for this Unit."
   },
   {
-   "fieldname": "cost_profitability_section",
+   "fieldname": "cost_allocation__profitability_tab",
+   "fieldtype": "Tab Break",
+   "label": "Cost Allocation & Profitability"
+  },
+  {
+   "fieldname": "cost_allocation__profitability_section",
    "fieldtype": "Section Break",
    "label": "Cost Allocation & Profitability"
   },
@@ -313,6 +367,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "cost_allocation__profitability_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "expected_margin",
    "fieldtype": "Currency",
    "label": "Expected Margin",
@@ -339,9 +397,14 @@
    "description": "Current status used to track this Unit through its workflow or reporting lifecycle."
   },
   {
-   "fieldname": "classification_attributes_section",
+   "fieldname": "accounting_dimensions__traceability_tab",
+   "fieldtype": "Tab Break",
+   "label": "Accounting Dimensions / Traceability"
+  },
+  {
+   "fieldname": "accounting_dimensions__traceability_section",
    "fieldtype": "Section Break",
-   "label": "Classification / Attributes"
+   "label": "Accounting Dimensions / Traceability"
   },
   {
    "fieldname": "tags",
@@ -357,6 +420,11 @@
    "options": "JSON",
    "in_list_view": 0,
    "description": "Specifies the dynamic attributes json for this Unit."
+  },
+  {
+   "fieldname": "remarks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks_section",

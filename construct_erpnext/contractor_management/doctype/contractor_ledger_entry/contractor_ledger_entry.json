@@ -6,41 +6,57 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "transaction_information_section",
+  "ledger_information_tab",
+  "ledger_information_section",
   "company",
+  "posting_date",
+  "ledger_information_column_break",
+  "transaction_type",
+  "running_balance",
+  "project__contractor_tab",
+  "project__contractor_section",
   "project",
   "contractor",
+  "project__contractor_column_break",
   "contractor_account",
   "subcontract",
-  "posting_date",
-  "transaction_type",
+  "references_tab",
   "references_section",
   "reference_doctype",
   "reference_name",
   "ipc",
+  "references_column_break",
   "purchase_invoice",
   "payment_entry",
+  "amounts_tab",
   "amounts_section",
   "gross_amount",
   "retention_amount",
   "advance_amount",
   "recovered_amount",
+  "amounts_column_break",
   "deduction_amount",
   "invoice_amount",
   "payment_amount",
   "outstanding_amount",
-  "running_balance",
-  "remarks",
+  "reversal_tab",
   "reversal_section",
-  "audit_section",
   "is_reversed",
-  "reversed_entry"
+  "reversed_entry",
+  "remarks_tab",
+  "remarks_section",
+  "remarks"
  ],
  "fields": [
   {
-   "fieldname": "transaction_information_section",
+   "fieldname": "ledger_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Ledger Information"
+  },
+  {
+   "fieldname": "ledger_information_section",
    "fieldtype": "Section Break",
-   "label": "Transaction Information"
+   "label": "Ledger Information"
   },
   {
    "fieldname": "company",
@@ -49,6 +65,45 @@
    "options": "Company",
    "in_list_view": 0,
    "description": "Links this record to the related Company."
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 0,
+   "label": "Posting Date",
+   "description": "Specifies the posting date for this Contractor Ledger Entry."
+  },
+  {
+   "fieldname": "ledger_information_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "in_list_view": 0,
+   "in_standard_filter": 1,
+   "label": "Transaction Type",
+   "options": "IPC Certified\nRetention Held\nRetention Released\nAdvance Paid\nAdvance Recovery\nPenalty\nDeduction\nPurchase Invoice Created\nPayment Made\nPayment Difference\nAdjustment",
+   "description": "Selects the transaction type used for classification, workflow, or reporting."
+  },
+  {
+   "default": "0",
+   "fieldname": "running_balance",
+   "fieldtype": "Currency",
+   "label": "Running Balance",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "project__contractor_tab",
+   "fieldtype": "Tab Break",
+   "label": "Project / Contractor"
+  },
+  {
+   "fieldname": "project__contractor_section",
+   "fieldtype": "Section Break",
+   "label": "Project / Contractor"
   },
   {
    "fieldname": "project",
@@ -71,6 +126,10 @@
    "description": "Links this record to the related Supplier."
   },
   {
+   "fieldname": "project__contractor_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "contractor_account",
    "fieldtype": "Link",
    "in_standard_filter": 1,
@@ -88,20 +147,9 @@
    "description": "Links this record to the related Subcontract."
   },
   {
-   "fieldname": "posting_date",
-   "fieldtype": "Date",
-   "in_list_view": 0,
-   "label": "Posting Date",
-   "description": "Specifies the posting date for this Contractor Ledger Entry."
-  },
-  {
-   "fieldname": "transaction_type",
-   "fieldtype": "Select",
-   "in_list_view": 0,
-   "in_standard_filter": 1,
-   "label": "Transaction Type",
-   "options": "IPC Certified\nRetention Held\nRetention Released\nAdvance Paid\nAdvance Recovery\nPenalty\nDeduction\nPurchase Invoice Created\nPayment Made\nPayment Difference\nAdjustment",
-   "description": "Selects the transaction type used for classification, workflow, or reporting."
+   "fieldname": "references_tab",
+   "fieldtype": "Tab Break",
+   "label": "References"
   },
   {
    "fieldname": "references_section",
@@ -133,6 +181,10 @@
    "description": "Links this record to the related Interim Payment Certificate."
   },
   {
+   "fieldname": "references_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "purchase_invoice",
    "fieldtype": "Link",
    "label": "Purchase Invoice",
@@ -147,6 +199,11 @@
    "options": "Payment Entry",
    "in_list_view": 0,
    "description": "Links this record to the related Payment Entry."
+  },
+  {
+   "fieldname": "amounts_tab",
+   "fieldtype": "Tab Break",
+   "label": "Amounts"
   },
   {
    "fieldname": "amounts_section",
@@ -186,6 +243,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "amounts_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "default": "0",
    "fieldname": "deduction_amount",
    "fieldtype": "Currency",
@@ -218,30 +279,14 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "default": "0",
-   "fieldname": "running_balance",
-   "fieldtype": "Currency",
-   "label": "Running Balance",
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "remarks",
-   "fieldtype": "Small Text",
-   "label": "Remarks",
-   "in_list_view": 0,
-   "description": "Additional notes or explanation for this Contractor Ledger Entry."
+   "fieldname": "reversal_tab",
+   "fieldtype": "Tab Break",
+   "label": "Reversal"
   },
   {
    "fieldname": "reversal_section",
    "fieldtype": "Section Break",
    "label": "Reversal"
-  },
-  {
-   "fieldname": "audit_section",
-   "fieldtype": "Section Break",
-   "label": "Audit"
   },
   {
    "default": "0",
@@ -258,6 +303,23 @@
    "options": "Contractor Ledger Entry",
    "in_list_view": 0,
    "description": "Links this record to the related Contractor Ledger Entry."
+  },
+  {
+   "fieldname": "remarks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Contractor Ledger Entry."
   }
  ],
  "index_web_pages_for_search": 1,

@@ -6,50 +6,66 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "snapshot_information_section",
+  "evm_information_tab",
+  "evm_information_section",
   "company",
   "project",
   "calculation_date",
+  "evm_information_column_break",
   "evm_title",
   "status",
+  "source_values_tab",
   "source_values_section",
   "budget_at_completion",
   "earned_value",
+  "source_values_column_break",
   "actual_cost",
   "planned_value",
+  "progress_tab",
   "progress_section",
   "planned_progress_percent",
   "actual_progress_percent",
   "certification_progress_percent",
+  "variances_tab",
   "variances_section",
   "cost_variance",
   "schedule_variance",
   "variance_at_completion",
+  "performance_indices_tab",
   "performance_indices_section",
   "cost_performance_index",
   "schedule_performance_index",
   "to_complete_performance_index",
+  "forecast_tab",
   "forecast_section",
   "estimate_at_completion",
   "estimate_to_complete",
   "forecast_overrun_amount",
-  "risk_indicators_section",
+  "risk_tab",
+  "risk_section",
   "cost_status",
   "schedule_status",
   "overall_evm_status",
-  "narrative_section",
+  "executive_summary_tab",
+  "executive_summary_section",
   "executive_summary",
   "key_risks",
   "recommendations",
+  "references_tab",
   "references_section",
   "project_financial_snapshot",
   "cash_flow_forecast"
  ],
  "fields": [
   {
-   "fieldname": "snapshot_information_section",
+   "fieldname": "evm_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "EVM Information"
+  },
+  {
+   "fieldname": "evm_information_section",
    "fieldtype": "Section Break",
-   "label": "Snapshot Information"
+   "label": "EVM Information"
   },
   {
    "fieldname": "company",
@@ -79,6 +95,10 @@
    "description": "Specifies the calculation date for this Project EVM Metrics."
   },
   {
+   "fieldname": "evm_information_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "evm_title",
    "fieldtype": "Data",
    "in_list_view": 0,
@@ -93,6 +113,11 @@
    "label": "Status",
    "options": "Draft\nCalculated\nReviewed\nArchived",
    "description": "Current status used to track this Project EVM Metrics through its workflow or reporting lifecycle."
+  },
+  {
+   "fieldname": "source_values_tab",
+   "fieldtype": "Tab Break",
+   "label": "Source Values"
   },
   {
    "fieldname": "source_values_section",
@@ -116,6 +141,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "source_values_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "actual_cost",
    "fieldtype": "Currency",
    "label": "Actual Cost",
@@ -130,6 +159,11 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "progress_tab",
+   "fieldtype": "Tab Break",
+   "label": "Progress"
   },
   {
    "fieldname": "progress_section",
@@ -158,6 +192,11 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "variances_tab",
+   "fieldtype": "Tab Break",
+   "label": "Variances"
   },
   {
    "fieldname": "variances_section",
@@ -189,6 +228,11 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "performance_indices_tab",
+   "fieldtype": "Tab Break",
+   "label": "Performance Indices"
+  },
+  {
    "fieldname": "performance_indices_section",
    "fieldtype": "Section Break",
    "label": "Performance Indices"
@@ -216,6 +260,11 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "forecast_tab",
+   "fieldtype": "Tab Break",
+   "label": "Forecast"
   },
   {
    "fieldname": "forecast_section",
@@ -247,9 +296,14 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "risk_indicators_section",
+   "fieldname": "risk_tab",
+   "fieldtype": "Tab Break",
+   "label": "Risk"
+  },
+  {
+   "fieldname": "risk_section",
    "fieldtype": "Section Break",
-   "label": "Risk Indicators"
+   "label": "Risk"
   },
   {
    "fieldname": "cost_status",
@@ -276,12 +330,18 @@
    "label": "Overall EVM Status",
    "options": "On Track\nWatch\nAt Risk",
    "read_only": 1,
-   "description": "Current status used to track this Project EVM Metrics through its workflow or reporting lifecycle."
+   "description": "Current status used to track this Project EVM Metrics through its workflow or reporting lifecycle.",
+   "in_standard_filter": 1
   },
   {
-   "fieldname": "narrative_section",
+   "fieldname": "executive_summary_tab",
+   "fieldtype": "Tab Break",
+   "label": "Executive Summary"
+  },
+  {
+   "fieldname": "executive_summary_section",
    "fieldtype": "Section Break",
-   "label": "Narrative"
+   "label": "Executive Summary"
   },
   {
    "fieldname": "executive_summary",
@@ -303,6 +363,11 @@
    "label": "Recommendations",
    "in_list_view": 0,
    "description": "Additional notes or explanation for this Project EVM Metrics."
+  },
+  {
+   "fieldname": "references_tab",
+   "fieldtype": "Tab Break",
+   "label": "References"
   },
   {
    "fieldname": "references_section",

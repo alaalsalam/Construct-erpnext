@@ -364,6 +364,17 @@ Product workspace readiness:
 - List Views for key DocTypes show operational identifiers, status, and summary values without adding heavy calculated columns.
 - This UX readiness layer changes layout metadata only and does not add Sales/Rental, accounting, portal, or CRM features.
 
+## Deep Form And Workspace UX Hardening
+
+- A stricter UX hardening pass was added before Sales Contract and Installment Plan development.
+- Universal Standard exists in bench apps and is used as a read-only reference for Arabic translation and RTL-oriented UX patterns, but it is not installed on construction.yemenfrappe.com.
+- Large completed DocTypes now use Tab Breaks with clear business sections and Column Breaks to reduce long vertical forms.
+- Smaller master/settings DocTypes keep concise Section Break based layouts.
+- Arabic translations in construct_erpnext/translations/ar.csv cover reviewed DocType labels, field labels, field descriptions, Tab/Section labels, workspace labels, report labels, and KPI Number Card labels.
+- Major workspaces include deterministic Number Cards or card-like process sections where supported.
+- Dashboard Charts remain deferred until finance leadership approves chart definitions and threshold wording.
+- This hardening remains metadata/readiness only: no fieldnames, fieldtypes, required rules, business logic, accounting documents, submitted records, or GL entries are changed.
+
 ## Existing DocTypes To Reuse
 
 - Construction Budget

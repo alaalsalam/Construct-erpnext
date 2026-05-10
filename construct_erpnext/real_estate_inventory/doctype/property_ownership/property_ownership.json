@@ -6,14 +6,14 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "basic_information_section",
+  "ownership_information_section",
   "real_estate_project",
   "unit",
   "property_owner",
-  "ownership_details_section",
+  "ownership_information_column_break",
   "ownership_percentage",
   "ownership_role",
-  "validity_status_section",
+  "dates__status_section",
   "start_date",
   "end_date",
   "status",
@@ -22,9 +22,9 @@
  ],
  "fields": [
   {
-   "fieldname": "basic_information_section",
+   "fieldname": "ownership_information_section",
    "fieldtype": "Section Break",
-   "label": "Basic Information"
+   "label": "Ownership Information"
   },
   {
    "fieldname": "real_estate_project",
@@ -56,9 +56,8 @@
    "description": "Links this record to the related Property Owner."
   },
   {
-   "fieldname": "ownership_details_section",
-   "fieldtype": "Section Break",
-   "label": "Ownership Details"
+   "fieldname": "ownership_information_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "ownership_percentage",
@@ -77,9 +76,9 @@
    "description": "Selects the ownership role used for classification, workflow, or reporting."
   },
   {
-   "fieldname": "validity_status_section",
+   "fieldname": "dates__status_section",
    "fieldtype": "Section Break",
-   "label": "Validity and Status"
+   "label": "Dates & Status"
   },
   {
    "fieldname": "start_date",
@@ -101,7 +100,8 @@
    "in_list_view": 1,
    "label": "Status",
    "options": "Active\nTransferred\nEnded\nCancelled",
-   "description": "Current status used to track this Property Ownership through its workflow or reporting lifecycle."
+   "description": "Current status used to track this Property Ownership through its workflow or reporting lifecycle.",
+   "in_standard_filter": 1
   },
   {
    "fieldname": "remarks_section",

@@ -9,6 +9,7 @@
   "unit",
   "building",
   "floor",
+  "unit_details_column_break",
   "unit_type",
   "unit_status",
   "area",
@@ -20,6 +21,7 @@
   "expected_sale_price",
   "expected_monthly_rent",
   "expected_margin",
+  "profitability_column_break",
   "expected_margin_percent",
   "profitability_status",
   "remarks_section",
@@ -57,6 +59,10 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "unit_details_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "unit_type",
@@ -135,6 +141,10 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "profitability_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "expected_margin_percent",

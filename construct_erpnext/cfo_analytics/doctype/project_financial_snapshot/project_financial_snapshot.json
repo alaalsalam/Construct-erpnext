@@ -6,52 +6,71 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "snapshot_information_tab",
   "snapshot_information_section",
   "company",
   "project",
   "snapshot_date",
+  "snapshot_information_column_break",
   "snapshot_title",
   "status",
-  "budget_cost_section",
+  "boq__budget_tab",
+  "boq__budget_section",
   "boq_total_amount",
   "boq_material_amount",
   "boq_labor_amount",
+  "boq__budget_column_break",
   "boq_equipment_amount",
   "boq_subcontract_amount",
   "boq_overhead_amount",
+  "procurement_tab",
   "procurement_section",
   "requested_amount",
   "committed_amount",
   "received_amount",
+  "procurement_column_break",
   "procurement_invoiced_amount",
   "consumed_amount",
-  "progress_forecast_section",
+  "procurement_progress_percent",
+  "measurement_tab",
+  "measurement_section",
   "measured_amount",
   "measured_progress_percent",
+  "measurement_progress_percent",
+  "ipc__contractor_tab",
+  "ipc__contractor_section",
   "certified_gross_amount",
   "certified_net_amount",
   "retention_held_amount",
   "retention_released_amount",
+  "ipc__contractor_column_break",
   "contractor_outstanding_amount",
   "contractor_paid_amount",
+  "certification_progress_percent",
+  "variance_tab",
   "variance_section",
   "budget_vs_committed_variance",
   "budget_vs_invoiced_variance",
+  "variance_column_break",
   "budget_vs_certified_variance",
   "consumed_vs_measured_variance",
+  "risk_indicators_tab",
   "risk_indicators_section",
-  "procurement_progress_percent",
-  "measurement_progress_percent",
-  "certification_progress_percent",
   "cost_risk_status",
   "cash_risk_status",
   "overall_status",
+  "executive_summary_tab",
   "executive_summary_section",
   "executive_summary",
   "key_risks",
   "recommendations"
  ],
  "fields": [
+  {
+   "fieldname": "snapshot_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Snapshot Information"
+  },
   {
    "fieldname": "snapshot_information_section",
    "fieldtype": "Section Break",
@@ -85,6 +104,10 @@
    "description": "Specifies the snapshot date for this Project Financial Snapshot."
   },
   {
+   "fieldname": "snapshot_information_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "snapshot_title",
    "fieldtype": "Data",
    "in_list_view": 0,
@@ -98,12 +121,18 @@
    "in_list_view": 0,
    "label": "Status",
    "options": "Draft\nGenerated\nReviewed\nArchived",
-   "description": "Current status used to track this Project Financial Snapshot through its workflow or reporting lifecycle."
+   "description": "Current status used to track this Project Financial Snapshot through its workflow or reporting lifecycle.",
+   "in_standard_filter": 1
   },
   {
-   "fieldname": "budget_cost_section",
+   "fieldname": "boq__budget_tab",
+   "fieldtype": "Tab Break",
+   "label": "BOQ / Budget"
+  },
+  {
+   "fieldname": "boq__budget_section",
    "fieldtype": "Section Break",
-   "label": "Budget / Cost"
+   "label": "BOQ / Budget"
   },
   {
    "fieldname": "boq_total_amount",
@@ -130,6 +159,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "boq__budget_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "boq_equipment_amount",
    "fieldtype": "Currency",
    "label": "BOQ Equipment Amount",
@@ -152,6 +185,11 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "procurement_tab",
+   "fieldtype": "Tab Break",
+   "label": "Procurement"
   },
   {
    "fieldname": "procurement_section",
@@ -183,6 +221,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "procurement_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "procurement_invoiced_amount",
    "fieldtype": "Currency",
    "label": "Procurement Invoiced Amount",
@@ -199,9 +241,22 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "progress_forecast_section",
+   "fieldname": "procurement_progress_percent",
+   "fieldtype": "Percent",
+   "label": "Procurement Progress Percent",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "measurement_tab",
+   "fieldtype": "Tab Break",
+   "label": "Measurement"
+  },
+  {
+   "fieldname": "measurement_section",
    "fieldtype": "Section Break",
-   "label": "Progress / Certification"
+   "label": "Measurement"
   },
   {
    "fieldname": "measured_amount",
@@ -218,6 +273,24 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "measurement_progress_percent",
+   "fieldtype": "Percent",
+   "label": "Measurement Progress Percent",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "ipc__contractor_tab",
+   "fieldtype": "Tab Break",
+   "label": "IPC / Contractor"
+  },
+  {
+   "fieldname": "ipc__contractor_section",
+   "fieldtype": "Section Break",
+   "label": "IPC / Contractor"
   },
   {
    "fieldname": "certified_gross_amount",
@@ -252,6 +325,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "ipc__contractor_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "contractor_outstanding_amount",
    "fieldtype": "Currency",
    "label": "Contractor Outstanding Amount",
@@ -266,6 +343,19 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "certification_progress_percent",
+   "fieldtype": "Percent",
+   "label": "Certification Progress Percent",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "variance_tab",
+   "fieldtype": "Tab Break",
+   "label": "Variance"
   },
   {
    "fieldname": "variance_section",
@@ -289,6 +379,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "variance_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "budget_vs_certified_variance",
    "fieldtype": "Currency",
    "label": "Budget vs Certified Variance",
@@ -305,33 +399,14 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "risk_indicators_section",
-   "fieldtype": "Section Break",
+   "fieldname": "risk_indicators_tab",
+   "fieldtype": "Tab Break",
    "label": "Risk Indicators"
   },
   {
-   "fieldname": "procurement_progress_percent",
-   "fieldtype": "Percent",
-   "label": "Procurement Progress Percent",
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "measurement_progress_percent",
-   "fieldtype": "Percent",
-   "label": "Measurement Progress Percent",
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "certification_progress_percent",
-   "fieldtype": "Percent",
-   "label": "Certification Progress Percent",
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "fieldname": "risk_indicators_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Indicators"
   },
   {
    "fieldname": "cost_risk_status",
@@ -359,6 +434,11 @@
    "options": "On Track\nWatch\nAt Risk",
    "read_only": 1,
    "description": "Simple CFO status based on deterministic risk rules."
+  },
+  {
+   "fieldname": "executive_summary_tab",
+   "fieldtype": "Tab Break",
+   "label": "Executive Summary"
   },
   {
    "fieldname": "executive_summary_section",

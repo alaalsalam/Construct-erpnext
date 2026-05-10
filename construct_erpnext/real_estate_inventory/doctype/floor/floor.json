@@ -9,13 +9,14 @@
   "basic_information_section",
   "real_estate_project",
   "building",
-  "floor_details_section",
+  "basic_information_column_break",
   "floor_code",
   "floor_name",
+  "classification_section",
   "floor_number",
   "floor_type",
   "total_units",
-  "status_section",
+  "remarks_section",
   "remarks"
  ],
  "fields": [
@@ -45,9 +46,8 @@
    "description": "Links this record to the related Building."
   },
   {
-   "fieldname": "floor_details_section",
-   "fieldtype": "Section Break",
-   "label": "Floor Details"
+   "fieldname": "basic_information_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "floor_code",
@@ -66,6 +66,11 @@
    "description": "Specifies the floor name for this Floor."
   },
   {
+   "fieldname": "classification_section",
+   "fieldtype": "Section Break",
+   "label": "Classification"
+  },
+  {
    "fieldname": "floor_number",
    "fieldtype": "Int",
    "label": "Floor Number",
@@ -78,7 +83,8 @@
    "label": "Floor Type",
    "options": "Residential\nCommercial\nParking\nService\nRoof\nBasement\nOther",
    "in_list_view": 0,
-   "description": "Selects the floor type used for classification, workflow, or reporting."
+   "description": "Selects the floor type used for classification, workflow, or reporting.",
+   "in_standard_filter": 1
   },
   {
    "fieldname": "total_units",
@@ -89,9 +95,9 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "status_section",
+   "fieldname": "remarks_section",
    "fieldtype": "Section Break",
-   "label": "Status"
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks",

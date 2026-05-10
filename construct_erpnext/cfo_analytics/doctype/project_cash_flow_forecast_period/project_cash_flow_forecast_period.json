@@ -9,30 +9,31 @@
   "period_start",
   "period_end",
   "period_label",
-  "inflow_section",
   "inflows_section",
   "expected_sales_inflow",
   "expected_rent_inflow",
+  "inflows_column_break",
   "expected_other_inflow",
   "total_inflow",
-  "outflow_section",
   "outflows_section",
   "purchase_order_outflow",
   "purchase_invoice_outflow",
   "ipc_outflow",
   "retention_release_outflow",
+  "outflows_column_break",
   "advance_outflow",
   "other_outflow",
   "total_outflow",
   "balance_section",
   "net_cash_flow",
   "running_balance",
+  "balance_column_break",
   "cash_deficit",
   "deficit_amount",
-  "source_section",
   "source_counts_section",
   "purchase_order_count",
   "purchase_invoice_count",
+  "source_counts_column_break",
   "ipc_count",
   "retention_count",
   "remarks_section",
@@ -66,11 +67,6 @@
    "description": "Specifies the period for this Project Cash Flow Forecast Period."
   },
   {
-   "fieldname": "inflow_section",
-   "fieldtype": "Section Break",
-   "label": "Inflows"
-  },
-  {
    "fieldname": "inflows_section",
    "fieldtype": "Section Break",
    "label": "Inflows"
@@ -92,6 +88,10 @@
    "description": "Specifies the expected rent inflow for this Project Cash Flow Forecast Period."
   },
   {
+   "fieldname": "inflows_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "default": "0",
    "fieldname": "expected_other_inflow",
    "fieldtype": "Currency",
@@ -106,11 +106,6 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "outflow_section",
-   "fieldtype": "Section Break",
-   "label": "Outflows"
   },
   {
    "fieldname": "outflows_section",
@@ -148,6 +143,10 @@
    "label": "Retention Release Outflow",
    "in_list_view": 0,
    "description": "Specifies the retention release outflow for this Project Cash Flow Forecast Period."
+  },
+  {
+   "fieldname": "outflows_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "default": "0",
@@ -195,6 +194,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "balance_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "cash_deficit",
    "fieldtype": "Check",
    "label": "Cash Deficit",
@@ -209,11 +212,6 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "source_section",
-   "fieldtype": "Section Break",
-   "label": "Source Counts"
   },
   {
    "fieldname": "source_counts_section",
@@ -233,6 +231,10 @@
    "label": "Purchase Invoice Count",
    "in_list_view": 0,
    "description": "Specifies the purchase invoice count for this Project Cash Flow Forecast Period."
+  },
+  {
+   "fieldname": "source_counts_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "ipc_count",

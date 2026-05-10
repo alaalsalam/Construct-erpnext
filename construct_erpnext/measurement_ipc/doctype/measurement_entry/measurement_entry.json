@@ -6,20 +6,28 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "entry_information_tab",
   "entry_information_section",
   "measurement_book",
+  "measurement_date",
+  "entry_information_column_break",
+  "status",
+  "rejection_reason",
+  "work_item_details_tab",
+  "work_item_details_section",
   "company",
   "project",
   "contractor",
   "construction_boq",
-  "work_item_details_section",
   "construction_work_item",
+  "work_item_details_column_break",
   "wbs_element",
   "cost_code",
   "item_code",
   "description",
   "uom",
-  "quantity_summary_section",
+  "measurement_calculation_tab",
+  "measurement_calculation_section",
   "planned_quantity",
   "previous_measured_qty",
   "current_measured_qty",
@@ -27,9 +35,9 @@
   "remaining_qty",
   "unit_rate",
   "measured_amount",
-  "measurement_dimensions_section",
   "measurement_method",
   "length",
+  "measurement_calculation_column_break",
   "width",
   "height",
   "number_of_units",
@@ -38,30 +46,36 @@
   "variance_qty",
   "variance_percent",
   "variance_reason",
+  "field_documentation_tab",
   "field_documentation_section",
   "measurement_location",
   "grid_or_zone",
   "engineer_comment",
   "qs_comment",
   "photo",
+  "field_documentation_column_break",
   "attachment",
   "gps_latitude",
   "gps_longitude",
   "gps_accuracy",
-  "people_dates_section",
-  "measurement_date",
+  "verification_tab",
+  "verification_section",
   "measured_by",
   "submitted_by",
+  "verification_column_break",
   "verified_by",
   "verified_on",
-  "status_section",
-  "status",
-  "rejection_reason",
-  "ipc_links_section",
+  "ipc_link_tab",
+  "ipc_link_section",
   "interim_payment_certificate",
   "ipc_line_reference"
  ],
  "fields": [
+  {
+   "fieldname": "entry_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Entry Information"
+  },
   {
    "fieldname": "entry_information_section",
    "fieldtype": "Section Break",
@@ -78,6 +92,44 @@
    "description": "Links this record to the related Measurement Book."
   },
   {
+   "fieldname": "measurement_date",
+   "fieldtype": "Date",
+   "label": "Measurement Date",
+   "in_list_view": 1,
+   "description": "Specifies the measurement date for this Measurement Entry."
+  },
+  {
+   "fieldname": "entry_information_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nVerified\nRejected\nLocked\nCancelled",
+   "description": "Current status used to track this Measurement Entry through its workflow or reporting lifecycle."
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Measurement Entry."
+  },
+  {
+   "fieldname": "work_item_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Work Item Details"
+  },
+  {
+   "fieldname": "work_item_details_section",
+   "fieldtype": "Section Break",
+   "label": "Work Item Details"
+  },
+  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
@@ -92,7 +144,7 @@
    "label": "Project",
    "options": "Project",
    "reqd": 1,
-   "in_list_view": 0,
+   "in_list_view": 1,
    "description": "Links this record to the related Project."
   },
   {
@@ -112,19 +164,18 @@
    "description": "Links this record to the related Construction BOQ."
   },
   {
-   "fieldname": "work_item_details_section",
-   "fieldtype": "Section Break",
-   "label": "Work Item Details"
-  },
-  {
    "fieldname": "construction_work_item",
    "fieldtype": "Link",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Construction Work Item",
    "options": "Construction Work Item",
    "reqd": 1,
    "description": "Work Item being measured in the field."
+  },
+  {
+   "fieldname": "work_item_details_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "wbs_element",
@@ -166,9 +217,14 @@
    "description": "Links this record to the related UOM."
   },
   {
-   "fieldname": "quantity_summary_section",
+   "fieldname": "measurement_calculation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Measurement Calculation"
+  },
+  {
+   "fieldname": "measurement_calculation_section",
    "fieldtype": "Section Break",
-   "label": "Quantity Summary"
+   "label": "Measurement Calculation"
   },
   {
    "fieldname": "planned_quantity",
@@ -225,11 +281,6 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "measurement_dimensions_section",
-   "fieldtype": "Section Break",
-   "label": "Measurement Dimensions"
-  },
-  {
    "fieldname": "measurement_method",
    "fieldtype": "Select",
    "label": "Measurement Method",
@@ -243,6 +294,10 @@
    "label": "Length",
    "in_list_view": 0,
    "description": "Specifies the length for this Measurement Entry."
+  },
+  {
+   "fieldname": "measurement_calculation_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "width",
@@ -279,7 +334,7 @@
    "fieldtype": "Float",
    "label": "Accepted Qty",
    "description": "Quantity accepted by QS verification for this entry.",
-   "in_list_view": 0
+   "in_list_view": 1
   },
   {
    "fieldname": "variance_qty",
@@ -303,6 +358,11 @@
    "label": "Variance Reason",
    "in_list_view": 0,
    "description": "Additional notes or explanation for this Measurement Entry."
+  },
+  {
+   "fieldname": "field_documentation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Field Documentation"
   },
   {
    "fieldname": "field_documentation_section",
@@ -345,6 +405,10 @@
    "description": "Attachment used as supporting documentation for this Measurement Entry."
   },
   {
+   "fieldname": "field_documentation_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "attachment",
    "fieldtype": "Attach",
    "label": "Attachment",
@@ -373,16 +437,14 @@
    "description": "Specifies the gps accuracy for this Measurement Entry."
   },
   {
-   "fieldname": "people_dates_section",
-   "fieldtype": "Section Break",
-   "label": "People and Dates"
+   "fieldname": "verification_tab",
+   "fieldtype": "Tab Break",
+   "label": "Verification"
   },
   {
-   "fieldname": "measurement_date",
-   "fieldtype": "Date",
-   "label": "Measurement Date",
-   "in_list_view": 0,
-   "description": "Specifies the measurement date for this Measurement Entry."
+   "fieldname": "verification_section",
+   "fieldtype": "Section Break",
+   "label": "Verification"
   },
   {
    "fieldname": "measured_by",
@@ -401,6 +463,10 @@
    "description": "Links this record to the related User."
   },
   {
+   "fieldname": "verification_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "verified_by",
    "fieldtype": "Link",
    "label": "Verified By",
@@ -416,31 +482,14 @@
    "description": "Specifies the verified on for this Measurement Entry."
   },
   {
-   "fieldname": "status_section",
+   "fieldname": "ipc_link_tab",
+   "fieldtype": "Tab Break",
+   "label": "IPC Link"
+  },
+  {
+   "fieldname": "ipc_link_section",
    "fieldtype": "Section Break",
-   "label": "Status"
-  },
-  {
-   "default": "Draft",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 0,
-   "in_standard_filter": 1,
-   "label": "Status",
-   "options": "Draft\nSubmitted\nVerified\nRejected\nLocked\nCancelled",
-   "description": "Current status used to track this Measurement Entry through its workflow or reporting lifecycle."
-  },
-  {
-   "fieldname": "rejection_reason",
-   "fieldtype": "Small Text",
-   "label": "Rejection Reason",
-   "in_list_view": 0,
-   "description": "Additional notes or explanation for this Measurement Entry."
-  },
-  {
-   "fieldname": "ipc_links_section",
-   "fieldtype": "Section Break",
-   "label": "Future IPC Links"
+   "label": "IPC Link"
   },
   {
    "fieldname": "interim_payment_certificate",

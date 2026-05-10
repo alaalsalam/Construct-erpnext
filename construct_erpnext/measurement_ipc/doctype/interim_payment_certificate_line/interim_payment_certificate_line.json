@@ -6,42 +6,46 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "measurement_reference_section",
+  "measurement_source_section",
   "measurement_entry",
   "measurement_book",
   "construction_work_item",
   "construction_boq",
   "wbs_element",
+  "measurement_source_column_break",
   "cost_code",
   "item_code",
   "description",
   "uom",
-  "quantity_certification_section",
+  "quantities_section",
   "boq_qty",
   "previous_certified_qty",
   "current_measured_qty",
+  "quantities_column_break",
   "current_certified_qty",
   "total_certified_qty",
   "remaining_qty",
-  "amounts_section",
+  "rates__amounts_section",
   "unit_rate",
   "current_amount",
   "previous_certified_amount",
   "total_certified_amount",
+  "rates__amounts_column_break",
   "retention_percent",
   "retention_amount",
   "net_line_amount",
   "controls_section",
   "engineer_comment",
   "qs_comment",
+  "controls_column_break",
   "variation_reference",
   "remarks"
  ],
  "fields": [
   {
-   "fieldname": "measurement_reference_section",
+   "fieldname": "measurement_source_section",
    "fieldtype": "Section Break",
-   "label": "Measurement Reference"
+   "label": "Measurement Source"
   },
   {
    "fieldname": "measurement_entry",
@@ -85,6 +89,10 @@
    "description": "Links this record to the related WBS Element."
   },
   {
+   "fieldname": "measurement_source_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "cost_code",
    "fieldtype": "Link",
    "label": "Cost Code",
@@ -116,9 +124,9 @@
    "description": "Links this record to the related UOM."
   },
   {
-   "fieldname": "quantity_certification_section",
+   "fieldname": "quantities_section",
    "fieldtype": "Section Break",
-   "label": "Quantity Certification"
+   "label": "Quantities"
   },
   {
    "fieldname": "boq_qty",
@@ -145,6 +153,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "quantities_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "current_certified_qty",
    "fieldtype": "Float",
    "in_list_view": 0,
@@ -168,9 +180,9 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "amounts_section",
+   "fieldname": "rates__amounts_section",
    "fieldtype": "Section Break",
-   "label": "Amounts"
+   "label": "Rates / Amounts"
   },
   {
    "fieldname": "unit_rate",
@@ -202,6 +214,10 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "rates__amounts_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "retention_percent",
@@ -244,6 +260,10 @@
    "label": "QS Comment",
    "in_list_view": 0,
    "description": "Additional notes or explanation for this Interim Payment Certificate Line."
+  },
+  {
+   "fieldname": "controls_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "variation_reference",

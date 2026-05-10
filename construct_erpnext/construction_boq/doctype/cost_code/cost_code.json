@@ -9,14 +9,13 @@
   "basic_information_section",
   "cost_code",
   "cost_code_name",
-  "classification_section",
   "parent_cost_code",
+  "classification__relationship_section",
   "cost_category",
-  "column_break_flags",
   "is_group",
   "status_section",
   "disabled",
-  "notes_section",
+  "remarks_section",
   "description"
  ],
  "fields": [
@@ -44,17 +43,17 @@
    "description": "Specifies the cost code name for this Cost Code."
   },
   {
-   "fieldname": "classification_section",
-   "fieldtype": "Section Break",
-   "label": "Classification"
-  },
-  {
    "fieldname": "parent_cost_code",
    "fieldtype": "Link",
    "label": "Parent Cost Code",
    "options": "Cost Code",
    "in_list_view": 0,
    "description": "Links this record to the related Cost Code."
+  },
+  {
+   "fieldname": "classification__relationship_section",
+   "fieldtype": "Section Break",
+   "label": "Classification / Relationship"
   },
   {
    "fieldname": "cost_category",
@@ -64,10 +63,6 @@
    "label": "Cost Category",
    "options": "Material\nLabor\nEquipment\nSubcontract\nOverhead\nContingency\nOther",
    "description": "Selects the cost category used for classification, workflow, or reporting."
-  },
-  {
-   "fieldname": "column_break_flags",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "is_group",
@@ -89,9 +84,9 @@
    "description": "Specifies the disabled for this Cost Code."
   },
   {
-   "fieldname": "notes_section",
+   "fieldname": "remarks_section",
    "fieldtype": "Section Break",
-   "label": "Notes"
+   "label": "Remarks"
   },
   {
    "fieldname": "description",

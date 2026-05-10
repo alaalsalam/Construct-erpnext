@@ -6,55 +6,82 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "certificate_information_tab",
+  "certificate_information_section",
   "company",
-  "project",
-  "contractor",
-  "contractor_account",
-  "subcontract",
-  "construction_boq",
-  "measurement_book",
   "certificate_number",
   "certificate_sequence",
   "period_start",
+  "certificate_information_column_break",
   "period_end",
-  "workflow_section",
   "workflow_state",
   "status",
-  "submitted_by",
-  "submitted_on",
-  "reviewed_by",
-  "reviewed_on",
-  "certified_by",
-  "certified_on",
-  "approved_by",
-  "approved_on",
-  "financial_section",
+  "rejection_reason",
+  "project__contractor_tab",
+  "project__contractor_section",
+  "project",
+  "contractor",
+  "contractor_account",
+  "project__contractor_column_break",
+  "subcontract",
+  "construction_boq",
+  "measurement_source_tab",
+  "measurement_source_section",
+  "measurement_book",
+  "lines",
+  "financial_summary_tab",
+  "financial_summary_section",
   "gross_amount",
   "previous_certified_amount",
   "current_certified_amount",
   "total_certified_amount",
   "retention_percent",
   "retention_amount",
+  "financial_summary_column_break",
   "advance_recovery_amount",
   "penalty_amount",
   "withholding_tax_amount",
   "other_deduction_amount",
   "net_payable",
-  "invoice_section",
+  "deductions",
+  "purchase_invoice__payment_tab",
+  "purchase_invoice__payment_section",
   "purchase_invoice",
   "paid_amount",
   "outstanding_amount",
+  "purchase_invoice__payment_column_break",
   "payment_difference_amount",
   "payment_difference_reason",
   "expected_next_payment_date",
-  "control_section",
-  "rejection_reason",
-  "remarks",
-  "lines",
-  "deductions",
-  "amended_from"
+  "workflow__approval_tab",
+  "workflow__approval_section",
+  "submitted_by",
+  "submitted_on",
+  "reviewed_by",
+  "reviewed_on",
+  "workflow__approval_column_break",
+  "certified_by",
+  "certified_on",
+  "approved_by",
+  "approved_on",
+  "references_tab",
+  "references_section",
+  "amended_from",
+  "remarks_tab",
+  "remarks_section",
+  "remarks"
  ],
  "fields": [
+  {
+   "fieldname": "certificate_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Certificate Information"
+  },
+  {
+   "fieldname": "certificate_information_section",
+   "fieldtype": "Section Break",
+   "label": "Certificate Information"
+  },
   {
    "fieldname": "company",
    "fieldtype": "Link",
@@ -62,6 +89,79 @@
    "options": "Company",
    "in_list_view": 0,
    "description": "Links this record to the related Company."
+  },
+  {
+   "fieldname": "certificate_number",
+   "fieldtype": "Data",
+   "in_list_view": 0,
+   "label": "Certificate Number",
+   "reqd": 1,
+   "description": "Specifies the certificate number for this Interim Payment Certificate."
+  },
+  {
+   "fieldname": "certificate_sequence",
+   "fieldtype": "Int",
+   "label": "Certificate Sequence",
+   "in_list_view": 0,
+   "description": "Specifies the certificate sequence for this Interim Payment Certificate."
+  },
+  {
+   "fieldname": "period_start",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Period Start",
+   "reqd": 1,
+   "in_list_view": 0,
+   "description": "Specifies the period start for this Interim Payment Certificate."
+  },
+  {
+   "fieldname": "certificate_information_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "period_end",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Period End",
+   "reqd": 1,
+   "in_list_view": 0,
+   "description": "Specifies the period end for this Interim Payment Certificate."
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Workflow State",
+   "options": "Draft\nSubmitted\nUnder Review\nCertified\nApproved\nInvoice Created\nPartially Paid\nPaid\nClosed\nRejected",
+   "in_list_view": 0,
+   "description": "Current status used to track this Interim Payment Certificate through its workflow or reporting lifecycle."
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nUnder Review\nCertified\nApproved\nInvoice Created\nPartially Paid\nPaid\nClosed\nRejected",
+   "description": "Current status used to track this Interim Payment Certificate through its workflow or reporting lifecycle."
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Interim Payment Certificate."
+  },
+  {
+   "fieldname": "project__contractor_tab",
+   "fieldtype": "Tab Break",
+   "label": "Project / Contractor"
+  },
+  {
+   "fieldname": "project__contractor_section",
+   "fieldtype": "Section Break",
+   "label": "Project / Contractor"
   },
   {
    "fieldname": "project",
@@ -93,6 +193,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "project__contractor_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "subcontract",
    "fieldtype": "Link",
    "label": "Subcontract",
@@ -109,6 +213,16 @@
    "description": "Links this record to the related Construction BOQ."
   },
   {
+   "fieldname": "measurement_source_tab",
+   "fieldtype": "Tab Break",
+   "label": "Measurement Source"
+  },
+  {
+   "fieldname": "measurement_source_section",
+   "fieldtype": "Section Break",
+   "label": "Measurement Source"
+  },
+  {
    "fieldname": "measurement_book",
    "fieldtype": "Link",
    "label": "Measurement Book",
@@ -117,132 +231,20 @@
    "in_list_view": 0
   },
   {
-   "fieldname": "certificate_number",
-   "fieldtype": "Data",
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "Lines",
+   "options": "Interim Payment Certificate Line",
    "in_list_view": 0,
-   "label": "Certificate Number",
-   "reqd": 1,
-   "description": "Specifies the certificate number for this Interim Payment Certificate."
+   "description": "Child table used to record lines for this Interim Payment Certificate."
   },
   {
-   "fieldname": "certificate_sequence",
-   "fieldtype": "Int",
-   "label": "Certificate Sequence",
-   "in_list_view": 0,
-   "description": "Specifies the certificate sequence for this Interim Payment Certificate."
+   "fieldname": "financial_summary_tab",
+   "fieldtype": "Tab Break",
+   "label": "Financial Summary"
   },
   {
-   "fieldname": "period_start",
-   "fieldtype": "Date",
-   "in_standard_filter": 1,
-   "label": "Period Start",
-   "reqd": 1,
-   "in_list_view": 0,
-   "description": "Specifies the period start for this Interim Payment Certificate."
-  },
-  {
-   "fieldname": "period_end",
-   "fieldtype": "Date",
-   "in_standard_filter": 1,
-   "label": "Period End",
-   "reqd": 1,
-   "in_list_view": 0,
-   "description": "Specifies the period end for this Interim Payment Certificate."
-  },
-  {
-   "fieldname": "workflow_section",
-   "fieldtype": "Section Break",
-   "label": "Workflow"
-  },
-  {
-   "fieldname": "workflow_state",
-   "fieldtype": "Select",
-   "in_standard_filter": 1,
-   "label": "Workflow State",
-   "options": "Draft\nSubmitted\nUnder Review\nCertified\nApproved\nInvoice Created\nPartially Paid\nPaid\nClosed\nRejected",
-   "in_list_view": 0,
-   "description": "Current status used to track this Interim Payment Certificate through its workflow or reporting lifecycle."
-  },
-  {
-   "default": "Draft",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Status",
-   "options": "Draft\nSubmitted\nUnder Review\nCertified\nApproved\nInvoice Created\nPartially Paid\nPaid\nClosed\nRejected",
-   "description": "Current status used to track this Interim Payment Certificate through its workflow or reporting lifecycle."
-  },
-  {
-   "fieldname": "submitted_by",
-   "fieldtype": "Link",
-   "label": "Submitted By",
-   "options": "User",
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "submitted_on",
-   "fieldtype": "Datetime",
-   "label": "Submitted On",
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "reviewed_by",
-   "fieldtype": "Link",
-   "label": "Reviewed By",
-   "options": "User",
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "reviewed_on",
-   "fieldtype": "Datetime",
-   "label": "Reviewed On",
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "certified_by",
-   "fieldtype": "Link",
-   "label": "Certified By",
-   "options": "User",
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "certified_on",
-   "fieldtype": "Datetime",
-   "label": "Certified On",
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "approved_by",
-   "fieldtype": "Link",
-   "label": "Approved By",
-   "options": "User",
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "approved_on",
-   "fieldtype": "Datetime",
-   "label": "Approved On",
-   "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
-  },
-  {
-   "fieldname": "financial_section",
+   "fieldname": "financial_summary_section",
    "fieldtype": "Section Break",
    "label": "Financial Summary"
   },
@@ -295,6 +297,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "financial_summary_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "advance_recovery_amount",
    "fieldtype": "Currency",
    "label": "Advance Recovery Amount",
@@ -331,9 +337,22 @@
    "description": "Current payable amount after retention and deductions."
   },
   {
-   "fieldname": "invoice_section",
+   "fieldname": "deductions",
+   "fieldtype": "Table",
+   "label": "Deductions",
+   "options": "IPC Deduction",
+   "in_list_view": 0,
+   "description": "Child table used to record deductions for this Interim Payment Certificate."
+  },
+  {
+   "fieldname": "purchase_invoice__payment_tab",
+   "fieldtype": "Tab Break",
+   "label": "Purchase Invoice / Payment"
+  },
+  {
+   "fieldname": "purchase_invoice__payment_section",
    "fieldtype": "Section Break",
-   "label": "Invoice And Payment"
+   "label": "Purchase Invoice / Payment"
   },
   {
    "fieldname": "purchase_invoice",
@@ -361,6 +380,10 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "purchase_invoice__payment_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "payment_difference_amount",
    "fieldtype": "Currency",
    "label": "Payment Difference Amount",
@@ -383,39 +406,96 @@
    "description": "Specifies the expected next payment date for this Interim Payment Certificate."
   },
   {
-   "fieldname": "control_section",
+   "fieldname": "workflow__approval_tab",
+   "fieldtype": "Tab Break",
+   "label": "Workflow & Approval"
+  },
+  {
+   "fieldname": "workflow__approval_section",
    "fieldtype": "Section Break",
-   "label": "Controls"
+   "label": "Workflow & Approval"
   },
   {
-   "fieldname": "rejection_reason",
-   "fieldtype": "Small Text",
-   "label": "Rejection Reason",
+   "fieldname": "submitted_by",
+   "fieldtype": "Link",
+   "label": "Submitted By",
+   "options": "User",
+   "read_only": 1,
    "in_list_view": 0,
-   "description": "Additional notes or explanation for this Interim Payment Certificate."
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "remarks",
-   "fieldtype": "Text",
-   "label": "Remarks",
+   "fieldname": "submitted_on",
+   "fieldtype": "Datetime",
+   "label": "Submitted On",
+   "read_only": 1,
    "in_list_view": 0,
-   "description": "Additional notes or explanation for this Interim Payment Certificate."
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "lines",
-   "fieldtype": "Table",
-   "label": "Lines",
-   "options": "Interim Payment Certificate Line",
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Reviewed By",
+   "options": "User",
+   "read_only": 1,
    "in_list_view": 0,
-   "description": "Child table used to record lines for this Interim Payment Certificate."
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "deductions",
-   "fieldtype": "Table",
-   "label": "Deductions",
-   "options": "IPC Deduction",
+   "fieldname": "reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "Reviewed On",
+   "read_only": 1,
    "in_list_view": 0,
-   "description": "Child table used to record deductions for this Interim Payment Certificate."
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "workflow__approval_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "certified_by",
+   "fieldtype": "Link",
+   "label": "Certified By",
+   "options": "User",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "certified_on",
+   "fieldtype": "Datetime",
+   "label": "Certified On",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "approved_on",
+   "fieldtype": "Datetime",
+   "label": "Approved On",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "references_tab",
+   "fieldtype": "Tab Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
   },
   {
    "fieldname": "amended_from",
@@ -425,6 +505,23 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "remarks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Interim Payment Certificate."
   }
  ],
  "index_web_pages_for_search": 1,

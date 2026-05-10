@@ -6,27 +6,29 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "basic_information_section",
+  "advance_information_section",
   "company",
   "project",
   "contractor",
+  "advance_information_column_break",
   "contractor_account",
-  "advance_details_section",
+  "status",
+  "advance_amounts_section",
   "advance_date",
   "advance_amount",
-  "recovery_status_section",
+  "advance_amounts_column_break",
   "recovered_amount",
   "outstanding_advance_amount",
-  "status",
+  "references_section",
   "payment_entry",
   "remarks_section",
   "remarks"
  ],
  "fields": [
   {
-   "fieldname": "basic_information_section",
+   "fieldname": "advance_information_section",
    "fieldtype": "Section Break",
-   "label": "Basic Information"
+   "label": "Advance Information"
   },
   {
    "fieldname": "company",
@@ -57,6 +59,10 @@
    "description": "Links this record to the related Supplier."
   },
   {
+   "fieldname": "advance_information_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "contractor_account",
    "fieldtype": "Link",
    "label": "Contractor Account",
@@ -65,9 +71,19 @@
    "description": "Links this record to the related Contractor Account."
   },
   {
-   "fieldname": "advance_details_section",
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nFully Recovered\nCancelled",
+   "description": "Current status used to track this Advance Register through its workflow or reporting lifecycle."
+  },
+  {
+   "fieldname": "advance_amounts_section",
    "fieldtype": "Section Break",
-   "label": "Advance Details"
+   "label": "Advance Amounts"
   },
   {
    "fieldname": "advance_date",
@@ -85,9 +101,8 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "recovery_status_section",
-   "fieldtype": "Section Break",
-   "label": "Recovery Status"
+   "fieldname": "advance_amounts_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "default": "0",
@@ -108,14 +123,9 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "default": "Active",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Status",
-   "options": "Active\nFully Recovered\nCancelled",
-   "description": "Current status used to track this Advance Register through its workflow or reporting lifecycle."
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
   },
   {
    "fieldname": "payment_entry",

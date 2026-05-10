@@ -9,15 +9,18 @@
   "basic_information_section",
   "company",
   "project",
+  "basic_information_column_break",
   "project_name_ar",
-  "development_type",
   "status",
+  "classification_section",
+  "development_type",
   "location_summary",
-  "area_units_section",
+  "area_and_unit_counts_section",
   "total_land_area",
   "total_built_up_area",
   "total_units",
   "available_units",
+  "area_and_unit_counts_column_break",
   "reserved_units",
   "sold_units",
   "rented_units",
@@ -50,19 +53,15 @@
    "description": "Links this record to the related Project."
   },
   {
-   "fieldname": "project_name_ar",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Project Name Arabic",
-   "description": "Specifies the project name arabic for this Real Estate Project."
+   "fieldname": "basic_information_column_break",
+   "fieldtype": "Column Break"
   },
   {
-   "fieldname": "development_type",
-   "fieldtype": "Select",
-   "label": "Development Type",
-   "options": "Residential\nCommercial\nMixed Use\nLand Development\nHospitality\nIndustrial\nOther",
+   "fieldname": "project_name_ar",
+   "fieldtype": "Data",
    "in_list_view": 0,
-   "description": "Selects the development type used for classification, workflow, or reporting."
+   "label": "Project Name Arabic",
+   "description": "Specifies the project name arabic for this Real Estate Project."
   },
   {
    "fieldname": "status",
@@ -74,6 +73,19 @@
    "description": "Current status used to track this Real Estate Project through its workflow or reporting lifecycle."
   },
   {
+   "fieldname": "classification_section",
+   "fieldtype": "Section Break",
+   "label": "Classification"
+  },
+  {
+   "fieldname": "development_type",
+   "fieldtype": "Select",
+   "label": "Development Type",
+   "options": "Residential\nCommercial\nMixed Use\nLand Development\nHospitality\nIndustrial\nOther",
+   "in_list_view": 0,
+   "description": "Selects the development type used for classification, workflow, or reporting."
+  },
+  {
    "fieldname": "location_summary",
    "fieldtype": "Data",
    "label": "Location Summary",
@@ -81,7 +93,7 @@
    "description": "Specifies the location summary for this Real Estate Project."
   },
   {
-   "fieldname": "area_units_section",
+   "fieldname": "area_and_unit_counts_section",
    "fieldtype": "Section Break",
    "label": "Area and Unit Counts"
   },
@@ -116,11 +128,15 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
+   "fieldname": "area_and_unit_counts_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "reserved_units",
    "fieldtype": "Int",
    "label": "Reserved Units",
    "read_only": 1,
-   "in_list_view": 0,
+   "in_list_view": 1,
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {

@@ -6,35 +6,49 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "basic_information_section",
+  "retention_information_tab",
+  "retention_information_section",
   "company",
+  "status",
+  "retained_on",
+  "project__contractor__ipc_tab",
+  "project__contractor__ipc_section",
   "project",
   "contractor",
   "contractor_account",
+  "project__contractor__ipc_column_break",
   "ipc",
   "purchase_invoice",
-  "retention_details_section",
+  "retention_amounts_tab",
+  "retention_amounts_section",
   "retention_percent",
   "gross_amount",
   "retention_amount",
-  "retained_on",
-  "release_details_section",
-  "release_due_date",
-  "defect_liability_months",
-  "status_section",
-  "status",
+  "retention_amounts_column_break",
   "released_amount",
   "remaining_retention_amount",
+  "release_schedule_tab",
+  "release_schedule_section",
+  "release_due_date",
+  "defect_liability_months",
+  "release_references_tab",
+  "release_references_section",
   "release_payment_entry",
   "release_journal_entry",
+  "remarks_tab",
   "remarks_section",
   "remarks"
  ],
  "fields": [
   {
-   "fieldname": "basic_information_section",
+   "fieldname": "retention_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Retention Information"
+  },
+  {
+   "fieldname": "retention_information_section",
    "fieldtype": "Section Break",
-   "label": "Basic Information"
+   "label": "Retention Information"
   },
   {
    "fieldname": "company",
@@ -45,13 +59,40 @@
    "description": "Links this record to the related Company."
   },
   {
+   "default": "Held",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Held\nEligible for Release\nPartially Released\nReleased\nCancelled",
+   "description": "Current status used to track this Retention Register through its workflow or reporting lifecycle."
+  },
+  {
+   "fieldname": "retained_on",
+   "fieldtype": "Date",
+   "label": "Retained On",
+   "in_list_view": 0,
+   "description": "Specifies the retained on for this Retention Register."
+  },
+  {
+   "fieldname": "project__contractor__ipc_tab",
+   "fieldtype": "Tab Break",
+   "label": "Project / Contractor / IPC"
+  },
+  {
+   "fieldname": "project__contractor__ipc_section",
+   "fieldtype": "Section Break",
+   "label": "Project / Contractor / IPC"
+  },
+  {
    "fieldname": "project",
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
    "reqd": 1,
-   "in_list_view": 0,
+   "in_list_view": 1,
    "description": "Links this record to the related Project."
   },
   {
@@ -73,6 +114,10 @@
    "description": "Links this record to the related Contractor Account."
   },
   {
+   "fieldname": "project__contractor__ipc_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "ipc",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -90,9 +135,14 @@
    "description": "Links this record to the related Purchase Invoice."
   },
   {
-   "fieldname": "retention_details_section",
+   "fieldname": "retention_amounts_tab",
+   "fieldtype": "Tab Break",
+   "label": "Retention Amounts"
+  },
+  {
+   "fieldname": "retention_amounts_section",
    "fieldtype": "Section Break",
-   "label": "Retention Details"
+   "label": "Retention Amounts"
   },
   {
    "fieldname": "retention_percent",
@@ -116,46 +166,8 @@
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "retained_on",
-   "fieldtype": "Date",
-   "label": "Retained On",
-   "in_list_view": 0,
-   "description": "Specifies the retained on for this Retention Register."
-  },
-  {
-   "fieldname": "release_details_section",
-   "fieldtype": "Section Break",
-   "label": "Release Details"
-  },
-  {
-   "fieldname": "release_due_date",
-   "fieldtype": "Date",
-   "label": "Release Due Date",
-   "in_list_view": 0,
-   "description": "Specifies the release due date for this Retention Register."
-  },
-  {
-   "default": "12",
-   "fieldname": "defect_liability_months",
-   "fieldtype": "Int",
-   "label": "Defect Liability Months",
-   "in_list_view": 0,
-   "description": "Specifies the defect liability months for this Retention Register."
-  },
-  {
-   "fieldname": "status_section",
-   "fieldtype": "Section Break",
-   "label": "Status"
-  },
-  {
-   "default": "Held",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Status",
-   "options": "Held\nEligible for Release\nPartially Released\nReleased\nCancelled",
-   "description": "Current status used to track this Retention Register through its workflow or reporting lifecycle."
+   "fieldname": "retention_amounts_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "default": "0",
@@ -175,6 +187,41 @@
    "description": "Retention amount still held and not yet released."
   },
   {
+   "fieldname": "release_schedule_tab",
+   "fieldtype": "Tab Break",
+   "label": "Release Schedule"
+  },
+  {
+   "fieldname": "release_schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Release Schedule"
+  },
+  {
+   "fieldname": "release_due_date",
+   "fieldtype": "Date",
+   "label": "Release Due Date",
+   "in_list_view": 0,
+   "description": "Specifies the release due date for this Retention Register."
+  },
+  {
+   "default": "12",
+   "fieldname": "defect_liability_months",
+   "fieldtype": "Int",
+   "label": "Defect Liability Months",
+   "in_list_view": 0,
+   "description": "Specifies the defect liability months for this Retention Register."
+  },
+  {
+   "fieldname": "release_references_tab",
+   "fieldtype": "Tab Break",
+   "label": "Release References"
+  },
+  {
+   "fieldname": "release_references_section",
+   "fieldtype": "Section Break",
+   "label": "Release References"
+  },
+  {
    "fieldname": "release_payment_entry",
    "fieldtype": "Link",
    "label": "Release Payment Entry",
@@ -189,6 +236,11 @@
    "options": "Journal Entry",
    "in_list_view": 0,
    "description": "Links this record to the related Journal Entry."
+  },
+  {
+   "fieldname": "remarks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks_section",

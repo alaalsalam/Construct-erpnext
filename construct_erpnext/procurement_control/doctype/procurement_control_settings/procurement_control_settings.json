@@ -7,13 +7,13 @@
  "field_order": [
   "general_settings_section",
   "enable_work_item_sync",
-  "validation_rules_section",
-  "enable_budget_warning",
-  "enable_budget_blocking",
-  "overrun_tolerance_percent",
-  "defaults_section",
   "default_site_warehouse",
-  "require_work_item_on_project_purchase"
+  "validation_rules_section",
+  "require_work_item_on_project_purchase",
+  "enable_budget_warning",
+  "validation_rules_column_break",
+  "enable_budget_blocking",
+  "overrun_tolerance_percent"
  ],
  "fields": [
   {
@@ -30,9 +30,25 @@
    "description": "Specifies the enable work item sync for this Procurement Control Settings."
   },
   {
+   "fieldname": "default_site_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Site Warehouse",
+   "options": "Warehouse",
+   "in_list_view": 0,
+   "description": "Links this record to the related Warehouse."
+  },
+  {
    "fieldname": "validation_rules_section",
    "fieldtype": "Section Break",
    "label": "Validation Rules"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_work_item_on_project_purchase",
+   "fieldtype": "Check",
+   "label": "Require Work Item On Project Purchase",
+   "in_list_view": 0,
+   "description": "Specifies the require work item on project purchase for this Procurement Control Settings."
   },
   {
    "default": "1",
@@ -41,6 +57,10 @@
    "label": "Enable Budget Warning",
    "in_list_view": 0,
    "description": "Specifies the enable budget warning for this Procurement Control Settings."
+  },
+  {
+   "fieldname": "validation_rules_column_break",
+   "fieldtype": "Column Break"
   },
   {
    "default": "0",
@@ -57,27 +77,6 @@
    "label": "Overrun Tolerance Percent",
    "in_list_view": 0,
    "description": "Specifies the overrun tolerance percent for this Procurement Control Settings."
-  },
-  {
-   "fieldname": "defaults_section",
-   "fieldtype": "Section Break",
-   "label": "Defaults"
-  },
-  {
-   "fieldname": "default_site_warehouse",
-   "fieldtype": "Link",
-   "label": "Default Site Warehouse",
-   "options": "Warehouse",
-   "in_list_view": 0,
-   "description": "Links this record to the related Warehouse."
-  },
-  {
-   "default": "0",
-   "fieldname": "require_work_item_on_project_purchase",
-   "fieldtype": "Check",
-   "label": "Require Work Item On Project Purchase",
-   "in_list_view": 0,
-   "description": "Specifies the require work item on project purchase for this Procurement Control Settings."
   }
  ],
  "index_web_pages_for_search": 1,

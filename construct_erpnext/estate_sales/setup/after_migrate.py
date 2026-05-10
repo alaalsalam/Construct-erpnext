@@ -1,4 +1,5 @@
 import frappe
+from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
 
 
 WORKFLOW_NAME = "Sales Contract Approval Workflow"
@@ -15,6 +16,8 @@ WORKFLOW_ACTIONS = [
 
 def after_migrate():
     ensure_sales_installment_child_table_schema()
+    ensure_sales_invoice_collection_settings()
+    ensure_sales_invoice_collection_custom_fields()
     ensure_sales_contract_workflow()
 
 
@@ -34,6 +37,94 @@ def ensure_sales_installment_child_table_schema():
     for column in ("parent", "parentfield", "parenttype"):
         if not frappe.db.has_column("Sales Installment Schedule", column):
             add_column("Sales Installment Schedule", column, "Data", length=140)
+
+
+def ensure_sales_invoice_collection_settings():
+    if frappe.db.exists("DocType", "Sales Invoice Collection Settings"):
+        settings = frappe.get_single("Sales Invoice Collection Settings")
+        defaults = {
+            "enable_sales_invoice_generation": 1,
+            "auto_submit_sales_invoice": 0,
+            "allow_grouped_installment_invoice": 1,
+            "require_unit_dimension": 1,
+            "auto_update_installment_status": 1,
+            "overdue_grace_days": 0,
+            "allow_partial_collection": 1,
+            "block_duplicate_invoice_for_installment": 1,
+            "require_customer_on_contract": 1,
+            "require_unit_on_invoice_item": 1,
+            "use_company_default_currency": 1,
+        }
+        changed = False
+        for fieldname, value in defaults.items():
+            if not frappe.db.exists(
+                "Singles",
+                {"doctype": "Sales Invoice Collection Settings", "field": fieldname},
+            ):
+                settings.set(fieldname, value)
+                changed = True
+        if changed:
+            settings.save(ignore_permissions=True)
+
+
+def ensure_sales_invoice_collection_custom_fields():
+    if not frappe.db.exists("DocType", "Sales Invoice Item"):
+        return
+
+    custom_fields = {
+        "Sales Invoice Item": [
+            {
+                "fieldname": "sales_contract",
+                "label": "Sales Contract",
+                "fieldtype": "Link",
+                "options": "Sales Contract",
+                "insert_after": "unit" if frappe.get_meta("Sales Invoice Item").has_field("unit") else "project",
+                "description": "Sales Contract from which this invoice item was generated.",
+            },
+            {
+                "fieldname": "sales_installment_reference",
+                "label": "Sales Installment Reference",
+                "fieldtype": "Data",
+                "insert_after": "sales_contract",
+                "description": "Internal child-row reference for the Sales Contract installment represented by this invoice item.",
+            },
+            {
+                "fieldname": "real_estate_project",
+                "label": "Real Estate Project",
+                "fieldtype": "Link",
+                "options": "Real Estate Project",
+                "insert_after": "sales_installment_reference",
+                "description": "Real estate project linked to the sold unit.",
+            },
+            {
+                "fieldname": "unit_reservation",
+                "label": "Unit Reservation",
+                "fieldtype": "Link",
+                "options": "Unit Reservation",
+                "insert_after": "real_estate_project",
+                "description": "Original reservation converted into the Sales Contract, if available.",
+            },
+        ],
+        "Sales Invoice": [
+            {
+                "fieldname": "sales_contract",
+                "label": "Sales Contract",
+                "fieldtype": "Link",
+                "options": "Sales Contract",
+                "insert_after": "unit" if frappe.get_meta("Sales Invoice").has_field("unit") else "project",
+                "description": "Sales Contract from which this Sales Invoice was generated.",
+            },
+            {
+                "fieldname": "real_estate_project",
+                "label": "Real Estate Project",
+                "fieldtype": "Link",
+                "options": "Real Estate Project",
+                "insert_after": "sales_contract",
+                "description": "Real estate project linked to the sold unit.",
+            },
+        ],
+    }
+    create_custom_fields(custom_fields, ignore_validate=True)
 
 
 def ensure_sales_contract_workflow():

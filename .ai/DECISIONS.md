@@ -223,3 +223,12 @@
 - Direct MariaDB SQL is not used for Workflow, Workflow State, Workflow Action Master, or Workflow transition creation.
 - Frappe v15 docstatus rules are respected: pre-submit cancellation is not forced through workflow SQL.
 - Draft or Under Review contracts can return to Draft; cancellation is handled only through valid docstatus-aware workflow states.
+
+## ADR-029: Sales Invoice and Collections From Installments
+
+- Sales Invoice is generated from Sales Installment Schedule rows, not directly from Unit.
+- Each installment row can be linked to only one active Sales Invoice; cancelled invoices release installment rows safely for re-invoicing.
+- Unit is copied to Sales Invoice Item as the key revenue-side Accounting Dimension for future GL-level unit traceability.
+- Project and cost center are copied where available; Construction Work Item and Cost Code remain cost-side dimensions and are not used for real estate sales revenue by default.
+- Payment Entry remains ERPNext's source of truth for collections; the app reads linked Sales Invoice references to update Sales Contract and installment collection status.
+- Sales Invoice submission and Payment Entry creation are not forced by default; draft invoice creation is the safe operational baseline.

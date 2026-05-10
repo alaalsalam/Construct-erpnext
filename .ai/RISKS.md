@@ -97,3 +97,8 @@ Updated risks:
 - Sales Contract readiness review confirmed no accounting document is created by Sales Contract; customer receivable, collections, aging, and payment status remain intentionally unavailable until Sales Invoice and Collections are implemented.
 - Sales Invoice and Collections foundation must explicitly copy Unit from Sales Contract to Sales Invoice Item so the Unit Accounting Dimension flows to GL through ERPNext accounting.
 - Minor Sales Contract Arabic UX translation gaps remain for generic layout labels such as Contract Information and Installments; include this in the next UX translation cleanup.
+- Sales Invoice Collection Settings now enables draft invoice generation by default but keeps auto-submit disabled; administrators must deliberately enable automatic submission after accounting review.
+- Draft Sales Invoice ACC-SINV-2026-00001 exists for the first installment of SC-2026-00001 and has no GL Entry until normal ERPNext submission.
+- Payment Entry integration is hook-based and depends on ERPNext Payment Entry references to submitted Sales Invoices; it was not executed because the validation invoice remains draft.
+- Unit revenue GL traceability is prepared through the Unit dimension on Sales Invoice Item, but GL validation remains pending until a Sales Invoice is submitted through normal ERPNext controls.
+- A site selling price list and non-stock sales item were created only as safe master setup for draft invoice generation; income account behavior should still be reviewed by accounting before submission.

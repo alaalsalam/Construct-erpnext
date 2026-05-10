@@ -226,3 +226,52 @@ def expiring_reservations(filters=None):
 		"Int",
 		_report_route("Expiring Unit Reservations"),
 	)
+
+
+@frappe.whitelist()
+def total_invoiced_sales(filters=None):
+	return _card(
+		_sum("Sales Contract", "total_invoiced_amount", {"docstatus": ["!=", 2]}),
+		route=_report_route("Sales Collection Report"),
+	)
+
+
+@frappe.whitelist()
+def total_collected_sales(filters=None):
+	return _card(
+		_sum("Sales Contract", "total_collected_amount", {"docstatus": ["!=", 2]}),
+		route=_report_route("Sales Collection Report"),
+	)
+
+
+@frappe.whitelist()
+def outstanding_sales_amount(filters=None):
+	return _card(
+		_sum("Sales Contract", "total_outstanding_amount", {"docstatus": ["!=", 2]}),
+		route=_report_route("Sales Collection Report"),
+	)
+
+
+@frappe.whitelist()
+def overdue_installments_count(filters=None):
+	return _card(
+		_count(
+			"Sales Installment Schedule",
+			{
+				"parenttype": "Sales Contract",
+				"invoice_status": "Overdue",
+			},
+		),
+		"Int",
+		_report_route("Overdue Sales Installments"),
+	)
+
+
+@frappe.whitelist()
+def overdue_installments_amount(filters=None):
+	total = _sum(
+		"Sales Installment Schedule",
+		"outstanding_amount",
+		{"parenttype": "Sales Contract", "invoice_status": "Overdue"},
+	)
+	return _card(total, route=_report_route("Overdue Sales Installments"))

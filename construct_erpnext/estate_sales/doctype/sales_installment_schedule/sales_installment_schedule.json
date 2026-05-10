@@ -15,8 +15,15 @@
   "percentage",
   "amount",
   "installment_status",
+  "invoice_status",
   "sales_invoice",
+  "invoice_amount",
+  "paid_amount",
+  "outstanding_amount",
+  "invoiced_on",
   "payment_entry",
+  "paid_on",
+  "overdue_days",
   "payment_reference",
   "payment_method",
   "notes"
@@ -86,12 +93,54 @@
    "description": "Current payment status of this installment."
   },
   {
+   "fieldname": "invoice_status",
+   "fieldtype": "Select",
+   "label": "Invoice Status",
+   "options": "Not Invoiced\nDraft Invoice\nInvoiced\nPartially Paid\nPaid\nOverdue\nCancelled",
+   "default": "Not Invoiced",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Operational invoice and collection status for this installment."
+  },
+  {
    "fieldname": "sales_invoice",
    "fieldtype": "Link",
    "label": "Invoice",
    "options": "Sales Invoice",
    "in_list_view": 0,
-   "description": "Sales Invoice linked to this installment. Created in a later phase."
+   "description": "Sales Invoice linked to this installment."
+  },
+  {
+   "fieldname": "invoice_amount",
+   "fieldtype": "Currency",
+   "label": "Invoice Amount",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Amount invoiced for this installment. Calculated automatically from linked Sales Invoice."
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Amount collected against this installment through ERPNext payments. Calculated automatically."
+  },
+  {
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding Amount",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Remaining amount outstanding for this installment. Calculated automatically."
+  },
+  {
+   "fieldname": "invoiced_on",
+   "fieldtype": "Date",
+   "label": "Invoiced On",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Date when this installment was linked to a Sales Invoice."
   },
   {
    "fieldname": "payment_entry",
@@ -100,6 +149,22 @@
    "options": "Payment Entry",
    "in_list_view": 0,
    "description": "Payment Entry linked to this installment. Created in a later phase."
+  },
+  {
+   "fieldname": "paid_on",
+   "fieldtype": "Date",
+   "label": "Paid On",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Date when this installment became fully paid."
+  },
+  {
+   "fieldname": "overdue_days",
+   "fieldtype": "Int",
+   "label": "Overdue Days",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Number of days this installment is overdue. Calculated automatically."
   },
   {
    "fieldname": "payment_reference",

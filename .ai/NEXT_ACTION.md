@@ -1,3 +1,3 @@
 # Next Action
 
-Start Sales Invoice and Collections foundation.
+Review Sales Invoice and Collections readiness before Lease Contract foundation.

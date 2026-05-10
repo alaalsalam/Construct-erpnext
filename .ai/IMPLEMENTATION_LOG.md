@@ -751,3 +751,52 @@
 - Confirmed Sales & Rental, Executive Presentation Center, Executive Control Center, Real Estate Inventory, and Reports & Analytics workspaces load.
 - Confirmed ar.csv parses successfully; noted minor missing Arabic translations for two generic Sales Contract layout labels to carry into UX cleanup.
 - Added .ai/SALES_CONTRACT_READINESS_REVIEW.md.
+
+## 2026-05-10 Sales Invoice and Collections Foundation
+
+- Created branch feature/sales-invoice-collections-foundation from feature/sales-contract-readiness-review.
+- Added Sales Invoice Collection Settings as a Single DocType controlling invoice generation, grouped installment invoices, Unit dimension requirements, partial collections, overdue grace days, duplicate invoice blocking, and company-currency defaults.
+- Extended Sales Installment Schedule with invoice_status, invoice_amount, paid_amount, outstanding_amount, invoiced_on, paid_on, and overdue_days while preserving existing sales_invoice and payment_entry links.
+- Extended Sales Contract with total_invoiced_amount, total_collected_amount, total_outstanding_amount, collection_status, first_sales_invoice, and latest_payment_entry.
+- Added sales_invoice_utils service:
+  - Creates draft ERPNext Sales Invoice from one or more Sales Contract installment rows.
+  - Uses a non-stock service item `خدمة بيع وحدة عقارية`.
+  - Uses a selling price list `قائمة أسعار بيع الوحدات العقارية` in company currency when no selling price list is configured.
+  - Copies Unit, Project, Cost Center, Sales Contract, Sales Installment reference, Real Estate Project, and Unit Reservation to Sales Invoice Item where fields exist.
+  - Blocks duplicate active invoices for the same installment.
+  - Releases installment rows safely when a linked Sales Invoice is cancelled.
+- Added collections_utils service:
+  - Recalculates Sales Contract and installment collection status from Sales Invoice and Payment Entry references.
+  - Provides an overdue installment marker and collection/unit revenue summaries.
+- Added safe doc_events:
+  - Sales Invoice validate/on_submit/on_cancel for dimension sync and installment status updates.
+  - Payment Entry on_submit/on_cancel for collection status recalculation from invoice references.
+  - Daily scheduler for overdue installment marking.
+- Added Sales Contract client buttons for Create Sales Invoice and Refresh Collection Status.
+- Added reports:
+  - Sales Invoice from Installments Report
+  - Sales Collection Report
+  - Overdue Sales Installments
+  - Unit Revenue Report
+  - Sales Contract Collection Summary
+- Added deterministic KPI Number Cards:
+  - Total Invoiced Sales
+  - Total Collected Sales
+  - Outstanding Sales Amount
+  - Overdue Installments Count
+  - Overdue Installments Amount
+- Updated Sales & Rental, Executive Control Center, Executive Presentation Center, and Reports & Analytics workspaces with collection links and cards.
+- Extended ar.csv to 1847 rows with Sales Invoice and Collections labels, reports, statuses, buttons, and KPI translations.
+- Arabic validation scenario completed:
+  - Generated draft Sales Invoice ACC-SINV-2026-00001 from the first installment of SC-2026-00001.
+  - Sales Invoice Item carries unit A-101, project PROJ-0001, cost center Main - YCRE, sales contract SC-2026-00001, installment reference erdmjjidfa, real estate project REP-2026-00001, and reservation RES-2026-00001.
+  - Sales Contract totals updated: invoiced 300,000, collected 0, outstanding 300,000, status Partially Invoiced.
+  - Duplicate invoice creation for the same installment is blocked.
+  - Sales Invoice remains Draft because auto_submit_sales_invoice is disabled by default.
+  - No GL Entry, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, or GL backfill was created.
+- Validation passed:
+  - bench migrate, clear-cache, and clear-website-cache completed.
+  - New reports and key existing Unit/CFO/traceability reports load.
+  - Sales collection KPI methods resolve.
+  - Target workspaces exist and load.
+  - ar.csv parses successfully.

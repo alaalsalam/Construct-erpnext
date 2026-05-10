@@ -485,4 +485,9 @@ Integration:
 - Sales Installment Schedule is a child table under Sales Contract and is not an independent receivable ledger.
 - Sales Contract Approval Workflow is created through Frappe ORM in idempotent after_migrate setup; direct SQL workflow creation is not part of the architecture.
 - Approved/Active Sales Contract marks the Unit as Sold and converts the Unit Reservation to Converted.
-- Sales Invoice, Payment Entry, GL posting, Lease Contract, Rent Schedule, Commission, CRM Matching, and Portal remain outside this foundation.
+- Sales Invoice and Collections foundation extends Estate Sales by generating ERPNext Sales Invoice drafts from Sales Installment Schedule rows.
+- Sales Invoice Collection Settings controls invoice generation, grouping, Unit dimension requirement, installment status sync, partial collection allowance, and duplicate-invoice blocking.
+- Sales Invoice Item receives the Unit Accounting Dimension and Sales Contract/installment references for revenue traceability.
+- Payment Entry remains ERPNext's official collection document; app hooks recalculate contract and installment collection status from linked Sales Invoice references.
+- Sales Invoice submission and Payment Entry creation are not forced by default. GL posting occurs only through normal ERPNext Sales Invoice submission.
+- Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, advanced revenue recognition, and GL backfill remain outside this foundation.

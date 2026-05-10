@@ -1,0 +1,174 @@
+{
+ "actions": [],
+ "creation": "2026-05-10 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice_generation_section",
+  "enable_sales_invoice_generation",
+  "auto_submit_sales_invoice",
+  "allow_grouped_installment_invoice",
+  "invoice_generation_column_break",
+  "default_sales_item",
+  "require_unit_dimension",
+  "collection_tracking_section",
+  "auto_update_installment_status",
+  "overdue_grace_days",
+  "collection_tracking_column_break",
+  "allow_partial_collection",
+  "validation_rules_section",
+  "block_duplicate_invoice_for_installment",
+  "require_customer_on_contract",
+  "validation_rules_column_break",
+  "require_unit_on_invoice_item",
+  "defaults_section",
+  "use_company_default_currency"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice_generation_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice Generation"
+  },
+  {
+   "default": "1",
+   "description": "Enable controlled Sales Invoice creation from real estate sales installments.",
+   "fieldname": "enable_sales_invoice_generation",
+   "fieldtype": "Check",
+   "label": "Enable Sales Invoice Generation"
+  },
+  {
+   "default": "0",
+   "description": "If enabled, generated Sales Invoices may be submitted through normal ERPNext validation. Keep disabled unless accounting setup is ready.",
+   "fieldname": "auto_submit_sales_invoice",
+   "fieldtype": "Check",
+   "label": "Auto Submit Sales Invoice"
+  },
+  {
+   "default": "1",
+   "description": "Allow multiple installment rows to be grouped into one Sales Invoice.",
+   "fieldname": "allow_grouped_installment_invoice",
+   "fieldtype": "Check",
+   "label": "Allow Grouped Installment Invoice"
+  },
+  {
+   "fieldname": "invoice_generation_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Default non-stock service item used on Sales Invoices generated from installments.",
+   "fieldname": "default_sales_item",
+   "fieldtype": "Link",
+   "label": "Default Sales Item",
+   "options": "Item"
+  },
+  {
+   "default": "1",
+   "description": "Require the Unit accounting dimension to be present when generating Sales Invoice items.",
+   "fieldname": "require_unit_dimension",
+   "fieldtype": "Check",
+   "label": "Require Unit Dimension"
+  },
+  {
+   "fieldname": "collection_tracking_section",
+   "fieldtype": "Section Break",
+   "label": "Collection Tracking"
+  },
+  {
+   "default": "1",
+   "description": "Automatically refresh installment invoice and payment status from linked Sales Invoices and Payment Entries.",
+   "fieldname": "auto_update_installment_status",
+   "fieldtype": "Check",
+   "label": "Auto Update Installment Status"
+  },
+  {
+   "default": "0",
+   "description": "Number of grace days after due date before an unpaid installment is considered overdue.",
+   "fieldname": "overdue_grace_days",
+   "fieldtype": "Int",
+   "label": "Overdue Grace Days"
+  },
+  {
+   "fieldname": "collection_tracking_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "description": "Allow partial payment allocation against installment Sales Invoices.",
+   "fieldname": "allow_partial_collection",
+   "fieldtype": "Check",
+   "label": "Allow Partial Collection"
+  },
+  {
+   "fieldname": "validation_rules_section",
+   "fieldtype": "Section Break",
+   "label": "Validation Rules"
+  },
+  {
+   "default": "1",
+   "description": "Prevent creating a second active Sales Invoice for the same installment row.",
+   "fieldname": "block_duplicate_invoice_for_installment",
+   "fieldtype": "Check",
+   "label": "Block Duplicate Invoice For Installment"
+  },
+  {
+   "default": "1",
+   "description": "Require Customer on Sales Contract before creating Sales Invoice.",
+   "fieldname": "require_customer_on_contract",
+   "fieldtype": "Check",
+   "label": "Require Customer On Contract"
+  },
+  {
+   "fieldname": "validation_rules_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "description": "Require Unit on generated Sales Invoice Item rows.",
+   "fieldname": "require_unit_on_invoice_item",
+   "fieldtype": "Check",
+   "label": "Require Unit On Invoice Item"
+  },
+  {
+   "fieldname": "defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Defaults"
+  },
+  {
+   "default": "1",
+   "description": "Use Company default currency when Sales Contract currency is blank.",
+   "fieldname": "use_company_default_currency",
+   "fieldtype": "Check",
+   "label": "Use Company Default Currency"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-05-10 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Estate Sales",
+ "name": "Sales Invoice Collection Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 1
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1,
+   "write": 1
+  }
+ ],
+ "states": [],
+ "description": "Controls Sales Invoice generation and collection tracking for real estate Sales Contract installments."
+}

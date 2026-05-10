@@ -152,4 +152,15 @@ Phase 9 Sales Contract and Installment Plan deliverables:
 - Extend Arabic translations for new DocTypes, fields, sections, tabs, workflow states, installment types, statuses, and reports. Completed.
 - Arabic validation completed on construction.yemenfrappe.com. Completed.
 - No Sales Invoice, Payment Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, accounting documents, or ERPNext core modifications were created.
-- Next Phase 9 extension: Review Sales Contract readiness before Sales Invoice and Collections foundation.
+- Sales Contract readiness review before Sales Invoice and Collections foundation. Completed.
+- Create Sales Invoice Collection Settings. Completed.
+- Extend Sales Installment Schedule with invoice and collection status fields. Completed.
+- Extend Sales Contract with invoiced, collected, outstanding, and collection status totals. Completed.
+- Implement draft Sales Invoice generation from one or more Sales Installment Schedule rows. Completed.
+- Copy Unit Accounting Dimension, project, cost center, Sales Contract, installment reference, Real Estate Project, and Unit Reservation references to Sales Invoice Item where available. Completed.
+- Add Sales Invoice and Payment Entry hooks to update installment and contract collection totals without replacing ERPNext accounting. Completed.
+- Add sales collection reports: Sales Invoice from Installments Report, Sales Collection Report, Overdue Sales Installments, Unit Revenue Report, Sales Contract Collection Summary. Completed.
+- Add deterministic sales collection KPI Number Cards and workspace links. Completed.
+- Arabic validation created draft Sales Invoice ACC-SINV-2026-00001 for the first installment of SC-2026-00001. Completed.
+- No Sales Invoice submission, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, or GL backfill was created.
+- Next Phase 9 extension: Review Sales Invoice and Collections readiness before Lease Contract foundation.

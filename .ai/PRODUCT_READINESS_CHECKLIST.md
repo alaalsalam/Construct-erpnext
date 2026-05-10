@@ -243,3 +243,24 @@ Safe to review Sales Contract readiness before Sales Invoice and Collections fou
 ## 24. Sales Contract Readiness Decision
 
 Safe to start Sales Invoice and Collections foundation.
+
+## 25. Sales Invoice and Collections Foundation
+
+- Passed: Sales Invoice Collection Settings exists and default generation controls are enabled while auto-submit remains disabled.
+- Passed: Sales Installment Schedule tracks invoice status, invoice amount, paid amount, outstanding amount, invoice date, payment date, and overdue days.
+- Passed: Sales Contract tracks total invoiced, collected, outstanding, and collection status.
+- Passed: Draft Sales Invoice generation from Sales Contract installments works.
+- Passed: Sales Invoice Item carries Unit dimension and operational references for SC-2026-00001.
+- Passed: Duplicate active invoice generation for the same installment is blocked.
+- Passed: Payment Entry integration is hook-based and does not override ERPNext accounting.
+- Passed: Sales collection reports load without errors.
+- Passed: Sales collection KPI Number Cards resolve deterministic values.
+- Passed: Workspaces include sales collection reports and cards.
+- Passed: Arabic translations extended and ar.csv parses.
+- Passed: No Sales Invoice submission, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, or GL backfill was created.
+- Deferred: GL Unit revenue validation requires submitting a Sales Invoice through normal ERPNext controls.
+- Deferred: Payment Entry collection validation requires a submitted Sales Invoice.
+
+## 26. Sales Invoice and Collections Decision
+
+Safe to review Sales Invoice and Collections readiness before Lease Contract foundation.

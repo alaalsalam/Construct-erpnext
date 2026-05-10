@@ -70,8 +70,14 @@ doc_events = {
         # Country-specific withholding must be enabled explicitly per deployment.
     },
     "Payment Entry": {
-        "on_submit": "construct_erpnext.contractor_management.events.sync_payment_entry",
-        "on_cancel": "construct_erpnext.contractor_management.events.reverse_payment_entry",
+        "on_submit": [
+            "construct_erpnext.contractor_management.events.sync_payment_entry",
+            "construct_erpnext.estate_sales.collections_utils.update_contract_from_payment_entry",
+        ],
+        "on_cancel": [
+            "construct_erpnext.contractor_management.events.reverse_payment_entry",
+            "construct_erpnext.estate_sales.collections_utils.update_contract_from_payment_entry",
+        ],
     },
     "Material Request": {
         "validate": [
@@ -98,8 +104,15 @@ doc_events = {
         "on_cancel": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
     },
     "Sales Invoice": {
-        "validate": "construct_erpnext.cfo_analytics.financial_dimensions.validate_dimension_doc",
-        "on_submit": "construct_erpnext.gcs_admin.reminders.schedule_payment_reminders",
+        "validate": [
+            "construct_erpnext.estate_sales.sales_invoice_utils.validate_sales_invoice_dimensions",
+            "construct_erpnext.cfo_analytics.financial_dimensions.validate_dimension_doc",
+        ],
+        "on_submit": [
+            "construct_erpnext.gcs_admin.reminders.schedule_payment_reminders",
+            "construct_erpnext.estate_sales.sales_invoice_utils.sync_installments_from_sales_invoice",
+        ],
+        "on_cancel": "construct_erpnext.estate_sales.sales_invoice_utils.release_installments_on_invoice_cancel",
     },
     "Stock Entry": {
         "validate": [
@@ -132,6 +145,7 @@ scheduler_events = {
         "construct_erpnext.gcs_admin.reminders.send_payment_reminders",
         "construct_erpnext.gcs_maintenance.routines.check_preventive_schedules",
         "construct_erpnext.real_estate_inventory.reservation_utils.expire_overdue_reservations",
+        "construct_erpnext.estate_sales.collections_utils.mark_overdue_installments",
     ],
     "hourly": [
         "construct_erpnext.gcs_security.audit.process_audit_queue",

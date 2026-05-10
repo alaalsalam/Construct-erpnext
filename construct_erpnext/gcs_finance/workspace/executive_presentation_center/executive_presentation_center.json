@@ -668,6 +668,44 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Collections",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Sales Contract Collection Summary",
+   "link_count": 0,
+   "link_to": "Sales Contract Collection Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Revenue Report",
+   "link_count": 0,
+   "link_to": "Unit Revenue Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Overdue Sales Installments",
+   "link_count": 0,
+   "link_to": "Overdue Sales Installments",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
  "modified": "2026-05-10 16:34:02.956463",
@@ -734,6 +772,26 @@
   {
    "label": "Sold Units",
    "number_card_name": "Sold Units"
+  },
+  {
+   "label": "Total Invoiced Sales",
+   "number_card_name": "Total Invoiced Sales"
+  },
+  {
+   "label": "Total Collected Sales",
+   "number_card_name": "Total Collected Sales"
+  },
+  {
+   "label": "Outstanding Sales Amount",
+   "number_card_name": "Outstanding Sales Amount"
+  },
+  {
+   "label": "Overdue Installments Count",
+   "number_card_name": "Overdue Installments Count"
+  },
+  {
+   "label": "Overdue Installments Amount",
+   "number_card_name": "Overdue Installments Amount"
   }
  ],
  "owner": "Administrator",

@@ -1790,3 +1790,58 @@ Reservation {0} must be in Reserved status.,الحجز {0} يجب أن تكون 
 Only active reservations can be converted.,لا يمكن تحويل سوى الحجوزات النشطة فقط.
 Total installment amount ({0}) does not match net contract price ({1}).,إجمالي مبلغ الأقساط ({0}) لا يتطابق مع سعر العقد الصافي ({1}).
 Cancellation Reason is required before cancelling.,يُطلب سبب الإلغاء قبل الإلغاء.
+Sales Invoice Collection Settings,إعدادات فواتير البيع والتحصيل
+Invoice Generation,إنشاء الفواتير
+Auto Submit Sales Invoice,اعتماد فاتورة البيع تلقائياً
+Allow Grouped Installment Invoice,السماح بفاتورة مجمعة للأقساط
+Default Sales Item,بند البيع الافتراضي
+Require Unit Dimension,إلزام بعد الوحدة
+Collection Tracking,تتبع التحصيل
+Auto Update Installment Status,تحديث حالة القسط تلقائياً
+Overdue Grace Days,أيام السماح قبل التعثر
+Allow Partial Collection,السماح بالتحصيل الجزئي
+Block Duplicate Invoice For Installment,منع تكرار الفاتورة للقسط
+Require Customer On Contract,إلزام العميل في العقد
+Require Unit On Invoice Item,إلزام الوحدة في بند الفاتورة
+Use Company Default Currency,استخدام عملة الشركة الافتراضية
+Invoice Status,حالة الفاتورة
+Not Invoiced,غير مفوتر
+Draft Invoice,فاتورة مسودة
+Invoiced On,تاريخ الفوترة
+Paid On,تاريخ السداد
+Collection Summary,ملخص التحصيل
+Total Collected Amount,إجمالي المبلغ المحصل
+Total Outstanding Amount,إجمالي المبلغ المتبقي
+Collection Status,حالة التحصيل
+Latest Payment Entry,آخر سند قبض
+Sales Invoice & Collections,فواتير البيع والتحصيل
+Sales Invoice from Installments Report,تقرير فواتير البيع من الأقساط
+Sales Collection Report,تقرير تحصيلات البيع
+Overdue Sales Installments,أقساط البيع المتأخرة
+Unit Revenue Report,تقرير إيراد الوحدة
+Sales Contract Collection Summary,ملخص تحصيل عقود البيع
+Total Collected,إجمالي المحصل
+Create Sales Invoice,إنشاء فاتورة بيع
+Refresh Collection Status,تحديث حالة التحصيل
+Unit Revenue,إيراد الوحدة
+Sales Installment Reference,مرجع قسط البيع
+Unit Dimension,بعد الوحدة
+Collected Amount,المبلغ المحصل
+Overdue Amount,المبلغ المتأخر
+Total Invoiced Sales,إجمالي مبيعات مفوترة
+Total Collected Sales,إجمالي مبيعات محصلة
+Outstanding Sales Amount,مبلغ المبيعات المتبقي
+Overdue Installments Count,عدد الأقساط المتأخرة
+Overdue Installments Amount,مبلغ الأقساط المتأخرة
+Contract Information,بيانات العقد
+Installments,الأقساط
+Real estate unit sales installment {0} for contract {1},قسط بيع وحدة عقارية {0} للعقد {1}
+Sales Invoice generation is disabled in Sales Invoice Collection Settings.,إنشاء فواتير البيع معطل في إعدادات فواتير البيع والتحصيل.
+Sales Contract must be Approved or Active before creating Sales Invoice.,يجب أن يكون عقد البيع معتمداً أو نشطاً قبل إنشاء فاتورة بيع.
+Customer is required on Sales Contract before creating Sales Invoice.,العميل مطلوب في عقد البيع قبل إنشاء فاتورة بيع.
+Unit is required on Sales Contract before creating Sales Invoice.,الوحدة مطلوبة في عقد البيع قبل إنشاء فاتورة بيع.
+Unit dimension field is missing on Sales Invoice Item.,حقل بعد الوحدة غير موجود في بند فاتورة البيع.
+No invoiceable installment rows were found for Sales Contract {0}.,لم يتم العثور على أقساط قابلة للفوترة لعقد البيع {0}.
+Grouped installment invoices are disabled in Sales Invoice Collection Settings.,الفواتير المجمعة للأقساط معطلة في إعدادات فواتير البيع والتحصيل.
+Installment {0} is already linked to active Sales Invoice {1}.,القسط {0} مرتبط بالفعل بفاتورة بيع نشطة {1}.
+Unit is required on Sales Invoice Item for Sales Contract invoices.,الوحدة مطلوبة في بند فاتورة البيع لفواتير عقود البيع.

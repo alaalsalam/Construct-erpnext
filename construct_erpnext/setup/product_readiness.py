@@ -41,6 +41,11 @@ PRESENTATION_NUMBER_CARDS = [
 	{"label": "Expected Margin %", "method": "construct_erpnext.cfo_analytics.presentation.expected_margin_percent", "document_type": "Unit", "color": "#16a34a"},
 	{"label": "Active Reservations", "method": "construct_erpnext.cfo_analytics.presentation.active_reservations", "document_type": "Unit Reservation", "color": "#7c3aed"},
 	{"label": "Expiring Reservations", "method": "construct_erpnext.cfo_analytics.presentation.expiring_reservations", "document_type": "Unit Reservation", "color": "#dc2626"},
+	{"label": "Total Invoiced Sales", "method": "construct_erpnext.cfo_analytics.presentation.total_invoiced_sales", "document_type": "Sales Contract", "color": "#2563eb"},
+	{"label": "Total Collected Sales", "method": "construct_erpnext.cfo_analytics.presentation.total_collected_sales", "document_type": "Sales Contract", "color": "#059669"},
+	{"label": "Outstanding Sales Amount", "method": "construct_erpnext.cfo_analytics.presentation.outstanding_sales_amount", "document_type": "Sales Contract", "color": "#dc2626"},
+	{"label": "Overdue Installments Count", "method": "construct_erpnext.cfo_analytics.presentation.overdue_installments_count", "document_type": "Sales Contract", "color": "#ea580c"},
+	{"label": "Overdue Installments Amount", "method": "construct_erpnext.cfo_analytics.presentation.overdue_installments_amount", "document_type": "Sales Contract", "color": "#b45309"},
 ]
 
 

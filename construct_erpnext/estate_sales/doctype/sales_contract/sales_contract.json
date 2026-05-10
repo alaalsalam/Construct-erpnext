@@ -60,6 +60,14 @@
   "total_installment_amount",
   "outstanding_installment_amount",
   "installment_count",
+  "collection_tracking_tab",
+  "collection_summary_section",
+  "total_invoiced_amount",
+  "total_collected_amount",
+  "total_outstanding_amount",
+  "collection_tracking_column_break",
+  "collection_status",
+  "latest_payment_entry",
   "future_references_tab",
   "future_references_section",
   "sales_order",
@@ -469,6 +477,64 @@
    "description": "Total number of installment rows in this schedule."
   },
   {
+   "fieldname": "collection_tracking_tab",
+   "fieldtype": "Tab Break",
+   "label": "Collection Tracking"
+  },
+  {
+   "fieldname": "collection_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Collection Summary"
+  },
+  {
+   "fieldname": "total_invoiced_amount",
+   "fieldtype": "Currency",
+   "label": "Total Invoiced Amount",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Total amount invoiced from this contract's installment schedule. Calculated automatically."
+  },
+  {
+   "fieldname": "total_collected_amount",
+   "fieldtype": "Currency",
+   "label": "Total Collected Amount",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Total amount collected through ERPNext Payment Entries against linked Sales Invoices. Calculated automatically."
+  },
+  {
+   "fieldname": "total_outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Total Outstanding Amount",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Remaining amount outstanding for this contract's invoiced installments. Calculated automatically."
+  },
+  {
+   "fieldname": "collection_tracking_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "collection_status",
+   "fieldtype": "Select",
+   "label": "Collection Status",
+   "options": "Not Invoiced\nPartially Invoiced\nFully Invoiced\nPartially Collected\nFully Collected\nOverdue",
+   "default": "Not Invoiced",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Overall invoicing and collection status for this contract. Calculated automatically."
+  },
+  {
+   "fieldname": "latest_payment_entry",
+   "fieldtype": "Link",
+   "label": "Latest Payment Entry",
+   "options": "Payment Entry",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Most recent Payment Entry allocated to this contract's Sales Invoices."
+  },
+  {
    "fieldname": "future_references_tab",
    "fieldtype": "Tab Break",
    "label": "Future Accounting References"
@@ -494,7 +560,7 @@
    "options": "Sales Invoice",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "First Sales Invoice generated from the installment schedule. Created in a later phase."
+   "description": "First Sales Invoice generated from this contract's installment schedule."
   },
   {
    "fieldname": "invoices_created",

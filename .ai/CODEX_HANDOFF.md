@@ -347,3 +347,22 @@ Sales Contract readiness review status:
 - All required sales reports, key existing reports, and target workspaces load.
 - ar.csv parses successfully; minor missing Arabic translations remain for generic labels Contract Information and Installments.
 - Next operational task: Start Sales Invoice and Collections foundation.
+
+Sales Invoice and Collections foundation status:
+- Branch: feature/sales-invoice-collections-foundation.
+- New Single DocType: Sales Invoice Collection Settings.
+- Sales Installment Schedule now tracks invoice_status, invoice_amount, paid_amount, outstanding_amount, invoiced_on, paid_on, and overdue_days.
+- Sales Contract now tracks total_invoiced_amount, total_collected_amount, total_outstanding_amount, collection_status, first_sales_invoice, and latest_payment_entry.
+- New service modules:
+  - construct_erpnext.estate_sales.sales_invoice_utils
+  - construct_erpnext.estate_sales.collections_utils
+- Draft invoice generation is available from Sales Contract installments and from the Sales Contract form button.
+- Payment Entry integration is read/sync only through standard ERPNext references; it does not create or alter Payment Entry accounting logic.
+- New reports: Sales Invoice from Installments Report, Sales Collection Report, Overdue Sales Installments, Unit Revenue Report, Sales Contract Collection Summary.
+- New KPI cards: Total Invoiced Sales, Total Collected Sales, Outstanding Sales Amount, Overdue Installments Count, Overdue Installments Amount.
+- Retained validation record:
+  - Sales Invoice ACC-SINV-2026-00001 is Draft and linked to the first installment of SC-2026-00001.
+  - Its item carries unit A-101, project PROJ-0001, cost center Main - YCRE, sales_contract SC-2026-00001, real estate project REP-2026-00001, and reservation RES-2026-00001.
+  - SC-2026-00001 totals: invoiced 300,000; collected 0; outstanding 300,000; collection_status Partially Invoiced.
+- No Sales Invoice submission, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, or GL backfill was created.
+- Next operational task: Review Sales Invoice and Collections readiness before Lease Contract foundation.

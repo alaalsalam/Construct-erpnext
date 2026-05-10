@@ -334,3 +334,16 @@ Sales Contract recovery note:
 - Current retained validation record: SC-2026-00001 is Active, linked to RES-2026-00001, and Unit A-101 is Sold.
 - Final retained installment schedule has four Arabic rows and totals 1,200,000, matching the net price.
 - Final sales reports are: Sales Contract Register, Installment Schedule Report, Unit Sales Pipeline, Sales Value Summary, Reserved to Sold Conversion Report.
+
+Sales Contract readiness review status:
+- Branch: feature/sales-contract-readiness-review.
+- Review file: .ai/SALES_CONTRACT_READINESS_REVIEW.md.
+- SC-2026-00001 is Active, docstatus 1, linked to RES-2026-00001 and Unit A-101.
+- Unit A-101 is Sold; RES-2026-00001 is Converted.
+- Installment schedule has 4 rows totaling 1,200,000, matching net_price.
+- Duplicate contract validation and draft installment mismatch validation were confirmed without saving validation documents.
+- No Sales Invoice, Payment Entry, Journal Entry, or GL Entry exists for SC-2026-00001.
+- Unit Accounting Dimension exists and unit fields are present on Sales Invoice Item and GL Entry.
+- All required sales reports, key existing reports, and target workspaces load.
+- ar.csv parses successfully; minor missing Arabic translations remain for generic labels Contract Information and Installments.
+- Next operational task: Start Sales Invoice and Collections foundation.

@@ -732,3 +732,22 @@
   - Key existing BOQ/procurement/measurement/IPC/contractor/CFO/unit reservation reports still exist.
   - Arabic translation CSV parses with 1792 rows.
   - No Sales Invoice, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Installment Plan, CRM Matching, Portal, or ERPNext core modification was introduced.
+
+## 2026-05-10 Sales Contract Readiness Review
+
+- Created branch feature/sales-contract-readiness-review from feature/sales-contract-installment-foundation.
+- Review-only validation completed without creating Sales Invoice, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, or accounting documents.
+- Confirmed Sales Contract Settings, Sales Contract, and Sales Installment Schedule exist.
+- Confirmed Sales Contract Approval Workflow exists, is active, and has 6 states and 9 transitions.
+- Confirmed Sales Contract SC-2026-00001 is Active, docstatus 1, linked to Unit A-101 and Reservation RES-2026-00001.
+- Confirmed Unit A-101 status and marketing_status are Sold.
+- Confirmed Reservation RES-2026-00001 status and workflow_state are Converted and linked to SC-2026-00001.
+- Confirmed installment schedule has 4 rows and totals 1,200,000, matching net_price.
+- Confirmed duplicate sales contract creation for the converted reservation/unit is blocked.
+- Confirmed installment total mismatch validation blocks a draft contract when installment total differs from net_price beyond tolerance.
+- Confirmed no Sales Invoice, Payment Entry, or GL Entry exists for SC-2026-00001.
+- Confirmed Unit Accounting Dimension exists and unit fields are available on Sales Invoice Item and GL Entry for the next phase.
+- Confirmed required sales reports and key existing unit/CFO/traceability reports load.
+- Confirmed Sales & Rental, Executive Presentation Center, Executive Control Center, Real Estate Inventory, and Reports & Analytics workspaces load.
+- Confirmed ar.csv parses successfully; noted minor missing Arabic translations for two generic Sales Contract layout labels to carry into UX cleanup.
+- Added .ai/SALES_CONTRACT_READINESS_REVIEW.md.

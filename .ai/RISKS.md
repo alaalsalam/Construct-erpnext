@@ -94,3 +94,6 @@ Updated risks:
 - Sales Contract workflow setup must remain ORM-based; do not recreate or repair Workflow rows with direct MariaDB SQL.
 - Frappe v15 does not permit cancellation before submission through workflow docstatus transitions; Draft/Under Review contracts should return to Draft or be handled with normal draft permissions.
 - Sales Installment Schedule was corrected from a partial normal DocType attempt to a child table; the after_migrate schema guard must remain until all environments are confirmed clean.
+- Sales Contract readiness review confirmed no accounting document is created by Sales Contract; customer receivable, collections, aging, and payment status remain intentionally unavailable until Sales Invoice and Collections are implemented.
+- Sales Invoice and Collections foundation must explicitly copy Unit from Sales Contract to Sales Invoice Item so the Unit Accounting Dimension flows to GL through ERPNext accounting.
+- Minor Sales Contract Arabic UX translation gaps remain for generic layout labels such as Contract Information and Installments; include this in the next UX translation cleanup.

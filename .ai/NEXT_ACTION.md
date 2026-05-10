@@ -1,3 +1,3 @@
 # Next Action
 
-Review Sales Contract readiness before Sales Invoice and Collections foundation.
+Start Sales Invoice and Collections foundation.

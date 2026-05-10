@@ -222,3 +222,24 @@ Safe to review Sales Contract readiness before Sales Invoice and Collections fou
 - Passed: Installment mismatch validation is blocked.
 - Passed: All five required sales reports load.
 - Passed: No Sales Invoice, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Portal, or CRM Matching feature was created.
+
+## 23. Sales Contract Readiness Review
+
+- Passed: Sales Contract Settings, Sales Contract, and Sales Installment Schedule exist.
+- Passed: Sales Contract Approval Workflow exists and loads.
+- Passed: SC-2026-00001 is Active and submitted.
+- Passed: A-101 is Sold.
+- Passed: RES-2026-00001 is Converted and linked to SC-2026-00001.
+- Passed: Four installments total 1,200,000 and match net price.
+- Passed: Duplicate contract validation is blocked.
+- Passed: Draft installment mismatch validation is blocked.
+- Passed: No Sales Invoice, Payment Entry, Journal Entry, or GL Entry was created by the contract.
+- Passed: Unit Accounting Dimension is ready for future Sales Invoice Item and GL traceability.
+- Passed: Sales reports and key existing reports load.
+- Passed: Sales and executive workspaces load.
+- Passed: ar.csv parses successfully.
+- Deferred: Minor Arabic translations for generic Sales Contract layout labels should be cleaned up in the next UX pass.
+
+## 24. Sales Contract Readiness Decision
+
+Safe to start Sales Invoice and Collections foundation.

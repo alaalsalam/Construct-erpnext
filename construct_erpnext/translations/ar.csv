@@ -1780,12 +1780,12 @@ Reserved Units,الوحدات المحجوزة
 # --- Validation Messages ---
 Unit {0} cannot be sold because its status is {1}.,الوحدة {0} لا يمكن بيعها لأن حالتها {1}.
 Unit {0} already has an active sales contract {1}.,الوحدة {0} لديها عقد بيع نشط {1} بالفعل.
-Customer, Lead, or Buyer Name is required for a sales contract.,يُطلب وجود عميل أو عميل محتمل أو اسم مشتري لعقد البيع.
+"Customer, Lead, or Buyer Name is required for a sales contract.",يُطلب وجود عميل أو عميل محتمل أو اسم مشتري لعقد البيع.
 Valid Until must be on or after Contract Date.,يجب أن يكون صالح حتى تاريخ بعد أو يساوي تاريخ العقد.
 Sale Price must be greater than zero.,يجب أن يكون سعر البيع أكبر من صفر.
 Discount Amount cannot exceed Sale Price.,لا يمكن أن يتجاوز مبلغ الخصم سعر البيع.
 Discount Percent cannot be 100 percent or more.,لا يمكن أن تكون نسبة الخصم 100% أو أكثر.
-Reservation {0} is for unit {1}, but the contract is for unit {2}.,الحجز {0} للوحدة {1} لكن العقد للوحدة {2}.
+"Reservation {0} is for unit {1}, but the contract is for unit {2}.",الحجز {0} للوحدة {1} لكن العقد للوحدة {2}.
 Reservation {0} must be in Reserved status.,الحجز {0} يجب أن تكون حالته محجوزة.
 Only active reservations can be converted.,لا يمكن تحويل سوى الحجوزات النشطة فقط.
 Total installment amount ({0}) does not match net contract price ({1}).,إجمالي مبلغ الأقساط ({0}) لا يتطابق مع سعر العقد الصافي ({1}).
@@ -1845,3 +1845,89 @@ No invoiceable installment rows were found for Sales Contract {0}.,لم يتم �
 Grouped installment invoices are disabled in Sales Invoice Collection Settings.,الفواتير المجمعة للأقساط معطلة في إعدادات فواتير البيع والتحصيل.
 Installment {0} is already linked to active Sales Invoice {1}.,القسط {0} مرتبط بالفعل بفاتورة بيع نشطة {1}.
 Unit is required on Sales Invoice Item for Sales Contract invoices.,الوحدة مطلوبة في بند فاتورة البيع لفواتير عقود البيع.
+Estate Rental,إدارة التأجير العقاري
+Lease Contract Settings,إعدادات عقد الإيجار
+Lease Contract,عقد إيجار
+Rent Schedule,جدول الإيجار
+Lease Contract Register,سجل عقود الإيجار
+Rent Schedule Report,تقرير جدول الإيجار
+Active Leases Report,تقرير عقود الإيجار النشطة
+Lease Expiry Report,تقرير انتهاء عقود الإيجار
+Rental Value Summary,ملخص قيمة الإيجارات
+Lease & Rent Schedule,عقود الإيجار وجداول الإيجار
+Lease & Rental,الإيجار والتأجير
+Rental Operations,عمليات التأجير
+Default Lease Period Months,مدة الإيجار الافتراضية بالأشهر
+Contract Number Prefix,بادئة رقم العقد
+Default Billing Frequency,دورية الفوترة الافتراضية
+Default Security Deposit Months,أشهر التأمين الافتراضية
+Allow Duplicate Active Lease For Unit,السماح بتكرار عقد إيجار نشط لنفس الوحدة
+Require Customer,اشتراط العميل
+Require Rent Schedule,اشتراط جدول الإيجار
+Allow Backdated Lease,السماح بعقد إيجار بتاريخ سابق
+Mark Unit Rented On Activation,تحديث الوحدة كمؤجرة عند التفعيل
+Enable Rent Invoice Generation,تفعيل إنشاء فواتير الإيجار
+Auto Generate Rent Schedule,إنشاء جدول الإيجار تلقائياً
+Use Company Default Currency,استخدام عملة الشركة الافتراضية
+Lease Start Date,تاريخ بداية الإيجار
+Lease End Date,تاريخ نهاية الإيجار
+Lease Status,حالة عقد الإيجار
+Lease Type,نوع الإيجار
+Tenant Details,بيانات المستأجر
+Tenant Name,اسم المستأجر
+Rental Terms,شروط الإيجار
+Monthly Rent,الإيجار الشهري
+Billing Frequency,دورية الفوترة
+Security Deposit Amount,مبلغ التأمين
+Total Contract Rent,إجمالي إيجار العقد
+Payment Terms,شروط الدفع
+Lease Terms,شروط عقد الإيجار
+Actual Vacating Date,تاريخ الإخلاء الفعلي
+Rent Totals,إجماليات الإيجار
+Total Scheduled Rent,إجمالي الإيجار المجدول
+Total Invoiced Rent,إجمالي الإيجار المفوتر
+Total Collected Rent,إجمالي الإيجار المحصل
+Total Outstanding Rent,إجمالي الإيجار المتبقي
+Rent Collection Status,حالة تحصيل الإيجار
+Future Accounting References,مراجع محاسبية مستقبلية
+Future References,مراجع مستقبلية
+First Rent Invoice,أول فاتورة إيجار
+Latest Payment Entry,آخر سند قبض
+Invoices Created,تم إنشاء الفواتير
+Previous Unit State,حالة الوحدة السابقة
+Previous Unit Status,حالة الوحدة السابقة
+Previous Marketing Status,الحالة التسويقية السابقة
+Termination Reason,سبب الإنهاء
+Cancellation Reason,سبب الإلغاء
+Cancellation Date,تاريخ الإلغاء
+Period Start,بداية الفترة
+Period End,نهاية الفترة
+Rent Amount,مبلغ الإيجار
+Rent Period {0},فترة الإيجار {0}
+Long Term Rent,إيجار طويل الأجل
+Short Term Rent,إيجار قصير الأجل
+Commercial Rent,إيجار تجاري
+Monthly,شهري
+Quarterly,ربع سنوي
+Semi Annual,نصف سنوي
+Annual,سنوي
+Terminated,منهي
+Create Lease Contract,إنشاء عقد إيجار
+Generate Rent Schedule,إنشاء جدول الإيجار
+Active Lease Contracts,عقود الإيجار النشطة
+Scheduled Rental Value,قيمة الإيجار المجدولة
+Expiring Leases,عقود إيجار قاربت الانتهاء
+Tenant / Customer,المستأجر / العميل
+Lease Start,بداية الإيجار
+Lease End,نهاية الإيجار
+Days Remaining,الأيام المتبقية
+Monthly Rent Value,قيمة الإيجار الشهري
+Active Leases,عقود إيجار نشطة
+Only Rent reservations can be converted to Lease Contract.,يمكن تحويل حجوزات الإيجار فقط إلى عقد إيجار.
+Only active reservations can be converted to Lease Contract.,يمكن تحويل الحجوزات النشطة فقط إلى عقد إيجار.
+Lease End Date must be on or after Lease Start Date.,يجب أن يكون تاريخ نهاية الإيجار في أو بعد تاريخ بداية الإيجار.
+Customer is required for a Lease Contract.,العميل مطلوب في عقد الإيجار.
+Monthly Rent must be greater than zero.,يجب أن يكون الإيجار الشهري أكبر من صفر.
+Rent Schedule is required for this Lease Contract.,جدول الإيجار مطلوب لهذا العقد.
+Rent Amount cannot be negative.,لا يمكن أن يكون مبلغ الإيجار سالباً.
+Reservation must be Reserved before conversion to Lease Contract.,يجب أن يكون الحجز محجوزاً قبل تحويله إلى عقد إيجار.

@@ -1,3 +1,3 @@
 # Next Action
 
-Start Lease Contract and Rent Schedule foundation.
+Review Lease Contract readiness before Rent Invoice and Collections foundation.

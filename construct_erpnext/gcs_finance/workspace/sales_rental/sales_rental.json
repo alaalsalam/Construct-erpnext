@@ -242,6 +242,84 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lease & Rent Schedule",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lease Contract",
+   "link_count": 0,
+   "link_to": "Lease Contract",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lease Contract Settings",
+   "link_count": 0,
+   "link_to": "Lease Contract Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Lease Contract Register",
+   "link_count": 0,
+   "link_to": "Lease Contract Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rent Schedule Report",
+   "link_count": 0,
+   "link_to": "Rent Schedule Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Active Leases Report",
+   "link_count": 0,
+   "link_to": "Active Leases Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Lease Expiry Report",
+   "link_count": 0,
+   "link_to": "Lease Expiry Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rental Value Summary",
+   "link_count": 0,
+   "link_to": "Rental Value Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
  "modified": "2026-05-10 00:00:00.000000",
@@ -289,6 +367,22 @@
   {
    "label": "Overdue Installments Amount",
    "number_card_name": "Overdue Installments Amount"
+  },
+  {
+   "label": "Active Lease Contracts",
+   "number_card_name": "Active Lease Contracts"
+  },
+  {
+   "label": "Scheduled Rental Value",
+   "number_card_name": "Scheduled Rental Value"
+  },
+  {
+   "label": "Rented Units",
+   "number_card_name": "Rented Units"
+  },
+  {
+   "label": "Expiring Leases",
+   "number_card_name": "Expiring Leases"
   }
  ]
 }

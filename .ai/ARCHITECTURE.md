@@ -491,3 +491,14 @@ Integration:
 - Payment Entry remains ERPNext's official collection document; app hooks recalculate contract and installment collection status from linked Sales Invoice references.
 - Sales Invoice submission and Payment Entry creation are not forced by default. GL posting occurs only through normal ERPNext Sales Invoice submission.
 - Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, advanced revenue recognition, and GL backfill remain outside this foundation.
+
+## Estate Rental Foundation
+
+- `construct_erpnext/estate_rental` contains the operational Lease Contract and Rent Schedule foundation.
+- Lease Contract is a submittable non-accounting transaction linked to Unit Reservation, Real Estate Project, Unit, Customer/Lead, and Rent Schedule rows.
+- Rent Schedule is a child table under Lease Contract and is not an independent receivable ledger.
+- Lease Contract Approval Workflow is created through Frappe ORM in idempotent after_migrate setup; direct SQL workflow creation is not part of the architecture.
+- Approved/Active Lease Contract marks the Unit as Rented and converts the Unit Reservation to Converted.
+- Tenant/customer is stored on Lease Contract only; Unit remains a stable real estate asset and does not store tenant fields.
+- Rent Invoice and Payment Entry creation are deferred to the next rental finance phase.
+- Unit dimension is prepared through the Lease Contract Unit reference for future propagation to Sales Invoice Item when Rent Invoice is implemented.

@@ -164,3 +164,10 @@ Phase 9 Sales Contract and Installment Plan deliverables:
 - Arabic validation created draft Sales Invoice ACC-SINV-2026-00001 for the first installment of SC-2026-00001. Completed.
 - No Sales Invoice submission, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, or GL backfill was created.
 - Next Phase 9 extension: Review Sales Invoice and Collections readiness before Lease Contract foundation.
+- CMD-24A Sales Invoice and Collections readiness rerun after MariaDB recovery. Completed.
+- Create Lease Contract Settings, Lease Contract, and Rent Schedule foundation. Completed.
+- Implement reservation-to-lease conversion and Unit Rented status update. Completed.
+- Add Lease Contract workflow, rental reports, workspace links, KPI cards, and Arabic translations. Completed.
+- Arabic validation created retained Lease Contract LC-2026-00001 from rent reservation RES-2026-00005 for Unit A-G01. Completed.
+- No Rent Invoice, Payment Entry, Journal Entry, Commission, CRM Matching, Portal, or GL backfill was created.
+- Next Phase 9 extension: Review Lease Contract readiness before Rent Invoice and Collections foundation.

@@ -105,3 +105,6 @@ Updated risks:
 - CMD-24 readiness review was blocked because MariaDB was OOM-killed and refused connections on 127.0.0.1; restore database service and rerun live validation before Lease Contract work.
 - CMD-24A rerun passed after MariaDB recovered, but OOM risk remains; monitor MariaDB memory and reduce concurrent memory-heavy development/editor processes before migration-heavy tasks.
 - Non-interactive sudo is unavailable from the current shell; if MariaDB stops again, the server owner must run `sudo systemctl start mariadb`.
+- Lease Contract workflow uses docstatus-aware transitions; Draft/Under Review cancellation is not forced because Frappe v15 cancellation requires submitted documents.
+- Rent Schedule is operational only; rent invoice, payment, receivable aging, and GL validation are deferred until Rent Invoice and Collections foundation.
+- Current retained lease validation uses existing Customer `عميل مهتم بشراء وحدة سكنية` with tenant name `مستأجر محتمل لوحدة عقارية` because this site lacks normal Customer Group and Territory masters for creating a new Customer through standard validation.

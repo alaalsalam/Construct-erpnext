@@ -232,3 +232,13 @@
 - Project and cost center are copied where available; Construction Work Item and Cost Code remain cost-side dimensions and are not used for real estate sales revenue by default.
 - Payment Entry remains ERPNext's source of truth for collections; the app reads linked Sales Invoice references to update Sales Contract and installment collection status.
 - Sales Invoice submission and Payment Entry creation are not forced by default; draft invoice creation is the safe operational baseline.
+
+## ADR-030: Lease Contract and Rent Schedule Foundation
+
+- Lease Contract is the operational rental agreement before rent invoicing.
+- Tenant/customer belongs to Lease Contract, not Unit.
+- Rent Schedule is a child table inside Lease Contract and remains operational only in this phase.
+- Unit becomes Rented only through an approved/submitted Lease Contract, with previous Unit state stored for safe release.
+- A Rent Unit Reservation may convert into a Lease Contract; the reservation becomes Converted after lease approval.
+- Rent Invoice and Payment Entry generation are deferred to the next rental finance phase.
+- No Sales Invoice, Payment Entry, Journal Entry, GL Entry, commission, CRM matching, portal, or GL backfill is created by Lease Contract.

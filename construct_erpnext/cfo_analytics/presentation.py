@@ -275,3 +275,36 @@ def overdue_installments_amount(filters=None):
 		{"parenttype": "Sales Contract", "invoice_status": "Overdue"},
 	)
 	return _card(total, route=_report_route("Overdue Sales Installments"))
+
+
+@frappe.whitelist()
+def active_lease_contracts(filters=None):
+	return _card(
+		_count("Lease Contract", {"lease_status": ["in", ("Approved", "Active")], "docstatus": 1}),
+		"Int",
+		_report_route("Active Leases Report"),
+	)
+
+
+@frappe.whitelist()
+def scheduled_rental_value(filters=None):
+	return _card(
+		_sum("Lease Contract", "total_scheduled_rent", {"docstatus": ["!=", 2]}),
+		route=_report_route("Rental Value Summary"),
+	)
+
+
+@frappe.whitelist()
+def expiring_leases(filters=None):
+	return _card(
+		_count(
+			"Lease Contract",
+			{
+				"lease_status": ["in", ("Approved", "Active")],
+				"docstatus": 1,
+				"lease_end_date": ["between", [nowdate(), add_days(nowdate(), 60)]],
+			},
+		),
+		"Int",
+		_report_route("Lease Expiry Report"),
+	)

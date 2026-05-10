@@ -844,3 +844,49 @@
 - Deferred scope confirmed: no Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, new Sales Invoice, Sales Invoice submission, Payment Entry, Journal Entry, GL backfill, or submitted accounting amendment.
 - Updated SALES_INVOICE_COLLECTIONS_READINESS_REVIEW.md with final passed CMD-24A decision.
 - NEXT_ACTION set to Start Lease Contract and Rent Schedule foundation.
+
+## 2026-05-10 CMD-25 Lease Contract and Rent Schedule Foundation
+
+- Created branch feature/lease-contract-rent-schedule-foundation from feature/sales-invoice-collections-readiness-review.
+- Added new module `construct_erpnext.estate_rental`.
+- Created Single DocType: Lease Contract Settings.
+- Created submittable DocType: Lease Contract.
+- Created child table DocType: Rent Schedule.
+- Added Lease Contract controller and rental service utilities:
+  - contract number generation,
+  - unit metadata fetch,
+  - customer/tenant validation,
+  - duplicate active lease blocking,
+  - reservation-to-lease conversion,
+  - rent schedule generation,
+  - Unit Rented status update,
+  - safe Unit release on cancellation.
+- Added Lease Contract Approval Workflow through idempotent after_migrate setup using Frappe ORM.
+- Added reports:
+  - Lease Contract Register
+  - Rent Schedule Report
+  - Active Leases Report
+  - Lease Expiry Report
+  - Rental Value Summary
+- Added deterministic KPI Number Cards:
+  - Active Lease Contracts
+  - Scheduled Rental Value
+  - Expiring Leases
+  - reused Rented Units.
+- Updated Sales & Rental, Real Estate Inventory, Executive Control Center, Executive Presentation Center, and Reports & Analytics workspaces with lease/rental links and KPI cards.
+- Extended Arabic translations for lease DocTypes, fields, reports, workflow states, actions, and KPI labels.
+- Arabic validation scenario completed:
+  - Created rent reservation RES-2026-00005 for Unit A-G01.
+  - Created Lease Contract LC-2026-00001 from the rent reservation.
+  - Generated 12 monthly Rent Schedule rows.
+  - Total scheduled rent equals total contract rent: 4,200,000.
+  - Lease Contract reached Active.
+  - Unit A-G01 status and marketing_status changed to Rented.
+  - Reservation RES-2026-00005 changed to Converted and links to LC-2026-00001.
+  - Duplicate active Lease Contract for A-G01 is blocked.
+- Validation passed:
+  - bench migrate, clear-cache, and clear-website-cache completed.
+  - Lease reports and key existing Sales, Unit Reservation, Unit Profitability, CFO, and EVM reports load.
+  - Workspace records and lease KPI Number Cards exist.
+  - No Rent Invoice, Sales Invoice, Payment Entry, Journal Entry, Commission, CRM Matching, Portal, or GL backfill was created by this phase.
+- NEXT_ACTION set to Review Lease Contract readiness before Rent Invoice and Collections foundation.

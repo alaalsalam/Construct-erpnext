@@ -706,6 +706,44 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rental Operations",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Lease Contract Register",
+   "link_count": 0,
+   "link_to": "Lease Contract Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Rental Value Summary",
+   "link_count": 0,
+   "link_to": "Rental Value Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Lease Expiry Report",
+   "link_count": 0,
+   "link_to": "Lease Expiry Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
  "modified": "2026-05-10 16:34:02.956463",
@@ -792,6 +830,22 @@
   {
    "label": "Overdue Installments Amount",
    "number_card_name": "Overdue Installments Amount"
+  },
+  {
+   "label": "Active Lease Contracts",
+   "number_card_name": "Active Lease Contracts"
+  },
+  {
+   "label": "Scheduled Rental Value",
+   "number_card_name": "Scheduled Rental Value"
+  },
+  {
+   "label": "Rented Units",
+   "number_card_name": "Rented Units"
+  },
+  {
+   "label": "Expiring Leases",
+   "number_card_name": "Expiring Leases"
   }
  ],
  "owner": "Administrator",

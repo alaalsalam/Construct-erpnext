@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "creation": "2026-05-10 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "general_settings_section",
+  "default_lease_period_months",
+  "contract_number_prefix",
+  "general_settings_column_break",
+  "default_billing_frequency",
+  "default_security_deposit_months",
+  "validation_rules_section",
+  "allow_duplicate_active_lease_for_unit",
+  "require_customer",
+  "validation_rules_column_break",
+  "require_rent_schedule",
+  "allow_backdated_lease",
+  "behavior_section",
+  "mark_unit_rented_on_activation",
+  "enable_rent_invoice_generation",
+  "behavior_column_break",
+  "auto_generate_rent_schedule",
+  "defaults_section",
+  "use_company_default_currency"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_settings_section",
+   "fieldtype": "Section Break",
+   "label": "General Settings"
+  },
+  {
+   "default": "12",
+   "description": "Default lease duration in months when creating a lease from a reservation.",
+   "fieldname": "default_lease_period_months",
+   "fieldtype": "Int",
+   "label": "Default Lease Period Months"
+  },
+  {
+   "default": "LC",
+   "description": "Prefix used when automatically generating Lease Contract numbers.",
+   "fieldname": "contract_number_prefix",
+   "fieldtype": "Data",
+   "label": "Contract Number Prefix"
+  },
+  {
+   "fieldname": "general_settings_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Monthly",
+   "description": "Default billing frequency used when generating rent schedule rows.",
+   "fieldname": "default_billing_frequency",
+   "fieldtype": "Select",
+   "label": "Default Billing Frequency",
+   "options": "Monthly\nQuarterly\nSemi Annual\nAnnual"
+  },
+  {
+   "default": "0",
+   "description": "Default security deposit expressed as a number of monthly rent periods.",
+   "fieldname": "default_security_deposit_months",
+   "fieldtype": "Float",
+   "label": "Default Security Deposit Months"
+  },
+  {
+   "fieldname": "validation_rules_section",
+   "fieldtype": "Section Break",
+   "label": "Validation Rules"
+  },
+  {
+   "default": "0",
+   "description": "Allow more than one active Lease Contract for the same Unit. Keep disabled for normal operations.",
+   "fieldname": "allow_duplicate_active_lease_for_unit",
+   "fieldtype": "Check",
+   "label": "Allow Duplicate Active Lease For Unit"
+  },
+  {
+   "default": "1",
+   "description": "Require a Customer before approving or activating a Lease Contract.",
+   "fieldname": "require_customer",
+   "fieldtype": "Check",
+   "label": "Require Customer"
+  },
+  {
+   "fieldname": "validation_rules_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "description": "Require rent schedule rows to match the expected lease rent total before approval.",
+   "fieldname": "require_rent_schedule",
+   "fieldtype": "Check",
+   "label": "Require Rent Schedule"
+  },
+  {
+   "default": "1",
+   "description": "Allow lease start dates before the contract date.",
+   "fieldname": "allow_backdated_lease",
+   "fieldtype": "Check",
+   "label": "Allow Backdated Lease"
+  },
+  {
+   "fieldname": "behavior_section",
+   "fieldtype": "Section Break",
+   "label": "Behavior"
+  },
+  {
+   "default": "1",
+   "description": "When enabled, submitting or activating a Lease Contract changes the linked Unit status to Rented.",
+   "fieldname": "mark_unit_rented_on_activation",
+   "fieldtype": "Check",
+   "label": "Mark Unit Rented On Activation"
+  },
+  {
+   "default": "0",
+   "description": "Keep disabled in this phase. Rent Invoice generation will be implemented later.",
+   "fieldname": "enable_rent_invoice_generation",
+   "fieldtype": "Check",
+   "label": "Enable Rent Invoice Generation"
+  },
+  {
+   "fieldname": "behavior_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "description": "Automatically generate rent schedule rows when enough lease dates and rent terms are available.",
+   "fieldname": "auto_generate_rent_schedule",
+   "fieldtype": "Check",
+   "label": "Auto Generate Rent Schedule"
+  },
+  {
+   "fieldname": "defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Defaults"
+  },
+  {
+   "default": "1",
+   "description": "When enabled, currency defaults from the company currency rather than a country-specific currency.",
+   "fieldname": "use_company_default_currency",
+   "fieldtype": "Check",
+   "label": "Use Company Default Currency"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-05-10 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Estate Rental",
+ "name": "Lease Contract Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "write": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "description": "Controls lease contract behavior, numbering, validation, and rent schedule defaults for real estate rental operations."
+}

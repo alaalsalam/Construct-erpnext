@@ -385,3 +385,22 @@ CMD-24A recovery and validation status:
 - Draft invoice remains unsubmitted; no GL Entry, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, or GL backfill was created.
 - Readiness decision is now safe to proceed to Lease Contract and Rent Schedule foundation.
 - Next operational task: Start Lease Contract and Rent Schedule foundation.
+
+Lease Contract and Rent Schedule foundation status:
+- Branch: feature/lease-contract-rent-schedule-foundation.
+- New module: construct_erpnext.estate_rental.
+- New Single DocType: Lease Contract Settings.
+- New DocType: Lease Contract (submittable).
+- New Child DocType: Rent Schedule.
+- New service module: construct_erpnext.estate_rental.lease_contract_utils.
+- Whitelisted reservation conversion path: construct_erpnext.estate_rental.lease_contract.create_lease_contract_from_reservation.
+- Workflow: Lease Contract Approval Workflow created idempotently through Frappe ORM in estate_rental setup.
+- Reports: Lease Contract Register, Rent Schedule Report, Active Leases Report, Lease Expiry Report, Rental Value Summary.
+- KPI cards: Active Lease Contracts, Scheduled Rental Value, Expiring Leases, plus existing Rented Units.
+- Retained validation record:
+  - Unit A-G01 is Rented.
+  - Reservation RES-2026-00005 is Converted.
+  - Lease Contract LC-2026-00001 is Active.
+  - Rent Schedule has 12 monthly rows totaling 4,200,000.
+- No rent invoice, Sales Invoice, Payment Entry, Journal Entry, commission, CRM matching, portal, or GL backfill was created.
+- Current next action: Review Lease Contract readiness before Rent Invoice and Collections foundation.

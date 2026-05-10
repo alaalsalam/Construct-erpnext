@@ -282,3 +282,24 @@ Safe to review Sales Invoice and Collections readiness before Lease Contract fou
 ## 28. CMD-24 Decision
 
 Not safe to proceed to Lease Contract until MariaDB is restored and Sales Invoice and Collections readiness validation passes live on construction.yemenfrappe.com.
+
+## 29. Lease Contract and Rent Schedule Foundation
+
+- Passed: Lease Contract Settings exists.
+- Passed: Lease Contract DocType exists and is submittable.
+- Passed: Rent Schedule child table exists.
+- Passed: Lease Contract Approval Workflow exists and loads.
+- Passed: Rent reservation RES-2026-00005 converted into Lease Contract LC-2026-00001.
+- Passed: Unit A-G01 changed to Rented only after lease approval/activation.
+- Passed: Reservation RES-2026-00005 changed to Converted.
+- Passed: Rent Schedule generated 12 monthly rows totaling 4,200,000.
+- Passed: Duplicate active Lease Contract for the same Unit is blocked.
+- Passed: Lease reports load without errors.
+- Passed: Workspace links and lease KPI Number Cards exist.
+- Passed: Arabic translations were extended for lease fields, reports, workflow states, and actions.
+- Passed: No Rent Invoice, Sales Invoice, Payment Entry, Journal Entry, Commission, CRM Matching, Portal, or GL backfill was created.
+- Deferred: Rent Invoice and rental collections are the next finance phase.
+
+## 30. Lease Foundation Decision
+
+Safe to review Lease Contract readiness before Rent Invoice and Collections foundation.

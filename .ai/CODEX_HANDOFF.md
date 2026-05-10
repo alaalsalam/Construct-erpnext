@@ -255,4 +255,18 @@ Unit Reservation foundation status:
 - Current inventory counts after validation: total 5, available 2, reserved 2, sold 0, rented 1, blocked 0.
 - No Sales Contract, Lease Contract, tenant field, invoice, payment, accounting document, or portal feature was created.
 
-Next operational task: Review Unit Reservation readiness before Sales Contract foundation.
+Presentation UX and Executive Dashboard Polish status:
+- Branch: feature/presentation-ux-dashboard-polish.
+- New presentation workspace: Executive Presentation Center.
+- New KPI service: construct_erpnext.cfo_analytics.presentation.
+- Product readiness sync now creates/updates presentation Number Cards and can create missing product workspaces from curated JSON.
+- New Number Cards:
+  - BOQ Total, Committed Amount, Certified Gross Amount, Net Payable, Retention Held, Contractor Outstanding.
+  - Cash Flow Risk, EVM CPI, EVM SPI, EVM Overall Status.
+  - Total Units, Available Units, Reserved Units, Rented Units.
+  - Expected Gross Margin, Expected Margin %, Active Reservations, Expiring Reservations.
+- Dashboard Charts are intentionally deferred until chart definitions and thresholds are approved for client presentation.
+- Client presentation walkthrough and readiness checklist include the new presentation flow.
+- No Sales Contract, Lease Contract, installment, rent schedule, CRM matching, portal feature, accounting document, GL backfill, or submitted document amendment was introduced.
+
+Next operational task: Review presentation UX readiness, then proceed to Sales Contract and Installment Plan foundation.

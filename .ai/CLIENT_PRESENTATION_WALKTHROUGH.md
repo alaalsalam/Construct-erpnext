@@ -184,6 +184,104 @@
 - حجز وحدة عقارية مع منع الحجز المكرر وتحديث حالة الوحدة.
 - تجربة تنقل ثنائية اللغة عبر مصدر إنجليزي وترجمة عربية.
 
+## Presentation UX and Dashboard Flow
+
+ابدأ العرض من:
+
+- Executive Presentation Center
+
+هذه الشاشة هي المدخل الأفضل للعميل لأنها تجمع القصة الكاملة في مسار واحد: من تكلفة البناء إلى الربحية والحجز والتتبع المالي.
+
+### قصة العرض في 10 شاشات
+
+1. Executive Presentation Center
+ما تقوله للعميل:
+هذه هي لوحة العرض التنفيذية. الأرقام في الأعلى تلخص الميزانية، الالتزامات، المستخلصات، مخاطر التدفق النقدي، الوحدات، والربحية المتوقعة. كل رقم يقود إلى تقرير تفصيلي.
+
+2. Project Overview
+افتح:
+- Project Financial Snapshot
+- Project Financial Snapshot Report
+ما تقوله:
+هذه الشاشة تربط الميزانية والمشتريات والقياسات والمستخلصات والمحتجزات في ملخص مالي واحد للمشروع.
+
+3. Construction Cost Control
+افتح:
+- Construction BOQ
+- Construction Work Item
+- Construction BOQ Cost Analysis
+ما تقوله:
+هنا يبدأ التحكم. جدول الكميات يحدد نطاق العمل، ثم يتحول إلى بنود عمل تشغيلية يمكن تتبعها في كل مرحلة لاحقة.
+
+4. Procurement & Site Consumption
+افتح:
+- Work Item Procurement Summary
+- BOQ Procurement Pipeline
+- Site Warehouse Consumption
+ما تقوله:
+كل طلب شراء أو أمر شراء أو استلام أو استهلاك يمكن ربطه ببند العمل وكود التكلفة، وهذا يمنع فقدان أثر التكلفة.
+
+5. Measurement & IPC
+افتح:
+- Measurement Book
+- Interim Payment Certificate
+- Measurement to IPC Traceability
+ما تقوله:
+القياسات تأتي قبل المستخلص. لا يتم إنشاء مستخلص المقاول من فراغ، بل من قياسات معتمدة ومتحقق منها.
+
+6. Contractor Ledger
+افتح:
+- Contractor Account
+- Contractor Account Statement
+- Retention Register Report
+ما تقوله:
+هذه طبقة رقابة على المقاول تعرض المعتمد والمحتجز والمدفوع والمستحق دون أن تستبدل محاسبة ERPNext.
+
+7. CFO Snapshot
+افتح:
+- CFO Project Control Summary
+- Contractor Financial Exposure
+ما تقوله:
+هنا يرى المدير المالي صورة المشروع: الالتزامات، الفواتير، المستخلصات، المحتجزات، والتعرض المالي للمقاولين.
+
+8. Cash Flow and EVM
+افتح:
+- Project Cash Flow Forecast Report
+- Project EVM Metrics Report
+- EVM Forecast Summary
+ما تقوله:
+التدفق النقدي يوضح الاحتياجات القادمة، ومؤشرات القيمة المكتسبة تشرح هل الأداء المالي والزمني يسير كما هو متوقع.
+
+9. Real Estate Inventory
+افتح:
+- Real Estate Project
+- Unit Inventory Report
+- Unit Availability Report
+ما تقوله:
+الوحدة العقارية كيان ثابت مستقل. لا نخزن المستأجر داخل الوحدة؛ عقود البيع والتأجير ستأتي لاحقاً وتربط العميل أو المستأجر بالوحدة.
+
+10. Unit Profitability and Reservation
+افتح:
+- Unit Cost Allocation
+- Unit Profitability Report
+- Unit Reservation
+- Unit Reservation Impact
+ما تقوله:
+تكلفة المشروع موزعة على الوحدات، والهامش المتوقع ظاهر لكل وحدة. الحجز يحمي الوحدة مؤقتاً قبل عقد البيع أو التأجير ولا ينشئ قيوداً محاسبية.
+
+### الجاهز الآن في العرض
+
+- مسار تنفيذي واضح من BOQ إلى الربحية.
+- بطاقات KPI تنفيذية للعرض السريع.
+- تقارير تفصيلية خلف كل رقم.
+- واجهة ثنائية اللغة عبر ترجمة عربية منظمة.
+- حجز الوحدة كأول خطوة تجارية قبل العقود.
+
+### التالي بعد العرض
+
+- مراجعة جاهزية تجربة العرض مع أصحاب المصلحة.
+- البدء في Sales Contract و Installment Plan foundation بعد اعتماد تجربة الحجز والعرض التنفيذي.
+
 ## ما لم يتم تنفيذه عمداً بعد
 
 - Sales Contract.

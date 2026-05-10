@@ -80,3 +80,5 @@ Updated risks:
 - Unit Reservation expiry is handled by a daily scheduler and depends on scheduler health; manual expiry utility remains available if scheduler is paused.
 - Reservation is non-accounting; any reservation amount is informational only until an approved Sales/Rental accounting design is implemented.
 - Active reservation validation changed A-101 to Reserved and left one retained active reservation for client walkthrough; future validation must account for this status.
+- Executive Presentation Center KPI Number Cards are deterministic management indicators, not accounting ledgers; finance leadership should still sign off on KPI wording and thresholds before production executive rollout.
+- Dashboard Charts remain deferred to avoid presenting unapproved chart definitions or thresholds as final CFO analytics.

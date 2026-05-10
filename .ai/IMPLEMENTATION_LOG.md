@@ -543,3 +543,37 @@
   - Project counts became total 5, available 2, reserved 2, sold 0, rented 1, blocked 0.
 - Reports loaded successfully, including reservation reports plus selected existing Unit Costing, EVM, Cash Flow, and IPC reports.
 - No Sales Contract, Lease Contract, tenant field on Unit, invoice, payment, accounting document, GL backfill, utility-billing install, or El Salvador localization was introduced.
+
+## 2026-05-10 Presentation UX and Executive Dashboard Polish
+
+- Created branch feature/presentation-ux-dashboard-polish from feature/unit-reservation-foundation.
+- Audited Frappe v15 presentation capabilities:
+  - Workspace, Workspace Link, Workspace Number Card, Number Card, Dashboard Chart, and Workspace Chart exist.
+  - Number Cards are safe for deterministic app-backed KPIs.
+  - Dashboard Charts are supported, but custom chart sources need finance-approved definitions before client promotion.
+- Added Executive Presentation Center workspace as a client-facing presentation route across:
+  - Project overview,
+  - construction cost control,
+  - procurement and site consumption,
+  - measurement and IPC,
+  - contractor financial control,
+  - CFO forecasting,
+  - real estate inventory and profitability,
+  - reservation,
+  - deep financial traceability.
+- Added deterministic KPI Number Card methods in construct_erpnext.cfo_analytics.presentation.
+- Added idempotent Number Card setup to construct_erpnext.setup.product_readiness.sync_product_workspace_readiness.
+- Added curated KPI cards for BOQ total, commitments, certified gross, net payable, retention, contractor outstanding, cash risk, EVM, units, profitability, and reservations.
+- Added Arabic translations for presentation workspace sections and KPI labels.
+- Updated Arabic client walkthrough with Presentation UX and Dashboard Flow.
+- Updated readiness checklist with Presentation UX Readiness.
+- Validation completed:
+  - Metadata workspace JSON and Arabic CSV parse successfully.
+  - python3 compileall passed.
+  - Migration, clear-cache, and clear-website-cache completed successfully.
+  - Executive Presentation Center installed with 45 links, 10 displayed Number Cards, and no Dashboard Charts.
+  - 18 presentation Number Card records exist and returned deterministic values from existing site data.
+  - All Executive Presentation Center links resolve to existing DocTypes or Reports.
+  - 24 key presentation reports loaded without errors.
+  - Existing product workspaces load, no visible GCS workspace label appears in primary navigation, and forbidden Sales/Rental/Portal phase DocTypes were not created.
+- No Sales Contract, Lease Contract, Installment Plan, Rent Schedule, CRM Matching, Portal feature, accounting document, submitted-document amendment, or GL backfill was created.

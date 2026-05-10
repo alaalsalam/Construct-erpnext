@@ -25,3 +25,7 @@
   Use utility-billing only as reference for real estate hierarchy and leasing patterns.
 - First technical priority:
   Remove or neutralize El Salvador localization and make the product generic.
+- Current presentation status:
+  Executive Presentation Center is the client-facing workspace for the completed construction, CFO, real estate inventory, unit costing, financial dimensions, and reservation flow.
+  KPI Number Cards are deterministic read-only summaries backed by app-level methods.
+  Dashboard Charts remain deferred until finance leadership approves chart definitions and thresholds.

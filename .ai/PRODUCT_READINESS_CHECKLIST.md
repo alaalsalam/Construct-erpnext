@@ -60,7 +60,8 @@
   - Contractor Exposure Summary.
   - Unit Profitability Report.
   - Project Performance Dashboard Report.
-- Deferred: Number Cards and Dashboard Charts were not created in this phase because reliable production metrics should be signed off with finance leadership before being promoted as cards.
+- Passed: Executive Presentation Center adds deterministic KPI Number Cards for the client-facing overview.
+- Deferred: Dashboard Charts are not created yet because chart definitions and threshold wording still need finance leadership sign-off.
 
 ## 7. Traceability Readiness
 
@@ -102,3 +103,26 @@
 ## 11. Decision
 
 Safe to review Unit Reservation with stakeholders before Sales Contract foundation.
+
+## 12. Presentation UX Readiness
+
+- Passed: Executive Presentation Center workspace added for client presentation.
+- Passed: CFO reports grouped in a single presentation path.
+- Passed: Construction flow grouped from BOQ to Work Item and variance reports.
+- Passed: Procurement and site consumption reports grouped.
+- Passed: Measurement, IPC, and traceability reports grouped.
+- Passed: Contractor financial control reports grouped.
+- Passed: Real estate inventory, unit costing, profitability, and reservation links grouped.
+- Passed: Deep financial traceability reports grouped.
+- Passed: Arabic translations updated for presentation workspace sections and KPI labels.
+- Passed: Number Cards created with deterministic app-level methods.
+- Deferred: Dashboard Charts are deferred until finance leadership approves chart definitions and threshold wording.
+- Passed: Client walkthrough updated with Presentation UX and Dashboard Flow.
+- Passed: No new business features added.
+- Passed: No accounting documents created.
+- Passed: No submitted documents amended.
+- Passed: No GL backfill performed.
+
+## 13. Presentation Decision
+
+Safe for a professional client presentation after a final browser click-through of Executive Presentation Center and core linked reports.

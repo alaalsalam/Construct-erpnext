@@ -121,4 +121,9 @@ Phase 8 deliverables:
 - Reservation reports and workspace links added to Sales & Rental, Real Estate Inventory, Executive Control Center, and Reports & Analytics.
 - Daily expiry utility is enabled through scheduler and can also be called explicitly.
 - No Sales Contract, Lease Contract, installments, collections, invoices, payments, CRM matching, portal features, or accounting documents were created.
-- Next Phase 9 review: review Unit Reservation readiness before Sales Contract foundation.
+- Presentation UX and Executive Dashboard Polish completed:
+  - Executive Presentation Center workspace added for the client-facing product storyline.
+  - KPI Number Cards added for core construction, CFO, inventory, and reservation indicators using deterministic app methods.
+  - Existing product workspaces remain grouped by operational process.
+  - Dashboard Charts are deferred until finance KPI/chart sign-off.
+- Next Phase 9 review: review presentation UX readiness, then proceed to Sales Contract and Installment Plan foundation.

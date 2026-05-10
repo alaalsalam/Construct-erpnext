@@ -159,3 +159,11 @@
 - Reservation may represent sale or rent intent, but it does not create accounting documents, invoices, payments, installments, commissions, or contracts.
 - Tenant remains intentionally excluded from Unit; future tenant/customer occupancy will be modeled through Lease Contract or Sales/Rental documents.
 - Cancelled or expired reservations release the Unit only when no other active reservation exists and the Unit is not Sold, Rented, Blocked, or Under Maintenance.
+
+## ADR-021: Presentation Workspace Uses Deterministic KPIs
+
+- Executive Presentation Center is a presentation/readiness workspace and does not add a new business process.
+- KPI Number Cards use deterministic app-level whitelisted methods over existing DocTypes and reports.
+- Number Cards are acceptable for presentation because they are read-only summaries and do not create or amend business records.
+- Dashboard Charts are deferred until finance leadership approves chart definitions, KPI thresholds, and narrative wording.
+- Existing operational reports remain the source of detail behind each KPI card.

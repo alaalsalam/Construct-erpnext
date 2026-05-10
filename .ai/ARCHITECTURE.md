@@ -341,13 +341,21 @@ Product workspace readiness:
 
 ## Role-Oriented Navigation
 
-- Executive / CFO: Executive Control Center, Reports & Analytics, selected Finance records.
+- Executive / CFO: Executive Presentation Center, Executive Control Center, Reports & Analytics, selected Finance records.
 - Project Manager: Construction Control, Contractor Management, Measurement & IPC, Reports & Analytics.
 - Site Engineer: Construction Control, Procurement & Site Warehouses, Measurement & IPC.
 - QS Engineer: Construction Control, Measurement & IPC, Contractor Management, Reports & Analytics.
 - Procurement Officer: Procurement & Site Warehouses, Contractor Management.
 - Finance Officer: Executive Control Center, Contractor Management, Sales & Rental, Reports & Analytics.
 - Contractor Portal User: Contractor Management and portal-only project/IPC views.
+
+## Presentation UX Layer
+
+- Executive Presentation Center is a client-facing workspace for the end-to-end product story.
+- The workspace uses native Frappe v15 Workspace cards and Number Cards only; it does not introduce new business processes.
+- KPI Number Cards are backed by deterministic whitelisted methods in construct_erpnext.cfo_analytics.presentation.
+- Dashboard Charts remain deferred until finance leadership signs off on chart definitions and threshold wording.
+- Existing operational workspaces remain the day-to-day navigation layer.
 
 ## Existing DocTypes To Reuse
 

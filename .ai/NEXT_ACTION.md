@@ -1,3 +1,3 @@
 # Next Action
 
-Review Unit Reservation readiness before Sales Contract foundation.
+Review presentation UX readiness, then proceed to Sales Contract and Installment Plan foundation.

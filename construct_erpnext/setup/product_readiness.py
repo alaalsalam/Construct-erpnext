@@ -4,6 +4,7 @@ import frappe
 
 
 PRODUCT_WORKSPACE_PATHS = {
+	"Executive Presentation Center": "gcs_finance/workspace/executive_presentation_center/executive_presentation_center.json",
 	"Executive Control Center": "gcs_finance/workspace/executive_control_center/executive_control_center.json",
 	"Sales & Rental": "gcs_finance/workspace/sales_rental/sales_rental.json",
 	"Construction Control": "gcs_projects/workspace/construction_control/construction_control.json",
@@ -14,24 +15,65 @@ PRODUCT_WORKSPACE_PATHS = {
 	"Reports & Analytics": "gcs_projects/workspace/reports_analytics/reports_analytics.json",
 }
 
+PRESENTATION_NUMBER_CARDS = [
+	{"label": "BOQ Total", "method": "construct_erpnext.cfo_analytics.presentation.boq_total", "document_type": "Project Financial Snapshot", "color": "#2563eb"},
+	{"label": "Committed Amount", "method": "construct_erpnext.cfo_analytics.presentation.committed_amount", "document_type": "Construction Work Item", "color": "#7c3aed"},
+	{"label": "Certified Gross Amount", "method": "construct_erpnext.cfo_analytics.presentation.certified_gross_amount", "document_type": "Interim Payment Certificate", "color": "#059669"},
+	{"label": "Net Payable", "method": "construct_erpnext.cfo_analytics.presentation.net_payable", "document_type": "Interim Payment Certificate", "color": "#0891b2"},
+	{"label": "Retention Held", "method": "construct_erpnext.cfo_analytics.presentation.retention_held", "document_type": "Retention Register", "color": "#b45309"},
+	{"label": "Contractor Outstanding", "method": "construct_erpnext.cfo_analytics.presentation.contractor_outstanding", "document_type": "Contractor Account", "color": "#dc2626"},
+	{"label": "Cash Flow Risk", "method": "construct_erpnext.cfo_analytics.presentation.cash_flow_risk", "document_type": "Project Cash Flow Forecast", "color": "#ea580c"},
+	{"label": "EVM CPI", "method": "construct_erpnext.cfo_analytics.presentation.evm_cpi", "document_type": "Project EVM Metrics", "color": "#4f46e5"},
+	{"label": "EVM SPI", "method": "construct_erpnext.cfo_analytics.presentation.evm_spi", "document_type": "Project EVM Metrics", "color": "#4f46e5"},
+	{"label": "EVM Overall Status", "method": "construct_erpnext.cfo_analytics.presentation.evm_overall_status", "document_type": "Project EVM Metrics", "color": "#0f766e"},
+	{"label": "Total Units", "method": "construct_erpnext.cfo_analytics.presentation.total_units", "document_type": "Unit", "color": "#2563eb"},
+	{"label": "Available Units", "method": "construct_erpnext.cfo_analytics.presentation.available_units", "document_type": "Unit", "color": "#059669"},
+	{"label": "Reserved Units", "method": "construct_erpnext.cfo_analytics.presentation.reserved_units", "document_type": "Unit", "color": "#b45309"},
+	{"label": "Rented Units", "method": "construct_erpnext.cfo_analytics.presentation.rented_units", "document_type": "Unit", "color": "#0891b2"},
+	{"label": "Expected Gross Margin", "method": "construct_erpnext.cfo_analytics.presentation.expected_gross_margin", "document_type": "Unit", "color": "#16a34a"},
+	{"label": "Expected Margin %", "method": "construct_erpnext.cfo_analytics.presentation.expected_margin_percent", "document_type": "Unit", "color": "#16a34a"},
+	{"label": "Active Reservations", "method": "construct_erpnext.cfo_analytics.presentation.active_reservations", "document_type": "Unit Reservation", "color": "#7c3aed"},
+	{"label": "Expiring Reservations", "method": "construct_erpnext.cfo_analytics.presentation.expiring_reservations", "document_type": "Unit Reservation", "color": "#dc2626"},
+]
+
 
 def sync_product_workspace_readiness():
 	"""Keep installed product workspace records aligned with curated readiness JSON."""
+	ensure_presentation_number_cards()
 	app_path = frappe.get_app_path("construct_erpnext")
 
 	for workspace_name, relative_path in PRODUCT_WORKSPACE_PATHS.items():
-		if not frappe.db.exists("Workspace", workspace_name):
-			continue
-
 		with open(f"{app_path}/{relative_path}", encoding="utf-8") as workspace_file:
 			source = json.load(workspace_file)
 
-		workspace = frappe.get_doc("Workspace", workspace_name)
+		if frappe.db.exists("Workspace", workspace_name):
+			workspace = frappe.get_doc("Workspace", workspace_name)
+		else:
+			workspace = frappe.new_doc("Workspace")
+			workspace.name = workspace_name
+
 		workspace.label = source.get("label") or workspace.label
 		workspace.title = source.get("title") or workspace.title
+		workspace.module = source.get("module") or workspace.module
+		workspace.icon = source.get("icon") or workspace.icon
+		workspace.sequence_id = source.get("sequence_id") or workspace.sequence_id
 		workspace.content = source.get("content") or workspace.content
 		workspace.is_hidden = source.get("is_hidden", 0)
 		workspace.public = source.get("public", 1)
+
+		workspace.set("charts", [])
+		for chart in source.get("charts", []):
+			workspace.append("charts", {
+				"chart_name": chart.get("chart_name"),
+				"label": chart.get("label"),
+			})
+
+		workspace.set("number_cards", [])
+		for card in source.get("number_cards", []):
+			workspace.append("number_cards", {
+				"number_card_name": card.get("number_card_name"),
+				"label": card.get("label"),
+			})
 
 		workspace.set("links", [])
 		for link in source.get("links", []):
@@ -47,3 +89,23 @@ def sync_product_workspace_readiness():
 			})
 
 		workspace.save(ignore_permissions=True)
+
+
+def ensure_presentation_number_cards():
+	for card in PRESENTATION_NUMBER_CARDS:
+		if not frappe.db.exists("DocType", card["document_type"]):
+			continue
+
+		existing = frappe.db.exists("Number Card", card["label"])
+		doc = frappe.get_doc("Number Card", existing) if existing else frappe.new_doc("Number Card")
+		doc.update({
+			"label": card["label"],
+			"type": "Custom",
+			"method": card["method"],
+			"document_type": card["document_type"],
+			"module": "GCS Finance",
+			"is_public": 1,
+			"show_full_number": 1,
+			"color": card.get("color"),
+		})
+		doc.save(ignore_permissions=True)

@@ -282,6 +282,64 @@
 - مراجعة جاهزية تجربة العرض مع أصحاب المصلحة.
 - البدء في Sales Contract و Installment Plan foundation بعد اعتماد تجربة الحجز والعرض التنفيذي.
 
+## Form and Workspace UX Completion
+
+### كيف تتنقل في المساحات الجديدة
+
+ابدأ دائماً من Executive Presentation Center عند العرض التنفيذي، لأنه يرتب الرحلة من الأعلى إلى الأسفل:
+
+1. Executive Overview.
+2. Project Financial Control.
+3. Construction Cost Control.
+4. Procurement & Site Warehouses.
+5. Measurement & IPC.
+6. Contractor Financial Control.
+7. CFO Forecasting.
+8. Real Estate Inventory.
+9. Unit Profitability.
+10. Unit Reservation.
+11. Deep Financial Traceability.
+
+بعد ذلك انتقل إلى المساحة المتخصصة عند الحاجة:
+
+- Construction Control لشرح BOQ و Work Items.
+- Procurement & Site Warehouses لشرح الشراء والمخزون.
+- Measurement & IPC لشرح القياسات والمستخلصات.
+- Contractor Management لشرح المقاولين والمحتجزات.
+- Real Estate Inventory لشرح المشروع العقاري والوحدات.
+- Sales & Rental لشرح أن الحجز جاهز وأن العقود والأقساط تأتي لاحقاً.
+- Reports & Analytics لعرض كل التقارير مجمعة حسب الوظيفة.
+
+### كيف تشرح النماذج للعميل
+
+- ابدأ من القسم الأول في كل نموذج لأنه يحتوي البيانات الأساسية.
+- انتقل إلى الأقسام المالية أو التشغيلية حسب موضوع الشاشة.
+- وضّح أن الحقول المحسوبة مثل totals و progress و risk indicators تُحدّث تلقائياً من المستندات المرتبطة.
+- في Unit، اشرح أن الوحدة كيان ثابت وأن المستأجر غير مخزن داخلها.
+- في Unit Reservation، اشرح أن الحجز مؤقت ولا ينشئ فاتورة أو سند دفع.
+
+### ما يجب عرضه لكل مسار
+
+- BOQ: Construction BOQ ثم Construction Work Item ثم Construction BOQ Cost Analysis.
+- Procurement: Work Item Procurement Summary ثم BOQ Procurement Pipeline ثم Site Warehouse Consumption.
+- Measurement: Measurement Book ثم Measurement Entry ثم Work Item Measurement Progress.
+- IPC: Interim Payment Certificate ثم Measurement to IPC Traceability ثم IPC Register.
+- Contractor: Contractor Account ثم Contractor Account Statement ثم Retention Register Report.
+- CFO: Project Financial Snapshot Report ثم Cash Flow Forecast ثم EVM Metrics.
+- Real Estate: Real Estate Project ثم Unit Inventory Report ثم Unit Availability Report.
+- Profitability: Unit Cost Allocation ثم Unit Profitability Report.
+- Reservation: Unit Reservation ثم Active Unit Reservations ثم Unit Reservation Impact.
+
+### ما لا يجب تقديمه كمنجز
+
+- Sales Contract.
+- Lease Contract.
+- Installments.
+- Rent Schedule.
+- Collections.
+- CRM Matching.
+- Portal features.
+
 ## ما لم يتم تنفيذه عمداً بعد
 
 - Sales Contract.

@@ -6,24 +6,35 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "basic_information_section",
   "company",
   "project",
   "contractor",
   "contractor_account",
+  "advance_details_section",
   "advance_date",
   "advance_amount",
+  "recovery_status_section",
   "recovered_amount",
   "outstanding_advance_amount",
   "status",
   "payment_entry",
+  "remarks_section",
   "remarks"
  ],
  "fields": [
   {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
   },
   {
    "fieldname": "project",
@@ -31,7 +42,9 @@
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
-   "reqd": 1
+   "reqd": 1,
+   "in_list_view": 0,
+   "description": "Links this record to the related Project."
   },
   {
    "fieldname": "contractor",
@@ -39,40 +52,60 @@
    "in_standard_filter": 1,
    "label": "Contractor",
    "options": "Supplier",
-   "reqd": 1
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Links this record to the related Supplier."
   },
   {
    "fieldname": "contractor_account",
    "fieldtype": "Link",
    "label": "Contractor Account",
-   "options": "Contractor Account"
+   "options": "Contractor Account",
+   "in_list_view": 0,
+   "description": "Links this record to the related Contractor Account."
+  },
+  {
+   "fieldname": "advance_details_section",
+   "fieldtype": "Section Break",
+   "label": "Advance Details"
   },
   {
    "fieldname": "advance_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Advance Date"
+   "label": "Advance Date",
+   "description": "Specifies the advance date for this Advance Register."
   },
   {
    "default": "0",
    "fieldname": "advance_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Advance Amount"
+   "label": "Advance Amount",
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "recovery_status_section",
+   "fieldtype": "Section Break",
+   "label": "Recovery Status"
   },
   {
    "default": "0",
    "fieldname": "recovered_amount",
    "fieldtype": "Currency",
    "label": "Recovered Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "outstanding_advance_amount",
    "fieldtype": "Currency",
    "label": "Outstanding Advance Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "Active",
@@ -81,18 +114,28 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Active\nFully Recovered\nCancelled"
+   "options": "Active\nFully Recovered\nCancelled",
+   "description": "Current status used to track this Advance Register through its workflow or reporting lifecycle."
   },
   {
    "fieldname": "payment_entry",
    "fieldtype": "Link",
    "label": "Payment Entry",
-   "options": "Payment Entry"
+   "options": "Payment Entry",
+   "in_list_view": 0,
+   "description": "Links this record to the related Payment Entry."
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Advance Register."
   }
  ],
  "links": [],

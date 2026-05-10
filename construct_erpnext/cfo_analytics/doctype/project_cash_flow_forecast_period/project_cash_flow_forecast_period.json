@@ -5,15 +5,18 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "period_information_section",
   "period_start",
   "period_end",
   "period_label",
   "inflow_section",
+  "inflows_section",
   "expected_sales_inflow",
   "expected_rent_inflow",
   "expected_other_inflow",
   "total_inflow",
   "outflow_section",
+  "outflows_section",
   "purchase_order_outflow",
   "purchase_invoice_outflow",
   "ipc_outflow",
@@ -27,30 +30,40 @@
   "cash_deficit",
   "deficit_amount",
   "source_section",
+  "source_counts_section",
   "purchase_order_count",
   "purchase_invoice_count",
   "ipc_count",
   "retention_count",
+  "remarks_section",
   "remarks"
  ],
  "fields": [
   {
+   "fieldname": "period_information_section",
+   "fieldtype": "Section Break",
+   "label": "Period Information"
+  },
+  {
    "fieldname": "period_start",
    "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Period Start"
+   "in_list_view": 0,
+   "label": "Period Start",
+   "description": "Specifies the period start for this Project Cash Flow Forecast Period."
   },
   {
    "fieldname": "period_end",
    "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Period End"
+   "in_list_view": 0,
+   "label": "Period End",
+   "description": "Specifies the period end for this Project Cash Flow Forecast Period."
   },
   {
    "fieldname": "period_label",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Period"
+   "in_list_view": 0,
+   "label": "Period",
+   "description": "Specifies the period for this Project Cash Flow Forecast Period."
   },
   {
    "fieldname": "inflow_section",
@@ -58,28 +71,41 @@
    "label": "Inflows"
   },
   {
+   "fieldname": "inflows_section",
+   "fieldtype": "Section Break",
+   "label": "Inflows"
+  },
+  {
    "default": "0",
    "fieldname": "expected_sales_inflow",
    "fieldtype": "Currency",
-   "label": "Expected Sales Inflow"
+   "label": "Expected Sales Inflow",
+   "in_list_view": 0,
+   "description": "Specifies the expected sales inflow for this Project Cash Flow Forecast Period."
   },
   {
    "default": "0",
    "fieldname": "expected_rent_inflow",
    "fieldtype": "Currency",
-   "label": "Expected Rent Inflow"
+   "label": "Expected Rent Inflow",
+   "in_list_view": 0,
+   "description": "Specifies the expected rent inflow for this Project Cash Flow Forecast Period."
   },
   {
    "default": "0",
    "fieldname": "expected_other_inflow",
    "fieldtype": "Currency",
-   "label": "Expected Other Inflow"
+   "label": "Expected Other Inflow",
+   "in_list_view": 0,
+   "description": "Specifies the expected other inflow for this Project Cash Flow Forecast Period."
   },
   {
    "fieldname": "total_inflow",
    "fieldtype": "Currency",
    "label": "Total Inflow",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "outflow_section",
@@ -87,46 +113,65 @@
    "label": "Outflows"
   },
   {
+   "fieldname": "outflows_section",
+   "fieldtype": "Section Break",
+   "label": "Outflows"
+  },
+  {
    "default": "0",
    "fieldname": "purchase_order_outflow",
    "fieldtype": "Currency",
-   "label": "Purchase Order Outflow"
+   "label": "Purchase Order Outflow",
+   "in_list_view": 0,
+   "description": "Specifies the purchase order outflow for this Project Cash Flow Forecast Period."
   },
   {
    "default": "0",
    "fieldname": "purchase_invoice_outflow",
    "fieldtype": "Currency",
-   "label": "Purchase Invoice Outflow"
+   "label": "Purchase Invoice Outflow",
+   "in_list_view": 0,
+   "description": "Specifies the purchase invoice outflow for this Project Cash Flow Forecast Period."
   },
   {
    "default": "0",
    "fieldname": "ipc_outflow",
    "fieldtype": "Currency",
-   "label": "IPC Outflow"
+   "label": "IPC Outflow",
+   "in_list_view": 0,
+   "description": "Specifies the ipc outflow for this Project Cash Flow Forecast Period."
   },
   {
    "default": "0",
    "fieldname": "retention_release_outflow",
    "fieldtype": "Currency",
-   "label": "Retention Release Outflow"
+   "label": "Retention Release Outflow",
+   "in_list_view": 0,
+   "description": "Specifies the retention release outflow for this Project Cash Flow Forecast Period."
   },
   {
    "default": "0",
    "fieldname": "advance_outflow",
    "fieldtype": "Currency",
-   "label": "Advance Outflow"
+   "label": "Advance Outflow",
+   "in_list_view": 0,
+   "description": "Specifies the advance outflow for this Project Cash Flow Forecast Period."
   },
   {
    "default": "0",
    "fieldname": "other_outflow",
    "fieldtype": "Currency",
-   "label": "Other Outflow"
+   "label": "Other Outflow",
+   "in_list_view": 0,
+   "description": "Specifies the other outflow for this Project Cash Flow Forecast Period."
   },
   {
    "fieldname": "total_outflow",
    "fieldtype": "Currency",
    "label": "Total Outflow",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "balance_section",
@@ -137,25 +182,33 @@
    "fieldname": "net_cash_flow",
    "fieldtype": "Currency",
    "label": "Net Cash Flow",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "running_balance",
    "fieldtype": "Currency",
    "label": "Running Balance",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "cash_deficit",
    "fieldtype": "Check",
    "label": "Cash Deficit",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "deficit_amount",
    "fieldtype": "Currency",
    "label": "Deficit Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "source_section",
@@ -163,29 +216,49 @@
    "label": "Source Counts"
   },
   {
+   "fieldname": "source_counts_section",
+   "fieldtype": "Section Break",
+   "label": "Source Counts"
+  },
+  {
    "fieldname": "purchase_order_count",
    "fieldtype": "Int",
-   "label": "Purchase Order Count"
+   "label": "Purchase Order Count",
+   "in_list_view": 0,
+   "description": "Specifies the purchase order count for this Project Cash Flow Forecast Period."
   },
   {
    "fieldname": "purchase_invoice_count",
    "fieldtype": "Int",
-   "label": "Purchase Invoice Count"
+   "label": "Purchase Invoice Count",
+   "in_list_view": 0,
+   "description": "Specifies the purchase invoice count for this Project Cash Flow Forecast Period."
   },
   {
    "fieldname": "ipc_count",
    "fieldtype": "Int",
-   "label": "IPC Count"
+   "label": "IPC Count",
+   "in_list_view": 0,
+   "description": "Specifies the ipc count for this Project Cash Flow Forecast Period."
   },
   {
    "fieldname": "retention_count",
    "fieldtype": "Int",
-   "label": "Retention Count"
+   "label": "Retention Count",
+   "in_list_view": 0,
+   "description": "Specifies the retention count for this Project Cash Flow Forecast Period."
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Small Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Project Cash Flow Forecast Period."
   }
  ],
  "istable": 1,

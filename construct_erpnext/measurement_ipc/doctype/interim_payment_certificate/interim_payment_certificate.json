@@ -59,7 +59,9 @@
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
   },
   {
    "fieldname": "project",
@@ -68,7 +70,8 @@
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Project."
   },
   {
    "fieldname": "contractor",
@@ -77,59 +80,74 @@
    "in_standard_filter": 1,
    "label": "Contractor",
    "options": "Supplier",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Supplier."
   },
   {
    "fieldname": "contractor_account",
    "fieldtype": "Link",
    "label": "Contractor Account",
    "options": "Contractor Account",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "subcontract",
    "fieldtype": "Link",
    "label": "Subcontract",
-   "options": "Subcontract"
+   "options": "Subcontract",
+   "in_list_view": 0,
+   "description": "Links this record to the related Subcontract."
   },
   {
    "fieldname": "construction_boq",
    "fieldtype": "Link",
    "label": "Construction BOQ",
-   "options": "Construction BOQ"
+   "options": "Construction BOQ",
+   "in_list_view": 0,
+   "description": "Links this record to the related Construction BOQ."
   },
   {
    "fieldname": "measurement_book",
    "fieldtype": "Link",
    "label": "Measurement Book",
    "options": "Measurement Book",
-   "description": "Verified Measurement Book used to generate this IPC."
+   "description": "Verified Measurement Book used to generate this IPC.",
+   "in_list_view": 0
   },
   {
    "fieldname": "certificate_number",
    "fieldtype": "Data",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Certificate Number",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Specifies the certificate number for this Interim Payment Certificate."
   },
   {
    "fieldname": "certificate_sequence",
    "fieldtype": "Int",
-   "label": "Certificate Sequence"
+   "label": "Certificate Sequence",
+   "in_list_view": 0,
+   "description": "Specifies the certificate sequence for this Interim Payment Certificate."
   },
   {
    "fieldname": "period_start",
    "fieldtype": "Date",
    "in_standard_filter": 1,
    "label": "Period Start",
-   "reqd": 1
+   "reqd": 1,
+   "in_list_view": 0,
+   "description": "Specifies the period start for this Interim Payment Certificate."
   },
   {
    "fieldname": "period_end",
    "fieldtype": "Date",
    "in_standard_filter": 1,
    "label": "Period End",
-   "reqd": 1
+   "reqd": 1,
+   "in_list_view": 0,
+   "description": "Specifies the period end for this Interim Payment Certificate."
   },
   {
    "fieldname": "workflow_section",
@@ -141,7 +159,9 @@
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Workflow State",
-   "options": "Draft\nSubmitted\nUnder Review\nCertified\nApproved\nInvoice Created\nPartially Paid\nPaid\nClosed\nRejected"
+   "options": "Draft\nSubmitted\nUnder Review\nCertified\nApproved\nInvoice Created\nPartially Paid\nPaid\nClosed\nRejected",
+   "in_list_view": 0,
+   "description": "Current status used to track this Interim Payment Certificate through its workflow or reporting lifecycle."
   },
   {
    "default": "Draft",
@@ -150,59 +170,76 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Draft\nSubmitted\nUnder Review\nCertified\nApproved\nInvoice Created\nPartially Paid\nPaid\nClosed\nRejected"
+   "options": "Draft\nSubmitted\nUnder Review\nCertified\nApproved\nInvoice Created\nPartially Paid\nPaid\nClosed\nRejected",
+   "description": "Current status used to track this Interim Payment Certificate through its workflow or reporting lifecycle."
   },
   {
    "fieldname": "submitted_by",
    "fieldtype": "Link",
    "label": "Submitted By",
    "options": "User",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "submitted_on",
    "fieldtype": "Datetime",
    "label": "Submitted On",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "reviewed_by",
    "fieldtype": "Link",
    "label": "Reviewed By",
    "options": "User",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "reviewed_on",
    "fieldtype": "Datetime",
    "label": "Reviewed On",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "certified_by",
    "fieldtype": "Link",
    "label": "Certified By",
    "options": "User",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "certified_on",
    "fieldtype": "Datetime",
    "label": "Certified On",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "approved_by",
    "fieldtype": "Link",
    "label": "Approved By",
    "options": "User",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "approved_on",
    "fieldtype": "Datetime",
    "label": "Approved On",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "financial_section",
@@ -213,57 +250,77 @@
    "fieldname": "gross_amount",
    "fieldtype": "Currency",
    "label": "Gross Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Gross certified amount before retention and deductions."
   },
   {
    "fieldname": "previous_certified_amount",
    "fieldtype": "Currency",
    "label": "Previous Certified Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Cumulative amount certified before this IPC."
   },
   {
    "fieldname": "current_certified_amount",
    "fieldtype": "Currency",
    "label": "Current Certified Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Amount certified by the current IPC."
   },
   {
    "fieldname": "total_certified_amount",
    "fieldtype": "Currency",
    "label": "Total Certified Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "10",
    "fieldname": "retention_percent",
    "fieldtype": "Percent",
-   "label": "Retention Percent"
+   "label": "Retention Percent",
+   "in_list_view": 0,
+   "description": "Specifies the retention percent for this Interim Payment Certificate."
   },
   {
    "fieldname": "retention_amount",
    "fieldtype": "Currency",
    "label": "Retention Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "advance_recovery_amount",
    "fieldtype": "Currency",
-   "label": "Advance Recovery Amount"
+   "label": "Advance Recovery Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "penalty_amount",
    "fieldtype": "Currency",
-   "label": "Penalty Amount"
+   "label": "Penalty Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "withholding_tax_amount",
    "fieldtype": "Currency",
-   "label": "Withholding Tax Amount"
+   "label": "Withholding Tax Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "other_deduction_amount",
    "fieldtype": "Currency",
-   "label": "Other Deduction Amount"
+   "label": "Other Deduction Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "net_payable",
@@ -284,35 +341,46 @@
    "label": "Purchase Invoice",
    "options": "Purchase Invoice",
    "read_only": 1,
-   "description": "Draft or submitted ERPNext Purchase Invoice created from this IPC."
+   "description": "Draft or submitted ERPNext Purchase Invoice created from this IPC.",
+   "in_list_view": 1
   },
   {
    "fieldname": "paid_amount",
    "fieldtype": "Currency",
    "label": "Paid Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "outstanding_amount",
    "fieldtype": "Currency",
    "label": "Outstanding Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "payment_difference_amount",
    "fieldtype": "Currency",
    "label": "Payment Difference Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "payment_difference_reason",
    "fieldtype": "Small Text",
-   "label": "Payment Difference Reason"
+   "label": "Payment Difference Reason",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Interim Payment Certificate."
   },
   {
    "fieldname": "expected_next_payment_date",
    "fieldtype": "Date",
-   "label": "Expected Next Payment Date"
+   "label": "Expected Next Payment Date",
+   "in_list_view": 0,
+   "description": "Specifies the expected next payment date for this Interim Payment Certificate."
   },
   {
    "fieldname": "control_section",
@@ -322,31 +390,41 @@
   {
    "fieldname": "rejection_reason",
    "fieldtype": "Small Text",
-   "label": "Rejection Reason"
+   "label": "Rejection Reason",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Interim Payment Certificate."
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Interim Payment Certificate."
   },
   {
    "fieldname": "lines",
    "fieldtype": "Table",
    "label": "Lines",
-   "options": "Interim Payment Certificate Line"
+   "options": "Interim Payment Certificate Line",
+   "in_list_view": 0,
+   "description": "Child table used to record lines for this Interim Payment Certificate."
   },
   {
    "fieldname": "deductions",
    "fieldtype": "Table",
    "label": "Deductions",
-   "options": "IPC Deduction"
+   "options": "IPC Deduction",
+   "in_list_view": 0,
+   "description": "Child table used to record deductions for this Interim Payment Certificate."
   },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "options": "Interim Payment Certificate",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   }
  ],
  "index_web_pages_for_search": 1,

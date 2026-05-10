@@ -7,8 +7,14 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "core_section",
+  "reservation_information_section",
   "company",
+  "reservation_number",
+  "reservation_type",
+  "reservation_date",
+  "valid_from",
+  "valid_until",
+  "unit_details_section",
   "real_estate_project",
   "project",
   "unit",
@@ -16,50 +22,96 @@
   "building",
   "floor",
   "unit_type",
-  "reservation_section",
-  "reservation_number",
-  "reservation_type",
-  "reservation_date",
-  "reservation_dates_column",
-  "valid_from",
-  "valid_until",
-  "status",
-  "workflow_state",
-  "party_section",
+  "customer_lead_section",
   "lead",
   "customer",
   "party_name",
   "party_column",
   "mobile_no",
   "email",
-  "commercial_section",
+  "commercial_details_section",
   "expected_sale_price",
   "expected_monthly_rent",
   "reservation_amount",
   "reservation_terms",
-  "conversion_section",
+  "conversion_placeholders_section",
   "converted_to_doctype",
   "converted_to_document",
   "converted_on",
   "converted_by",
-  "control_section",
+  "status_control_section",
+  "status",
+  "workflow_state",
   "previous_unit_status",
   "previous_marketing_status",
   "cancelled_reason",
   "expiry_reason",
-  "remarks"
+  "remarks_section",
+  "remarks",
+  "additional_information_section",
+  "reservation_dates_column"
  ],
  "fields": [
   {
-   "fieldname": "core_section",
+   "fieldname": "reservation_information_section",
    "fieldtype": "Section Break",
-   "label": "Core"
+   "label": "Reservation Information"
   },
   {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
+  },
+  {
+   "fieldname": "reservation_number",
+   "fieldtype": "Data",
+   "label": "Reservation Number",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 0,
+   "description": "Unique reservation reference generated from reservation settings."
+  },
+  {
+   "fieldname": "reservation_type",
+   "fieldtype": "Select",
+   "label": "Reservation Type",
+   "options": "Sale\nRent",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Commercial intent of the temporary reservation."
+  },
+  {
+   "fieldname": "reservation_date",
+   "fieldtype": "Date",
+   "label": "Reservation Date",
+   "default": "Today",
+   "in_list_view": 0,
+   "description": "Specifies the reservation date for this Unit Reservation."
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From",
+   "default": "Today",
+   "in_list_view": 0,
+   "description": "Specifies the valid from for this Unit Reservation."
+  },
+  {
+   "fieldname": "valid_until",
+   "fieldtype": "Date",
+   "label": "Valid Until",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Date until which the reservation remains valid."
+  },
+  {
+   "fieldname": "unit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Unit Details"
   },
   {
    "fieldname": "real_estate_project",
@@ -68,14 +120,17 @@
    "options": "Real Estate Project",
    "reqd": 1,
    "in_standard_filter": 1,
-   "description": "Real estate project that contains the reserved unit."
+   "description": "Real estate project that contains the reserved unit.",
+   "in_list_view": 0
   },
   {
    "fieldname": "project",
    "fieldtype": "Link",
    "label": "Project",
    "options": "Project",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "unit",
@@ -96,70 +151,152 @@
    "fieldtype": "Link",
    "label": "Building",
    "options": "Building",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "floor",
    "fieldtype": "Link",
    "label": "Floor",
    "options": "Floor",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "unit_type",
    "fieldtype": "Link",
    "label": "Unit Type",
    "options": "Unit Type",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "reservation_section",
+   "fieldname": "customer_lead_section",
    "fieldtype": "Section Break",
-   "label": "Reservation Details"
+   "label": "Customer / Lead Details"
   },
   {
-   "fieldname": "reservation_number",
-   "fieldtype": "Data",
-   "label": "Reservation Number",
-   "reqd": 1,
-   "unique": 1,
-   "in_list_view": 1,
-   "description": "Unique reservation reference generated from reservation settings."
-  },
-  {
-   "fieldname": "reservation_type",
-   "fieldtype": "Select",
-   "label": "Reservation Type",
-   "options": "Sale\nRent",
-   "reqd": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "description": "Commercial intent of the temporary reservation."
-  },
-  {
-   "fieldname": "reservation_date",
-   "fieldtype": "Date",
-   "label": "Reservation Date",
-   "default": "Today",
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead",
+   "description": "Potential customer from ERPNext CRM.",
    "in_list_view": 1
   },
   {
-   "fieldname": "reservation_dates_column",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "description": "Existing customer interested in the reservation.",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Data",
+   "label": "Party Name",
+   "in_list_view": 1,
+   "description": "Visible party name when Customer or Lead is not yet available."
+  },
+  {
+   "fieldname": "party_column",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "valid_from",
-   "fieldtype": "Date",
-   "label": "Valid From",
-   "default": "Today"
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "in_list_view": 0,
+   "description": "Specifies the mobile no for this Unit Reservation."
   },
   {
-   "fieldname": "valid_until",
-   "fieldtype": "Date",
-   "label": "Valid Until",
-   "reqd": 1,
-   "in_list_view": 1,
-   "description": "Date until which the reservation remains valid."
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email",
+   "in_list_view": 0,
+   "description": "Specifies the email for this Unit Reservation."
+  },
+  {
+   "fieldname": "commercial_details_section",
+   "fieldtype": "Section Break",
+   "label": "Commercial Details"
+  },
+  {
+   "fieldname": "expected_sale_price",
+   "fieldtype": "Currency",
+   "label": "Expected Sale Price",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "expected_monthly_rent",
+   "fieldtype": "Currency",
+   "label": "Expected Monthly Rent",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "reservation_amount",
+   "fieldtype": "Currency",
+   "label": "Reservation Amount",
+   "description": "Non-accounting reservation amount for commercial tracking only.",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "reservation_terms",
+   "fieldtype": "Text",
+   "label": "Reservation Terms",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Unit Reservation."
+  },
+  {
+   "fieldname": "conversion_placeholders_section",
+   "fieldtype": "Section Break",
+   "label": "Conversion Placeholders"
+  },
+  {
+   "fieldname": "converted_to_doctype",
+   "fieldtype": "Link",
+   "label": "Converted To DocType",
+   "options": "DocType",
+   "description": "Future target document type when reservation is converted.",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "converted_to_document",
+   "fieldtype": "Dynamic Link",
+   "label": "Converted To Document",
+   "options": "converted_to_doctype",
+   "in_list_view": 0,
+   "description": "Links this record to the selected reference document."
+  },
+  {
+   "fieldname": "converted_on",
+   "fieldtype": "Datetime",
+   "label": "Converted On",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "converted_by",
+   "fieldtype": "Link",
+   "label": "Converted By",
+   "options": "User",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "status_control_section",
+   "fieldtype": "Section Break",
+   "label": "Status / Control"
   },
   {
    "fieldname": "status",
@@ -177,139 +314,60 @@
    "label": "Workflow State",
    "options": "Draft\nReserved\nConverted\nExpired\nCancelled",
    "default": "Draft",
-   "in_standard_filter": 1
-  },
-  {
-   "fieldname": "party_section",
-   "fieldtype": "Section Break",
-   "label": "Party"
-  },
-  {
-   "fieldname": "lead",
-   "fieldtype": "Link",
-   "label": "Lead",
-   "options": "Lead",
-   "description": "Potential customer from ERPNext CRM."
-  },
-  {
-   "fieldname": "customer",
-   "fieldtype": "Link",
-   "label": "Customer",
-   "options": "Customer",
-   "description": "Existing customer interested in the reservation."
-  },
-  {
-   "fieldname": "party_name",
-   "fieldtype": "Data",
-   "label": "Party Name",
-   "in_list_view": 1,
-   "description": "Visible party name when Customer or Lead is not yet available."
-  },
-  {
-   "fieldname": "party_column",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "mobile_no",
-   "fieldtype": "Data",
-   "label": "Mobile No"
-  },
-  {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email",
-   "options": "Email"
-  },
-  {
-   "fieldname": "commercial_section",
-   "fieldtype": "Section Break",
-   "label": "Commercial Info"
-  },
-  {
-   "fieldname": "expected_sale_price",
-   "fieldtype": "Currency",
-   "label": "Expected Sale Price",
-   "read_only": 1
-  },
-  {
-   "fieldname": "expected_monthly_rent",
-   "fieldtype": "Currency",
-   "label": "Expected Monthly Rent",
-   "read_only": 1
-  },
-  {
-   "fieldname": "reservation_amount",
-   "fieldtype": "Currency",
-   "label": "Reservation Amount",
-   "description": "Non-accounting reservation amount for commercial tracking only."
-  },
-  {
-   "fieldname": "reservation_terms",
-   "fieldtype": "Text",
-   "label": "Reservation Terms"
-  },
-  {
-   "fieldname": "conversion_section",
-   "fieldtype": "Section Break",
-   "label": "Future Conversion"
-  },
-  {
-   "fieldname": "converted_to_doctype",
-   "fieldtype": "Link",
-   "label": "Converted To DocType",
-   "options": "DocType",
-   "description": "Future target document type when reservation is converted."
-  },
-  {
-   "fieldname": "converted_to_document",
-   "fieldtype": "Dynamic Link",
-   "label": "Converted To Document",
-   "options": "converted_to_doctype"
-  },
-  {
-   "fieldname": "converted_on",
-   "fieldtype": "Datetime",
-   "label": "Converted On",
-   "read_only": 1
-  },
-  {
-   "fieldname": "converted_by",
-   "fieldtype": "Link",
-   "label": "Converted By",
-   "options": "User",
-   "read_only": 1
-  },
-  {
-   "fieldname": "control_section",
-   "fieldtype": "Section Break",
-   "label": "Control"
+   "in_standard_filter": 1,
+   "in_list_view": 0,
+   "description": "Current status used to track this Unit Reservation through its workflow or reporting lifecycle."
   },
   {
    "fieldname": "previous_unit_status",
    "fieldtype": "Data",
    "label": "Previous Unit Status",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "previous_marketing_status",
    "fieldtype": "Data",
    "label": "Previous Marketing Status",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "cancelled_reason",
    "fieldtype": "Small Text",
-   "label": "Cancelled Reason"
+   "label": "Cancelled Reason",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Unit Reservation."
   },
   {
    "fieldname": "expiry_reason",
    "fieldtype": "Small Text",
-   "label": "Expiry Reason"
+   "label": "Expiry Reason",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Unit Reservation."
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Unit Reservation."
+  },
+  {
+   "fieldname": "additional_information_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "reservation_dates_column",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,

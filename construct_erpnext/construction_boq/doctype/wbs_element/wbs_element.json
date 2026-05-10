@@ -6,19 +6,28 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "basic_information_section",
   "project",
   "wbs_code",
   "wbs_name",
   "parent_wbs_element",
   "column_break_dates",
   "is_group",
+  "status_section",
   "disabled",
+  "schedule_section",
   "planned_start_date",
   "planned_end_date",
   "progress_weight",
+  "notes_section",
   "description"
  ],
  "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
   {
    "fieldname": "project",
    "fieldtype": "Link",
@@ -26,7 +35,8 @@
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Project."
   },
   {
    "fieldname": "wbs_code",
@@ -34,20 +44,24 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "WBS Code",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Specifies the wbs code for this WBS Element."
   },
   {
    "fieldname": "wbs_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "WBS Name",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Specifies the wbs name for this WBS Element."
   },
   {
    "fieldname": "parent_wbs_element",
    "fieldtype": "Link",
    "label": "Parent WBS Element",
-   "options": "WBS Element"
+   "options": "WBS Element",
+   "in_list_view": 0,
+   "description": "Links this record to the related WBS Element."
   },
   {
    "fieldname": "column_break_dates",
@@ -56,32 +70,59 @@
   {
    "fieldname": "is_group",
    "fieldtype": "Check",
-   "label": "Is Group"
+   "label": "Is Group",
+   "in_list_view": 0,
+   "description": "Specifies the is group for this WBS Element."
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
   },
   {
    "fieldname": "disabled",
    "fieldtype": "Check",
-   "label": "Disabled"
+   "label": "Disabled",
+   "in_list_view": 1,
+   "description": "Specifies the disabled for this WBS Element."
+  },
+  {
+   "fieldname": "schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Schedule"
   },
   {
    "fieldname": "planned_start_date",
    "fieldtype": "Date",
-   "label": "Planned Start Date"
+   "label": "Planned Start Date",
+   "in_list_view": 0,
+   "description": "Specifies the planned start date for this WBS Element."
   },
   {
    "fieldname": "planned_end_date",
    "fieldtype": "Date",
-   "label": "Planned End Date"
+   "label": "Planned End Date",
+   "in_list_view": 0,
+   "description": "Specifies the planned end date for this WBS Element."
   },
   {
    "fieldname": "progress_weight",
    "fieldtype": "Percent",
-   "label": "Progress Weight"
+   "label": "Progress Weight",
+   "in_list_view": 1,
+   "description": "Specifies the progress weight for this WBS Element."
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
   },
   {
    "fieldname": "description",
    "fieldtype": "Small Text",
-   "label": "Description"
+   "label": "Description",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this WBS Element."
   }
  ],
  "index_web_pages_for_search": 1,

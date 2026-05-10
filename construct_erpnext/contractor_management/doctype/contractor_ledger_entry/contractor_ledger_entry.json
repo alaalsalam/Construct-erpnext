@@ -6,6 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "transaction_information_section",
   "company",
   "project",
   "contractor",
@@ -13,6 +14,7 @@
   "subcontract",
   "posting_date",
   "transaction_type",
+  "references_section",
   "reference_doctype",
   "reference_name",
   "ipc",
@@ -30,90 +32,121 @@
   "running_balance",
   "remarks",
   "reversal_section",
+  "audit_section",
   "is_reversed",
   "reversed_entry"
  ],
  "fields": [
   {
+   "fieldname": "transaction_information_section",
+   "fieldtype": "Section Break",
+   "label": "Transaction Information"
+  },
+  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
   },
   {
    "fieldname": "project",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Project."
   },
   {
    "fieldname": "contractor",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "in_standard_filter": 1,
    "label": "Contractor",
    "options": "Supplier",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Supplier."
   },
   {
    "fieldname": "contractor_account",
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Contractor Account",
-   "options": "Contractor Account"
+   "options": "Contractor Account",
+   "in_list_view": 0,
+   "description": "Links this record to the related Contractor Account."
   },
   {
    "fieldname": "subcontract",
    "fieldtype": "Link",
    "label": "Subcontract",
-   "options": "Subcontract"
+   "options": "Subcontract",
+   "in_list_view": 0,
+   "description": "Links this record to the related Subcontract."
   },
   {
    "fieldname": "posting_date",
    "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Posting Date"
+   "in_list_view": 0,
+   "label": "Posting Date",
+   "description": "Specifies the posting date for this Contractor Ledger Entry."
   },
   {
    "fieldname": "transaction_type",
    "fieldtype": "Select",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "in_standard_filter": 1,
    "label": "Transaction Type",
-   "options": "IPC Certified\nRetention Held\nRetention Released\nAdvance Paid\nAdvance Recovery\nPenalty\nDeduction\nPurchase Invoice Created\nPayment Made\nPayment Difference\nAdjustment"
+   "options": "IPC Certified\nRetention Held\nRetention Released\nAdvance Paid\nAdvance Recovery\nPenalty\nDeduction\nPurchase Invoice Created\nPayment Made\nPayment Difference\nAdjustment",
+   "description": "Selects the transaction type used for classification, workflow, or reporting."
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
   },
   {
    "fieldname": "reference_doctype",
    "fieldtype": "Link",
    "label": "Reference DocType",
-   "options": "DocType"
+   "options": "DocType",
+   "in_list_view": 0,
+   "description": "Links this record to the related DocType."
   },
   {
    "fieldname": "reference_name",
    "fieldtype": "Dynamic Link",
    "label": "Reference Name",
-   "options": "reference_doctype"
+   "options": "reference_doctype",
+   "in_list_view": 0,
+   "description": "Links this record to the selected reference document."
   },
   {
    "fieldname": "ipc",
    "fieldtype": "Link",
    "label": "IPC",
-   "options": "Interim Payment Certificate"
+   "options": "Interim Payment Certificate",
+   "in_list_view": 0,
+   "description": "Links this record to the related Interim Payment Certificate."
   },
   {
    "fieldname": "purchase_invoice",
    "fieldtype": "Link",
    "label": "Purchase Invoice",
-   "options": "Purchase Invoice"
+   "options": "Purchase Invoice",
+   "in_list_view": 0,
+   "description": "Links this record to the related Purchase Invoice."
   },
   {
    "fieldname": "payment_entry",
    "fieldtype": "Link",
    "label": "Payment Entry",
-   "options": "Payment Entry"
+   "options": "Payment Entry",
+   "in_list_view": 0,
+   "description": "Links this record to the related Payment Entry."
   },
   {
    "fieldname": "amounts_section",
@@ -124,61 +157,81 @@
    "default": "0",
    "fieldname": "gross_amount",
    "fieldtype": "Currency",
-   "label": "Gross Amount"
+   "label": "Gross Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "retention_amount",
    "fieldtype": "Currency",
-   "label": "Retention Amount"
+   "label": "Retention Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "advance_amount",
    "fieldtype": "Currency",
-   "label": "Advance Amount"
+   "label": "Advance Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "recovered_amount",
    "fieldtype": "Currency",
-   "label": "Recovered Amount"
+   "label": "Recovered Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "deduction_amount",
    "fieldtype": "Currency",
-   "label": "Deduction Amount"
+   "label": "Deduction Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "invoice_amount",
    "fieldtype": "Currency",
-   "label": "Invoice Amount"
+   "label": "Invoice Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "payment_amount",
    "fieldtype": "Currency",
-   "label": "Payment Amount"
+   "label": "Payment Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "outstanding_amount",
    "fieldtype": "Currency",
-   "label": "Outstanding Amount"
+   "label": "Outstanding Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "running_balance",
    "fieldtype": "Currency",
    "label": "Running Balance",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Small Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Contractor Ledger Entry."
   },
   {
    "fieldname": "reversal_section",
@@ -186,16 +239,25 @@
    "label": "Reversal"
   },
   {
+   "fieldname": "audit_section",
+   "fieldtype": "Section Break",
+   "label": "Audit"
+  },
+  {
    "default": "0",
    "fieldname": "is_reversed",
    "fieldtype": "Check",
-   "label": "Is Reversed"
+   "label": "Is Reversed",
+   "in_list_view": 0,
+   "description": "Specifies the is reversed for this Contractor Ledger Entry."
   },
   {
    "fieldname": "reversed_entry",
    "fieldtype": "Link",
    "label": "Reversed Entry",
-   "options": "Contractor Ledger Entry"
+   "options": "Contractor Ledger Entry",
+   "in_list_view": 0,
+   "description": "Links this record to the related Contractor Ledger Entry."
   }
  ],
  "index_web_pages_for_search": 1,

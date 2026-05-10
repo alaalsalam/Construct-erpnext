@@ -6,12 +6,13 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "snapshot_information_section",
   "company",
   "project",
   "calculation_date",
   "evm_title",
   "status",
-  "source_section",
+  "source_values_section",
   "budget_at_completion",
   "earned_value",
   "actual_cost",
@@ -20,11 +21,11 @@
   "planned_progress_percent",
   "actual_progress_percent",
   "certification_progress_percent",
-  "variance_section",
+  "variances_section",
   "cost_variance",
   "schedule_variance",
   "variance_at_completion",
-  "index_section",
+  "performance_indices_section",
   "cost_performance_index",
   "schedule_performance_index",
   "to_complete_performance_index",
@@ -32,7 +33,7 @@
   "estimate_at_completion",
   "estimate_to_complete",
   "forecast_overrun_amount",
-  "risk_section",
+  "risk_indicators_section",
   "cost_status",
   "schedule_status",
   "overall_evm_status",
@@ -40,16 +41,23 @@
   "executive_summary",
   "key_risks",
   "recommendations",
-  "reference_section",
+  "references_section",
   "project_financial_snapshot",
   "cash_flow_forecast"
  ],
  "fields": [
   {
+   "fieldname": "snapshot_information_section",
+   "fieldtype": "Section Break",
+   "label": "Snapshot Information"
+  },
+  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
   },
   {
    "fieldname": "project",
@@ -58,7 +66,8 @@
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Project."
   },
   {
    "default": "Today",
@@ -66,24 +75,27 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Calculation Date",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Specifies the calculation date for this Project EVM Metrics."
   },
   {
    "fieldname": "evm_title",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "EVM Title"
+   "in_list_view": 0,
+   "label": "EVM Title",
+   "description": "Specifies the evm title for this Project EVM Metrics."
   },
   {
    "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Status",
-   "options": "Draft\nCalculated\nReviewed\nArchived"
+   "options": "Draft\nCalculated\nReviewed\nArchived",
+   "description": "Current status used to track this Project EVM Metrics through its workflow or reporting lifecycle."
   },
   {
-   "fieldname": "source_section",
+   "fieldname": "source_values_section",
    "fieldtype": "Section Break",
    "label": "Source Values"
   },
@@ -91,25 +103,33 @@
    "fieldname": "budget_at_completion",
    "fieldtype": "Currency",
    "label": "Budget at Completion",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "earned_value",
    "fieldtype": "Currency",
    "label": "Earned Value",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "actual_cost",
    "fieldtype": "Currency",
    "label": "Actual Cost",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "planned_value",
    "fieldtype": "Currency",
    "label": "Planned Value",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "progress_section",
@@ -120,22 +140,27 @@
    "fieldname": "planned_progress_percent",
    "fieldtype": "Percent",
    "label": "Planned Progress Percent",
-   "description": "Planned progress used to calculate Planned Value until schedule-derived PV is implemented."
+   "description": "Planned progress used to calculate Planned Value until schedule-derived PV is implemented.",
+   "in_list_view": 0
   },
   {
    "fieldname": "actual_progress_percent",
    "fieldtype": "Percent",
    "label": "Actual Progress Percent",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "certification_progress_percent",
    "fieldtype": "Percent",
    "label": "Certification Progress Percent",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "variance_section",
+   "fieldname": "variances_section",
    "fieldtype": "Section Break",
    "label": "Variances"
   },
@@ -143,22 +168,28 @@
    "fieldname": "cost_variance",
    "fieldtype": "Currency",
    "label": "Cost Variance",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "schedule_variance",
    "fieldtype": "Currency",
    "label": "Schedule Variance",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "variance_at_completion",
    "fieldtype": "Currency",
    "label": "Variance at Completion",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "index_section",
+   "fieldname": "performance_indices_section",
    "fieldtype": "Section Break",
    "label": "Performance Indices"
   },
@@ -167,20 +198,24 @@
    "fieldtype": "Float",
    "label": "Cost Performance Index",
    "read_only": 1,
-   "description": "CPI = Earned Value / Actual Cost when Actual Cost is greater than zero."
+   "description": "CPI = Earned Value / Actual Cost when Actual Cost is greater than zero.",
+   "in_list_view": 1
   },
   {
    "fieldname": "schedule_performance_index",
    "fieldtype": "Float",
    "label": "Schedule Performance Index",
    "read_only": 1,
-   "description": "SPI = Earned Value / Planned Value when Planned Value is greater than zero."
+   "description": "SPI = Earned Value / Planned Value when Planned Value is greater than zero.",
+   "in_list_view": 1
   },
   {
    "fieldname": "to_complete_performance_index",
    "fieldtype": "Float",
    "label": "To-Complete Performance Index",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "forecast_section",
@@ -191,38 +226,48 @@
    "fieldname": "estimate_at_completion",
    "fieldtype": "Currency",
    "label": "Estimate at Completion",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "estimate_to_complete",
    "fieldtype": "Currency",
    "label": "Estimate to Complete",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "forecast_overrun_amount",
    "fieldtype": "Currency",
    "label": "Forecast Overrun Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "risk_section",
+   "fieldname": "risk_indicators_section",
    "fieldtype": "Section Break",
-   "label": "Risk"
+   "label": "Risk Indicators"
   },
   {
    "fieldname": "cost_status",
    "fieldtype": "Select",
    "label": "Cost Status",
    "options": "Green\nYellow\nRed",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Current status used to track this Project EVM Metrics through its workflow or reporting lifecycle."
   },
   {
    "fieldname": "schedule_status",
    "fieldtype": "Select",
    "label": "Schedule Status",
    "options": "Green\nYellow\nRed",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Current status used to track this Project EVM Metrics through its workflow or reporting lifecycle."
   },
   {
    "fieldname": "overall_evm_status",
@@ -230,7 +275,8 @@
    "in_list_view": 1,
    "label": "Overall EVM Status",
    "options": "On Track\nWatch\nAt Risk",
-   "read_only": 1
+   "read_only": 1,
+   "description": "Current status used to track this Project EVM Metrics through its workflow or reporting lifecycle."
   },
   {
    "fieldname": "narrative_section",
@@ -240,20 +286,26 @@
   {
    "fieldname": "executive_summary",
    "fieldtype": "Text",
-   "label": "Executive Summary"
+   "label": "Executive Summary",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Project EVM Metrics."
   },
   {
    "fieldname": "key_risks",
    "fieldtype": "Text",
-   "label": "Key Risks"
+   "label": "Key Risks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Project EVM Metrics."
   },
   {
    "fieldname": "recommendations",
    "fieldtype": "Text",
-   "label": "Recommendations"
+   "label": "Recommendations",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Project EVM Metrics."
   },
   {
-   "fieldname": "reference_section",
+   "fieldname": "references_section",
    "fieldtype": "Section Break",
    "label": "References"
   },
@@ -261,13 +313,17 @@
    "fieldname": "project_financial_snapshot",
    "fieldtype": "Link",
    "label": "Project Financial Snapshot",
-   "options": "Project Financial Snapshot"
+   "options": "Project Financial Snapshot",
+   "in_list_view": 0,
+   "description": "Links this record to the related Project Financial Snapshot."
   },
   {
    "fieldname": "cash_flow_forecast",
    "fieldtype": "Link",
    "label": "Cash Flow Forecast",
-   "options": "Project Cash Flow Forecast"
+   "options": "Project Cash Flow Forecast",
+   "in_list_view": 0,
+   "description": "Links this record to the related Project Cash Flow Forecast."
   }
  ],
  "index_web_pages_for_search": 1,

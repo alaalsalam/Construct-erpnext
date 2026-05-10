@@ -6,81 +6,131 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "basic_information_section",
   "owner_name",
   "owner_type",
+  "party_links_section",
   "customer",
   "supplier",
+  "contact_details_section",
   "mobile_no",
   "email",
   "identification_no",
   "tax_id",
   "address",
+  "status_section",
   "status",
+  "remarks_section",
   "remarks"
  ],
  "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
   {
    "fieldname": "owner_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Owner Name",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Specifies the owner name for this Property Owner."
   },
   {
    "fieldname": "owner_type",
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Owner Type",
-   "options": "Individual\nCompany\nInvestor\nGovernment\nOther"
+   "options": "Individual\nCompany\nInvestor\nGovernment\nOther",
+   "in_list_view": 1,
+   "description": "Selects the owner type used for classification, workflow, or reporting."
+  },
+  {
+   "fieldname": "party_links_section",
+   "fieldtype": "Section Break",
+   "label": "Party Links"
   },
   {
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
-   "options": "Customer"
+   "options": "Customer",
+   "in_list_view": 0,
+   "description": "Links this record to the related Customer."
   },
   {
    "fieldname": "supplier",
    "fieldtype": "Link",
    "label": "Supplier",
-   "options": "Supplier"
+   "options": "Supplier",
+   "in_list_view": 0,
+   "description": "Links this record to the related Supplier."
+  },
+  {
+   "fieldname": "contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
   },
   {
    "fieldname": "mobile_no",
    "fieldtype": "Data",
-   "label": "Mobile No"
+   "label": "Mobile No",
+   "in_list_view": 0,
+   "description": "Specifies the mobile no for this Property Owner."
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "label": "Email"
+   "label": "Email",
+   "in_list_view": 0,
+   "description": "Specifies the email for this Property Owner."
   },
   {
    "fieldname": "identification_no",
    "fieldtype": "Data",
-   "label": "Identification No"
+   "label": "Identification No",
+   "in_list_view": 0,
+   "description": "Specifies the identification no for this Property Owner."
   },
   {
    "fieldname": "tax_id",
    "fieldtype": "Data",
-   "label": "Tax ID"
+   "label": "Tax ID",
+   "in_list_view": 0,
+   "description": "Specifies the tax id for this Property Owner."
   },
   {
    "fieldname": "address",
    "fieldtype": "Small Text",
-   "label": "Address"
+   "label": "Address",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Property Owner."
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "Active\nInactive\nBlacklisted"
+   "options": "Active\nInactive\nBlacklisted",
+   "description": "Current status used to track this Property Owner through its workflow or reporting lifecycle."
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Property Owner."
   }
  ],
  "index_web_pages_for_search": 1,

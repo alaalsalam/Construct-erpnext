@@ -6,6 +6,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "measurement_reference_section",
   "measurement_entry",
   "measurement_book",
   "construction_work_item",
@@ -15,12 +16,14 @@
   "item_code",
   "description",
   "uom",
+  "quantity_certification_section",
   "boq_qty",
   "previous_certified_qty",
   "current_measured_qty",
   "current_certified_qty",
   "total_certified_qty",
   "remaining_qty",
+  "amounts_section",
   "unit_rate",
   "current_amount",
   "previous_certified_amount",
@@ -28,6 +31,7 @@
   "retention_percent",
   "retention_amount",
   "net_line_amount",
+  "controls_section",
   "engineer_comment",
   "qs_comment",
   "variation_reference",
@@ -35,156 +39,225 @@
  ],
  "fields": [
   {
+   "fieldname": "measurement_reference_section",
+   "fieldtype": "Section Break",
+   "label": "Measurement Reference"
+  },
+  {
    "fieldname": "measurement_entry",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Measurement Entry",
-   "options": "Measurement Entry"
+   "options": "Measurement Entry",
+   "description": "Links this record to the related Measurement Entry."
   },
   {
    "fieldname": "measurement_book",
    "fieldtype": "Link",
    "label": "Measurement Book",
-   "options": "Measurement Book"
+   "options": "Measurement Book",
+   "in_list_view": 0,
+   "description": "Links this record to the related Measurement Book."
   },
   {
    "fieldname": "construction_work_item",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Construction Work Item",
    "options": "Construction Work Item",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Construction Work Item."
   },
   {
    "fieldname": "construction_boq",
    "fieldtype": "Link",
    "label": "Construction BOQ",
-   "options": "Construction BOQ"
+   "options": "Construction BOQ",
+   "in_list_view": 0,
+   "description": "Links this record to the related Construction BOQ."
   },
   {
    "fieldname": "wbs_element",
    "fieldtype": "Link",
    "label": "WBS Element",
-   "options": "WBS Element"
+   "options": "WBS Element",
+   "in_list_view": 0,
+   "description": "Links this record to the related WBS Element."
   },
   {
    "fieldname": "cost_code",
    "fieldtype": "Link",
    "label": "Cost Code",
-   "options": "Cost Code"
+   "options": "Cost Code",
+   "in_list_view": 0,
+   "description": "Links this record to the related Cost Code."
   },
   {
    "fieldname": "item_code",
    "fieldtype": "Link",
    "label": "Item Code",
-   "options": "Item"
+   "options": "Item",
+   "in_list_view": 0,
+   "description": "Links this record to the related Item."
   },
   {
    "fieldname": "description",
    "fieldtype": "Text",
-   "label": "Description"
+   "label": "Description",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Interim Payment Certificate Line."
   },
   {
    "fieldname": "uom",
    "fieldtype": "Link",
    "label": "UOM",
-   "options": "UOM"
+   "options": "UOM",
+   "in_list_view": 0,
+   "description": "Links this record to the related UOM."
+  },
+  {
+   "fieldname": "quantity_certification_section",
+   "fieldtype": "Section Break",
+   "label": "Quantity Certification"
   },
   {
    "fieldname": "boq_qty",
    "fieldtype": "Float",
    "label": "BOQ Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "previous_certified_qty",
    "fieldtype": "Float",
    "label": "Previous Certified Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "current_measured_qty",
    "fieldtype": "Float",
    "label": "Current Measured Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "current_certified_qty",
    "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Current Certified Qty"
+   "in_list_view": 0,
+   "label": "Current Certified Qty",
+   "description": "Specifies the current certified qty for this Interim Payment Certificate Line."
   },
   {
    "fieldname": "total_certified_qty",
    "fieldtype": "Float",
    "label": "Total Certified Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "remaining_qty",
    "fieldtype": "Float",
    "label": "Remaining Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "amounts_section",
+   "fieldtype": "Section Break",
+   "label": "Amounts"
   },
   {
    "fieldname": "unit_rate",
    "fieldtype": "Currency",
-   "label": "Unit Rate"
+   "label": "Unit Rate",
+   "in_list_view": 0,
+   "description": "Specifies the unit rate for this Interim Payment Certificate Line."
   },
   {
    "fieldname": "current_amount",
    "fieldtype": "Currency",
    "label": "Current Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "previous_certified_amount",
    "fieldtype": "Currency",
    "label": "Previous Certified Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "total_certified_amount",
    "fieldtype": "Currency",
    "label": "Total Certified Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "retention_percent",
    "fieldtype": "Percent",
-   "label": "Retention Percent"
+   "label": "Retention Percent",
+   "in_list_view": 0,
+   "description": "Specifies the retention percent for this Interim Payment Certificate Line."
   },
   {
    "fieldname": "retention_amount",
    "fieldtype": "Currency",
    "label": "Retention Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "net_line_amount",
    "fieldtype": "Currency",
    "label": "Net Line Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "controls_section",
+   "fieldtype": "Section Break",
+   "label": "Controls"
   },
   {
    "fieldname": "engineer_comment",
    "fieldtype": "Small Text",
-   "label": "Engineer Comment"
+   "label": "Engineer Comment",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Interim Payment Certificate Line."
   },
   {
    "fieldname": "qs_comment",
    "fieldtype": "Small Text",
-   "label": "QS Comment"
+   "label": "QS Comment",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Interim Payment Certificate Line."
   },
   {
    "fieldname": "variation_reference",
    "fieldtype": "Data",
-   "label": "Variation Reference"
+   "label": "Variation Reference",
+   "in_list_view": 0,
+   "description": "Specifies the variation reference for this Interim Payment Certificate Line."
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Small Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Interim Payment Certificate Line."
   }
  ],
  "istable": 1,

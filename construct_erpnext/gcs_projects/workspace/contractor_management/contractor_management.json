@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contractor Management</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor Control\",\"col\":3}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Retention & Advances\",\"col\":3}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Guarantees\",\"col\":3}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor Reports\",\"col\":3}}]",
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contractor Management</b></span>\",\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contractor Accounts</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor Accounts\",\"col\":4}},{\"id\":\"h3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contractor Ledger</b></span>\",\"col\":12}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor Ledger\",\"col\":4}},{\"id\":\"h4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Retention</b></span>\",\"col\":12}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Retention\",\"col\":4}},{\"id\":\"h5\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Advances</b></span>\",\"col\":12}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Advances\",\"col\":4}},{\"id\":\"h6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Guarantees</b></span>\",\"col\":12}},{\"id\":\"card_5\",\"type\":\"card\",\"data\":{\"card_name\":\"Guarantees\",\"col\":4}},{\"id\":\"h7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contractor Reports</b></span>\",\"col\":12}},{\"id\":\"card_6\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor Reports\",\"col\":4}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -16,7 +16,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Contractor Control",
+   "label": "Contractor Accounts",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -26,75 +26,73 @@
    "is_query_report": 0,
    "label": "Subcontract",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Subcontract",
-   "link_type": "DocType"
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Subcontract Activity",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Subcontract Activity",
-   "link_type": "DocType"
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Contractor Account",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Contractor Account",
-   "link_type": "DocType"
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contractor Ledger",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Contractor Ledger Entry",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Contractor Ledger Entry",
-   "link_type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Interim Payment Certificate",
-   "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
-   "type": "Link",
-   "link_to": "Interim Payment Certificate",
-   "link_type": "DocType"
+   "type": "Link"
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
-   "label": "Purchase Invoice",
+   "is_query_report": 1,
+   "label": "Contractor Account Statement",
    "link_count": 0,
+   "link_to": "Contractor Account Statement",
+   "link_type": "Report",
    "onboard": 0,
-   "type": "Link",
-   "link_to": "Purchase Invoice",
-   "link_type": "DocType"
+   "type": "Link"
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
-   "label": "Payment Entry",
+   "is_query_report": 1,
+   "label": "Contractor Exposure Summary",
    "link_count": 0,
+   "link_to": "Contractor Exposure Summary",
+   "link_type": "Report",
    "onboard": 0,
-   "type": "Link",
-   "link_to": "Payment Entry",
-   "link_type": "DocType"
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Retention & Advances",
+   "label": "Retention",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -104,20 +102,48 @@
    "is_query_report": 0,
    "label": "Retention Register",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Retention Register",
-   "link_type": "DocType"
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Retention Register Report",
+   "link_count": 0,
+   "link_to": "Retention Register Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Advances",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Advance Register",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Advance Register",
-   "link_type": "DocType"
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Advance Recovery Report",
+   "link_count": 0,
+   "link_to": "Advance Recovery Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -132,10 +158,20 @@
    "is_query_report": 0,
    "label": "Guarantee Register",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Guarantee Register",
-   "link_type": "DocType"
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Guarantee Register Report",
+   "link_count": 0,
+   "link_to": "Guarantee Register Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -148,62 +184,42 @@
   {
    "hidden": 0,
    "is_query_report": 1,
-   "label": "Contractor Account Statement",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Contractor Account Statement",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Retention Register Report",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Retention Register Report",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Advance Recovery Report",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Advance Recovery Report",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Contractor Exposure Summary",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Contractor Exposure Summary",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Guarantee Register Report",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Guarantee Register Report",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
    "label": "Contractor IPC Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Contractor IPC Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Contractor Financial Exposure",
+   "link_count": 0,
+   "link_to": "Contractor Financial Exposure",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Invoice",
+   "link_count": 0,
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payment Entry",
+   "link_count": 0,
+   "link_to": "Payment Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
  "modified": "2026-05-09 00:00:00.000000",

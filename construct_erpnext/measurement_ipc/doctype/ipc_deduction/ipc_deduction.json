@@ -6,6 +6,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "deduction_details_section",
   "deduction_type",
   "description",
   "amount",
@@ -14,34 +15,46 @@
  ],
  "fields": [
   {
+   "fieldname": "deduction_details_section",
+   "fieldtype": "Section Break",
+   "label": "Deduction Details"
+  },
+  {
    "fieldname": "deduction_type",
    "fieldtype": "Select",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Deduction Type",
-   "options": "Retention\nAdvance Recovery\nPenalty\nWithholding Tax\nOther"
+   "options": "Retention\nAdvance Recovery\nPenalty\nWithholding Tax\nOther",
+   "description": "Selects the deduction type used for classification, workflow, or reporting."
   },
   {
    "fieldname": "description",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Description"
+   "in_list_view": 0,
+   "label": "Description",
+   "description": "Specifies the description for this IPC Deduction."
   },
   {
    "fieldname": "amount",
    "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Amount"
+   "in_list_view": 0,
+   "label": "Amount",
+   "description": "Specifies the amount for this IPC Deduction."
   },
   {
    "fieldname": "account",
    "fieldtype": "Link",
    "label": "Account",
-   "options": "Account"
+   "options": "Account",
+   "in_list_view": 0,
+   "description": "Links this record to the related Account."
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Small Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this IPC Deduction."
   }
  ],
  "istable": 1,

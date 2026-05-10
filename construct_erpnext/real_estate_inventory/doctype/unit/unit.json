@@ -6,32 +6,37 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "core_section",
+  "unit_identification_section",
+  "unit_code",
+  "unit_name",
+  "unit_type",
+  "location_hierarchy_section",
   "real_estate_project",
   "project",
   "building",
   "floor",
-  "unit_code",
-  "unit_name",
-  "unit_type",
-  "status",
-  "usage_purpose",
-  "property_nature",
-  "physical_section",
+  "physical_details_section",
   "area",
   "area_uom",
   "bedrooms",
   "bathrooms",
   "direction",
   "finishing_status",
-  "parking_storage_section",
   "has_parking",
   "parking_count",
   "has_storage",
   "storage_area",
-  "financial_section",
+  "usage_status_section",
+  "status",
+  "usage_purpose",
+  "property_nature",
+  "legal_status",
+  "technical_status",
+  "marketing_status",
+  "financial_expectations_section",
   "expected_sale_price",
   "expected_monthly_rent",
+  "cost_profitability_section",
   "allocated_cost",
   "allocated_cost_source",
   "allocated_cost_date",
@@ -39,19 +44,46 @@
   "expected_margin",
   "expected_margin_percent",
   "profitability_status",
-  "classification_section",
-  "legal_status",
-  "technical_status",
-  "marketing_status",
+  "classification_attributes_section",
   "tags",
   "dynamic_attributes_json",
+  "remarks_section",
   "remarks"
  ],
  "fields": [
   {
-   "fieldname": "core_section",
+   "fieldname": "unit_identification_section",
    "fieldtype": "Section Break",
-   "label": "Core"
+   "label": "Unit Identification"
+  },
+  {
+   "fieldname": "unit_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit Code",
+   "reqd": 1,
+   "description": "Specifies the unit code for this Unit."
+  },
+  {
+   "fieldname": "unit_name",
+   "fieldtype": "Data",
+   "in_list_view": 0,
+   "label": "Unit Name",
+   "description": "Specifies the unit name for this Unit."
+  },
+  {
+   "fieldname": "unit_type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Unit Type",
+   "options": "Unit Type",
+   "in_list_view": 1,
+   "description": "Links this record to the related Unit Type."
+  },
+  {
+   "fieldname": "location_hierarchy_section",
+   "fieldtype": "Section Break",
+   "label": "Location Hierarchy"
   },
   {
    "fieldname": "real_estate_project",
@@ -59,48 +91,119 @@
    "in_standard_filter": 1,
    "label": "Real Estate Project",
    "options": "Real Estate Project",
-   "reqd": 1
+   "reqd": 1,
+   "in_list_view": 0,
+   "description": "Links this record to the related Real Estate Project."
   },
   {
    "fieldname": "project",
    "fieldtype": "Link",
    "label": "Project",
    "options": "Project",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "building",
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Building",
-   "options": "Building"
+   "options": "Building",
+   "in_list_view": 0,
+   "description": "Links this record to the related Building."
   },
   {
    "fieldname": "floor",
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Floor",
-   "options": "Floor"
+   "options": "Floor",
+   "in_list_view": 0,
+   "description": "Links this record to the related Floor."
   },
   {
-   "fieldname": "unit_code",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Unit Code",
-   "reqd": 1
+   "fieldname": "physical_details_section",
+   "fieldtype": "Section Break",
+   "label": "Physical Details"
   },
   {
-   "fieldname": "unit_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Unit Name"
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "label": "Area",
+   "in_list_view": 0,
+   "description": "Specifies the area for this Unit."
   },
   {
-   "fieldname": "unit_type",
+   "fieldname": "area_uom",
    "fieldtype": "Link",
-   "in_standard_filter": 1,
-   "label": "Unit Type",
-   "options": "Unit Type"
+   "label": "Area UOM",
+   "options": "UOM",
+   "in_list_view": 0,
+   "description": "Links this record to the related UOM."
+  },
+  {
+   "fieldname": "bedrooms",
+   "fieldtype": "Int",
+   "label": "Bedrooms",
+   "in_list_view": 0,
+   "description": "Specifies the bedrooms for this Unit."
+  },
+  {
+   "fieldname": "bathrooms",
+   "fieldtype": "Int",
+   "label": "Bathrooms",
+   "in_list_view": 0,
+   "description": "Specifies the bathrooms for this Unit."
+  },
+  {
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Direction",
+   "options": "North\nSouth\nEast\nWest\nNorth East\nNorth West\nSouth East\nSouth West",
+   "in_list_view": 0,
+   "description": "Selects the direction used for classification, workflow, or reporting."
+  },
+  {
+   "fieldname": "finishing_status",
+   "fieldtype": "Select",
+   "label": "Finishing Status",
+   "options": "Not Finished\nSemi Finished\nFully Finished\nFurnished",
+   "in_list_view": 0,
+   "description": "Selects the finishing status used for classification, workflow, or reporting."
+  },
+  {
+   "fieldname": "has_parking",
+   "fieldtype": "Check",
+   "label": "Has Parking",
+   "in_list_view": 0,
+   "description": "Specifies the has parking for this Unit."
+  },
+  {
+   "fieldname": "parking_count",
+   "fieldtype": "Int",
+   "label": "Parking Count",
+   "in_list_view": 0,
+   "description": "Specifies the parking count for this Unit."
+  },
+  {
+   "fieldname": "has_storage",
+   "fieldtype": "Check",
+   "label": "Has Storage",
+   "in_list_view": 0,
+   "description": "Specifies the has storage for this Unit."
+  },
+  {
+   "fieldname": "storage_area",
+   "fieldtype": "Float",
+   "label": "Storage Area",
+   "in_list_view": 0,
+   "description": "Specifies the storage area for this Unit."
+  },
+  {
+   "fieldname": "usage_status_section",
+   "fieldtype": "Section Break",
+   "label": "Usage & Status"
   },
   {
    "fieldname": "status",
@@ -116,129 +219,114 @@
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Usage Purpose",
-   "options": "Sale\nLong Term Rent\nShort Term Rent\nInvestment\nDevelopment\nMixed"
+   "options": "Sale\nLong Term Rent\nShort Term Rent\nInvestment\nDevelopment\nMixed",
+   "in_list_view": 0,
+   "description": "Selects the usage purpose used for classification, workflow, or reporting."
   },
   {
    "fieldname": "property_nature",
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Property Nature",
-   "options": "Residential\nCommercial\nIndustrial\nLand\nHospitality\nSpecial"
+   "options": "Residential\nCommercial\nIndustrial\nLand\nHospitality\nSpecial",
+   "in_list_view": 0,
+   "description": "Selects the property nature used for classification, workflow, or reporting."
   },
   {
-   "fieldname": "physical_section",
-   "fieldtype": "Section Break",
-   "label": "Physical Details"
-  },
-  {
-   "fieldname": "area",
-   "fieldtype": "Float",
-   "label": "Area"
-  },
-  {
-   "fieldname": "area_uom",
-   "fieldtype": "Link",
-   "label": "Area UOM",
-   "options": "UOM"
-  },
-  {
-   "fieldname": "bedrooms",
-   "fieldtype": "Int",
-   "label": "Bedrooms"
-  },
-  {
-   "fieldname": "bathrooms",
-   "fieldtype": "Int",
-   "label": "Bathrooms"
-  },
-  {
-   "fieldname": "direction",
+   "fieldname": "legal_status",
    "fieldtype": "Select",
-   "label": "Direction",
-   "options": "North\nSouth\nEast\nWest\nNorth East\nNorth West\nSouth East\nSouth West"
+   "label": "Legal Status",
+   "options": "Free Title\nShared\nUnder Registration\nPending\nUnknown",
+   "in_list_view": 0,
+   "description": "Selects the legal status used for classification, workflow, or reporting."
   },
   {
-   "fieldname": "finishing_status",
+   "fieldname": "technical_status",
    "fieldtype": "Select",
-   "label": "Finishing Status",
-   "options": "Not Finished\nSemi Finished\nFully Finished\nFurnished"
+   "label": "Technical Status",
+   "options": "Under Construction\nReady\nNeeds Maintenance\nUnknown",
+   "in_list_view": 0,
+   "description": "Selects the technical status used for classification, workflow, or reporting."
   },
   {
-   "fieldname": "parking_storage_section",
+   "fieldname": "marketing_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Marketing Status",
+   "options": "Available\nReserved\nSold\nRented\nBlocked",
+   "in_list_view": 1,
+   "description": "Commercial availability status used by inventory, reservation, sales, and rental workflows."
+  },
+  {
+   "fieldname": "financial_expectations_section",
    "fieldtype": "Section Break",
-   "label": "Parking and Storage"
-  },
-  {
-   "fieldname": "has_parking",
-   "fieldtype": "Check",
-   "label": "Has Parking"
-  },
-  {
-   "fieldname": "parking_count",
-   "fieldtype": "Int",
-   "label": "Parking Count"
-  },
-  {
-   "fieldname": "has_storage",
-   "fieldtype": "Check",
-   "label": "Has Storage"
-  },
-  {
-   "fieldname": "storage_area",
-   "fieldtype": "Float",
-   "label": "Storage Area"
-  },
-  {
-   "fieldname": "financial_section",
-   "fieldtype": "Section Break",
-   "label": "Financial Placeholder"
+   "label": "Financial Expectations"
   },
   {
    "fieldname": "expected_sale_price",
    "fieldtype": "Currency",
-   "label": "Expected Sale Price"
+   "label": "Expected Sale Price",
+   "in_list_view": 1,
+   "description": "Specifies the expected sale price for this Unit."
   },
   {
    "fieldname": "expected_monthly_rent",
    "fieldtype": "Currency",
-   "label": "Expected Monthly Rent"
+   "label": "Expected Monthly Rent",
+   "in_list_view": 0,
+   "description": "Specifies the expected monthly rent for this Unit."
+  },
+  {
+   "fieldname": "cost_profitability_section",
+   "fieldtype": "Section Break",
+   "label": "Cost Allocation & Profitability"
   },
   {
    "fieldname": "allocated_cost",
    "fieldtype": "Currency",
    "label": "Allocated Cost",
-   "description": "Latest management cost allocation applied to this Unit. Not an accounting entry."
+   "description": "Latest management cost allocation applied to this Unit. Not an accounting entry.",
+   "in_list_view": 1
   },
   {
    "fieldname": "allocated_cost_source",
    "fieldtype": "Select",
    "label": "Allocated Cost Source",
-   "options": "BOQ Total\nCommitted Cost\nInvoiced Cost\nConsumed Cost\nCertified Cost\nFinancial Snapshot\nManual Amount"
+   "options": "BOQ Total\nCommitted Cost\nInvoiced Cost\nConsumed Cost\nCertified Cost\nFinancial Snapshot\nManual Amount",
+   "in_list_view": 0,
+   "description": "Selects the allocated cost source used for classification, workflow, or reporting."
   },
   {
    "fieldname": "allocated_cost_date",
    "fieldtype": "Date",
-   "label": "Allocated Cost Date"
+   "label": "Allocated Cost Date",
+   "in_list_view": 0,
+   "description": "Specifies the allocated cost date for this Unit."
   },
   {
    "fieldname": "latest_cost_allocation",
    "fieldtype": "Link",
    "label": "Latest Cost Allocation",
    "options": "Unit Cost Allocation",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "expected_margin",
    "fieldtype": "Currency",
    "label": "Expected Margin",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "expected_margin_percent",
    "fieldtype": "Percent",
    "label": "Expected Margin Percent",
    "read_only": 1,
-   "description": "Expected margin divided by expected sale price when sale price is greater than zero."
+   "description": "Expected margin divided by expected sale price when sale price is greater than zero.",
+   "in_list_view": 0
   },
   {
    "fieldname": "profitability_status",
@@ -246,47 +334,41 @@
    "in_standard_filter": 1,
    "label": "Profitability Status",
    "options": "Profitable\nWatch\nLoss Risk\nNot Priced",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Current status used to track this Unit through its workflow or reporting lifecycle."
   },
   {
-   "fieldname": "classification_section",
+   "fieldname": "classification_attributes_section",
    "fieldtype": "Section Break",
-   "label": "Classification"
-  },
-  {
-   "fieldname": "legal_status",
-   "fieldtype": "Select",
-   "label": "Legal Status",
-   "options": "Free Title\nShared\nUnder Registration\nPending\nUnknown"
-  },
-  {
-   "fieldname": "technical_status",
-   "fieldtype": "Select",
-   "label": "Technical Status",
-   "options": "Under Construction\nReady\nNeeds Maintenance\nUnknown"
-  },
-  {
-   "fieldname": "marketing_status",
-   "fieldtype": "Select",
-   "in_standard_filter": 1,
-   "label": "Marketing Status",
-   "options": "Available\nReserved\nSold\nRented\nBlocked"
+   "label": "Classification / Attributes"
   },
   {
    "fieldname": "tags",
    "fieldtype": "Small Text",
-   "label": "Tags"
+   "label": "Tags",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Unit."
   },
   {
    "fieldname": "dynamic_attributes_json",
    "fieldtype": "Code",
    "label": "Dynamic Attributes JSON",
-   "options": "JSON"
+   "options": "JSON",
+   "in_list_view": 0,
+   "description": "Specifies the dynamic attributes json for this Unit."
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Unit."
   }
  ],
  "index_web_pages_for_search": 1,

@@ -5,112 +5,165 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "unit_details_section",
   "unit",
   "building",
   "floor",
   "unit_type",
   "unit_status",
   "area",
+  "allocation_details_section",
   "allocation_percent",
   "manual_amount",
   "allocated_amount",
+  "profitability_section",
   "expected_sale_price",
   "expected_monthly_rent",
   "expected_margin",
   "expected_margin_percent",
   "profitability_status",
+  "remarks_section",
   "remarks"
  ],
  "fields": [
   {
+   "fieldname": "unit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Unit Details"
+  },
+  {
    "fieldname": "unit",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Unit",
    "options": "Unit",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Unit."
   },
   {
    "fieldname": "building",
    "fieldtype": "Link",
    "label": "Building",
    "options": "Building",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "floor",
    "fieldtype": "Link",
    "label": "Floor",
    "options": "Floor",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "unit_type",
    "fieldtype": "Link",
    "label": "Unit Type",
    "options": "Unit Type",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "unit_status",
    "fieldtype": "Data",
    "label": "Unit Status",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "area",
    "fieldtype": "Float",
-   "label": "Area"
+   "label": "Area",
+   "in_list_view": 0,
+   "description": "Specifies the area for this Unit Cost Allocation Line."
+  },
+  {
+   "fieldname": "allocation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Allocation Details"
   },
   {
    "fieldname": "allocation_percent",
    "fieldtype": "Percent",
-   "label": "Allocation Percent"
+   "label": "Allocation Percent",
+   "in_list_view": 0,
+   "description": "Specifies the allocation percent for this Unit Cost Allocation Line."
   },
   {
    "fieldname": "manual_amount",
    "fieldtype": "Currency",
-   "label": "Manual Amount"
+   "label": "Manual Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "allocated_amount",
    "fieldtype": "Currency",
    "label": "Allocated Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated cost allocated to this unit line."
+  },
+  {
+   "fieldname": "profitability_section",
+   "fieldtype": "Section Break",
+   "label": "Profitability"
   },
   {
    "fieldname": "expected_sale_price",
    "fieldtype": "Currency",
-   "label": "Expected Sale Price"
+   "label": "Expected Sale Price",
+   "in_list_view": 0,
+   "description": "Specifies the expected sale price for this Unit Cost Allocation Line."
   },
   {
    "fieldname": "expected_monthly_rent",
    "fieldtype": "Currency",
-   "label": "Expected Monthly Rent"
+   "label": "Expected Monthly Rent",
+   "in_list_view": 0,
+   "description": "Specifies the expected monthly rent for this Unit Cost Allocation Line."
   },
   {
    "fieldname": "expected_margin",
    "fieldtype": "Currency",
    "label": "Expected Margin",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "expected_margin_percent",
    "fieldtype": "Percent",
    "label": "Expected Margin Percent",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "profitability_status",
    "fieldtype": "Select",
    "label": "Profitability Status",
    "options": "Profitable\nWatch\nLoss Risk\nNot Priced",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Current status used to track this Unit Cost Allocation Line through its workflow or reporting lifecycle."
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Small Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Unit Cost Allocation Line."
   }
  ],
  "istable": 1,

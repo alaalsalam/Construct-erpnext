@@ -29,3 +29,6 @@
   Executive Presentation Center is the client-facing workspace for the completed construction, CFO, real estate inventory, unit costing, financial dimensions, and reservation flow.
   KPI Number Cards are deterministic read-only summaries backed by app-level methods.
   Dashboard Charts remain deferred until finance leadership approves chart definitions and thresholds.
+- Current UX readiness:
+  Completed custom forms have business-oriented sections, concise field descriptions, and improved list views.
+  Product workspaces are ordered by process and remain free of Sales/Rental contract features.

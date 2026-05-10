@@ -6,15 +6,16 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "basic_information_section",
   "company",
   "project",
   "contractor",
   "subcontract",
   "account_name",
   "status",
+  "financial_totals_section",
   "retention_percent_default",
   "advance_limit",
-  "summary_section",
   "current_advance_balance",
   "total_certified_amount",
   "total_retention_held",
@@ -25,16 +26,25 @@
   "total_invoiced_amount",
   "total_paid_amount",
   "outstanding_balance",
+  "references_section",
   "last_ipc",
   "last_transaction_date",
+  "remarks_section",
   "remarks"
  ],
  "fields": [
   {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
   },
   {
    "fieldname": "project",
@@ -43,7 +53,8 @@
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Project."
   },
   {
    "fieldname": "contractor",
@@ -52,19 +63,23 @@
    "in_standard_filter": 1,
    "label": "Contractor",
    "options": "Supplier",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Supplier."
   },
   {
    "fieldname": "subcontract",
    "fieldtype": "Link",
    "label": "Subcontract",
-   "options": "Subcontract"
+   "options": "Subcontract",
+   "in_list_view": 0,
+   "description": "Links this record to the related Subcontract."
   },
   {
    "fieldname": "account_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Account Name"
+   "in_list_view": 0,
+   "label": "Account Name",
+   "description": "Specifies the account name for this Contractor Account."
   },
   {
    "default": "Active",
@@ -72,37 +87,47 @@
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Active\nSuspended\nClosed"
+   "options": "Active\nSuspended\nClosed",
+   "in_list_view": 1,
+   "description": "Current status used to track this Contractor Account through its workflow or reporting lifecycle."
+  },
+  {
+   "fieldname": "financial_totals_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Totals"
   },
   {
    "default": "10",
    "fieldname": "retention_percent_default",
    "fieldtype": "Percent",
-   "label": "Retention Percent Default"
+   "label": "Retention Percent Default",
+   "in_list_view": 0,
+   "description": "Specifies the retention percent default for this Contractor Account."
   },
   {
    "fieldname": "advance_limit",
    "fieldtype": "Currency",
-   "label": "Advance Limit"
-  },
-  {
-   "fieldname": "summary_section",
-   "fieldtype": "Section Break",
-   "label": "Financial Summary"
+   "label": "Advance Limit",
+   "in_list_view": 0,
+   "description": "Specifies the advance limit for this Contractor Account."
   },
   {
    "default": "0",
    "fieldname": "current_advance_balance",
    "fieldtype": "Currency",
    "label": "Current Advance Balance",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "total_certified_amount",
    "fieldtype": "Currency",
    "label": "Total Certified Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
@@ -110,49 +135,62 @@
    "fieldtype": "Currency",
    "label": "Total Retention Held",
    "read_only": 1,
-   "description": "Total retention held through IPC control records."
+   "description": "Total retention held through IPC control records.",
+   "in_list_view": 1
   },
   {
    "default": "0",
    "fieldname": "total_retention_released",
    "fieldtype": "Currency",
    "label": "Total Retention Released",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "total_advance_paid",
    "fieldtype": "Currency",
    "label": "Total Advance Paid",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "total_advance_recovered",
    "fieldtype": "Currency",
    "label": "Total Advance Recovered",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "total_deductions",
    "fieldtype": "Currency",
    "label": "Total Deductions",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "total_invoiced_amount",
    "fieldtype": "Currency",
    "label": "Total Invoiced Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "total_paid_amount",
    "fieldtype": "Currency",
    "label": "Total Paid Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
@@ -160,25 +198,42 @@
    "fieldtype": "Currency",
    "label": "Outstanding Balance",
    "read_only": 1,
-   "description": "Operational outstanding balance after certified, retained, invoiced, and paid amounts."
+   "description": "Operational outstanding balance after certified, retained, invoiced, and paid amounts.",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
   },
   {
    "fieldname": "last_ipc",
    "fieldtype": "Link",
    "label": "Last IPC",
    "options": "Interim Payment Certificate",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "last_transaction_date",
    "fieldtype": "Date",
    "label": "Last Transaction Date",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Contractor Account."
   }
  ],
  "index_web_pages_for_search": 1,

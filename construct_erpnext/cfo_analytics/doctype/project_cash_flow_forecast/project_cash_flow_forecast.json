@@ -6,6 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "forecast_information_section",
   "company",
   "project",
   "forecast_date",
@@ -21,6 +22,7 @@
   "net_cash_flow",
   "lowest_projected_balance",
   "cash_deficit_amount",
+  "risk_indicators_section",
   "cash_risk_status",
   "narrative_section",
   "executive_summary",
@@ -31,10 +33,17 @@
  ],
  "fields": [
   {
+   "fieldname": "forecast_information_section",
+   "fieldtype": "Section Break",
+   "label": "Forecast Information"
+  },
+  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
   },
   {
    "fieldname": "project",
@@ -43,20 +52,23 @@
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Project."
   },
   {
    "default": "Today",
    "fieldname": "forecast_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Forecast Date"
+   "label": "Forecast Date",
+   "description": "Specifies the forecast date for this Project Cash Flow Forecast."
   },
   {
    "fieldname": "forecast_title",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Forecast Title"
+   "in_list_view": 0,
+   "label": "Forecast Title",
+   "description": "Specifies the forecast title for this Project Cash Flow Forecast."
   },
   {
    "default": "Monthly",
@@ -65,29 +77,34 @@
    "in_standard_filter": 1,
    "label": "Period Type",
    "options": "Weekly\nMonthly\nQuarterly",
-   "reqd": 1
+   "reqd": 1,
+   "in_list_view": 0,
+   "description": "Selects the period type used for classification, workflow, or reporting."
   },
   {
    "fieldname": "start_date",
    "fieldtype": "Date",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Start Date",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Specifies the start date for this Project Cash Flow Forecast."
   },
   {
    "fieldname": "end_date",
    "fieldtype": "Date",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "End Date",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Specifies the end date for this Project Cash Flow Forecast."
   },
   {
    "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Status",
-   "options": "Draft\nGenerated\nReviewed\nArchived"
+   "options": "Draft\nGenerated\nReviewed\nArchived",
+   "description": "Current status used to track this Project Cash Flow Forecast through its workflow or reporting lifecycle."
   },
   {
    "fieldname": "summary_section",
@@ -99,37 +116,53 @@
    "fieldname": "opening_balance",
    "fieldtype": "Currency",
    "label": "Opening Balance",
-   "description": "Starting cash position used for forecast running balance."
+   "description": "Starting cash position used for forecast running balance.",
+   "in_list_view": 0
   },
   {
    "fieldname": "total_expected_inflow",
    "fieldtype": "Currency",
    "label": "Total Expected Inflow",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "total_expected_outflow",
    "fieldtype": "Currency",
    "label": "Total Expected Outflow",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "net_cash_flow",
    "fieldtype": "Currency",
    "label": "Net Cash Flow",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "lowest_projected_balance",
    "fieldtype": "Currency",
    "label": "Lowest Projected Balance",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "cash_deficit_amount",
    "fieldtype": "Currency",
    "label": "Cash Deficit Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "risk_indicators_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Indicators"
   },
   {
    "fieldname": "cash_risk_status",
@@ -148,17 +181,23 @@
   {
    "fieldname": "executive_summary",
    "fieldtype": "Text",
-   "label": "Executive Summary"
+   "label": "Executive Summary",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Project Cash Flow Forecast."
   },
   {
    "fieldname": "key_risks",
    "fieldtype": "Text",
-   "label": "Key Risks"
+   "label": "Key Risks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Project Cash Flow Forecast."
   },
   {
    "fieldname": "recommendations",
    "fieldtype": "Text",
-   "label": "Recommendations"
+   "label": "Recommendations",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Project Cash Flow Forecast."
   },
   {
    "fieldname": "periods_section",
@@ -169,7 +208,9 @@
    "fieldname": "periods",
    "fieldtype": "Table",
    "label": "Periods",
-   "options": "Project Cash Flow Forecast Period"
+   "options": "Project Cash Flow Forecast Period",
+   "in_list_view": 0,
+   "description": "Child table used to record periods for this Project Cash Flow Forecast."
   }
  ],
  "index_web_pages_for_search": 1,

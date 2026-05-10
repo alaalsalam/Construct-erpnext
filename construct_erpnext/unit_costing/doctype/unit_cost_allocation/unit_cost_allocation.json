@@ -6,27 +6,40 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "document_information_section",
   "company",
   "real_estate_project",
   "project",
   "allocation_number",
   "allocation_date",
+  "allocation_source_section",
   "allocation_basis",
   "cost_source",
   "project_financial_snapshot",
   "source_amount",
+  "calculated_totals_section",
   "total_allocated_amount",
   "unallocated_amount",
+  "status_section",
   "allocation_status",
+  "remarks_section",
   "remarks",
+  "lines_section",
   "lines"
  ],
  "fields": [
   {
+   "fieldname": "document_information_section",
+   "fieldtype": "Section Break",
+   "label": "Document Information"
+  },
+  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
   },
   {
    "fieldname": "real_estate_project",
@@ -35,7 +48,8 @@
    "in_standard_filter": 1,
    "label": "Real Estate Project",
    "options": "Real Estate Project",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Real Estate Project."
   },
   {
    "fieldname": "project",
@@ -43,19 +57,29 @@
    "label": "Project",
    "options": "Project",
    "read_only": 1,
-   "reqd": 1
+   "reqd": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "allocation_number",
    "fieldtype": "Data",
-   "label": "Allocation Number"
+   "label": "Allocation Number",
+   "in_list_view": 0,
+   "description": "Specifies the allocation number for this Unit Cost Allocation."
   },
   {
    "default": "Today",
    "fieldname": "allocation_date",
    "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Allocation Date"
+   "in_list_view": 0,
+   "label": "Allocation Date",
+   "description": "Specifies the allocation date for this Unit Cost Allocation."
+  },
+  {
+   "fieldname": "allocation_source_section",
+   "fieldtype": "Section Break",
+   "label": "Allocation Source"
   },
   {
    "fieldname": "allocation_basis",
@@ -69,7 +93,7 @@
   {
    "fieldname": "cost_source",
    "fieldtype": "Select",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Cost Source",
    "options": "BOQ Total\nCommitted Cost\nInvoiced Cost\nConsumed Cost\nCertified Cost\nFinancial Snapshot\nManual Amount",
    "reqd": 1,
@@ -79,24 +103,42 @@
    "fieldname": "project_financial_snapshot",
    "fieldtype": "Link",
    "label": "Project Financial Snapshot",
-   "options": "Project Financial Snapshot"
+   "options": "Project Financial Snapshot",
+   "in_list_view": 0,
+   "description": "Links this record to the related Project Financial Snapshot."
   },
   {
    "fieldname": "source_amount",
    "fieldtype": "Currency",
-   "label": "Source Amount"
+   "label": "Source Amount",
+   "in_list_view": 1,
+   "description": "Project cost amount selected for management allocation to units."
+  },
+  {
+   "fieldname": "calculated_totals_section",
+   "fieldtype": "Section Break",
+   "label": "Calculated Totals"
   },
   {
    "fieldname": "total_allocated_amount",
    "fieldtype": "Currency",
    "label": "Total Allocated Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "unallocated_amount",
    "fieldtype": "Currency",
    "label": "Unallocated Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
   },
   {
    "default": "Draft",
@@ -108,15 +150,29 @@
    "description": "Controls whether calculated allocation has been applied to Unit profitability fields."
   },
   {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
    "fieldname": "remarks",
    "fieldtype": "Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Unit Cost Allocation."
+  },
+  {
+   "fieldname": "lines_section",
+   "fieldtype": "Section Break",
+   "label": "Lines"
   },
   {
    "fieldname": "lines",
    "fieldtype": "Table",
    "label": "Lines",
-   "options": "Unit Cost Allocation Line"
+   "options": "Unit Cost Allocation Line",
+   "in_list_view": 0,
+   "description": "Child table used to record lines for this Unit Cost Allocation."
   }
  ],
  "index_web_pages_for_search": 1,

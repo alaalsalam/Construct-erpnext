@@ -6,30 +6,38 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "basic_information_section",
   "company",
   "project",
   "project_name_ar",
   "development_type",
   "status",
   "location_summary",
-  "area_section",
+  "area_units_section",
   "total_land_area",
   "total_built_up_area",
-  "counts_section",
   "total_units",
   "available_units",
   "reserved_units",
   "sold_units",
   "rented_units",
   "blocked_units",
+  "remarks_section",
   "remarks"
  ],
  "fields": [
   {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
   },
   {
    "fieldname": "project",
@@ -38,19 +46,23 @@
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Project."
   },
   {
    "fieldname": "project_name_ar",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Project Name Arabic"
+   "label": "Project Name Arabic",
+   "description": "Specifies the project name arabic for this Real Estate Project."
   },
   {
    "fieldname": "development_type",
    "fieldtype": "Select",
    "label": "Development Type",
-   "options": "Residential\nCommercial\nMixed Use\nLand Development\nHospitality\nIndustrial\nOther"
+   "options": "Residential\nCommercial\nMixed Use\nLand Development\nHospitality\nIndustrial\nOther",
+   "in_list_view": 0,
+   "description": "Selects the development type used for classification, workflow, or reporting."
   },
   {
    "fieldname": "status",
@@ -58,73 +70,94 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Planning\nUnder Construction\nReady for Sale\nReady for Rent\nOperating\nClosed"
+   "options": "Planning\nUnder Construction\nReady for Sale\nReady for Rent\nOperating\nClosed",
+   "description": "Current status used to track this Real Estate Project through its workflow or reporting lifecycle."
   },
   {
    "fieldname": "location_summary",
    "fieldtype": "Data",
-   "label": "Location Summary"
+   "label": "Location Summary",
+   "in_list_view": 0,
+   "description": "Specifies the location summary for this Real Estate Project."
   },
   {
-   "fieldname": "area_section",
+   "fieldname": "area_units_section",
    "fieldtype": "Section Break",
-   "label": "Area"
+   "label": "Area and Unit Counts"
   },
   {
    "fieldname": "total_land_area",
    "fieldtype": "Float",
-   "label": "Total Land Area"
+   "label": "Total Land Area",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "total_built_up_area",
    "fieldtype": "Float",
-   "label": "Total Built Up Area"
-  },
-  {
-   "fieldname": "counts_section",
-   "fieldtype": "Section Break",
-   "label": "Unit Counts"
+   "label": "Total Built Up Area",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "total_units",
    "fieldtype": "Int",
    "label": "Total Units",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "available_units",
    "fieldtype": "Int",
    "label": "Available Units",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "reserved_units",
    "fieldtype": "Int",
    "label": "Reserved Units",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "sold_units",
    "fieldtype": "Int",
    "label": "Sold Units",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "rented_units",
    "fieldtype": "Int",
    "label": "Rented Units",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "blocked_units",
    "fieldtype": "Int",
    "label": "Blocked Units",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Real Estate Project."
   }
  ],
  "index_web_pages_for_search": 1,

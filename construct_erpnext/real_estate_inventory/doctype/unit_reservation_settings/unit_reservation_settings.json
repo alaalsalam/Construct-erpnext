@@ -6,63 +6,94 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "general_settings_section",
   "default_reservation_validity_days",
+  "automation_section",
   "auto_release_expired_reservations",
+  "validation_rules_section",
   "allow_reservation_for_reserved_units",
   "require_customer_or_lead",
   "require_reservation_amount",
   "warning_days_before_expiry",
+  "defaults_section",
   "reservation_number_prefix"
  ],
  "fields": [
+  {
+   "fieldname": "general_settings_section",
+   "fieldtype": "Section Break",
+   "label": "General Settings"
+  },
   {
    "fieldname": "default_reservation_validity_days",
    "fieldtype": "Int",
    "label": "Default Reservation Validity Days",
    "default": "7",
-   "description": "Default number of days a new reservation remains valid when no end date is provided."
+   "description": "Default number of days a new reservation remains valid when no end date is provided.",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "automation_section",
+   "fieldtype": "Section Break",
+   "label": "Automation"
   },
   {
    "fieldname": "auto_release_expired_reservations",
    "fieldtype": "Check",
    "label": "Auto Release Expired Reservations",
    "default": "1",
-   "description": "Allow the daily expiry utility to expire overdue reservations and release units when safe."
+   "description": "Allow the daily expiry utility to expire overdue reservations and release units when safe.",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "validation_rules_section",
+   "fieldtype": "Section Break",
+   "label": "Validation Rules"
   },
   {
    "fieldname": "allow_reservation_for_reserved_units",
    "fieldtype": "Check",
    "label": "Allow Reservation For Reserved Units",
    "default": "0",
-   "description": "When disabled, a unit with an active reservation cannot be reserved again."
+   "description": "When disabled, a unit with an active reservation cannot be reserved again.",
+   "in_list_view": 0
   },
   {
    "fieldname": "require_customer_or_lead",
    "fieldtype": "Check",
    "label": "Require Customer Or Lead",
    "default": "1",
-   "description": "Require Customer, Lead, or Party Name before reserving a unit."
+   "description": "Require Customer, Lead, or Party Name before reserving a unit.",
+   "in_list_view": 0
   },
   {
    "fieldname": "require_reservation_amount",
    "fieldtype": "Check",
    "label": "Require Reservation Amount",
    "default": "0",
-   "description": "Require a positive reservation amount. No accounting entry is created."
+   "description": "Require a positive reservation amount. No accounting entry is created.",
+   "in_list_view": 0
   },
   {
    "fieldname": "warning_days_before_expiry",
    "fieldtype": "Int",
    "label": "Warning Days Before Expiry",
    "default": "2",
-   "description": "Number of days used by expiring reservation reports and alerts."
+   "description": "Number of days used by expiring reservation reports and alerts.",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Defaults"
   },
   {
    "fieldname": "reservation_number_prefix",
    "fieldtype": "Data",
    "label": "Reservation Number Prefix",
    "default": "RES",
-   "description": "Prefix used when generating reservation numbers."
+   "description": "Prefix used when generating reservation numbers.",
+   "in_list_view": 0
   }
  ],
  "index_web_pages_for_search": 1,

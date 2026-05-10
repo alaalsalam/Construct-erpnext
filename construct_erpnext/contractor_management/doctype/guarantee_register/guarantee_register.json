@@ -6,26 +6,37 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "basic_information_section",
   "company",
   "project",
   "contractor",
   "contractor_account",
+  "guarantee_details_section",
   "guarantee_type",
   "guarantee_number",
   "issuing_bank",
   "guarantee_amount",
+  "validity_status_section",
   "issue_date",
   "expiry_date",
   "status",
   "alert_before_days",
+  "remarks_section",
   "remarks"
  ],
  "fields": [
   {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
   },
   {
    "fieldname": "project",
@@ -33,7 +44,9 @@
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
-   "reqd": 1
+   "reqd": 1,
+   "in_list_view": 0,
+   "description": "Links this record to the related Project."
   },
   {
    "fieldname": "contractor",
@@ -41,49 +54,71 @@
    "in_standard_filter": 1,
    "label": "Contractor",
    "options": "Supplier",
-   "reqd": 1
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Links this record to the related Supplier."
   },
   {
    "fieldname": "contractor_account",
    "fieldtype": "Link",
    "label": "Contractor Account",
-   "options": "Contractor Account"
+   "options": "Contractor Account",
+   "in_list_view": 0,
+   "description": "Links this record to the related Contractor Account."
+  },
+  {
+   "fieldname": "guarantee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Guarantee Details"
   },
   {
    "fieldname": "guarantee_type",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Guarantee Type",
-   "options": "Performance Guarantee\nAdvance Payment Guarantee\nRetention Guarantee\nOther"
+   "options": "Performance Guarantee\nAdvance Payment Guarantee\nRetention Guarantee\nOther",
+   "description": "Selects the guarantee type used for classification, workflow, or reporting."
   },
   {
    "fieldname": "guarantee_number",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Guarantee Number"
+   "label": "Guarantee Number",
+   "description": "Specifies the guarantee number for this Guarantee Register."
   },
   {
    "fieldname": "issuing_bank",
    "fieldtype": "Data",
-   "label": "Issuing Bank"
+   "label": "Issuing Bank",
+   "in_list_view": 0,
+   "description": "Specifies the issuing bank for this Guarantee Register."
   },
   {
    "default": "0",
    "fieldname": "guarantee_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Guarantee Amount"
+   "label": "Guarantee Amount",
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "validity_status_section",
+   "fieldtype": "Section Break",
+   "label": "Validity and Status"
   },
   {
    "fieldname": "issue_date",
    "fieldtype": "Date",
-   "label": "Issue Date"
+   "label": "Issue Date",
+   "in_list_view": 0,
+   "description": "Specifies the issue date for this Guarantee Register."
   },
   {
    "fieldname": "expiry_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Expiry Date"
+   "label": "Expiry Date",
+   "description": "Specifies the expiry date for this Guarantee Register."
   },
   {
    "default": "Active",
@@ -92,18 +127,28 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Active\nExpiring Soon\nExpired\nReleased\nEncashment Requested\nEncashment Completed\nCancelled"
+   "options": "Active\nExpiring Soon\nExpired\nReleased\nEncashment Requested\nEncashment Completed\nCancelled",
+   "description": "Current status used to track this Guarantee Register through its workflow or reporting lifecycle."
   },
   {
    "default": "60",
    "fieldname": "alert_before_days",
    "fieldtype": "Int",
-   "label": "Alert Before Days"
+   "label": "Alert Before Days",
+   "in_list_view": 0,
+   "description": "Specifies the alert before days for this Guarantee Register."
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Guarantee Register."
   }
  ],
  "links": [],

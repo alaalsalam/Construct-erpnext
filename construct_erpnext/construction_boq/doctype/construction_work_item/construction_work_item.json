@@ -6,6 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "work_item_information_section",
   "project",
   "construction_boq",
   "boq_item_row_id",
@@ -15,6 +16,7 @@
   "item_code",
   "description",
   "item_category",
+  "planning_section",
   "planned_quantity",
   "uom",
   "unit_rate",
@@ -34,6 +36,7 @@
   "procurement_status",
   "procurement_variance_qty",
   "procurement_variance_amount",
+  "measurement_certification_section",
   "measured_qty",
   "measurement_amount",
   "measurement_progress_percent",
@@ -45,6 +48,7 @@
   "last_ipc",
   "last_certification_date",
   "certification_status",
+  "cost_variance_section",
   "remaining_qty",
   "actual_cost",
   "variance_amount",
@@ -54,18 +58,24 @@
  ],
  "fields": [
   {
+   "fieldname": "work_item_information_section",
+   "fieldtype": "Section Break",
+   "label": "Work Item Information"
+  },
+  {
    "fieldname": "project",
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Project."
   },
   {
    "fieldname": "construction_boq",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "in_standard_filter": 1,
    "label": "Construction BOQ",
    "options": "Construction BOQ",
@@ -76,86 +86,113 @@
    "fieldname": "boq_item_row_id",
    "fieldtype": "Data",
    "label": "BOQ Item Row ID",
-   "description": "Source BOQ child row identifier used to prevent duplicate Work Items."
+   "description": "Source BOQ child row identifier used to prevent duplicate Work Items.",
+   "in_list_view": 0
   },
   {
    "fieldname": "wbs_element",
    "fieldtype": "Link",
    "label": "WBS Element",
-   "options": "WBS Element"
+   "options": "WBS Element",
+   "in_list_view": 0,
+   "description": "Links this record to the related WBS Element."
   },
   {
    "fieldname": "wbs_code",
    "fieldtype": "Data",
-   "label": "WBS Code"
+   "label": "WBS Code",
+   "in_list_view": 0,
+   "description": "Specifies the wbs code for this Construction Work Item."
   },
   {
    "fieldname": "cost_code",
    "fieldtype": "Link",
    "label": "Cost Code",
-   "options": "Cost Code"
+   "options": "Cost Code",
+   "in_list_view": 0,
+   "description": "Links this record to the related Cost Code."
   },
   {
    "fieldname": "item_code",
    "fieldtype": "Link",
    "label": "Item Code",
-   "options": "Item"
+   "options": "Item",
+   "in_list_view": 0,
+   "description": "Links this record to the related Item."
   },
   {
    "fieldname": "description",
    "fieldtype": "Text",
    "in_list_view": 1,
-   "label": "Description"
+   "label": "Description",
+   "description": "Additional notes or explanation for this Construction Work Item."
   },
   {
    "fieldname": "item_category",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Item Category",
-   "options": "Material\nLabor\nEquipment\nSubcontract\nOverhead\nContingency\nOther"
+   "options": "Material\nLabor\nEquipment\nSubcontract\nOverhead\nContingency\nOther",
+   "description": "Selects the item category used for classification, workflow, or reporting."
+  },
+  {
+   "fieldname": "planning_section",
+   "fieldtype": "Section Break",
+   "label": "Planning"
   },
   {
    "fieldname": "planned_quantity",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Planned Quantity"
+   "label": "Planned Quantity",
+   "description": "Planned BOQ quantity for this operational work item."
   },
   {
    "fieldname": "uom",
    "fieldtype": "Link",
    "label": "UOM",
-   "options": "UOM"
+   "options": "UOM",
+   "in_list_view": 0,
+   "description": "Links this record to the related UOM."
   },
   {
    "fieldname": "unit_rate",
    "fieldtype": "Currency",
-   "label": "Unit Rate"
+   "label": "Unit Rate",
+   "in_list_view": 0,
+   "description": "Specifies the unit rate for this Construction Work Item."
   },
   {
    "fieldname": "planned_amount",
    "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Planned Amount"
+   "in_list_view": 0,
+   "label": "Planned Amount",
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "budget_level",
    "fieldtype": "Link",
    "label": "Budget Level",
-   "options": "Budget Level"
+   "options": "Budget Level",
+   "in_list_view": 0,
+   "description": "Links this record to the related Budget Level."
   },
   {
    "fieldname": "cost_center",
    "fieldtype": "Link",
    "label": "Cost Center",
-   "options": "Cost Center"
+   "options": "Cost Center",
+   "in_list_view": 0,
+   "description": "Links this record to the related Cost Center."
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Planned\nActive\nIn Progress\nCompleted\nCancelled"
+   "options": "Planned\nActive\nIn Progress\nCompleted\nCancelled",
+   "description": "Current status used to track this Construction Work Item through its workflow or reporting lifecycle."
   },
   {
    "fieldname": "section_break_tracking",
@@ -167,56 +204,72 @@
    "fieldname": "requested_qty",
    "fieldtype": "Float",
    "label": "Requested Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "ordered_qty",
    "fieldtype": "Float",
    "label": "Ordered Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "received_qty",
    "fieldtype": "Float",
    "label": "Received Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "invoiced_qty",
    "fieldtype": "Float",
    "label": "Invoiced Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "consumed_qty",
    "fieldtype": "Float",
    "label": "Consumed Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "committed_amount",
    "fieldtype": "Currency",
    "label": "Committed Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Committed amount from submitted Purchase Orders linked to this work item."
   },
   {
    "default": "0",
    "fieldname": "invoiced_amount",
    "fieldtype": "Currency",
    "label": "Invoiced Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "consumed_amount",
    "fieldtype": "Currency",
    "label": "Consumed Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "Not Requested",
@@ -226,21 +279,31 @@
    "label": "Procurement Status",
    "options": "Not Requested\nPartially Requested\nFully Requested\nPartially Ordered\nFully Ordered\nPartially Received\nFully Received\nPartially Invoiced\nFully Invoiced\nOver Requested\nOver Ordered\nOver Received",
    "read_only": 1,
-   "description": "Procurement progress calculated from linked ERPNext procurement and stock transactions."
+   "description": "Procurement progress calculated from linked ERPNext procurement and stock transactions.",
+   "in_list_view": 1
   },
   {
    "default": "0",
    "fieldname": "procurement_variance_qty",
    "fieldtype": "Float",
    "label": "Procurement Variance Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "procurement_variance_amount",
    "fieldtype": "Currency",
    "label": "Procurement Variance Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "measurement_certification_section",
+   "fieldtype": "Section Break",
+   "label": "Measurement and Certification"
   },
   {
    "default": "0",
@@ -248,26 +311,33 @@
    "fieldtype": "Float",
    "label": "Measured Qty",
    "read_only": 1,
-   "description": "Quantity verified through Measurement Entries. Does not certify payment by itself."
+   "description": "Quantity verified through Measurement Entries. Does not certify payment by itself.",
+   "in_list_view": 0
   },
   {
    "default": "0",
    "fieldname": "measurement_amount",
    "fieldtype": "Currency",
    "label": "Measurement Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "measurement_progress_percent",
    "fieldtype": "Percent",
    "label": "Measurement Progress Percent",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "last_measurement_date",
    "fieldtype": "Date",
    "label": "Last Measurement Date",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "Not Measured",
@@ -276,7 +346,9 @@
    "in_standard_filter": 1,
    "label": "Measurement Status",
    "options": "Not Measured\nPartially Measured\nFully Measured\nOver Measured",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Current status used to track this Construction Work Item through its workflow or reporting lifecycle."
   },
   {
    "default": "0",
@@ -284,33 +356,42 @@
    "fieldtype": "Float",
    "label": "Certified Qty",
    "read_only": 1,
-   "description": "Quantity certified through submitted IPCs. Kept separate from measured quantity."
+   "description": "Quantity certified through submitted IPCs. Kept separate from measured quantity.",
+   "in_list_view": 1
   },
   {
    "default": "0",
    "fieldname": "certified_amount",
    "fieldtype": "Currency",
    "label": "Certified Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "certification_progress_percent",
    "fieldtype": "Percent",
    "label": "Certification Progress Percent",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "last_ipc",
    "fieldtype": "Link",
    "label": "Last IPC",
    "options": "Interim Payment Certificate",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "last_certification_date",
    "fieldtype": "Date",
    "label": "Last Certification Date",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "Not Certified",
@@ -319,42 +400,61 @@
    "in_standard_filter": 1,
    "label": "Certification Status",
    "options": "Not Certified\nPartially Certified\nFully Certified\nOver Certified",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Current status used to track this Construction Work Item through its workflow or reporting lifecycle."
+  },
+  {
+   "fieldname": "cost_variance_section",
+   "fieldtype": "Section Break",
+   "label": "Cost and Variance"
   },
   {
    "fieldname": "remaining_qty",
    "fieldtype": "Float",
    "label": "Remaining Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "actual_cost",
    "fieldtype": "Currency",
    "label": "Actual Cost",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "variance_amount",
    "fieldtype": "Currency",
    "label": "Variance Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "progress_percent",
    "fieldtype": "Percent",
    "label": "Progress Percent",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "source_boq_revision",
    "fieldtype": "Int",
-   "label": "Source BOQ Revision"
+   "label": "Source BOQ Revision",
+   "in_list_view": 0,
+   "description": "Specifies the source boq revision for this Construction Work Item."
   },
   {
    "fieldname": "disabled",
    "fieldtype": "Check",
-   "label": "Disabled"
+   "label": "Disabled",
+   "in_list_view": 0,
+   "description": "Specifies the disabled for this Construction Work Item."
   }
  ],
  "index_web_pages_for_search": 1,

@@ -6,17 +6,20 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "entry_information_section",
   "measurement_book",
   "company",
   "project",
   "contractor",
   "construction_boq",
+  "work_item_details_section",
   "construction_work_item",
   "wbs_element",
   "cost_code",
   "item_code",
   "description",
   "uom",
+  "quantity_summary_section",
   "planned_quantity",
   "previous_measured_qty",
   "current_measured_qty",
@@ -24,6 +27,7 @@
   "remaining_qty",
   "unit_rate",
   "measured_amount",
+  "measurement_dimensions_section",
   "measurement_method",
   "length",
   "width",
@@ -34,6 +38,7 @@
   "variance_qty",
   "variance_percent",
   "variance_reason",
+  "field_documentation_section",
   "measurement_location",
   "grid_or_zone",
   "engineer_comment",
@@ -43,31 +48,42 @@
   "gps_latitude",
   "gps_longitude",
   "gps_accuracy",
+  "people_dates_section",
   "measurement_date",
   "measured_by",
   "submitted_by",
   "verified_by",
   "verified_on",
+  "status_section",
   "status",
   "rejection_reason",
+  "ipc_links_section",
   "interim_payment_certificate",
   "ipc_line_reference"
  ],
  "fields": [
   {
+   "fieldname": "entry_information_section",
+   "fieldtype": "Section Break",
+   "label": "Entry Information"
+  },
+  {
    "fieldname": "measurement_book",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "in_standard_filter": 1,
    "label": "Measurement Book",
    "options": "Measurement Book",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Measurement Book."
   },
   {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
   },
   {
    "fieldname": "project",
@@ -75,24 +91,35 @@
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
-   "reqd": 1
+   "reqd": 1,
+   "in_list_view": 0,
+   "description": "Links this record to the related Project."
   },
   {
    "fieldname": "contractor",
    "fieldtype": "Link",
    "label": "Contractor",
-   "options": "Supplier"
+   "options": "Supplier",
+   "in_list_view": 0,
+   "description": "Links this record to the related Supplier."
   },
   {
    "fieldname": "construction_boq",
    "fieldtype": "Link",
    "label": "Construction BOQ",
-   "options": "Construction BOQ"
+   "options": "Construction BOQ",
+   "in_list_view": 0,
+   "description": "Links this record to the related Construction BOQ."
+  },
+  {
+   "fieldname": "work_item_details_section",
+   "fieldtype": "Section Break",
+   "label": "Work Item Details"
   },
   {
    "fieldname": "construction_work_item",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "in_standard_filter": 1,
    "label": "Construction Work Item",
    "options": "Construction Work Item",
@@ -103,227 +130,332 @@
    "fieldname": "wbs_element",
    "fieldtype": "Link",
    "label": "WBS Element",
-   "options": "WBS Element"
+   "options": "WBS Element",
+   "in_list_view": 0,
+   "description": "Links this record to the related WBS Element."
   },
   {
    "fieldname": "cost_code",
    "fieldtype": "Link",
    "label": "Cost Code",
-   "options": "Cost Code"
+   "options": "Cost Code",
+   "in_list_view": 0,
+   "description": "Links this record to the related Cost Code."
   },
   {
    "fieldname": "item_code",
    "fieldtype": "Link",
    "label": "Item Code",
-   "options": "Item"
+   "options": "Item",
+   "in_list_view": 0,
+   "description": "Links this record to the related Item."
   },
   {
    "fieldname": "description",
    "fieldtype": "Text",
-   "label": "Description"
+   "label": "Description",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Measurement Entry."
   },
   {
    "fieldname": "uom",
    "fieldtype": "Link",
    "label": "UOM",
-   "options": "UOM"
+   "options": "UOM",
+   "in_list_view": 0,
+   "description": "Links this record to the related UOM."
+  },
+  {
+   "fieldname": "quantity_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Quantity Summary"
   },
   {
    "fieldname": "planned_quantity",
    "fieldtype": "Float",
    "label": "Planned Quantity",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "previous_measured_qty",
    "fieldtype": "Float",
    "label": "Previous Measured Qty",
    "read_only": 1,
-   "description": "Previously verified quantity for the same Work Item."
+   "description": "Previously verified quantity for the same Work Item.",
+   "in_list_view": 0
   },
   {
    "fieldname": "current_measured_qty",
    "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Current Measured Qty"
+   "in_list_view": 0,
+   "label": "Current Measured Qty",
+   "description": "Quantity measured in this entry before cumulative calculation."
   },
   {
    "fieldname": "cumulative_measured_qty",
    "fieldtype": "Float",
    "label": "Cumulative Measured Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "remaining_qty",
    "fieldtype": "Float",
    "label": "Remaining Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "unit_rate",
    "fieldtype": "Currency",
-   "label": "Unit Rate"
+   "label": "Unit Rate",
+   "in_list_view": 0,
+   "description": "Specifies the unit rate for this Measurement Entry."
   },
   {
    "fieldname": "measured_amount",
    "fieldtype": "Currency",
    "label": "Measured Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "measurement_dimensions_section",
+   "fieldtype": "Section Break",
+   "label": "Measurement Dimensions"
   },
   {
    "fieldname": "measurement_method",
    "fieldtype": "Select",
    "label": "Measurement Method",
-   "options": "Direct Quantity\nLength\nArea\nVolume\nCount\nManual"
+   "options": "Direct Quantity\nLength\nArea\nVolume\nCount\nManual",
+   "in_list_view": 0,
+   "description": "Selects the measurement method used for classification, workflow, or reporting."
   },
   {
    "fieldname": "length",
    "fieldtype": "Float",
-   "label": "Length"
+   "label": "Length",
+   "in_list_view": 0,
+   "description": "Specifies the length for this Measurement Entry."
   },
   {
    "fieldname": "width",
    "fieldtype": "Float",
-   "label": "Width"
+   "label": "Width",
+   "in_list_view": 0,
+   "description": "Specifies the width for this Measurement Entry."
   },
   {
    "fieldname": "height",
    "fieldtype": "Float",
-   "label": "Height"
+   "label": "Height",
+   "in_list_view": 0,
+   "description": "Specifies the height for this Measurement Entry."
   },
   {
    "default": "1",
    "fieldname": "number_of_units",
    "fieldtype": "Float",
-   "label": "Number Of Units"
+   "label": "Number Of Units",
+   "in_list_view": 0,
+   "description": "Specifies the number of units for this Measurement Entry."
   },
   {
    "fieldname": "calculated_qty",
    "fieldtype": "Float",
    "label": "Calculated Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "accepted_qty",
    "fieldtype": "Float",
    "label": "Accepted Qty",
-   "description": "Quantity accepted by QS verification for this entry."
+   "description": "Quantity accepted by QS verification for this entry.",
+   "in_list_view": 0
   },
   {
    "fieldname": "variance_qty",
    "fieldtype": "Float",
    "label": "Variance Qty",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "variance_percent",
    "fieldtype": "Percent",
    "label": "Variance Percent",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "variance_reason",
    "fieldtype": "Small Text",
-   "label": "Variance Reason"
+   "label": "Variance Reason",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Measurement Entry."
+  },
+  {
+   "fieldname": "field_documentation_section",
+   "fieldtype": "Section Break",
+   "label": "Field Documentation"
   },
   {
    "fieldname": "measurement_location",
    "fieldtype": "Data",
-   "label": "Measurement Location"
+   "label": "Measurement Location",
+   "in_list_view": 0,
+   "description": "Specifies the measurement location for this Measurement Entry."
   },
   {
    "fieldname": "grid_or_zone",
    "fieldtype": "Data",
-   "label": "Grid Or Zone"
+   "label": "Grid Or Zone",
+   "in_list_view": 0,
+   "description": "Specifies the grid or zone for this Measurement Entry."
   },
   {
    "fieldname": "engineer_comment",
    "fieldtype": "Small Text",
-   "label": "Engineer Comment"
+   "label": "Engineer Comment",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Measurement Entry."
   },
   {
    "fieldname": "qs_comment",
    "fieldtype": "Small Text",
-   "label": "QS Comment"
+   "label": "QS Comment",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Measurement Entry."
   },
   {
    "fieldname": "photo",
    "fieldtype": "Attach Image",
-   "label": "Photo"
+   "label": "Photo",
+   "in_list_view": 0,
+   "description": "Attachment used as supporting documentation for this Measurement Entry."
   },
   {
    "fieldname": "attachment",
    "fieldtype": "Attach",
-   "label": "Attachment"
+   "label": "Attachment",
+   "in_list_view": 0,
+   "description": "Attachment used as supporting documentation for this Measurement Entry."
   },
   {
    "fieldname": "gps_latitude",
    "fieldtype": "Float",
-   "label": "GPS Latitude"
+   "label": "GPS Latitude",
+   "in_list_view": 0,
+   "description": "Specifies the gps latitude for this Measurement Entry."
   },
   {
    "fieldname": "gps_longitude",
    "fieldtype": "Float",
-   "label": "GPS Longitude"
+   "label": "GPS Longitude",
+   "in_list_view": 0,
+   "description": "Specifies the gps longitude for this Measurement Entry."
   },
   {
    "fieldname": "gps_accuracy",
    "fieldtype": "Float",
-   "label": "GPS Accuracy"
+   "label": "GPS Accuracy",
+   "in_list_view": 0,
+   "description": "Specifies the gps accuracy for this Measurement Entry."
+  },
+  {
+   "fieldname": "people_dates_section",
+   "fieldtype": "Section Break",
+   "label": "People and Dates"
   },
   {
    "fieldname": "measurement_date",
    "fieldtype": "Date",
-   "label": "Measurement Date"
+   "label": "Measurement Date",
+   "in_list_view": 0,
+   "description": "Specifies the measurement date for this Measurement Entry."
   },
   {
    "fieldname": "measured_by",
    "fieldtype": "Link",
    "label": "Measured By",
-   "options": "User"
+   "options": "User",
+   "in_list_view": 0,
+   "description": "Links this record to the related User."
   },
   {
    "fieldname": "submitted_by",
    "fieldtype": "Link",
    "label": "Submitted By",
-   "options": "User"
+   "options": "User",
+   "in_list_view": 0,
+   "description": "Links this record to the related User."
   },
   {
    "fieldname": "verified_by",
    "fieldtype": "Link",
    "label": "Verified By",
-   "options": "User"
+   "options": "User",
+   "in_list_view": 0,
+   "description": "Links this record to the related User."
   },
   {
    "fieldname": "verified_on",
    "fieldtype": "Datetime",
-   "label": "Verified On"
+   "label": "Verified On",
+   "in_list_view": 0,
+   "description": "Specifies the verified on for this Measurement Entry."
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
   },
   {
    "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Draft\nSubmitted\nVerified\nRejected\nLocked\nCancelled"
+   "options": "Draft\nSubmitted\nVerified\nRejected\nLocked\nCancelled",
+   "description": "Current status used to track this Measurement Entry through its workflow or reporting lifecycle."
   },
   {
    "fieldname": "rejection_reason",
    "fieldtype": "Small Text",
-   "label": "Rejection Reason"
+   "label": "Rejection Reason",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Measurement Entry."
+  },
+  {
+   "fieldname": "ipc_links_section",
+   "fieldtype": "Section Break",
+   "label": "Future IPC Links"
   },
   {
    "fieldname": "interim_payment_certificate",
    "fieldtype": "Link",
    "label": "Interim Payment Certificate",
    "options": "Interim Payment Certificate",
-   "description": "IPC reference once this verified measurement is certified for payment."
+   "description": "IPC reference once this verified measurement is certified for payment.",
+   "in_list_view": 0
   },
   {
    "fieldname": "ipc_line_reference",
    "fieldtype": "Data",
-   "label": "IPC Line Reference"
+   "label": "IPC Line Reference",
+   "in_list_view": 0,
+   "description": "Specifies the ipc line reference for this Measurement Entry."
   }
  ],
  "index_web_pages_for_search": 1,

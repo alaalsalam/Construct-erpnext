@@ -6,23 +6,33 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "basic_information_section",
   "real_estate_project",
   "building",
+  "floor_details_section",
   "floor_code",
   "floor_name",
   "floor_number",
   "floor_type",
   "total_units",
+  "status_section",
   "remarks"
  ],
  "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
   {
    "fieldname": "real_estate_project",
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Real Estate Project",
    "options": "Real Estate Project",
-   "reqd": 1
+   "reqd": 1,
+   "in_list_view": 0,
+   "description": "Links this record to the related Real Estate Project."
   },
   {
    "fieldname": "building",
@@ -31,43 +41,64 @@
    "in_standard_filter": 1,
    "label": "Building",
    "options": "Building",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Building."
+  },
+  {
+   "fieldname": "floor_details_section",
+   "fieldtype": "Section Break",
+   "label": "Floor Details"
   },
   {
    "fieldname": "floor_code",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Floor Code",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Specifies the floor code for this Floor."
   },
   {
    "fieldname": "floor_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Floor Name",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Specifies the floor name for this Floor."
   },
   {
    "fieldname": "floor_number",
    "fieldtype": "Int",
-   "label": "Floor Number"
+   "label": "Floor Number",
+   "in_list_view": 1,
+   "description": "Specifies the floor number for this Floor."
   },
   {
    "fieldname": "floor_type",
    "fieldtype": "Select",
    "label": "Floor Type",
-   "options": "Residential\nCommercial\nParking\nService\nRoof\nBasement\nOther"
+   "options": "Residential\nCommercial\nParking\nService\nRoof\nBasement\nOther",
+   "in_list_view": 0,
+   "description": "Selects the floor type used for classification, workflow, or reporting."
   },
   {
    "fieldname": "total_units",
    "fieldtype": "Int",
    "label": "Total Units",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Floor."
   }
  ],
  "index_web_pages_for_search": 1,

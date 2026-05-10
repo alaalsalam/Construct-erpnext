@@ -6,12 +6,13 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "snapshot_information_section",
   "company",
   "project",
   "snapshot_date",
   "snapshot_title",
   "status",
-  "budget_section",
+  "budget_cost_section",
   "boq_total_amount",
   "boq_material_amount",
   "boq_labor_amount",
@@ -24,10 +25,9 @@
   "received_amount",
   "procurement_invoiced_amount",
   "consumed_amount",
-  "measurement_section",
+  "progress_forecast_section",
   "measured_amount",
   "measured_progress_percent",
-  "certification_section",
   "certified_gross_amount",
   "certified_net_amount",
   "retention_held_amount",
@@ -39,24 +39,31 @@
   "budget_vs_invoiced_variance",
   "budget_vs_certified_variance",
   "consumed_vs_measured_variance",
-  "indicator_section",
+  "risk_indicators_section",
   "procurement_progress_percent",
   "measurement_progress_percent",
   "certification_progress_percent",
   "cost_risk_status",
   "cash_risk_status",
   "overall_status",
-  "narrative_section",
+  "executive_summary_section",
   "executive_summary",
   "key_risks",
   "recommendations"
  ],
  "fields": [
   {
+   "fieldname": "snapshot_information_section",
+   "fieldtype": "Section Break",
+   "label": "Snapshot Information"
+  },
+  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
   },
   {
    "fieldname": "project",
@@ -65,7 +72,8 @@
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Project."
   },
   {
    "default": "Today",
@@ -73,63 +81,77 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Snapshot Date",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Specifies the snapshot date for this Project Financial Snapshot."
   },
   {
    "fieldname": "snapshot_title",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Snapshot Title"
+   "in_list_view": 0,
+   "label": "Snapshot Title",
+   "description": "Specifies the snapshot title for this Project Financial Snapshot."
   },
   {
    "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Status",
-   "options": "Draft\nGenerated\nReviewed\nArchived"
+   "options": "Draft\nGenerated\nReviewed\nArchived",
+   "description": "Current status used to track this Project Financial Snapshot through its workflow or reporting lifecycle."
   },
   {
-   "fieldname": "budget_section",
+   "fieldname": "budget_cost_section",
    "fieldtype": "Section Break",
-   "label": "Budget / BOQ"
+   "label": "Budget / Cost"
   },
   {
    "fieldname": "boq_total_amount",
    "fieldtype": "Currency",
    "label": "BOQ Total Amount",
    "read_only": 1,
-   "description": "Current planned project value from BOQ/Work Items."
+   "description": "Current planned project value from BOQ/Work Items.",
+   "in_list_view": 0
   },
   {
    "fieldname": "boq_material_amount",
    "fieldtype": "Currency",
    "label": "BOQ Material Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "boq_labor_amount",
    "fieldtype": "Currency",
    "label": "BOQ Labor Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "boq_equipment_amount",
    "fieldtype": "Currency",
    "label": "BOQ Equipment Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "boq_subcontract_amount",
    "fieldtype": "Currency",
    "label": "BOQ Subcontract Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "boq_overhead_amount",
    "fieldtype": "Currency",
    "label": "BOQ Overhead Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "procurement_section",
@@ -140,90 +162,110 @@
    "fieldname": "requested_amount",
    "fieldtype": "Currency",
    "label": "Requested Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "committed_amount",
    "fieldtype": "Currency",
    "label": "Committed Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "received_amount",
    "fieldtype": "Currency",
    "label": "Received Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "procurement_invoiced_amount",
    "fieldtype": "Currency",
    "label": "Procurement Invoiced Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "consumed_amount",
    "fieldtype": "Currency",
    "label": "Consumed Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "measurement_section",
+   "fieldname": "progress_forecast_section",
    "fieldtype": "Section Break",
-   "label": "Measurement"
+   "label": "Progress / Certification"
   },
   {
    "fieldname": "measured_amount",
    "fieldtype": "Currency",
    "label": "Measured Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "measured_progress_percent",
    "fieldtype": "Percent",
    "label": "Measured Progress Percent",
-   "read_only": 1
-  },
-  {
-   "fieldname": "certification_section",
-   "fieldtype": "Section Break",
-   "label": "Certification / IPC"
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "certified_gross_amount",
    "fieldtype": "Currency",
    "label": "Certified Gross Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "certified_net_amount",
    "fieldtype": "Currency",
    "label": "Certified Net Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "retention_held_amount",
    "fieldtype": "Currency",
    "label": "Retention Held Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "retention_released_amount",
    "fieldtype": "Currency",
    "label": "Retention Released Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "contractor_outstanding_amount",
    "fieldtype": "Currency",
    "label": "Contractor Outstanding Amount",
    "read_only": 1,
-   "description": "Operational contractor outstanding exposure from Contractor Accounts."
+   "description": "Operational contractor outstanding exposure from Contractor Accounts.",
+   "in_list_view": 0
   },
   {
    "fieldname": "contractor_paid_amount",
    "fieldtype": "Currency",
    "label": "Contractor Paid Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "variance_section",
@@ -234,62 +276,80 @@
    "fieldname": "budget_vs_committed_variance",
    "fieldtype": "Currency",
    "label": "Budget vs Committed Variance",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "budget_vs_invoiced_variance",
    "fieldtype": "Currency",
    "label": "Budget vs Invoiced Variance",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "budget_vs_certified_variance",
    "fieldtype": "Currency",
    "label": "Budget vs Certified Variance",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "consumed_vs_measured_variance",
    "fieldtype": "Currency",
    "label": "Consumed vs Measured Variance",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
-   "fieldname": "indicator_section",
+   "fieldname": "risk_indicators_section",
    "fieldtype": "Section Break",
-   "label": "Progress / Indicators"
+   "label": "Risk Indicators"
   },
   {
    "fieldname": "procurement_progress_percent",
    "fieldtype": "Percent",
    "label": "Procurement Progress Percent",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "measurement_progress_percent",
    "fieldtype": "Percent",
    "label": "Measurement Progress Percent",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "certification_progress_percent",
    "fieldtype": "Percent",
    "label": "Certification Progress Percent",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "cost_risk_status",
    "fieldtype": "Select",
    "label": "Cost Risk Status",
    "options": "Green\nYellow\nRed",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "cash_risk_status",
    "fieldtype": "Select",
    "label": "Cash Risk Status",
    "options": "Green\nYellow\nRed",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Current status used to track this Project Financial Snapshot through its workflow or reporting lifecycle."
   },
   {
    "fieldname": "overall_status",
@@ -301,24 +361,30 @@
    "description": "Simple CFO status based on deterministic risk rules."
   },
   {
-   "fieldname": "narrative_section",
+   "fieldname": "executive_summary_section",
    "fieldtype": "Section Break",
-   "label": "Narrative"
+   "label": "Executive Summary"
   },
   {
    "fieldname": "executive_summary",
    "fieldtype": "Text",
-   "label": "Executive Summary"
+   "label": "Executive Summary",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Project Financial Snapshot."
   },
   {
    "fieldname": "key_risks",
    "fieldtype": "Text",
-   "label": "Key Risks"
+   "label": "Key Risks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Project Financial Snapshot."
   },
   {
    "fieldname": "recommendations",
    "fieldtype": "Text",
-   "label": "Recommendations"
+   "label": "Recommendations",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Project Financial Snapshot."
   }
  ],
  "index_web_pages_for_search": 1,

@@ -82,3 +82,4 @@ Updated risks:
 - Active reservation validation changed A-101 to Reserved and left one retained active reservation for client walkthrough; future validation must account for this status.
 - Executive Presentation Center KPI Number Cards are deterministic management indicators, not accounting ledgers; finance leadership should still sign off on KPI wording and thresholds before production executive rollout.
 - Dashboard Charts remain deferred to avoid presenting unapproved chart definitions or thresholds as final CFO analytics.
+- Form layout polish adds Section Break metadata to many custom DocTypes; future schema work should preserve the improved field order and avoid overwriting descriptions accidentally.

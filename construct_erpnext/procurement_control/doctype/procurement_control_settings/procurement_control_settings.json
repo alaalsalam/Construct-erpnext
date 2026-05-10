@@ -5,49 +5,79 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "general_settings_section",
   "enable_work_item_sync",
+  "validation_rules_section",
   "enable_budget_warning",
   "enable_budget_blocking",
   "overrun_tolerance_percent",
+  "defaults_section",
   "default_site_warehouse",
   "require_work_item_on_project_purchase"
  ],
  "fields": [
   {
+   "fieldname": "general_settings_section",
+   "fieldtype": "Section Break",
+   "label": "General Settings"
+  },
+  {
    "default": "1",
    "fieldname": "enable_work_item_sync",
    "fieldtype": "Check",
-   "label": "Enable Work Item Sync"
+   "label": "Enable Work Item Sync",
+   "in_list_view": 0,
+   "description": "Specifies the enable work item sync for this Procurement Control Settings."
+  },
+  {
+   "fieldname": "validation_rules_section",
+   "fieldtype": "Section Break",
+   "label": "Validation Rules"
   },
   {
    "default": "1",
    "fieldname": "enable_budget_warning",
    "fieldtype": "Check",
-   "label": "Enable Budget Warning"
+   "label": "Enable Budget Warning",
+   "in_list_view": 0,
+   "description": "Specifies the enable budget warning for this Procurement Control Settings."
   },
   {
    "default": "0",
    "fieldname": "enable_budget_blocking",
    "fieldtype": "Check",
-   "label": "Enable Budget Blocking"
+   "label": "Enable Budget Blocking",
+   "in_list_view": 0,
+   "description": "Specifies the enable budget blocking for this Procurement Control Settings."
   },
   {
    "default": "0",
    "fieldname": "overrun_tolerance_percent",
    "fieldtype": "Percent",
-   "label": "Overrun Tolerance Percent"
+   "label": "Overrun Tolerance Percent",
+   "in_list_view": 0,
+   "description": "Specifies the overrun tolerance percent for this Procurement Control Settings."
+  },
+  {
+   "fieldname": "defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Defaults"
   },
   {
    "fieldname": "default_site_warehouse",
    "fieldtype": "Link",
    "label": "Default Site Warehouse",
-   "options": "Warehouse"
+   "options": "Warehouse",
+   "in_list_view": 0,
+   "description": "Links this record to the related Warehouse."
   },
   {
    "default": "0",
    "fieldname": "require_work_item_on_project_purchase",
    "fieldtype": "Check",
-   "label": "Require Work Item On Project Purchase"
+   "label": "Require Work Item On Project Purchase",
+   "in_list_view": 0,
+   "description": "Specifies the require work item on project purchase for this Procurement Control Settings."
   }
  ],
  "index_web_pages_for_search": 1,

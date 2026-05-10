@@ -357,6 +357,13 @@ Product workspace readiness:
 - Dashboard Charts remain deferred until finance leadership signs off on chart definitions and threshold wording.
 - Existing operational workspaces remain the day-to-day navigation layer.
 
+## Form And Workspace UX Readiness
+
+- Product workspaces are ordered by process so users can follow the operating flow without external explanation.
+- Custom DocType forms use business-oriented sections, concise field descriptions, visible status/workflow fields, and grouped calculated values.
+- List Views for key DocTypes show operational identifiers, status, and summary values without adding heavy calculated columns.
+- This UX readiness layer changes layout metadata only and does not add Sales/Rental, accounting, portal, or CRM features.
+
 ## Existing DocTypes To Reuse
 
 - Construction Budget

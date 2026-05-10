@@ -5,15 +5,18 @@
  "engine": "InnoDB",
  "field_order": [
   "section",
+  "work_scope_section",
   "wbs_element",
   "wbs_code",
   "cost_code",
   "item_code",
   "description",
   "item_category",
+  "quantity_rate_section",
   "quantity",
   "uom",
   "unit_rate",
+  "amounts_section",
   "amount",
   "wastage_percent",
   "markup_percent",
@@ -28,116 +31,163 @@
   {
    "fieldname": "section",
    "fieldtype": "Data",
-   "label": "Section"
+   "label": "Section",
+   "in_list_view": 0,
+   "description": "Specifies the section for this Construction BOQ Item."
+  },
+  {
+   "fieldname": "work_scope_section",
+   "fieldtype": "Section Break",
+   "label": "Work Scope"
   },
   {
    "fieldname": "wbs_element",
    "fieldtype": "Link",
    "label": "WBS Element",
-   "options": "WBS Element"
+   "options": "WBS Element",
+   "in_list_view": 0,
+   "description": "Links this record to the related WBS Element."
   },
   {
    "fieldname": "wbs_code",
    "fieldtype": "Data",
-   "label": "WBS Code"
+   "label": "WBS Code",
+   "in_list_view": 0,
+   "description": "Specifies the wbs code for this Construction BOQ Item."
   },
   {
    "fieldname": "cost_code",
    "fieldtype": "Link",
    "label": "Cost Code",
-   "options": "Cost Code"
+   "options": "Cost Code",
+   "in_list_view": 0,
+   "description": "Links this record to the related Cost Code."
   },
   {
    "fieldname": "item_code",
    "fieldtype": "Link",
    "label": "Item Code",
-   "options": "Item"
+   "options": "Item",
+   "in_list_view": 0,
+   "description": "Links this record to the related Item."
   },
   {
    "fieldname": "description",
    "fieldtype": "Text",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Description",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Additional notes or explanation for this Construction BOQ Item."
   },
   {
    "fieldname": "item_category",
    "fieldtype": "Select",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Item Category",
-   "options": "Material\nLabor\nEquipment\nSubcontract\nOverhead\nContingency\nOther"
+   "options": "Material\nLabor\nEquipment\nSubcontract\nOverhead\nContingency\nOther",
+   "description": "Selects the item category used for classification, workflow, or reporting."
+  },
+  {
+   "fieldname": "quantity_rate_section",
+   "fieldtype": "Section Break",
+   "label": "Quantity and Rate"
   },
   {
    "fieldname": "quantity",
    "fieldtype": "Float",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Quantity",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Specifies the quantity for this Construction BOQ Item."
   },
   {
    "fieldname": "uom",
    "fieldtype": "Link",
    "label": "UOM",
-   "options": "UOM"
+   "options": "UOM",
+   "in_list_view": 0,
+   "description": "Links this record to the related UOM."
   },
   {
    "fieldname": "unit_rate",
    "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Unit Rate"
+   "in_list_view": 0,
+   "label": "Unit Rate",
+   "description": "Specifies the unit rate for this Construction BOQ Item."
+  },
+  {
+   "fieldname": "amounts_section",
+   "fieldtype": "Section Break",
+   "label": "Amounts"
   },
   {
    "fieldname": "amount",
    "fieldtype": "Currency",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Amount",
-   "read_only": 1
+   "read_only": 1,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "wastage_percent",
    "fieldtype": "Percent",
-   "label": "Wastage Percent"
+   "label": "Wastage Percent",
+   "in_list_view": 0,
+   "description": "Specifies the wastage percent for this Construction BOQ Item."
   },
   {
    "fieldname": "markup_percent",
    "fieldtype": "Percent",
-   "label": "Markup Percent"
+   "label": "Markup Percent",
+   "in_list_view": 0,
+   "description": "Specifies the markup percent for this Construction BOQ Item."
   },
   {
    "fieldname": "final_quantity",
    "fieldtype": "Float",
    "label": "Final Quantity",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "final_amount",
    "fieldtype": "Currency",
-   "in_list_view": 1,
+   "in_list_view": 0,
    "label": "Final Amount",
-   "read_only": 1
+   "read_only": 1,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "budget_level",
    "fieldtype": "Link",
    "label": "Budget Level",
-   "options": "Budget Level"
+   "options": "Budget Level",
+   "in_list_view": 0,
+   "description": "Links this record to the related Budget Level."
   },
   {
    "fieldname": "cost_center",
    "fieldtype": "Link",
    "label": "Cost Center",
-   "options": "Cost Center"
+   "options": "Cost Center",
+   "in_list_view": 0,
+   "description": "Links this record to the related Cost Center."
   },
   {
    "fieldname": "source",
    "fieldtype": "Select",
    "label": "Source",
-   "options": "Estimated\nHistorical\nSupplier Quote\nContract\nManual"
+   "options": "Estimated\nHistorical\nSupplier Quote\nContract\nManual",
+   "in_list_view": 0,
+   "description": "Selects the source used for classification, workflow, or reporting."
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Small Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Construction BOQ Item."
   }
  ],
  "index_web_pages_for_search": 0,

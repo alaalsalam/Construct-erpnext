@@ -6,23 +6,34 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "basic_information_section",
   "real_estate_project",
   "unit",
   "property_owner",
+  "ownership_details_section",
   "ownership_percentage",
   "ownership_role",
+  "validity_status_section",
   "start_date",
   "end_date",
   "status",
+  "remarks_section",
   "remarks"
  ],
  "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
   {
    "fieldname": "real_estate_project",
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Real Estate Project",
-   "options": "Real Estate Project"
+   "options": "Real Estate Project",
+   "in_list_view": 0,
+   "description": "Links this record to the related Real Estate Project."
   },
   {
    "fieldname": "unit",
@@ -31,7 +42,8 @@
    "in_standard_filter": 1,
    "label": "Unit",
    "options": "Unit",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Unit."
   },
   {
    "fieldname": "property_owner",
@@ -40,42 +52,68 @@
    "in_standard_filter": 1,
    "label": "Owner",
    "options": "Property Owner",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Property Owner."
+  },
+  {
+   "fieldname": "ownership_details_section",
+   "fieldtype": "Section Break",
+   "label": "Ownership Details"
   },
   {
    "fieldname": "ownership_percentage",
    "fieldtype": "Percent",
    "in_list_view": 1,
    "label": "Ownership Percentage",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Specifies the ownership percentage for this Property Ownership."
   },
   {
    "fieldname": "ownership_role",
    "fieldtype": "Select",
    "label": "Ownership Role",
-   "options": "Main Owner\nCo-owner\nInvestor\nBeneficiary"
+   "options": "Main Owner\nCo-owner\nInvestor\nBeneficiary",
+   "in_list_view": 0,
+   "description": "Selects the ownership role used for classification, workflow, or reporting."
+  },
+  {
+   "fieldname": "validity_status_section",
+   "fieldtype": "Section Break",
+   "label": "Validity and Status"
   },
   {
    "fieldname": "start_date",
    "fieldtype": "Date",
-   "label": "Start Date"
+   "label": "Start Date",
+   "in_list_view": 0,
+   "description": "Specifies the start date for this Property Ownership."
   },
   {
    "fieldname": "end_date",
    "fieldtype": "Date",
-   "label": "End Date"
+   "label": "End Date",
+   "in_list_view": 0,
+   "description": "Specifies the end date for this Property Ownership."
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "Active\nTransferred\nEnded\nCancelled"
+   "options": "Active\nTransferred\nEnded\nCancelled",
+   "description": "Current status used to track this Property Ownership through its workflow or reporting lifecycle."
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Property Ownership."
   }
  ],
  "index_web_pages_for_search": 1,

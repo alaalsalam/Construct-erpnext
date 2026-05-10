@@ -167,3 +167,10 @@
 - Number Cards are acceptable for presentation because they are read-only summaries and do not create or amend business records.
 - Dashboard Charts are deferred until finance leadership approves chart definitions, KPI thresholds, and narrative wording.
 - Existing operational reports remain the source of detail behind each KPI card.
+
+## ADR-022: UX Readiness Changes Are Metadata Only
+
+- Workspace and form UX completion changes are limited to layout, descriptions, list view visibility, translations, and readiness documentation.
+- The phase does not change business logic, fieldnames, existing fieldtypes, required-field policy, accounting behavior, or submitted records.
+- Section Breaks and Column Breaks are allowed as layout metadata to make completed custom DocTypes easier to explain and use.
+- Sales Contract, Lease Contract, Installment Plan, Rent Schedule, CRM Matching, Portal, and accounting features remain deferred.

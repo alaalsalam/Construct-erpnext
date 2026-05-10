@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Construction Control</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"BOQ & Work Items\",\"col\":3}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Budget & Schedule\",\"col\":3}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Progress & Site Cost\",\"col\":3}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial Traceability\",\"col\":3}}]",
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Construction Control</b></span>\",\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Setup / Masters</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup / Masters\",\"col\":4}},{\"id\":\"h3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>BOQ</b></span>\",\"col\":12}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"BOQ\",\"col\":4}},{\"id\":\"h4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Work Items</b></span>\",\"col\":12}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Work Items\",\"col\":4}},{\"id\":\"h5\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Progress / Advancement</b></span>\",\"col\":12}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Progress / Advancement\",\"col\":4}},{\"id\":\"h6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Construction Reports</b></span>\",\"col\":12}},{\"id\":\"card_5\",\"type\":\"card\",\"data\":{\"card_name\":\"Construction Reports\",\"col\":4}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -16,7 +16,55 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "BOQ & Work Items",
+   "label": "Setup / Masters",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Cost Code",
+   "link_count": 0,
+   "link_to": "Cost Code",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "WBS Element",
+   "link_count": 0,
+   "link_to": "WBS Element",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Construction Budget",
+   "link_count": 0,
+   "link_to": "Construction Budget",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Budget Level",
+   "link_count": 0,
+   "link_to": "Budget Level",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BOQ",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -26,184 +74,184 @@
    "is_query_report": 0,
    "label": "Construction BOQ",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Construction BOQ",
-   "link_type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Construction Work Item",
-   "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
-   "type": "Link",
-   "link_to": "Construction Work Item",
-   "link_type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Cost Code",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Cost Code",
-   "link_type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "WBS Element",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "WBS Element",
-   "link_type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Budget & Schedule",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Construction Budget",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Construction Budget",
-   "link_type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Budget Level",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Budget Level",
-   "link_type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Budget Change Order",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Budget Change Order",
-   "link_type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Activity Schedule",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Activity Schedule",
-   "link_type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Progress & Site Cost",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Physical Advancement",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Physical Advancement",
-   "link_type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Project Cost Entry",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Project Cost Entry",
-   "link_type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Labor Hour Entry",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Labor Hour Entry",
-   "link_type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Equipment Usage Log",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Equipment Usage Log",
-   "link_type": "DocType"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Financial Traceability",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Card Break"
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Construction BOQ Cost Analysis",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Construction BOQ Cost Analysis",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Construction BOQ Variance",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Construction BOQ Variance",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Work Items",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Construction Work Item",
+   "link_count": 0,
+   "link_to": "Construction Work Item",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Work Item Financial Ledger",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Work Item Financial Ledger",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Cost Code Financial Analysis",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Cost Code Financial Analysis",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Progress / Advancement",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Activity Schedule",
+   "link_count": 0,
+   "link_to": "Activity Schedule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Physical Advancement",
+   "link_count": 0,
+   "link_to": "Physical Advancement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Cost Entry",
+   "link_count": 0,
+   "link_to": "Project Cost Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Labor Hour Entry",
+   "link_count": 0,
+   "link_to": "Labor Hour Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Equipment Usage Log",
+   "link_count": 0,
+   "link_to": "Equipment Usage Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Construction Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Budget Variance Analysis",
+   "link_count": 0,
+   "link_to": "Budget Variance Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Budget vs Actual Cost",
+   "link_count": 0,
+   "link_to": "Budget vs Actual Cost",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Project Cost Summary",
+   "link_count": 0,
+   "link_to": "Project Cost Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Advancement vs Cost",
+   "link_count": 0,
+   "link_to": "Advancement vs Cost",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Advancement vs Schedule",
+   "link_count": 0,
+   "link_to": "Advancement vs Schedule",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
  "modified": "2026-05-09 17:00:06.000000",

@@ -6,31 +6,43 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "basic_information_section",
   "company",
   "project",
   "contractor",
   "contractor_account",
   "ipc",
   "purchase_invoice",
+  "retention_details_section",
   "retention_percent",
   "gross_amount",
   "retention_amount",
   "retained_on",
+  "release_details_section",
   "release_due_date",
   "defect_liability_months",
+  "status_section",
   "status",
   "released_amount",
   "remaining_retention_amount",
   "release_payment_entry",
   "release_journal_entry",
+  "remarks_section",
   "remarks"
  ],
  "fields": [
   {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
   },
   {
    "fieldname": "project",
@@ -38,7 +50,9 @@
    "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
-   "reqd": 1
+   "reqd": 1,
+   "in_list_view": 0,
+   "description": "Links this record to the related Project."
   },
   {
    "fieldname": "contractor",
@@ -46,13 +60,17 @@
    "in_standard_filter": 1,
    "label": "Contractor",
    "options": "Supplier",
-   "reqd": 1
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Links this record to the related Supplier."
   },
   {
    "fieldname": "contractor_account",
    "fieldtype": "Link",
    "label": "Contractor Account",
-   "options": "Contractor Account"
+   "options": "Contractor Account",
+   "in_list_view": 0,
+   "description": "Links this record to the related Contractor Account."
   },
   {
    "fieldname": "ipc",
@@ -60,45 +78,74 @@
    "in_list_view": 1,
    "label": "IPC",
    "options": "Interim Payment Certificate",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Links this record to the related Interim Payment Certificate."
   },
   {
    "fieldname": "purchase_invoice",
    "fieldtype": "Link",
    "label": "Purchase Invoice",
-   "options": "Purchase Invoice"
+   "options": "Purchase Invoice",
+   "in_list_view": 0,
+   "description": "Links this record to the related Purchase Invoice."
+  },
+  {
+   "fieldname": "retention_details_section",
+   "fieldtype": "Section Break",
+   "label": "Retention Details"
   },
   {
    "fieldname": "retention_percent",
    "fieldtype": "Percent",
-   "label": "Retention Percent"
+   "label": "Retention Percent",
+   "in_list_view": 0,
+   "description": "Specifies the retention percent for this Retention Register."
   },
   {
    "fieldname": "gross_amount",
    "fieldtype": "Currency",
-   "label": "Gross Amount"
+   "label": "Gross Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "retention_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Retention Amount"
+   "label": "Retention Amount",
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "retained_on",
    "fieldtype": "Date",
-   "label": "Retained On"
+   "label": "Retained On",
+   "in_list_view": 0,
+   "description": "Specifies the retained on for this Retention Register."
+  },
+  {
+   "fieldname": "release_details_section",
+   "fieldtype": "Section Break",
+   "label": "Release Details"
   },
   {
    "fieldname": "release_due_date",
    "fieldtype": "Date",
-   "label": "Release Due Date"
+   "label": "Release Due Date",
+   "in_list_view": 0,
+   "description": "Specifies the release due date for this Retention Register."
   },
   {
    "default": "12",
    "fieldname": "defect_liability_months",
    "fieldtype": "Int",
-   "label": "Defect Liability Months"
+   "label": "Defect Liability Months",
+   "in_list_view": 0,
+   "description": "Specifies the defect liability months for this Retention Register."
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
   },
   {
    "default": "Held",
@@ -107,37 +154,53 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Held\nEligible for Release\nPartially Released\nReleased\nCancelled"
+   "options": "Held\nEligible for Release\nPartially Released\nReleased\nCancelled",
+   "description": "Current status used to track this Retention Register through its workflow or reporting lifecycle."
   },
   {
    "default": "0",
    "fieldname": "released_amount",
    "fieldtype": "Currency",
-   "label": "Released Amount"
+   "label": "Released Amount",
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "default": "0",
    "fieldname": "remaining_retention_amount",
    "fieldtype": "Currency",
    "label": "Remaining Retention Amount",
-   "read_only": 1
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Retention amount still held and not yet released."
   },
   {
    "fieldname": "release_payment_entry",
    "fieldtype": "Link",
    "label": "Release Payment Entry",
-   "options": "Payment Entry"
+   "options": "Payment Entry",
+   "in_list_view": 0,
+   "description": "Links this record to the related Payment Entry."
   },
   {
    "fieldname": "release_journal_entry",
    "fieldtype": "Link",
    "label": "Release Journal Entry",
-   "options": "Journal Entry"
+   "options": "Journal Entry",
+   "in_list_view": 0,
+   "description": "Links this record to the related Journal Entry."
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Text",
-   "label": "Remarks"
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Retention Register."
   }
  ],
  "links": [],

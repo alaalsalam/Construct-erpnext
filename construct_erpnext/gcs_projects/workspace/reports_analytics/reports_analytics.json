@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Analytics</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Construction\",\"col\":3}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement\",\"col\":3}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Measurement & IPC\",\"col\":3}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor\",\"col\":3}},{\"id\":\"card_5\",\"type\":\"card\",\"data\":{\"card_name\":\"CFO\",\"col\":3}},{\"id\":\"card_6\",\"type\":\"card\",\"data\":{\"card_name\":\"Real Estate Inventory\",\"col\":3}},{\"id\":\"card_7\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Profitability\",\"col\":3}},{\"id\":\"card_8\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial Dimensions\",\"col\":3}}]",
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Analytics</b></span>\",\"col\":12}},{\"id\":\"h2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Executive / CFO</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Executive / CFO\",\"col\":4}},{\"id\":\"h3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>BOQ / Construction</b></span>\",\"col\":12}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"BOQ / Construction\",\"col\":4}},{\"id\":\"h4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Procurement / Stock</b></span>\",\"col\":12}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement / Stock\",\"col\":4}},{\"id\":\"h5\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Measurement / IPC</b></span>\",\"col\":12}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Measurement / IPC\",\"col\":4}},{\"id\":\"h6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contractor</b></span>\",\"col\":12}},{\"id\":\"card_5\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor\",\"col\":4}},{\"id\":\"h7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Real Estate Inventory</b></span>\",\"col\":12}},{\"id\":\"card_6\",\"type\":\"card\",\"data\":{\"card_name\":\"Real Estate Inventory\",\"col\":4}},{\"id\":\"h8\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Unit Profitability</b></span>\",\"col\":12}},{\"id\":\"card_7\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Profitability\",\"col\":4}},{\"id\":\"h9\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Financial Dimensions / GL Traceability</b></span>\",\"col\":12}},{\"id\":\"card_8\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial Dimensions / GL Traceability\",\"col\":4}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -16,7 +16,85 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Construction",
+   "label": "Executive / CFO",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Project Financial Snapshot Report",
+   "link_count": 0,
+   "link_to": "Project Financial Snapshot Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "CFO Project Control Summary",
+   "link_count": 0,
+   "link_to": "CFO Project Control Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Project Cash Flow Forecast Report",
+   "link_count": 0,
+   "link_to": "Project Cash Flow Forecast Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Project Cash Requirement Summary",
+   "link_count": 0,
+   "link_to": "Project Cash Requirement Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Project EVM Metrics Report",
+   "link_count": 0,
+   "link_to": "Project EVM Metrics Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "EVM Forecast Summary",
+   "link_count": 0,
+   "link_to": "EVM Forecast Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Project Performance Dashboard Report",
+   "link_count": 0,
+   "link_to": "Project Performance Dashboard Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BOQ / Construction",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -26,75 +104,75 @@
    "is_query_report": 1,
    "label": "Construction BOQ Cost Analysis",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Construction BOQ Cost Analysis",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Construction BOQ Variance",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Construction BOQ Variance",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Budget Variance Analysis",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Budget Variance Analysis",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Budget vs Actual Cost",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Budget vs Actual Cost",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Project Cost Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Project Cost Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Advancement vs Cost",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Advancement vs Cost",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Advancement vs Schedule",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Advancement vs Schedule",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Procurement",
+   "label": "Procurement / Stock",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -104,55 +182,55 @@
    "is_query_report": 1,
    "label": "Work Item Procurement Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Work Item Procurement Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "BOQ Procurement Pipeline",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "BOQ Procurement Pipeline",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Site Warehouse Consumption",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Site Warehouse Consumption",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Procurement Budget Control",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Procurement Budget Control",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Material Acquisition Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Material Acquisition Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Measurement & IPC",
+   "label": "Measurement / IPC",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -162,60 +240,60 @@
    "is_query_report": 1,
    "label": "Measurement Book Register",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Measurement Book Register",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Work Item Measurement Progress",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Work Item Measurement Progress",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Measurement Verification Queue",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Measurement Verification Queue",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "IPC Register",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "IPC Register",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "IPC Line Details",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "IPC Line Details",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Measurement to IPC Traceability",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Measurement to IPC Traceability",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -230,188 +308,70 @@
    "is_query_report": 1,
    "label": "Contractor IPC Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Contractor IPC Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Contractor Account Statement",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Contractor Account Statement",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Retention Register Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Retention Register Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Advance Recovery Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Advance Recovery Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Contractor Exposure Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Contractor Exposure Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Guarantee Register Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Guarantee Register Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Subcontract Status",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Subcontract Status",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "CFO",
-   "link_count": 0,
+   "link_type": "Report",
    "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Project Financial Snapshot Report",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Project Financial Snapshot Report",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "CFO Project Control Summary",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "CFO Project Control Summary",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Work Item Financial Traceability",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Work Item Financial Traceability",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Contractor Financial Exposure",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Contractor Financial Exposure",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Project Cash Flow Forecast Report",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Project Cash Flow Forecast Report",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Project Cash Requirement Summary",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Project Cash Requirement Summary",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Contractor Payment Forecast",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Contractor Payment Forecast",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Retention Release Forecast",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Retention Release Forecast",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Project EVM Metrics Report",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Project EVM Metrics Report",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "EVM Forecast Summary",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "EVM Forecast Summary",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Project Performance Dashboard Report",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Project Performance Dashboard Report",
-   "link_type": "Report"
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -426,40 +386,80 @@
    "is_query_report": 1,
    "label": "Unit Inventory Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Unit Inventory Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Unit Availability Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Unit Availability Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Ownership Summary Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Ownership Summary Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Real Estate Project Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Real Estate Project Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Reservation Register",
+   "link_count": 0,
+   "link_to": "Unit Reservation Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Active Unit Reservations",
+   "link_count": 0,
+   "link_to": "Active Unit Reservations",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Expiring Unit Reservations",
+   "link_count": 0,
+   "link_to": "Expiring Unit Reservations",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Reservation Impact",
+   "link_count": 0,
+   "link_to": "Unit Reservation Impact",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -474,45 +474,45 @@
    "is_query_report": 1,
    "label": "Unit Cost Allocation Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Unit Cost Allocation Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Unit Profitability Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Unit Profitability Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Real Estate Project Profitability Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Real Estate Project Profitability Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Building Profitability Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Building Profitability Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Financial Dimensions",
+   "label": "Financial Dimensions / GL Traceability",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -522,98 +522,50 @@
    "is_query_report": 1,
    "label": "GL Dimension Traceability",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "GL Dimension Traceability",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Unit Financial Ledger",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Unit Financial Ledger",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Work Item Financial Ledger",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Work Item Financial Ledger",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Cost Code Financial Analysis",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Cost Code Financial Analysis",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Project Unit Cost Matrix",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Project Unit Cost Matrix",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Reservation",
-   "link_count": 0,
+   "link_type": "Report",
    "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Unit Reservation Register",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Unit Reservation Register",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Active Unit Reservations",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Active Unit Reservations",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Expiring Unit Reservations",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Expiring Unit Reservations",
-   "link_type": "Report"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 1,
-   "label": "Unit Reservation Impact",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
-   "link_to": "Unit Reservation Impact",
-   "link_type": "Report"
+   "type": "Link"
   }
  ],
  "modified": "2026-05-09 17:55:00.000000",

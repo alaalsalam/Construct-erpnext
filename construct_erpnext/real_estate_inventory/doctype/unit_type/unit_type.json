@@ -6,43 +6,70 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "basic_information_section",
   "unit_type_name",
+  "classification_section",
   "property_nature",
   "default_usage_purpose",
   "description",
+  "status_section",
   "disabled"
  ],
  "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
   {
    "fieldname": "unit_type_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Unit Type Name",
    "reqd": 1,
-   "unique": 1
+   "unique": 1,
+   "description": "Specifies the unit type name for this Unit Type."
+  },
+  {
+   "fieldname": "classification_section",
+   "fieldtype": "Section Break",
+   "label": "Classification"
   },
   {
    "fieldname": "property_nature",
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Property Nature",
-   "options": "Residential\nCommercial\nIndustrial\nLand\nHospitality\nSpecial"
+   "options": "Residential\nCommercial\nIndustrial\nLand\nHospitality\nSpecial",
+   "in_list_view": 1,
+   "description": "Selects the property nature used for classification, workflow, or reporting."
   },
   {
    "fieldname": "default_usage_purpose",
    "fieldtype": "Select",
    "label": "Default Usage Purpose",
-   "options": "Sale\nLong Term Rent\nShort Term Rent\nInvestment\nDevelopment\nMixed"
+   "options": "Sale\nLong Term Rent\nShort Term Rent\nInvestment\nDevelopment\nMixed",
+   "in_list_view": 1,
+   "description": "Selects the default usage purpose used for classification, workflow, or reporting."
   },
   {
    "fieldname": "description",
    "fieldtype": "Small Text",
-   "label": "Description"
+   "label": "Description",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Unit Type."
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
   },
   {
    "fieldname": "disabled",
    "fieldtype": "Check",
-   "label": "Disabled"
+   "label": "Disabled",
+   "in_list_view": 0,
+   "description": "Specifies the disabled for this Unit Type."
   }
  ],
  "index_web_pages_for_search": 1,

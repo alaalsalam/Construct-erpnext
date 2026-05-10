@@ -5,66 +5,104 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "general_settings_section",
   "enable_financial_dimension_sync",
+  "validation_rules_section",
   "require_work_item_on_project_purchase",
   "require_cost_code_on_project_purchase",
   "require_unit_on_unit_specific_cost",
+  "automation_section",
   "enable_dimension_warnings",
   "enable_dimension_blocking",
   "allow_blank_unit_for_project_level_cost",
+  "defaults_section",
   "default_dimension_mode"
  ],
  "fields": [
   {
+   "fieldname": "general_settings_section",
+   "fieldtype": "Section Break",
+   "label": "General Settings"
+  },
+  {
    "default": "1",
    "fieldname": "enable_financial_dimension_sync",
    "fieldtype": "Check",
-   "label": "Enable Financial Dimension Sync"
+   "label": "Enable Financial Dimension Sync",
+   "in_list_view": 0,
+   "description": "Specifies the enable financial dimension sync for this Financial Dimension Settings."
+  },
+  {
+   "fieldname": "validation_rules_section",
+   "fieldtype": "Section Break",
+   "label": "Validation Rules"
   },
   {
    "default": "0",
    "fieldname": "require_work_item_on_project_purchase",
    "fieldtype": "Check",
-   "label": "Require Work Item On Project Purchase"
+   "label": "Require Work Item On Project Purchase",
+   "in_list_view": 0,
+   "description": "Specifies the require work item on project purchase for this Financial Dimension Settings."
   },
   {
    "default": "0",
    "fieldname": "require_cost_code_on_project_purchase",
    "fieldtype": "Check",
-   "label": "Require Cost Code On Project Purchase"
+   "label": "Require Cost Code On Project Purchase",
+   "in_list_view": 0,
+   "description": "Specifies the require cost code on project purchase for this Financial Dimension Settings."
   },
   {
    "default": "0",
    "fieldname": "require_unit_on_unit_specific_cost",
    "fieldtype": "Check",
-   "label": "Require Unit On Unit Specific Cost"
+   "label": "Require Unit On Unit Specific Cost",
+   "in_list_view": 0,
+   "description": "Specifies the require unit on unit specific cost for this Financial Dimension Settings."
+  },
+  {
+   "fieldname": "automation_section",
+   "fieldtype": "Section Break",
+   "label": "Automation"
   },
   {
    "default": "1",
    "fieldname": "enable_dimension_warnings",
    "fieldtype": "Check",
-   "label": "Enable Dimension Warnings"
+   "label": "Enable Dimension Warnings",
+   "in_list_view": 0,
+   "description": "Specifies the enable dimension warnings for this Financial Dimension Settings."
   },
   {
    "default": "0",
    "fieldname": "enable_dimension_blocking",
    "fieldtype": "Check",
    "label": "Enable Dimension Blocking",
-   "description": "When enabled by an administrator, missing required dimensions may block selected transactions."
+   "description": "When enabled by an administrator, missing required dimensions may block selected transactions.",
+   "in_list_view": 0
   },
   {
    "default": "1",
    "fieldname": "allow_blank_unit_for_project_level_cost",
    "fieldtype": "Check",
    "label": "Allow Blank Unit For Project Level Cost",
-   "description": "Allows project-level costs to remain without a Unit dimension when not unit-specific."
+   "description": "Allows project-level costs to remain without a Unit dimension when not unit-specific.",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Defaults"
   },
   {
    "default": "Warning",
    "fieldname": "default_dimension_mode",
    "fieldtype": "Select",
    "label": "Default Dimension Mode",
-   "options": "Warning\nBlocking\nSilent"
+   "options": "Warning\nBlocking\nSilent",
+   "in_list_view": 0,
+   "description": "Selects the default dimension mode used for classification, workflow, or reporting."
   }
  ],
  "index_web_pages_for_search": 1,

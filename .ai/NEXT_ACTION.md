@@ -1,3 +1,3 @@
 # Next Action
 
-Design and implement Reservation and Sales/Rental entry foundation.
+Run end-to-end traceability validation before Reservation and Sales/Rental foundation.

@@ -66,3 +66,7 @@ Updated risks:
 - Area-based allocation assumes the selected unit set and area values represent the intended allocation policy; parking, storage, common areas, and commercial units may need separate weighting rules later.
 - Applying a new allocation updates current Unit allocated_cost and profitability fields; historical allocation documents are retained, but reporting must distinguish current Unit values from previous allocations.
 - Unit Costing workspace links require the app-level after_migrate sync because installed Workspace records may not be overwritten by JSON changes alone.
+- Accounting Dimensions are prospective for GL-level traceability; existing submitted GL rows were not backfilled and may show blank Construction Work Item, Cost Code, or Unit.
+- ERPNext Accounting Dimension setup creates fields across many standard accounting_dimension_doctypes, not only the narrow reporting doctypes; this is standard ERPNext behavior and should be considered in UI review.
+- Existing operational links remain necessary because Accounting Dimensions do not replace BOQ, Measurement Book, IPC, Contractor Ledger, or Unit Cost Allocation workflows.
+- Dimension warnings/blocking are configurable but blocking is disabled by default; administrators must enable it deliberately after process validation.

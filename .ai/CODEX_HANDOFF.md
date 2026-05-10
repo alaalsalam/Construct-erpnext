@@ -203,4 +203,20 @@ Unit Cost Allocation and Unit Profitability foundation status:
 - Unit Cost Allocation is operational management control only and creates no accounting entries.
 - No tenant fields, Lease Contract, Sales Contract, Reservation, or Smart Matching were created.
 
-Next operational task: Design and implement Reservation and Sales/Rental entry foundation.
+Financial Dimensions Traceability foundation status:
+- Branch: feature/financial-dimensions-traceability.
+- New Single DocType: Financial Dimension Settings.
+- New setup: construct_erpnext.cfo_analytics.setup.after_migrate.
+- Accounting Dimensions created on construction.yemenfrappe.com:
+  - Construction Work Item / construction_work_item.
+  - Cost Code / cost_code.
+  - Unit / unit.
+- Existing construction_work_item and cost_code fields on procurement rows were reused because they already matched the intended Link DocTypes.
+- Unit fields were added by ERPNext Accounting Dimension setup to supported accounting/transaction doctypes.
+- Dimension sync service: construct_erpnext.cfo_analytics.financial_dimensions.
+- Draft-only backfill method: construct_erpnext.cfo_analytics.financial_dimensions.backfill_draft_dimensions.
+- Validation backfilled draft Purchase Invoice ACC-PINV-2026-00002 only; no submitted documents or historical GL rows were changed.
+- New reports: GL Dimension Traceability, Unit Financial Ledger, Work Item Financial Ledger, Cost Code Financial Analysis, Project Unit Cost Matrix.
+- Existing historical GL rows show blank new dimensions unless future controlled repost/backfill is approved.
+
+Next operational task: Run end-to-end traceability validation before Reservation and Sales/Rental foundation.

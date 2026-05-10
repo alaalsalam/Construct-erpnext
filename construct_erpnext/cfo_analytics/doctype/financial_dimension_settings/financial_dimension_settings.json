@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "creation": "2026-05-10 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_financial_dimension_sync",
+  "require_work_item_on_project_purchase",
+  "require_cost_code_on_project_purchase",
+  "require_unit_on_unit_specific_cost",
+  "enable_dimension_warnings",
+  "enable_dimension_blocking",
+  "allow_blank_unit_for_project_level_cost",
+  "default_dimension_mode"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "enable_financial_dimension_sync",
+   "fieldtype": "Check",
+   "label": "Enable Financial Dimension Sync"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_work_item_on_project_purchase",
+   "fieldtype": "Check",
+   "label": "Require Work Item On Project Purchase"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_cost_code_on_project_purchase",
+   "fieldtype": "Check",
+   "label": "Require Cost Code On Project Purchase"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_unit_on_unit_specific_cost",
+   "fieldtype": "Check",
+   "label": "Require Unit On Unit Specific Cost"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_dimension_warnings",
+   "fieldtype": "Check",
+   "label": "Enable Dimension Warnings"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_dimension_blocking",
+   "fieldtype": "Check",
+   "label": "Enable Dimension Blocking"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_blank_unit_for_project_level_cost",
+   "fieldtype": "Check",
+   "label": "Allow Blank Unit For Project Level Cost"
+  },
+  {
+   "default": "Warning",
+   "fieldname": "default_dimension_mode",
+   "fieldtype": "Select",
+   "label": "Default Dimension Mode",
+   "options": "Warning\nBlocking\nSilent"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-05-10 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CFO Analytics",
+ "name": "Financial Dimension Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Projects Manager",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

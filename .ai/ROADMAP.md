@@ -105,5 +105,9 @@ Phase 8 deliverables:
 - Apply allocation to Unit allocated cost, margin, and profitability fields without accounting entries. Completed.
 - Add unit costing reports: Unit Cost Allocation Report, Unit Profitability Report, Real Estate Project Profitability Summary, Building Profitability Summary. Completed.
 - Add Unit Costing links to Real Estate Inventory, Executive Control Center, and Reports & Analytics workspaces. Completed.
+- Add ERPNext Accounting Dimensions for Construction Work Item, Cost Code, and Unit. Completed.
+- Add Financial Dimension Settings and draft-only dimension sync. Completed.
+- Add GL/unit/work item/cost code/project-unit financial traceability reports. Completed.
+- Add financial traceability links to Executive Control Center, Reports & Analytics, Real Estate Inventory, and Construction Control. Completed.
 - Tenant, Lease Contract, Sales Contract, Reservation, and Smart Matching remain deferred.
-- Next Phase 9: design and implement Reservation and Sales/Rental entry foundation.
+- Next validation step: run end-to-end traceability validation before Reservation and Sales/Rental foundation.

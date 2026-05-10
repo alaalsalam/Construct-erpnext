@@ -397,3 +397,44 @@
 - Verified project profitability summary: 5 units, total area 528, expected sales value 5600000, allocated cost 3500000, expected gross margin 2100000, expected margin 37.5 percent.
 - Verified Unit Costing reports, existing Unit Inventory Report, EVM report, IPC Register, and product workspaces load successfully.
 - Confirmed no tenant fields exist on Unit and no Lease Contract, Sales Contract, Reservation, Smart Matching, Journal Entries, accounting documents, Server Scripts, or El Salvador localization were introduced.
+
+## 2026-05-10 09:16:27 CEST
+
+- Created branch feature/financial-dimensions-traceability from feature/unit-cost-profitability-foundation.
+- Audited ERPNext v15 Accounting Dimension implementation and accounting_dimension_doctypes on construction.yemenfrappe.com.
+- Existing Accounting Dimension records before this task: none.
+- Existing operational fields before this task:
+  - construction_work_item and cost_code already existed on Material Request Item, Purchase Order Item, Purchase Receipt Item, Purchase Invoice Item, and Stock Entry Detail.
+  - Existing fields were Link fields with correct options and were safely reused by the Accounting Dimension setup.
+  - Unit dimension field did not exist on target accounting rows before this task.
+- Added ADR-017 for the dual tracking model: operational tracking remains for BOQ/Measurement/IPC/Contractor Ledger/Unit Cost Allocation, while Accounting Dimensions support financial reporting and GL drilldown.
+- Added Single DocType Financial Dimension Settings with non-blocking defaults.
+- Added idempotent CFO Analytics after_migrate setup to create Accounting Dimensions:
+  - Construction Work Item / construction_work_item
+  - Cost Code / cost_code
+  - Unit / unit
+- ERPNext Accounting Dimension setup created or reused dimension fields on supported doctypes, including GL Entry, Journal Entry Account, Purchase Invoice Item, Sales Invoice Item, Purchase Order Item, Purchase Receipt Item, Material Request Item, Stock Entry Detail, and Payment Entry.
+- Added financial dimension sync service:
+  - sync_dimensions_on_row
+  - validate_dimension_doc
+  - backfill_draft_dimensions
+  - get_dimension_field_map
+- Integrated dimension sync into validate hooks for Material Request, Purchase Order, Purchase Receipt, Purchase Invoice, Stock Entry, Journal Entry, and Sales Invoice.
+- Preserved existing procurement metadata sync, Purchase Invoice authorization, contractor ledger events, and disabled El Salvador withholding.
+- Added reports:
+  - GL Dimension Traceability
+  - Unit Financial Ledger
+  - Work Item Financial Ledger
+  - Cost Code Financial Analysis
+  - Project Unit Cost Matrix
+- Updated Executive Control Center, Reports & Analytics, Real Estate Inventory, and Construction Control workspace links.
+- Ran JSON validation, Python compile checks, migration, site cache clear, and website cache clear.
+- Draft-only validation:
+  - Ran backfill_draft_dimensions on draft Purchase Invoice ACC-PINV-2026-00002.
+  - Purchase Invoice Item retained construction_work_item CWI-2026-00001 and cost_code CC-CONC.
+  - Unit remained blank because the IPC Purchase Invoice is project-level contractor cost, and blank Unit is allowed by settings.
+  - Document remained Draft and was not submitted.
+- New traceability reports load successfully and degrade safely for existing historical GL rows that predate dimensions.
+- Existing Project Financial Snapshot Report, Unit Profitability Report, and IPC Register still load successfully.
+- No Reservation, Sales Contract, Lease Contract, CRM Matching, accounting document, broad GL backfill, submitted-document amendment, utility-billing install, or El Salvador localization was introduced.
+- Arabic implementation note: تم تفعيل أبعاد مالية مبدئية تسمح بتحليل التكلفة حسب بند العمل، كود التكلفة، والوحدة العقارية، مع بقاء القياسات والمستخلصات كمسار تشغيلي مستقل.

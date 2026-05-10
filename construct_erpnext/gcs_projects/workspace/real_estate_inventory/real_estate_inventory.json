@@ -31,7 +31,10 @@
   {"hidden": 0, "is_query_report": 1, "label": "Unit Cost Allocation Report", "link_count": 0, "link_to": "Unit Cost Allocation Report", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Unit Profitability Report", "link_count": 0, "link_to": "Unit Profitability Report", "link_type": "Report", "onboard": 0, "type": "Link"},
   {"hidden": 0, "is_query_report": 1, "label": "Real Estate Project Profitability Summary", "link_count": 0, "link_to": "Real Estate Project Profitability Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Building Profitability Summary", "link_count": 0, "link_to": "Building Profitability Summary", "link_type": "Report", "onboard": 0, "type": "Link"}
+  {"hidden": 0, "is_query_report": 1, "label": "Building Profitability Summary", "link_count": 0, "link_to": "Building Profitability Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Unit Financial Traceability", "link_count": 0, "onboard": 0, "type": "Card Break"},
+  {"hidden": 0, "is_query_report": 1, "label": "Unit Financial Ledger", "link_count": 0, "link_to": "Unit Financial Ledger", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Project Unit Cost Matrix", "link_count": 0, "link_to": "Project Unit Cost Matrix", "link_type": "Report", "onboard": 0, "type": "Link"}
  ],
  "modified": "2026-05-09 00:00:00.000000",
  "modified_by": "Administrator",

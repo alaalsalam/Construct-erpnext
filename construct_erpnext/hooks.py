@@ -15,6 +15,7 @@ after_migrate = [
     "construct_erpnext.procurement_control.setup.after_migrate",
     "construct_erpnext.measurement_ipc.setup.ensure_measurement_book_workflow",
     "construct_erpnext.measurement_ipc.setup.ensure_interim_payment_certificate_workflow",
+    "construct_erpnext.cfo_analytics.setup.after_migrate",
     "construct_erpnext.unit_costing.setup.after_migrate",
 ]
 
@@ -49,7 +50,10 @@ doc_events = {
         "on_trash": "construct_erpnext.gcs_security.audit.log_delete",
     },
     "Purchase Invoice": {
-        "validate": "construct_erpnext.procurement_control.events.validate_procurement_doc",
+        "validate": [
+            "construct_erpnext.procurement_control.events.validate_procurement_doc",
+            "construct_erpnext.cfo_analytics.financial_dimensions.validate_dimension_doc",
+        ],
         "on_submit": [
             "construct_erpnext.gcs_admin.invoice_auth.check_authorization",
             "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
@@ -67,25 +71,38 @@ doc_events = {
         "on_cancel": "construct_erpnext.contractor_management.events.reverse_payment_entry",
     },
     "Material Request": {
-        "validate": "construct_erpnext.procurement_control.events.validate_procurement_doc",
+        "validate": [
+            "construct_erpnext.procurement_control.events.validate_procurement_doc",
+            "construct_erpnext.cfo_analytics.financial_dimensions.validate_dimension_doc",
+        ],
         "on_submit": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
         "on_cancel": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
     },
     "Purchase Order": {
-        "validate": "construct_erpnext.procurement_control.events.validate_purchase_order",
+        "validate": [
+            "construct_erpnext.procurement_control.events.validate_purchase_order",
+            "construct_erpnext.cfo_analytics.financial_dimensions.validate_dimension_doc",
+        ],
         "on_submit": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
         "on_cancel": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
     },
     "Purchase Receipt": {
-        "validate": "construct_erpnext.procurement_control.events.validate_procurement_doc",
+        "validate": [
+            "construct_erpnext.procurement_control.events.validate_procurement_doc",
+            "construct_erpnext.cfo_analytics.financial_dimensions.validate_dimension_doc",
+        ],
         "on_submit": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
         "on_cancel": "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
     },
     "Sales Invoice": {
+        "validate": "construct_erpnext.cfo_analytics.financial_dimensions.validate_dimension_doc",
         "on_submit": "construct_erpnext.gcs_admin.reminders.schedule_payment_reminders",
     },
     "Stock Entry": {
-        "validate": "construct_erpnext.procurement_control.events.validate_procurement_doc",
+        "validate": [
+            "construct_erpnext.procurement_control.events.validate_procurement_doc",
+            "construct_erpnext.cfo_analytics.financial_dimensions.validate_dimension_doc",
+        ],
         "on_submit": [
             "construct_erpnext.gcs_projects.material.assign_cost_to_activity",
             "construct_erpnext.procurement_control.events.recalculate_procurement_doc",
@@ -94,6 +111,9 @@ doc_events = {
     },
     "Salary Slip": {
         "on_submit": "construct_erpnext.gcs_payroll.distribution.distribute_costs",
+    },
+    "Journal Entry": {
+        "validate": "construct_erpnext.cfo_analytics.financial_dimensions.validate_dimension_doc",
     },
     "Physical Advancement": {
         "on_submit": "construct_erpnext.gcs_projects.advancement.update_project_progress",

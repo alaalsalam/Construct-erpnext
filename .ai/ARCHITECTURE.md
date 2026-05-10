@@ -261,6 +261,45 @@ Integration:
 - Applied allocations update Unit allocated_cost, latest_cost_allocation, allocated_cost_source, allocated_cost_date, expected_margin, expected_margin_percent, and profitability_status.
 - No accounting documents, Journal Entries, Sales Contracts, Lease Contracts, Reservations, or tenant fields are created in this phase.
 
+## Financial Dimensions Traceability Foundation
+
+Implemented inside internal module: cfo_analytics / CFO Analytics.
+
+Tracking model:
+
+- Operational Tracking remains the source for BOQ, procurement, Measurement Book, IPC, Contractor Ledger, and Unit Cost Allocation workflows.
+- ERPNext Accounting Dimensions provide GL-level and financial-report drilldown.
+
+Initial Accounting Dimensions:
+
+- Construction Work Item
+- Cost Code
+- Unit
+
+Not dimensions initially:
+
+- Building and Floor, because they can be derived from Unit.
+- WBS Element, because it can be derived from Construction Work Item.
+- Contractor, because ERPNext already tracks Supplier/Party on accounting documents.
+
+Settings:
+
+- Financial Dimension Settings controls sync, warnings, optional blocking, and whether project-level costs may leave Unit blank.
+- Default behavior is warning-oriented and non-blocking.
+
+Services:
+
+- financial_dimensions syncs Work Item, Cost Code, Unit, Project, Cost Center, BOQ, and WBS metadata on draft/validated rows where fields exist.
+- backfill_draft_dimensions updates draft documents only and does not submit or modify submitted records.
+
+Reports:
+
+- GL Dimension Traceability
+- Unit Financial Ledger
+- Work Item Financial Ledger
+- Cost Code Financial Analysis
+- Project Unit Cost Matrix
+
 ## Role-Oriented Navigation
 
 - Executive / CFO: Executive Control Center, Reports & Analytics, selected Finance records.

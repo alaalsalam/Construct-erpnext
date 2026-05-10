@@ -123,3 +123,16 @@
 - Allocation documents preserve the allocation basis, source amount, unit lines, calculated percentages, and profitability status for review.
 - Applying an allocation updates Unit allocated_cost, latest allocation, margin, and profitability status for operational reporting.
 - Reversing or changing allocation policy must be handled as a controlled management update and must not erase accounting history.
+
+## ADR-017: Dual Tracking With Accounting Dimensions
+
+- The system uses a dual tracking model:
+  1. Operational Tracking for BOQ, Measurement Book, IPC, Contractor Ledger, and Unit Cost Allocation.
+  2. Accounting Dimensions for financial reporting and GL-level drilldown.
+- Initial Accounting Dimensions are Construction Work Item, Cost Code, and Unit.
+- Building, Floor, WBS Element, and Contractor are not Accounting Dimensions initially.
+- Building and Floor can be derived from Unit.
+- WBS Element can be derived from Construction Work Item.
+- Contractor is already represented as Supplier/Party in ERPNext transactions.
+- Accounting Dimensions complement existing operational links and do not replace them.
+- No broad GL backfill is performed; dimensions apply prospectively and to draft-only sync.

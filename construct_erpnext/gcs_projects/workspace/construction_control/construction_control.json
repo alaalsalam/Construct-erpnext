@@ -28,7 +28,10 @@
   {"hidden": 0, "is_query_report": 0, "label": "Project Cost Entry", "link_count": 0, "link_to": "Project Cost Entry", "link_type": "DocType", "onboard": 1, "type": "Link"},
   {"hidden": 0, "is_query_report": 0, "label": "Site Resources", "link_count": 0, "onboard": 0, "type": "Card Break"},
   {"hidden": 0, "is_query_report": 0, "label": "Labor Hour Entry", "link_count": 0, "link_to": "Labor Hour Entry", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Equipment Usage Log", "link_count": 0, "link_to": "Equipment Usage Log", "link_type": "DocType", "onboard": 0, "type": "Link"}
+  {"hidden": 0, "is_query_report": 0, "label": "Equipment Usage Log", "link_count": 0, "link_to": "Equipment Usage Log", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Work Item Financial Traceability", "link_count": 0, "onboard": 0, "type": "Card Break"},
+  {"hidden": 0, "is_query_report": 1, "label": "Work Item Financial Ledger", "link_count": 0, "link_to": "Work Item Financial Ledger", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Cost Code Financial Analysis", "link_count": 0, "link_to": "Cost Code Financial Analysis", "link_type": "Report", "onboard": 0, "type": "Link"}
  ],
  "modified": "2026-05-09 17:00:06.000000",
  "modified_by": "Administrator",

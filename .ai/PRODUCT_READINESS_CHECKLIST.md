@@ -147,3 +147,24 @@ Safe for a professional client presentation after a final browser click-through 
 ## 15. UX Completion Decision
 
 Safe to proceed to a final review of completed phases before Sales Contract and Installment Plan foundation.
+
+## 16. Final Readiness Gate
+
+- Passed: bench migrate completed successfully.
+- Passed: clear-cache and clear-website-cache completed successfully.
+- Passed: Product workspaces load.
+- Passed: Main completed business flows have validation records.
+- Passed: Key presentation reports load.
+- Passed: Key forms have sections and descriptions.
+- Passed: List views load.
+- Passed: Arabic translation CSV parses and required labels are present.
+- Passed: Sales & Rental remains placeholder/reservation-focused.
+- Passed: No Sales Contract, Lease Contract, Installment Plan, Rent Schedule, or CRM Matching DocType exists.
+- Passed: No accounting documents created during the gate.
+- Passed: No submitted records amended.
+- Passed: No GL backfill performed.
+- Passed: No visible GCS workspace or El Salvador workspace terminology.
+
+## 17. Final Gate Decision
+
+Safe to start Sales Contract and Installment Plan foundation.

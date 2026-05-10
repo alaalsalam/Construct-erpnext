@@ -566,6 +566,54 @@
    "type": "Link",
    "link_to": "Project Unit Cost Matrix",
    "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reservation",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Reservation Register",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Reservation Register",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Active Unit Reservations",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Active Unit Reservations",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Expiring Unit Reservations",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Expiring Unit Reservations",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Reservation Impact",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Reservation Impact",
+   "link_type": "Report"
   }
  ],
  "modified": "2026-05-09 17:55:00.000000",

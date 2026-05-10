@@ -506,3 +506,40 @@
   - Legacy GCS workspaces remain hidden and non-public.
   - No Reservation, Sales Contract, Lease Contract, CRM Matching, Portal feature, accounting document, submitted-document amendment, or GL backfill was created.
 - Dashboard/card decision: no Number Cards or Dashboard Charts were created in this phase because executive metrics should be signed off with finance leadership before promotion; existing executive reports are linked and presentation-ready.
+
+## 2026-05-10 Unit Reservation Foundation
+
+- Created branch feature/unit-reservation-foundation from feature/product-readiness-bilingual-ux.
+- Added Unit Reservation Settings Single DocType.
+- Added Unit Reservation submittable transaction DocType with controller logic for:
+  - reservation number generation,
+  - unit metadata fetch,
+  - party/date/amount validation,
+  - duplicate active reservation prevention,
+  - Unit status and marketing_status update to Reserved,
+  - safe cancellation and expiry release.
+- Added reservation utilities:
+  - get_active_reservation_for_unit,
+  - has_active_reservation,
+  - release_unit_if_no_active_reservation,
+  - expire_overdue_reservations,
+  - recalculate_reservation_counts.
+- Added daily scheduler hook for overdue reservation expiry when enabled in settings.
+- Added Unit Reservation Workflow. Draft cancellation was intentionally not added as a workflow transition because Frappe v15 cannot cancel before submit; draft reservations can be edited or discarded normally.
+- Added reports:
+  - Unit Reservation Register,
+  - Active Unit Reservations,
+  - Expiring Unit Reservations,
+  - Unit Reservation Impact.
+- Updated Sales & Rental, Real Estate Inventory, Executive Control Center, and Reports & Analytics workspace links.
+- Added Arabic translations for reservation DocTypes, fields, workflow states/actions, reports, and workspace labels.
+- Arabic validation completed on construction.yemenfrappe.com:
+  - Created/reused Customer: عميل مهتم بشراء وحدة سكنية.
+  - Created active reservation RES-2026-00001 for Unit A-101.
+  - A-101 status and marketing_status changed to Reserved.
+  - Duplicate reservation for A-101 was blocked.
+  - Cancellation validation RES-2026-00003 released P-01 back to Available.
+  - Expiry validation RES-2026-00004 released A-G01 back to Available.
+  - Project counts became total 5, available 2, reserved 2, sold 0, rented 1, blocked 0.
+- Reports loaded successfully, including reservation reports plus selected existing Unit Costing, EVM, Cash Flow, and IPC reports.
+- No Sales Contract, Lease Contract, tenant field on Unit, invoice, payment, accounting document, GL backfill, utility-billing install, or El Salvador localization was introduced.

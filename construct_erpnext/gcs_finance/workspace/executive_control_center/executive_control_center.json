@@ -300,6 +300,34 @@
    "type": "Link",
    "link_to": "Invoice Authorization",
    "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reservation Visibility",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Reservation Impact",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Reservation Impact",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Active Unit Reservations",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Active Unit Reservations",
+   "link_type": "Report"
   }
  ],
  "modified": "2026-05-09 00:00:00.000000",

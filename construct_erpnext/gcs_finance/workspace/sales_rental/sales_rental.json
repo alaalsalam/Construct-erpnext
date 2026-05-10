@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales & Rental</b></span>\",\"col\":12}},{\"id\":\"note\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"text-muted\\\">Sales, rental, reservation, collections, and CRM matching will be implemented in the next phases.</span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Future Sales & Rental Foundation\",\"col\":4}}]",
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales & Rental</b></span>\",\"col\":12}},{\"id\":\"note\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"text-muted\\\">Unit reservation is available now. Sales contracts, lease contracts, installments, collections, and CRM matching will be implemented in the next phases.</span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Reservation Control\",\"col\":4}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Reservation Reports\",\"col\":4}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,7 +12,84 @@
  "idx": 0,
  "is_hidden": 0,
  "label": "Sales & Rental",
- "links": [],
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reservation Control",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unit Reservation",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Reservation",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unit Reservation Settings",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Reservation Settings",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reservation Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Reservation Register",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Reservation Register",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Active Unit Reservations",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Active Unit Reservations",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Expiring Unit Reservations",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Expiring Unit Reservations",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Reservation Impact",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Reservation Impact",
+   "link_type": "Report"
+  }
+ ],
  "modified": "2026-05-09 00:00:00.000000",
  "modified_by": "Administrator",
  "module": "GCS Finance",

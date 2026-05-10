@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-05-10 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "default_reservation_validity_days",
+  "auto_release_expired_reservations",
+  "allow_reservation_for_reserved_units",
+  "require_customer_or_lead",
+  "require_reservation_amount",
+  "warning_days_before_expiry",
+  "reservation_number_prefix"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_reservation_validity_days",
+   "fieldtype": "Int",
+   "label": "Default Reservation Validity Days",
+   "default": "7",
+   "description": "Default number of days a new reservation remains valid when no end date is provided."
+  },
+  {
+   "fieldname": "auto_release_expired_reservations",
+   "fieldtype": "Check",
+   "label": "Auto Release Expired Reservations",
+   "default": "1",
+   "description": "Allow the daily expiry utility to expire overdue reservations and release units when safe."
+  },
+  {
+   "fieldname": "allow_reservation_for_reserved_units",
+   "fieldtype": "Check",
+   "label": "Allow Reservation For Reserved Units",
+   "default": "0",
+   "description": "When disabled, a unit with an active reservation cannot be reserved again."
+  },
+  {
+   "fieldname": "require_customer_or_lead",
+   "fieldtype": "Check",
+   "label": "Require Customer Or Lead",
+   "default": "1",
+   "description": "Require Customer, Lead, or Party Name before reserving a unit."
+  },
+  {
+   "fieldname": "require_reservation_amount",
+   "fieldtype": "Check",
+   "label": "Require Reservation Amount",
+   "default": "0",
+   "description": "Require a positive reservation amount. No accounting entry is created."
+  },
+  {
+   "fieldname": "warning_days_before_expiry",
+   "fieldtype": "Int",
+   "label": "Warning Days Before Expiry",
+   "default": "2",
+   "description": "Number of days used by expiring reservation reports and alerts."
+  },
+  {
+   "fieldname": "reservation_number_prefix",
+   "fieldtype": "Data",
+   "label": "Reservation Number Prefix",
+   "default": "RES",
+   "description": "Prefix used when generating reservation numbers."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-05-10 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate Inventory",
+ "name": "Unit Reservation Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Projects Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "description": "Controls real estate unit reservation behavior, validity, duplicate reservation rules, and release handling."
+}

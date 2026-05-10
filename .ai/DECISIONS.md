@@ -151,3 +151,11 @@
 - Arabic user experience is provided through translation files rather than replacing technical labels with Arabic.
 - Product-facing workspaces are process-oriented and synchronized through an app-level after_migrate helper.
 - Executive Number Cards and Dashboard Charts are deferred until finance leadership signs off on final KPI definitions; existing reports are used for presentation readiness.
+
+## ADR-020: Unit Reservation As Temporary Commercial Hold
+
+- Unit Reservation is a temporary commercial hold layer before Sales Contract or Lease Contract.
+- Active reservations set the Unit to Reserved and prevent duplicate active reservations unless an administrator changes settings deliberately.
+- Reservation may represent sale or rent intent, but it does not create accounting documents, invoices, payments, installments, commissions, or contracts.
+- Tenant remains intentionally excluded from Unit; future tenant/customer occupancy will be modeled through Lease Contract or Sales/Rental documents.
+- Cancelled or expired reservations release the Unit only when no other active reservation exists and the Unit is not Sold, Rented, Blocked, or Under Maintenance.

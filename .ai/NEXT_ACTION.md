@@ -1,3 +1,3 @@
 # Next Action
 
-Design and implement Unit Reservation foundation.
+Review Unit Reservation readiness before Sales Contract foundation.

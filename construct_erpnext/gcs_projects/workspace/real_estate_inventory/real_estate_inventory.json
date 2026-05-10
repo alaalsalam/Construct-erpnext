@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Real Estate Inventory</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Inventory Structure\",\"col\":3}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Ownership\",\"col\":3}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Costing\",\"col\":3}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Reports\",\"col\":3}}]",
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Real Estate Inventory</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Inventory Structure\",\"col\":3}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Ownership\",\"col\":3}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Reservation\",\"col\":3}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Costing\",\"col\":3}},{\"id\":\"card_5\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Reports\",\"col\":3}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -98,6 +98,44 @@
    "type": "Link",
    "link_to": "Property Ownership",
    "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reservation",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unit Reservation",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Reservation",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Active Unit Reservations",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Active Unit Reservations",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Reservation Impact",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Reservation Impact",
+   "link_type": "Report"
   },
   {
    "hidden": 0,

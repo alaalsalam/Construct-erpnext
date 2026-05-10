@@ -240,4 +240,19 @@ Product readiness and bilingual UX status:
 - Sales & Rental remains a placeholder; no Reservation, Sales Contract, Lease Contract, CRM Matching, Portal feature, accounting document, submitted-document amendment, or GL backfill was created.
 - Dashboard cards/charts are deferred until KPI sign-off; use Executive Control Center reports for presentation.
 
-Next operational task: Design and implement Unit Reservation foundation.
+Unit Reservation foundation status:
+- Branch: feature/unit-reservation-foundation.
+- New DocTypes: Unit Reservation Settings, Unit Reservation.
+- New reservation utility module: construct_erpnext.real_estate_inventory.reservation_utils.
+- New setup hook: construct_erpnext.real_estate_inventory.setup.after_migrate.
+- Daily expiry scheduler: construct_erpnext.real_estate_inventory.reservation_utils.expire_overdue_reservations.
+- New reports: Unit Reservation Register, Active Unit Reservations, Expiring Unit Reservations, Unit Reservation Impact.
+- Validation records retained:
+  - Customer: عميل مهتم بشراء وحدة سكنية.
+  - Active reservation RES-2026-00001 for A-101.
+  - Cancelled validation reservation RES-2026-00003 for P-01.
+  - Expired validation reservation RES-2026-00004 for A-G01.
+- Current inventory counts after validation: total 5, available 2, reserved 2, sold 0, rented 1, blocked 0.
+- No Sales Contract, Lease Contract, tenant field, invoice, payment, accounting document, or portal feature was created.
+
+Next operational task: Review Unit Reservation readiness before Sales Contract foundation.

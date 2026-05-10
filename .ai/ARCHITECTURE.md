@@ -327,6 +327,17 @@ Product workspace readiness:
 - Real Estate Inventory groups Inventory Structure, Ownership, Unit Costing, and Unit Reports.
 - Reports & Analytics groups reports by Construction, Procurement, Measurement & IPC, Contractor, CFO, Real Estate Inventory, Unit Profitability, and Financial Dimensions.
 - Sales & Rental remains a clear placeholder until the next phases.
+- Sales & Rental now includes Unit Reservation as the first commercial operation while Sales Contract, Lease Contract, installments, collections, CRM matching, and portal features remain deferred.
+
+## Unit Reservation Foundation
+
+- Unit Reservation is the temporary commercial hold before future Sales Contract or Lease Contract.
+- Unit Reservation links to Real Estate Project, Project, Unit, Building, Floor, Unit Type, Customer, and Lead.
+- Active reservations set Unit status and marketing_status to Reserved.
+- Duplicate active reservation for the same Unit is blocked by default through Unit Reservation Settings.
+- Cancelled and expired reservations release the Unit only if no other active reservation exists and the Unit is not Sold, Rented, Blocked, or Under Maintenance.
+- Reservation is non-accounting and does not create invoices, payments, installments, commissions, or contracts.
+- Tenant remains excluded from Unit and will be handled later through Lease Contract.
 
 ## Role-Oriented Navigation
 

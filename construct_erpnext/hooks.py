@@ -17,6 +17,7 @@ after_migrate = [
     "construct_erpnext.measurement_ipc.setup.ensure_interim_payment_certificate_workflow",
     "construct_erpnext.cfo_analytics.setup.after_migrate",
     "construct_erpnext.unit_costing.setup.after_migrate",
+    "construct_erpnext.real_estate_inventory.setup.after_migrate",
     "construct_erpnext.setup.product_readiness.sync_product_workspace_readiness",
 ]
 
@@ -129,6 +130,7 @@ scheduler_events = {
     "daily": [
         "construct_erpnext.gcs_admin.reminders.send_payment_reminders",
         "construct_erpnext.gcs_maintenance.routines.check_preventive_schedules",
+        "construct_erpnext.real_estate_inventory.reservation_utils.expire_overdue_reservations",
     ],
     "hourly": [
         "construct_erpnext.gcs_security.audit.process_audit_queue",

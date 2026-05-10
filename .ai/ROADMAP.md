@@ -112,4 +112,13 @@ Phase 8 deliverables:
 - Tenant, Lease Contract, Sales Contract, Reservation, and Smart Matching remain deferred.
 - Run end-to-end traceability validation before Reservation and Sales/Rental foundation. Completed.
 - Complete Product Readiness, Bilingual UX, Client Presentation QA, workspace polish, report i18n review, and readiness documentation before Unit Reservation. Completed.
-- Next Phase 9 entry: design and implement Unit Reservation foundation.
+- Phase 9 entry: Unit Reservation foundation. Completed.
+- Unit Reservation Settings created for reservation validity, duplicate rules, party requirement, and expiry warnings.
+- Unit Reservation created as a submittable transaction before future Sales Contract or Lease Contract.
+- Active reservations set Unit status and marketing_status to Reserved.
+- Duplicate active reservations are blocked by default.
+- Cancelled and expired reservations release the Unit to Available only when safe.
+- Reservation reports and workspace links added to Sales & Rental, Real Estate Inventory, Executive Control Center, and Reports & Analytics.
+- Daily expiry utility is enabled through scheduler and can also be called explicitly.
+- No Sales Contract, Lease Contract, installments, collections, invoices, payments, CRM matching, portal features, or accounting documents were created.
+- Next Phase 9 review: review Unit Reservation readiness before Sales Contract foundation.

@@ -7,7 +7,8 @@
 - Passed: No ERPNext core files modified.
 - Passed: construct_erpnext package name remains unchanged.
 - Passed: No utility-billing installation.
-- Passed: No Reservation, Sales Contract, Lease Contract, CRM Matching, or Portal features created.
+- Passed: Unit Reservation foundation is implemented as the first commercial operation.
+- Passed: No Sales Contract, Lease Contract, CRM Matching, or Portal features created.
 - Passed: No accounting documents created.
 - Passed: No GL backfill run.
 - Passed: No submitted documents amended.
@@ -79,7 +80,25 @@
 - IPC Purchase Invoice submission and payment validation depend on normal Invoice Authorization.
 - CFO/EVM risk thresholds are deterministic readiness rules and should be reviewed with finance leadership before final KPI sign-off.
 - Full Arabic browser review should be done in the client user context before presentation.
+- Unit Reservation does not create accounting documents; reservation amount remains commercial tracking only.
+- Draft reservations are not cancelled through Workflow because Frappe v15 cannot cancel before submit.
+- Active validation reservation RES-2026-00001 keeps A-101 reserved for walkthrough.
 
-## 10. Decision
+## 10. Unit Reservation Readiness
 
-Safe to proceed to Unit Reservation foundation after this readiness pass.
+- Passed: Unit Reservation Settings ready.
+- Passed: Unit Reservation DocType ready.
+- Passed: Unit Reservation Workflow ready for Draft -> Reserved and submitted cancellation/expiry/conversion states.
+- Passed: Reservation controller updates Unit status and marketing_status.
+- Passed: Duplicate active reservation is blocked by default.
+- Passed: Cancellation and expiry release the Unit safely.
+- Passed: Reservation reports ready.
+- Passed: Workspace links ready.
+- Passed: Arabic translations added.
+- Passed: No accounting side effects.
+- Deferred: Sales Contract conversion target remains a future phase.
+- Deferred: Lease Contract conversion target remains a future phase.
+
+## 11. Decision
+
+Safe to review Unit Reservation with stakeholders before Sales Contract foundation.

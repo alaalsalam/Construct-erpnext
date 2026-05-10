@@ -1,0 +1,371 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:reservation_number",
+ "creation": "2026-05-10 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "core_section",
+  "company",
+  "real_estate_project",
+  "project",
+  "unit",
+  "unit_refs_column",
+  "building",
+  "floor",
+  "unit_type",
+  "reservation_section",
+  "reservation_number",
+  "reservation_type",
+  "reservation_date",
+  "reservation_dates_column",
+  "valid_from",
+  "valid_until",
+  "status",
+  "workflow_state",
+  "party_section",
+  "lead",
+  "customer",
+  "party_name",
+  "party_column",
+  "mobile_no",
+  "email",
+  "commercial_section",
+  "expected_sale_price",
+  "expected_monthly_rent",
+  "reservation_amount",
+  "reservation_terms",
+  "conversion_section",
+  "converted_to_doctype",
+  "converted_to_document",
+  "converted_on",
+  "converted_by",
+  "control_section",
+  "previous_unit_status",
+  "previous_marketing_status",
+  "cancelled_reason",
+  "expiry_reason",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "core_section",
+   "fieldtype": "Section Break",
+   "label": "Core"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "real_estate_project",
+   "fieldtype": "Link",
+   "label": "Real Estate Project",
+   "options": "Real Estate Project",
+   "reqd": 1,
+   "in_standard_filter": 1,
+   "description": "Real estate project that contains the reserved unit."
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "label": "Unit",
+   "options": "Unit",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Real estate unit being reserved."
+  },
+  {
+   "fieldname": "unit_refs_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "building",
+   "fieldtype": "Link",
+   "label": "Building",
+   "options": "Building",
+   "read_only": 1
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Link",
+   "label": "Floor",
+   "options": "Floor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unit_type",
+   "fieldtype": "Link",
+   "label": "Unit Type",
+   "options": "Unit Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reservation_section",
+   "fieldtype": "Section Break",
+   "label": "Reservation Details"
+  },
+  {
+   "fieldname": "reservation_number",
+   "fieldtype": "Data",
+   "label": "Reservation Number",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "description": "Unique reservation reference generated from reservation settings."
+  },
+  {
+   "fieldname": "reservation_type",
+   "fieldtype": "Select",
+   "label": "Reservation Type",
+   "options": "Sale\nRent",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Commercial intent of the temporary reservation."
+  },
+  {
+   "fieldname": "reservation_date",
+   "fieldtype": "Date",
+   "label": "Reservation Date",
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "reservation_dates_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From",
+   "default": "Today"
+  },
+  {
+   "fieldname": "valid_until",
+   "fieldtype": "Date",
+   "label": "Valid Until",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Date until which the reservation remains valid."
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nReserved\nConverted\nExpired\nCancelled",
+   "default": "Draft",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Operational reservation status."
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Select",
+   "label": "Workflow State",
+   "options": "Draft\nReserved\nConverted\nExpired\nCancelled",
+   "default": "Draft",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "party_section",
+   "fieldtype": "Section Break",
+   "label": "Party"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead",
+   "description": "Potential customer from ERPNext CRM."
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "description": "Existing customer interested in the reservation."
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Data",
+   "label": "Party Name",
+   "in_list_view": 1,
+   "description": "Visible party name when Customer or Lead is not yet available."
+  },
+  {
+   "fieldname": "party_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "commercial_section",
+   "fieldtype": "Section Break",
+   "label": "Commercial Info"
+  },
+  {
+   "fieldname": "expected_sale_price",
+   "fieldtype": "Currency",
+   "label": "Expected Sale Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_monthly_rent",
+   "fieldtype": "Currency",
+   "label": "Expected Monthly Rent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reservation_amount",
+   "fieldtype": "Currency",
+   "label": "Reservation Amount",
+   "description": "Non-accounting reservation amount for commercial tracking only."
+  },
+  {
+   "fieldname": "reservation_terms",
+   "fieldtype": "Text",
+   "label": "Reservation Terms"
+  },
+  {
+   "fieldname": "conversion_section",
+   "fieldtype": "Section Break",
+   "label": "Future Conversion"
+  },
+  {
+   "fieldname": "converted_to_doctype",
+   "fieldtype": "Link",
+   "label": "Converted To DocType",
+   "options": "DocType",
+   "description": "Future target document type when reservation is converted."
+  },
+  {
+   "fieldname": "converted_to_document",
+   "fieldtype": "Dynamic Link",
+   "label": "Converted To Document",
+   "options": "converted_to_doctype"
+  },
+  {
+   "fieldname": "converted_on",
+   "fieldtype": "Datetime",
+   "label": "Converted On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "converted_by",
+   "fieldtype": "Link",
+   "label": "Converted By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "control_section",
+   "fieldtype": "Section Break",
+   "label": "Control"
+  },
+  {
+   "fieldname": "previous_unit_status",
+   "fieldtype": "Data",
+   "label": "Previous Unit Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "previous_marketing_status",
+   "fieldtype": "Data",
+   "label": "Previous Marketing Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cancelled_reason",
+   "fieldtype": "Small Text",
+   "label": "Cancelled Reason"
+  },
+  {
+   "fieldname": "expiry_reason",
+   "fieldtype": "Small Text",
+   "label": "Expiry Reason"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-10 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate Inventory",
+ "name": "Unit Reservation",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Projects Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "description": "Temporary reservation transaction for a real estate unit before Sales Contract or Lease Contract. Does not create accounting documents."
+}

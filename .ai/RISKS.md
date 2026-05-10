@@ -76,3 +76,7 @@ Updated risks:
 - Full Arabic browser-level UX should be reviewed in an Arabic-language user session before a client presentation; current readiness provides translation entries and Arabic presentation guidance.
 - Executive Number Cards and Dashboard Charts are intentionally deferred until CFO KPI definitions and thresholds are approved; existing reports are the reliable presentation layer for now.
 - Product readiness workspace sync updates product-facing Workspace records during migration; future workspace edits should keep JSON and the sync helper aligned.
+- Unit Reservation workflow intentionally omits Draft to Cancelled because Frappe v15 cannot cancel before submit; draft reservations should be edited or deleted under normal permissions.
+- Unit Reservation expiry is handled by a daily scheduler and depends on scheduler health; manual expiry utility remains available if scheduler is paused.
+- Reservation is non-accounting; any reservation amount is informational only until an approved Sales/Rental accounting design is implemented.
+- Active reservation validation changed A-101 to Reserved and left one retained active reservation for client walkthrough; future validation must account for this status.

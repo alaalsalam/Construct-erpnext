@@ -1,3 +1,3 @@
 # Next Action
 
-Start Rent Invoice and Collections foundation.
+Present Phase 1 to client and collect feedback before Phase 2 planning.

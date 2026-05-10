@@ -14,6 +14,35 @@ Internal modules planned inside construct_erpnext:
 - forecasting
 - crm_real_estate
 
+## Phase 1 Closure Scope
+
+Phase 1 is now treated as a client presentation foundation, not as a full production sales/rental accounting rollout.
+
+Presentation scope:
+
+- Construction project control from BOQ to Work Item.
+- Procurement and site warehouse traceability.
+- Measurement Book to IPC.
+- Contractor Ledger and Retention.
+- CFO analytics: Project Financial Snapshot, Cash Flow Forecast, and EVM Metrics.
+- Real Estate Inventory and ownership.
+- Unit Cost Allocation and profitability.
+- Accounting Dimensions and traceability reports.
+- Unit Reservation.
+- Sales Contract and Installment Schedule foundation.
+- Draft Sales Invoice generated from an installment without accounting posting.
+
+Phase 2 scope remains deferred:
+
+- Full collections.
+- Rent/Lease full cycle.
+- Commission.
+- CRM.
+- Smart Matching and Backlog Matching.
+- Portals.
+- WhatsApp / Meta integration.
+- Full production accounting automation.
+
 ## Product Workspace Structure
 
 Final user-facing workspace structure for the generic product base:

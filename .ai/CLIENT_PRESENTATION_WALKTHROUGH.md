@@ -522,3 +522,36 @@
 - ربط التحصيل عبر Payment Entry.
 - تحديث حالة صفوف الإيجار حسب الفواتير والتحصيل.
 - تقارير تحصيل الإيجارات والمتأخرات وربط الإيراد بالوحدة.
+
+## Phase 1 Client Presentation Closure
+
+### المسار المختصر النهائي للعرض
+
+1. Executive Presentation Center.
+2. Construction BOQ.
+3. Construction Work Item.
+4. Procurement reports.
+5. Measurement Book.
+6. Interim Payment Certificate.
+7. Contractor Account and Retention reports.
+8. Project Financial Snapshot.
+9. Project Cash Flow Forecast.
+10. Project EVM Metrics.
+11. Real Estate Project and Unit.
+12. Unit Cost Allocation and Unit Profitability Report.
+13. GL Dimension Traceability and Project Unit Cost Matrix.
+14. Unit Reservation.
+15. Sales Contract and Installment Schedule.
+16. Draft Sales Invoice from installment.
+17. Phase 2 roadmap.
+
+### ما يجب تأكيده أثناء العرض
+
+- Phase 1 تثبت التحكم في تكلفة البناء وربطها بالمخزون العقاري والربحية وبداية البيع.
+- فاتورة البيع المعروضة مسودة فقط ولا توجد قيود GL أو سندات قبض.
+- روابط Lease/Rent الموجودة في بعض المساحات موسومة كـ Phase 2 / Upcoming ولا يتم تقديمها كدورة مكتملة.
+- التحصيل الكامل، التأجير الكامل، CRM، Matching، Portal، WhatsApp، والعمولات مؤجلة إلى Phase 2.
+
+### الجملة الختامية المقترحة
+
+هذه المرحلة تقدم أساساً تنفيذياً وتشغيلياً واضحاً من جدول الكميات حتى فاتورة بيع مسودة مرتبطة بوحدة وقسط، والهدف من اجتماع العميل هو جمع الملاحظات قبل تخطيط Phase 2.

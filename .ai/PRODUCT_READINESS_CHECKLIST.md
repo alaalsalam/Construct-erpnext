@@ -324,3 +324,23 @@ Safe to review Lease Contract readiness before Rent Invoice and Collections foun
 ## 32. Lease Readiness Decision
 
 Safe to start Rent Invoice and Collections foundation.
+
+## 33. Phase 1 Client Presentation Closure
+
+- Passed: Phase 1 scope validated from Construction BOQ to draft Sales Invoice.
+- Passed: Key forms open for construction, procurement, measurement, IPC, contractor, CFO, inventory, unit costing, reservation, sales contract, and draft sales invoice.
+- Passed: 32 key reports loaded across Phase 1 scope.
+- Passed: Product workspaces load.
+- Passed: Executive Presentation Center loads.
+- Passed: KPI cards for Phase 1 presentation are available.
+- Passed: Lease/Rent links are marked as Phase 2 / Upcoming where they remain visible.
+- Passed: Lease-specific KPI cards are not visible in primary workspace card lists.
+- Passed: ar.csv parses and Phase 2 labels are translated.
+- Passed: Draft Sales Invoice ACC-SINV-2026-00001 remains Draft.
+- Passed: No Payment Entry, Journal Entry, GL Entry from draft invoice, Rent Invoice DocType, Commission, CRM Matching, Portal, or GL backfill was created.
+- Deferred: Full collections, Rent/Lease full cycle, Commission, CRM, Smart Matching, Backlog Matching, Portals, WhatsApp/Meta, and production accounting automation.
+- Needs Attention: Monitor MariaDB memory because of previous OOM.
+
+## 34. Phase 1 Closure Decision
+
+Ready to present Phase 1 to the client and collect feedback before Phase 2 planning.

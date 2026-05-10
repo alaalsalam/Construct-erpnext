@@ -909,3 +909,25 @@
 - Confirmed ar.csv parses and lease translations are present; CSV comments/blank rows are part of the existing translation file style.
 - Added .ai/LEASE_CONTRACT_READINESS_REVIEW.md with the readiness decision.
 - NEXT_ACTION set to Start Rent Invoice and Collections foundation.
+
+## 2026-05-10 CMD-26 Phase 1 Closure and Client Presentation Readiness
+
+- Created branch feature/phase-1-client-presentation-closure from feature/lease-contract-readiness-review because it contains UX hardening, Unit Reservation, Sales Contract, draft Sales Invoice foundation, and readiness reviews.
+- Strategic decision applied: stop feature development for now and prepare Phase 1 for client presentation.
+- Performed memory check before validation: 11GiB RAM with about 3.9GiB available and 4GiB swap with about 1.7GiB used; not critically low.
+- Performed minor reversible workspace presentation cleanup:
+  - Marked Lease/Rent sections as Phase 2 / Upcoming in Sales & Rental, Executive Presentation Center, Executive Control Center, Real Estate Inventory, and Reports & Analytics.
+  - Removed lease-specific KPI cards from the primary presentation workspace card lists so they do not appear as completed Phase 1 KPIs.
+  - Added Arabic translations for the Phase 2 / Upcoming section labels.
+- Ran bench migrate, clear-cache, and clear-website-cache successfully on construction.yemenfrappe.com.
+- Validated Phase 1 forms open for BOQ, Work Item, Measurement Book, Measurement Entry, IPC, Contractor Account, Retention Register, CFO snapshots, Real Estate Project, Building, Floor, Unit, Owner, Ownership, Unit Cost Allocation, Unit Reservation, Sales Contract, and draft Sales Invoice.
+- Validated 32 key Phase 1 reports across BOQ, procurement, measurement, IPC, contractor, CFO, inventory, profitability, accounting dimensions, reservation, sales contract, and draft invoice/collection readiness.
+- Validated 9 product workspaces load, Executive Presentation Center loads, and Phase 2 labels are present where lease/rent links remain.
+- Confirmed KPI Number Cards for Phase 1 presentation exist and lease-specific KPI cards are not visible in primary workspace card lists.
+- Confirmed Sales Invoice ACC-SINV-2026-00001 remains Draft with total 300,000.
+- Confirmed no Payment Entry, Journal Entry, GL Entry for the draft Sales Invoice, GL Entry for Lease Contract, Rent Invoice DocType, Commission DocType, CRM Matching DocType, or Portal DocType was created.
+- Confirmed ar.csv parses and no visible GCS/El Salvador labels appear in primary product workspaces.
+- Created .ai/PHASE_1_CLIENT_PRESENTATION_SUMMARY.md.
+- Created .ai/PHASE_1_QA_CHECKLIST.md.
+- Updated client walkthrough and readiness checklist for Phase 1 closure.
+- NEXT_ACTION set to Present Phase 1 to client and collect feedback before Phase 2 planning.

@@ -246,7 +246,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Lease & Rent Schedule",
+   "label": "Phase 2 - Lease & Rent (Upcoming)",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -369,20 +369,8 @@
    "number_card_name": "Overdue Installments Amount"
   },
   {
-   "label": "Active Lease Contracts",
-   "number_card_name": "Active Lease Contracts"
-  },
-  {
-   "label": "Scheduled Rental Value",
-   "number_card_name": "Scheduled Rental Value"
-  },
-  {
    "label": "Rented Units",
    "number_card_name": "Rented Units"
-  },
-  {
-   "label": "Expiring Leases",
-   "number_card_name": "Expiring Leases"
   }
  ]
 }

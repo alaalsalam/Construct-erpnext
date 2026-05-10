@@ -242,3 +242,11 @@
 - A Rent Unit Reservation may convert into a Lease Contract; the reservation becomes Converted after lease approval.
 - Rent Invoice and Payment Entry generation are deferred to the next rental finance phase.
 - No Sales Invoice, Payment Entry, Journal Entry, GL Entry, commission, CRM matching, portal, or GL backfill is created by Lease Contract.
+
+## ADR-031: Phase 1 Closure Before Phase 2
+
+- Feature development pauses after Phase 1 readiness closure.
+- Phase 1 is presented as an operational and executive foundation from construction control to draft sales invoice generation.
+- Lease/Rent foundation records may exist, but full Lease/Rent cycle is treated as Phase 2 and is marked as Upcoming in primary presentation workspaces.
+- Draft Sales Invoice from installment demonstrates traceability only; it is not submitted and does not create GL or Payment Entry.
+- Phase 2 will be planned after client feedback and will cover collections, rent invoicing, commission, CRM, matching, portals, WhatsApp/Meta, and production accounting automation.

@@ -415,3 +415,16 @@ Lease Contract and Rent Schedule foundation status:
   - Lease reports, key existing reports, and target workspaces load.
   - ar.csv parses successfully with lease translations present.
 - Current next action: Start Rent Invoice and Collections foundation.
+
+Phase 1 client presentation closure status:
+- Branch: feature/phase-1-client-presentation-closure.
+- Feature development is paused for client presentation.
+- Phase 1 presentation scope is construction control, BOQ, procurement/site warehouse traceability, Measurement Book, IPC, Contractor Ledger/Retention, CFO analytics, Real Estate Inventory, Unit Cost Allocation/Profitability, Accounting Dimensions, Unit Reservation, Sales Contract/Installment foundation, and draft Sales Invoice from installment.
+- Full collections, Rent/Lease full cycle, Commission, CRM, Smart Matching, Backlog Matching, Portal, WhatsApp/Meta, and production accounting automation are Phase 2.
+- Lease/Rent links remain available but are marked as Phase 2 / Upcoming in primary workspaces.
+- Lease-specific KPI cards were removed from primary workspace card lists for Phase 1 presentation clarity.
+- Phase 1 validation passed after migrate/cache clear: key forms, reports, workspaces, KPI cards, ar.csv, and deferred-scope checks passed.
+- New files:
+  - .ai/PHASE_1_CLIENT_PRESENTATION_SUMMARY.md
+  - .ai/PHASE_1_QA_CHECKLIST.md
+- Current next action: Present Phase 1 to client and collect feedback before Phase 2 planning.

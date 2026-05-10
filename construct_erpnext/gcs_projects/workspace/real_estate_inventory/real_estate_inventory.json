@@ -297,7 +297,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Lease & Rental",
+   "label": "Phase 2 - Lease & Rental (Upcoming)",
    "link_count": 0,
    "link_type": "DocType",
    "onboard": 0,
@@ -358,18 +358,6 @@
   {
    "label": "Sold Units",
    "number_card_name": "Sold Units"
-  },
-  {
-   "label": "Active Lease Contracts",
-   "number_card_name": "Active Lease Contracts"
-  },
-  {
-   "label": "Scheduled Rental Value",
-   "number_card_name": "Scheduled Rental Value"
-  },
-  {
-   "label": "Expiring Leases",
-   "number_card_name": "Expiring Leases"
   }
  ],
  "owner": "Administrator",

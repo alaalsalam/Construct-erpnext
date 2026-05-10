@@ -171,3 +171,13 @@ Phase 9 Sales Contract and Installment Plan deliverables:
 - Arabic validation created retained Lease Contract LC-2026-00001 from rent reservation RES-2026-00005 for Unit A-G01. Completed.
 - No Rent Invoice, Payment Entry, Journal Entry, Commission, CRM Matching, Portal, or GL backfill was created.
 - Next Phase 9 extension: Review Lease Contract readiness before Rent Invoice and Collections foundation.
+
+Phase 1 client presentation closure:
+
+- Stop feature development temporarily. Completed.
+- Validate the full Phase 1 presentation chain from BOQ to draft Sales Invoice. Completed.
+- Mark Lease/Rent foundation links as Phase 2 / Upcoming in primary workspaces. Completed.
+- Create Phase 1 Arabic client presentation summary. Completed.
+- Create Phase 1 Arabic QA checklist. Completed.
+- Update walkthrough and readiness memory for client presentation. Completed.
+- Next action: Present Phase 1 to client and collect feedback before Phase 2 planning.

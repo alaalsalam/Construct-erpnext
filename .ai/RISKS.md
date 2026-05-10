@@ -108,3 +108,4 @@ Updated risks:
 - Lease Contract workflow uses docstatus-aware transitions; Draft/Under Review cancellation is not forced because Frappe v15 cancellation requires submitted documents.
 - Rent Schedule is operational only; rent invoice, payment, receivable aging, and GL validation are deferred until Rent Invoice and Collections foundation.
 - Current retained lease validation uses existing Customer `عميل مهتم بشراء وحدة سكنية` with tenant name `مستأجر محتمل لوحدة عقارية` because this site lacks normal Customer Group and Territory masters for creating a new Customer through standard validation.
+- Lease Contract readiness review passed, but rental receivables, rent invoice submission, Payment Entry collection, and rental GL Unit dimension validation remain pending until Rent Invoice and Collections foundation.

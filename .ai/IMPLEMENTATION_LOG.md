@@ -890,3 +890,22 @@
   - Workspace records and lease KPI Number Cards exist.
   - No Rent Invoice, Sales Invoice, Payment Entry, Journal Entry, Commission, CRM Matching, Portal, or GL backfill was created by this phase.
 - NEXT_ACTION set to Review Lease Contract readiness before Rent Invoice and Collections foundation.
+
+## 2026-05-10 CMD-26 Lease Contract Readiness Review
+
+- Created branch feature/lease-contract-readiness-review from feature/lease-contract-rent-schedule-foundation.
+- Performed memory check before live validation: 11GiB RAM, 4.0GiB available, 4GiB swap with 1.7GiB used; not critically low.
+- Review-only validation completed without creating Rent Invoice, Sales Invoice, Payment Entry, Journal Entry, Commission, CRM Matching, Portal, GL backfill, or submitted accounting amendments.
+- Confirmed Lease Contract Settings, Lease Contract, Rent Schedule, and Lease Contract Approval Workflow exist.
+- Confirmed Lease Contract LC-2026-00001 is Active, docstatus 1, linked to Unit A-G01 and Reservation RES-2026-00005.
+- Confirmed Unit A-G01 status and marketing_status are Rented.
+- Confirmed Reservation RES-2026-00005 status and workflow_state are Converted and linked to LC-2026-00001.
+- Confirmed Rent Schedule has 12 rows and totals 4,200,000, matching total_contract_rent and total_scheduled_rent.
+- Confirmed duplicate active Lease Contract for A-G01 is blocked through in-memory controller validation without saving a new document.
+- Confirmed Accounting Dimension Unit exists and unit fields are available on Sales Invoice Item and GL Entry.
+- Confirmed no GL Entry exists for LC-2026-00001 and no rent schedule rows are linked to Sales Invoice or Payment Entry.
+- Confirmed lease reports and key existing Sales, Unit, GL, CFO, Cash Flow, and EVM reports load.
+- Confirmed Sales & Rental, Executive Presentation Center, Executive Control Center, Real Estate Inventory, and Reports & Analytics workspaces load and include lease/rental links.
+- Confirmed ar.csv parses and lease translations are present; CSV comments/blank rows are part of the existing translation file style.
+- Added .ai/LEASE_CONTRACT_READINESS_REVIEW.md with the readiness decision.
+- NEXT_ACTION set to Start Rent Invoice and Collections foundation.

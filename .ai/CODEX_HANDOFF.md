@@ -403,4 +403,15 @@ Lease Contract and Rent Schedule foundation status:
   - Lease Contract LC-2026-00001 is Active.
   - Rent Schedule has 12 monthly rows totaling 4,200,000.
 - No rent invoice, Sales Invoice, Payment Entry, Journal Entry, commission, CRM matching, portal, or GL backfill was created.
-- Current next action: Review Lease Contract readiness before Rent Invoice and Collections foundation.
+- Lease readiness review status:
+  - Branch: feature/lease-contract-readiness-review.
+  - Review file: .ai/LEASE_CONTRACT_READINESS_REVIEW.md.
+  - LC-2026-00001 is Active, docstatus 1, linked to RES-2026-00005 and Unit A-G01.
+  - Unit A-G01 is Rented; RES-2026-00005 is Converted.
+  - Rent Schedule has 12 monthly rows totaling 4,200,000, matching total contract rent.
+  - Duplicate active lease validation is blocked without saving validation documents.
+  - Unit Accounting Dimension exists and unit fields are present on Sales Invoice Item and GL Entry.
+  - No Rent Invoice, Sales Invoice, Payment Entry, Journal Entry, GL Entry, commission, CRM matching, portal, or GL backfill exists from the lease.
+  - Lease reports, key existing reports, and target workspaces load.
+  - ar.csv parses successfully with lease translations present.
+- Current next action: Start Rent Invoice and Collections foundation.

@@ -303,3 +303,24 @@ Not safe to proceed to Lease Contract until MariaDB is restored and Sales Invoic
 ## 30. Lease Foundation Decision
 
 Safe to review Lease Contract readiness before Rent Invoice and Collections foundation.
+
+## 31. Lease Contract Readiness Review
+
+- Passed: Lease Contract Settings, Lease Contract, and Rent Schedule exist.
+- Passed: Lease Contract Approval Workflow exists and loads.
+- Passed: LC-2026-00001 is Active and submitted.
+- Passed: A-G01 is Rented.
+- Passed: RES-2026-00005 is Converted and linked to LC-2026-00001.
+- Passed: Rent Schedule has 12 monthly rows totaling 4,200,000.
+- Passed: Total scheduled rent matches total contract rent.
+- Passed: Duplicate active lease validation is blocked.
+- Passed: Unit Accounting Dimension is ready for future rent invoice item and GL traceability.
+- Passed: Lease reports and key existing Sales, Unit, GL, CFO, Cash Flow, and EVM reports load.
+- Passed: Sales & Rental, Executive Presentation Center, Executive Control Center, Real Estate Inventory, and Reports & Analytics workspaces load with lease/rental links.
+- Passed: ar.csv parses successfully with lease translations present.
+- Passed: No Rent Invoice, Sales Invoice, Payment Entry, Journal Entry, Commission, CRM Matching, Portal, GL Entry, or GL backfill was created from the lease.
+- Deferred: Rent Invoice, rental collections, rental receivables aging, and GL validation are the next phase.
+
+## 32. Lease Readiness Decision
+
+Safe to start Rent Invoice and Collections foundation.

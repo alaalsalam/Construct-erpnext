@@ -102,3 +102,4 @@ Updated risks:
 - Payment Entry integration is hook-based and depends on ERPNext Payment Entry references to submitted Sales Invoices; it was not executed because the validation invoice remains draft.
 - Unit revenue GL traceability is prepared through the Unit dimension on Sales Invoice Item, but GL validation remains pending until a Sales Invoice is submitted through normal ERPNext controls.
 - A site selling price list and non-stock sales item were created only as safe master setup for draft invoice generation; income account behavior should still be reviewed by accounting before submission.
+- CMD-24 readiness review was blocked because MariaDB was OOM-killed and refused connections on 127.0.0.1; restore database service and rerun live validation before Lease Contract work.

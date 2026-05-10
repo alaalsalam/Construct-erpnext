@@ -800,3 +800,20 @@
   - Sales collection KPI methods resolve.
   - Target workspaces exist and load.
   - ar.csv parses successfully.
+
+## 2026-05-10 CMD-24 Sales Invoice and Collections Readiness Review
+
+- Created branch feature/sales-invoice-collections-readiness-review from feature/sales-invoice-collections-foundation.
+- Started review-only validation for Sales Invoice and Collections before Lease Contract and Rent Schedule foundation.
+- Confirmed static/code readiness:
+  - Python modules under estate_sales, cfo_analytics, and setup compile successfully.
+  - Sales Invoice Collection Settings metadata exists.
+  - Sales Contract and Sales Installment Schedule metadata include CMD-23 collection fields.
+  - ar.csv parses successfully with 1847 rows.
+  - Sales invoice/collection report links, workspace links, and KPI labels are present in JSON/translation files.
+- Live site validation was blocked because MariaDB on construction.yemenfrappe.com refused connections.
+- `systemctl status mariadb` showed `mariadb.service` failed with `Result: oom-kill`.
+- Attempted service start was blocked by interactive sudo requirement in the current shell.
+- No Sales Invoice, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, GL backfill, or submitted accounting amendment was created during this review.
+- Added .ai/SALES_INVOICE_COLLECTIONS_READINESS_REVIEW.md with the blocked readiness decision.
+- NEXT_ACTION set to restore MariaDB service and rerun the Sales Invoice and Collections readiness validation before Lease Contract foundation.

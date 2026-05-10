@@ -264,3 +264,21 @@ Safe to start Sales Invoice and Collections foundation.
 ## 26. Sales Invoice and Collections Decision
 
 Safe to review Sales Invoice and Collections readiness before Lease Contract foundation.
+
+## 27. CMD-24 Sales Invoice and Collections Readiness Review
+
+- Passed: Static code compile for Sales Invoice and Collections modules.
+- Passed: Sales Invoice Collection Settings metadata exists.
+- Passed: Sales Contract and Sales Installment Schedule metadata include collection fields.
+- Passed: ar.csv parses successfully with Sales Invoice and Collections translations.
+- Passed: Workspace/report/KPI links are present in JSON and translation files.
+- Blocked: Live site validation could not run because MariaDB is down with `Result: oom-kill`.
+- Blocked: Draft Sales Invoice ACC-SINV-2026-00001 could not be revalidated live.
+- Blocked: Report loading, workspace loading, and Number Card loading could not be revalidated live.
+- Deferred: Sales Invoice remains Draft.
+- Deferred: GL Entry validation requires normal Sales Invoice submission.
+- Deferred: Payment Entry validation requires a submitted Sales Invoice.
+
+## 28. CMD-24 Decision
+
+Not safe to proceed to Lease Contract until MariaDB is restored and Sales Invoice and Collections readiness validation passes live on construction.yemenfrappe.com.

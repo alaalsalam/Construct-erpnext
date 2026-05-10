@@ -366,3 +366,13 @@ Sales Invoice and Collections foundation status:
   - SC-2026-00001 totals: invoiced 300,000; collected 0; outstanding 300,000; collection_status Partially Invoiced.
 - No Sales Invoice submission, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, or GL backfill was created.
 - Next operational task: Review Sales Invoice and Collections readiness before Lease Contract foundation.
+
+Sales Invoice and Collections readiness review status:
+- Branch: feature/sales-invoice-collections-readiness-review.
+- Review file: .ai/SALES_INVOICE_COLLECTIONS_READINESS_REVIEW.md.
+- Static validation passed: Python modules compile, ar.csv parses, metadata files exist, workspace/report/KPI links exist in JSON and translations.
+- Live site validation did not complete because MariaDB refused connections and `mariadb.service` is failed with `Result: oom-kill`.
+- Attempting to start MariaDB from this shell failed because interactive sudo/password authentication is required.
+- No business/accounting documents or new features were created during the review.
+- Current readiness decision: not safe to proceed to Lease Contract until MariaDB is restored and live Sales Invoice/Collections validation is rerun.
+- Next operational task: Restore MariaDB service and rerun Sales Invoice and Collections readiness validation before Lease Contract foundation.

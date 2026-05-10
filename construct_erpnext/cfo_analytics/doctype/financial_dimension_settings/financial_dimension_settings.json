@@ -49,13 +49,15 @@
    "default": "0",
    "fieldname": "enable_dimension_blocking",
    "fieldtype": "Check",
-   "label": "Enable Dimension Blocking"
+   "label": "Enable Dimension Blocking",
+   "description": "When enabled by an administrator, missing required dimensions may block selected transactions."
   },
   {
    "default": "1",
    "fieldname": "allow_blank_unit_for_project_level_cost",
    "fieldtype": "Check",
-   "label": "Allow Blank Unit For Project Level Cost"
+   "label": "Allow Blank Unit For Project Level Cost",
+   "description": "Allows project-level costs to remain without a Unit dimension when not unit-specific."
   },
   {
    "default": "Warning",
@@ -102,5 +104,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "description": "Controls Accounting Dimension synchronization, warnings, optional blocking, and project-level cost behavior."
 }

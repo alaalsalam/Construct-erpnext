@@ -56,7 +56,8 @@
    "fieldname": "construction_budget",
    "fieldtype": "Link",
    "label": "Construction Budget",
-   "options": "Construction Budget"
+   "options": "Construction Budget",
+   "description": "Optional existing construction budget used as a planning reference."
   },
   {
    "fieldname": "boq_number",
@@ -168,7 +169,8 @@
    "fieldname": "total_actual_cost",
    "fieldtype": "Currency",
    "label": "Total Actual Cost",
-   "read_only": 1
+   "read_only": 1,
+   "description": "Reserved summary of actual cost; procurement and certification amounts are tracked separately."
   },
   {
    "fieldname": "variance_amount",
@@ -186,7 +188,8 @@
    "fieldname": "work_items_generated",
    "fieldtype": "Check",
    "label": "Work Items Generated",
-   "read_only": 1
+   "read_only": 1,
+   "description": "Indicates that operational Work Items have been generated from approved BOQ rows."
   },
   {
    "fieldname": "remarks",
@@ -265,5 +268,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1
+ "track_changes": 1,
+ "description": "Project bill of quantities used to plan quantities, rates, categories, and approved construction cost baseline."
 }

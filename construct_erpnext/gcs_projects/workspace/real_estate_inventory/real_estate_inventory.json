@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"rei_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Real Estate Inventory</b></span>\",\"col\":12}},{\"id\":\"rei_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Inventory Masters\",\"col\":4}},{\"id\":\"rei_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Ownership\",\"col\":4}},{\"id\":\"rei_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Inventory Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Real Estate Inventory</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Inventory Structure\",\"col\":3}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Ownership\",\"col\":3}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Costing\",\"col\":3}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Reports\",\"col\":3}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,28 +13,218 @@
  "is_hidden": 0,
  "label": "Real Estate Inventory",
  "links": [
-  {"hidden": 0, "is_query_report": 0, "label": "Inventory Masters", "link_count": 0, "onboard": 0, "type": "Card Break"},
-  {"hidden": 0, "is_query_report": 0, "label": "Real Estate Project", "link_count": 0, "link_to": "Real Estate Project", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Building", "link_count": 0, "link_to": "Building", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Floor", "link_count": 0, "link_to": "Floor", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Unit", "link_count": 0, "link_to": "Unit", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Unit Type", "link_count": 0, "link_to": "Unit Type", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Ownership", "link_count": 0, "onboard": 0, "type": "Card Break"},
-  {"hidden": 0, "is_query_report": 0, "label": "Property Owner", "link_count": 0, "link_to": "Property Owner", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Property Ownership", "link_count": 0, "link_to": "Property Ownership", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Unit Cost Allocation", "link_count": 0, "link_to": "Unit Cost Allocation", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Inventory Reports", "link_count": 0, "onboard": 0, "type": "Card Break"},
-  {"hidden": 0, "is_query_report": 1, "label": "Unit Inventory Report", "link_count": 0, "link_to": "Unit Inventory Report", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Unit Availability Report", "link_count": 0, "link_to": "Unit Availability Report", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Ownership Summary Report", "link_count": 0, "link_to": "Ownership Summary Report", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Real Estate Project Summary", "link_count": 0, "link_to": "Real Estate Project Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Unit Cost Allocation Report", "link_count": 0, "link_to": "Unit Cost Allocation Report", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Unit Profitability Report", "link_count": 0, "link_to": "Unit Profitability Report", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Real Estate Project Profitability Summary", "link_count": 0, "link_to": "Real Estate Project Profitability Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Building Profitability Summary", "link_count": 0, "link_to": "Building Profitability Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Unit Financial Traceability", "link_count": 0, "onboard": 0, "type": "Card Break"},
-  {"hidden": 0, "is_query_report": 1, "label": "Unit Financial Ledger", "link_count": 0, "link_to": "Unit Financial Ledger", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Project Unit Cost Matrix", "link_count": 0, "link_to": "Project Unit Cost Matrix", "link_type": "Report", "onboard": 0, "type": "Link"}
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Inventory Structure",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Real Estate Project",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Real Estate Project",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Building",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Building",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Floor",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Floor",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unit",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unit Type",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Type",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Ownership",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Property Owner",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Property Owner",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Property Ownership",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Property Ownership",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unit Costing",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unit Cost Allocation",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Cost Allocation",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Financial Ledger",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Financial Ledger",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Project Unit Cost Matrix",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Project Unit Cost Matrix",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unit Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Inventory Report",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Inventory Report",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Availability Report",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Availability Report",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Ownership Summary Report",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Ownership Summary Report",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Real Estate Project Summary",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Real Estate Project Summary",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Cost Allocation Report",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Cost Allocation Report",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Profitability Report",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Profitability Report",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Real Estate Project Profitability Summary",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Real Estate Project Profitability Summary",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Building Profitability Summary",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Building Profitability Summary",
+   "link_type": "Report"
+  }
  ],
  "modified": "2026-05-09 00:00:00.000000",
  "modified_by": "Administrator",

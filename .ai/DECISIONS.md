@@ -143,3 +143,11 @@
 - Draft documents may be synchronized through controlled draft-only methods before normal submission.
 - Future submitted transactions should carry Accounting Dimensions prospectively through ERPNext Accounting Dimension fields and app-level validate hooks.
 - Unit-level GL validation is deferred until a legitimate unit-specific accounting flow exists, such as Sales/Rental or an approved unit-specific cost posting flow.
+
+## ADR-019: Product Readiness Before Reservation
+
+- Product readiness, bilingual UX, workspace grouping, report i18n review, and client presentation QA are completed before Unit Reservation, Sales, and Rental development.
+- English remains the source text for technical labels and report definitions.
+- Arabic user experience is provided through translation files rather than replacing technical labels with Arabic.
+- Product-facing workspaces are process-oriented and synchronized through an app-level after_migrate helper.
+- Executive Number Cards and Dashboard Charts are deferred until finance leadership signs off on final KPI definitions; existing reports are used for presentation readiness.

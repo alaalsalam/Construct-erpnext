@@ -5,22 +5,119 @@
  "creation": "2026-05-09 00:00:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
- "field_order": ["company", "real_estate_project", "project", "allocation_number", "allocation_date", "allocation_basis", "cost_source", "project_financial_snapshot", "source_amount", "total_allocated_amount", "unallocated_amount", "allocation_status", "remarks", "lines"],
+ "field_order": [
+  "company",
+  "real_estate_project",
+  "project",
+  "allocation_number",
+  "allocation_date",
+  "allocation_basis",
+  "cost_source",
+  "project_financial_snapshot",
+  "source_amount",
+  "total_allocated_amount",
+  "unallocated_amount",
+  "allocation_status",
+  "remarks",
+  "lines"
+ ],
  "fields": [
-  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
-  {"fieldname": "real_estate_project", "fieldtype": "Link", "in_list_view": 1, "in_standard_filter": 1, "label": "Real Estate Project", "options": "Real Estate Project", "reqd": 1},
-  {"fieldname": "project", "fieldtype": "Link", "label": "Project", "options": "Project", "read_only": 1, "reqd": 1},
-  {"fieldname": "allocation_number", "fieldtype": "Data", "label": "Allocation Number"},
-  {"default": "Today", "fieldname": "allocation_date", "fieldtype": "Date", "in_list_view": 1, "label": "Allocation Date"},
-  {"fieldname": "allocation_basis", "fieldtype": "Select", "in_list_view": 1, "label": "Allocation Basis", "options": "By Area\nEqual Share\nManual Percentage\nManual Amount", "reqd": 1},
-  {"fieldname": "cost_source", "fieldtype": "Select", "in_list_view": 1, "label": "Cost Source", "options": "BOQ Total\nCommitted Cost\nInvoiced Cost\nConsumed Cost\nCertified Cost\nFinancial Snapshot\nManual Amount", "reqd": 1},
-  {"fieldname": "project_financial_snapshot", "fieldtype": "Link", "label": "Project Financial Snapshot", "options": "Project Financial Snapshot"},
-  {"fieldname": "source_amount", "fieldtype": "Currency", "label": "Source Amount"},
-  {"fieldname": "total_allocated_amount", "fieldtype": "Currency", "label": "Total Allocated Amount", "read_only": 1},
-  {"fieldname": "unallocated_amount", "fieldtype": "Currency", "label": "Unallocated Amount", "read_only": 1},
-  {"default": "Draft", "fieldname": "allocation_status", "fieldtype": "Select", "in_list_view": 1, "label": "Allocation Status", "options": "Draft\nCalculated\nReviewed\nApplied\nCancelled"},
-  {"fieldname": "remarks", "fieldtype": "Text", "label": "Remarks"},
-  {"fieldname": "lines", "fieldtype": "Table", "label": "Lines", "options": "Unit Cost Allocation Line"}
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "real_estate_project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Real Estate Project",
+   "options": "Real Estate Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "allocation_number",
+   "fieldtype": "Data",
+   "label": "Allocation Number"
+  },
+  {
+   "default": "Today",
+   "fieldname": "allocation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Allocation Date"
+  },
+  {
+   "fieldname": "allocation_basis",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Allocation Basis",
+   "options": "By Area\nEqual Share\nManual Percentage\nManual Amount",
+   "reqd": 1,
+   "description": "Method used to distribute source project cost across units."
+  },
+  {
+   "fieldname": "cost_source",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Cost Source",
+   "options": "BOQ Total\nCommitted Cost\nInvoiced Cost\nConsumed Cost\nCertified Cost\nFinancial Snapshot\nManual Amount",
+   "reqd": 1,
+   "description": "Source amount used for allocation, such as BOQ total, committed cost, or financial snapshot."
+  },
+  {
+   "fieldname": "project_financial_snapshot",
+   "fieldtype": "Link",
+   "label": "Project Financial Snapshot",
+   "options": "Project Financial Snapshot"
+  },
+  {
+   "fieldname": "source_amount",
+   "fieldtype": "Currency",
+   "label": "Source Amount"
+  },
+  {
+   "fieldname": "total_allocated_amount",
+   "fieldtype": "Currency",
+   "label": "Total Allocated Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unallocated_amount",
+   "fieldtype": "Currency",
+   "label": "Unallocated Amount",
+   "read_only": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "allocation_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Allocation Status",
+   "options": "Draft\nCalculated\nReviewed\nApplied\nCancelled",
+   "description": "Controls whether calculated allocation has been applied to Unit profitability fields."
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "Lines",
+   "options": "Unit Cost Allocation Line"
+  }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
@@ -30,12 +127,38 @@
  "name": "Unit Cost Allocation",
  "owner": "Administrator",
  "permissions": [
-  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
-  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Projects Manager", "share": 1, "write": 1},
-  {"read": 1, "report": 1, "role": "Accounts Manager"}
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager"
+  }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1
+ "track_changes": 1,
+ "description": "Management allocation of project cost to real estate units for profitability analysis. Does not create accounting entries."
 }

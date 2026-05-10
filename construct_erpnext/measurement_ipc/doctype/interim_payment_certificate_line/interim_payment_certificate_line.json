@@ -6,38 +6,186 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "measurement_entry", "measurement_book", "construction_work_item", "construction_boq", "wbs_element", "cost_code", "item_code", "description", "uom",
-  "boq_qty", "previous_certified_qty", "current_measured_qty", "current_certified_qty", "total_certified_qty", "remaining_qty",
-  "unit_rate", "current_amount", "previous_certified_amount", "total_certified_amount", "retention_percent", "retention_amount", "net_line_amount",
-  "engineer_comment", "qs_comment", "variation_reference", "remarks"
+  "measurement_entry",
+  "measurement_book",
+  "construction_work_item",
+  "construction_boq",
+  "wbs_element",
+  "cost_code",
+  "item_code",
+  "description",
+  "uom",
+  "boq_qty",
+  "previous_certified_qty",
+  "current_measured_qty",
+  "current_certified_qty",
+  "total_certified_qty",
+  "remaining_qty",
+  "unit_rate",
+  "current_amount",
+  "previous_certified_amount",
+  "total_certified_amount",
+  "retention_percent",
+  "retention_amount",
+  "net_line_amount",
+  "engineer_comment",
+  "qs_comment",
+  "variation_reference",
+  "remarks"
  ],
  "fields": [
-  {"fieldname": "measurement_entry", "fieldtype": "Link", "in_list_view": 1, "label": "Measurement Entry", "options": "Measurement Entry"},
-  {"fieldname": "measurement_book", "fieldtype": "Link", "label": "Measurement Book", "options": "Measurement Book"},
-  {"fieldname": "construction_work_item", "fieldtype": "Link", "in_list_view": 1, "label": "Construction Work Item", "options": "Construction Work Item", "reqd": 1},
-  {"fieldname": "construction_boq", "fieldtype": "Link", "label": "Construction BOQ", "options": "Construction BOQ"},
-  {"fieldname": "wbs_element", "fieldtype": "Link", "label": "WBS Element", "options": "WBS Element"},
-  {"fieldname": "cost_code", "fieldtype": "Link", "label": "Cost Code", "options": "Cost Code"},
-  {"fieldname": "item_code", "fieldtype": "Link", "label": "Item Code", "options": "Item"},
-  {"fieldname": "description", "fieldtype": "Text", "label": "Description"},
-  {"fieldname": "uom", "fieldtype": "Link", "label": "UOM", "options": "UOM"},
-  {"fieldname": "boq_qty", "fieldtype": "Float", "label": "BOQ Qty", "read_only": 1},
-  {"fieldname": "previous_certified_qty", "fieldtype": "Float", "label": "Previous Certified Qty", "read_only": 1},
-  {"fieldname": "current_measured_qty", "fieldtype": "Float", "label": "Current Measured Qty", "read_only": 1},
-  {"fieldname": "current_certified_qty", "fieldtype": "Float", "in_list_view": 1, "label": "Current Certified Qty"},
-  {"fieldname": "total_certified_qty", "fieldtype": "Float", "label": "Total Certified Qty", "read_only": 1},
-  {"fieldname": "remaining_qty", "fieldtype": "Float", "label": "Remaining Qty", "read_only": 1},
-  {"fieldname": "unit_rate", "fieldtype": "Currency", "label": "Unit Rate"},
-  {"fieldname": "current_amount", "fieldtype": "Currency", "label": "Current Amount", "read_only": 1},
-  {"fieldname": "previous_certified_amount", "fieldtype": "Currency", "label": "Previous Certified Amount", "read_only": 1},
-  {"fieldname": "total_certified_amount", "fieldtype": "Currency", "label": "Total Certified Amount", "read_only": 1},
-  {"fieldname": "retention_percent", "fieldtype": "Percent", "label": "Retention Percent"},
-  {"fieldname": "retention_amount", "fieldtype": "Currency", "label": "Retention Amount", "read_only": 1},
-  {"fieldname": "net_line_amount", "fieldtype": "Currency", "label": "Net Line Amount", "read_only": 1},
-  {"fieldname": "engineer_comment", "fieldtype": "Small Text", "label": "Engineer Comment"},
-  {"fieldname": "qs_comment", "fieldtype": "Small Text", "label": "QS Comment"},
-  {"fieldname": "variation_reference", "fieldtype": "Data", "label": "Variation Reference"},
-  {"fieldname": "remarks", "fieldtype": "Small Text", "label": "Remarks"}
+  {
+   "fieldname": "measurement_entry",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Measurement Entry",
+   "options": "Measurement Entry"
+  },
+  {
+   "fieldname": "measurement_book",
+   "fieldtype": "Link",
+   "label": "Measurement Book",
+   "options": "Measurement Book"
+  },
+  {
+   "fieldname": "construction_work_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Construction Work Item",
+   "options": "Construction Work Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "construction_boq",
+   "fieldtype": "Link",
+   "label": "Construction BOQ",
+   "options": "Construction BOQ"
+  },
+  {
+   "fieldname": "wbs_element",
+   "fieldtype": "Link",
+   "label": "WBS Element",
+   "options": "WBS Element"
+  },
+  {
+   "fieldname": "cost_code",
+   "fieldtype": "Link",
+   "label": "Cost Code",
+   "options": "Cost Code"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "boq_qty",
+   "fieldtype": "Float",
+   "label": "BOQ Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "previous_certified_qty",
+   "fieldtype": "Float",
+   "label": "Previous Certified Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_measured_qty",
+   "fieldtype": "Float",
+   "label": "Current Measured Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_certified_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Current Certified Qty"
+  },
+  {
+   "fieldname": "total_certified_qty",
+   "fieldtype": "Float",
+   "label": "Total Certified Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remaining_qty",
+   "fieldtype": "Float",
+   "label": "Remaining Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unit_rate",
+   "fieldtype": "Currency",
+   "label": "Unit Rate"
+  },
+  {
+   "fieldname": "current_amount",
+   "fieldtype": "Currency",
+   "label": "Current Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "previous_certified_amount",
+   "fieldtype": "Currency",
+   "label": "Previous Certified Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_certified_amount",
+   "fieldtype": "Currency",
+   "label": "Total Certified Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "retention_percent",
+   "fieldtype": "Percent",
+   "label": "Retention Percent"
+  },
+  {
+   "fieldname": "retention_amount",
+   "fieldtype": "Currency",
+   "label": "Retention Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_line_amount",
+   "fieldtype": "Currency",
+   "label": "Net Line Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "engineer_comment",
+   "fieldtype": "Small Text",
+   "label": "Engineer Comment"
+  },
+  {
+   "fieldname": "qs_comment",
+   "fieldtype": "Small Text",
+   "label": "QS Comment"
+  },
+  {
+   "fieldname": "variation_reference",
+   "fieldtype": "Data",
+   "label": "Variation Reference"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
  ],
  "istable": 1,
  "links": [],
@@ -49,5 +197,6 @@
  "permissions": [],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "description": "IPC certification line linking measured work to BOQ, Work Item, quantities, retention, and net payable amount."
 }

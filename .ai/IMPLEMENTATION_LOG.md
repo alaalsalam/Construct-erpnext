@@ -471,3 +471,38 @@
 - Added .ai/TRACEABILITY_VALIDATION.md with the end-to-end checklist, known limitations, and recommendation to proceed.
 - No submitted documents were amended, no historical GL backfill was run, no accounting documents were created, and no Reservation/Sales/Rental DocTypes were created.
 - Arabic validation note: تم التحقق من مسار التتبع الكامل من جدول الكميات إلى بند العمل والمشتريات والمخزون والقياسات والمستخلصات والأبعاد المالية والتقارير، مع بقاء قيود دفتر الأستاذ التاريخية دون تعديل.
+
+## 2026-05-10 10:05:00 CEST
+
+- Created branch feature/product-readiness-bilingual-ux from feature/end-to-end-traceability-validation.
+- Audited completed product modules:
+  - construction_boq
+  - procurement_control
+  - measurement_ipc
+  - contractor_management
+  - cfo_analytics
+  - real_estate_inventory
+  - unit_costing
+  - cfo_analytics financial dimension helpers
+- Added concise English DocType descriptions for completed product DocTypes and key field descriptions for important workflow/control fields.
+- Confirmed all custom Script Report column labels in completed modules use Frappe translation wrappers.
+- Added curated Arabic translation file:
+  - construct_erpnext/translations/ar.csv
+  - 248 valid CSV rows covering product DocTypes, workspaces, reports, workflow states, report columns, and key descriptions.
+- Polished product-facing workspace grouping in JSON and added an idempotent after_migrate readiness sync:
+  - construct_erpnext.setup.product_readiness.sync_product_workspace_readiness
+- Kept Sales & Rental as a placeholder with a clear future-phase note.
+- Created Arabic client presentation walkthrough:
+  - .ai/CLIENT_PRESENTATION_WALKTHROUGH.md
+- Created product readiness checklist:
+  - .ai/PRODUCT_READINESS_CHECKLIST.md
+- Validation completed:
+  - Metadata JSON and Arabic CSV parse successfully.
+  - python3 compileall passed.
+  - Migration, clear-cache, and clear-website-cache completed successfully after correcting the readiness sync path helper.
+  - All custom product DocTypes loaded.
+  - All eight product workspaces loaded.
+  - All requested custom reports loaded without errors.
+  - Legacy GCS workspaces remain hidden and non-public.
+  - No Reservation, Sales Contract, Lease Contract, CRM Matching, Portal feature, accounting document, submitted-document amendment, or GL backfill was created.
+- Dashboard/card decision: no Number Cards or Dashboard Charts were created in this phase because executive metrics should be signed off with finance leadership before promotion; existing executive reports are linked and presentation-ready.

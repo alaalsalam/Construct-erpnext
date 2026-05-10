@@ -17,6 +17,7 @@ after_migrate = [
     "construct_erpnext.measurement_ipc.setup.ensure_interim_payment_certificate_workflow",
     "construct_erpnext.cfo_analytics.setup.after_migrate",
     "construct_erpnext.unit_costing.setup.after_migrate",
+    "construct_erpnext.setup.product_readiness.sync_product_workspace_readiness",
 ]
 
 # --- Asset Bundles ---

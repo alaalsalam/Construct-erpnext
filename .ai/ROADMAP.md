@@ -110,4 +110,6 @@ Phase 8 deliverables:
 - Add GL/unit/work item/cost code/project-unit financial traceability reports. Completed.
 - Add financial traceability links to Executive Control Center, Reports & Analytics, Real Estate Inventory, and Construction Control. Completed.
 - Tenant, Lease Contract, Sales Contract, Reservation, and Smart Matching remain deferred.
-- Next validation step: run end-to-end traceability validation before Reservation and Sales/Rental foundation.
+- Run end-to-end traceability validation before Reservation and Sales/Rental foundation. Completed.
+- Complete Product Readiness, Bilingual UX, Client Presentation QA, workspace polish, report i18n review, and readiness documentation before Unit Reservation. Completed.
+- Next Phase 9 entry: design and implement Unit Reservation foundation.

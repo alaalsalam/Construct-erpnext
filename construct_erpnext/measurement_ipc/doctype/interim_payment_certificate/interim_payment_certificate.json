@@ -6,60 +6,348 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "company", "project", "contractor", "contractor_account", "subcontract", "construction_boq", "measurement_book", "certificate_number", "certificate_sequence", "period_start", "period_end",
-  "workflow_section", "workflow_state", "status", "submitted_by", "submitted_on", "reviewed_by", "reviewed_on", "certified_by", "certified_on", "approved_by", "approved_on",
-  "financial_section", "gross_amount", "previous_certified_amount", "current_certified_amount", "total_certified_amount", "retention_percent", "retention_amount", "advance_recovery_amount", "penalty_amount", "withholding_tax_amount", "other_deduction_amount", "net_payable",
-  "invoice_section", "purchase_invoice", "paid_amount", "outstanding_amount", "payment_difference_amount", "payment_difference_reason", "expected_next_payment_date",
-  "control_section", "rejection_reason", "remarks", "lines", "deductions", "amended_from"
+  "company",
+  "project",
+  "contractor",
+  "contractor_account",
+  "subcontract",
+  "construction_boq",
+  "measurement_book",
+  "certificate_number",
+  "certificate_sequence",
+  "period_start",
+  "period_end",
+  "workflow_section",
+  "workflow_state",
+  "status",
+  "submitted_by",
+  "submitted_on",
+  "reviewed_by",
+  "reviewed_on",
+  "certified_by",
+  "certified_on",
+  "approved_by",
+  "approved_on",
+  "financial_section",
+  "gross_amount",
+  "previous_certified_amount",
+  "current_certified_amount",
+  "total_certified_amount",
+  "retention_percent",
+  "retention_amount",
+  "advance_recovery_amount",
+  "penalty_amount",
+  "withholding_tax_amount",
+  "other_deduction_amount",
+  "net_payable",
+  "invoice_section",
+  "purchase_invoice",
+  "paid_amount",
+  "outstanding_amount",
+  "payment_difference_amount",
+  "payment_difference_reason",
+  "expected_next_payment_date",
+  "control_section",
+  "rejection_reason",
+  "remarks",
+  "lines",
+  "deductions",
+  "amended_from"
  ],
  "fields": [
-  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
-  {"fieldname": "project", "fieldtype": "Link", "in_list_view": 1, "in_standard_filter": 1, "label": "Project", "options": "Project", "reqd": 1},
-  {"fieldname": "contractor", "fieldtype": "Link", "in_list_view": 1, "in_standard_filter": 1, "label": "Contractor", "options": "Supplier", "reqd": 1},
-  {"fieldname": "contractor_account", "fieldtype": "Link", "label": "Contractor Account", "options": "Contractor Account", "read_only": 1},
-  {"fieldname": "subcontract", "fieldtype": "Link", "label": "Subcontract", "options": "Subcontract"},
-  {"fieldname": "construction_boq", "fieldtype": "Link", "label": "Construction BOQ", "options": "Construction BOQ"},
-  {"fieldname": "measurement_book", "fieldtype": "Link", "label": "Measurement Book", "options": "Measurement Book"},
-  {"fieldname": "certificate_number", "fieldtype": "Data", "in_list_view": 1, "label": "Certificate Number", "reqd": 1},
-  {"fieldname": "certificate_sequence", "fieldtype": "Int", "label": "Certificate Sequence"},
-  {"fieldname": "period_start", "fieldtype": "Date", "in_standard_filter": 1, "label": "Period Start", "reqd": 1},
-  {"fieldname": "period_end", "fieldtype": "Date", "in_standard_filter": 1, "label": "Period End", "reqd": 1},
-  {"fieldname": "workflow_section", "fieldtype": "Section Break", "label": "Workflow"},
-  {"fieldname": "workflow_state", "fieldtype": "Select", "in_standard_filter": 1, "label": "Workflow State", "options": "Draft\nSubmitted\nUnder Review\nCertified\nApproved\nInvoice Created\nPartially Paid\nPaid\nClosed\nRejected"},
-  {"default": "Draft", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "in_standard_filter": 1, "label": "Status", "options": "Draft\nSubmitted\nUnder Review\nCertified\nApproved\nInvoice Created\nPartially Paid\nPaid\nClosed\nRejected"},
-  {"fieldname": "submitted_by", "fieldtype": "Link", "label": "Submitted By", "options": "User", "read_only": 1},
-  {"fieldname": "submitted_on", "fieldtype": "Datetime", "label": "Submitted On", "read_only": 1},
-  {"fieldname": "reviewed_by", "fieldtype": "Link", "label": "Reviewed By", "options": "User", "read_only": 1},
-  {"fieldname": "reviewed_on", "fieldtype": "Datetime", "label": "Reviewed On", "read_only": 1},
-  {"fieldname": "certified_by", "fieldtype": "Link", "label": "Certified By", "options": "User", "read_only": 1},
-  {"fieldname": "certified_on", "fieldtype": "Datetime", "label": "Certified On", "read_only": 1},
-  {"fieldname": "approved_by", "fieldtype": "Link", "label": "Approved By", "options": "User", "read_only": 1},
-  {"fieldname": "approved_on", "fieldtype": "Datetime", "label": "Approved On", "read_only": 1},
-  {"fieldname": "financial_section", "fieldtype": "Section Break", "label": "Financial Summary"},
-  {"fieldname": "gross_amount", "fieldtype": "Currency", "label": "Gross Amount", "read_only": 1},
-  {"fieldname": "previous_certified_amount", "fieldtype": "Currency", "label": "Previous Certified Amount", "read_only": 1},
-  {"fieldname": "current_certified_amount", "fieldtype": "Currency", "label": "Current Certified Amount", "read_only": 1},
-  {"fieldname": "total_certified_amount", "fieldtype": "Currency", "label": "Total Certified Amount", "read_only": 1},
-  {"default": "10", "fieldname": "retention_percent", "fieldtype": "Percent", "label": "Retention Percent"},
-  {"fieldname": "retention_amount", "fieldtype": "Currency", "label": "Retention Amount", "read_only": 1},
-  {"fieldname": "advance_recovery_amount", "fieldtype": "Currency", "label": "Advance Recovery Amount"},
-  {"fieldname": "penalty_amount", "fieldtype": "Currency", "label": "Penalty Amount"},
-  {"fieldname": "withholding_tax_amount", "fieldtype": "Currency", "label": "Withholding Tax Amount"},
-  {"fieldname": "other_deduction_amount", "fieldtype": "Currency", "label": "Other Deduction Amount"},
-  {"fieldname": "net_payable", "fieldtype": "Currency", "in_list_view": 1, "label": "Net Payable", "read_only": 1},
-  {"fieldname": "invoice_section", "fieldtype": "Section Break", "label": "Invoice And Payment"},
-  {"fieldname": "purchase_invoice", "fieldtype": "Link", "label": "Purchase Invoice", "options": "Purchase Invoice", "read_only": 1},
-  {"fieldname": "paid_amount", "fieldtype": "Currency", "label": "Paid Amount", "read_only": 1},
-  {"fieldname": "outstanding_amount", "fieldtype": "Currency", "label": "Outstanding Amount", "read_only": 1},
-  {"fieldname": "payment_difference_amount", "fieldtype": "Currency", "label": "Payment Difference Amount", "read_only": 1},
-  {"fieldname": "payment_difference_reason", "fieldtype": "Small Text", "label": "Payment Difference Reason"},
-  {"fieldname": "expected_next_payment_date", "fieldtype": "Date", "label": "Expected Next Payment Date"},
-  {"fieldname": "control_section", "fieldtype": "Section Break", "label": "Controls"},
-  {"fieldname": "rejection_reason", "fieldtype": "Small Text", "label": "Rejection Reason"},
-  {"fieldname": "remarks", "fieldtype": "Text", "label": "Remarks"},
-  {"fieldname": "lines", "fieldtype": "Table", "label": "Lines", "options": "Interim Payment Certificate Line"},
-  {"fieldname": "deductions", "fieldtype": "Table", "label": "Deductions", "options": "IPC Deduction"},
-  {"fieldname": "amended_from", "fieldtype": "Link", "label": "Amended From", "options": "Interim Payment Certificate", "read_only": 1}
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Contractor",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contractor_account",
+   "fieldtype": "Link",
+   "label": "Contractor Account",
+   "options": "Contractor Account",
+   "read_only": 1
+  },
+  {
+   "fieldname": "subcontract",
+   "fieldtype": "Link",
+   "label": "Subcontract",
+   "options": "Subcontract"
+  },
+  {
+   "fieldname": "construction_boq",
+   "fieldtype": "Link",
+   "label": "Construction BOQ",
+   "options": "Construction BOQ"
+  },
+  {
+   "fieldname": "measurement_book",
+   "fieldtype": "Link",
+   "label": "Measurement Book",
+   "options": "Measurement Book",
+   "description": "Verified Measurement Book used to generate this IPC."
+  },
+  {
+   "fieldname": "certificate_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Certificate Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "certificate_sequence",
+   "fieldtype": "Int",
+   "label": "Certificate Sequence"
+  },
+  {
+   "fieldname": "period_start",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Period Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_end",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Period End",
+   "reqd": 1
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Workflow State",
+   "options": "Draft\nSubmitted\nUnder Review\nCertified\nApproved\nInvoice Created\nPartially Paid\nPaid\nClosed\nRejected"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nUnder Review\nCertified\nApproved\nInvoice Created\nPartially Paid\nPaid\nClosed\nRejected"
+  },
+  {
+   "fieldname": "submitted_by",
+   "fieldtype": "Link",
+   "label": "Submitted By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "submitted_on",
+   "fieldtype": "Datetime",
+   "label": "Submitted On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Reviewed By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "Reviewed On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "certified_by",
+   "fieldtype": "Link",
+   "label": "Certified By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "certified_on",
+   "fieldtype": "Datetime",
+   "label": "Certified On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_on",
+   "fieldtype": "Datetime",
+   "label": "Approved On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "financial_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Summary"
+  },
+  {
+   "fieldname": "gross_amount",
+   "fieldtype": "Currency",
+   "label": "Gross Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "previous_certified_amount",
+   "fieldtype": "Currency",
+   "label": "Previous Certified Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_certified_amount",
+   "fieldtype": "Currency",
+   "label": "Current Certified Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_certified_amount",
+   "fieldtype": "Currency",
+   "label": "Total Certified Amount",
+   "read_only": 1
+  },
+  {
+   "default": "10",
+   "fieldname": "retention_percent",
+   "fieldtype": "Percent",
+   "label": "Retention Percent"
+  },
+  {
+   "fieldname": "retention_amount",
+   "fieldtype": "Currency",
+   "label": "Retention Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "advance_recovery_amount",
+   "fieldtype": "Currency",
+   "label": "Advance Recovery Amount"
+  },
+  {
+   "fieldname": "penalty_amount",
+   "fieldtype": "Currency",
+   "label": "Penalty Amount"
+  },
+  {
+   "fieldname": "withholding_tax_amount",
+   "fieldtype": "Currency",
+   "label": "Withholding Tax Amount"
+  },
+  {
+   "fieldname": "other_deduction_amount",
+   "fieldtype": "Currency",
+   "label": "Other Deduction Amount"
+  },
+  {
+   "fieldname": "net_payable",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Net Payable",
+   "read_only": 1,
+   "description": "Current payable amount after retention and deductions."
+  },
+  {
+   "fieldname": "invoice_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice And Payment"
+  },
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Link",
+   "label": "Purchase Invoice",
+   "options": "Purchase Invoice",
+   "read_only": 1,
+   "description": "Draft or submitted ERPNext Purchase Invoice created from this IPC."
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_difference_amount",
+   "fieldtype": "Currency",
+   "label": "Payment Difference Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_difference_reason",
+   "fieldtype": "Small Text",
+   "label": "Payment Difference Reason"
+  },
+  {
+   "fieldname": "expected_next_payment_date",
+   "fieldtype": "Date",
+   "label": "Expected Next Payment Date"
+  },
+  {
+   "fieldname": "control_section",
+   "fieldtype": "Section Break",
+   "label": "Controls"
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "Lines",
+   "options": "Interim Payment Certificate Line"
+  },
+  {
+   "fieldname": "deductions",
+   "fieldtype": "Table",
+   "label": "Deductions",
+   "options": "IPC Deduction"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Interim Payment Certificate",
+   "read_only": 1
+  }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
@@ -70,11 +358,44 @@
  "name": "Interim Payment Certificate",
  "owner": "Administrator",
  "permissions": [
-  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "submit": 1, "write": 1},
-  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Projects Manager", "share": 1, "submit": 1, "write": 1},
-  {"email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Accounts Manager", "share": 1, "write": 1}
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "description": "Contractor payment certificate generated from verified measurement entries and used for certification and invoice preparation."
 }

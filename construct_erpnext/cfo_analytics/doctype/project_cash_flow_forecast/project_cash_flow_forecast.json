@@ -6,34 +6,171 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "company", "project", "forecast_date", "forecast_title", "period_type", "start_date", "end_date", "status",
-  "summary_section", "opening_balance", "total_expected_inflow", "total_expected_outflow", "net_cash_flow", "lowest_projected_balance", "cash_deficit_amount", "cash_risk_status",
-  "narrative_section", "executive_summary", "key_risks", "recommendations",
-  "periods_section", "periods"
+  "company",
+  "project",
+  "forecast_date",
+  "forecast_title",
+  "period_type",
+  "start_date",
+  "end_date",
+  "status",
+  "summary_section",
+  "opening_balance",
+  "total_expected_inflow",
+  "total_expected_outflow",
+  "net_cash_flow",
+  "lowest_projected_balance",
+  "cash_deficit_amount",
+  "cash_risk_status",
+  "narrative_section",
+  "executive_summary",
+  "key_risks",
+  "recommendations",
+  "periods_section",
+  "periods"
  ],
  "fields": [
-  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
-  {"fieldname": "project", "fieldtype": "Link", "in_list_view": 1, "in_standard_filter": 1, "label": "Project", "options": "Project", "reqd": 1},
-  {"default": "Today", "fieldname": "forecast_date", "fieldtype": "Date", "in_list_view": 1, "label": "Forecast Date"},
-  {"fieldname": "forecast_title", "fieldtype": "Data", "in_list_view": 1, "label": "Forecast Title"},
-  {"default": "Monthly", "fieldname": "period_type", "fieldtype": "Select", "in_standard_filter": 1, "label": "Period Type", "options": "Weekly\nMonthly\nQuarterly", "reqd": 1},
-  {"fieldname": "start_date", "fieldtype": "Date", "in_list_view": 1, "label": "Start Date", "reqd": 1},
-  {"fieldname": "end_date", "fieldtype": "Date", "in_list_view": 1, "label": "End Date", "reqd": 1},
-  {"default": "Draft", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Draft\nGenerated\nReviewed\nArchived"},
-  {"fieldname": "summary_section", "fieldtype": "Section Break", "label": "Summary"},
-  {"default": "0", "fieldname": "opening_balance", "fieldtype": "Currency", "label": "Opening Balance"},
-  {"fieldname": "total_expected_inflow", "fieldtype": "Currency", "label": "Total Expected Inflow", "read_only": 1},
-  {"fieldname": "total_expected_outflow", "fieldtype": "Currency", "label": "Total Expected Outflow", "read_only": 1},
-  {"fieldname": "net_cash_flow", "fieldtype": "Currency", "label": "Net Cash Flow", "read_only": 1},
-  {"fieldname": "lowest_projected_balance", "fieldtype": "Currency", "label": "Lowest Projected Balance", "read_only": 1},
-  {"fieldname": "cash_deficit_amount", "fieldtype": "Currency", "label": "Cash Deficit Amount", "read_only": 1},
-  {"fieldname": "cash_risk_status", "fieldtype": "Select", "in_list_view": 1, "label": "Cash Risk Status", "options": "Green\nYellow\nRed", "read_only": 1},
-  {"fieldname": "narrative_section", "fieldtype": "Section Break", "label": "Narrative"},
-  {"fieldname": "executive_summary", "fieldtype": "Text", "label": "Executive Summary"},
-  {"fieldname": "key_risks", "fieldtype": "Text", "label": "Key Risks"},
-  {"fieldname": "recommendations", "fieldtype": "Text", "label": "Recommendations"},
-  {"fieldname": "periods_section", "fieldtype": "Section Break", "label": "Forecast Periods"},
-  {"fieldname": "periods", "fieldtype": "Table", "label": "Periods", "options": "Project Cash Flow Forecast Period"}
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "forecast_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Forecast Date"
+  },
+  {
+   "fieldname": "forecast_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Forecast Title"
+  },
+  {
+   "default": "Monthly",
+   "fieldname": "period_type",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Period Type",
+   "options": "Weekly\nMonthly\nQuarterly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nGenerated\nReviewed\nArchived"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "default": "0",
+   "fieldname": "opening_balance",
+   "fieldtype": "Currency",
+   "label": "Opening Balance",
+   "description": "Starting cash position used for forecast running balance."
+  },
+  {
+   "fieldname": "total_expected_inflow",
+   "fieldtype": "Currency",
+   "label": "Total Expected Inflow",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_expected_outflow",
+   "fieldtype": "Currency",
+   "label": "Total Expected Outflow",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_cash_flow",
+   "fieldtype": "Currency",
+   "label": "Net Cash Flow",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lowest_projected_balance",
+   "fieldtype": "Currency",
+   "label": "Lowest Projected Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cash_deficit_amount",
+   "fieldtype": "Currency",
+   "label": "Cash Deficit Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cash_risk_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Cash Risk Status",
+   "options": "Green\nYellow\nRed",
+   "read_only": 1,
+   "description": "Deterministic cash risk based on projected balances and deficits."
+  },
+  {
+   "fieldname": "narrative_section",
+   "fieldtype": "Section Break",
+   "label": "Narrative"
+  },
+  {
+   "fieldname": "executive_summary",
+   "fieldtype": "Text",
+   "label": "Executive Summary"
+  },
+  {
+   "fieldname": "key_risks",
+   "fieldtype": "Text",
+   "label": "Key Risks"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Text",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "periods_section",
+   "fieldtype": "Section Break",
+   "label": "Forecast Periods"
+  },
+  {
+   "fieldname": "periods",
+   "fieldtype": "Table",
+   "label": "Periods",
+   "options": "Project Cash Flow Forecast Period"
+  }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
@@ -43,11 +180,43 @@
  "name": "Project Cash Flow Forecast",
  "owner": "Administrator",
  "permissions": [
-  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
-  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Accounts Manager", "share": 1, "write": 1},
-  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Projects Manager", "share": 1, "write": 1}
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "description": "Deterministic project cash flow forecast based on current procurement, IPC, invoice, and retention obligations."
 }

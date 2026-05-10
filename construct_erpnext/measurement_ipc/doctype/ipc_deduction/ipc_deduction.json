@@ -5,13 +5,44 @@
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
- "field_order": ["deduction_type", "description", "amount", "account", "remarks"],
+ "field_order": [
+  "deduction_type",
+  "description",
+  "amount",
+  "account",
+  "remarks"
+ ],
  "fields": [
-  {"fieldname": "deduction_type", "fieldtype": "Select", "in_list_view": 1, "label": "Deduction Type", "options": "Retention\nAdvance Recovery\nPenalty\nWithholding Tax\nOther"},
-  {"fieldname": "description", "fieldtype": "Data", "in_list_view": 1, "label": "Description"},
-  {"fieldname": "amount", "fieldtype": "Currency", "in_list_view": 1, "label": "Amount"},
-  {"fieldname": "account", "fieldtype": "Link", "label": "Account", "options": "Account"},
-  {"fieldname": "remarks", "fieldtype": "Small Text", "label": "Remarks"}
+  {
+   "fieldname": "deduction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Deduction Type",
+   "options": "Retention\nAdvance Recovery\nPenalty\nWithholding Tax\nOther"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
  ],
  "istable": 1,
  "links": [],
@@ -23,5 +54,6 @@
  "permissions": [],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "description": "Explains retention, advance recovery, penalties, withholding, or other deductions on an IPC without creating accounting entries."
 }

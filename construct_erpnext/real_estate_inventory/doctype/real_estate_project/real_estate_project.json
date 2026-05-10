@@ -5,25 +5,127 @@
  "creation": "2026-05-09 00:00:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
- "field_order": ["company", "project", "project_name_ar", "development_type", "status", "location_summary", "area_section", "total_land_area", "total_built_up_area", "counts_section", "total_units", "available_units", "reserved_units", "sold_units", "rented_units", "blocked_units", "remarks"],
+ "field_order": [
+  "company",
+  "project",
+  "project_name_ar",
+  "development_type",
+  "status",
+  "location_summary",
+  "area_section",
+  "total_land_area",
+  "total_built_up_area",
+  "counts_section",
+  "total_units",
+  "available_units",
+  "reserved_units",
+  "sold_units",
+  "rented_units",
+  "blocked_units",
+  "remarks"
+ ],
  "fields": [
-  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
-  {"fieldname": "project", "fieldtype": "Link", "in_list_view": 1, "in_standard_filter": 1, "label": "Project", "options": "Project", "reqd": 1},
-  {"fieldname": "project_name_ar", "fieldtype": "Data", "in_list_view": 1, "label": "Project Name Arabic"},
-  {"fieldname": "development_type", "fieldtype": "Select", "label": "Development Type", "options": "Residential\nCommercial\nMixed Use\nLand Development\nHospitality\nIndustrial\nOther"},
-  {"fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "in_standard_filter": 1, "label": "Status", "options": "Planning\nUnder Construction\nReady for Sale\nReady for Rent\nOperating\nClosed"},
-  {"fieldname": "location_summary", "fieldtype": "Data", "label": "Location Summary"},
-  {"fieldname": "area_section", "fieldtype": "Section Break", "label": "Area"},
-  {"fieldname": "total_land_area", "fieldtype": "Float", "label": "Total Land Area"},
-  {"fieldname": "total_built_up_area", "fieldtype": "Float", "label": "Total Built Up Area"},
-  {"fieldname": "counts_section", "fieldtype": "Section Break", "label": "Unit Counts"},
-  {"fieldname": "total_units", "fieldtype": "Int", "label": "Total Units", "read_only": 1},
-  {"fieldname": "available_units", "fieldtype": "Int", "label": "Available Units", "read_only": 1},
-  {"fieldname": "reserved_units", "fieldtype": "Int", "label": "Reserved Units", "read_only": 1},
-  {"fieldname": "sold_units", "fieldtype": "Int", "label": "Sold Units", "read_only": 1},
-  {"fieldname": "rented_units", "fieldtype": "Int", "label": "Rented Units", "read_only": 1},
-  {"fieldname": "blocked_units", "fieldtype": "Int", "label": "Blocked Units", "read_only": 1},
-  {"fieldname": "remarks", "fieldtype": "Text", "label": "Remarks"}
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_name_ar",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name Arabic"
+  },
+  {
+   "fieldname": "development_type",
+   "fieldtype": "Select",
+   "label": "Development Type",
+   "options": "Residential\nCommercial\nMixed Use\nLand Development\nHospitality\nIndustrial\nOther"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Planning\nUnder Construction\nReady for Sale\nReady for Rent\nOperating\nClosed"
+  },
+  {
+   "fieldname": "location_summary",
+   "fieldtype": "Data",
+   "label": "Location Summary"
+  },
+  {
+   "fieldname": "area_section",
+   "fieldtype": "Section Break",
+   "label": "Area"
+  },
+  {
+   "fieldname": "total_land_area",
+   "fieldtype": "Float",
+   "label": "Total Land Area"
+  },
+  {
+   "fieldname": "total_built_up_area",
+   "fieldtype": "Float",
+   "label": "Total Built Up Area"
+  },
+  {
+   "fieldname": "counts_section",
+   "fieldtype": "Section Break",
+   "label": "Unit Counts"
+  },
+  {
+   "fieldname": "total_units",
+   "fieldtype": "Int",
+   "label": "Total Units",
+   "read_only": 1
+  },
+  {
+   "fieldname": "available_units",
+   "fieldtype": "Int",
+   "label": "Available Units",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reserved_units",
+   "fieldtype": "Int",
+   "label": "Reserved Units",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sold_units",
+   "fieldtype": "Int",
+   "label": "Sold Units",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rented_units",
+   "fieldtype": "Int",
+   "label": "Rented Units",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_units",
+   "fieldtype": "Int",
+   "label": "Blocked Units",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
@@ -33,13 +135,39 @@
  "name": "Real Estate Project",
  "owner": "Administrator",
  "permissions": [
-  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
-  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Projects Manager", "share": 1, "write": 1},
-  {"read": 1, "report": 1, "role": "Sales Manager"}
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager"
+  }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
  "title_field": "project_name_ar",
- "track_changes": 1
+ "track_changes": 1,
+ "description": "Real estate inventory layer linked to an ERPNext Project for buildings, floors, units, and profitability analysis."
 }

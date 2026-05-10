@@ -6,35 +6,172 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "company", "project", "contractor", "construction_boq", "book_number",
-  "measurement_period_start", "measurement_period_end", "workflow_state", "status",
-  "total_entries", "total_current_measured_qty", "total_accepted_qty", "total_measured_amount",
-  "measured_by", "submitted_by", "verified_by", "verified_on", "locked_by", "locked_on",
-  "source", "remarks", "amended_from"
+  "company",
+  "project",
+  "contractor",
+  "construction_boq",
+  "book_number",
+  "measurement_period_start",
+  "measurement_period_end",
+  "workflow_state",
+  "status",
+  "total_entries",
+  "total_current_measured_qty",
+  "total_accepted_qty",
+  "total_measured_amount",
+  "measured_by",
+  "submitted_by",
+  "verified_by",
+  "verified_on",
+  "locked_by",
+  "locked_on",
+  "source",
+  "remarks",
+  "amended_from"
  ],
  "fields": [
-  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
-  {"fieldname": "project", "fieldtype": "Link", "in_list_view": 1, "in_standard_filter": 1, "label": "Project", "options": "Project", "reqd": 1},
-  {"fieldname": "contractor", "fieldtype": "Link", "label": "Contractor", "options": "Supplier"},
-  {"fieldname": "construction_boq", "fieldtype": "Link", "label": "Construction BOQ", "options": "Construction BOQ"},
-  {"fieldname": "book_number", "fieldtype": "Data", "in_list_view": 1, "label": "Book Number", "reqd": 1},
-  {"fieldname": "measurement_period_start", "fieldtype": "Date", "in_list_view": 1, "label": "Measurement Period Start", "reqd": 1},
-  {"fieldname": "measurement_period_end", "fieldtype": "Date", "in_list_view": 1, "label": "Measurement Period End", "reqd": 1},
-  {"fieldname": "workflow_state", "fieldtype": "Select", "in_standard_filter": 1, "label": "Workflow State", "options": "Draft\nSubmitted\nUnder Verification\nVerified\nLocked\nCancelled"},
-  {"fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "in_standard_filter": 1, "label": "Status", "options": "Draft\nSubmitted\nUnder Verification\nVerified\nLocked\nCancelled"},
-  {"fieldname": "total_entries", "fieldtype": "Int", "label": "Total Entries", "read_only": 1},
-  {"fieldname": "total_current_measured_qty", "fieldtype": "Float", "label": "Total Current Measured Qty", "read_only": 1},
-  {"fieldname": "total_accepted_qty", "fieldtype": "Float", "label": "Total Accepted Qty", "read_only": 1},
-  {"fieldname": "total_measured_amount", "fieldtype": "Currency", "label": "Total Measured Amount", "read_only": 1},
-  {"fieldname": "measured_by", "fieldtype": "Link", "label": "Measured By", "options": "User"},
-  {"fieldname": "submitted_by", "fieldtype": "Link", "label": "Submitted By", "options": "User"},
-  {"fieldname": "verified_by", "fieldtype": "Link", "label": "Verified By", "options": "User"},
-  {"fieldname": "verified_on", "fieldtype": "Datetime", "label": "Verified On"},
-  {"fieldname": "locked_by", "fieldtype": "Link", "label": "Locked By", "options": "User"},
-  {"fieldname": "locked_on", "fieldtype": "Datetime", "label": "Locked On"},
-  {"fieldname": "source", "fieldtype": "Select", "label": "Source", "options": "Manual Entry\nField Entry\nMobile Sync\nImported"},
-  {"fieldname": "remarks", "fieldtype": "Text", "label": "Remarks"},
-  {"fieldname": "amended_from", "fieldtype": "Link", "label": "Amended From", "options": "Measurement Book", "read_only": 1}
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "label": "Contractor",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "construction_boq",
+   "fieldtype": "Link",
+   "label": "Construction BOQ",
+   "options": "Construction BOQ"
+  },
+  {
+   "fieldname": "book_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Book Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "measurement_period_start",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Measurement Period Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "measurement_period_end",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Measurement Period End",
+   "reqd": 1
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Workflow State",
+   "options": "Draft\nSubmitted\nUnder Verification\nVerified\nLocked\nCancelled"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nUnder Verification\nVerified\nLocked\nCancelled",
+   "description": "Operational status for measurement verification before IPC generation."
+  },
+  {
+   "fieldname": "total_entries",
+   "fieldtype": "Int",
+   "label": "Total Entries",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_current_measured_qty",
+   "fieldtype": "Float",
+   "label": "Total Current Measured Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_accepted_qty",
+   "fieldtype": "Float",
+   "label": "Total Accepted Qty",
+   "read_only": 1,
+   "description": "Sum of accepted quantities from linked measurement entries."
+  },
+  {
+   "fieldname": "total_measured_amount",
+   "fieldtype": "Currency",
+   "label": "Total Measured Amount",
+   "read_only": 1,
+   "description": "Sum of measured amounts from linked measurement entries."
+  },
+  {
+   "fieldname": "measured_by",
+   "fieldtype": "Link",
+   "label": "Measured By",
+   "options": "User"
+  },
+  {
+   "fieldname": "submitted_by",
+   "fieldtype": "Link",
+   "label": "Submitted By",
+   "options": "User"
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Link",
+   "label": "Verified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "verified_on",
+   "fieldtype": "Datetime",
+   "label": "Verified On"
+  },
+  {
+   "fieldname": "locked_by",
+   "fieldtype": "Link",
+   "label": "Locked By",
+   "options": "User"
+  },
+  {
+   "fieldname": "locked_on",
+   "fieldtype": "Datetime",
+   "label": "Locked On"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "Manual Entry\nField Entry\nMobile Sync\nImported"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Measurement Book",
+   "read_only": 1
+  }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
@@ -46,12 +183,46 @@
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
-  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "submit": 1, "write": 1},
-  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Construction Manager", "share": 1, "submit": 1, "write": 1},
-  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Budget Controller", "share": 1, "write": 1}
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Construction Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Budget Controller",
+   "share": 1,
+   "write": 1
+  }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1
+ "track_changes": 1,
+ "description": "Groups verified field measurements for a project, contractor, BOQ, and period before IPC generation."
 }

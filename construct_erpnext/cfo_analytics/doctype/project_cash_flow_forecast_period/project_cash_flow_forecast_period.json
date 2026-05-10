@@ -5,41 +5,188 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "period_start", "period_end", "period_label",
-  "inflow_section", "expected_sales_inflow", "expected_rent_inflow", "expected_other_inflow", "total_inflow",
-  "outflow_section", "purchase_order_outflow", "purchase_invoice_outflow", "ipc_outflow", "retention_release_outflow", "advance_outflow", "other_outflow", "total_outflow",
-  "balance_section", "net_cash_flow", "running_balance", "cash_deficit", "deficit_amount",
-  "source_section", "purchase_order_count", "purchase_invoice_count", "ipc_count", "retention_count",
+  "period_start",
+  "period_end",
+  "period_label",
+  "inflow_section",
+  "expected_sales_inflow",
+  "expected_rent_inflow",
+  "expected_other_inflow",
+  "total_inflow",
+  "outflow_section",
+  "purchase_order_outflow",
+  "purchase_invoice_outflow",
+  "ipc_outflow",
+  "retention_release_outflow",
+  "advance_outflow",
+  "other_outflow",
+  "total_outflow",
+  "balance_section",
+  "net_cash_flow",
+  "running_balance",
+  "cash_deficit",
+  "deficit_amount",
+  "source_section",
+  "purchase_order_count",
+  "purchase_invoice_count",
+  "ipc_count",
+  "retention_count",
   "remarks"
  ],
  "fields": [
-  {"fieldname": "period_start", "fieldtype": "Date", "in_list_view": 1, "label": "Period Start"},
-  {"fieldname": "period_end", "fieldtype": "Date", "in_list_view": 1, "label": "Period End"},
-  {"fieldname": "period_label", "fieldtype": "Data", "in_list_view": 1, "label": "Period"},
-  {"fieldname": "inflow_section", "fieldtype": "Section Break", "label": "Inflows"},
-  {"default": "0", "fieldname": "expected_sales_inflow", "fieldtype": "Currency", "label": "Expected Sales Inflow"},
-  {"default": "0", "fieldname": "expected_rent_inflow", "fieldtype": "Currency", "label": "Expected Rent Inflow"},
-  {"default": "0", "fieldname": "expected_other_inflow", "fieldtype": "Currency", "label": "Expected Other Inflow"},
-  {"fieldname": "total_inflow", "fieldtype": "Currency", "label": "Total Inflow", "read_only": 1},
-  {"fieldname": "outflow_section", "fieldtype": "Section Break", "label": "Outflows"},
-  {"default": "0", "fieldname": "purchase_order_outflow", "fieldtype": "Currency", "label": "Purchase Order Outflow"},
-  {"default": "0", "fieldname": "purchase_invoice_outflow", "fieldtype": "Currency", "label": "Purchase Invoice Outflow"},
-  {"default": "0", "fieldname": "ipc_outflow", "fieldtype": "Currency", "label": "IPC Outflow"},
-  {"default": "0", "fieldname": "retention_release_outflow", "fieldtype": "Currency", "label": "Retention Release Outflow"},
-  {"default": "0", "fieldname": "advance_outflow", "fieldtype": "Currency", "label": "Advance Outflow"},
-  {"default": "0", "fieldname": "other_outflow", "fieldtype": "Currency", "label": "Other Outflow"},
-  {"fieldname": "total_outflow", "fieldtype": "Currency", "label": "Total Outflow", "read_only": 1},
-  {"fieldname": "balance_section", "fieldtype": "Section Break", "label": "Balance"},
-  {"fieldname": "net_cash_flow", "fieldtype": "Currency", "label": "Net Cash Flow", "read_only": 1},
-  {"fieldname": "running_balance", "fieldtype": "Currency", "label": "Running Balance", "read_only": 1},
-  {"fieldname": "cash_deficit", "fieldtype": "Check", "label": "Cash Deficit", "read_only": 1},
-  {"fieldname": "deficit_amount", "fieldtype": "Currency", "label": "Deficit Amount", "read_only": 1},
-  {"fieldname": "source_section", "fieldtype": "Section Break", "label": "Source Counts"},
-  {"fieldname": "purchase_order_count", "fieldtype": "Int", "label": "Purchase Order Count"},
-  {"fieldname": "purchase_invoice_count", "fieldtype": "Int", "label": "Purchase Invoice Count"},
-  {"fieldname": "ipc_count", "fieldtype": "Int", "label": "IPC Count"},
-  {"fieldname": "retention_count", "fieldtype": "Int", "label": "Retention Count"},
-  {"fieldname": "remarks", "fieldtype": "Small Text", "label": "Remarks"}
+  {
+   "fieldname": "period_start",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Period Start"
+  },
+  {
+   "fieldname": "period_end",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Period End"
+  },
+  {
+   "fieldname": "period_label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Period"
+  },
+  {
+   "fieldname": "inflow_section",
+   "fieldtype": "Section Break",
+   "label": "Inflows"
+  },
+  {
+   "default": "0",
+   "fieldname": "expected_sales_inflow",
+   "fieldtype": "Currency",
+   "label": "Expected Sales Inflow"
+  },
+  {
+   "default": "0",
+   "fieldname": "expected_rent_inflow",
+   "fieldtype": "Currency",
+   "label": "Expected Rent Inflow"
+  },
+  {
+   "default": "0",
+   "fieldname": "expected_other_inflow",
+   "fieldtype": "Currency",
+   "label": "Expected Other Inflow"
+  },
+  {
+   "fieldname": "total_inflow",
+   "fieldtype": "Currency",
+   "label": "Total Inflow",
+   "read_only": 1
+  },
+  {
+   "fieldname": "outflow_section",
+   "fieldtype": "Section Break",
+   "label": "Outflows"
+  },
+  {
+   "default": "0",
+   "fieldname": "purchase_order_outflow",
+   "fieldtype": "Currency",
+   "label": "Purchase Order Outflow"
+  },
+  {
+   "default": "0",
+   "fieldname": "purchase_invoice_outflow",
+   "fieldtype": "Currency",
+   "label": "Purchase Invoice Outflow"
+  },
+  {
+   "default": "0",
+   "fieldname": "ipc_outflow",
+   "fieldtype": "Currency",
+   "label": "IPC Outflow"
+  },
+  {
+   "default": "0",
+   "fieldname": "retention_release_outflow",
+   "fieldtype": "Currency",
+   "label": "Retention Release Outflow"
+  },
+  {
+   "default": "0",
+   "fieldname": "advance_outflow",
+   "fieldtype": "Currency",
+   "label": "Advance Outflow"
+  },
+  {
+   "default": "0",
+   "fieldname": "other_outflow",
+   "fieldtype": "Currency",
+   "label": "Other Outflow"
+  },
+  {
+   "fieldname": "total_outflow",
+   "fieldtype": "Currency",
+   "label": "Total Outflow",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance_section",
+   "fieldtype": "Section Break",
+   "label": "Balance"
+  },
+  {
+   "fieldname": "net_cash_flow",
+   "fieldtype": "Currency",
+   "label": "Net Cash Flow",
+   "read_only": 1
+  },
+  {
+   "fieldname": "running_balance",
+   "fieldtype": "Currency",
+   "label": "Running Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cash_deficit",
+   "fieldtype": "Check",
+   "label": "Cash Deficit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deficit_amount",
+   "fieldtype": "Currency",
+   "label": "Deficit Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source Counts"
+  },
+  {
+   "fieldname": "purchase_order_count",
+   "fieldtype": "Int",
+   "label": "Purchase Order Count"
+  },
+  {
+   "fieldname": "purchase_invoice_count",
+   "fieldtype": "Int",
+   "label": "Purchase Invoice Count"
+  },
+  {
+   "fieldname": "ipc_count",
+   "fieldtype": "Int",
+   "label": "IPC Count"
+  },
+  {
+   "fieldname": "retention_count",
+   "fieldtype": "Int",
+   "label": "Retention Count"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
  ],
  "istable": 1,
  "modified": "2026-05-09 00:00:00.000000",
@@ -50,5 +197,6 @@
  "permissions": [],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "description": "Period-level cash flow row showing inflows, outflows, net movement, running balance, and source counts."
 }

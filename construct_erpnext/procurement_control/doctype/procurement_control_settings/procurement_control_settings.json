@@ -87,5 +87,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "description": "Controls BOQ work item synchronization, procurement warnings, and optional budget blocking behavior."
 }

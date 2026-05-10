@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"psw_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Procurement & Site Warehouses</b></span>\",\"col\":12}},{\"id\":\"psw_c0\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement Control\",\"col\":3}},{\"id\":\"psw_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Site Materials\",\"col\":3}},{\"id\":\"psw_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement Documents\",\"col\":3}},{\"id\":\"psw_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement Reports\",\"col\":3}}]",
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Procurement & Site Warehouses</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement Controls\",\"col\":3}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement Documents\",\"col\":3}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Stock & Site Warehouses\",\"col\":3}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement Reports\",\"col\":3}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,25 +13,178 @@
  "is_hidden": 0,
  "label": "Procurement & Site Warehouses",
  "links": [
-  {"hidden": 0, "is_query_report": 0, "label": "Procurement Control", "link_count": 0, "onboard": 0, "type": "Card Break"},
-  {"hidden": 0, "is_query_report": 0, "label": "Procurement Control Settings", "link_count": 0, "link_to": "Procurement Control Settings", "link_type": "DocType", "onboard": 1, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Construction Work Item", "link_count": 0, "link_to": "Construction Work Item", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Site Materials", "link_count": 0, "onboard": 0, "type": "Card Break"},
-  {"hidden": 0, "is_query_report": 0, "label": "Warehouse", "link_count": 0, "link_to": "Warehouse", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Material Distribution", "link_count": 0, "link_to": "Material Distribution", "link_type": "DocType", "onboard": 1, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Insumo", "link_count": 0, "link_to": "Insumo", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Insumo Price Scenario", "link_count": 0, "link_to": "Insumo Price Scenario", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Stock Entry", "link_count": 0, "link_to": "Stock Entry", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Procurement Documents", "link_count": 0, "onboard": 0, "type": "Card Break"},
-  {"hidden": 0, "is_query_report": 0, "label": "Material Request", "link_count": 0, "link_to": "Material Request", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Purchase Order", "link_count": 0, "link_to": "Purchase Order", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Purchase Receipt", "link_count": 0, "link_to": "Purchase Receipt", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Purchase Invoice", "link_count": 0, "link_to": "Purchase Invoice", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Procurement Reports", "link_count": 0, "onboard": 0, "type": "Card Break"},
-  {"hidden": 0, "is_query_report": 1, "label": "Work Item Procurement Summary", "link_count": 0, "link_to": "Work Item Procurement Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "BOQ Procurement Pipeline", "link_count": 0, "link_to": "BOQ Procurement Pipeline", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Site Warehouse Consumption", "link_count": 0, "link_to": "Site Warehouse Consumption", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Procurement Budget Control", "link_count": 0, "link_to": "Procurement Budget Control", "link_type": "Report", "onboard": 0, "type": "Link"}
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Procurement Controls",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Procurement Control Settings",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Procurement Control Settings",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Material Distribution",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Material Distribution",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Insumo",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Insumo",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Insumo Price Scenario",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Insumo Price Scenario",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Procurement Documents",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Material Request",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Material Request",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Order",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Purchase Order",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Receipt",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Purchase Receipt",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Invoice",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock & Site Warehouses",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Warehouse",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Warehouse",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Entry",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Stock Entry",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Procurement Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Work Item Procurement Summary",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Work Item Procurement Summary",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "BOQ Procurement Pipeline",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "BOQ Procurement Pipeline",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Site Warehouse Consumption",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Site Warehouse Consumption",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Procurement Budget Control",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Procurement Budget Control",
+   "link_type": "Report"
+  }
  ],
  "modified": "2026-05-09 17:20:00.000000",
  "modified_by": "Administrator",

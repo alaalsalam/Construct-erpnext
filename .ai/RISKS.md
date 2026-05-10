@@ -73,3 +73,6 @@ Updated risks:
 - End-to-end traceability validation confirmed historical submitted GL rows such as MAT-STE-2026-00001 remain blank for new dimensions because they predate Accounting Dimension activation.
 - Unit dimension exists for future GL traceability, but real Unit GL validation remains pending until Sales/Rental or another approved unit-specific accounting flow creates legitimate postings.
 - ACC-PINV-2026-00002 remains Draft because Invoice Authorization is active and must not be bypassed; Payment Entry validation remains blocked until normal Purchase Invoice authorization/submission is completed.
+- Full Arabic browser-level UX should be reviewed in an Arabic-language user session before a client presentation; current readiness provides translation entries and Arabic presentation guidance.
+- Executive Number Cards and Dashboard Charts are intentionally deferred until CFO KPI definitions and thresholds are approved; existing reports are the reliable presentation layer for now.
+- Product readiness workspace sync updates product-facing Workspace records during migration; future workspace edits should keep JSON and the sync helper aligned.

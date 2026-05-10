@@ -128,5 +128,6 @@
  "sort_order": "DESC",
  "states": [],
  "title_field": "wbs_name",
- "track_changes": 1
+ "track_changes": 1,
+ "description": "Project work breakdown element used to organize BOQ lines, work items, procurement, and measurement by execution structure."
 }

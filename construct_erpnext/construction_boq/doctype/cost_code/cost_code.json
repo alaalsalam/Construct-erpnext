@@ -110,5 +110,6 @@
  "sort_order": "DESC",
  "states": [],
  "title_field": "cost_code_name",
- "track_changes": 1
+ "track_changes": 1,
+ "description": "Master classification for construction cost categories used in BOQ, procurement, measurement, IPC, and financial traceability."
 }

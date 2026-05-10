@@ -5,30 +5,181 @@
  "creation": "2026-05-09 00:00:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
- "field_order": ["company", "project", "contractor", "subcontract", "account_name", "status", "retention_percent_default", "advance_limit", "summary_section", "current_advance_balance", "total_certified_amount", "total_retention_held", "total_retention_released", "total_advance_paid", "total_advance_recovered", "total_deductions", "total_invoiced_amount", "total_paid_amount", "outstanding_balance", "last_ipc", "last_transaction_date", "remarks"],
+ "field_order": [
+  "company",
+  "project",
+  "contractor",
+  "subcontract",
+  "account_name",
+  "status",
+  "retention_percent_default",
+  "advance_limit",
+  "summary_section",
+  "current_advance_balance",
+  "total_certified_amount",
+  "total_retention_held",
+  "total_retention_released",
+  "total_advance_paid",
+  "total_advance_recovered",
+  "total_deductions",
+  "total_invoiced_amount",
+  "total_paid_amount",
+  "outstanding_balance",
+  "last_ipc",
+  "last_transaction_date",
+  "remarks"
+ ],
  "fields": [
-  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
-  {"fieldname": "project", "fieldtype": "Link", "in_list_view": 1, "in_standard_filter": 1, "label": "Project", "options": "Project", "reqd": 1},
-  {"fieldname": "contractor", "fieldtype": "Link", "in_list_view": 1, "in_standard_filter": 1, "label": "Contractor", "options": "Supplier", "reqd": 1},
-  {"fieldname": "subcontract", "fieldtype": "Link", "label": "Subcontract", "options": "Subcontract"},
-  {"fieldname": "account_name", "fieldtype": "Data", "in_list_view": 1, "label": "Account Name"},
-  {"default": "Active", "fieldname": "status", "fieldtype": "Select", "in_standard_filter": 1, "label": "Status", "options": "Active\nSuspended\nClosed"},
-  {"default": "10", "fieldname": "retention_percent_default", "fieldtype": "Percent", "label": "Retention Percent Default"},
-  {"fieldname": "advance_limit", "fieldtype": "Currency", "label": "Advance Limit"},
-  {"fieldname": "summary_section", "fieldtype": "Section Break", "label": "Financial Summary"},
-  {"default": "0", "fieldname": "current_advance_balance", "fieldtype": "Currency", "label": "Current Advance Balance", "read_only": 1},
-  {"default": "0", "fieldname": "total_certified_amount", "fieldtype": "Currency", "label": "Total Certified Amount", "read_only": 1},
-  {"default": "0", "fieldname": "total_retention_held", "fieldtype": "Currency", "label": "Total Retention Held", "read_only": 1},
-  {"default": "0", "fieldname": "total_retention_released", "fieldtype": "Currency", "label": "Total Retention Released", "read_only": 1},
-  {"default": "0", "fieldname": "total_advance_paid", "fieldtype": "Currency", "label": "Total Advance Paid", "read_only": 1},
-  {"default": "0", "fieldname": "total_advance_recovered", "fieldtype": "Currency", "label": "Total Advance Recovered", "read_only": 1},
-  {"default": "0", "fieldname": "total_deductions", "fieldtype": "Currency", "label": "Total Deductions", "read_only": 1},
-  {"default": "0", "fieldname": "total_invoiced_amount", "fieldtype": "Currency", "label": "Total Invoiced Amount", "read_only": 1},
-  {"default": "0", "fieldname": "total_paid_amount", "fieldtype": "Currency", "label": "Total Paid Amount", "read_only": 1},
-  {"default": "0", "fieldname": "outstanding_balance", "fieldtype": "Currency", "label": "Outstanding Balance", "read_only": 1},
-  {"fieldname": "last_ipc", "fieldtype": "Link", "label": "Last IPC", "options": "Interim Payment Certificate", "read_only": 1},
-  {"fieldname": "last_transaction_date", "fieldtype": "Date", "label": "Last Transaction Date", "read_only": 1},
-  {"fieldname": "remarks", "fieldtype": "Text", "label": "Remarks"}
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Contractor",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subcontract",
+   "fieldtype": "Link",
+   "label": "Subcontract",
+   "options": "Subcontract"
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Account Name"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nSuspended\nClosed"
+  },
+  {
+   "default": "10",
+   "fieldname": "retention_percent_default",
+   "fieldtype": "Percent",
+   "label": "Retention Percent Default"
+  },
+  {
+   "fieldname": "advance_limit",
+   "fieldtype": "Currency",
+   "label": "Advance Limit"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Summary"
+  },
+  {
+   "default": "0",
+   "fieldname": "current_advance_balance",
+   "fieldtype": "Currency",
+   "label": "Current Advance Balance",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_certified_amount",
+   "fieldtype": "Currency",
+   "label": "Total Certified Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_retention_held",
+   "fieldtype": "Currency",
+   "label": "Total Retention Held",
+   "read_only": 1,
+   "description": "Total retention held through IPC control records."
+  },
+  {
+   "default": "0",
+   "fieldname": "total_retention_released",
+   "fieldtype": "Currency",
+   "label": "Total Retention Released",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_advance_paid",
+   "fieldtype": "Currency",
+   "label": "Total Advance Paid",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_advance_recovered",
+   "fieldtype": "Currency",
+   "label": "Total Advance Recovered",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_deductions",
+   "fieldtype": "Currency",
+   "label": "Total Deductions",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_invoiced_amount",
+   "fieldtype": "Currency",
+   "label": "Total Invoiced Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Total Paid Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "outstanding_balance",
+   "fieldtype": "Currency",
+   "label": "Outstanding Balance",
+   "read_only": 1,
+   "description": "Operational outstanding balance after certified, retained, invoiced, and paid amounts."
+  },
+  {
+   "fieldname": "last_ipc",
+   "fieldtype": "Link",
+   "label": "Last IPC",
+   "options": "Interim Payment Certificate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_transaction_date",
+   "fieldtype": "Date",
+   "label": "Last Transaction Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
@@ -38,11 +189,41 @@
  "name": "Contractor Account",
  "owner": "Administrator",
  "permissions": [
-  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
-  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Projects Manager", "share": 1, "write": 1},
-  {"email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Accounts Manager", "share": 1}
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1
+  }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "description": "Operational financial control profile for contractor exposure by project and optional subcontract."
 }

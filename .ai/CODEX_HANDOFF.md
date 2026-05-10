@@ -229,4 +229,15 @@ End-to-end traceability validation status:
 - Traceability reports load and degrade gracefully for historical blank GL dimensions.
 - No submitted documents were amended, no broad GL backfill was run, and no Reservation/Sales/Rental DocTypes were created.
 
+Product readiness and bilingual UX status:
+- Branch: feature/product-readiness-bilingual-ux.
+- Arabic translations: construct_erpnext/translations/ar.csv.
+- Product workspace readiness sync: construct_erpnext.setup.product_readiness.sync_product_workspace_readiness.
+- Client presentation guide: .ai/CLIENT_PRESENTATION_WALKTHROUGH.md.
+- Readiness checklist: .ai/PRODUCT_READINESS_CHECKLIST.md.
+- Custom report labels in completed modules use Frappe translation wrappers.
+- Product-facing workspaces are grouped for presentation and daily operations.
+- Sales & Rental remains a placeholder; no Reservation, Sales Contract, Lease Contract, CRM Matching, Portal feature, accounting document, submitted-document amendment, or GL backfill was created.
+- Dashboard cards/charts are deferred until KPI sign-off; use Executive Control Center reports for presentation.
+
 Next operational task: Design and implement Unit Reservation foundation.

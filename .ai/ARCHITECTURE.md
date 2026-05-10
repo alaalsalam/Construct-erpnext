@@ -300,6 +300,34 @@ Reports:
 - Cost Code Financial Analysis
 - Project Unit Cost Matrix
 
+## Product Readiness And Bilingual UX
+
+Readiness polish completed before Reservation, Sales, and Rental development.
+
+Design principles:
+
+- English remains the source language for DocType labels, report labels, workspace names, and technical metadata.
+- Arabic UX is provided through construct_erpnext/translations/ar.csv.
+- Arabic operational records are retained because they are client-facing implementation data.
+- Product workspaces are grouped by process sequence for presentation and daily use.
+- Dashboard readiness uses existing reliable reports rather than creating unapproved Number Cards or charts.
+
+Readiness artifacts:
+
+- .ai/CLIENT_PRESENTATION_WALKTHROUGH.md
+- .ai/PRODUCT_READINESS_CHECKLIST.md
+
+Product workspace readiness:
+
+- Executive Control Center groups Financial Snapshot, Cash Flow Forecast, EVM Metrics, Contractor Exposure, Unit Profitability, and Project Performance Reports.
+- Construction Control groups BOQ/Work Items, Budget/Schedule, Progress/Site Cost, and Financial Traceability.
+- Procurement & Site Warehouses groups controls, procurement documents, stock/site warehouses, and procurement reports.
+- Measurement & IPC groups Measurement, IPC Certification, Traceability, and Reports.
+- Contractor Management groups Contractor Control, Retention/Advances, Guarantees, and Contractor Reports.
+- Real Estate Inventory groups Inventory Structure, Ownership, Unit Costing, and Unit Reports.
+- Reports & Analytics groups reports by Construction, Procurement, Measurement & IPC, Contractor, CFO, Real Estate Inventory, Unit Profitability, and Financial Dimensions.
+- Sales & Rental remains a clear placeholder until the next phases.
+
 ## Role-Oriented Navigation
 
 - Executive / CFO: Executive Control Center, Reports & Analytics, selected Finance records.

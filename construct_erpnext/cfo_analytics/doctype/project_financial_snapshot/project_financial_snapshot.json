@@ -6,60 +6,320 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "company", "project", "snapshot_date", "snapshot_title", "status",
-  "budget_section", "boq_total_amount", "boq_material_amount", "boq_labor_amount", "boq_equipment_amount", "boq_subcontract_amount", "boq_overhead_amount",
-  "procurement_section", "requested_amount", "committed_amount", "received_amount", "procurement_invoiced_amount", "consumed_amount",
-  "measurement_section", "measured_amount", "measured_progress_percent",
-  "certification_section", "certified_gross_amount", "certified_net_amount", "retention_held_amount", "retention_released_amount", "contractor_outstanding_amount", "contractor_paid_amount",
-  "variance_section", "budget_vs_committed_variance", "budget_vs_invoiced_variance", "budget_vs_certified_variance", "consumed_vs_measured_variance",
-  "indicator_section", "procurement_progress_percent", "measurement_progress_percent", "certification_progress_percent", "cost_risk_status", "cash_risk_status", "overall_status",
-  "narrative_section", "executive_summary", "key_risks", "recommendations"
+  "company",
+  "project",
+  "snapshot_date",
+  "snapshot_title",
+  "status",
+  "budget_section",
+  "boq_total_amount",
+  "boq_material_amount",
+  "boq_labor_amount",
+  "boq_equipment_amount",
+  "boq_subcontract_amount",
+  "boq_overhead_amount",
+  "procurement_section",
+  "requested_amount",
+  "committed_amount",
+  "received_amount",
+  "procurement_invoiced_amount",
+  "consumed_amount",
+  "measurement_section",
+  "measured_amount",
+  "measured_progress_percent",
+  "certification_section",
+  "certified_gross_amount",
+  "certified_net_amount",
+  "retention_held_amount",
+  "retention_released_amount",
+  "contractor_outstanding_amount",
+  "contractor_paid_amount",
+  "variance_section",
+  "budget_vs_committed_variance",
+  "budget_vs_invoiced_variance",
+  "budget_vs_certified_variance",
+  "consumed_vs_measured_variance",
+  "indicator_section",
+  "procurement_progress_percent",
+  "measurement_progress_percent",
+  "certification_progress_percent",
+  "cost_risk_status",
+  "cash_risk_status",
+  "overall_status",
+  "narrative_section",
+  "executive_summary",
+  "key_risks",
+  "recommendations"
  ],
  "fields": [
-  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
-  {"fieldname": "project", "fieldtype": "Link", "in_list_view": 1, "in_standard_filter": 1, "label": "Project", "options": "Project", "reqd": 1},
-  {"default": "Today", "fieldname": "snapshot_date", "fieldtype": "Date", "in_list_view": 1, "label": "Snapshot Date", "reqd": 1},
-  {"fieldname": "snapshot_title", "fieldtype": "Data", "in_list_view": 1, "label": "Snapshot Title"},
-  {"default": "Draft", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Draft\nGenerated\nReviewed\nArchived"},
-  {"fieldname": "budget_section", "fieldtype": "Section Break", "label": "Budget / BOQ"},
-  {"fieldname": "boq_total_amount", "fieldtype": "Currency", "label": "BOQ Total Amount", "read_only": 1},
-  {"fieldname": "boq_material_amount", "fieldtype": "Currency", "label": "BOQ Material Amount", "read_only": 1},
-  {"fieldname": "boq_labor_amount", "fieldtype": "Currency", "label": "BOQ Labor Amount", "read_only": 1},
-  {"fieldname": "boq_equipment_amount", "fieldtype": "Currency", "label": "BOQ Equipment Amount", "read_only": 1},
-  {"fieldname": "boq_subcontract_amount", "fieldtype": "Currency", "label": "BOQ Subcontract Amount", "read_only": 1},
-  {"fieldname": "boq_overhead_amount", "fieldtype": "Currency", "label": "BOQ Overhead Amount", "read_only": 1},
-  {"fieldname": "procurement_section", "fieldtype": "Section Break", "label": "Procurement"},
-  {"fieldname": "requested_amount", "fieldtype": "Currency", "label": "Requested Amount", "read_only": 1},
-  {"fieldname": "committed_amount", "fieldtype": "Currency", "label": "Committed Amount", "read_only": 1},
-  {"fieldname": "received_amount", "fieldtype": "Currency", "label": "Received Amount", "read_only": 1},
-  {"fieldname": "procurement_invoiced_amount", "fieldtype": "Currency", "label": "Procurement Invoiced Amount", "read_only": 1},
-  {"fieldname": "consumed_amount", "fieldtype": "Currency", "label": "Consumed Amount", "read_only": 1},
-  {"fieldname": "measurement_section", "fieldtype": "Section Break", "label": "Measurement"},
-  {"fieldname": "measured_amount", "fieldtype": "Currency", "label": "Measured Amount", "read_only": 1},
-  {"fieldname": "measured_progress_percent", "fieldtype": "Percent", "label": "Measured Progress Percent", "read_only": 1},
-  {"fieldname": "certification_section", "fieldtype": "Section Break", "label": "Certification / IPC"},
-  {"fieldname": "certified_gross_amount", "fieldtype": "Currency", "label": "Certified Gross Amount", "read_only": 1},
-  {"fieldname": "certified_net_amount", "fieldtype": "Currency", "label": "Certified Net Amount", "read_only": 1},
-  {"fieldname": "retention_held_amount", "fieldtype": "Currency", "label": "Retention Held Amount", "read_only": 1},
-  {"fieldname": "retention_released_amount", "fieldtype": "Currency", "label": "Retention Released Amount", "read_only": 1},
-  {"fieldname": "contractor_outstanding_amount", "fieldtype": "Currency", "label": "Contractor Outstanding Amount", "read_only": 1},
-  {"fieldname": "contractor_paid_amount", "fieldtype": "Currency", "label": "Contractor Paid Amount", "read_only": 1},
-  {"fieldname": "variance_section", "fieldtype": "Section Break", "label": "Variance"},
-  {"fieldname": "budget_vs_committed_variance", "fieldtype": "Currency", "label": "Budget vs Committed Variance", "read_only": 1},
-  {"fieldname": "budget_vs_invoiced_variance", "fieldtype": "Currency", "label": "Budget vs Invoiced Variance", "read_only": 1},
-  {"fieldname": "budget_vs_certified_variance", "fieldtype": "Currency", "label": "Budget vs Certified Variance", "read_only": 1},
-  {"fieldname": "consumed_vs_measured_variance", "fieldtype": "Currency", "label": "Consumed vs Measured Variance", "read_only": 1},
-  {"fieldname": "indicator_section", "fieldtype": "Section Break", "label": "Progress / Indicators"},
-  {"fieldname": "procurement_progress_percent", "fieldtype": "Percent", "label": "Procurement Progress Percent", "read_only": 1},
-  {"fieldname": "measurement_progress_percent", "fieldtype": "Percent", "label": "Measurement Progress Percent", "read_only": 1},
-  {"fieldname": "certification_progress_percent", "fieldtype": "Percent", "label": "Certification Progress Percent", "read_only": 1},
-  {"fieldname": "cost_risk_status", "fieldtype": "Select", "label": "Cost Risk Status", "options": "Green\nYellow\nRed", "read_only": 1},
-  {"fieldname": "cash_risk_status", "fieldtype": "Select", "label": "Cash Risk Status", "options": "Green\nYellow\nRed", "read_only": 1},
-  {"fieldname": "overall_status", "fieldtype": "Select", "in_list_view": 1, "label": "Overall Status", "options": "On Track\nWatch\nAt Risk", "read_only": 1},
-  {"fieldname": "narrative_section", "fieldtype": "Section Break", "label": "Narrative"},
-  {"fieldname": "executive_summary", "fieldtype": "Text", "label": "Executive Summary"},
-  {"fieldname": "key_risks", "fieldtype": "Text", "label": "Key Risks"},
-  {"fieldname": "recommendations", "fieldtype": "Text", "label": "Recommendations"}
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "snapshot_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Snapshot Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "snapshot_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Snapshot Title"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nGenerated\nReviewed\nArchived"
+  },
+  {
+   "fieldname": "budget_section",
+   "fieldtype": "Section Break",
+   "label": "Budget / BOQ"
+  },
+  {
+   "fieldname": "boq_total_amount",
+   "fieldtype": "Currency",
+   "label": "BOQ Total Amount",
+   "read_only": 1,
+   "description": "Current planned project value from BOQ/Work Items."
+  },
+  {
+   "fieldname": "boq_material_amount",
+   "fieldtype": "Currency",
+   "label": "BOQ Material Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "boq_labor_amount",
+   "fieldtype": "Currency",
+   "label": "BOQ Labor Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "boq_equipment_amount",
+   "fieldtype": "Currency",
+   "label": "BOQ Equipment Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "boq_subcontract_amount",
+   "fieldtype": "Currency",
+   "label": "BOQ Subcontract Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "boq_overhead_amount",
+   "fieldtype": "Currency",
+   "label": "BOQ Overhead Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "procurement_section",
+   "fieldtype": "Section Break",
+   "label": "Procurement"
+  },
+  {
+   "fieldname": "requested_amount",
+   "fieldtype": "Currency",
+   "label": "Requested Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "committed_amount",
+   "fieldtype": "Currency",
+   "label": "Committed Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "received_amount",
+   "fieldtype": "Currency",
+   "label": "Received Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "procurement_invoiced_amount",
+   "fieldtype": "Currency",
+   "label": "Procurement Invoiced Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "consumed_amount",
+   "fieldtype": "Currency",
+   "label": "Consumed Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "measurement_section",
+   "fieldtype": "Section Break",
+   "label": "Measurement"
+  },
+  {
+   "fieldname": "measured_amount",
+   "fieldtype": "Currency",
+   "label": "Measured Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "measured_progress_percent",
+   "fieldtype": "Percent",
+   "label": "Measured Progress Percent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "certification_section",
+   "fieldtype": "Section Break",
+   "label": "Certification / IPC"
+  },
+  {
+   "fieldname": "certified_gross_amount",
+   "fieldtype": "Currency",
+   "label": "Certified Gross Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "certified_net_amount",
+   "fieldtype": "Currency",
+   "label": "Certified Net Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "retention_held_amount",
+   "fieldtype": "Currency",
+   "label": "Retention Held Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "retention_released_amount",
+   "fieldtype": "Currency",
+   "label": "Retention Released Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contractor_outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Contractor Outstanding Amount",
+   "read_only": 1,
+   "description": "Operational contractor outstanding exposure from Contractor Accounts."
+  },
+  {
+   "fieldname": "contractor_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Contractor Paid Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "variance_section",
+   "fieldtype": "Section Break",
+   "label": "Variance"
+  },
+  {
+   "fieldname": "budget_vs_committed_variance",
+   "fieldtype": "Currency",
+   "label": "Budget vs Committed Variance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "budget_vs_invoiced_variance",
+   "fieldtype": "Currency",
+   "label": "Budget vs Invoiced Variance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "budget_vs_certified_variance",
+   "fieldtype": "Currency",
+   "label": "Budget vs Certified Variance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "consumed_vs_measured_variance",
+   "fieldtype": "Currency",
+   "label": "Consumed vs Measured Variance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "indicator_section",
+   "fieldtype": "Section Break",
+   "label": "Progress / Indicators"
+  },
+  {
+   "fieldname": "procurement_progress_percent",
+   "fieldtype": "Percent",
+   "label": "Procurement Progress Percent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "measurement_progress_percent",
+   "fieldtype": "Percent",
+   "label": "Measurement Progress Percent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "certification_progress_percent",
+   "fieldtype": "Percent",
+   "label": "Certification Progress Percent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_risk_status",
+   "fieldtype": "Select",
+   "label": "Cost Risk Status",
+   "options": "Green\nYellow\nRed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cash_risk_status",
+   "fieldtype": "Select",
+   "label": "Cash Risk Status",
+   "options": "Green\nYellow\nRed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overall_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Overall Status",
+   "options": "On Track\nWatch\nAt Risk",
+   "read_only": 1,
+   "description": "Simple CFO status based on deterministic risk rules."
+  },
+  {
+   "fieldname": "narrative_section",
+   "fieldtype": "Section Break",
+   "label": "Narrative"
+  },
+  {
+   "fieldname": "executive_summary",
+   "fieldtype": "Text",
+   "label": "Executive Summary"
+  },
+  {
+   "fieldname": "key_risks",
+   "fieldtype": "Text",
+   "label": "Key Risks"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Text",
+   "label": "Recommendations"
+  }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
@@ -69,11 +329,43 @@
  "name": "Project Financial Snapshot",
  "owner": "Administrator",
  "permissions": [
-  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
-  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Accounts Manager", "share": 1, "write": 1},
-  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Projects Manager", "share": 1, "write": 1}
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "description": "Point-in-time CFO summary of project budget, commitments, measured value, certification, retention, exposure, and risk."
 }

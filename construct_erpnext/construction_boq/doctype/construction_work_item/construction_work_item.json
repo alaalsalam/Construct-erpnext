@@ -69,12 +69,14 @@
    "in_standard_filter": 1,
    "label": "Construction BOQ",
    "options": "Construction BOQ",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Approved BOQ that generated this operational work item."
   },
   {
    "fieldname": "boq_item_row_id",
    "fieldtype": "Data",
-   "label": "BOQ Item Row ID"
+   "label": "BOQ Item Row ID",
+   "description": "Source BOQ child row identifier used to prevent duplicate Work Items."
   },
   {
    "fieldname": "wbs_element",
@@ -223,7 +225,8 @@
    "in_standard_filter": 1,
    "label": "Procurement Status",
    "options": "Not Requested\nPartially Requested\nFully Requested\nPartially Ordered\nFully Ordered\nPartially Received\nFully Received\nPartially Invoiced\nFully Invoiced\nOver Requested\nOver Ordered\nOver Received",
-   "read_only": 1
+   "read_only": 1,
+   "description": "Procurement progress calculated from linked ERPNext procurement and stock transactions."
   },
   {
    "default": "0",
@@ -244,7 +247,8 @@
    "fieldname": "measured_qty",
    "fieldtype": "Float",
    "label": "Measured Qty",
-   "read_only": 1
+   "read_only": 1,
+   "description": "Quantity verified through Measurement Entries. Does not certify payment by itself."
   },
   {
    "default": "0",
@@ -279,7 +283,8 @@
    "fieldname": "certified_qty",
    "fieldtype": "Float",
    "label": "Certified Qty",
-   "read_only": 1
+   "read_only": 1,
+   "description": "Quantity certified through submitted IPCs. Kept separate from measured quantity."
   },
   {
    "default": "0",
@@ -395,5 +400,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1
+ "track_changes": 1,
+ "description": "Operational work item generated from an approved BOQ line. Used for procurement, measurement, IPC, and cost traceability."
 }

@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"sr_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales & Rental</b></span>\",\"col\":12}},{\"id\":\"sr_h2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"text-muted\\\">Reservations, sales contracts, lease contracts, installment plans, and rent collection will be added in later phases.</span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales & Rental</b></span>\",\"col\":12}},{\"id\":\"note\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"text-muted\\\">Sales, rental, reservation, collections, and CRM matching will be implemented in the next phases.</span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Future Sales & Rental Foundation\",\"col\":4}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,

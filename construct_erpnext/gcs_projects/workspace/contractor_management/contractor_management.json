@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"cm_h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contractor Management</b></span>\",\"col\":12}},{\"id\":\"cm_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Contracts & Activities\",\"col\":4}},{\"id\":\"cm_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Payments & Controls\",\"col\":4}}]",
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contractor Management</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor Control\",\"col\":3}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Retention & Advances\",\"col\":3}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Guarantees\",\"col\":3}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor Reports\",\"col\":3}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,27 +13,198 @@
  "is_hidden": 0,
  "label": "Contractor Management",
  "links": [
-  {"hidden": 0, "is_query_report": 0, "label": "Contracts & Activities", "link_count": 0, "onboard": 0, "type": "Card Break"},
-  {"hidden": 0, "is_query_report": 0, "label": "Subcontract", "link_count": 0, "link_to": "Subcontract", "link_type": "DocType", "onboard": 1, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Subcontract Activity", "link_count": 0, "link_to": "Subcontract Activity", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Payments & Controls", "link_count": 0, "onboard": 0, "type": "Card Break"},
-  {"hidden": 0, "is_query_report": 0, "label": "Interim Payment Certificate", "link_count": 0, "link_to": "Interim Payment Certificate", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Contractor Account", "link_count": 0, "link_to": "Contractor Account", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Contractor Ledger Entry", "link_count": 0, "link_to": "Contractor Ledger Entry", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Retention Register", "link_count": 0, "link_to": "Retention Register", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Advance Register", "link_count": 0, "link_to": "Advance Register", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Guarantee Register", "link_count": 0, "link_to": "Guarantee Register", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Contractor IPC Summary", "link_count": 0, "link_to": "Contractor IPC Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Contractor Account Statement", "link_count": 0, "link_to": "Contractor Account Statement", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Retention Register Report", "link_count": 0, "link_to": "Retention Register Report", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Advance Recovery Report", "link_count": 0, "link_to": "Advance Recovery Report", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Contractor Exposure Summary", "link_count": 0, "link_to": "Contractor Exposure Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 1, "label": "Guarantee Register Report", "link_count": 0, "link_to": "Guarantee Register Report", "link_type": "Report", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Purchase Invoice", "link_count": 0, "link_to": "Purchase Invoice", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Payment Entry", "link_count": 0, "link_to": "Payment Entry", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Invoice Authorization", "link_count": 0, "link_to": "Invoice Authorization", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Check Request", "link_count": 0, "link_to": "Check Request", "link_type": "DocType", "onboard": 0, "type": "Link"},
-  {"hidden": 0, "is_query_report": 0, "label": "Project Cost Entry", "link_count": 0, "link_to": "Project Cost Entry", "link_type": "DocType", "onboard": 0, "type": "Link"}
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contractor Control",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subcontract",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Subcontract",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subcontract Activity",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Subcontract Activity",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contractor Account",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Contractor Account",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contractor Ledger Entry",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Contractor Ledger Entry",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Interim Payment Certificate",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Interim Payment Certificate",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Invoice",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payment Entry",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Payment Entry",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Retention & Advances",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Retention Register",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Retention Register",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Advance Register",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Advance Register",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Guarantees",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Guarantee Register",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Guarantee Register",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contractor Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Contractor Account Statement",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Contractor Account Statement",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Retention Register Report",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Retention Register Report",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Advance Recovery Report",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Advance Recovery Report",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Contractor Exposure Summary",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Contractor Exposure Summary",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Guarantee Register Report",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Guarantee Register Report",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Contractor IPC Summary",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Contractor IPC Summary",
+   "link_type": "Report"
+  }
  ],
  "modified": "2026-05-09 00:00:00.000000",
  "modified_by": "Administrator",

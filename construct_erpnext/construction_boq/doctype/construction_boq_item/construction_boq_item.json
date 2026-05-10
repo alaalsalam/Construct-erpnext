@@ -151,5 +151,6 @@
  "permissions": [],
  "sort_field": "creation",
  "sort_order": "ASC",
- "states": []
+ "states": [],
+ "description": "Editable BOQ line item for quantity, rate, wastage, markup, and category-level cost planning."
 }

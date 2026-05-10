@@ -5,26 +5,140 @@
  "creation": "2026-05-09 00:00:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
- "field_order": ["company", "project", "contractor", "contractor_account", "ipc", "purchase_invoice", "retention_percent", "gross_amount", "retention_amount", "retained_on", "release_due_date", "defect_liability_months", "status", "released_amount", "remaining_retention_amount", "release_payment_entry", "release_journal_entry", "remarks"],
+ "field_order": [
+  "company",
+  "project",
+  "contractor",
+  "contractor_account",
+  "ipc",
+  "purchase_invoice",
+  "retention_percent",
+  "gross_amount",
+  "retention_amount",
+  "retained_on",
+  "release_due_date",
+  "defect_liability_months",
+  "status",
+  "released_amount",
+  "remaining_retention_amount",
+  "release_payment_entry",
+  "release_journal_entry",
+  "remarks"
+ ],
  "fields": [
-  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
-  {"fieldname": "project", "fieldtype": "Link", "in_standard_filter": 1, "label": "Project", "options": "Project", "reqd": 1},
-  {"fieldname": "contractor", "fieldtype": "Link", "in_standard_filter": 1, "label": "Contractor", "options": "Supplier", "reqd": 1},
-  {"fieldname": "contractor_account", "fieldtype": "Link", "label": "Contractor Account", "options": "Contractor Account"},
-  {"fieldname": "ipc", "fieldtype": "Link", "in_list_view": 1, "label": "IPC", "options": "Interim Payment Certificate", "reqd": 1},
-  {"fieldname": "purchase_invoice", "fieldtype": "Link", "label": "Purchase Invoice", "options": "Purchase Invoice"},
-  {"fieldname": "retention_percent", "fieldtype": "Percent", "label": "Retention Percent"},
-  {"fieldname": "gross_amount", "fieldtype": "Currency", "label": "Gross Amount"},
-  {"fieldname": "retention_amount", "fieldtype": "Currency", "in_list_view": 1, "label": "Retention Amount"},
-  {"fieldname": "retained_on", "fieldtype": "Date", "label": "Retained On"},
-  {"fieldname": "release_due_date", "fieldtype": "Date", "label": "Release Due Date"},
-  {"default": "12", "fieldname": "defect_liability_months", "fieldtype": "Int", "label": "Defect Liability Months"},
-  {"default": "Held", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "in_standard_filter": 1, "label": "Status", "options": "Held\nEligible for Release\nPartially Released\nReleased\nCancelled"},
-  {"default": "0", "fieldname": "released_amount", "fieldtype": "Currency", "label": "Released Amount"},
-  {"default": "0", "fieldname": "remaining_retention_amount", "fieldtype": "Currency", "label": "Remaining Retention Amount", "read_only": 1},
-  {"fieldname": "release_payment_entry", "fieldtype": "Link", "label": "Release Payment Entry", "options": "Payment Entry"},
-  {"fieldname": "release_journal_entry", "fieldtype": "Link", "label": "Release Journal Entry", "options": "Journal Entry"},
-  {"fieldname": "remarks", "fieldtype": "Text", "label": "Remarks"}
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Contractor",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contractor_account",
+   "fieldtype": "Link",
+   "label": "Contractor Account",
+   "options": "Contractor Account"
+  },
+  {
+   "fieldname": "ipc",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "IPC",
+   "options": "Interim Payment Certificate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Link",
+   "label": "Purchase Invoice",
+   "options": "Purchase Invoice"
+  },
+  {
+   "fieldname": "retention_percent",
+   "fieldtype": "Percent",
+   "label": "Retention Percent"
+  },
+  {
+   "fieldname": "gross_amount",
+   "fieldtype": "Currency",
+   "label": "Gross Amount"
+  },
+  {
+   "fieldname": "retention_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Retention Amount"
+  },
+  {
+   "fieldname": "retained_on",
+   "fieldtype": "Date",
+   "label": "Retained On"
+  },
+  {
+   "fieldname": "release_due_date",
+   "fieldtype": "Date",
+   "label": "Release Due Date"
+  },
+  {
+   "default": "12",
+   "fieldname": "defect_liability_months",
+   "fieldtype": "Int",
+   "label": "Defect Liability Months"
+  },
+  {
+   "default": "Held",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Held\nEligible for Release\nPartially Released\nReleased\nCancelled"
+  },
+  {
+   "default": "0",
+   "fieldname": "released_amount",
+   "fieldtype": "Currency",
+   "label": "Released Amount"
+  },
+  {
+   "default": "0",
+   "fieldname": "remaining_retention_amount",
+   "fieldtype": "Currency",
+   "label": "Remaining Retention Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "release_payment_entry",
+   "fieldtype": "Link",
+   "label": "Release Payment Entry",
+   "options": "Payment Entry"
+  },
+  {
+   "fieldname": "release_journal_entry",
+   "fieldtype": "Link",
+   "label": "Release Journal Entry",
+   "options": "Journal Entry"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  }
  ],
  "links": [],
  "modified": "2026-05-09 00:00:00.000000",
@@ -32,8 +146,42 @@
  "module": "Contractor Management",
  "name": "Retention Register",
  "owner": "Administrator",
- "permissions": [{"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1}, {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Accounts Manager", "share": 1, "write": 1}, {"email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Projects Manager", "share": 1}],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1
+  }
+ ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "description": "Tracks retention held from IPCs and future release eligibility without creating Journal Entries automatically."
 }

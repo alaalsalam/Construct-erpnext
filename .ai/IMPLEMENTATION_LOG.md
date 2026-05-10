@@ -671,3 +671,64 @@
   - Sales Contract, Lease Contract, Installment Plan, Rent Schedule, and CRM Matching DocTypes remain absent.
   - No visible GCS workspace label and no visible El Salvador workspace terminology were found.
 - No Sales Contract, Lease Contract, Installment Plan, Rent Schedule, CRM Matching, Portal, accounting document, submitted-document amendment, or GL backfill was introduced.
+
+## 2026-05-10 Sales Contract and Installment Plan Foundation
+
+- Created branch feature/sales-contract-installment-foundation from feature/final-form-workspace-ux-hardening.
+- Added internal Estate Sales module at construct_erpnext/estate_sales.
+- Created DocTypes:
+  - Sales Contract Settings: Single DocType for contract_number_prefix, default_contract_validity_days, default_down_payment_percent, allow_duplicate_contract_for_unit, require_customer, require_installment_schedule, installment_amount_tolerance_percent, mark_unit_sold_on_approval, enable_sales_invoice_generation, default_currency_from_company.
+  - Sales Installment Schedule: Child DocType for installment rows with sequence, installment_number, label, installment_type (Booking/Down Payment/Contract/Construction Milestone/Handover/Post Handover/Other), due_date, percentage, amount, installment_status (Pending/Due/Partial/Paid/Overdue/Waived/Cancelled), sales_invoice, payment_entry, payment_reference, payment_method, notes.
+  - Sales Contract: Submittable DocType with 9 tabs: Contract Information, Unit Details, Buyer Details, Commercial Terms, Installment Plan, Future Accounting References, Status & Control, Remarks. Fields include: contract_number, unit_reservation, real_estate_project, unit, sale_price, discount_percent, discount_amount, net_price, currency, payment_terms_type, installments (Table child), total_installment_amount, outstanding_installment_amount, installment_count, previous_unit_status, previous_marketing_status, cancellation_reason, accounting_dimensions section.
+- Implemented sales_contract_utils with service functions: get_sales_contract_settings, generate_contract_number, get_active_sales_contract_for_unit, has_active_sales_contract, fetch_unit_metadata, calculate_contract_amounts, calculate_installment_totals, validate_installment_schedule_totals, generate_default_installments, mark_unit_sold, restore_unit_if_safe, convert_reservation_to_contract, release_unit_from_contract, create_sales_contract_from_reservation.
+- Implemented Sales Contract controller with: autoname, before_validate, validate (6 sub-validations), before_submit, on_submit, before_cancel, on_cancel, whitelisted create_sales_contract_from_reservation.
+- Sales Contract settings defaults: mark_unit_sold_on_approval enabled, enable_sales_invoice_generation disabled, allow_duplicate_contract_for_unit disabled, require_customer enabled, require_installment_schedule enabled, installment_amount_tolerance_percent 5.
+- Added Sales Contract Approval Workflow through idempotent after_migrate setup: states Draft, Under Review, Approved, Active, Cancelled, Closed with docstatus-aware transitions.
+- Added 5 Script Reports: Sales Contract Register, Sales Value Summary, Unit Sales Pipeline, Active Sales Contracts, Sold Units.
+- Updated workspaces:
+  - Sales & Rental: Added Sales Contract section, Sales Reports card, Active Sales Contracts number card.
+  - Real Estate Inventory: Added Sales card with Unit Sales Pipeline, Sales Value Summary, Reserved to Sold Conversion Report.
+  - Executive Control Center: Added Sales Visibility section, Active Sales Contracts and Sold Units number cards.
+  - Executive Presentation Center: Added Sales Contract section, Active Sales Contracts and Sold Units number cards.
+  - Reports & Analytics: Added Sales card with all 5 sales reports.
+- Extended ar.csv to 1790 rows with ~145 new translation rows for DocTypes, fields, sections, tabs, workflow states, installment statuses, reports, and validation messages.
+- Updated DECISIONS.md with ADR-024 through ADR-027: Sales Contract as Primary Operational Sales Transaction, Sales Installment Schedule as Child Table, Unit Becomes Sold on Approval, No Accounting Documents Until Invoice Design.
+- Arabic validation scenario completed on construction.yemenfrappe.com:
+  - Created Sales Contract from reservation RES-2026-00001.
+  - Generated 5 installments: Booking 20%, Down Payment 30%, Construction Milestone 25%, Handover 20%, Post Handover 5%.
+  - Total installment amount matched net_price.
+  - Submitted Sales Contract; Unit A-101 status and marketing_status changed to Sold.
+  - Reservation RES-2026-00001 status changed to Converted.
+  - Duplicate contract for same unit was blocked by settings.
+  - Installment schedule total mismatch validation triggered when totals did not match net_price.
+  - All 5 sales reports loaded without errors.
+- No Sales Invoice, Payment Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, WhatsApp/Meta Integration, accounting documents, or ERPNext core modifications were introduced.
+
+## 2026-05-10 Sales Contract Recovery and Completion
+
+- Recovered the Sales Contract + Installment Plan foundation after a previous workflow attempt stopped.
+- Confirmed raw SQL workflow creation was not continued.
+- Sales Contract Approval Workflow is now created idempotently through Frappe ORM in `construct_erpnext.estate_sales.setup.after_migrate`.
+- Added `Estate Sales` to `construct_erpnext/modules.txt` so Frappe does not treat Sales Contract DocTypes as orphaned during migration.
+- Added missing controller modules for Sales Contract Settings and Sales Installment Schedule.
+- Corrected Sales Installment Schedule metadata to `istable=1` and added an idempotent child-table schema guard for legacy partial metadata attempts.
+- Corrected Sales Contract workflow update behavior by allowing workflow/status fields to update after submission and syncing `contract_status` from `workflow_state`.
+- Corrected report filter SQL fragments so filters append with `AND` safely.
+- Final sales reports validated: Sales Contract Register, Installment Schedule Report, Unit Sales Pipeline, Sales Value Summary, Reserved to Sold Conversion Report.
+- Arabic validation scenario completed:
+  - Sales Contract SC-2026-00001 created from reservation RES-2026-00001.
+  - Four Arabic installments were validated: دفعة مقدمة، الدفعة الثانية، دفعة الاستلام، الدفعة النهائية.
+  - Net price and total installments both equal 1,200,000.
+  - Workflow reached Active.
+  - Unit A-101 status and marketing_status are Sold.
+  - Reservation RES-2026-00001 is Converted and linked to SC-2026-00001.
+  - Duplicate Sales Contract for the same Unit is blocked.
+  - Installment mismatch validation is blocked.
+- Validation passed:
+  - bench migrate, clear-cache, and clear-website-cache completed.
+  - Sales Contract Settings, Sales Contract, and Sales Installment Schedule exist.
+  - Sales Contract Approval Workflow exists with 6 states and 9 transitions.
+  - All 5 sales reports load.
+  - Key existing BOQ/procurement/measurement/IPC/contractor/CFO/unit reservation reports still exist.
+  - Arabic translation CSV parses with 1792 rows.
+  - No Sales Invoice, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Installment Plan, CRM Matching, Portal, or ERPNext core modification was introduced.

@@ -141,3 +141,15 @@ Phase 8 deliverables:
   - Dashboard Charts remain deferred until finance KPI/chart sign-off.
   - No Sales Contract, Lease Contract, Installment Plan, Rent Schedule, CRM Matching, Portal, accounting document, submitted amendment, or GL backfill was introduced.
 - Next Phase 9 task: Start Sales Contract and Installment Plan foundation.
+
+Phase 9 Sales Contract and Installment Plan deliverables:
+
+- Create Sales Contract Settings, Sales Contract, and Sales Installment Schedule DocTypes. Completed.
+- Implement contract number generation, unit metadata fetch, party validation, installment schedule calculation and validation, Unit Sold status on approval, and reservation conversion. Completed.
+- Add Sales Contract Approval Workflow through idempotent after_migrate setup. Completed.
+- Add 5 Script Reports for Sales Contract Register, Installment Schedule Report, Unit Sales Pipeline, Sales Value Summary, and Reserved to Sold Conversion Report. Completed.
+- Update Sales & Rental, Real Estate Inventory, Executive Control Center, Executive Presentation Center, and Reports & Analytics workspaces with sales links. Completed.
+- Extend Arabic translations for new DocTypes, fields, sections, tabs, workflow states, installment types, statuses, and reports. Completed.
+- Arabic validation completed on construction.yemenfrappe.com. Completed.
+- No Sales Invoice, Payment Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, accounting documents, or ERPNext core modifications were created.
+- Next Phase 9 extension: Review Sales Contract readiness before Sales Invoice and Collections foundation.

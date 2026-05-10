@@ -1,7 +1,7 @@
 {
- "app": "construct_erpnext",
  "charts": [],
  "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Executive Presentation Center</b></span>\",\"col\":12}},{\"id\":\"nc1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"BOQ Total\",\"col\":3}},{\"id\":\"nc2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Committed Amount\",\"col\":3}},{\"id\":\"nc3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Certified Amount\",\"col\":3}},{\"id\":\"nc4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Net Payable\",\"col\":3}},{\"id\":\"nc5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Retention Held\",\"col\":3}},{\"id\":\"nc6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Contractor Outstanding\",\"col\":3}},{\"id\":\"nc7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cash Flow Risk\",\"col\":3}},{\"id\":\"nc8\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"EVM CPI\",\"col\":3}},{\"id\":\"nc9\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"EVM SPI\",\"col\":3}},{\"id\":\"nc10\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Units\",\"col\":3}},{\"id\":\"nc11\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Available Units\",\"col\":3}},{\"id\":\"nc12\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Reserved Units\",\"col\":3}},{\"id\":\"nc13\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Expected Gross Margin\",\"col\":3}},{\"id\":\"h_section_1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Executive Overview</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Executive Overview\",\"col\":4}},{\"id\":\"h_section_2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>End-to-End Flow</b></span>\",\"col\":12}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"End-to-End Flow\",\"col\":4}},{\"id\":\"h_section_3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Construction Cost Control</b></span>\",\"col\":12}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Construction Cost Control\",\"col\":4}},{\"id\":\"h_section_4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Procurement & Site Warehouses</b></span>\",\"col\":12}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement & Site Warehouses\",\"col\":4}},{\"id\":\"h_section_5\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Measurement & IPC</b></span>\",\"col\":12}},{\"id\":\"card_5\",\"type\":\"card\",\"data\":{\"card_name\":\"Measurement & IPC\",\"col\":4}},{\"id\":\"h_section_6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contractor Financial Control</b></span>\",\"col\":12}},{\"id\":\"card_6\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor Financial Control\",\"col\":4}},{\"id\":\"h_section_7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>CFO Forecasting</b></span>\",\"col\":12}},{\"id\":\"card_7\",\"type\":\"card\",\"data\":{\"card_name\":\"CFO Forecasting\",\"col\":4}},{\"id\":\"h_section_8\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Real Estate Inventory</b></span>\",\"col\":12}},{\"id\":\"card_8\",\"type\":\"card\",\"data\":{\"card_name\":\"Real Estate Inventory\",\"col\":4}},{\"id\":\"h_section_9\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Unit Profitability</b></span>\",\"col\":12}},{\"id\":\"card_9\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Profitability\",\"col\":4}},{\"id\":\"h_section_10\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reservation</b></span>\",\"col\":12}},{\"id\":\"card_10\",\"type\":\"card\",\"data\":{\"card_name\":\"Reservation\",\"col\":4}},{\"id\":\"h_section_11\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Deep Financial Traceability</b></span>\",\"col\":12}},{\"id\":\"card_11\",\"type\":\"card\",\"data\":{\"card_name\":\"Deep Financial Traceability\",\"col\":4}}]",
+ "creation": "2026-05-10 15:24:37.591407",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -71,46 +71,73 @@
    "type": "Link"
   },
   {
-   "type": "Card Break",
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "End-to-End Flow",
+   "link_count": 0,
    "link_type": "DocType",
-   "link_to": null
+   "onboard": 0,
+   "type": "Card Break"
   },
   {
-   "type": "Link",
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Construction BOQ",
+   "link_count": 0,
+   "link_to": "Construction BOQ",
    "link_type": "DocType",
-   "link_to": "Construction BOQ"
+   "onboard": 0,
+   "type": "Link"
   },
   {
-   "type": "Link",
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Construction Work Item",
+   "link_count": 0,
+   "link_to": "Construction Work Item",
    "link_type": "DocType",
-   "link_to": "Construction Work Item"
+   "onboard": 0,
+   "type": "Link"
   },
   {
-   "type": "Link",
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Measurement Book",
+   "link_count": 0,
+   "link_to": "Measurement Book",
    "link_type": "DocType",
-   "link_to": "Measurement Book"
+   "onboard": 0,
+   "type": "Link"
   },
   {
-   "type": "Link",
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Interim Payment Certificate",
+   "link_count": 0,
+   "link_to": "Interim Payment Certificate",
    "link_type": "DocType",
-   "link_to": "Interim Payment Certificate"
+   "onboard": 0,
+   "type": "Link"
   },
   {
-   "type": "Link",
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Unit",
+   "link_count": 0,
+   "link_to": "Unit",
    "link_type": "DocType",
-   "link_to": "Unit"
+   "onboard": 0,
+   "type": "Link"
   },
   {
-   "type": "Link",
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Unit Reservation",
+   "link_count": 0,
+   "link_to": "Unit Reservation",
    "link_type": "DocType",
-   "link_to": "Unit Reservation"
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -569,6 +596,24 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Sales Contract",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Contract",
+   "link_count": 0,
+   "link_to": "Sales Contract",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Deep Financial Traceability",
    "link_count": 0,
    "onboard": 0,
@@ -625,6 +670,8 @@
    "type": "Link"
   }
  ],
+ "modified": "2026-05-10 16:34:02.956463",
+ "modified_by": "Administrator",
  "module": "GCS Finance",
  "name": "Executive Presentation Center",
  "number_cards": [
@@ -679,6 +726,14 @@
   {
    "label": "Expected Gross Margin",
    "number_card_name": "Expected Gross Margin"
+  },
+  {
+   "label": "Active Sales Contracts",
+   "number_card_name": "Active Sales Contracts"
+  },
+  {
+   "label": "Sold Units",
+   "number_card_name": "Sold Units"
   }
  ],
  "owner": "Administrator",

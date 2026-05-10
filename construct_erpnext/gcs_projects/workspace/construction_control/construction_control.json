@@ -1,8 +1,7 @@
 {
- "app": "construct_erpnext",
  "charts": [],
  "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Construction Control</b></span>\",\"col\":12}},{\"id\":\"nc1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"BOQ Total\",\"col\":3}},{\"id\":\"nc2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Work Items Count\",\"col\":3}},{\"id\":\"nc3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Certified Amount\",\"col\":3}},{\"id\":\"h_section_1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Setup & Masters</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup & Masters\",\"col\":4}},{\"id\":\"h_section_2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>BOQ Planning</b></span>\",\"col\":12}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"BOQ Planning\",\"col\":4}},{\"id\":\"h_section_3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Work Items</b></span>\",\"col\":12}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Work Items\",\"col\":4}},{\"id\":\"h_section_4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Progress & Advancement</b></span>\",\"col\":12}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Progress & Advancement\",\"col\":4}},{\"id\":\"h_section_5\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Construction Reports</b></span>\",\"col\":12}},{\"id\":\"card_5\",\"type\":\"card\",\"data\":{\"card_name\":\"Construction Reports\",\"col\":4}}]",
- "creation": "2026-05-09 00:00:00.000000",
+ "creation": "2026-05-09 00:00:00",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -18,6 +17,7 @@
    "is_query_report": 0,
    "label": "Setup & Masters",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -66,6 +66,7 @@
    "is_query_report": 0,
    "label": "BOQ Planning",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -104,6 +105,7 @@
    "is_query_report": 0,
    "label": "Work Items",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -142,6 +144,7 @@
    "is_query_report": 0,
    "label": "Progress & Advancement",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -200,6 +203,7 @@
    "is_query_report": 0,
    "label": "Construction Reports",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -254,19 +258,10 @@
    "type": "Link"
   }
  ],
- "modified": "2026-05-09 17:00:06.000000",
+ "modified": "2026-05-10 16:34:03.105672",
  "modified_by": "Administrator",
  "module": "GCS Projects",
  "name": "Construction Control",
- "owner": "Administrator",
- "parent_page": "",
- "public": 1,
- "restrict_to_domain": "",
- "roles": [],
- "sequence_id": 2,
- "shortcuts": [],
- "title": "Construction Control",
- "type": "Workspace",
  "number_cards": [
   {
    "label": "BOQ Total",
@@ -280,5 +275,14 @@
    "label": "Certified Amount",
    "number_card_name": "Certified Amount"
   }
- ]
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [],
+ "title": "Construction Control"
 }

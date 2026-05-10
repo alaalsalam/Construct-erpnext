@@ -187,3 +187,38 @@ Safe to start Sales Contract and Installment Plan foundation.
 ## 19. Deep UX Decision
 
 Previous completed phases are now ready for a professional client presentation from the form/workspace/translation perspective, subject to one final browser click-through in the client user context.
+
+## 20. Sales Contract and Installment Plan Readiness
+
+- Passed: Sales Contract Settings ready.
+- Passed: Sales Contract DocType ready with 9 tabs and all required fields.
+- Passed: Sales Installment Schedule Child DocType ready.
+- Passed: Sales Contract controller implements all 6 sub-validations, submit/cancel hooks, and whitelisted creation method.
+- Passed: Sales Contract Approval Workflow created through after_migrate setup.
+- Passed: Contract number, unit metadata, party, discount, installment schedule, and tolerance validations are working.
+- Passed: Unit becomes Sold on Sales Contract submission (when settings allow).
+- Passed: Reservation converts to Converted status on Sales Contract submission.
+- Passed: Active duplicate contract blocking works.
+- Passed: 5 sales reports load without errors.
+- Passed: Workspaces updated with Sales Contract section, reports, and number cards.
+- Passed: Arabic translations extended to 1790 rows covering new DocTypes, fields, sections, tabs, workflow, installment types/statuses, and reports.
+- Passed: No Sales Invoice, Payment Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, accounting documents, or ERPNext core modifications introduced.
+- Passed: Sales Invoice generation explicitly disabled in settings.
+
+## 21. Sales Contract Decision
+
+Safe to review Sales Contract readiness before Sales Invoice and Collections foundation.
+
+## 22. Sales Contract Recovery Gate
+
+- Passed: Raw SQL workflow creation was stopped.
+- Passed: Workflow creation uses Frappe ORM and idempotent after_migrate setup.
+- Passed: Sales Installment Schedule is a valid child table with parent linkage columns.
+- Passed: Sales Contract SC-2026-00001 reached Active through workflow.
+- Passed: Unit A-101 became Sold.
+- Passed: Reservation RES-2026-00001 became Converted.
+- Passed: Four-installment Arabic validation schedule totals match net price.
+- Passed: Duplicate contract validation is blocked.
+- Passed: Installment mismatch validation is blocked.
+- Passed: All five required sales reports load.
+- Passed: No Sales Invoice, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Portal, or CRM Matching feature was created.

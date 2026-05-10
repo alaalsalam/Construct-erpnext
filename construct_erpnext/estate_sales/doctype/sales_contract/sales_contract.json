@@ -1,0 +1,650 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-10 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contract_information_tab",
+  "contract_information_section",
+  "company",
+  "contract_number",
+  "contract_date",
+  "valid_until",
+  "contract_status",
+  "workflow_state",
+  "contract_information_column_break",
+  "contract_type",
+  "unit_reservation",
+  "settings",
+  "unit_details_tab",
+  "unit_details_section",
+  "real_estate_project",
+  "project",
+  "unit",
+  "unit_details_column_break",
+  "building",
+  "floor",
+  "unit_type",
+  "unit_area",
+  "expected_sale_price",
+  "unit_status",
+  "buyer_details_tab",
+  "buyer_details_section",
+  "customer",
+  "lead",
+  "buyer_name",
+  "party_type",
+  "buyer_details_column_break",
+  "mobile_no",
+  "email",
+  "identification_no",
+  "address",
+  "commercial_terms_tab",
+  "commercial_terms_section",
+  "sale_price",
+  "discount_percent",
+  "discount_amount",
+  "net_price",
+  "currency",
+  "commercial_terms_column_break",
+  "payment_terms_type",
+  "down_payment_percent",
+  "down_payment_amount",
+  "contract_terms",
+  "installment_plan_tab",
+  "installment_schedule_section",
+  "installments",
+  "installment_totals_section",
+  "total_installment_amount",
+  "outstanding_installment_amount",
+  "installment_count",
+  "future_references_tab",
+  "future_references_section",
+  "sales_order",
+  "first_invoice_reference",
+  "invoices_created",
+  "future_references_column_break",
+  "converted_date",
+  "converted_by",
+  "cancellation_reason",
+  "cancellation_date",
+  "status_control_tab",
+  "status_control_section",
+  "previous_unit_status",
+  "previous_marketing_status",
+  "remarks_tab",
+  "remarks_section",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Contract Information"
+  },
+  {
+   "fieldname": "contract_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Information"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "in_list_view": 0,
+   "description": "Links this record to the related Company."
+  },
+  {
+   "fieldname": "contract_number",
+   "fieldtype": "Data",
+   "label": "Contract Number",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "description": "Unique sales contract reference. Auto-generated from settings if left blank."
+  },
+  {
+   "fieldname": "contract_date",
+   "fieldtype": "Date",
+   "label": "Contract Date",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Date of the sales contract."
+  },
+  {
+   "fieldname": "valid_until",
+   "fieldtype": "Date",
+   "label": "Valid Until",
+   "in_list_view": 0,
+   "description": "Date until which the contract terms remain valid. Defaults from settings if not provided."
+  },
+  {
+  "fieldname": "contract_status",
+  "fieldtype": "Select",
+  "label": "Contract Status",
+  "allow_on_submit": 1,
+  "options": "Draft\nUnder Review\nApproved\nActive\nCancelled\nClosed",
+   "default": "Draft",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Operational contract status used for workflow and reporting."
+  },
+  {
+  "fieldname": "workflow_state",
+  "fieldtype": "Select",
+  "label": "Workflow State",
+  "allow_on_submit": 1,
+  "options": "Draft\nUnder Review\nApproved\nActive\nCancelled\nClosed",
+   "default": "Draft",
+   "in_standard_filter": 1,
+   "in_list_view": 0,
+   "description": "Current workflow status for this sales contract."
+  },
+  {
+   "fieldname": "contract_information_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "Standard\nPre-launch\nInvestor\nOther",
+   "in_list_view": 0,
+   "description": "Classifies the sales contract by sales channel or pricing structure."
+  },
+  {
+   "fieldname": "unit_reservation",
+   "fieldtype": "Link",
+   "label": "Source Reservation",
+   "options": "Unit Reservation",
+   "in_list_view": 0,
+   "description": "Unit Reservation from which this sales contract was created, if any."
+  },
+  {
+   "fieldname": "settings",
+   "fieldtype": "Link",
+   "label": "Settings",
+   "options": "Sales Contract Settings",
+   "in_list_view": 0,
+   "description": "Sales Contract Settings used for validation and numbering."
+  },
+  {
+   "fieldname": "unit_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Unit Details"
+  },
+  {
+   "fieldname": "unit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Unit Details"
+  },
+  {
+   "fieldname": "real_estate_project",
+   "fieldtype": "Link",
+   "label": "Real Estate Project",
+   "options": "Real Estate Project",
+   "reqd": 1,
+   "in_standard_filter": 1,
+   "in_list_view": 0,
+   "description": "Real estate project that contains the sold unit."
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records."
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "label": "Unit",
+   "options": "Unit",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Real estate unit being sold under this contract."
+  },
+  {
+   "fieldname": "unit_details_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "building",
+   "fieldtype": "Link",
+   "label": "Building",
+   "options": "Building",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records."
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Link",
+   "label": "Floor",
+   "options": "Floor",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records."
+  },
+  {
+   "fieldname": "unit_type",
+   "fieldtype": "Link",
+   "label": "Unit Type",
+   "options": "Unit Type",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records."
+  },
+  {
+   "fieldname": "unit_area",
+   "fieldtype": "Float",
+   "label": "Area",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records."
+  },
+  {
+   "fieldname": "expected_sale_price",
+   "fieldtype": "Currency",
+   "label": "Expected Sale Price",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records."
+  },
+  {
+   "fieldname": "unit_status",
+   "fieldtype": "Data",
+   "label": "Unit Status",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Current status of the unit at the time of contract creation."
+  },
+  {
+   "fieldname": "buyer_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Buyer Details"
+  },
+  {
+   "fieldname": "buyer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Buyer Details"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "in_list_view": 1,
+   "description": "Existing customer linked to this sales contract."
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead",
+   "in_list_view": 0,
+   "description": "Potential customer from ERPNext CRM linked to this contract."
+  },
+  {
+   "fieldname": "buyer_name",
+   "fieldtype": "Data",
+   "label": "Buyer Name",
+   "in_list_view": 1,
+   "description": "Visible buyer name when Customer or Lead is not yet available."
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Select",
+   "label": "Party Type",
+   "options": "Customer\nLead\nIndividual",
+   "in_list_view": 0,
+   "description": "Classifies the buying party by ERPNext party type."
+  },
+  {
+   "fieldname": "buyer_details_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "in_list_view": 0,
+   "description": "Buyer mobile number for contact and payment notifications."
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email",
+   "in_list_view": 0,
+   "description": "Buyer email address for contract communications."
+  },
+  {
+   "fieldname": "identification_no",
+   "fieldtype": "Data",
+   "label": "ID Number",
+   "in_list_view": 0,
+   "description": "Buyer identification number such as national ID or passport."
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "in_list_view": 0,
+   "description": "Buyer address for contract and legal purposes."
+  },
+  {
+   "fieldname": "commercial_terms_tab",
+   "fieldtype": "Tab Break",
+   "label": "Commercial Terms"
+  },
+  {
+   "fieldname": "commercial_terms_section",
+   "fieldtype": "Section Break",
+   "label": "Commercial Terms"
+  },
+  {
+   "fieldname": "sale_price",
+   "fieldtype": "Currency",
+   "label": "Sale Price",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Total sale price for the unit before discounts."
+  },
+  {
+   "fieldname": "discount_percent",
+   "fieldtype": "Percent",
+   "label": "Discount Percent",
+   "in_list_view": 0,
+   "description": "Discount percentage applied to the sale price."
+  },
+  {
+   "fieldname": "discount_amount",
+   "fieldtype": "Currency",
+   "label": "Discount Amount",
+   "in_list_view": 0,
+   "description": "Absolute discount amount subtracted from the sale price."
+  },
+  {
+   "fieldname": "net_price",
+   "fieldtype": "Currency",
+   "label": "Net Price",
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Calculated as sale price minus discount amount. This is the amount used for installment calculations."
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "in_list_view": 0,
+   "description": "Transaction currency. Defaults from company currency when available."
+  },
+  {
+   "fieldname": "commercial_terms_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_terms_type",
+   "fieldtype": "Select",
+   "label": "Payment Terms Type",
+   "options": "Cash\nInstallment\nPost-Dated Cheques",
+   "in_list_view": 0,
+   "description": "Payment structure for this sales contract."
+  },
+  {
+   "fieldname": "down_payment_percent",
+   "fieldtype": "Percent",
+   "label": "Down Payment Percent",
+   "in_list_view": 0,
+   "description": "First payment as a percentage of net price, used for default installment generation."
+  },
+  {
+   "fieldname": "down_payment_amount",
+   "fieldtype": "Currency",
+   "label": "Down Payment Amount",
+   "in_list_view": 0,
+   "description": "Calculated as net price multiplied by down payment percent."
+  },
+  {
+   "fieldname": "contract_terms",
+   "fieldtype": "Text Editor",
+   "label": "Contract Terms",
+   "in_list_view": 0,
+   "description": "Contractual terms and conditions for this sales agreement."
+  },
+  {
+   "fieldname": "installment_plan_tab",
+   "fieldtype": "Tab Break",
+   "label": "Installment Plan"
+  },
+  {
+   "fieldname": "installment_schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Installment Schedule"
+  },
+  {
+   "fieldname": "installments",
+   "fieldtype": "Table",
+   "label": "Installments",
+   "options": "Sales Installment Schedule",
+   "in_list_view": 1,
+   "description": "Child table storing the installment payment schedule for this sales contract."
+  },
+  {
+   "fieldname": "installment_totals_section",
+   "fieldtype": "Section Break",
+   "label": "Installment Totals"
+  },
+  {
+   "fieldname": "total_installment_amount",
+   "fieldtype": "Currency",
+   "label": "Total Installment Amount",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Sum of all installment amounts. Must equal net price within tolerance."
+  },
+  {
+   "fieldname": "outstanding_installment_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding Installment Amount",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Total installment amount minus any rows already marked Paid or Waived."
+  },
+  {
+   "fieldname": "installment_count",
+   "fieldtype": "Int",
+   "label": "Installment Count",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Total number of installment rows in this schedule."
+  },
+  {
+   "fieldname": "future_references_tab",
+   "fieldtype": "Tab Break",
+   "label": "Future Accounting References"
+  },
+  {
+   "fieldname": "future_references_section",
+   "fieldtype": "Section Break",
+   "label": "Future References"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Sales Order linked to this contract. Created in a later phase."
+  },
+  {
+   "fieldname": "first_invoice_reference",
+   "fieldtype": "Link",
+   "label": "First Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "First Sales Invoice generated from the installment schedule. Created in a later phase."
+  },
+  {
+   "fieldname": "invoices_created",
+   "fieldtype": "Check",
+   "label": "Invoices Created",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Flag indicating whether Sales Invoices have been generated from this contract."
+  },
+  {
+   "fieldname": "future_references_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "converted_date",
+   "fieldtype": "Datetime",
+   "label": "Converted Date",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records."
+  },
+  {
+   "fieldname": "converted_by",
+   "fieldtype": "Link",
+   "label": "Converted By",
+   "options": "User",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Calculated value updated automatically from linked records."
+  },
+  {
+   "fieldname": "cancellation_reason",
+   "fieldtype": "Small Text",
+   "label": "Cancellation Reason",
+   "in_list_view": 0,
+   "description": "Reason for contract cancellation. Required before cancellation."
+  },
+  {
+   "fieldname": "cancellation_date",
+   "fieldtype": "Datetime",
+   "label": "Cancellation Date",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Date and time when the contract was cancelled."
+  },
+  {
+   "fieldname": "status_control_tab",
+   "fieldtype": "Tab Break",
+   "label": "Status & Control"
+  },
+  {
+   "fieldname": "status_control_section",
+   "fieldtype": "Section Break",
+   "label": "Previous Unit State"
+  },
+  {
+   "fieldname": "previous_unit_status",
+   "fieldtype": "Data",
+   "label": "Previous Unit Status",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Unit status before this contract was approved."
+  },
+  {
+   "fieldname": "previous_marketing_status",
+   "fieldtype": "Data",
+   "label": "Previous Marketing Status",
+   "read_only": 1,
+   "in_list_view": 0,
+   "description": "Unit marketing status before this contract was approved."
+  },
+  {
+   "fieldname": "remarks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks",
+   "in_list_view": 0,
+   "description": "Additional notes or explanation for this Sales Contract."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-10 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Estate Sales",
+ "name": "Sales Contract",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Projects Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Accounts Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "description": "Operational real estate unit sales contract with installment schedule. Does not create Sales Invoices or Payment Entries in this phase."
+}

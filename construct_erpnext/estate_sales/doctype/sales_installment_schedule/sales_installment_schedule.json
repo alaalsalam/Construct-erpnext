@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-10 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "istable": 1,
+ "field_order": [
+  "sequence",
+  "installment_number",
+  "label",
+  "installment_type",
+  "due_date",
+  "percentage",
+  "amount",
+  "installment_status",
+  "sales_invoice",
+  "payment_entry",
+  "payment_reference",
+  "payment_method",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "label": "Seq",
+   "default": "1",
+   "in_list_view": 1,
+   "description": "Sequence number for ordering installments."
+  },
+  {
+   "fieldname": "installment_number",
+   "fieldtype": "Data",
+   "label": "Installment No",
+   "in_list_view": 1,
+   "description": "Unique installment identifier within the contract."
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Label",
+   "in_list_view": 1,
+   "description": "Short description for this installment, such as Down Payment or 2nd Installment."
+  },
+  {
+   "fieldname": "installment_type",
+   "fieldtype": "Select",
+   "label": "Installment Type",
+   "options": "Booking\nDown Payment\nContract\nConstruction Milestone\nHandover\nPost Handover\nOther",
+   "in_list_view": 0,
+   "description": "Classifies the installment by stage in the sales or construction process."
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Date on which this installment becomes due for payment."
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "label": "Percent",
+   "in_list_view": 1,
+   "description": "Percentage of the net contract price represented by this installment."
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Absolute amount for this installment."
+  },
+  {
+   "fieldname": "installment_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nDue\nPartial\nPaid\nOverdue\nWaived\nCancelled",
+   "default": "Pending",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Current payment status of this installment."
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Sales Invoice",
+   "in_list_view": 0,
+   "description": "Sales Invoice linked to this installment. Created in a later phase."
+  },
+  {
+   "fieldname": "payment_entry",
+   "fieldtype": "Link",
+   "label": "Payment",
+   "options": "Payment Entry",
+   "in_list_view": 0,
+   "description": "Payment Entry linked to this installment. Created in a later phase."
+  },
+  {
+   "fieldname": "payment_reference",
+   "fieldtype": "Data",
+   "label": "Payment Reference",
+   "in_list_view": 0,
+   "description": "External payment reference or receipt number for this installment."
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Cash\nBank Transfer\nCheque\nCredit Card\nOther",
+   "in_list_view": 0,
+   "description": "Expected or recorded payment method for this installment."
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes",
+   "in_list_view": 0,
+   "description": "Additional notes or instructions for this installment."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-10 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Estate Sales",
+ "name": "Sales Installment Schedule",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "sequence",
+ "sort_order": "ASC",
+ "states": [],
+ "track_changes": 1,
+ "description": "Child table storing installment schedule rows for a Sales Contract. Each row represents a scheduled payment linked to a real estate unit sale."
+}

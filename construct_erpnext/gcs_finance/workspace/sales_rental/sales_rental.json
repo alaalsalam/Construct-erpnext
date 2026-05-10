@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales & Rental</b></span>\",\"col\":12}},{\"id\":\"note\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"text-muted\\\">Unit Reservation is available now. Sales Contract, Lease Contract, Installment Plan, Rent Schedule, Collections, CRM Matching, and Portal remain future phases.</span>\",\"col\":12}},{\"id\":\"nc1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Reservations\",\"col\":3}},{\"id\":\"nc2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Expiring Reservations\",\"col\":3}},{\"id\":\"h_section_1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reservation Control</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Reservation Control\",\"col\":4}},{\"id\":\"h_section_2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reservation Reports</b></span>\",\"col\":12}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Reservation Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales & Rental</b></span>\",\"col\":12}},{\"id\":\"nc1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Reservations\",\"col\":3}},{\"id\":\"nc2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Expiring Reservations\",\"col\":3}},{\"id\":\"nc3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Sales Contracts\",\"col\":3}},{\"id\":\"h_section_1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reservation Control</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Reservation Control\",\"col\":4}},{\"id\":\"h_section_2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales Contract</b></span>\",\"col\":12}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Sales Contract\",\"col\":4}},{\"id\":\"h_section_3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reservation Reports</b></span>\",\"col\":12}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Reservation Reports\",\"col\":4}},{\"id\":\"h_section_4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales Reports</b></span>\",\"col\":12}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Sales Reports\",\"col\":4}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -44,6 +44,34 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Sales Contract",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Contract",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Sales Contract",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Contract Settings",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Sales Contract Settings",
+   "link_type": "DocType"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
    "label": "Reservation Reports",
    "link_count": 0,
    "onboard": 0,
@@ -88,9 +116,67 @@
    "type": "Link",
    "link_to": "Unit Reservation Impact",
    "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Sales Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Sales Contract Register",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Sales Contract Register",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Installment Schedule Report",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Installment Schedule Report",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Sales Pipeline",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Unit Sales Pipeline",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Sales Value Summary",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Sales Value Summary",
+   "link_type": "Report"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Reserved to Sold Conversion Report",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Link",
+   "link_to": "Reserved to Sold Conversion Report",
+   "link_type": "Report"
   }
  ],
- "modified": "2026-05-09 00:00:00.000000",
+ "modified": "2026-05-10 00:00:00.000000",
  "modified_by": "Administrator",
  "module": "GCS Finance",
  "name": "Sales & Rental",
@@ -111,6 +197,10 @@
   {
    "label": "Expiring Reservations",
    "number_card_name": "Expiring Reservations"
+  },
+  {
+   "label": "Active Sales Contracts",
+   "number_card_name": "Active Sales Contracts"
   }
  ]
 }

@@ -375,6 +375,42 @@ Product workspace readiness:
 - Dashboard Charts remain deferred until finance leadership approves chart definitions and threshold wording.
 - This hardening remains metadata/readiness only: no fieldnames, fieldtypes, required rules, business logic, accounting documents, submitted records, or GL entries are changed.
 
+## Sales Contract And Installment Plan Foundation
+
+Internal module: estate_sales / Estate Sales.
+
+DocTypes:
+
+- Sales Contract Settings: Single DocType controlling contract number prefix, default validity days, down payment percent, duplicate rules, customer/Installment schedule requirements, installment tolerance, unit sold-on-approval behavior, invoice generation toggle, and currency setting.
+- Sales Installment Schedule: Child DocType linked to Sales Contract for installment rows with installment number, label, installment type, due date, percentage, amount, and installment status.
+- Sales Contract: Submittable transaction with contract number, reservation link, project/unit details, buyer party, commercial terms (sale price, discounts, net price, currency, payment terms), installment plan table, future accounting references section, status/control fields, and remarks. Unit becomes Sold on approval (when settings allow). Reservation converts to Converted status on submission.
+
+Services:
+
+- sales_contract_utils provides: get_sales_contract_settings, generate_contract_number, get_active_sales_contract_for_unit, has_active_sales_contract, fetch_unit_metadata, calculate_contract_amounts, calculate_installment_totals, validate_installment_schedule_totals, generate_default_installments, mark_unit_sold, restore_unit_if_safe, convert_reservation_to_contract, release_unit_from_contract, create_sales_contract_from_reservation.
+
+Workflow:
+
+- Sales Contract Approval Workflow is created idempotently after migration by construct_erpnext.estate_sales.setup.after_migrate.ensure_sales_contract_workflow.
+- States: Draft (docstatus 0), Under Review (docstatus 0), Approved (docstatus 1), Active (docstatus 1), Cancelled (docstatus 2), Closed (docstatus 1).
+- Transitions support Draft -> Under Review -> Approved -> Active -> Closed and Approved/Active -> Cancelled.
+
+Reports:
+
+- Sales Contract Register
+- Sales Value Summary
+- Unit Sales Pipeline
+- Active Sales Contracts
+- Sold Units
+
+Integration:
+
+- Sales Contract links to Unit Reservation, Real Estate Project, Unit, and Customer.
+- On submit: Unit status and marketing_status update to Sold (if settings allow); previous status stored for safe rollback.
+- On cancel: Unit status restored only if no other active sales contract exists and no other active reservation exists.
+- No Sales Invoice, Payment Entry, Journal Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, or Portal features are created in this phase.
+- Accounting Dimension `unit` is prepared on Sales Contract for future propagation to Sales Invoice, but no posting occurs now.
+
 ## Existing DocTypes To Reuse
 
 - Construction Budget
@@ -441,3 +477,12 @@ Product workspace readiness:
 - Keep El Salvador legacy helpers isolated and hidden from workspaces.
 - Replace "Insumo" with user-facing "Cost Resource" or "Resource Item" in navigation later.
 - Review README/translations for legacy El Salvador terms before public release.
+
+## Estate Sales Foundation
+
+- `construct_erpnext/estate_sales` contains the operational Sales Contract foundation.
+- Sales Contract is a submittable non-accounting transaction linked to Unit Reservation, Real Estate Project, Unit, Customer/Lead, and Sales Installment Schedule rows.
+- Sales Installment Schedule is a child table under Sales Contract and is not an independent receivable ledger.
+- Sales Contract Approval Workflow is created through Frappe ORM in idempotent after_migrate setup; direct SQL workflow creation is not part of the architecture.
+- Approved/Active Sales Contract marks the Unit as Sold and converts the Unit Reservation to Converted.
+- Sales Invoice, Payment Entry, GL posting, Lease Contract, Rent Schedule, Commission, CRM Matching, and Portal remain outside this foundation.

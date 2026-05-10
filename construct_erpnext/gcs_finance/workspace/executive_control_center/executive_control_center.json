@@ -1,8 +1,7 @@
 {
- "app": "construct_erpnext",
  "charts": [],
  "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Executive Control Center</b></span>\",\"col\":12}},{\"id\":\"nc1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"BOQ Total\",\"col\":3}},{\"id\":\"nc2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Committed Amount\",\"col\":3}},{\"id\":\"nc3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Certified Amount\",\"col\":3}},{\"id\":\"nc4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Contractor Outstanding\",\"col\":3}},{\"id\":\"nc5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cash Flow Risk\",\"col\":3}},{\"id\":\"nc6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"EVM Overall Status\",\"col\":3}},{\"id\":\"nc7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Expected Gross Margin\",\"col\":3}},{\"id\":\"nc8\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Reservations\",\"col\":3}},{\"id\":\"h_section_1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Financial Snapshot</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial Snapshot\",\"col\":4}},{\"id\":\"h_section_2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Cash Flow Forecast</b></span>\",\"col\":12}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"Cash Flow Forecast\",\"col\":4}},{\"id\":\"h_section_3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>EVM Metrics</b></span>\",\"col\":12}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"EVM Metrics\",\"col\":4}},{\"id\":\"h_section_4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contractor Exposure</b></span>\",\"col\":12}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor Exposure\",\"col\":4}},{\"id\":\"h_section_5\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Unit Profitability</b></span>\",\"col\":12}},{\"id\":\"card_5\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Profitability\",\"col\":4}},{\"id\":\"h_section_6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Project Performance Reports</b></span>\",\"col\":12}},{\"id\":\"card_6\",\"type\":\"card\",\"data\":{\"card_name\":\"Project Performance Reports\",\"col\":4}},{\"id\":\"h_section_7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reservation Visibility</b></span>\",\"col\":12}},{\"id\":\"card_7\",\"type\":\"card\",\"data\":{\"card_name\":\"Reservation Visibility\",\"col\":4}}]",
- "creation": "2026-05-09 00:00:00.000000",
+ "creation": "2026-05-09 00:00:00",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -18,6 +17,7 @@
    "is_query_report": 0,
    "label": "Financial Snapshot",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -26,36 +26,37 @@
    "is_query_report": 0,
    "label": "Project Financial Snapshot",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Project Financial Snapshot",
-   "link_type": "DocType"
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Project Financial Snapshot Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Project Financial Snapshot Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "CFO Project Control Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "CFO Project Control Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Cash Flow Forecast",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -64,36 +65,37 @@
    "is_query_report": 0,
    "label": "Project Cash Flow Forecast",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Project Cash Flow Forecast",
-   "link_type": "DocType"
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Project Cash Flow Forecast Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Project Cash Flow Forecast Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Project Cash Requirement Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Project Cash Requirement Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "EVM Metrics",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -102,36 +104,37 @@
    "is_query_report": 0,
    "label": "Project EVM Metrics",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Project EVM Metrics",
-   "link_type": "DocType"
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Project EVM Metrics Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Project EVM Metrics Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "EVM Forecast Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "EVM Forecast Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Contractor Exposure",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -140,46 +143,47 @@
    "is_query_report": 1,
    "label": "Contractor Exposure Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Contractor Exposure Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Contractor Financial Exposure",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Contractor Financial Exposure",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Retention Register Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Retention Register Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Contractor Account Statement",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Contractor Account Statement",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Unit Profitability",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -188,56 +192,57 @@
    "is_query_report": 1,
    "label": "Real Estate Project Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Real Estate Project Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Unit Availability Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Unit Availability Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Unit Profitability Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Unit Profitability Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Real Estate Project Profitability Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Real Estate Project Profitability Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Building Profitability Summary",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Building Profitability Summary",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Project Performance Reports",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -246,66 +251,67 @@
    "is_query_report": 1,
    "label": "Project Performance Dashboard Report",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Project Performance Dashboard Report",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "GL Dimension Traceability",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "GL Dimension Traceability",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Project Unit Cost Matrix",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Project Unit Cost Matrix",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Financial Ratio",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Financial Ratio",
-   "link_type": "DocType"
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Check Request",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Check Request",
-   "link_type": "DocType"
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Invoice Authorization",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Invoice Authorization",
-   "link_type": "DocType"
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Reservation Visibility",
    "link_count": 0,
+   "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
   },
@@ -314,35 +320,26 @@
    "is_query_report": 1,
    "label": "Unit Reservation Impact",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Unit Reservation Impact",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 1,
    "label": "Active Unit Reservations",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Link",
    "link_to": "Active Unit Reservations",
-   "link_type": "Report"
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2026-05-09 00:00:00.000000",
+ "modified": "2026-05-10 16:34:03.050864",
  "modified_by": "Administrator",
  "module": "GCS Finance",
  "name": "Executive Control Center",
- "owner": "Administrator",
- "parent_page": "",
- "public": 1,
- "restrict_to_domain": "",
- "roles": [],
- "sequence_id": 1,
- "shortcuts": [],
- "title": "Executive Control Center",
- "type": "Workspace",
  "number_cards": [
   {
    "label": "BOQ Total",
@@ -375,6 +372,23 @@
   {
    "label": "Active Reservations",
    "number_card_name": "Active Reservations"
+  },
+  {
+   "label": "Active Sales Contracts",
+   "number_card_name": "Active Sales Contracts"
+  },
+  {
+   "label": "Sold Units",
+   "number_card_name": "Sold Units"
   }
- ]
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [],
+ "title": "Executive Control Center"
 }

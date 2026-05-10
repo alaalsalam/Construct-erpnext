@@ -18,6 +18,7 @@ after_migrate = [
     "construct_erpnext.cfo_analytics.setup.after_migrate",
     "construct_erpnext.unit_costing.setup.after_migrate",
     "construct_erpnext.real_estate_inventory.setup.after_migrate",
+    "construct_erpnext.estate_sales.setup.after_migrate.after_migrate",
     "construct_erpnext.setup.product_readiness.sync_product_workspace_readiness",
 ]
 

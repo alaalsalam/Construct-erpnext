@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Analytics</b></span>\",\"col\":12}},{\"id\":\"h_section_1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Executive / CFO</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Executive / CFO\",\"col\":4}},{\"id\":\"h_section_2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>BOQ / Construction</b></span>\",\"col\":12}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"BOQ / Construction\",\"col\":4}},{\"id\":\"h_section_3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Procurement / Stock</b></span>\",\"col\":12}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement / Stock\",\"col\":4}},{\"id\":\"h_section_4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Measurement / IPC</b></span>\",\"col\":12}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Measurement / IPC\",\"col\":4}},{\"id\":\"h_section_5\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contractor</b></span>\",\"col\":12}},{\"id\":\"card_5\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor\",\"col\":4}},{\"id\":\"h_section_6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Real Estate Inventory</b></span>\",\"col\":12}},{\"id\":\"card_6\",\"type\":\"card\",\"data\":{\"card_name\":\"Real Estate Inventory\",\"col\":4}},{\"id\":\"h_section_7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Unit Profitability</b></span>\",\"col\":12}},{\"id\":\"card_7\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Profitability\",\"col\":4}},{\"id\":\"h_section_8\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Financial Dimensions / GL Traceability</b></span>\",\"col\":12}},{\"id\":\"card_8\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial Dimensions / GL Traceability\",\"col\":4}}]",
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Analytics</b></span>\",\"col\":12}},{\"id\":\"h_section_1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Executive / CFO</b></span>\",\"col\":12}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Executive / CFO\",\"col\":4}},{\"id\":\"h_section_2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>BOQ / Construction</b></span>\",\"col\":12}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"BOQ / Construction\",\"col\":4}},{\"id\":\"h_section_3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Procurement / Stock</b></span>\",\"col\":12}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement / Stock\",\"col\":4}},{\"id\":\"h_section_4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Measurement / IPC</b></span>\",\"col\":12}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Measurement / IPC\",\"col\":4}},{\"id\":\"h_section_5\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Contractor</b></span>\",\"col\":12}},{\"id\":\"card_5\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor\",\"col\":4}},{\"id\":\"h_section_6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Real Estate Inventory</b></span>\",\"col\":12}},{\"id\":\"card_6\",\"type\":\"card\",\"data\":{\"card_name\":\"Real Estate Inventory\",\"col\":4}},{\"id\":\"h_section_7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Unit Profitability</b></span>\",\"col\":12}},{\"id\":\"card_7\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Profitability\",\"col\":4}},{\"id\":\"h_section_8\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales</b></span>\",\"col\":12}},{\"id\":\"card_8\",\"type\":\"card\",\"data\":{\"card_name\":\"Sales\",\"col\":4}},{\"id\":\"h_section_9\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Financial Dimensions / GL Traceability</b></span>\",\"col\":12}},{\"id\":\"card_9\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial Dimensions / GL Traceability\",\"col\":4}}]",
  "creation": "2026-05-09 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -505,6 +505,64 @@
    "label": "Building Profitability Summary",
    "link_count": 0,
    "link_to": "Building Profitability Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Sales Contract Register",
+   "link_count": 0,
+   "link_to": "Sales Contract Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Installment Schedule Report",
+   "link_count": 0,
+   "link_to": "Installment Schedule Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Unit Sales Pipeline",
+   "link_count": 0,
+   "link_to": "Unit Sales Pipeline",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Sales Value Summary",
+   "link_count": 0,
+   "link_to": "Sales Value Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Reserved to Sold Conversion Report",
+   "link_count": 0,
+   "link_to": "Reserved to Sold Conversion Report",
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"

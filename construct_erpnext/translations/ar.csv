@@ -1643,3 +1643,150 @@ Workflow & Status,الحالة وسير الاعتماد
 {0}: Cost Code is recommended for project financial traceability.,{0}: كود التكلفة is recommended for project financial traceability.
 {0}: Unit is required when unit-specific cost tracking is enabled.,{0}: الوحدة is required when unit-specific cost tracking is enabled.
 مستخلص مقاول عن قياسات معتمدة لأعمال المشروع,مستخلص مقاول عن قياسات معتمدة لأعمال المشروع
+
+# --- Sales Contract Foundation ---
+Sales Contract Settings,إعدادات عقد البيع
+Sales Contract,عقد البيع
+Sales Installment Schedule,جدول أقساط البيع
+Estate Sales,المبيعات العقارية
+
+# --- Sales Contract Fields ---
+Contract Number,رقم العقد
+Contract Date,تاريخ العقد
+Valid Until,صالح حتى
+Contract Status,حالة العقد
+Contract Type,نوع العقد
+Source Reservation,الحجز المصدر
+Unit Details,بيانات الوحدة
+Buyer Details,بيانات المشتري
+Buyer Name,اسم المشتري
+Party Type,نوع الطرف
+Sale Price,سعر البيع
+Discount Percent,نسبة الخصم
+Discount Amount,مبلغ الخصم
+Net Price,السعر الصافي
+Payment Terms Type,نوع شروط الدفع
+Down Payment Percent,نسبة الدفعة المقدمة
+Down Payment Amount,مبلغ الدفعة المقدمة
+Contract Terms,شروط العقد
+Installment Plan,خطة الأقساط
+Installment Schedule,جدول الأقساط
+Installment Totals,إجماليات الأقساط
+Total Installment Amount,إجمالي مبلغ الأقساط
+Outstanding Installment Amount,مبلغ الأقساط المستحقة
+Installment Count,عدد الأقساط
+Future Accounting References,مراجع المحاسبة المستقبلية
+Future References,المراجع المستقبلية
+First Invoice,أول فاتورة
+Invoices Created,تم إنشاء الفواتير
+Converted Date,تاريخ التحويل
+Converted By,قام بالتحويل
+Cancellation Reason,سبب الإلغاء
+Cancellation Date,تاريخ الإلغاء
+Previous Unit Status,الحالة السابقة للوحدة
+Previous Marketing Status,الحالة التسويقية السابقة للوحدة
+
+# --- Installment Fields ---
+Seq,التسلسل
+Installment No,رقم القسط
+Label,الوصف
+Installment Type,نوع القسط
+Due Date,تاريخ الاستحقاق
+Percent,النسبة المئوية
+Amount,المبلغ
+Status,الحالة
+Invoice,فاتورة
+Payment,دفعة
+Payment Reference,مرجع الدفع
+Payment Method,طريقة الدفع
+Notes,ملاحظات
+Booking,حجز
+Down Payment,دفعة مقدمة
+Contract,عقد
+Construction Milestone,مرحلة إنشائية
+Handover,استلام
+Post Handover,بعد الاستلام
+Other,أخرى
+Pending,قيد الانتظار
+Due,مستحق
+Partial,جزئي
+Paid,مدفوع
+Overdue,متأخر
+Waived,مُعفًى
+Cancelled,ملغى
+
+# --- Sales Contract Settings Fields ---
+General Settings,الإعدادات العامة
+Default Contract Validity Days,أيام صلاحية العقد الافتراضية
+Contract Number Prefix,بادئة رقم العقد
+Default Down Payment Percent,النسبة الافتراضية للدفعة المقدمة
+Validation Rules,قواعد التحقق
+Allow Duplicate Contract For Same Unit,السماح بعقد مكرر لنفس الوحدة
+Require Customer,يتطلب عميل
+Require Installment Schedule,يتطلب جدول أقساط
+Installment Amount Tolerance Percent,نسبة تحمل الفرق في الأقساط
+Behavior,السلوك
+Mark Unit Sold On Approval,وضع الوحدة كمباع عند الاعتماد
+Enable Sales Invoice Generation,تفعيل إنشاء فاتورة البيع
+Defaults,القيم الافتراضية
+Default Currency From Company,العملة الافتراضية من الشركة
+
+# --- Workflow States ---
+Draft,مسودة
+Under Review,قيد المراجعة
+Approved,معتمد
+Active,نشط
+Closed,مغلق
+Return to Draft,إرجاع إلى المسودة
+
+# --- Reports ---
+Sales Contract Register,سجل عقود البيع
+Installment Schedule Report,تقرير جدول الأقساط
+Unit Sales Pipeline,خط أنابيب مبيعات الوحدات
+Sales Value Summary,ملخص قيمة المبيعات
+Reserved to Sold Conversion,تحويل من الحجز للبيع
+Reserved to Sold Conversion Report,تقرير التحويل من الحجز للبيع
+
+# --- Report Columns ---
+Contract,العقد
+Contract Date,تاريخ العقد
+Project,المشروع
+Customer / Buyer,العميل / المشتري
+Sale Price,سعر البيع
+Net Price,السعر الصافي
+Installment Total,إجمالي الأقساط
+Outstanding,المستحقات
+Workflow State,حالة سير الاعتماد
+Installment No,رقم القسط
+Label,الوصف
+Due Date,تاريخ الاستحقاق
+Percent,النسبة
+Amount,المبلغ
+Invoice,فاتورة
+Overdue Days,أيام التأخير
+Unit Status,حالة الوحدة
+Reservation,الحجز
+Sales Contract,عقد البيع
+Expected Margin,الهامش المتوقع
+Contract Status,حالة العقد
+Conversion Days,أيام التحويل
+Contracts,عدد العقود
+Contracted Sales Value,قيمة المبيعات التعاقدية
+Scheduled Installment,قسط مجدول
+Pending Scheduled,الأقساط المجدولة المتبقية
+Sold Units,الوحدات المباعة
+Reserved Units,الوحدات المحجوزة
+
+# --- Validation Messages ---
+Unit {0} cannot be sold because its status is {1}.,الوحدة {0} لا يمكن بيعها لأن حالتها {1}.
+Unit {0} already has an active sales contract {1}.,الوحدة {0} لديها عقد بيع نشط {1} بالفعل.
+Customer, Lead, or Buyer Name is required for a sales contract.,يُطلب وجود عميل أو عميل محتمل أو اسم مشتري لعقد البيع.
+Valid Until must be on or after Contract Date.,يجب أن يكون صالح حتى تاريخ بعد أو يساوي تاريخ العقد.
+Sale Price must be greater than zero.,يجب أن يكون سعر البيع أكبر من صفر.
+Discount Amount cannot exceed Sale Price.,لا يمكن أن يتجاوز مبلغ الخصم سعر البيع.
+Discount Percent cannot be 100 percent or more.,لا يمكن أن تكون نسبة الخصم 100% أو أكثر.
+Reservation {0} is for unit {1}, but the contract is for unit {2}.,الحجز {0} للوحدة {1} لكن العقد للوحدة {2}.
+Reservation {0} must be in Reserved status.,الحجز {0} يجب أن تكون حالته محجوزة.
+Only active reservations can be converted.,لا يمكن تحويل سوى الحجوزات النشطة فقط.
+Total installment amount ({0}) does not match net contract price ({1}).,إجمالي مبلغ الأقساط ({0}) لا يتطابق مع سعر العقد الصافي ({1}).
+Cancellation Reason is required before cancelling.,يُطلب سبب الإلغاء قبل الإلغاء.

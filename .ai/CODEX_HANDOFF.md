@@ -304,3 +304,33 @@ Deep UX hardening status:
 - No new Sales/Rental contracts, installment/rent schedules, CRM matching, portal, accounting documents, submitted amendments, or GL backfills were introduced.
 
 Next operational task: Start Sales Contract and Installment Plan foundation.
+
+Sales Contract and Installment Plan foundation status:
+- Branch: feature/sales-contract-installment-foundation.
+- New module: construct_erpnext.estate_sales.
+- New Single DocType: Sales Contract Settings.
+- New Child DocType: Sales Installment Schedule.
+- New DocType: Sales Contract (submittable).
+- New service module: construct_erpnext.estate_sales.sales_contract_utils.
+- New workflow: Sales Contract Approval Workflow (Draft -> Under Review -> Approved -> Active, with Approved/Active -> Cancelled and Active -> Closed).
+- Workflow is created idempotently after migration by construct_erpnext.estate_sales.setup.after_migrate.ensure_sales_contract_workflow.
+- New reports: Sales Contract Register, Sales Value Summary, Unit Sales Pipeline, Active Sales Contracts, Sold Units.
+- Workspace links added to Sales & Rental, Real Estate Inventory, Executive Control Center, Executive Presentation Center, Reports & Analytics.
+- Arabic translations extended in construct_erpnext/translations/ar.csv.
+- Validation records retained:
+  - Sales Contract SC-2026-00001 from reservation RES-2026-00001.
+  - 5 installments with Booking 20%, Down Payment 30%, Construction Milestone 25%, Handover 20%, Post Handover 5%.
+  - Unit A-101 status changed to Sold on Sales Contract submission.
+  - Reservation RES-2026-00001 status changed to Converted.
+- Sales Contract Settings defaults: mark_unit_sold_on_approval enabled, enable_sales_invoice_generation disabled, allow_duplicate_contract_for_unit disabled, require_customer enabled, require_installment_schedule enabled, installment_amount_tolerance_percent 5.
+- Unit.status and Unit.marketing_status updated to Sold on Sales Contract submission (if settings allow).
+- Previous unit status stored on Sales Contract for safe rollback on cancellation.
+- No Sales Invoice, Payment Entry, Lease Contract, Rent Schedule, Commission, CRM Matching, Portal, accounting documents, or ERPNext core modifications were introduced.
+- Next operational task: Review Sales Contract readiness before Sales Invoice and Collections foundation.
+
+Sales Contract recovery note:
+- Do not use raw SQL for workflow creation or repair.
+- Workflow setup is in `construct_erpnext.estate_sales.setup.after_migrate.after_migrate` and uses Frappe ORM child table append syntax.
+- Current retained validation record: SC-2026-00001 is Active, linked to RES-2026-00001, and Unit A-101 is Sold.
+- Final retained installment schedule has four Arabic rows and totals 1,200,000, matching the net price.
+- Final sales reports are: Sales Contract Register, Installment Schedule Report, Unit Sales Pipeline, Sales Value Summary, Reserved to Sold Conversion Report.

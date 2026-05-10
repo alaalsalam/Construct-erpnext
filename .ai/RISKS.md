@@ -85,3 +85,12 @@ Updated risks:
 - Form layout polish adds Section Break metadata to many custom DocTypes; future schema work should preserve the improved field order and avoid overwriting descriptions accidentally.
 - Deep UX hardening now adds Tab Breaks and additional Column Breaks to large custom DocTypes; future DocType edits must preserve the improved field order and avoid removing layout-only fields accidentally.
 - Universal Standard is present on disk but not installed on construction.yemenfrappe.com; do not assume its runtime Arabic/RTL assets are active unless the app is deliberately installed later.
+- Sales Contract enables a commercial sale transaction with Unit Sold status and reservation conversion; this phase intentionally does not create invoices, payments, or GL entries.
+- Sales Contract settings control whether approval marks a unit as Sold; incorrect settings could cause premature Unit Sold status.
+- Sales Contract is submittable and cancels reservations on submission; cancellation of a submitted Sales Contract restores reservation status only if no other active sales contract exists.
+- Installment schedule tolerance validation is based on percentage and checks the absolute difference between installment total and net_price; setting tolerance too high could permit incorrect installment plans.
+- Draft Sales Contracts can be edited directly; the workflow is for submitted documents. Draft cancellations must use normal delete/edit permissions.
+- Sales Contract approval workflow uses docstatus-based states; ensure workflow transitions are aligned with document state transitions before workflow activation.
+- Sales Contract workflow setup must remain ORM-based; do not recreate or repair Workflow rows with direct MariaDB SQL.
+- Frappe v15 does not permit cancellation before submission through workflow docstatus transitions; Draft/Under Review contracts should return to Draft or be handled with normal draft permissions.
+- Sales Installment Schedule was corrected from a partial normal DocType attempt to a child table; the after_migrate schema guard must remain until all environments are confirmed clean.

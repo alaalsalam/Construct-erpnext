@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-10 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "general_settings_section",
+  "default_contract_validity_days",
+  "contract_number_prefix",
+  "default_down_payment_percent",
+  "validation_rules_section",
+  "allow_duplicate_contract_for_unit",
+  "require_customer",
+  "require_installment_schedule",
+  "installment_amount_tolerance_percent",
+  "behavior_section",
+  "mark_unit_sold_on_approval",
+  "enable_sales_invoice_generation",
+  "defaults_section",
+  "default_currency_from_company"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_settings_section",
+   "fieldtype": "Section Break",
+   "label": "General Settings"
+  },
+  {
+   "fieldname": "default_contract_validity_days",
+   "fieldtype": "Int",
+   "label": "Default Contract Validity Days",
+   "default": "30",
+   "in_list_view": 0,
+   "description": "Default number of days a new sales contract remains valid when no end date is provided."
+  },
+  {
+   "fieldname": "contract_number_prefix",
+   "fieldtype": "Data",
+   "label": "Contract Number Prefix",
+   "default": "SC",
+   "in_list_view": 0,
+   "description": "Prefix used when generating sales contract numbers. Example: SC will produce SC-2026-00001."
+  },
+  {
+   "fieldname": "default_down_payment_percent",
+   "fieldtype": "Percent",
+   "label": "Default Down Payment Percent",
+   "default": "10",
+   "in_list_view": 0,
+   "description": "Default down payment percentage applied when generating installment schedules."
+  },
+  {
+   "fieldname": "validation_rules_section",
+   "fieldtype": "Section Break",
+   "label": "Validation Rules"
+  },
+  {
+   "fieldname": "allow_duplicate_contract_for_unit",
+   "fieldtype": "Check",
+   "label": "Allow Duplicate Contract For Same Unit",
+   "default": "0",
+   "in_list_view": 0,
+   "description": "When disabled, a unit with an active sales contract cannot be contracted again. When enabled, additional contracts are allowed for the same unit."
+  },
+  {
+   "fieldname": "require_customer",
+   "fieldtype": "Check",
+   "label": "Require Customer",
+   "default": "1",
+   "in_list_view": 0,
+   "description": "Require an existing Customer before a sales contract can be submitted. Disabling allows Individual buyers without a Customer record."
+  },
+  {
+   "fieldname": "require_installment_schedule",
+   "fieldtype": "Check",
+   "label": "Require Installment Schedule",
+   "default": "1",
+   "in_list_view": 0,
+   "description": "Require at least one installment row and total installment amount must match net contract price within the tolerance percentage."
+  },
+  {
+   "fieldname": "installment_amount_tolerance_percent",
+   "fieldtype": "Float",
+   "label": "Installment Amount Tolerance Percent",
+   "default": "0.5",
+   "in_list_view": 0,
+   "description": "Maximum allowed percentage difference between total installment amounts and net contract price. Default is 0.5 percent."
+  },
+  {
+   "fieldname": "behavior_section",
+   "fieldtype": "Section Break",
+   "label": "Behavior"
+  },
+  {
+   "fieldname": "mark_unit_sold_on_approval",
+   "fieldtype": "Check",
+   "label": "Mark Unit Sold On Approval",
+   "default": "1",
+   "in_list_view": 0,
+   "description": "When enabled, submitting an approved sales contract changes the unit status to Sold."
+  },
+  {
+   "fieldname": "enable_sales_invoice_generation",
+   "fieldtype": "Check",
+   "label": "Enable Sales Invoice Generation",
+   "default": "0",
+   "in_list_view": 0,
+   "description": "Keep disabled in this phase. Sales Invoice generation from installment schedule will be implemented in a later phase."
+  },
+  {
+   "fieldname": "defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Defaults"
+  },
+  {
+   "fieldname": "default_currency_from_company",
+   "fieldtype": "Check",
+   "label": "Default Currency From Company",
+   "default": "1",
+   "in_list_view": 0,
+   "description": "When enabled, currency defaults from the company currency rather than a country-specific currency."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-05-10 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Estate Sales",
+ "name": "Sales Contract Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "description": "Controls sales contract behavior, numbering, validation, and installment defaults for real estate unit sales."
+}

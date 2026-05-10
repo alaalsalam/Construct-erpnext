@@ -184,3 +184,42 @@
 - Arabic UX is hardened through `construct_erpnext/translations/ar.csv`, following the same source-text translation approach used by Universal Standard.
 - Universal Standard is used as a read-only reference because it exists in bench apps but is not installed on `construction.yemenfrappe.com`.
 - Sales Contract, Lease Contract, Installment Plan, Rent Schedule, CRM Matching, Portal, and accounting automation remain deferred until this UX layer passes validation.
+
+## ADR-024: Sales Contract as Primary Operational Sales Transaction
+
+- Sales Contract is the first actual sale transaction after Unit Reservation.
+- Sales Contract is submittable and uses the Sales Contract Approval Workflow.
+- Unit becomes Sold on approved/submitted Sales Contract (controlled by `mark_unit_sold_on_approval` in settings).
+- Unit Reservation converts to status `Converted` on Sales Contract submission.
+- Sales Contract does not create Sales Invoices, Payment Entries, or GL entries in this phase.
+- Sales Order creation is deferred to a later phase.
+
+## ADR-025: Sales Installment Schedule as Child Table Inside Sales Contract
+
+- Sales Installment Schedule is a Child DocType linked to Sales Contract.
+- Each row represents a scheduled payment with due date, percentage, amount, and status.
+- Child table design prevents orphaned installment records and keeps contract and schedule lifecycle coupled.
+- No Sales Invoice or Payment Entry is generated from installments in this phase.
+- Future phases will add invoice/payment generation and status tracking.
+
+## ADR-026: Unit Becomes Sold on Sales Contract Approval
+
+- Unit.status and Unit.marketing_status are updated to `Sold` when a Sales Contract is submitted (if settings allow).
+- Previous unit status is stored on the Sales Contract for safe rollback on cancellation.
+- Cancellation restores unit status only if no other active sales contract or reservation exists.
+- Sold in this system means "contracted for sale" and does not imply handover or title registration yet.
+
+## ADR-027: No Accounting Documents Until Invoice Design
+
+- Sales Invoice generation is explicitly disabled in Sales Contract Settings (`enable_sales_invoice_generation` default 0).
+- Payment Entry creation is not implemented in this phase.
+- GL entries are not created from Sales Contract.
+- ERPNext accounting remains the source of truth; future phases will design the invoice/collection/accounting flow.
+- Accounting Dimension `unit` is prepared on Sales Contract for future propagation to Sales Invoice, but no posting occurs now.
+
+## ADR-028: Workflow Setup Must Use Frappe ORM
+
+- Sales Contract Approval Workflow is created and repaired through Frappe ORM in an idempotent after_migrate setup.
+- Direct MariaDB SQL is not used for Workflow, Workflow State, Workflow Action Master, or Workflow transition creation.
+- Frappe v15 docstatus rules are respected: pre-submit cancellation is not forced through workflow SQL.
+- Draft or Under Review contracts can return to Draft; cancellation is handled only through valid docstatus-aware workflow states.

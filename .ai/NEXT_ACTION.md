@@ -1,3 +1,3 @@
 # Next Action
 
-Start Sales Contract and Installment Plan foundation.
+Review Sales Contract readiness before Sales Invoice and Collections foundation.

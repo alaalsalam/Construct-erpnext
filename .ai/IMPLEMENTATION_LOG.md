@@ -931,3 +931,12 @@
 - Created .ai/PHASE_1_QA_CHECKLIST.md.
 - Updated client walkthrough and readiness checklist for Phase 1 closure.
 - NEXT_ACTION set to Present Phase 1 to client and collect feedback before Phase 2 planning.
+
+## 2026-05-11 CMD-DOC-01 Phase 1 User Guide for Client Testing
+
+- Created Arabic client-facing user guide:
+  - docs/PHASE_1_USER_GUIDE_AR.md
+- The guide explains Phase 1 structure, business flow, ready modules, deferred Phase 2 scope, workspaces, presentation path, client testing scenarios, report catalog, limitations, and Phase 2 roadmap.
+- Kept the guide business-friendly and avoided internal branch names, commits, tool names, or implementation details.
+- No features, DocTypes, business logic, records, migrations, accounting documents, or site data were changed.
+- NEXT_ACTION set to Review Phase 1 user guide before sending it to the client.

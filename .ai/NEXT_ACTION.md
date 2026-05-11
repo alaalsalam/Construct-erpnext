@@ -1,3 +1,3 @@
 # Next Action
 
-Finalize PROJ-0002 presentation readiness after BOQ screen enhancement.
+Present PROJ-0002 Phase 1 to client and collect handover feedback.

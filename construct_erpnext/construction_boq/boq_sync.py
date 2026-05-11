@@ -132,6 +132,65 @@ def refresh_proj_0002_boq_display():
 	return sync_boq_from_work_items(boq_name)
 
 
+@frappe.whitelist()
+def ensure_proj_0002_boq_item_links():
+	"""Create presentation Item links for PROJ-0002 BOQ rows that still need them."""
+	boq_name = "BOQ-PROJ-0002-001"
+	if not frappe.db.exists("Construction BOQ", boq_name):
+		frappe.throw(_("Construction BOQ {0} was not found.").format(boq_name))
+
+	boq = frappe.get_doc("Construction BOQ", boq_name)
+	item_group = _get_presentation_item_group()
+	unique_rows = []
+	seen = set()
+
+	for row in boq.items or []:
+		key = (_clean(row.description), row.uom or "")
+		if not key[0] or key in seen:
+			continue
+		seen.add(key)
+		unique_rows.append(row)
+
+	item_map = {}
+	created = 0
+	for index, row in enumerate(unique_rows, start=1):
+		item_code = f"PROJ-0002-BOQ-ITEM-{index:03d}"
+		if not frappe.db.exists("Item", item_code):
+			item = frappe.new_doc("Item")
+			item.item_code = item_code
+			item.item_name = row.description[:140]
+			item.item_group = item_group
+			item.stock_uom = row.uom or "Nos"
+			item.is_stock_item = 0
+			item.is_purchase_item = 1
+			item.is_sales_item = 0
+			item.description = row.description
+			item.insert(ignore_permissions=True)
+			created += 1
+		item_map[(_clean(row.description), row.uom or "")] = item_code
+
+	linked_rows = 0
+	for row in boq.items or []:
+		if row.item_code:
+			continue
+		item_code = item_map.get((_clean(row.description), row.uom or ""))
+		if not item_code:
+			continue
+		row.item_code = item_code
+		linked_rows += 1
+
+	if linked_rows:
+		boq.flags.ignore_validate_update_after_submit = True
+		boq.save(ignore_permissions=True)
+
+	return {
+		"boq": boq.name,
+		"items_created": created,
+		"boq_rows_linked": linked_rows,
+		"work_items_updated": 0,
+	}
+
+
 def _find_boq_item_row(boq, work_item):
 	for row in boq.items or []:
 		if work_item.boq_item_row_id and row.name == work_item.boq_item_row_id:
@@ -276,3 +335,16 @@ def _update_boq_execution_totals(boq):
 
 def _clean(value):
 	return " ".join((value or "").strip().lower().split())
+
+
+def _get_presentation_item_group():
+	for item_group in ("مواد البناء", "خدمات المقاولين"):
+		if frappe.db.exists("Item Group", item_group):
+			return item_group
+	item_group = frappe.get_all(
+		"Item Group",
+		filters={"is_group": 0},
+		pluck="name",
+		limit_page_length=1,
+	)
+	return item_group[0] if item_group else "All Item Groups"

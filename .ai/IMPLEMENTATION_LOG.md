@@ -1012,3 +1012,32 @@
   - No Payment Entry, Journal Entry, submitted Sales Invoice, or GL backfill was created.
 - Updated Arabic translations and presentation documentation.
 - NEXT_ACTION set to Finalize PROJ-0002 presentation readiness after BOQ screen enhancement.
+
+## 2026-05-11 CMD-DELIVERY-01 Final Client Delivery Readiness for PROJ-0002
+
+- Reverted a stale dirty change in `executive_presentation_center.json`; it removed valid Phase 1 sales/presentation links and was not kept.
+- Approved `BOQ-PROJ-0002-001` through the normal Construction BOQ workflow:
+  - docstatus: 1.
+  - status: Approved.
+  - workflow_state: Approved.
+- Added an idempotent BOQ presentation item-link helper to `construct_erpnext.construction_boq.boq_sync`.
+- Created 36 Item master records for reusable PROJ-0002 BOQ line descriptions and linked all 72 BOQ rows to Items without changing Work Item execution quantities.
+- Refreshed BOQ execution display:
+  - 72 rows synced.
+  - 72 rows linked to Construction Work Items.
+  - 72 rows linked to WBS, Cost Code, UOM, and Item.
+- Updated `Project Purchase Control Summary` to fall back to the linked BOQ row Item when the Work Item item_code is blank.
+- Verified presentation examples:
+  - `CWI-2026-00008` normal/certified with 0% variance.
+  - `CWI-2026-00006` overrun with planned 680, requested 850, and 20% variance.
+  - `CWI-2026-00003` partial/remaining with planned 1,800, measured/certified 1,170, remaining 630.
+- Ran migrate and cache clears successfully.
+- Re-ran PROJ-0002 validation successfully:
+  - 72 Work Items, 33 Material Requests, 1 PO, 1 PR, 5 Purchase Invoices, 2 Stock Entries.
+  - 5 Measurement Books, 20 Measurement Entries, 4 IPCs.
+  - 8 Contractor Accounts, 4 Retention Registers, 4 Guarantee Registers, 4 Advance Registers.
+  - 24 Units, 2 Unit Cost Allocations, 17 Reservations, 3 Sales Contracts, 3 Draft Sales Invoices.
+  - Payment Entries: 0, Journal Entries: 0, submitted Sales Invoices: 0.
+- Created `.ai/PROJ_0002_FINAL_PRESENTATION_READINESS.md`.
+- Created `.ai/CLIENT_HANDOVER_NOTES_PHASE_1.md`.
+- NEXT_ACTION set to Present PROJ-0002 Phase 1 to client and collect handover feedback.

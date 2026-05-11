@@ -105,7 +105,7 @@ def get_data(filters):
 			"description": item.description,
 			"cost_code": item.cost_code,
 			"wbs_element": item.wbs_element,
-			"item_code": item.item_code,
+			"item_code": item.item_code or boq_row.get("item_code"),
 			"planned_qty": flt(item.planned_quantity),
 			"wastage_percent": flt(boq_row.get("wastage_percent")),
 			"expected_qty": expected_qty,
@@ -141,6 +141,7 @@ def _get_boq_rows(work_items):
 			"wastage_percent",
 			"final_quantity",
 			"final_amount",
+			"item_code",
 		],
 	)
 	return {(row.parent, row.name): row for row in rows}

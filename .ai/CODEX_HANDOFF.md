@@ -502,3 +502,25 @@ CMD-BOQ-01 BOQ screen/data quality status:
 - Use Project Purchase Control Summary as the cleanest presentation screen for Expected / Actual / Remaining / Variance, then open BOQ for details.
 - Do not delete/merge duplicate-looking BOQ rows without deeper review because rows are linked to Work Items, Measurement Entries, and IPCs.
 - Current next action: Finalize PROJ-0002 presentation readiness after BOQ screen enhancement.
+
+CMD-DELIVERY-01 final PROJ-0002 handover readiness:
+- Branch: feature/boq-screen-data-quality-proj-0002.
+- `BOQ-PROJ-0002-001` is Approved through normal workflow:
+  - docstatus 1, status Approved, workflow_state Approved.
+- BOQ row quality:
+  - 72/72 rows linked to Construction Work Item, WBS Element, Cost Code, UOM, and Item.
+  - 36 presentation Item masters were created/reused for BOQ row item links.
+  - Work Items were not force-saved for item_code because existing overrun scenarios can trigger Work Item quantity validation; the BOQ row and Project Purchase Control Summary expose the Item link.
+- Preferred examples:
+  - `CWI-2026-00008`: normal/certified, 48,000 planned and certified, 0% variance.
+  - `CWI-2026-00006`: overrun, 680 planned, 850 requested, 20% variance.
+  - `CWI-2026-00003`: partial/remaining, 1,800 planned, 1,170 measured/certified, 630 remaining.
+- Project Purchase Control Summary now falls back to BOQ row Item if Work Item item_code is empty.
+- Validation passed after migrate/cache clear; official PROJ-0002 validator confirmed report loads and safety:
+  - Payment Entries 0.
+  - Journal Entries 0.
+  - Submitted Sales Invoices 0.
+- New handover files:
+  - `.ai/PROJ_0002_FINAL_PRESENTATION_READINESS.md`
+  - `.ai/CLIENT_HANDOVER_NOTES_PHASE_1.md`
+- Current next action: Present PROJ-0002 Phase 1 to client and collect handover feedback.

@@ -147,3 +147,21 @@ Ready with caveats.
 - Passed: Project Purchase Control Summary مضاف إلى Workspaces الأساسية.
 - Passed: ar.csv يقرأ بنجاح بعد إضافة ترجمات التقرير والحقول.
 - Needs Attention: لا يتم حذف أو دمج صفوف BOQ الطويلة لأنها مرتبطة بمستندات تشغيلية؛ استخدم التقرير الجديد للعرض المختصر.
+## تحديث QA النهائي - تسليم PROJ-0002
+
+| البند | الحالة | الملاحظة |
+|---|---|---|
+| BOQ-PROJ-0002-001 معتمد | Passed | Approved عبر سير العمل الطبيعي |
+| ربط بنود BOQ بعناصر العمل | Passed | 72/72 |
+| ربط WBS وCost Code وUOM وItem | Passed | 72/72 |
+| ظهور Planned / Expected / Actual / Remaining | Passed | في شاشة BOQ وتقرير Project Purchase Control Summary |
+| أمثلة الانحراف واضحة | Passed | CWI-2026-00008 وCWI-2026-00006 وCWI-2026-00003 |
+| تدفق المشتريات والقياسات وIPC | Passed | بيانات PROJ-0002 غنية ومترابطة |
+| تقارير CFO والربحية والحجوزات والبيع | Passed | تحقق PROJ-0002 الرسمي نجح |
+| Workspaces الأساسية | Passed | موجودة وغير مخفية |
+| Payment Entry / Journal Entry | Passed | لم يتم إنشاؤها |
+| Sales Invoice submission | Passed | لا توجد فواتير بيع مرحلة |
+| GL backfill | Passed | لم يتم تشغيله |
+| نطاق المرحلة الثانية | Passed | مؤجل وموثق |
+
+القرار: جاهز للعرض والتسليم كمرحلة أولى.

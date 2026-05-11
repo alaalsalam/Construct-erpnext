@@ -277,3 +277,43 @@ Ready to present now with clear caveats.
 ### قرار البيانات
 
 جاهز للعرض. لا يُنصح بحذف أو دمج صفوف BOQ لأنها مرتبطة بمشتريات وقياسات ومستخلصات. عند العرض استخدم Project Purchase Control Summary للشرح السريع، ثم افتح BOQ للتفاصيل.
+## تحديث تحقق التسليم النهائي - PROJ-0002
+
+تمت إعادة التحقق بعد تحسين شاشة BOQ واعتمادها.
+
+النتائج:
+
+- `BOQ-PROJ-0002-001` أصبح Approved عبر سير العمل الطبيعي.
+- عدد بنود BOQ: 72.
+- البنود المرتبطة بـ Work Item وWBS وCost Code وUOM وItem: 72/72.
+- تم تحديث عرض المخطط والمتوقع والفعلي والمتبقي والانحراف.
+- تقرير Project Purchase Control Summary يعمل مع فلتر `PROJ-0002` ويعرض بيانات Item من صف BOQ عند عدم وجودها على Work Item.
+- تحقق PROJ-0002 الرسمي نجح بعد migrate وclear-cache.
+
+ملخص البيانات المؤكدة:
+
+- 72 Construction Work Items.
+- 33 Material Requests.
+- 1 Purchase Order.
+- 1 Purchase Receipt.
+- 5 Purchase Invoices.
+- 2 Stock Entries.
+- 5 Measurement Books.
+- 20 Measurement Entries.
+- 4 IPCs.
+- 8 Contractor Accounts.
+- 4 Retention Registers.
+- 24 Units.
+- 2 Unit Cost Allocations.
+- 17 Unit Reservations.
+- 3 Sales Contracts.
+- 3 Draft Sales Invoices.
+
+السلامة:
+
+- Payment Entries: 0.
+- Journal Entries: 0.
+- Submitted Sales Invoices: 0.
+- لا يوجد GL backfill.
+
+قرار البيانات: جاهزة للعرض الآن حول `PROJ-0002`.

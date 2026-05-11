@@ -940,3 +940,25 @@
 - Kept the guide business-friendly and avoided internal branch names, commits, tool names, or implementation details.
 - No features, DocTypes, business logic, records, migrations, accounting documents, or site data were changed.
 - NEXT_ACTION set to Review Phase 1 user guide before sending it to the client.
+
+## 2026-05-11 CMD-DATA-02 Validate Phase 1 Presentation Data and Update Presentation Story
+
+- Confirmed current branch feature/phase-1-presentation-data is at commit bcb9497.
+- Pushed feature/phase-1-presentation-data to origin because it was not present remotely.
+- Memory and MariaDB checks passed: MariaDB responded to `select 1`; memory was available but tight, so no seeding or migration was run.
+- Ran official validation command:
+  - `bench --site construction.yemenfrappe.com execute construct_erpnext.setup.phase_1_presentation_data.validate_phase_1_presentation_data`
+- Validation passed with no forbidden names and confirmed:
+  - Projects 4, BOQs 4, Work Items 113, Material Requests 50.
+  - Real Estate Projects 4, Buildings 4, Floors 16, Units 43.
+  - Unit Reservations 14, Sales Contracts 1, Sales Invoices 1.
+  - Submitted Sales Invoices 0, Payment Entries 0, Journal Entries 0.
+- Verified presentation reports and workspaces load through Frappe report runner/workspace metadata checks.
+- Confirmed procurement presentation data is MR-heavy:
+  - 49 Material Requests are Draft and 1 is Ordered.
+  - Only one limited PO/PR/PI/Stock Entry chain exists from the previous baseline scenario.
+- Confirmed IPC is a single complete example: IPC-2026-00001 linked to Measurement Entry ME-2026-00001 and draft Purchase Invoice ACC-PINV-2026-00002.
+- Confirmed Sales Contract SC-2026-00001 has four installments totaling 1,200,000 and draft Sales Invoice ACC-SINV-2026-00001 for 300,000 linked to the first installment.
+- Created .ai/PHASE_1_PRESENTATION_DATA_VALIDATION.md.
+- Updated Phase 1 presentation summary, client walkthrough, and QA checklist with actual records to open.
+- NEXT_ACTION set to Present Phase 1 using enriched presentation data and collect client feedback.

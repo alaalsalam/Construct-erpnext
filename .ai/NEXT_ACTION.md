@@ -1,3 +1,3 @@
 # Next Action
 
-Review Phase 1 user guide before sending it to the client.
+Present Phase 1 using enriched presentation data and collect client feedback.

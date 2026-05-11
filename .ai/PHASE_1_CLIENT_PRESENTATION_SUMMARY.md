@@ -142,3 +142,88 @@ BOQ -> Work Item -> Procurement -> Measurement -> IPC -> Contractor Ledger -> CF
 ## 11. قرار العرض
 
 Phase 1 جاهزة للعرض المهني للعميل، بشرط تقديمها بوضوح كأساس تشغيلي ومالي متكامل، مع توضيح أن التحصيل الكامل والتأجير الكامل والتكاملات الذكية هي Phase 2.
+
+## 12. Recommended Records to Open During Presentation
+
+### Executive overview
+
+- Executive Presentation Center.
+- `PROJ-0001` — مشروع البرج السكني المتكامل.
+- `PROJ-0002` — مشروع برج الياسمين السكني.
+- `PROJ-0003` — مشروع الواجهة التجارية المركزية.
+- `PROJ-0004` — مجمع النور المختلط الاستخدام.
+
+### BOQ
+
+- `ANK-BOQ-FOUNDATION-001` — BOQ معتمد.
+- `BOQ-PROJ-0002-001`, `BOQ-PROJ-0003-001`, `BOQ-PROJ-0004-001` — BOQs غنية للبنود والكميات والتكلفة.
+- Construction BOQ Cost Analysis.
+
+### Procurement
+
+- `MAT-MR-2026-00001` إلى `MAT-MR-2026-00050`.
+- Work Item Procurement Summary.
+- BOQ Procurement Pipeline.
+- Site Warehouse Consumption.
+- مثال محدود لمسار مكتمل: `PUR-ORD-2026-00003`, `MAT-PRE-2026-00001`, `ACC-PINV-2026-00001`, `MAT-STE-2026-00001`.
+
+### Measurement
+
+- `MB-2026-00001` و`ME-2026-00001`.
+- `MB-2026-00002`, `MB-2026-00003`, `MB-2026-00004` كدفاتر إضافية.
+- Measurement to IPC Traceability.
+
+### IPC
+
+- `IPC-2026-00001`.
+- `ACC-PINV-2026-00002` كفاتورة مشتريات مسودة من المستخلص.
+- IPC Register.
+
+### Contractor
+
+- `CA-2026-00001` مع رصيد قائم `787,500`.
+- `CA-2026-00002`, `CA-2026-00003`, `CA-2026-00004`.
+- `RET-2026-00001`.
+
+### CFO
+
+- `PFS-2026-00001` إلى `PFS-2026-00004`.
+- `PCF-2026-00001` إلى `PCF-2026-00004`.
+- `EVM-2026-00001` إلى `EVM-2026-00004`.
+
+### Real Estate Inventory
+
+- `REP-2026-00001`, `REP-2026-00002`, `REP-2026-00003`, `REP-2026-00004`.
+- Buildings: `A`, `BLD-PROJ-000-001`, `BLD-PROJ-000-002`, `BLD-PROJ-000-003`.
+- Unit status distribution: Available `22`, Reserved `8`, Sold `10`, Rented `3`.
+
+### Unit Profitability
+
+- `UCA-2026-00001` — Applied.
+- `UCA-2026-00002`, `UCA-2026-00003`, `UCA-2026-00004` — Calculated.
+- Unit Profitability Report.
+- Real Estate Project Profitability Summary.
+
+### Reservation
+
+- `RES-2026-00001` — converted sale reservation for `A-101`.
+- `RES-BLD-PROJ-000-00-001` to `RES-BLD-PROJ-000-00-010` — draft presentation reservations.
+- Unit Reservation Register.
+
+### Sales Contract
+
+- `SC-2026-00001`.
+- Unit `A-101`.
+- Net price `1,200,000`.
+- Four installments, each `300,000`.
+
+### Draft Sales Invoice
+
+- `ACC-SINV-2026-00001`.
+- Amount `300,000`.
+- Status Draft.
+- Linked to Unit `A-101`, Project `PROJ-0001`, Sales Contract `SC-2026-00001`, and Reservation `RES-2026-00001`.
+
+## 13. Data Readiness Decision
+
+البيانات جاهزة للعرض مع ملاحظات. العرض قوي في BOQ، Work Items، التقارير التنفيذية، المخزون العقاري، الربحية، الحجوزات، وعقد البيع مع فاتورة مسودة. يجب توضيح أن مسار المشتريات بعد Material Request محدود، وأن IPC الكامل موجود كمثال واحد، وأن البيع يحتوي عقداً واحداً وفاتورة مسودة واحدة بدون ترحيل أو تحصيل.

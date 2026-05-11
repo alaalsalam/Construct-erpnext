@@ -555,3 +555,134 @@
 ### الجملة الختامية المقترحة
 
 هذه المرحلة تقدم أساساً تنفيذياً وتشغيلياً واضحاً من جدول الكميات حتى فاتورة بيع مسودة مرتبطة بوحدة وقسط، والهدف من اجتماع العميل هو جمع الملاحظات قبل تخطيط Phase 2.
+
+## Recommended Records to Open During Presentation
+
+### 1. Executive overview
+
+- Workspace: Executive Presentation Center.
+- Projects:
+  - `PROJ-0001` — مشروع البرج السكني المتكامل.
+  - `PROJ-0002` — مشروع برج الياسمين السكني.
+  - `PROJ-0003` — مشروع الواجهة التجارية المركزية.
+  - `PROJ-0004` — مجمع النور المختلط الاستخدام.
+- Reports:
+  - Project Financial Snapshot Report.
+  - Project Cash Flow Forecast Report.
+  - Project EVM Metrics Report.
+
+### 2. BOQ
+
+- `ANK-BOQ-FOUNDATION-001` — BOQ معتمد للمسار الكامل.
+- `BOQ-PROJ-0002-001` — BOQ غني للبنود والكميات والتكاليف.
+- `BOQ-PROJ-0003-001` — BOQ غني لمشروع تجاري.
+- `BOQ-PROJ-0004-001` — BOQ غني لمشروع مختلط الاستخدام.
+- Report: Construction BOQ Cost Analysis.
+
+### 3. Procurement
+
+- Material Requests: `MAT-MR-2026-00001` إلى `MAT-MR-2026-00050`.
+- العرض الأفضل حالياً: Work Item Procurement Summary وBOQ Procurement Pipeline.
+- يوجد مثال قديم/محدود لمسار مكتمل:
+  - Purchase Order: `PUR-ORD-2026-00003`.
+  - Purchase Receipt: `MAT-PRE-2026-00001`.
+  - Purchase Invoice: `ACC-PINV-2026-00001`.
+  - Stock Entry: `MAT-STE-2026-00001`.
+- يجب توضيح أن بيانات العرض الجديدة لا تحتوي مسار PO/PR/PI/Stock كامل لكل مشروع.
+
+### 4. Measurement
+
+- Measurement Book: `MB-2026-00001` — Verified.
+- Measurement Entry: `ME-2026-00001` linked to `CWI-2026-00001`.
+- Measurement Books إضافية للعرض العام:
+  - `MB-2026-00002`.
+  - `MB-2026-00003`.
+  - `MB-2026-00004`.
+- Report: Measurement to IPC Traceability.
+
+### 5. IPC
+
+- Interim Payment Certificate: `IPC-2026-00001`.
+- Draft Purchase Invoice from IPC: `ACC-PINV-2026-00002`.
+- Report: IPC Register.
+- يجب توضيح أن المثال التشغيلي الكامل للـ IPC موجود في مشروع `PROJ-0001` فقط.
+
+### 6. Contractor
+
+- Contractor Accounts:
+  - `CA-2026-00001` — يظهر رصيداً قائماً `787,500`.
+  - `CA-2026-00002`, `CA-2026-00003`, `CA-2026-00004` — حسابات جاهزة للمشاريع الأخرى.
+- Retention Register: `RET-2026-00001`.
+- Reports:
+  - Contractor Account Statement.
+  - Contractor Exposure Summary.
+  - Retention Register Report.
+
+### 7. CFO
+
+- Financial Snapshots:
+  - `PFS-2026-00001` — At Risk.
+  - `PFS-2026-00002`, `PFS-2026-00003`, `PFS-2026-00004` — On Track.
+- Cash Flow Forecasts:
+  - `PCF-2026-00001` — Red.
+  - `PCF-2026-00002`, `PCF-2026-00003`, `PCF-2026-00004` — Green.
+- EVM Metrics:
+  - `EVM-2026-00001` — At Risk.
+  - `EVM-2026-00002`, `EVM-2026-00003`, `EVM-2026-00004` — On Track.
+
+### 8. Real Estate Inventory
+
+- Real Estate Projects:
+  - `REP-2026-00001` linked to `PROJ-0001`.
+  - `REP-2026-00002` linked to `PROJ-0002`.
+  - `REP-2026-00003` linked to `PROJ-0003`.
+  - `REP-2026-00004` linked to `PROJ-0004`.
+- Buildings:
+  - `A`.
+  - `BLD-PROJ-000-001`.
+  - `BLD-PROJ-000-002`.
+  - `BLD-PROJ-000-003`.
+- Unit status distribution: Available `22`, Reserved `8`, Sold `10`, Rented `3`.
+
+### 9. Unit Profitability
+
+- Unit Cost Allocations:
+  - `UCA-2026-00001` — Applied.
+  - `UCA-2026-00002`, `UCA-2026-00003`, `UCA-2026-00004` — Calculated.
+- Reports:
+  - Unit Profitability Report.
+  - Real Estate Project Profitability Summary.
+  - Building Profitability Summary.
+
+### 10. Reservation
+
+- Converted sale reservation: `RES-2026-00001` for Unit `A-101`.
+- Converted rent reservation: `RES-2026-00005` for Unit `A-G01`، يذكر كجزء مؤجل/Phase 2 إذا ظهر.
+- Draft presentation reservations:
+  - `RES-BLD-PROJ-000-00-001` to `RES-BLD-PROJ-000-00-010`.
+- Reports:
+  - Unit Reservation Register.
+  - Active Unit Reservations.
+  - Unit Reservation Impact.
+
+### 11. Sales Contract
+
+- Sales Contract: `SC-2026-00001`.
+- Unit: `A-101`.
+- Customer: عميل مهتم بشراء وحدة سكنية.
+- Net price: `1,200,000`.
+- Installments: 4 rows of `300,000` each.
+- First installment is linked to draft Sales Invoice `ACC-SINV-2026-00001`.
+
+### 12. Draft Sales Invoice
+
+- Draft Sales Invoice: `ACC-SINV-2026-00001`.
+- Amount: `300,000`.
+- Status: Draft.
+- Invoice item carries:
+  - Unit: `A-101`.
+  - Project: `PROJ-0001`.
+  - Sales Contract: `SC-2026-00001`.
+  - Real Estate Project: `REP-2026-00001`.
+  - Unit Reservation: `RES-2026-00001`.
+- يجب التأكيد أن الفاتورة غير مرحّلة ولا يوجد Payment Entry أو GL Entry من مسار البيع في هذه المرحلة.

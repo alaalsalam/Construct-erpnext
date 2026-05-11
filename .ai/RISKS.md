@@ -110,3 +110,6 @@ Updated risks:
 - Current retained lease validation uses existing Customer `عميل مهتم بشراء وحدة سكنية` with tenant name `مستأجر محتمل لوحدة عقارية` because this site lacks normal Customer Group and Territory masters for creating a new Customer through standard validation.
 - Lease Contract readiness review passed, but rental receivables, rent invoice submission, Payment Entry collection, and rental GL Unit dimension validation remain pending until Rent Invoice and Collections foundation.
 - Phase 1 presentation must not imply that collections, rent invoicing, commissions, CRM, portals, WhatsApp, or full production accounting automation are complete; these are Phase 2 items.
+- Phase 1 presentation data is strong for BOQ, Work Items, executive reporting, inventory, profitability, reservations, and sales foundation, but procurement downstream after Material Request is intentionally thin; do not present PO/PR/PI/Stock as complete for every project.
+- Phase 1 presentation data contains one complete IPC example only; additional IPC scenarios should be added later if the client wants broader contractor billing coverage during the presentation.
+- Phase 1 sales presentation contains one Sales Contract and one draft Sales Invoice only; collections, submitted invoice accounting, Payment Entry, and sales GL validation remain Phase 2/finance-readiness work.

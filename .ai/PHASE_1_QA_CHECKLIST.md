@@ -98,3 +98,27 @@
 Ready.
 
 Phase 1 جاهزة للعرض على العميل وجمع الملاحظات قبل تخطيط Phase 2.
+
+## 11. Recommended Records to Open During Presentation
+
+- Passed: Executive overview يبدأ من Executive Presentation Center مع المشاريع `PROJ-0001`, `PROJ-0002`, `PROJ-0003`, `PROJ-0004`.
+- Passed: BOQ يعرض `ANK-BOQ-FOUNDATION-001` كمسار معتمد، و`BOQ-PROJ-0002-001`, `BOQ-PROJ-0003-001`, `BOQ-PROJ-0004-001` كبيانات غنية للبنود والكميات والتكلفة.
+- Passed: Procurement يعرض `MAT-MR-2026-00001` إلى `MAT-MR-2026-00050` وتقارير Work Item Procurement Summary وBOQ Procurement Pipeline.
+- Needs Attention: مسار PO/PR/PI/Stock الكامل موجود كمثال محدود فقط: `PUR-ORD-2026-00003`, `MAT-PRE-2026-00001`, `ACC-PINV-2026-00001`, `MAT-STE-2026-00001`.
+- Passed: Measurement يعرض `MB-2026-00001` و`ME-2026-00001`.
+- Needs Attention: Measurement Books الأخرى `MB-2026-00002` إلى `MB-2026-00004` موجودة كمسودات للعرض العام وليست مسار قياس مكتمل.
+- Passed: IPC يعرض `IPC-2026-00001` و`ACC-PINV-2026-00002` كفاتورة مشتريات مسودة مرتبطة بالمستخلص.
+- Needs Attention: IPC الكامل موجود كمثال واحد فقط.
+- Passed: Contractor يعرض `CA-2026-00001` و`RET-2026-00001`.
+- Passed: CFO يعرض `PFS-2026-00001` إلى `PFS-2026-00004`, `PCF-2026-00001` إلى `PCF-2026-00004`, و`EVM-2026-00001` إلى `EVM-2026-00004`.
+- Passed: Real Estate Inventory يعرض `REP-2026-00001` إلى `REP-2026-00004` مع 43 وحدة.
+- Passed: Unit Profitability يعرض `UCA-2026-00001` إلى `UCA-2026-00004` وتقارير الربحية.
+- Passed: Reservation يعرض `RES-2026-00001` والحجوزات المسودة `RES-BLD-PROJ-000-00-001` إلى `RES-BLD-PROJ-000-00-010`.
+- Passed: Sales Contract يعرض `SC-2026-00001` وجدول أقساطه.
+- Passed with caveat: Draft Sales Invoice يعرض `ACC-SINV-2026-00001` كمسودة فقط، بدون ترحيل أو تحصيل.
+
+## 12. Data Validation Decision
+
+Ready with caveats.
+
+بيانات العرض غنية بما يكفي لاجتماع العميل إذا تم تقديمها بصراحة: لا توجد سلسلة مشتريات مكتملة لكل مشروع، ولا يوجد إلا IPC كامل واحد، ومبيعات المرحلة الأولى تحتوي عقد بيع واحد وفاتورة مسودة واحدة. هذه ليست عوائق للعرض، لكنها نقاط يجب شرحها ضمن حدود Phase 1.

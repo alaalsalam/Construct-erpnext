@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"cp_hdr1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Budgets & Cost</b></span>\",\"col\":12}},{\"id\":\"cp_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Budgets\",\"col\":4}},{\"id\":\"cp_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Cost Tracking\",\"col\":4}},{\"id\":\"cp_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Advancement\",\"col\":4}},{\"id\":\"cp_sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"cp_hdr2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Resources & Subcontracts</b></span>\",\"col\":12}},{\"id\":\"cp_c4\",\"type\":\"card\",\"data\":{\"card_name\":\"Resources\",\"col\":4}},{\"id\":\"cp_c5\",\"type\":\"card\",\"data\":{\"card_name\":\"Subcontracts & Invoicing\",\"col\":4}},{\"id\":\"cp_c6\",\"type\":\"card\",\"data\":{\"card_name\":\"Materials\",\"col\":4}},{\"id\":\"cp_sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"cp_hdr3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"cp_c7\",\"type\":\"card\",\"data\":{\"card_name\":\"Budget Reports\",\"col\":4}},{\"id\":\"cp_c8\",\"type\":\"card\",\"data\":{\"card_name\":\"Advancement Reports\",\"col\":4}},{\"id\":\"cp_c9\",\"type\":\"card\",\"data\":{\"card_name\":\"Resource & Material Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"cp_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Budgets\",\"col\":3}},{\"id\":\"cp_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Cost Tracking\",\"col\":3}},{\"id\":\"cp_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Advancement\",\"col\":3}},{\"id\":\"cp_sp1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"cp_c4\",\"type\":\"card\",\"data\":{\"card_name\":\"Resources\",\"col\":3}},{\"id\":\"cp_c5\",\"type\":\"card\",\"data\":{\"card_name\":\"Subcontracts & Invoicing\",\"col\":3}},{\"id\":\"cp_c6\",\"type\":\"card\",\"data\":{\"card_name\":\"Materials\",\"col\":3}},{\"id\":\"cp_sp2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"cp_c7\",\"type\":\"card\",\"data\":{\"card_name\":\"Budget Reports\",\"col\":3}},{\"id\":\"cp_c8\",\"type\":\"card\",\"data\":{\"card_name\":\"Advancement Reports\",\"col\":3}},{\"id\":\"cp_c9\",\"type\":\"card\",\"data\":{\"card_name\":\"Resource & Material Reports\",\"col\":3}}]",
  "creation": "2026-04-03 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -365,7 +365,7 @@
  "public": 0,
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 1,
+ "sequence_id": 50,
  "shortcuts": [
   {
    "color": "Blue",

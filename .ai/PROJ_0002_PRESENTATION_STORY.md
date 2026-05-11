@@ -130,3 +130,19 @@
   - الفعلي: `Actual Qty`.
   - المتبقي: `Remaining Qty`.
   - الانحراف: `Variance %` و`Execution Status`.
+
+## 12. تحديث ترتيب واختصار Workspaces
+
+- تم ترتيب Workspaces العامة حسب تسلسل عرض العميل:
+  1. Executive Presentation Center.
+  2. Executive Control Center.
+  3. Construction Control.
+  4. Procurement & Site Warehouses.
+  5. Measurement & IPC.
+  6. Contractor Management.
+  7. Real Estate Inventory.
+  8. Sales & Rental.
+  9. Reports & Analytics.
+- تم حذف عناوين الأقسام الداخلية المتكررة من محتوى Workspaces لتقليل طول الصفحة.
+- أصبحت البطاقات تظهر بشكل أكثر كثافة في الصف الواحد، مع بقاء التقسيم المنطقي داخل Cards.
+- أثناء العرض، ابدأ من أول Workspace ثم تحرك بالتسلسل دون الحاجة للنزول الطويل داخل كل صفحة.

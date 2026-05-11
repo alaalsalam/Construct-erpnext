@@ -1117,3 +1117,22 @@
   - `CWI-2026-00006`: Planned 680, Expected 680, Actual 816, Remaining 0, Overrun.
   - `CWI-2026-00008`: Planned 48,000, Expected 48,000, Actual 48,000, Remaining 0, Certified.
 - No Payment Entries, Journal Entries, submitted Sales Invoices, or GL backfill were created.
+
+## 2026-05-11 Workspace compact sequential layout
+
+- Created branch `feature/workspace-compact-sequential-layout`.
+- Reordered public product workspaces so the client-facing product flow appears first:
+  - `Executive Presentation Center` sequence `0.1`.
+  - `Executive Control Center` sequence `0.2`.
+  - `Construction Control` sequence `0.3`.
+  - `Procurement & Site Warehouses` sequence `0.4`.
+  - `Measurement & IPC` sequence `0.5`.
+  - `Contractor Management` sequence `0.6`.
+  - `Real Estate Inventory` sequence `0.7`.
+  - `Sales & Rental` sequence `0.8`.
+  - `Reports & Analytics` sequence `0.9`.
+- Removed internal section header blocks from public workspaces and kept one page title only.
+- Changed workspace card blocks to `col=3` so more cards appear per row and users need less vertical scrolling.
+- Kept hidden legacy/system GCS workspaces hidden from primary navigation.
+- Ran migrate and cache clear successfully.
+- Validated live workspace ordering and compact content on `construction.yemenfrappe.com`.

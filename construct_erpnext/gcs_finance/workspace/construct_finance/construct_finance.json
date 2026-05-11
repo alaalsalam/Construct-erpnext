@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"cf_hdr1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Treasury & Payments</b></span>\",\"col\":12}},{\"id\":\"cf_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Treasury\",\"col\":4}},{\"id\":\"cf_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Collections & Deposits\",\"col\":4}},{\"id\":\"cf_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Automation & Analysis\",\"col\":4}}]",
+ "content": "[{\"id\":\"cf_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Treasury\",\"col\":3}},{\"id\":\"cf_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Collections & Deposits\",\"col\":3}},{\"id\":\"cf_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Automation & Analysis\",\"col\":3}}]",
  "creation": "2026-04-03 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -127,7 +127,7 @@
  "public": 0,
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 2,
+ "sequence_id": 51,
  "shortcuts": [
   {
    "color": "Blue",

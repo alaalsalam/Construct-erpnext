@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"ca_hdr1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Invoicing & Tax</b></span>\",\"col\":12}},{\"id\":\"ca_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Invoicing\",\"col\":4}},{\"id\":\"ca_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"HR Administration\",\"col\":4}},{\"id\":\"ca_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Reminders\",\"col\":4}}]",
+ "content": "[{\"id\":\"ca_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Invoicing\",\"col\":3}},{\"id\":\"ca_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"HR Administration\",\"col\":3}},{\"id\":\"ca_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Reminders\",\"col\":3}}]",
  "creation": "2026-04-03 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -117,7 +117,7 @@
  "public": 0,
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 3,
+ "sequence_id": 52,
  "shortcuts": [
   {
    "color": "Red",

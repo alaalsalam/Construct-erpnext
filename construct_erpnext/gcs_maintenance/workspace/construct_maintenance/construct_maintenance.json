@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"cm_hdr1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Maintenance</b></span>\",\"col\":12}},{\"id\":\"cm_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Routines & Assets\",\"col\":4}},{\"id\":\"cm_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Failure Analysis\",\"col\":4}},{\"id\":\"cm_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"cm_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Routines & Assets\",\"col\":3}},{\"id\":\"cm_c2\",\"type\":\"card\",\"data\":{\"card_name\":\"Failure Analysis\",\"col\":3}},{\"id\":\"cm_c3\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":3}}]",
  "creation": "2026-04-03 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -147,7 +147,7 @@
  "public": 0,
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 5,
+ "sequence_id": 54,
  "shortcuts": [
   {
    "color": "Orange",

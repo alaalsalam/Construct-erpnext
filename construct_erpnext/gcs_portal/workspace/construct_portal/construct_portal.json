@@ -1,7 +1,7 @@
 {
  "app": "construct_erpnext",
  "charts": [],
- "content": "[{\"id\":\"cpo_hdr1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Client Portal</b></span>\",\"col\":12}},{\"id\":\"cpo_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Portal Settings\",\"col\":6}}]",
+ "content": "[{\"id\":\"cpo_c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Portal Settings\",\"col\":3}}]",
  "creation": "2026-04-03 00:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
@@ -41,7 +41,7 @@
  "public": 0,
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 8,
+ "sequence_id": 57,
  "shortcuts": [],
  "title": "GCS Portal",
  "type": "Workspace"

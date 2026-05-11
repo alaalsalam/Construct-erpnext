@@ -560,3 +560,12 @@ BOQ grid planned/expected visibility follow-up:
   - 72 synced rows.
   - Example rows validated for normal, overrun, and remaining scenarios.
 - Current next action: Present PROJ-0002 Phase 1 from the Project form and BOQ grid with visible planned, expected, actual, remaining, and variance values.
+
+Workspace compact sequential layout follow-up:
+- Branch: `feature/workspace-compact-sequential-layout`.
+- Public product workspaces now appear first in the intended client presentation sequence:
+  - Executive Presentation Center, Executive Control Center, Construction Control, Procurement & Site Warehouses, Measurement & IPC, Contractor Management, Real Estate Inventory, Sales & Rental, Reports & Analytics.
+- Internal section headers were removed from workspace content, leaving only one page title plus KPI/cards.
+- Workspace cards now use `col=3` to reduce vertical scrolling.
+- Hidden legacy GCS workspaces remain hidden from primary navigation.
+- Current next action: Present PROJ-0002 Phase 1 using the compact sequential workspaces and BOQ grid.

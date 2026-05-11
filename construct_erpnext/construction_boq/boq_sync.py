@@ -243,6 +243,7 @@ def _sync_row(row, work_item):
 
 	expected_qty = flt(row.final_quantity) or flt(row.quantity)
 	actual_qty = max(flt(row.get(fieldname)) for fieldname in ACTUAL_QTY_FIELDS)
+	row.actual_qty = actual_qty
 	row.remaining_qty = max(expected_qty - actual_qty, 0)
 
 	expected_amount = flt(row.final_amount) or flt(row.amount)
@@ -267,6 +268,7 @@ def _clear_row_execution(row):
 		"consumed_qty",
 		"measured_qty",
 		"certified_qty",
+		"actual_qty",
 		"remaining_qty",
 		"actual_amount",
 		"remaining_amount",

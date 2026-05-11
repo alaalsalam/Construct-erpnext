@@ -542,3 +542,21 @@ CMD-UX-02 connections/grid presentation status:
   - Contractor Ledger Entry and WBS Element are visible from Project connections.
   - `PROJ-0002` live counts confirm construction, procurement, contractor, CFO, real estate, reservation, sales, and draft invoice documents are all reachable from the Project form.
 - Current next action: Present PROJ-0002 Phase 1 from the Project form with complete related-document connections, then collect client feedback.
+
+BOQ grid planned/expected visibility follow-up:
+- Branch: `feature/boq-grid-planned-expected-visibility`.
+- `Construction BOQ Item` now has a concise presentation grid:
+  - Construction Work Item.
+  - Description.
+  - Planned Qty.
+  - Wastage %.
+  - Expected Qty.
+  - Actual Qty.
+  - Remaining Qty.
+  - Variance %.
+  - Execution Status.
+- `actual_qty` is a new read-only display field calculated by `construct_erpnext.construction_boq.boq_sync` from downstream procurement, stock, measurement, and certification quantities.
+- `BOQ-PROJ-0002-001` was refreshed after migration:
+  - 72 synced rows.
+  - Example rows validated for normal, overrun, and remaining scenarios.
+- Current next action: Present PROJ-0002 Phase 1 from the Project form and BOQ grid with visible planned, expected, actual, remaining, and variance values.

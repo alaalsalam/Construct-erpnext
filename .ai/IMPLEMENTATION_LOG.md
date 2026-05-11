@@ -1097,3 +1097,23 @@
   - 8 Contractor Accounts, 13 Contractor Ledger Entries, 4 Retention, 4 Advance, 4 Guarantee Registers.
   - 1 Real Estate Project, 1 Building, 24 Units, 2 Unit Cost Allocations, 17 Unit Reservations, 3 Sales Contracts, 3 Sales Invoices.
 - No data records, accounting documents, Payment Entries, Journal Entries, submitted Sales Invoices, or GL backfill were created.
+
+## 2026-05-11 BOQ grid planned/expected visibility follow-up
+
+- Created branch `feature/boq-grid-planned-expected-visibility` from `feature/project-complete-related-connections`.
+- Improved `Construction BOQ Item` grid presentation for `BOQ-PROJ-0002-001` and future BOQs:
+  - Enabled editable grid metadata for the child table.
+  - Renamed `quantity` label to `Planned Qty`.
+  - Renamed `final_quantity` label to `Expected Qty`.
+  - Renamed `final_amount` label to `Expected Amount`.
+  - Added read-only calculated field `actual_qty`.
+  - Reordered grid-visible columns so the BOQ table shows Work Item, Description, Planned Qty, Wastage %, Expected Qty, Actual Qty, Remaining Qty, Variance %, and Execution Status.
+- Updated `boq_sync` so `actual_qty` is calculated from downstream procurement, stock, measurement, and certification quantities.
+- Refreshed `BOQ-PROJ-0002-001`:
+  - 72 rows synced.
+  - 72 rows remain linked to Work Items.
+- Validated key examples:
+  - `CWI-2026-00003`: Planned 1,800, Expected 1,800, Actual 1,170, Remaining 630, Underrun.
+  - `CWI-2026-00006`: Planned 680, Expected 680, Actual 816, Remaining 0, Overrun.
+  - `CWI-2026-00008`: Planned 48,000, Expected 48,000, Actual 48,000, Remaining 0, Certified.
+- No Payment Entries, Journal Entries, submitted Sales Invoices, or GL backfill were created.

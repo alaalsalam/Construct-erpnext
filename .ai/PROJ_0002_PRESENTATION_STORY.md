@@ -110,3 +110,23 @@
   - Project Financial Snapshot وProject Cash Flow Forecast وProject EVM Metrics.
   - Real Estate Project وBuilding وUnit وUnit Cost Allocation وUnit Reservation وSales Contract وSales Invoice المسودة.
 - مسار العرض الموصى به الآن: ابدأ من Project `PROJ-0002`، افتح Connections لإظهار الترابط الكامل، ثم انتقل للتقارير التفصيلية عند شرح المخطط/الفعلي/المتبقي.
+
+## 11. تحديث جدول BOQ داخل الشاشة
+
+- جدول بنود `BOQ-PROJ-0002-001` أصبح يعرض الأعمدة المهمة مباشرة في Grid View:
+  - Work Item.
+  - Description.
+  - Planned Qty.
+  - Wastage %.
+  - Expected Qty.
+  - Actual Qty.
+  - Remaining Qty.
+  - Variance %.
+  - Execution Status.
+- حقل `Actual Qty` محسوب تلقائياً من أعلى كمية فعلية مرتبطة بالبند من المشتريات أو المخزون أو القياس أو الاعتماد.
+- أثناء العرض، استخدم الجدول نفسه لإظهار:
+  - المخطط: `Planned Qty`.
+  - المتوقع بعد الهالك: `Expected Qty`.
+  - الفعلي: `Actual Qty`.
+  - المتبقي: `Remaining Qty`.
+  - الانحراف: `Variance %` و`Execution Status`.

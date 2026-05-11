@@ -2011,3 +2011,10 @@ Actual Qty,الكمية الفعلية
 Project Planning,تخطيط المشروع
 Procurement & Stock,المشتريات والمخزون
 Real Estate Development,التطوير العقاري
+Planned BOQ quantity before wastage or execution updates.,كمية جدول الكميات المخططة قبل الهالك أو تحديثات التنفيذ.
+Expected wastage percentage added to the planned quantity.,نسبة الهالك المتوقعة المضافة إلى الكمية المخططة.
+Calculated expected quantity after applying wastage to the planned quantity.,الكمية المتوقعة المحسوبة بعد تطبيق الهالك على الكمية المخططة.
+"Calculated actual quantity from downstream procurement, stock, measurement, or certification activity.",الكمية الفعلية المحسوبة من نشاط المشتريات أو المخزون أو القياس أو الاعتماد اللاحق.
+Calculated planned amount before wastage or markup.,المبلغ المخطط المحسوب قبل الهالك أو هامش الزيادة.
+Calculated expected amount after wastage and markup.,المبلغ المتوقع المحسوب بعد الهالك وهامش الزيادة.
+Operational work item generated automatically from or linked to this BOQ line.,بند العمل التشغيلي المنشأ تلقائياً من بند جدول الكميات أو المرتبط به.

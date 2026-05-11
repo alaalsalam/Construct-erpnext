@@ -1136,3 +1136,15 @@
 - Kept hidden legacy/system GCS workspaces hidden from primary navigation.
 - Ran migrate and cache clear successfully.
 - Validated live workspace ordering and compact content on `construction.yemenfrappe.com`.
+
+## 2026-05-11 Arabic field help hardening
+
+- Created branch `feature/arabic-field-help-hardening`.
+- Improved Arabic-facing clarity for key presentation screens after user review of mixed English/Arabic labels.
+- Updated `Project Financial Snapshot` field descriptions, especially BOQ / budget, procurement, measurement, IPC, contractor, CFO risk, and executive summary fields.
+- Updated `Construction BOQ` field descriptions so BOQ lines explain planned quantity, expected quantity, actual quantity, remaining quantity, variance, and linked Work Items.
+- Added focused Arabic translations for BOQ amount labels and field descriptions shown in the Arabic UI.
+- Validated `ar.csv` parsing successfully.
+- Ran migrate and cleared site and website cache successfully.
+- Confirmed live DocField metadata contains the updated descriptions for `Project Financial Snapshot` and `Construction BOQ`.
+- No business records, accounting documents, Payment Entries, Journal Entries, submitted Sales Invoices, or GL backfill were created.

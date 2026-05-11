@@ -82,7 +82,7 @@
    "label": "Company",
    "options": "Company",
    "in_list_view": 0,
-   "description": "Links this record to the related Company."
+   "description": "Company that owns this project snapshot and controls currency/accounting context."
   },
   {
    "fieldname": "project",
@@ -92,7 +92,7 @@
    "label": "Project",
    "options": "Project",
    "reqd": 1,
-   "description": "Links this record to the related Project.",
+   "description": "ERPNext Project being summarized in this financial snapshot.",
    "hidden": 0
   },
   {
@@ -102,7 +102,7 @@
    "in_list_view": 1,
    "label": "Snapshot Date",
    "reqd": 1,
-   "description": "Specifies the snapshot date for this Project Financial Snapshot.",
+   "description": "Date used to calculate and present the project financial position.",
    "hidden": 0
   },
   {
@@ -114,7 +114,7 @@
    "fieldtype": "Data",
    "in_list_view": 0,
    "label": "Snapshot Title",
-   "description": "Specifies the snapshot title for this Project Financial Snapshot."
+   "description": "Short title shown to management for this snapshot."
   },
   {
    "default": "Draft",
@@ -123,7 +123,7 @@
    "in_list_view": 0,
    "label": "Status",
    "options": "Draft\nGenerated\nReviewed\nArchived",
-   "description": "Current status used to track this Project Financial Snapshot through its workflow or reporting lifecycle.",
+   "description": "Review status of this financial snapshot.",
    "in_standard_filter": 1
   },
   {
@@ -141,7 +141,7 @@
    "fieldtype": "Currency",
    "label": "BOQ Total Amount",
    "read_only": 1,
-   "description": "Current planned project value from BOQ/Work Items.",
+   "description": "Total planned project value from approved BOQ lines and generated Work Items.",
    "in_list_view": 1,
    "hidden": 0
   },
@@ -151,7 +151,7 @@
    "label": "BOQ Material Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Planned BOQ value for material-category items."
   },
   {
    "fieldname": "boq_labor_amount",
@@ -159,7 +159,7 @@
    "label": "BOQ Labor Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Planned BOQ value for labor-category items."
   },
   {
    "fieldname": "boq__budget_column_break",
@@ -171,7 +171,7 @@
    "label": "BOQ Equipment Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Planned BOQ value for equipment-category items."
   },
   {
    "fieldname": "boq_subcontract_amount",
@@ -179,7 +179,7 @@
    "label": "BOQ Subcontract Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Planned BOQ value for subcontract-category items."
   },
   {
    "fieldname": "boq_overhead_amount",
@@ -187,7 +187,7 @@
    "label": "BOQ Overhead Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Planned BOQ value for overhead and site management items."
   },
   {
    "fieldname": "procurement_tab",
@@ -205,7 +205,7 @@
    "label": "Requested Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Total value requested through Material Requests linked to project Work Items."
   },
   {
    "fieldname": "committed_amount",
@@ -213,7 +213,7 @@
    "label": "Committed Amount",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Calculated value updated automatically from linked records or document lines.",
+   "description": "Total value committed through Purchase Orders linked to project Work Items.",
    "hidden": 0
   },
   {
@@ -222,7 +222,7 @@
    "label": "Received Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Total value received through Purchase Receipts linked to project Work Items."
   },
   {
    "fieldname": "procurement_column_break",
@@ -234,7 +234,7 @@
    "label": "Procurement Invoiced Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Total supplier invoice value linked to project Work Items."
   },
   {
    "fieldname": "consumed_amount",
@@ -242,7 +242,7 @@
    "label": "Consumed Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Total value of materials consumed or issued to site for this project."
   },
   {
    "fieldname": "procurement_progress_percent",
@@ -250,7 +250,7 @@
    "label": "Procurement Progress Percent",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Procurement progress percentage compared with the planned BOQ value."
   },
   {
    "fieldname": "measurement_tab",
@@ -268,7 +268,7 @@
    "label": "Measured Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Total field-measured value from verified Measurement Entries."
   },
   {
    "fieldname": "measured_progress_percent",
@@ -276,7 +276,7 @@
    "label": "Measured Progress Percent",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Measured progress percentage compared with the planned BOQ value."
   },
   {
    "fieldname": "measurement_progress_percent",
@@ -284,7 +284,7 @@
    "label": "Measurement Progress Percent",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Overall measurement progress percentage used for executive tracking."
   },
   {
    "fieldname": "ipc__contractor_tab",
@@ -302,7 +302,7 @@
    "label": "Certified Gross Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Gross value certified through IPCs before retention and deductions."
   },
   {
    "fieldname": "certified_net_amount",
@@ -310,7 +310,7 @@
    "label": "Certified Net Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Net payable value certified through IPCs after retention and deductions."
   },
   {
    "fieldname": "retention_held_amount",
@@ -318,7 +318,7 @@
    "label": "Retention Held Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Total retention amount held from contractor IPCs."
   },
   {
    "fieldname": "retention_released_amount",
@@ -326,7 +326,7 @@
    "label": "Retention Released Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Total retention amount released back to contractors."
   },
   {
    "fieldname": "ipc__contractor_column_break",
@@ -337,7 +337,7 @@
    "fieldtype": "Currency",
    "label": "Contractor Outstanding Amount",
    "read_only": 1,
-   "description": "Operational contractor outstanding exposure from Contractor Accounts.",
+   "description": "Current outstanding contractor exposure from Contractor Accounts.",
    "in_list_view": 0
   },
   {
@@ -346,7 +346,7 @@
    "label": "Contractor Paid Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Total contractor payment amount reflected in contractor control records."
   },
   {
    "fieldname": "certification_progress_percent",
@@ -354,7 +354,7 @@
    "label": "Certification Progress Percent",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "IPC certification progress percentage compared with the planned BOQ value."
   },
   {
    "fieldname": "variance_tab",
@@ -372,7 +372,7 @@
    "label": "Budget vs Committed Variance",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Difference between planned BOQ value and committed purchase value."
   },
   {
    "fieldname": "budget_vs_invoiced_variance",
@@ -380,7 +380,7 @@
    "label": "Budget vs Invoiced Variance",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Difference between planned BOQ value and procurement invoice value."
   },
   {
    "fieldname": "variance_column_break",
@@ -392,7 +392,7 @@
    "label": "Budget vs Certified Variance",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Difference between planned BOQ value and certified IPC value."
   },
   {
    "fieldname": "consumed_vs_measured_variance",
@@ -400,7 +400,7 @@
    "label": "Consumed vs Measured Variance",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Difference between consumed site cost and measured field value."
   },
   {
    "fieldname": "risk_indicators_tab",
@@ -419,7 +419,7 @@
    "options": "Green\nYellow\nRed",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Calculated value updated automatically from linked records or document lines.",
+   "description": "Cost risk level calculated from budget, commitment, invoice, measurement, and certification indicators.",
    "hidden": 0
   },
   {
@@ -429,7 +429,7 @@
    "options": "Green\nYellow\nRed",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Current status used to track this Project Financial Snapshot through its workflow or reporting lifecycle.",
+   "description": "Cash risk level based on expected inflows, outflows, and upcoming obligations.",
    "hidden": 0
   },
   {
@@ -439,7 +439,7 @@
    "label": "Overall Status",
    "options": "On Track\nWatch\nAt Risk",
    "read_only": 1,
-   "description": "Simple CFO status based on deterministic risk rules.",
+   "description": "Overall executive status combining cost, cash, progress, and EVM indicators.",
    "hidden": 0
   },
   {
@@ -457,21 +457,21 @@
    "fieldtype": "Text",
    "label": "Executive Summary",
    "in_list_view": 0,
-   "description": "Additional notes or explanation for this Project Financial Snapshot."
+   "description": "Management summary explaining the current project financial position."
   },
   {
    "fieldname": "key_risks",
    "fieldtype": "Text",
    "label": "Key Risks",
    "in_list_view": 0,
-   "description": "Additional notes or explanation for this Project Financial Snapshot."
+   "description": "Main risks that management should review for this project."
   },
   {
    "fieldname": "recommendations",
    "fieldtype": "Text",
    "label": "Recommendations",
    "in_list_view": 0,
-   "description": "Additional notes or explanation for this Project Financial Snapshot."
+   "description": "Recommended management actions based on the snapshot indicators."
   }
  ],
  "index_web_pages_for_search": 1,

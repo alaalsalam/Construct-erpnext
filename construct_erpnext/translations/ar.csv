@@ -520,19 +520,19 @@ BAC,BAC
 BOQ / Budget,جدول الكميات / الميزانية
 BOQ / WBS / Cost Code,جدول الكميات / هيكل العمل / كود التكلفة
 BOQ Date,تاريخ جدول الكميات
-BOQ Equipment Amount,BOQ Equipment المبلغ
+BOQ Equipment Amount,مبلغ معدات جدول الكميات
 BOQ Item Row ID,معرف صف بند جدول الكميات
 BOQ Items,بنود جدول الكميات
-BOQ Labor Amount,BOQ Labor المبلغ
+BOQ Labor Amount,مبلغ عمالة جدول الكميات
 BOQ Line Scope,نطاق بند جدول الكميات
-BOQ Material Amount,BOQ Material المبلغ
+BOQ Material Amount,مبلغ مواد جدول الكميات
 BOQ Number,رقم جدول الكميات
 BOQ Number is required.,رقم جدول الكميات is required.
-BOQ Overhead Amount,BOQ Overhead المبلغ
+BOQ Overhead Amount,مبلغ مصاريف الإشراف والموقع
 BOQ Planning,تخطيط جدول الكميات
 BOQ Qty,كمية جدول الكميات
-BOQ Subcontract Amount,BOQ Subcontract المبلغ
-BOQ Total Amount,BOQ إجمالي المبلغ
+BOQ Subcontract Amount,مبلغ عقود الباطن في جدول الكميات
+BOQ Total Amount,إجمالي مبلغ جدول الكميات
 BOQ Type,نوع جدول الكميات
 Balance,الرصيد
 Bank,Bank
@@ -671,7 +671,7 @@ Current Certified Amount,Current المبلغ المعتمد
 Current Certified Qty,الكمية المعتمدة الحالية
 Current Measured Qty,الكمية المقاسة الحالية
 Current payable amount after retention and deductions.,المبلغ المستحق الحالي بعد المحتجزات والاستقطاعات.
-Current planned project value from BOQ/Work Items.,Current planned project value from BOQ/بنود العمل.
+Current planned project value from BOQ/Work Items.,إجمالي القيمة المخططة للمشروع من بنود جدول الكميات وبنود العمل.
 Current status used to track this Advance Register through its workflow or reporting lifecycle.,Current status used to track this سجل السلف through its workflow or reporting lifecycle.
 Current status used to track this Building through its workflow or reporting lifecycle.,Current status used to track this المبنى through its workflow or reporting lifecycle.
 Current status used to track this Construction BOQ through its workflow or reporting lifecycle.,Current status used to track this جدول كميات البناء through its workflow or reporting lifecycle.
@@ -2018,3 +2018,18 @@ Calculated expected quantity after applying wastage to the planned quantity.,ا�
 Calculated planned amount before wastage or markup.,المبلغ المخطط المحسوب قبل الهالك أو هامش الزيادة.
 Calculated expected amount after wastage and markup.,المبلغ المتوقع المحسوب بعد الهالك وهامش الزيادة.
 Operational work item generated automatically from or linked to this BOQ line.,بند العمل التشغيلي المنشأ تلقائياً من بند جدول الكميات أو المرتبط به.
+Total planned project value from approved BOQ lines and generated Work Items.,إجمالي القيمة المخططة للمشروع من بنود جدول الكميات المعتمدة وبنود العمل المنشأة.
+Planned BOQ value for material-category items.,القيمة المخططة لبنود المواد ضمن جدول الكميات.
+Planned BOQ value for labor-category items.,القيمة المخططة لبنود العمالة ضمن جدول الكميات.
+Planned BOQ value for equipment-category items.,القيمة المخططة لبنود المعدات ضمن جدول الكميات.
+Planned BOQ value for subcontract-category items.,القيمة المخططة لبنود عقود الباطن ضمن جدول الكميات.
+Planned BOQ value for overhead and site management items.,القيمة المخططة لبنود المصاريف العامة وإدارة الموقع ضمن جدول الكميات.
+Company that owns this project snapshot and controls currency/accounting context.,الشركة المالكة لهذه اللقطة المالية والتي تحدد العملة والسياق المحاسبي.
+ERPNext Project being summarized in this financial snapshot.,المشروع الذي تلخصه هذه اللقطة المالية.
+Date used to calculate and present the project financial position.,التاريخ المستخدم لحساب وعرض الوضع المالي للمشروع.
+Review status of this financial snapshot.,حالة مراجعة هذه اللقطة المالية.
+"Detailed BOQ lines showing planned quantity, expected quantity, actual quantity, remaining quantity, variance, and linked Work Items.",بنود تفصيلية تعرض الكمية المخططة والمتوقعة والفعلية والمتبقية والانحراف وبنود العمل المرتبطة.
+"Total planned BOQ amount after quantities, wastage, markup, and category totals are calculated.",إجمالي مبلغ جدول الكميات بعد حساب الكميات والهالك والزيادات وتصنيف البنود.
+"Cost risk level calculated from budget, commitment, invoice, measurement, and certification indicators.",مستوى مخاطر التكلفة المحسوب من مؤشرات الميزانية والالتزام والفوترة والقياس والاعتماد.
+"Cash risk level based on expected inflows, outflows, and upcoming obligations.",مستوى مخاطر السيولة بناءً على التدفقات الداخلة والخارجة والالتزامات القادمة.
+"Overall executive status combining cost, cash, progress, and EVM indicators.",الحالة التنفيذية العامة التي تجمع مؤشرات التكلفة والسيولة والتقدم والقيمة المكتسبة.

@@ -75,7 +75,7 @@
    "label": "Company",
    "options": "Company",
    "in_list_view": 0,
-   "description": "Links this record to the related Company."
+   "description": "Company responsible for this BOQ and its financial context."
   },
   {
    "fieldname": "project",
@@ -85,7 +85,7 @@
    "label": "Project",
    "options": "Project",
    "reqd": 1,
-   "description": "Links this record to the related Project.",
+   "description": "ERPNext Project for which this BOQ defines the planned construction scope.",
    "hidden": 0
   },
   {
@@ -93,7 +93,7 @@
    "fieldtype": "Link",
    "label": "Construction Budget",
    "options": "Construction Budget",
-   "description": "Optional existing construction budget used as a planning reference.",
+   "description": "Optional budget reference used to compare BOQ planning against an approved construction budget.",
    "in_list_view": 0
   },
   {
@@ -103,7 +103,7 @@
    "label": "BOQ Number",
    "reqd": 1,
    "unique": 1,
-   "description": "Specifies the boq number for this Construction BOQ.",
+   "description": "Readable BOQ number used to identify this project budget document.",
    "hidden": 0
   },
   {
@@ -112,7 +112,7 @@
    "in_list_view": 1,
    "label": "BOQ Type",
    "options": "Preliminary\nDetailed\nContract\nRevised\nForecast",
-   "description": "Selects the boq type used for classification, workflow, or reporting.",
+   "description": "Type of BOQ, such as original, revised, or variation budget.",
    "hidden": 0
   },
   {
@@ -125,7 +125,7 @@
    "fieldtype": "Int",
    "label": "Revision No",
    "in_list_view": 0,
-   "description": "Specifies the revision no for this Construction BOQ."
+   "description": "Revision number used when the BOQ is updated through controlled changes."
   },
   {
    "default": "Today",
@@ -133,7 +133,7 @@
    "fieldtype": "Date",
    "in_list_view": 0,
    "label": "BOQ Date",
-   "description": "Specifies the boq date for this Construction BOQ."
+   "description": "Date on which this BOQ version is prepared or approved."
   },
   {
    "fieldname": "workflow_state",
@@ -141,7 +141,7 @@
    "label": "Workflow State",
    "options": "Draft\nUnder Review\nApproved\nLocked\nCancelled",
    "in_list_view": 0,
-   "description": "Current status used to track this Construction BOQ through its workflow or reporting lifecycle."
+   "description": "Workflow approval state for this BOQ."
   },
   {
    "fieldname": "status",
@@ -150,7 +150,7 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Draft\nUnder Review\nApproved\nLocked\nCancelled",
-   "description": "Current status used to track this Construction BOQ through its workflow or reporting lifecycle.",
+   "description": "Operational status of this BOQ for planning and reporting.",
    "hidden": 0
   },
   {
@@ -169,7 +169,7 @@
    "label": "Cost Center",
    "options": "Cost Center",
    "in_list_view": 0,
-   "description": "Links this record to the related Cost Center."
+   "description": "Default Cost Center used for generated Work Items and project cost tracking."
   },
   {
    "fieldname": "currency",
@@ -177,7 +177,7 @@
    "label": "Currency",
    "options": "Currency",
    "in_list_view": 0,
-   "description": "Links this record to the related Currency."
+   "description": "Currency used for all BOQ amounts."
   },
   {
    "fieldname": "boq_items_tab",
@@ -195,7 +195,7 @@
    "label": "Items",
    "options": "Construction BOQ Item",
    "in_list_view": 0,
-   "description": "Child table used to record items for this Construction BOQ."
+   "description": "Detailed BOQ lines showing planned quantity, expected quantity, actual quantity, remaining quantity, variance, and linked Work Items."
   },
   {
    "fieldname": "execution_summary_tab",
@@ -208,28 +208,28 @@
    "label": "Execution Summary"
   },
   {
-   "description": "Total amount requested through Material Requests linked to BOQ Work Items.",
+   "description": "Total value requested through Material Requests linked to BOQ Work Items.",
    "fieldname": "total_requested_amount",
    "fieldtype": "Currency",
    "label": "Total Requested Amount",
    "read_only": 1
   },
   {
-   "description": "Total committed amount from Purchase Orders linked to BOQ Work Items.",
+   "description": "Total committed value from Purchase Orders linked to BOQ Work Items.",
    "fieldname": "total_ordered_amount",
    "fieldtype": "Currency",
    "label": "Total Ordered Amount",
    "read_only": 1
   },
   {
-   "description": "Total invoiced procurement amount linked to BOQ Work Items.",
+   "description": "Total procurement invoice value linked to BOQ Work Items.",
    "fieldname": "total_invoiced_amount",
    "fieldtype": "Currency",
    "label": "Total Invoiced Amount",
    "read_only": 1
   },
   {
-   "description": "Total consumed stock amount linked to BOQ Work Items.",
+   "description": "Total stock consumption value linked to BOQ Work Items.",
    "fieldname": "total_consumed_amount",
    "fieldtype": "Currency",
    "label": "Total Consumed Amount",
@@ -240,14 +240,14 @@
    "fieldtype": "Column Break"
   },
   {
-   "description": "Total measured amount from verified Measurement Entries linked to BOQ Work Items.",
+   "description": "Total measured value from verified Measurement Entries linked to BOQ Work Items.",
    "fieldname": "total_measured_amount",
    "fieldtype": "Currency",
    "label": "Total Measured Amount",
    "read_only": 1
   },
   {
-   "description": "Total certified amount from IPC lines linked to BOQ Work Items.",
+   "description": "Total certified value from IPC lines linked to BOQ Work Items.",
    "fieldname": "total_certified_amount",
    "fieldtype": "Currency",
    "label": "Total Certified Amount",
@@ -269,7 +269,7 @@
    "label": "Total Material Cost",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Planned BOQ total for material items."
   },
   {
    "fieldname": "total_labor_cost",
@@ -277,7 +277,7 @@
    "label": "Total Labor Cost",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Planned BOQ total for labor items."
   },
   {
    "fieldname": "total_equipment_cost",
@@ -285,7 +285,7 @@
    "label": "Total Equipment Cost",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Planned BOQ total for equipment items."
   },
   {
    "fieldname": "total_subcontract_cost",
@@ -293,7 +293,7 @@
    "label": "Total Subcontract Cost",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Planned BOQ total for subcontract items."
   },
   {
    "fieldname": "total_overhead_cost",
@@ -301,7 +301,7 @@
    "label": "Total Overhead Cost",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Planned BOQ total for overhead and site management items."
   },
   {
    "fieldname": "cost_summary_column_break",
@@ -313,7 +313,7 @@
    "label": "Total Contingency Cost",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Planned BOQ total reserved for contingency items."
   },
   {
    "fieldname": "total_amount",
@@ -321,7 +321,7 @@
    "in_list_view": 1,
    "label": "Total Amount",
    "read_only": 1,
-   "description": "Calculated value updated automatically from linked records or document lines.",
+   "description": "Total planned BOQ amount after quantities, wastage, markup, and category totals are calculated.",
    "hidden": 0
   },
   {
@@ -329,7 +329,7 @@
    "fieldtype": "Currency",
    "label": "Total Actual Cost",
    "read_only": 1,
-   "description": "Reserved summary of actual cost; procurement and certification amounts are tracked separately.",
+   "description": "Reserved actual-cost summary. Procurement, consumption, measurement, and certification totals are shown separately.",
    "in_list_view": 1,
    "hidden": 0
   },
@@ -339,7 +339,7 @@
    "label": "Variance Amount",
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Difference between actual tracked cost and planned BOQ amount."
   },
   {
    "fieldname": "variance_percent",
@@ -347,7 +347,7 @@
    "label": "Variance Percent",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Calculated value updated automatically from linked records or document lines.",
+   "description": "Variance percentage between actual tracked cost and planned BOQ amount.",
    "hidden": 0
   },
   {
@@ -365,7 +365,7 @@
    "fieldtype": "Check",
    "label": "Work Items Generated",
    "read_only": 1,
-   "description": "Indicates that operational Work Items have been generated from approved BOQ rows.",
+   "description": "Indicates whether operational Construction Work Items were generated from this BOQ.",
    "in_list_view": 1,
    "hidden": 0
   },
@@ -388,7 +388,7 @@
    "print_hide": 1,
    "read_only": 1,
    "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Original BOQ document from which this version was amended."
   },
   {
    "fieldname": "remarks_tab",
@@ -405,7 +405,7 @@
    "fieldtype": "Text",
    "label": "Remarks",
    "in_list_view": 0,
-   "description": "Additional notes or explanation for this Construction BOQ."
+   "description": "Additional notes about BOQ assumptions, scope, or approval comments."
   }
  ],
  "index_web_pages_for_search": 1,

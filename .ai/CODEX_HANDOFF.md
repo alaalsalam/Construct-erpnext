@@ -569,3 +569,10 @@ Workspace compact sequential layout follow-up:
 - Workspace cards now use `col=3` to reduce vertical scrolling.
 - Hidden legacy GCS workspaces remain hidden from primary navigation.
 - Current next action: Present PROJ-0002 Phase 1 using the compact sequential workspaces and BOQ grid.
+
+Arabic field help hardening follow-up:
+- Branch: `feature/arabic-field-help-hardening`.
+- `Project Financial Snapshot` now has clearer English source descriptions for BOQ, procurement, measurement, IPC, contractor, CFO risk, and executive summary fields, with matching Arabic translations for the most visible presentation labels and help text.
+- `Construction BOQ` now has clearer source descriptions explaining planned, expected, actual, remaining, variance, totals, and linked Work Items.
+- `ar.csv` parsing passed, migrate passed, and cache clear passed on `construction.yemenfrappe.com`.
+- Current next action: Review Arabic field help on key presentation screens, then present PROJ-0002 Phase 1.

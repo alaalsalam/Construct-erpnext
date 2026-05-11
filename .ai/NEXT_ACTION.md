@@ -1,3 +1,3 @@
 # Next Action
 
-Present Phase 1 using enriched presentation data and collect client feedback.
+Present PROJ-0002 as the main Phase 1 client presentation scenario and collect feedback.

@@ -196,3 +196,51 @@ Ready with caveats.
 - IPC الكامل مثال واحد فقط.
 - Sales foundation تحتوي عقداً واحداً وفاتورة مسودة واحدة بدون ترحيل أو تحصيل.
 - هذه الحدود لا تمنع العرض، لكنها مهمة حتى تكون توقعات العميل دقيقة قبل جمع ملاحظات Phase 2.
+
+## 9. تحديث CMD-DATA-03 — PROJ-0002 كمشروع العرض الرئيسي
+
+تم إثراء `PROJ-0002` ليصبح مسار العرض الرئيسي بدلاً من توزيع القصة بين عدة مشاريع.
+
+### Counts Verified for PROJ-0002
+
+| Category | Count |
+|---|---:|
+| Construction Work Items | 72 |
+| Material Requests | 33 |
+| Purchase Orders | 1 |
+| Purchase Receipts | 1 |
+| Purchase Invoices | 5 |
+| Stock Entries | 2 |
+| Measurement Books | 5 |
+| Measurement Entries | 20 |
+| IPCs | 4 |
+| Contractor Accounts | 8 |
+| Retention Registers | 4 |
+| Guarantee Registers | 4 |
+| Advance Registers | 4 |
+| Financial Snapshot | 1 |
+| Cash Flow Forecast | 1 |
+| EVM Metrics | 1 |
+| Units | 24 |
+| Unit Cost Allocations | 2 |
+| Unit Reservations | 17 |
+| Sales Contracts | 3 |
+| Draft Sales Invoices | 3 |
+
+### Important Records to Open
+
+- BOQ: `BOQ-PROJ-0002-001`.
+- Measurement Books: `MB-2026-00005`, `MB-2026-00006`, `MB-2026-00007`, `MB-2026-00008`.
+- IPCs: `IPC-2026-00002`, `IPC-2026-00003`, `IPC-2026-00004`, `IPC-2026-00005`.
+- CFO: `PFS-2026-00002`, `PCF-2026-00002`, `EVM-2026-00002`.
+- Real Estate Project: `REP-2026-00002`.
+- Unit Cost Allocation: `UCA-2026-00005`.
+- Reservations: `RES-PROJ-0002-001` to `RES-PROJ-0002-010`.
+- Sales Contracts: `SC-PROJ-0002-001`, `SC-PROJ-0002-002`, `SC-PROJ-0002-003`.
+- Draft Sales Invoices: `ACC-SINV-2026-00002`, `ACC-SINV-2026-00003`, `ACC-SINV-2026-00004`.
+
+### Readiness Decision
+
+Ready to present now with clear caveats.
+
+`PROJ-0002` هو الآن المشروع الموصى به للعرض. يجب توضيح أن فواتير البيع مسودة، ولا توجد Payment Entries أو Journal Entries أو GL backfill.

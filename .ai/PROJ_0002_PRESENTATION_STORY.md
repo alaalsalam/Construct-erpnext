@@ -1,0 +1,75 @@
+# قصة عرض PROJ-0002 للمرحلة الأولى
+
+## 1. لماذا PROJ-0002 هو مشروع العرض الرئيسي
+
+تم إثراء `PROJ-0002` ليكون المسار الرئيسي في عرض المرحلة الأولى. أصبح المشروع يحتوي على بيانات مترابطة من التخطيط إلى التنفيذ والرقابة المالية والمخزون العقاري والبيع التأسيسي، بحيث يستطيع العميل متابعة القصة من بند BOQ حتى فاتورة بيع مسودة بدون ترحيل محاسبي.
+
+## 2. السجلات الرئيسية التي تفتح أثناء العرض
+
+- Project: `PROJ-0002` — مشروع برج الياسمين السكني.
+- Real Estate Project: `REP-2026-00002`.
+- Construction BOQ: `BOQ-PROJ-0002-001`.
+- Measurement Books: `MB-2026-00005`, `MB-2026-00006`, `MB-2026-00007`, `MB-2026-00008`.
+- IPCs: `IPC-2026-00002`, `IPC-2026-00003`, `IPC-2026-00004`, `IPC-2026-00005`.
+- Draft Purchase Invoices from IPC: `ACC-PINV-2026-00004` إلى `ACC-PINV-2026-00007`.
+- CFO: `PFS-2026-00002`, `PCF-2026-00002`, `EVM-2026-00002`.
+- Unit Cost Allocation: `UCA-2026-00005`.
+- Reservations: `RES-PROJ-0002-001` إلى `RES-PROJ-0002-010`.
+- Sales Contracts: `SC-PROJ-0002-001`, `SC-PROJ-0002-002`, `SC-PROJ-0002-003`.
+- Draft Sales Invoices: `ACC-SINV-2026-00002`, `ACC-SINV-2026-00003`, `ACC-SINV-2026-00004`.
+
+## 3. تسلسل العرض المقترح
+
+1. ابدأ من Executive Presentation Center مع فلترة التقارير على `PROJ-0002` قدر الإمكان.
+2. افتح `BOQ-PROJ-0002-001` لشرح البنود والكميات والتكلفة المخططة.
+3. افتح Work Item Procurement Summary لشرح Planned / Requested / Ordered / Received / Invoiced / Consumed / Remaining.
+4. افتح BOQ Procurement Pipeline وProcurement Budget Control لشرح الانحرافات.
+5. افتح Measurement Books `MB-2026-00005` إلى `MB-2026-00008` لشرح القياس الميداني.
+6. افتح IPC Register ثم أحد المستخلصات `IPC-2026-00002` لشرح Previous / Current / Total / Remaining والاحتجاز.
+7. افتح Contractor Account Statement وContractor Exposure Summary لشرح ذمم المقاول والاحتجاز.
+8. افتح Project Financial Snapshot Report وCash Flow Forecast وEVM Metrics لشرح النظرة التنفيذية.
+9. افتح `REP-2026-00002` ثم Unit Inventory Report لشرح المبنى والوحدات والحالات.
+10. افتح Unit Profitability Report وProject Unit Cost Matrix لشرح توزيع التكلفة والربحية.
+11. افتح Unit Reservation Register لشرح الحجز النشط والمنتهي والملغي والمحول.
+12. افتح `SC-PROJ-0002-001` ثم Installment Schedule Report لشرح عقد البيع وجدول الأقساط.
+13. افتح `ACC-SINV-2026-00002` كفاتورة بيع مسودة مرتبطة بقسط، مع توضيح أنها غير مرحلة.
+
+## 4. شرح Expected / Actual / Remaining
+
+- بند مكتمل تقريباً: `CWI-2026-00008` حديد التسليح، المخطط `48,000` والمستلم/المستهلك قريب من المخطط.
+- بند تجاوز: `CWI-2026-00006` خرسانة الأسقف، الطلب والالتزام أعلى من المخطط لإظهار مخاطر الزيادة.
+- بند جزئي: `CWI-2026-00060` خرسانة الأساسات، التنفيذ والاستلام أقل من المخطط لإظهار المتبقي.
+- قياسات ومستخلصات: المستخلصات الأربعة تربط القياس بالاعتماد المالي والاحتجاز.
+
+## 5. التقارير التي يجب فتحها
+
+- Work Item Procurement Summary.
+- BOQ Procurement Pipeline.
+- Procurement Budget Control.
+- Measurement to IPC Traceability.
+- IPC Register.
+- Contractor Account Statement.
+- Contractor Exposure Summary.
+- Project Financial Snapshot Report.
+- Project Cash Flow Forecast Report.
+- Project EVM Metrics Report.
+- Unit Inventory Report.
+- Unit Profitability Report.
+- Unit Reservation Impact.
+- Sales Contract Register.
+- Installment Schedule Report.
+- Sales Invoice from Installments Report.
+- GL Dimension Traceability.
+- Project Unit Cost Matrix.
+
+## 6. ملاحظات مهمة
+
+- لم يتم إنشاء تقرير جديد باسم Project Purchase Control Summary لأن التقارير الحالية أصبحت تعرض المخطط والفعلي والمتبقي بشكل كاف.
+- توجد فواتير مشتريات مسودة من IPC، لكن لا توجد Payment Entries.
+- توجد فواتير بيع مسودة فقط، ولا توجد Sales Invoice submitted أو GL Entry من مسار البيع.
+- لا يوجد Journal Entry ولا GL backfill.
+- التحصيل الكامل، الإيجار الكامل، العمولات، CRM، البوابات، وWhatsApp تبقى Phase 2.
+
+## 7. القرار
+
+`PROJ-0002` أصبح مشروع العرض الرئيسي الموصى به للمرحلة الأولى. البيانات جاهزة للعرض مع توضيح أن الفواتير والدفعات والترحيل المحاسبي الكامل مؤجلة إلى المرحلة التالية.

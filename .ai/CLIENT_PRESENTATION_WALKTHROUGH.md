@@ -686,3 +686,22 @@
   - Real Estate Project: `REP-2026-00001`.
   - Unit Reservation: `RES-2026-00001`.
 - يجب التأكيد أن الفاتورة غير مرحّلة ولا يوجد Payment Entry أو GL Entry من مسار البيع في هذه المرحلة.
+
+## PROJ-0002 Presentation Route — المسار الرئيسي الجديد
+
+يفضل في العرض القادم استخدام `PROJ-0002` كقصة واحدة متصلة:
+
+1. Executive Presentation Center: ابدأ بالنظرة التنفيذية وقل إن `PROJ-0002` هو مشروع العرض الرئيسي.
+2. BOQ: افتح `BOQ-PROJ-0002-001` واشرح أن البنود تحولت إلى 72 Work Items.
+3. Procurement: افتح Work Item Procurement Summary وBOQ Procurement Pipeline لشرح المخطط، المطلوب، المطلوب شراؤه، المستلم، المفوتر، المستهلك، والمتبقي.
+4. Measurement: افتح `MB-2026-00005` إلى `MB-2026-00008` لشرح قياسات الأساسات والهيكل والتشطيبات والدهانات.
+5. IPC: افتح `IPC-2026-00002` إلى `IPC-2026-00005` لشرح Current / Previous / Remaining والاحتجاز وصافي المستحق.
+6. Contractor: افتح Contractor Account Statement وContractor Exposure Summary لشرح رصيد المقاول والاحتجاز.
+7. CFO: افتح `PFS-2026-00002`, `PCF-2026-00002`, `EVM-2026-00002`.
+8. Real Estate Inventory: افتح `REP-2026-00002` وUnit Inventory Report.
+9. Unit Profitability: افتح `UCA-2026-00005`, Unit Profitability Report, Project Unit Cost Matrix.
+10. Reservation: افتح `RES-PROJ-0002-001` إلى `RES-PROJ-0002-010` لشرح Reserved / Converted / Expired / Cancelled.
+11. Sales Contract: افتح `SC-PROJ-0002-001`, `SC-PROJ-0002-002`, `SC-PROJ-0002-003`.
+12. Draft Sales Invoice: افتح `ACC-SINV-2026-00002`, `ACC-SINV-2026-00003`, `ACC-SINV-2026-00004`.
+
+نقطة مهمة للعميل: لا توجد Payment Entries أو Journal Entries، ولا توجد Sales Invoice submitted. الهدف هو عرض foundation متصل وقابل للفهم قبل مرحلة التحصيل والترحيل الكامل.

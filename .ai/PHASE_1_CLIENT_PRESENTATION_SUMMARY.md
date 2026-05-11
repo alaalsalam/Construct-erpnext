@@ -227,3 +227,22 @@ Phase 1 جاهزة للعرض المهني للعميل، بشرط تقديمه�
 ## 13. Data Readiness Decision
 
 البيانات جاهزة للعرض مع ملاحظات. العرض قوي في BOQ، Work Items، التقارير التنفيذية، المخزون العقاري، الربحية، الحجوزات، وعقد البيع مع فاتورة مسودة. يجب توضيح أن مسار المشتريات بعد Material Request محدود، وأن IPC الكامل موجود كمثال واحد، وأن البيع يحتوي عقداً واحداً وفاتورة مسودة واحدة بدون ترحيل أو تحصيل.
+
+## 14. PROJ-0002 Main Presentation Project
+
+بعد CMD-DATA-03 أصبح `PROJ-0002` هو المسار الرئيسي المقترح للعرض.
+
+- Executive overview: افتح Executive Presentation Center ثم فلتر التقارير على `PROJ-0002`.
+- BOQ: `BOQ-PROJ-0002-001` مع 72 Work Items.
+- Procurement: Work Item Procurement Summary وBOQ Procurement Pipeline تعرض 33 Material Requests وسيناريوهات طلب/أمر/استلام/فوترة/استهلاك.
+- Measurement: `MB-2026-00005` إلى `MB-2026-00008`.
+- IPC: `IPC-2026-00002` إلى `IPC-2026-00005`.
+- Contractor: Contractor Account Statement وContractor Exposure Summary يعرضان أرصدة مستخلصات واحتجاز.
+- CFO: `PFS-2026-00002`, `PCF-2026-00002`, `EVM-2026-00002`.
+- Real Estate: `REP-2026-00002` مع 24 وحدة.
+- Unit Costing: `UCA-2026-00005`.
+- Reservation: `RES-PROJ-0002-001` إلى `RES-PROJ-0002-010`.
+- Sales: `SC-PROJ-0002-001` إلى `SC-PROJ-0002-003`.
+- Draft Sales Invoice: `ACC-SINV-2026-00002` إلى `ACC-SINV-2026-00004`.
+
+قرار العرض: استخدم `PROJ-0002` كقصة العرض الأساسية، مع التأكيد أن فواتير البيع والمشتريات المسودة ليست ترحيلاً محاسبياً ولا يوجد تحصيل في المرحلة الأولى.

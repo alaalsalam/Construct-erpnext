@@ -457,3 +457,32 @@ Phase 1 presentation data validation status:
   - Sales has one contract and one draft invoice; no payment, submitted Sales Invoice, Journal Entry, or GL posting.
 - New validation file: .ai/PHASE_1_PRESENTATION_DATA_VALIDATION.md.
 - Current next action: Present Phase 1 using enriched presentation data and collect client feedback.
+
+PROJ-0002 intensive presentation data status:
+- Branch: feature/proj-0002-intensive-presentation-data.
+- Main project for client presentation: `PROJ-0002` / `REP-2026-00002`.
+- Data enrichment entry points:
+  - `construct_erpnext.setup.phase_1_presentation_data.enrich_proj_0002_presentation_data`
+  - `construct_erpnext.setup.phase_1_presentation_data.validate_proj_0002_presentation_data`
+- Verified counts after enrichment:
+  - 72 Construction Work Items.
+  - 33 Material Requests.
+  - 1 Purchase Order, 1 Purchase Receipt, 5 Purchase Invoices.
+  - 2 Stock Entries.
+  - 5 Measurement Books, including 4 verified presentation books.
+  - 20 Measurement Entries.
+  - 4 IPCs and 4 Retention Registers.
+  - 24 Units and 2 Unit Cost Allocations.
+  - 17 Unit Reservations, 3 Sales Contracts, 3 draft Sales Invoices.
+- Main records:
+  - BOQ: `BOQ-PROJ-0002-001`.
+  - Measurement Books: `MB-2026-00005` to `MB-2026-00008`.
+  - IPCs: `IPC-2026-00002` to `IPC-2026-00005`.
+  - Sales Contracts: `SC-PROJ-0002-001` to `SC-PROJ-0002-003`.
+  - Draft Sales Invoices: `ACC-SINV-2026-00002` to `ACC-SINV-2026-00004`.
+- Safety status:
+  - Payment Entries: 0.
+  - Journal Entries: 0.
+  - Submitted Sales Invoices: 0.
+  - No GL backfill.
+- Current next action: Present PROJ-0002 as the main Phase 1 client presentation scenario and collect feedback.

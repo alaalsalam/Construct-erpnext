@@ -122,3 +122,17 @@ Phase 1 جاهزة للعرض على العميل وجمع الملاحظات ق
 Ready with caveats.
 
 بيانات العرض غنية بما يكفي لاجتماع العميل إذا تم تقديمها بصراحة: لا توجد سلسلة مشتريات مكتملة لكل مشروع، ولا يوجد إلا IPC كامل واحد، ومبيعات المرحلة الأولى تحتوي عقد بيع واحد وفاتورة مسودة واحدة. هذه ليست عوائق للعرض، لكنها نقاط يجب شرحها ضمن حدود Phase 1.
+
+## 13. PROJ-0002 Intensive Presentation Data
+
+- Passed: `PROJ-0002` أصبح مشروع العرض الرئيسي.
+- Passed: `BOQ-PROJ-0002-001` يعرض 72 Work Items.
+- Passed: تقارير الشراء تعرض 33 Material Requests وبيانات Planned / Requested / Ordered / Received / Invoiced / Consumed / Remaining.
+- Passed: توجد 4 Measurement Books موثقة للعرض و20 Measurement Entries.
+- Passed: توجد 4 IPCs و4 Retention Registers مرتبطة بالمشروع.
+- Passed: توجد 24 وحدة وUnit Cost Allocation مطبق على الوحدات.
+- Passed: توجد 10 حجوزات PROJ-0002 بحالات Reserved / Converted / Expired / Cancelled.
+- Passed: توجد 3 Sales Contracts و3 Draft Sales Invoices.
+- Passed: لا توجد Payment Entries أو Journal Entries أو Sales Invoice submitted.
+- Deferred: Project Purchase Control Summary لم يتم إنشاؤه لأن تقارير الشراء الحالية أصبحت كافية للعرض.
+- Decision: PROJ-0002 جاهز ليكون سيناريو العرض الرئيسي للمرحلة الأولى.

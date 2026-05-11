@@ -962,3 +962,24 @@
 - Created .ai/PHASE_1_PRESENTATION_DATA_VALIDATION.md.
 - Updated Phase 1 presentation summary, client walkthrough, and QA checklist with actual records to open.
 - NEXT_ACTION set to Present Phase 1 using enriched presentation data and collect client feedback.
+
+## 2026-05-11 CMD-DATA-03 Enrich PROJ-0002 as Main Client Presentation Project
+
+- Created branch `feature/proj-0002-intensive-presentation-data` from `feature/phase-1-presentation-data`.
+- Added dedicated PROJ-0002 enrichment and validation functions to `construct_erpnext/setup/phase_1_presentation_data.py`.
+- Ran migrate and cache clear before data execution.
+- Enriched `PROJ-0002` as the main presentation story:
+  - 72 Construction Work Items linked to `BOQ-PROJ-0002-001`.
+  - 33 Material Requests, 1 Purchase Order, 1 Purchase Receipt, 5 Purchase Invoices, and 2 Stock Entries visible through procurement reports.
+  - 4 verified Measurement Books with 20 Measurement Entries.
+  - 4 IPCs with retention and draft Purchase Invoices from IPC.
+  - Contractor Accounts, Retention Registers, Advance Registers, and Guarantee Registers for contractor control.
+  - CFO snapshot, cash flow forecast, and EVM metrics refreshed for `PROJ-0002`.
+  - 24 units in `REP-2026-00002`, with varied availability, reservation, sold, rented, and blocked states.
+  - Unit Cost Allocation `UCA-2026-00005` applied to 24 units.
+  - 10 PROJ-0002 reservations, 3 Sales Contracts, and 3 draft Sales Invoices.
+- Validated the PROJ-0002 reports:
+  - procurement, measurement, IPC, contractor, CFO, inventory, unit profitability, reservation, sales, and traceability reports load.
+- No Payment Entry, Journal Entry, Sales Invoice submission, or GL backfill was created.
+- Created `.ai/PROJ_0002_PRESENTATION_STORY.md`.
+- Updated presentation walkthrough, Phase 1 summary, data validation, QA checklist, handoff, risks, and NEXT_ACTION.

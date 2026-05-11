@@ -180,4 +180,7 @@ Phase 1 client presentation closure:
 - Create Phase 1 Arabic client presentation summary. Completed.
 - Create Phase 1 Arabic QA checklist. Completed.
 - Update walkthrough and readiness memory for client presentation. Completed.
-- Next action: Present Phase 1 to client and collect feedback before Phase 2 planning.
+- Enrich PROJ-0002 as the main connected presentation scenario. Completed.
+- Enhance `BOQ-PROJ-0002-001` screen with Work Item linkage, execution summary, and actual/remaining/variance display fields. Completed.
+- Add Project Purchase Control Summary for Expected / Actual / Remaining presentation. Completed.
+- Next action: Finalize PROJ-0002 presentation readiness after BOQ screen enhancement.

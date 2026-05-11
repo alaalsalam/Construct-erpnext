@@ -1,3 +1,3 @@
 # Next Action
 
-Present PROJ-0002 as the main Phase 1 client presentation scenario and collect feedback.
+Finalize PROJ-0002 presentation readiness after BOQ screen enhancement.

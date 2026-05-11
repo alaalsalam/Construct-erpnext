@@ -141,7 +141,7 @@
   {
    "fieldname": "construction_boq",
    "fieldtype": "Link",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Construction BOQ",
    "options": "Construction BOQ",
@@ -186,7 +186,7 @@
    "fieldtype": "Link",
    "label": "Cost Code",
    "options": "Cost Code",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "description": "Links this record to the related Cost Code."
   },
   {
@@ -272,7 +272,7 @@
    "fieldtype": "Float",
    "label": "Requested Qty",
    "read_only": 1,
-   "in_list_view": 0,
+   "in_list_view": 1,
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
@@ -281,7 +281,7 @@
    "fieldtype": "Float",
    "label": "Ordered Qty",
    "read_only": 1,
-   "in_list_view": 0,
+   "in_list_view": 1,
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {

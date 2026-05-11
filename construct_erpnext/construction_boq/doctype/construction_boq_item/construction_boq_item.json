@@ -23,6 +23,22 @@
   "markup_percent",
   "final_quantity",
   "final_amount",
+  "execution_tracking_section",
+  "construction_work_item",
+  "requested_qty",
+  "ordered_qty",
+  "received_qty",
+  "invoiced_qty",
+  "consumed_qty",
+  "execution_tracking_column_break",
+  "measured_qty",
+  "certified_qty",
+  "remaining_qty",
+  "actual_amount",
+  "remaining_amount",
+  "variance_amount",
+  "variance_percent",
+  "execution_status",
   "cost_allocation_section",
   "budget_level",
   "cost_center",
@@ -48,7 +64,7 @@
    "fieldtype": "Link",
    "label": "WBS Element",
    "options": "WBS Element",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "description": "Links this record to the related WBS Element."
   },
   {
@@ -63,7 +79,7 @@
    "fieldtype": "Link",
    "label": "Cost Code",
    "options": "Cost Code",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "description": "Links this record to the related Cost Code."
   },
   {
@@ -75,13 +91,13 @@
    "fieldtype": "Link",
    "label": "Item Code",
    "options": "Item",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "description": "Links this record to the related Item."
   },
   {
    "fieldname": "description",
    "fieldtype": "Text",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "label": "Description",
    "reqd": 1,
    "description": "Additional notes or explanation for this Construction BOQ Item."
@@ -102,7 +118,7 @@
   {
    "fieldname": "quantity",
    "fieldtype": "Float",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "label": "Quantity",
    "reqd": 1,
    "description": "Specifies the quantity for this Construction BOQ Item."
@@ -112,7 +128,7 @@
    "fieldtype": "Link",
    "label": "UOM",
    "options": "UOM",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "description": "Links this record to the related UOM."
   },
   {
@@ -138,7 +154,7 @@
    "fieldname": "wastage_percent",
    "fieldtype": "Percent",
    "label": "Wastage Percent",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "description": "Specifies the wastage percent for this Construction BOQ Item."
   },
   {
@@ -153,16 +169,131 @@
    "fieldtype": "Float",
    "label": "Final Quantity",
    "read_only": 1,
-   "in_list_view": 0,
+   "in_list_view": 1,
    "description": "Calculated value updated automatically from linked records or document lines."
   },
   {
    "fieldname": "final_amount",
    "fieldtype": "Currency",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "label": "Final Amount",
    "read_only": 1,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "execution_tracking_section",
+   "fieldtype": "Section Break",
+   "label": "Execution Tracking"
+  },
+  {
+   "description": "Operational work item generated from or linked to this BOQ line.",
+   "fieldname": "construction_work_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Construction Work Item",
+   "options": "Construction Work Item",
+   "read_only": 1
+  },
+  {
+   "description": "Quantity requested through Material Requests for this BOQ line.",
+   "fieldname": "requested_qty",
+   "fieldtype": "Float",
+   "label": "Requested Qty",
+   "read_only": 1
+  },
+  {
+   "description": "Quantity ordered through Purchase Orders for this BOQ line.",
+   "fieldname": "ordered_qty",
+   "fieldtype": "Float",
+   "label": "Ordered Qty",
+   "read_only": 1
+  },
+  {
+   "description": "Quantity received through Purchase Receipts for this BOQ line.",
+   "fieldname": "received_qty",
+   "fieldtype": "Float",
+   "label": "Received Qty",
+   "read_only": 1
+  },
+  {
+   "description": "Quantity invoiced through Purchase Invoices for this BOQ line.",
+   "fieldname": "invoiced_qty",
+   "fieldtype": "Float",
+   "label": "Invoiced Qty",
+   "read_only": 1
+  },
+  {
+   "description": "Quantity consumed through Stock Entries for this BOQ line.",
+   "fieldname": "consumed_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Consumed Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "execution_tracking_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Quantity measured and verified through Measurement Book entries.",
+   "fieldname": "measured_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Measured Qty",
+   "read_only": 1
+  },
+  {
+   "description": "Quantity financially certified through approved IPCs.",
+   "fieldname": "certified_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Certified Qty",
+   "read_only": 1
+  },
+  {
+   "description": "Expected quantity still remaining after actual execution quantities.",
+   "fieldname": "remaining_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Remaining Qty",
+   "read_only": 1
+  },
+  {
+   "description": "Actual cost amount from committed, invoiced, consumed, measured, or certified downstream activity.",
+   "fieldname": "actual_amount",
+   "fieldtype": "Currency",
+   "label": "Actual Amount",
+   "read_only": 1
+  },
+  {
+   "description": "Expected BOQ amount still remaining after actual downstream cost.",
+   "fieldname": "remaining_amount",
+   "fieldtype": "Currency",
+   "label": "Remaining Amount",
+   "read_only": 1
+  },
+  {
+   "description": "Difference between actual downstream cost and expected BOQ amount.",
+   "fieldname": "variance_amount",
+   "fieldtype": "Currency",
+   "label": "Variance Amount",
+   "read_only": 1
+  },
+  {
+   "description": "Variance percentage between actual downstream cost and expected BOQ amount.",
+   "fieldname": "variance_percent",
+   "fieldtype": "Percent",
+   "label": "Variance %",
+   "read_only": 1
+  },
+  {
+   "description": "Presentation status derived from procurement, consumption, measurement, certification, and variance.",
+   "fieldname": "execution_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Execution Status",
+   "options": "Not Started\nRequested\nOrdered\nReceived\nInvoiced\nPartially Consumed\nFully Consumed\nPartially Measured\nCertified\nOverrun\nUnderrun",
+   "read_only": 1
   },
   {
    "fieldname": "cost_allocation_section",

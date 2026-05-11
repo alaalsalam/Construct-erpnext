@@ -486,3 +486,19 @@ PROJ-0002 intensive presentation data status:
   - Submitted Sales Invoices: 0.
   - No GL backfill.
 - Current next action: Present PROJ-0002 as the main Phase 1 client presentation scenario and collect feedback.
+
+CMD-BOQ-01 BOQ screen/data quality status:
+- Branch: feature/boq-screen-data-quality-proj-0002.
+- Target BOQ: `BOQ-PROJ-0002-001`.
+- BOQ rows are now linked to Construction Work Items through a new read-only field on Construction BOQ Item.
+- BOQ Item now shows presentation execution fields for requested, ordered, received, invoiced, consumed, measured, certified, remaining, actual amount, remaining amount, variance, and execution status.
+- Construction BOQ now has an Execution Summary tab with requested/ordered/invoiced/consumed/measured/certified totals.
+- Refresh utility:
+  - `construct_erpnext.construction_boq.boq_sync.refresh_proj_0002_boq_display`
+  - `construct_erpnext.construction_boq.boq_sync.refresh_boq_execution_summary`
+- Refresh result for `BOQ-PROJ-0002-001`: 72 synced rows and 72 linked Work Items.
+- New report: Project Purchase Control Summary.
+- Workspace links are added idempotently after product workspace sync in after_migrate.
+- Use Project Purchase Control Summary as the cleanest presentation screen for Expected / Actual / Remaining / Variance, then open BOQ for details.
+- Do not delete/merge duplicate-looking BOQ rows without deeper review because rows are linked to Work Items, Measurement Entries, and IPCs.
+- Current next action: Finalize PROJ-0002 presentation readiness after BOQ screen enhancement.

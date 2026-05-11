@@ -25,6 +25,15 @@
   "boq_items_tab",
   "boq_items_section",
   "items",
+  "execution_summary_tab",
+  "execution_summary_section",
+  "total_requested_amount",
+  "total_ordered_amount",
+  "total_invoiced_amount",
+  "total_consumed_amount",
+  "execution_summary_column_break",
+  "total_measured_amount",
+  "total_certified_amount",
   "cost_summary_tab",
   "cost_summary_section",
   "total_material_cost",
@@ -185,14 +194,70 @@
    "description": "Child table used to record items for this Construction BOQ."
   },
   {
+   "fieldname": "execution_summary_tab",
+   "fieldtype": "Tab Break",
+   "label": "Execution Summary"
+  },
+  {
+   "fieldname": "execution_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Execution Summary"
+  },
+  {
+   "description": "Total amount requested through Material Requests linked to BOQ Work Items.",
+   "fieldname": "total_requested_amount",
+   "fieldtype": "Currency",
+   "label": "Total Requested Amount",
+   "read_only": 1
+  },
+  {
+   "description": "Total committed amount from Purchase Orders linked to BOQ Work Items.",
+   "fieldname": "total_ordered_amount",
+   "fieldtype": "Currency",
+   "label": "Total Ordered Amount",
+   "read_only": 1
+  },
+  {
+   "description": "Total invoiced procurement amount linked to BOQ Work Items.",
+   "fieldname": "total_invoiced_amount",
+   "fieldtype": "Currency",
+   "label": "Total Invoiced Amount",
+   "read_only": 1
+  },
+  {
+   "description": "Total consumed stock amount linked to BOQ Work Items.",
+   "fieldname": "total_consumed_amount",
+   "fieldtype": "Currency",
+   "label": "Total Consumed Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "execution_summary_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Total measured amount from verified Measurement Entries linked to BOQ Work Items.",
+   "fieldname": "total_measured_amount",
+   "fieldtype": "Currency",
+   "label": "Total Measured Amount",
+   "read_only": 1
+  },
+  {
+   "description": "Total certified amount from IPC lines linked to BOQ Work Items.",
+   "fieldname": "total_certified_amount",
+   "fieldtype": "Currency",
+   "label": "Total Certified Amount",
+   "read_only": 1
+  },
+  {
    "fieldname": "cost_summary_tab",
    "fieldtype": "Tab Break",
-   "label": "Cost Summary"
+   "label": "Category Summary"
   },
   {
    "fieldname": "cost_summary_section",
    "fieldtype": "Section Break",
-   "label": "Cost Summary"
+   "label": "Category Summary"
   },
   {
    "fieldname": "total_material_cost",

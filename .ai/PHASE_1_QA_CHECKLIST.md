@@ -134,5 +134,16 @@ Ready with caveats.
 - Passed: توجد 10 حجوزات PROJ-0002 بحالات Reserved / Converted / Expired / Cancelled.
 - Passed: توجد 3 Sales Contracts و3 Draft Sales Invoices.
 - Passed: لا توجد Payment Entries أو Journal Entries أو Sales Invoice submitted.
-- Deferred: Project Purchase Control Summary لم يتم إنشاؤه لأن تقارير الشراء الحالية أصبحت كافية للعرض.
+- Passed: Project Purchase Control Summary تم إنشاؤه ويعرض Planned / Expected / Actual / Remaining / Variance لفلتر `PROJ-0002`.
 - Decision: PROJ-0002 جاهز ليكون سيناريو العرض الرئيسي للمرحلة الأولى.
+
+## 14. CMD-BOQ-01 BOQ Screen Data Quality
+
+- Passed: `BOQ-PROJ-0002-001` يحتوي الآن على Execution Summary.
+- Passed: كل صفوف BOQ الـ72 مرتبطة بـConstruction Work Item.
+- Passed: صفوف BOQ تعرض requested / ordered / received / invoiced / consumed / measured / certified / remaining.
+- Passed: صفوف BOQ تعرض actual amount / remaining amount / variance amount / variance percent / execution status.
+- Passed: زر Refresh Execution Summary متاح لتحديث العرض من Work Items.
+- Passed: Project Purchase Control Summary مضاف إلى Workspaces الأساسية.
+- Passed: ar.csv يقرأ بنجاح بعد إضافة ترجمات التقرير والحقول.
+- Needs Attention: لا يتم حذف أو دمج صفوف BOQ الطويلة لأنها مرتبطة بمستندات تشغيلية؛ استخدم التقرير الجديد للعرض المختصر.

@@ -60,7 +60,7 @@ class ConstructionBOQ(Document):
 			self.set(fieldname, amount)
 
 		self.total_amount = total_amount
-		self.variance_amount = flt(self.total_amount) - flt(self.total_actual_cost)
+		self.variance_amount = flt(self.total_actual_cost) - flt(self.total_amount)
 		self.variance_percent = (
 			flt(self.variance_amount) / flt(self.total_amount) * 100
 			if flt(self.total_amount)

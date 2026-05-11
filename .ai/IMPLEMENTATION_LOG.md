@@ -983,3 +983,32 @@
 - No Payment Entry, Journal Entry, Sales Invoice submission, or GL backfill was created.
 - Created `.ai/PROJ_0002_PRESENTATION_STORY.md`.
 - Updated presentation walkthrough, Phase 1 summary, data validation, QA checklist, handoff, risks, and NEXT_ACTION.
+
+## 2026-05-11 CMD-BOQ-01 Construction BOQ Screen and PROJ-0002 BOQ Data Quality Enhancement
+
+- Created branch `feature/boq-screen-data-quality-proj-0002` from `feature/proj-0002-intensive-presentation-data`.
+- Enhanced `Construction BOQ Item` with safe read-only execution display fields:
+  - Construction Work Item link.
+  - Requested, ordered, received, invoiced, consumed, measured, certified, remaining quantities.
+  - Actual, remaining, variance amount, variance percent, and execution status.
+- Enhanced `Construction BOQ` with an Execution Summary tab and total requested/ordered/invoiced/consumed/measured/certified amounts.
+- Added `construct_erpnext.construction_boq.boq_sync` to relink BOQ rows to Work Items and refresh display summaries without creating downstream documents.
+- Added a safe form button: Refresh Execution Summary.
+- Created Script Report `Project Purchase Control Summary` to show Planned / Wastage / Expected / Actual / Remaining / Variance by Work Item.
+- Added idempotent workspace links for the new report to:
+  - Construction Control.
+  - Procurement & Site Warehouses.
+  - Executive Presentation Center.
+  - Reports & Analytics.
+- Ran migrate and cache clear successfully.
+- Refreshed `BOQ-PROJ-0002-001`:
+  - 72 BOQ rows synced and linked to Work Items.
+  - BOQ total: 300,275,000.
+  - Actual presentation amount: 262,656,875.
+  - Variance: -37,618,125 (-12.53%).
+- Validated PROJ-0002 presentation reports and safety:
+  - Project Purchase Control Summary loads with 72 rows.
+  - Existing procurement, measurement, IPC, CFO, inventory, reservation, sales, and traceability reports still load.
+  - No Payment Entry, Journal Entry, submitted Sales Invoice, or GL backfill was created.
+- Updated Arabic translations and presentation documentation.
+- NEXT_ACTION set to Finalize PROJ-0002 presentation readiness after BOQ screen enhancement.

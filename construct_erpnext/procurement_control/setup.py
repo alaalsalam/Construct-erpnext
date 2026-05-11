@@ -13,6 +13,7 @@ LINKED_CHILD_TABLES = (
 
 def after_migrate():
 	create_procurement_custom_fields()
+	ensure_purchase_control_summary_workspace_links()
 
 
 def create_procurement_custom_fields():
@@ -68,3 +69,41 @@ def link_field(fieldname, label, options, insert_after=None):
 	if insert_after:
 		field["insert_after"] = insert_after
 	return field
+
+
+def ensure_purchase_control_summary_workspace_links():
+	report_link = {
+		"type": "Link",
+		"label": "Project Purchase Control Summary",
+		"link_type": "Report",
+		"link_to": "Project Purchase Control Summary",
+		"is_query_report": 1,
+		"hidden": 0,
+		"onboard": 0,
+		"link_count": 0,
+	}
+	for workspace_name in (
+		"Construction Control",
+		"Procurement & Site Warehouses",
+		"Executive Presentation Center",
+		"Reports & Analytics",
+	):
+		if not frappe.db.exists("Workspace", workspace_name):
+			continue
+
+		workspace = frappe.get_doc("Workspace", workspace_name)
+		existing = {
+			(link.type, link.label, link.get("link_type"), link.get("link_to"))
+			for link in workspace.links
+		}
+		key = (
+			report_link["type"],
+			report_link["label"],
+			report_link["link_type"],
+			report_link["link_to"],
+		)
+		if key in existing:
+			continue
+
+		workspace.append("links", report_link)
+		workspace.save(ignore_permissions=True)

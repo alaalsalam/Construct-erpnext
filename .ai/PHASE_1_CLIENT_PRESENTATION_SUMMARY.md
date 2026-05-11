@@ -233,7 +233,8 @@ Phase 1 جاهزة للعرض المهني للعميل، بشرط تقديمه�
 بعد CMD-DATA-03 أصبح `PROJ-0002` هو المسار الرئيسي المقترح للعرض.
 
 - Executive overview: افتح Executive Presentation Center ثم فلتر التقارير على `PROJ-0002`.
-- BOQ: `BOQ-PROJ-0002-001` مع 72 Work Items.
+- BOQ: `BOQ-PROJ-0002-001` مع 72 Work Items وملخص تنفيذ محدث على مستوى صفوف BOQ.
+- Purchase Control: Project Purchase Control Summary يعرض Planned / Expected / Actual / Remaining / Variance بشكل مباشر لفلتر `PROJ-0002`.
 - Procurement: Work Item Procurement Summary وBOQ Procurement Pipeline تعرض 33 Material Requests وسيناريوهات طلب/أمر/استلام/فوترة/استهلاك.
 - Measurement: `MB-2026-00005` إلى `MB-2026-00008`.
 - IPC: `IPC-2026-00002` إلى `IPC-2026-00005`.
@@ -245,4 +246,4 @@ Phase 1 جاهزة للعرض المهني للعميل، بشرط تقديمه�
 - Sales: `SC-PROJ-0002-001` إلى `SC-PROJ-0002-003`.
 - Draft Sales Invoice: `ACC-SINV-2026-00002` إلى `ACC-SINV-2026-00004`.
 
-قرار العرض: استخدم `PROJ-0002` كقصة العرض الأساسية، مع التأكيد أن فواتير البيع والمشتريات المسودة ليست ترحيلاً محاسبياً ولا يوجد تحصيل في المرحلة الأولى.
+قرار العرض: استخدم `PROJ-0002` كقصة العرض الأساسية. ابدأ بتقرير Project Purchase Control Summary عند شرح الفروقات لأنه أوضح من جدول BOQ الطويل، ثم افتح `BOQ-PROJ-0002-001` للتفاصيل. يجب التأكيد أن فواتير البيع والمشتريات المسودة ليست ترحيلاً محاسبياً ولا يوجد تحصيل في المرحلة الأولى.

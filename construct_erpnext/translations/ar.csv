@@ -1934,3 +1934,66 @@ Reservation must be Reserved before conversion to Lease Contract.,يجب أن ي
 Phase 2 - Lease & Rent (Upcoming),المرحلة الثانية - الإيجار والتأجير (قادمة)
 Phase 2 - Rental Operations (Upcoming),المرحلة الثانية - عمليات الإيجار (قادمة)
 Phase 2 - Lease & Rental (Upcoming),المرحلة الثانية - الإيجار والتأجير (قادمة)
+Project Purchase Control Summary,ملخص رقابة مشتريات المشروع
+BOQ Line Scope,نطاق بند جدول الكميات
+Quantity & Rate,الكمية والسعر
+Execution Tracking,تتبع التنفيذ
+Execution Summary,ملخص التنفيذ
+Category Summary,ملخص التصنيفات
+Construction Work Item,بند عمل إنشائي
+Requested Qty,الكمية المطلوبة
+Ordered Qty,الكمية المطلوبة بأمر شراء
+Received Qty,الكمية المستلمة
+Invoiced Qty,الكمية المفوترة
+Consumed Qty,الكمية المصروفة
+Measured Qty,الكمية المقاسة
+Certified Qty,الكمية المعتمدة
+Remaining Qty,الكمية المتبقية
+Planned Qty,الكمية المخططة
+Expected Qty,الكمية المتوقعة
+Wastage %,نسبة الهالك %
+Wastage Percent,نسبة الهالك
+Planned Amount,المبلغ المخطط
+Actual Amount,المبلغ الفعلي
+Remaining Amount,المبلغ المتبقي
+Variance Amount,مبلغ الانحراف
+Variance %,نسبة الانحراف %
+Variance Percent,نسبة الانحراف
+Execution Status,حالة التنفيذ
+Risk Status,حالة المخاطر
+Overrun,تجاوز
+Underrun,أقل من المخطط
+Not Started,لم يبدأ
+Requested,تم الطلب
+Ordered,تم إصدار أمر شراء
+Received,تم الاستلام
+Invoiced,تمت الفوترة
+Partially Consumed,مصروف جزئياً
+Fully Consumed,مصروف بالكامل
+Partially Measured,مقاس جزئياً
+Certified,معتمد
+Normal,طبيعي
+Watch,تحت المراقبة
+Refresh Execution Summary,تحديث ملخص التنفيذ
+Refreshing execution summary...,جاري تحديث ملخص التنفيذ...
+Legacy / Additional Breakdown,تفصيل إضافي / سابق
+Total Requested Amount,إجمالي المبلغ المطلوب
+Total Ordered Amount,إجمالي المبلغ بأوامر الشراء
+Total Invoiced Amount,إجمالي المبلغ المفوتر
+Total Consumed Amount,إجمالي المبلغ المصروف
+Total Measured Amount,إجمالي المبلغ المقاس
+Total Certified Amount,إجمالي المبلغ المعتمد
+Operational work item generated from or linked to this BOQ line.,بند العمل التشغيلي المنشأ من بند جدول الكميات أو المرتبط به.
+Quantity requested through Material Requests for this BOQ line.,الكمية المطلوبة عبر طلبات المواد لهذا البند.
+Quantity ordered through Purchase Orders for this BOQ line.,الكمية المطلوبة عبر أوامر الشراء لهذا البند.
+Quantity received through Purchase Receipts for this BOQ line.,الكمية المستلمة عبر سندات الاستلام لهذا البند.
+Quantity invoiced through Purchase Invoices for this BOQ line.,الكمية المفوترة عبر فواتير الشراء لهذا البند.
+Quantity consumed through Stock Entries for this BOQ line.,الكمية المصروفة عبر قيود المخزون لهذا البند.
+Quantity measured and verified through Measurement Book entries.,الكمية المقاسة والمعتمدة ميدانياً عبر قيود دفتر القياسات.
+Quantity financially certified through approved IPCs.,الكمية المعتمدة مالياً عبر المستخلصات المعتمدة.
+Expected quantity still remaining after actual execution quantities.,الكمية المتوقعة المتبقية بعد كميات التنفيذ الفعلية.
+Actual cost amount from committed, invoiced, consumed, measured, or certified downstream activity.,المبلغ الفعلي من الالتزامات أو الفواتير أو الصرف أو القياس أو الاعتماد المرتبط بالبند.
+Expected BOQ amount still remaining after actual downstream cost.,مبلغ جدول الكميات المتوقع المتبقي بعد تكلفة التنفيذ الفعلية.
+Difference between actual downstream cost and expected BOQ amount.,الفرق بين تكلفة التنفيذ الفعلية ومبلغ جدول الكميات المتوقع.
+Variance percentage between actual downstream cost and expected BOQ amount.,نسبة الفرق بين تكلفة التنفيذ الفعلية ومبلغ جدول الكميات المتوقع.
+Presentation status derived from procurement, consumption, measurement, certification, and variance.,حالة عرض مستنتجة من المشتريات والصرف والقياس والاعتماد والانحراف.

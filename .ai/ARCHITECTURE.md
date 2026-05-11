@@ -531,3 +531,12 @@ Integration:
 - Tenant/customer is stored on Lease Contract only; Unit remains a stable real estate asset and does not store tenant fields.
 - Rent Invoice and Payment Entry creation are deferred to the next rental finance phase.
 - Unit dimension is prepared through the Lease Contract Unit reference for future propagation to Sales Invoice Item when Rent Invoice is implemented.
+
+## BOQ Presentation Execution Layer
+
+- `Construction BOQ Item` now includes read-only presentation fields linked to `Construction Work Item`.
+- BOQ line execution values are synchronized from Work Items through `construct_erpnext.construction_boq.boq_sync`.
+- The sync layer does not create procurement, measurement, IPC, accounting, or stock documents; it only refreshes display and summary fields.
+- `Construction BOQ` has an Execution Summary tab for requested, ordered, invoiced, consumed, measured, and certified totals.
+- `Project Purchase Control Summary` is the preferred report for presenting Planned / Expected / Actual / Remaining / Variance by Work Item.
+- Workspace links for this report are added idempotently after product workspace sync during migration.

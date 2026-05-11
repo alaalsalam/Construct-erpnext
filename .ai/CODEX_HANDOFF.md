@@ -428,3 +428,10 @@ Phase 1 client presentation closure status:
   - .ai/PHASE_1_CLIENT_PRESENTATION_SUMMARY.md
   - .ai/PHASE_1_QA_CHECKLIST.md
 - Current next action: Present Phase 1 to client and collect feedback before Phase 2 planning.
+
+Phase 1 user guide status:
+- Branch: feature/phase-1-client-presentation-closure.
+- New guide: docs/PHASE_1_USER_GUIDE_AR.md.
+- Guide is Arabic, client-facing, and covers Phase 1 structure, workspaces, testing scenarios, reports, limitations, and Phase 2 roadmap.
+- Documentation-only change; no feature, DocType, migration, record, accounting document, or data change was made.
+- Current next action: Review Phase 1 user guide before sending it to the client.

@@ -91,14 +91,16 @@
    "label": "Project",
    "options": "Project",
    "reqd": 1,
-   "description": "Links this record to the related Project."
+   "description": "Links this record to the related Project.",
+   "hidden": 0
   },
   {
    "fieldname": "description",
    "fieldtype": "Text",
    "in_list_view": 1,
    "label": "Description",
-   "description": "Additional notes or explanation for this Construction Work Item."
+   "description": "Additional notes or explanation for this Construction Work Item.",
+   "hidden": 0
   },
   {
    "fieldname": "item_category",
@@ -106,7 +108,8 @@
    "in_list_view": 1,
    "label": "Item Category",
    "options": "Material\nLabor\nEquipment\nSubcontract\nOverhead\nContingency\nOther",
-   "description": "Selects the item category used for classification, workflow, or reporting."
+   "description": "Selects the item category used for classification, workflow, or reporting.",
+   "hidden": 0
   },
   {
    "fieldname": "work_item_overview_column_break",
@@ -212,7 +215,8 @@
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Planned Quantity",
-   "description": "Planned BOQ quantity for this operational work item."
+   "description": "Planned BOQ quantity for this operational work item.",
+   "hidden": 0
   },
   {
    "fieldname": "uom",
@@ -351,7 +355,8 @@
    "options": "Not Requested\nPartially Requested\nFully Requested\nPartially Ordered\nFully Ordered\nPartially Received\nFully Received\nPartially Invoiced\nFully Invoiced\nOver Requested\nOver Ordered\nOver Received",
    "read_only": 1,
    "description": "Procurement progress calculated from linked ERPNext procurement and stock transactions.",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "default": "0",
@@ -447,7 +452,8 @@
    "label": "Certified Qty",
    "read_only": 1,
    "description": "Quantity certified through submitted IPCs. Kept separate from measured quantity.",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "default": "0",
@@ -496,7 +502,8 @@
    "options": "Not Certified\nPartially Certified\nFully Certified\nOver Certified",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Current status used to track this Construction Work Item through its workflow or reporting lifecycle."
+   "description": "Current status used to track this Construction Work Item through its workflow or reporting lifecycle.",
+   "hidden": 0
   },
   {
    "fieldname": "financial_summary_tab",
@@ -534,8 +541,9 @@
    "fieldtype": "Currency",
    "label": "Variance Amount",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "progress_percent",

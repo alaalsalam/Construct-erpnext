@@ -36,11 +36,13 @@
   {
    "fieldname": "unit",
    "fieldtype": "Link",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "label": "Unit",
    "options": "Unit",
    "reqd": 1,
-   "description": "Links this record to the related Unit."
+   "description": "Links this record to the related Unit.",
+   "columns": 2,
+   "hidden": 0
   },
   {
    "fieldname": "building",
@@ -48,8 +50,10 @@
    "label": "Building",
    "options": "Building",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "floor",
@@ -57,8 +61,10 @@
    "label": "Floor",
    "options": "Floor",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "unit_details_column_break",
@@ -85,8 +91,10 @@
    "fieldname": "area",
    "fieldtype": "Float",
    "label": "Area",
-   "in_list_view": 0,
-   "description": "Specifies the area for this Unit Cost Allocation Line."
+   "in_list_view": 1,
+   "description": "Specifies the area for this Unit Cost Allocation Line.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "allocation_details_section",
@@ -97,8 +105,10 @@
    "fieldname": "allocation_percent",
    "fieldtype": "Percent",
    "label": "Allocation Percent",
-   "in_list_view": 0,
-   "description": "Specifies the allocation percent for this Unit Cost Allocation Line."
+   "in_list_view": 1,
+   "description": "Specifies the allocation percent for this Unit Cost Allocation Line.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "manual_amount",
@@ -112,8 +122,10 @@
    "fieldtype": "Currency",
    "label": "Allocated Amount",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated cost allocated to this unit line."
+   "in_list_view": 1,
+   "description": "Calculated cost allocated to this unit line.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "profitability_section",
@@ -124,8 +136,10 @@
    "fieldname": "expected_sale_price",
    "fieldtype": "Currency",
    "label": "Expected Sale Price",
-   "in_list_view": 0,
-   "description": "Specifies the expected sale price for this Unit Cost Allocation Line."
+   "in_list_view": 1,
+   "description": "Specifies the expected sale price for this Unit Cost Allocation Line.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "expected_monthly_rent",
@@ -151,8 +165,10 @@
    "fieldtype": "Percent",
    "label": "Expected Margin Percent",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "profitability_status",
@@ -160,8 +176,10 @@
    "label": "Profitability Status",
    "options": "Profitable\nWatch\nLoss Risk\nNot Priced",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Current status used to track this Unit Cost Allocation Line through its workflow or reporting lifecycle."
+   "in_list_view": 1,
+   "description": "Current status used to track this Unit Cost Allocation Line through its workflow or reporting lifecycle.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "remarks_section",

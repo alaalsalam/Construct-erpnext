@@ -35,21 +35,27 @@
    "label": "Seq",
    "default": "1",
    "in_list_view": 1,
-   "description": "Sequence number for ordering installments."
+   "description": "Sequence number for ordering installments.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "installment_number",
    "fieldtype": "Data",
    "label": "Installment No",
    "in_list_view": 1,
-   "description": "Unique installment identifier within the contract."
+   "description": "Unique installment identifier within the contract.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "label",
    "fieldtype": "Data",
    "label": "Label",
    "in_list_view": 1,
-   "description": "Short description for this installment, such as Down Payment or 2nd Installment."
+   "description": "Short description for this installment, such as Down Payment or 2nd Installment.",
+   "columns": 2,
+   "hidden": 0
   },
   {
    "fieldname": "installment_type",
@@ -65,14 +71,18 @@
    "label": "Due Date",
    "reqd": 1,
    "in_list_view": 1,
-   "description": "Date on which this installment becomes due for payment."
+   "description": "Date on which this installment becomes due for payment.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "percentage",
    "fieldtype": "Percent",
    "label": "Percent",
    "in_list_view": 1,
-   "description": "Percentage of the net contract price represented by this installment."
+   "description": "Percentage of the net contract price represented by this installment.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "amount",
@@ -80,7 +90,9 @@
    "label": "Amount",
    "reqd": 1,
    "in_list_view": 1,
-   "description": "Absolute amount for this installment."
+   "description": "Absolute amount for this installment.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "installment_status",
@@ -90,7 +102,9 @@
    "default": "Pending",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "description": "Current payment status of this installment."
+   "description": "Current payment status of this installment.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "invoice_status",
@@ -107,8 +121,10 @@
    "fieldtype": "Link",
    "label": "Invoice",
    "options": "Sales Invoice",
-   "in_list_view": 0,
-   "description": "Sales Invoice linked to this installment."
+   "in_list_view": 1,
+   "description": "Sales Invoice linked to this installment.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "invoice_amount",
@@ -123,16 +139,20 @@
    "fieldtype": "Currency",
    "label": "Paid Amount",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Amount collected against this installment through ERPNext payments. Calculated automatically."
+   "in_list_view": 1,
+   "description": "Amount collected against this installment through ERPNext payments. Calculated automatically.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "outstanding_amount",
    "fieldtype": "Currency",
    "label": "Outstanding Amount",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Remaining amount outstanding for this installment. Calculated automatically."
+   "in_list_view": 1,
+   "description": "Remaining amount outstanding for this installment. Calculated automatically.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "invoiced_on",

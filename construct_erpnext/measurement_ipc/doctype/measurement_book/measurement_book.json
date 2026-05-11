@@ -100,7 +100,8 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Draft\nSubmitted\nUnder Verification\nVerified\nLocked\nCancelled",
-   "description": "Operational status for measurement verification before IPC generation."
+   "description": "Operational status for measurement verification before IPC generation.",
+   "hidden": 0
   },
   {
    "fieldname": "project__contractor__period_tab",
@@ -120,7 +121,8 @@
    "label": "Project",
    "options": "Project",
    "reqd": 1,
-   "description": "Links this record to the related Project."
+   "description": "Links this record to the related Project.",
+   "hidden": 0
   },
   {
    "fieldname": "contractor",
@@ -129,7 +131,8 @@
    "options": "Supplier",
    "in_list_view": 1,
    "description": "Links this record to the related Supplier.",
-   "in_standard_filter": 1
+   "in_standard_filter": 1,
+   "hidden": 0
   },
   {
    "fieldname": "construction_boq",
@@ -149,7 +152,8 @@
    "in_list_view": 1,
    "label": "Measurement Period Start",
    "reqd": 1,
-   "description": "Specifies the measurement period start for this Measurement Book."
+   "description": "Specifies the measurement period start for this Measurement Book.",
+   "hidden": 0
   },
   {
    "fieldname": "measurement_period_end",
@@ -157,7 +161,8 @@
    "in_list_view": 1,
    "label": "Measurement Period End",
    "reqd": 1,
-   "description": "Specifies the measurement period end for this Measurement Book."
+   "description": "Specifies the measurement period end for this Measurement Book.",
+   "hidden": 0
   },
   {
    "fieldname": "totals_tab",
@@ -203,7 +208,8 @@
    "label": "Total Measured Amount",
    "read_only": 1,
    "description": "Sum of measured amounts from linked measurement entries.",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "fieldname": "verification_tab",

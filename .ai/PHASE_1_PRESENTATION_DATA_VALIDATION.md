@@ -317,3 +317,22 @@ Ready to present now with clear caveats.
 - لا يوجد GL backfill.
 
 قرار البيانات: جاهزة للعرض الآن حول `PROJ-0002`.
+
+## تحديث CMD-UX-02 — Connections وGrid Columns
+
+تم التحقق من أن بيانات `PROJ-0002` كافية ولا تحتاج إلى إنشاء عمليات إضافية.
+
+التحقق الحي للروابط:
+
+- Project `PROJ-0002` يعرض 1 BOQ و72 Work Items و33 Material Requests و4 IPCs و8 Contractor Accounts و24 Units و17 Reservations و3 Sales Contracts و3 Sales Invoices.
+- BOQ `BOQ-PROJ-0002-001` يعرض 72 Work Items و33 Material Requests و1 PO و1 PR و5 Purchase Invoices و2 Stock Entries و20 Measurement Entries و4 IPCs.
+- Sales Invoice `ACC-SINV-2026-00002` يعرض Sales Contract وUnit Reservation وUnit وReal Estate Project من خلال صف الفاتورة.
+- Supplier `مقاول الأعمال الإنشائية` يعرض Contractor Accounts وIPCs وRetention/Advance/Guarantee records.
+
+تم تحسين Grid Columns للجداول الرئيسية، وتمت إعادة التحقق من أن:
+
+- Project Purchase Control Summary يعرض 72 صفاً مع Item وWBS وCost Code والكميات والانحرافات.
+- لا توجد Payment Entries.
+- لا توجد Journal Entries.
+- لا توجد Sales Invoice submitted.
+- لا يوجد GL backfill.

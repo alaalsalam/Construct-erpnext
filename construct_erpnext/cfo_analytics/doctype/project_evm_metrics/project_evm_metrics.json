@@ -83,7 +83,8 @@
    "label": "Project",
    "options": "Project",
    "reqd": 1,
-   "description": "Links this record to the related Project."
+   "description": "Links this record to the related Project.",
+   "hidden": 0
   },
   {
    "default": "Today",
@@ -92,7 +93,8 @@
    "in_list_view": 1,
    "label": "Calculation Date",
    "reqd": 1,
-   "description": "Specifies the calculation date for this Project EVM Metrics."
+   "description": "Specifies the calculation date for this Project EVM Metrics.",
+   "hidden": 0
   },
   {
    "fieldname": "evm_information_column_break",
@@ -243,7 +245,8 @@
    "label": "Cost Performance Index",
    "read_only": 1,
    "description": "CPI = Earned Value / Actual Cost when Actual Cost is greater than zero.",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "fieldname": "schedule_performance_index",
@@ -251,7 +254,8 @@
    "label": "Schedule Performance Index",
    "read_only": 1,
    "description": "SPI = Earned Value / Planned Value when Planned Value is greater than zero.",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "fieldname": "to_complete_performance_index",
@@ -331,7 +335,8 @@
    "options": "On Track\nWatch\nAt Risk",
    "read_only": 1,
    "description": "Current status used to track this Project EVM Metrics through its workflow or reporting lifecycle.",
-   "in_standard_filter": 1
+   "in_standard_filter": 1,
+   "hidden": 0
   },
   {
    "fieldname": "executive_summary_tab",

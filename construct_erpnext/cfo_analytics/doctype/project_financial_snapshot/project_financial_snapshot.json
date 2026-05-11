@@ -92,7 +92,8 @@
    "label": "Project",
    "options": "Project",
    "reqd": 1,
-   "description": "Links this record to the related Project."
+   "description": "Links this record to the related Project.",
+   "hidden": 0
   },
   {
    "default": "Today",
@@ -101,7 +102,8 @@
    "in_list_view": 1,
    "label": "Snapshot Date",
    "reqd": 1,
-   "description": "Specifies the snapshot date for this Project Financial Snapshot."
+   "description": "Specifies the snapshot date for this Project Financial Snapshot.",
+   "hidden": 0
   },
   {
    "fieldname": "snapshot_information_column_break",
@@ -140,7 +142,8 @@
    "label": "BOQ Total Amount",
    "read_only": 1,
    "description": "Current planned project value from BOQ/Work Items.",
-   "in_list_view": 0
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "fieldname": "boq_material_amount",
@@ -209,8 +212,9 @@
    "fieldtype": "Currency",
    "label": "Committed Amount",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "received_amount",
@@ -415,7 +419,8 @@
    "options": "Green\nYellow\nRed",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "cash_risk_status",
@@ -424,7 +429,8 @@
    "options": "Green\nYellow\nRed",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Current status used to track this Project Financial Snapshot through its workflow or reporting lifecycle."
+   "description": "Current status used to track this Project Financial Snapshot through its workflow or reporting lifecycle.",
+   "hidden": 0
   },
   {
    "fieldname": "overall_status",
@@ -433,7 +439,8 @@
    "label": "Overall Status",
    "options": "On Track\nWatch\nAt Risk",
    "read_only": 1,
-   "description": "Simple CFO status based on deterministic risk rules."
+   "description": "Simple CFO status based on deterministic risk rules.",
+   "hidden": 0
   },
   {
    "fieldname": "executive_summary_tab",

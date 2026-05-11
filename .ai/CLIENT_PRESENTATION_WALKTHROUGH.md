@@ -730,3 +730,20 @@
 13. اختم بخارطة المرحلة الثانية.
 
 ملاحظة مهمة: فواتير البيع ما زالت مسودة، ولا توجد Payment Entry أو Journal Entry أو GL backfill ضمن المرحلة الأولى.
+
+## تحديث UX Connections وGrid Views
+
+أثناء عرض `PROJ-0002`، استخدم Connections في يمين النماذج لإظهار الترابط:
+
+- من Project `PROJ-0002`: افتح الروابط إلى BOQ، Work Items، Material Requests، IPCs، Contractor Accounts، Real Estate Project، Reservations، Sales Contracts، وSales Invoices.
+- من `BOQ-PROJ-0002-001`: افتح Connections إلى Work Items والمشتريات والقياسات وIPCs.
+- من `CWI-2026-00006`: أظهر كيف تظهر روابط Material Request وMeasurement Entry وIPC لهذا البند.
+- من `IPC-2026-00002`: أظهر Measurement Entries وContractor Ledger وRetention.
+- من `REP-2026-00002` أو Unit: أظهر الحجوزات وعقود البيع وفواتير البيع المسودة.
+
+الجداول الداخلية أصبحت أوضح:
+
+- BOQ Items تعرض WBS وCost Code وItem والكميات المخططة والمطلوبة والمستلمة والمستهلكة والمقاسة والمعتمدة والمتبقية والانحراف.
+- Sales Installment Schedule تعرض القسط والتاريخ والمبلغ والفاتورة والمسدد والمتبقي.
+- IPC Lines تعرض بند العمل والكميات السابقة والحالية والإجمالية والمتبقي والمبالغ والاحتجاز.
+- Unit Cost Allocation Lines تعرض الوحدة والمساحة والنسبة والمبلغ والهامش وحالة الربحية.

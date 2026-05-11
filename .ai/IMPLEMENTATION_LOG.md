@@ -1041,3 +1041,41 @@
 - Created `.ai/PROJ_0002_FINAL_PRESENTATION_READINESS.md`.
 - Created `.ai/CLIENT_HANDOVER_NOTES_PHASE_1.md`.
 - NEXT_ACTION set to Present PROJ-0002 Phase 1 to client and collect handover feedback.
+
+## 2026-05-11 CMD-UX-02 Add Form Connections, Grid Column Visibility, and Deepen PROJ-0002 Operations
+
+- Created branch `feature/connections-grid-proj-0002-depth` from `feature/boq-screen-data-quality-proj-0002`.
+- Added Frappe v15 dashboard connection files for key custom DocTypes:
+  - Construction BOQ, Construction Work Item.
+  - Measurement Book, Measurement Entry, Interim Payment Certificate.
+  - Contractor Account, Retention Register.
+  - Project Financial Snapshot, Project Cash Flow Forecast, Project EVM Metrics.
+  - Real Estate Project, Building, Floor, Unit, Unit Reservation.
+  - Unit Cost Allocation.
+  - Sales Contract.
+- Added dashboard override hooks for ERPNext forms:
+  - Project, Material Request, Purchase Order, Purchase Receipt, Purchase Invoice, Stock Entry, Sales Invoice, Customer, Supplier.
+- Improved child table grid columns for:
+  - Construction BOQ Item.
+  - Sales Installment Schedule.
+  - Rent Schedule.
+  - Project Cash Flow Forecast Period.
+  - Interim Payment Certificate Line.
+  - Unit Cost Allocation Line.
+  - IPC Deduction.
+- Improved list-view fields and added list indicators for key parent DocTypes:
+  - Construction BOQ, Construction Work Item, Interim Payment Certificate, Unit, Unit Reservation, Sales Contract, Project Financial Snapshot, Project EVM Metrics.
+- Kept PROJ-0002 data unchanged because validation already showed enough operations:
+  - 72 Work Items, 33 Material Requests, 1 PO, 1 PR, 5 Purchase Invoices, 2 Stock Entries.
+  - 5 Measurement Books, 20 Measurement Entries, 4 IPCs, 8 Contractor Accounts.
+  - 24 Units, 17 Reservations, 3 Sales Contracts, 3 Draft Sales Invoices.
+- Improved Project Purchase Control Summary sorting by BOQ, WBS, Cost Code, and Work Item.
+- Added/refined Arabic translations for connection and quantity/status labels.
+- Ran migrate and cache clears successfully.
+- Validated live form connections through Frappe linked-document counts:
+  - Project `PROJ-0002` shows construction, procurement, contractor, CFO, real estate, reservation, and sales links.
+  - BOQ `BOQ-PROJ-0002-001` shows Work Items, procurement, stock, measurement, and IPC links.
+  - Sales Invoice `ACC-SINV-2026-00002` shows Sales Contract, Unit Reservation, Unit, and Real Estate Project internal links.
+  - Customer and Supplier dashboards show sales/contractor links.
+- Re-ran official PROJ-0002 validation successfully; safety remains Payment Entries 0, Journal Entries 0, submitted Sales Invoices 0.
+- NEXT_ACTION set to Present PROJ-0002 Phase 1 using improved form connections and grid views, then collect client feedback.

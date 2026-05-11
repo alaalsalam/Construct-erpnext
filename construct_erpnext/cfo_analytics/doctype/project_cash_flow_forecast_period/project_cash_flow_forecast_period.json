@@ -48,23 +48,29 @@
   {
    "fieldname": "period_start",
    "fieldtype": "Date",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "label": "Period Start",
-   "description": "Specifies the period start for this Project Cash Flow Forecast Period."
+   "description": "Specifies the period start for this Project Cash Flow Forecast Period.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "period_end",
    "fieldtype": "Date",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "label": "Period End",
-   "description": "Specifies the period end for this Project Cash Flow Forecast Period."
+   "description": "Specifies the period end for this Project Cash Flow Forecast Period.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "period_label",
    "fieldtype": "Data",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "label": "Period",
-   "description": "Specifies the period for this Project Cash Flow Forecast Period."
+   "description": "Specifies the period for this Project Cash Flow Forecast Period.",
+   "columns": 2,
+   "hidden": 0
   },
   {
    "fieldname": "inflows_section",
@@ -104,8 +110,10 @@
    "fieldtype": "Currency",
    "label": "Total Inflow",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "outflows_section",
@@ -169,8 +177,10 @@
    "fieldtype": "Currency",
    "label": "Total Outflow",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "balance_section",
@@ -182,16 +192,20 @@
    "fieldtype": "Currency",
    "label": "Net Cash Flow",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "running_balance",
    "fieldtype": "Currency",
    "label": "Running Balance",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "balance_column_break",
@@ -202,16 +216,20 @@
    "fieldtype": "Check",
    "label": "Cash Deficit",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "deficit_amount",
    "fieldtype": "Currency",
    "label": "Deficit Amount",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "source_counts_section",

@@ -39,6 +39,18 @@ doctype_js = {
     "Salary Slip": "public/js/salary_slip.js",
 }
 
+override_doctype_dashboards = {
+    "Project": ["construct_erpnext.presentation.dashboard_overrides.extend_project_dashboard"],
+    "Material Request": ["construct_erpnext.presentation.dashboard_overrides.extend_procurement_dashboard"],
+    "Purchase Order": ["construct_erpnext.presentation.dashboard_overrides.extend_procurement_dashboard"],
+    "Purchase Receipt": ["construct_erpnext.presentation.dashboard_overrides.extend_procurement_dashboard"],
+    "Purchase Invoice": ["construct_erpnext.presentation.dashboard_overrides.extend_procurement_dashboard"],
+    "Stock Entry": ["construct_erpnext.presentation.dashboard_overrides.extend_procurement_dashboard"],
+    "Sales Invoice": ["construct_erpnext.presentation.dashboard_overrides.extend_sales_invoice_dashboard"],
+    "Customer": ["construct_erpnext.presentation.dashboard_overrides.extend_customer_dashboard"],
+    "Supplier": ["construct_erpnext.presentation.dashboard_overrides.extend_supplier_dashboard"],
+}
+
 # --- Override Stock Controllers ---
 override_doctype_class = {
     "Project": "construct_erpnext.overrides.project.ConstructProject",

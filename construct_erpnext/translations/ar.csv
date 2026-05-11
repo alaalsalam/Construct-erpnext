@@ -1992,8 +1992,19 @@ Quantity consumed through Stock Entries for this BOQ line.,الكمية المص
 Quantity measured and verified through Measurement Book entries.,الكمية المقاسة والمعتمدة ميدانياً عبر قيود دفتر القياسات.
 Quantity financially certified through approved IPCs.,الكمية المعتمدة مالياً عبر المستخلصات المعتمدة.
 Expected quantity still remaining after actual execution quantities.,الكمية المتوقعة المتبقية بعد كميات التنفيذ الفعلية.
-Actual cost amount from committed, invoiced, consumed, measured, or certified downstream activity.,المبلغ الفعلي من الالتزامات أو الفواتير أو الصرف أو القياس أو الاعتماد المرتبط بالبند.
+"Actual cost amount from committed, invoiced, consumed, measured, or certified downstream activity.",المبلغ الفعلي من الالتزامات أو الفواتير أو الصرف أو القياس أو الاعتماد المرتبط بالبند.
 Expected BOQ amount still remaining after actual downstream cost.,مبلغ جدول الكميات المتوقع المتبقي بعد تكلفة التنفيذ الفعلية.
 Difference between actual downstream cost and expected BOQ amount.,الفرق بين تكلفة التنفيذ الفعلية ومبلغ جدول الكميات المتوقع.
 Variance percentage between actual downstream cost and expected BOQ amount.,نسبة الفرق بين تكلفة التنفيذ الفعلية ومبلغ جدول الكميات المتوقع.
-Presentation status derived from procurement, consumption, measurement, certification, and variance.,حالة عرض مستنتجة من المشتريات والصرف والقياس والاعتماد والانحراف.
+"Presentation status derived from procurement, consumption, measurement, certification, and variance.",حالة عرض مستنتجة من المشتريات والصرف والقياس والاعتماد والانحراف.
+Construction Traceability,تتبع التنفيذ الإنشائي
+Real Estate Sales,مبيعات التطوير العقاري
+Linked Documents,المستندات المرتبطة
+Connections,الروابط
+Executive Analytics,التحليلات التنفيذية
+Unit & Party,الوحدة والطرف
+Sales Foundation,أساس البيع
+Installments & Invoice Drafts,الأقساط وفواتير البيع المسودة
+Allocated Units,الوحدات الموزعة
+Accounting Drafts,المستندات المحاسبية المسودة
+Actual Qty,الكمية الفعلية

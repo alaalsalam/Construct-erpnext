@@ -66,7 +66,8 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Held\nEligible for Release\nPartially Released\nReleased\nCancelled",
-   "description": "Current status used to track this Retention Register through its workflow or reporting lifecycle."
+   "description": "Current status used to track this Retention Register through its workflow or reporting lifecycle.",
+   "hidden": 0
   },
   {
    "fieldname": "retained_on",
@@ -93,7 +94,8 @@
    "options": "Project",
    "reqd": 1,
    "in_list_view": 1,
-   "description": "Links this record to the related Project."
+   "description": "Links this record to the related Project.",
+   "hidden": 0
   },
   {
    "fieldname": "contractor",
@@ -103,7 +105,8 @@
    "options": "Supplier",
    "reqd": 1,
    "in_list_view": 1,
-   "description": "Links this record to the related Supplier."
+   "description": "Links this record to the related Supplier.",
+   "hidden": 0
   },
   {
    "fieldname": "contractor_account",
@@ -124,7 +127,8 @@
    "label": "IPC",
    "options": "Interim Payment Certificate",
    "reqd": 1,
-   "description": "Links this record to the related Interim Payment Certificate."
+   "description": "Links this record to the related Interim Payment Certificate.",
+   "hidden": 0
   },
   {
    "fieldname": "purchase_invoice",
@@ -163,7 +167,8 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Retention Amount",
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "retention_amounts_column_break",
@@ -184,7 +189,8 @@
    "label": "Remaining Retention Amount",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Retention amount still held and not yet released."
+   "description": "Retention amount still held and not yet released.",
+   "hidden": 0
   },
   {
    "fieldname": "release_schedule_tab",

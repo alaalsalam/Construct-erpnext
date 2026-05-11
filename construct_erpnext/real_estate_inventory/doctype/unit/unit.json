@@ -79,7 +79,8 @@
    "in_list_view": 1,
    "label": "Unit Code",
    "reqd": 1,
-   "description": "Specifies the unit code for this Unit."
+   "description": "Specifies the unit code for this Unit.",
+   "hidden": 0
   },
   {
    "fieldname": "unit_name",
@@ -95,7 +96,8 @@
    "label": "Unit Type",
    "options": "Unit Type",
    "in_list_view": 1,
-   "description": "Links this record to the related Unit Type."
+   "description": "Links this record to the related Unit Type.",
+   "hidden": 0
   },
   {
    "fieldname": "location_hierarchy_tab",
@@ -252,7 +254,8 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Available\nReserved\nSold\nRented\nBlocked\nUnder Maintenance\nUnder Construction",
-   "description": "Inventory status only until Reservation, Sales Contract, and Lease Contract are implemented."
+   "description": "Inventory status only until Reservation, Sales Contract, and Lease Contract are implemented.",
+   "hidden": 0
   },
   {
    "fieldname": "marketing_status",
@@ -261,7 +264,8 @@
    "label": "Marketing Status",
    "options": "Available\nReserved\nSold\nRented\nBlocked",
    "in_list_view": 1,
-   "description": "Commercial availability status used by inventory, reservation, sales, and rental workflows."
+   "description": "Commercial availability status used by inventory, reservation, sales, and rental workflows.",
+   "hidden": 0
   },
   {
    "fieldname": "usage_purpose",
@@ -316,7 +320,8 @@
    "fieldtype": "Currency",
    "label": "Expected Sale Price",
    "in_list_view": 1,
-   "description": "Specifies the expected sale price for this Unit."
+   "description": "Specifies the expected sale price for this Unit.",
+   "hidden": 0
   },
   {
    "fieldname": "expected_monthly_rent",
@@ -340,7 +345,8 @@
    "fieldtype": "Currency",
    "label": "Allocated Cost",
    "description": "Latest management cost allocation applied to this Unit. Not an accounting entry.",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "fieldname": "allocated_cost_source",
@@ -394,7 +400,8 @@
    "options": "Profitable\nWatch\nLoss Risk\nNot Priced",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Current status used to track this Unit through its workflow or reporting lifecycle."
+   "description": "Current status used to track this Unit through its workflow or reporting lifecycle.",
+   "hidden": 0
   },
   {
    "fieldname": "accounting_dimensions__traceability_tab",

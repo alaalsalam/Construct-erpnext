@@ -66,11 +66,13 @@
   {
    "fieldname": "construction_work_item",
    "fieldtype": "Link",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "label": "Construction Work Item",
    "options": "Construction Work Item",
    "reqd": 1,
-   "description": "Links this record to the related Construction Work Item."
+   "description": "Links this record to the related Construction Work Item.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "construction_boq",
@@ -112,8 +114,10 @@
    "fieldname": "description",
    "fieldtype": "Text",
    "label": "Description",
-   "in_list_view": 0,
-   "description": "Additional notes or explanation for this Interim Payment Certificate Line."
+   "in_list_view": 1,
+   "description": "Additional notes or explanation for this Interim Payment Certificate Line.",
+   "columns": 3,
+   "hidden": 0
   },
   {
    "fieldname": "uom",
@@ -141,8 +145,10 @@
    "fieldtype": "Float",
    "label": "Previous Certified Qty",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "current_measured_qty",
@@ -159,25 +165,31 @@
   {
    "fieldname": "current_certified_qty",
    "fieldtype": "Float",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "label": "Current Certified Qty",
-   "description": "Specifies the current certified qty for this Interim Payment Certificate Line."
+   "description": "Specifies the current certified qty for this Interim Payment Certificate Line.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "total_certified_qty",
    "fieldtype": "Float",
    "label": "Total Certified Qty",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "remaining_qty",
    "fieldtype": "Float",
    "label": "Remaining Qty",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "rates__amounts_section",
@@ -188,16 +200,20 @@
    "fieldname": "unit_rate",
    "fieldtype": "Currency",
    "label": "Unit Rate",
-   "in_list_view": 0,
-   "description": "Specifies the unit rate for this Interim Payment Certificate Line."
+   "in_list_view": 1,
+   "description": "Specifies the unit rate for this Interim Payment Certificate Line.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "current_amount",
    "fieldtype": "Currency",
    "label": "Current Amount",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "previous_certified_amount",
@@ -231,16 +247,20 @@
    "fieldtype": "Currency",
    "label": "Retention Amount",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "net_line_amount",
    "fieldtype": "Currency",
    "label": "Net Line Amount",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "columns": 1,
+   "hidden": 0
   },
   {
    "fieldname": "controls_section",

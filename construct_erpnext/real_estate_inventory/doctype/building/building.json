@@ -35,7 +35,8 @@
    "options": "Real Estate Project",
    "reqd": 1,
    "in_list_view": 1,
-   "description": "Links this record to the related Real Estate Project."
+   "description": "Links this record to the related Real Estate Project.",
+   "hidden": 0
   },
   {
    "fieldname": "project",
@@ -56,7 +57,8 @@
    "in_list_view": 1,
    "label": "Building Code",
    "reqd": 1,
-   "description": "Specifies the building code for this Building."
+   "description": "Specifies the building code for this Building.",
+   "hidden": 0
   },
   {
    "fieldname": "building_name",
@@ -64,7 +66,8 @@
    "in_list_view": 1,
    "label": "Building Name",
    "reqd": 1,
-   "description": "Specifies the building name for this Building."
+   "description": "Specifies the building name for this Building.",
+   "hidden": 0
   },
   {
    "fieldname": "classification_section",
@@ -86,7 +89,8 @@
    "label": "Status",
    "options": "Planned\nUnder Construction\nReady\nOperating\nClosed",
    "description": "Current status used to track this Building through its workflow or reporting lifecycle.",
-   "in_standard_filter": 1
+   "in_standard_filter": 1,
+   "hidden": 0
   },
   {
    "fieldname": "classification_column_break",
@@ -96,8 +100,9 @@
    "fieldname": "number_of_floors",
    "fieldtype": "Int",
    "label": "Number of Floors",
-   "in_list_view": 0,
-   "description": "Specifies the number of floors for this Building."
+   "in_list_view": 1,
+   "description": "Specifies the number of floors for this Building.",
+   "hidden": 0
   },
   {
    "fieldname": "total_units",
@@ -105,7 +110,8 @@
    "label": "Total Units",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "remarks_section",

@@ -84,3 +84,17 @@
 - 72/72 من بنود BOQ مرتبطة بـ Work Item وWBS وCost Code وUOM وItem.
 - Project Purchase Control Summary يعرض Item من صف BOQ عند عدم وجود Item على Work Item، لذلك أصبح مناسباً كأوضح شاشة للعميل.
 - القرار النهائي: `PROJ-0002` جاهز للتسليم والعرض كقصة المرحلة الأولى.
+
+## 9. تحديث Connections وGrid Views
+
+تم تحسين تجربة التنقل داخل النماذج بحيث تظهر Connections مفيدة مثل شاشات ERPNext القياسية.
+
+أهم ما تم تحسينه:
+
+- Project `PROJ-0002` يعرض روابط BOQ وWork Items والمشتريات والمخزون والقياسات وIPC والمقاولين وCFO والعقار والحجوزات وعقود البيع.
+- BOQ `BOQ-PROJ-0002-001` يعرض روابط Work Items وMaterial Requests وPurchase Orders وPurchase Receipts وPurchase Invoices وStock Entries وMeasurement Entries وIPCs.
+- Sales Invoice `ACC-SINV-2026-00002` يعرض روابط Sales Contract وUnit Reservation وUnit وReal Estate Project من صف الفاتورة.
+- Unit وReal Estate Project وSales Contract أصبحت تعرض روابط الحجز والبيع والفواتير المسودة بشكل أوضح.
+- جداول BOQ Items وIPC Lines وInstallments وUnit Cost Allocation Lines أصبحت تعرض الأعمدة المهمة مباشرة في Grid View.
+
+أثناء العرض، افتح Connections من الشريط الجانبي لإثبات أن المستندات ليست منفصلة، بل مترابطة عبر نفس المشروع والوحدة وبند العمل.

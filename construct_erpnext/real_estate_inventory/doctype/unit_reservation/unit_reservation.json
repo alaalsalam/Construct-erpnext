@@ -96,7 +96,8 @@
    "reqd": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "description": "Commercial intent of the temporary reservation."
+   "description": "Commercial intent of the temporary reservation.",
+   "hidden": 0
   },
   {
    "fieldname": "reservation_date",
@@ -124,7 +125,8 @@
    "label": "Valid Until",
    "reqd": 1,
    "in_list_view": 1,
-   "description": "Date until which the reservation remains valid."
+   "description": "Date until which the reservation remains valid.",
+   "hidden": 0
   },
   {
    "fieldname": "status",
@@ -134,7 +136,8 @@
    "default": "Draft",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "description": "Operational reservation status."
+   "description": "Operational reservation status.",
+   "hidden": 0
   },
   {
    "fieldname": "workflow_state",
@@ -183,7 +186,8 @@
    "reqd": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "description": "Real estate unit being reserved."
+   "description": "Real estate unit being reserved.",
+   "hidden": 0
   },
   {
    "fieldname": "unit_details_column_break",
@@ -240,14 +244,16 @@
    "label": "Customer",
    "options": "Customer",
    "description": "Existing customer interested in the reservation.",
-   "in_list_view": 0
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "fieldname": "party_name",
    "fieldtype": "Data",
    "label": "Party Name",
    "in_list_view": 1,
-   "description": "Visible party name when Customer or Lead is not yet available."
+   "description": "Visible party name when Customer or Lead is not yet available.",
+   "hidden": 0
   },
   {
    "fieldname": "customer__lead_details_column_break",

@@ -79,7 +79,8 @@
    "label": "Status",
    "options": "Active\nSuspended\nClosed",
    "in_list_view": 1,
-   "description": "Current status used to track this Contractor Account through its workflow or reporting lifecycle."
+   "description": "Current status used to track this Contractor Account through its workflow or reporting lifecycle.",
+   "hidden": 0
   },
   {
    "fieldname": "account_information_column_break",
@@ -118,7 +119,8 @@
    "label": "Project",
    "options": "Project",
    "reqd": 1,
-   "description": "Links this record to the related Project."
+   "description": "Links this record to the related Project.",
+   "hidden": 0
   },
   {
    "fieldname": "contractor",
@@ -128,7 +130,8 @@
    "label": "Contractor",
    "options": "Supplier",
    "reqd": 1,
-   "description": "Links this record to the related Supplier."
+   "description": "Links this record to the related Supplier.",
+   "hidden": 0
   },
   {
    "fieldname": "subcontract",
@@ -191,7 +194,8 @@
    "label": "Total Retention Held",
    "read_only": 1,
    "description": "Total retention held through IPC control records.",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "default": "0",
@@ -218,8 +222,9 @@
    "fieldtype": "Currency",
    "label": "Current Advance Balance",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "default": "0",
@@ -293,7 +298,8 @@
    "label": "Outstanding Balance",
    "read_only": 1,
    "description": "Operational outstanding balance after certified, retained, invoiced, and paid amounts.",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "fieldname": "remarks_tab",

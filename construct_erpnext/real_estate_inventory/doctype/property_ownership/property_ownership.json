@@ -32,8 +32,9 @@
    "in_standard_filter": 1,
    "label": "Real Estate Project",
    "options": "Real Estate Project",
-   "in_list_view": 0,
-   "description": "Links this record to the related Real Estate Project."
+   "in_list_view": 1,
+   "description": "Links this record to the related Real Estate Project.",
+   "hidden": 0
   },
   {
    "fieldname": "unit",
@@ -43,7 +44,8 @@
    "label": "Unit",
    "options": "Unit",
    "reqd": 1,
-   "description": "Links this record to the related Unit."
+   "description": "Links this record to the related Unit.",
+   "hidden": 0
   },
   {
    "fieldname": "property_owner",
@@ -53,7 +55,8 @@
    "label": "Owner",
    "options": "Property Owner",
    "reqd": 1,
-   "description": "Links this record to the related Property Owner."
+   "description": "Links this record to the related Property Owner.",
+   "hidden": 0
   },
   {
    "fieldname": "ownership_information_column_break",
@@ -101,7 +104,8 @@
    "label": "Status",
    "options": "Active\nTransferred\nEnded\nCancelled",
    "description": "Current status used to track this Property Ownership through its workflow or reporting lifecycle.",
-   "in_standard_filter": 1
+   "in_standard_filter": 1,
+   "hidden": 0
   },
   {
    "fieldname": "remarks_section",

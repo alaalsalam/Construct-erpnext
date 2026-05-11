@@ -35,7 +35,8 @@
    "in_list_view": 1,
    "label": "Owner Name",
    "reqd": 1,
-   "description": "Specifies the owner name for this Property Owner."
+   "description": "Specifies the owner name for this Property Owner.",
+   "hidden": 0
   },
   {
    "fieldname": "owner_type",
@@ -44,7 +45,8 @@
    "label": "Owner Type",
    "options": "Individual\nCompany\nInvestor\nGovernment\nOther",
    "in_list_view": 1,
-   "description": "Selects the owner type used for classification, workflow, or reporting."
+   "description": "Selects the owner type used for classification, workflow, or reporting.",
+   "hidden": 0
   },
   {
    "fieldname": "status",
@@ -53,7 +55,8 @@
    "label": "Status",
    "options": "Active\nInactive\nBlacklisted",
    "description": "Current status used to track this Property Owner through its workflow or reporting lifecycle.",
-   "in_standard_filter": 1
+   "in_standard_filter": 1,
+   "hidden": 0
   },
   {
    "fieldname": "party_links_section",
@@ -86,14 +89,16 @@
    "fieldtype": "Data",
    "label": "Mobile No",
    "in_list_view": 1,
-   "description": "Specifies the mobile no for this Property Owner."
+   "description": "Specifies the mobile no for this Property Owner.",
+   "hidden": 0
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email",
-   "in_list_view": 0,
-   "description": "Specifies the email for this Property Owner."
+   "in_list_view": 1,
+   "description": "Specifies the email for this Property Owner.",
+   "hidden": 0
   },
   {
    "fieldname": "identification_no",

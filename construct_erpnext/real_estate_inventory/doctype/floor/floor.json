@@ -32,8 +32,9 @@
    "label": "Real Estate Project",
    "options": "Real Estate Project",
    "reqd": 1,
-   "in_list_view": 0,
-   "description": "Links this record to the related Real Estate Project."
+   "in_list_view": 1,
+   "description": "Links this record to the related Real Estate Project.",
+   "hidden": 0
   },
   {
    "fieldname": "building",
@@ -43,7 +44,8 @@
    "label": "Building",
    "options": "Building",
    "reqd": 1,
-   "description": "Links this record to the related Building."
+   "description": "Links this record to the related Building.",
+   "hidden": 0
   },
   {
    "fieldname": "basic_information_column_break",
@@ -55,7 +57,8 @@
    "in_list_view": 1,
    "label": "Floor Code",
    "reqd": 1,
-   "description": "Specifies the floor code for this Floor."
+   "description": "Specifies the floor code for this Floor.",
+   "hidden": 0
   },
   {
    "fieldname": "floor_name",
@@ -63,7 +66,8 @@
    "in_list_view": 1,
    "label": "Floor Name",
    "reqd": 1,
-   "description": "Specifies the floor name for this Floor."
+   "description": "Specifies the floor name for this Floor.",
+   "hidden": 0
   },
   {
    "fieldname": "classification_section",
@@ -75,7 +79,8 @@
    "fieldtype": "Int",
    "label": "Floor Number",
    "in_list_view": 1,
-   "description": "Specifies the floor number for this Floor."
+   "description": "Specifies the floor number for this Floor.",
+   "hidden": 0
   },
   {
    "fieldname": "floor_type",
@@ -92,7 +97,8 @@
    "label": "Total Units",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "remarks_section",

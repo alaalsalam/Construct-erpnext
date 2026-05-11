@@ -165,3 +165,18 @@ Ready with caveats.
 | نطاق المرحلة الثانية | Passed | مؤجل وموثق |
 
 القرار: جاهز للعرض والتسليم كمرحلة أولى.
+
+## تحديث QA - Connections وGrid Views
+
+| البند | الحالة | الملاحظة |
+|---|---|---|
+| Project connections | Passed | `PROJ-0002` يعرض روابط التشغيل والبيع والعقار |
+| BOQ connections | Passed | `BOQ-PROJ-0002-001` يعرض Work Items ومشتريات وقياسات وIPC |
+| Work Item connections | Passed | أمثلة PROJ-0002 تعرض MR/Measurement/IPC |
+| IPC connections | Passed | يعرض Measurement Entries وContractor Ledger وRetention |
+| Unit/Sales connections | Passed | Unit وSales Contract وSales Invoice مترابطة |
+| BOQ Item grid columns | Passed | الأعمدة التشغيلية ظاهرة |
+| Sales Installment grid columns | Passed | الفاتورة والمسدد والمتبقي ظاهرة |
+| IPC Lines grid columns | Passed | الكميات والمبالغ والاحتجاز ظاهرة |
+| Unit Cost Allocation grid columns | Passed | الوحدة والتكلفة والهامش ظاهرة |
+| PROJ-0002 data depth | Passed | لا حاجة لإضافة بيانات جديدة |

@@ -144,7 +144,8 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Draft\nSubmitted\nUnder Review\nCertified\nApproved\nInvoice Created\nPartially Paid\nPaid\nClosed\nRejected",
-   "description": "Current status used to track this Interim Payment Certificate through its workflow or reporting lifecycle."
+   "description": "Current status used to track this Interim Payment Certificate through its workflow or reporting lifecycle.",
+   "hidden": 0
   },
   {
    "fieldname": "rejection_reason",
@@ -171,7 +172,8 @@
    "label": "Project",
    "options": "Project",
    "reqd": 1,
-   "description": "Links this record to the related Project."
+   "description": "Links this record to the related Project.",
+   "hidden": 0
   },
   {
    "fieldname": "contractor",
@@ -181,7 +183,8 @@
    "label": "Contractor",
    "options": "Supplier",
    "reqd": 1,
-   "description": "Links this record to the related Supplier."
+   "description": "Links this record to the related Supplier.",
+   "hidden": 0
   },
   {
    "fieldname": "contractor_account",
@@ -254,7 +257,8 @@
    "label": "Gross Amount",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Gross certified amount before retention and deductions."
+   "description": "Gross certified amount before retention and deductions.",
+   "hidden": 0
   },
   {
    "fieldname": "previous_certified_amount",
@@ -293,8 +297,9 @@
    "fieldtype": "Currency",
    "label": "Retention Amount",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "financial_summary_column_break",
@@ -334,7 +339,8 @@
    "in_list_view": 1,
    "label": "Net Payable",
    "read_only": 1,
-   "description": "Current payable amount after retention and deductions."
+   "description": "Current payable amount after retention and deductions.",
+   "hidden": 0
   },
   {
    "fieldname": "deductions",
@@ -361,7 +367,8 @@
    "options": "Purchase Invoice",
    "read_only": 1,
    "description": "Draft or submitted ERPNext Purchase Invoice created from this IPC.",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "fieldname": "paid_amount",

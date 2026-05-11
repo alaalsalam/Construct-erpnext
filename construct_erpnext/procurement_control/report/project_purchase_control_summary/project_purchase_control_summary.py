@@ -70,7 +70,7 @@ def get_data(filters):
 			"certified_amount",
 			"remaining_qty",
 		],
-		order_by="construction_boq, name",
+		order_by="construction_boq, wbs_element, cost_code, name",
 	)
 
 	boq_rows = _get_boq_rows(work_items)

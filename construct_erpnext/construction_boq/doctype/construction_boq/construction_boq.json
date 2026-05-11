@@ -85,7 +85,8 @@
    "label": "Project",
    "options": "Project",
    "reqd": 1,
-   "description": "Links this record to the related Project."
+   "description": "Links this record to the related Project.",
+   "hidden": 0
   },
   {
    "fieldname": "construction_budget",
@@ -98,11 +99,12 @@
   {
    "fieldname": "boq_number",
    "fieldtype": "Data",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "label": "BOQ Number",
    "reqd": 1,
    "unique": 1,
-   "description": "Specifies the boq number for this Construction BOQ."
+   "description": "Specifies the boq number for this Construction BOQ.",
+   "hidden": 0
   },
   {
    "fieldname": "boq_type",
@@ -110,7 +112,8 @@
    "in_list_view": 1,
    "label": "BOQ Type",
    "options": "Preliminary\nDetailed\nContract\nRevised\nForecast",
-   "description": "Selects the boq type used for classification, workflow, or reporting."
+   "description": "Selects the boq type used for classification, workflow, or reporting.",
+   "hidden": 0
   },
   {
    "fieldname": "overview_column_break",
@@ -147,7 +150,8 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Draft\nUnder Review\nApproved\nLocked\nCancelled",
-   "description": "Current status used to track this Construction BOQ through its workflow or reporting lifecycle."
+   "description": "Current status used to track this Construction BOQ through its workflow or reporting lifecycle.",
+   "hidden": 0
   },
   {
    "fieldname": "project__budget_tab",
@@ -317,7 +321,8 @@
    "in_list_view": 1,
    "label": "Total Amount",
    "read_only": 1,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "total_actual_cost",
@@ -325,7 +330,8 @@
    "label": "Total Actual Cost",
    "read_only": 1,
    "description": "Reserved summary of actual cost; procurement and certification amounts are tracked separately.",
-   "in_list_view": 0
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "fieldname": "variance_amount",
@@ -340,8 +346,9 @@
    "fieldtype": "Percent",
    "label": "Variance Percent",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "workflow__status_tab",
@@ -359,7 +366,8 @@
    "label": "Work Items Generated",
    "read_only": 1,
    "description": "Indicates that operational Work Items have been generated from approved BOQ rows.",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "fieldname": "references_tab",

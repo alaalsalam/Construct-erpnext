@@ -112,7 +112,8 @@
    "reqd": 1,
    "unique": 1,
    "in_list_view": 1,
-   "description": "Unique sales contract reference. Auto-generated from settings if left blank."
+   "description": "Unique sales contract reference. Auto-generated from settings if left blank.",
+   "hidden": 0
   },
   {
    "fieldname": "contract_date",
@@ -131,22 +132,23 @@
    "description": "Date until which the contract terms remain valid. Defaults from settings if not provided."
   },
   {
-  "fieldname": "contract_status",
-  "fieldtype": "Select",
-  "label": "Contract Status",
-  "allow_on_submit": 1,
-  "options": "Draft\nUnder Review\nApproved\nActive\nCancelled\nClosed",
+   "fieldname": "contract_status",
+   "fieldtype": "Select",
+   "label": "Contract Status",
+   "allow_on_submit": 1,
+   "options": "Draft\nUnder Review\nApproved\nActive\nCancelled\nClosed",
    "default": "Draft",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "description": "Operational contract status used for workflow and reporting."
+   "description": "Operational contract status used for workflow and reporting.",
+   "hidden": 0
   },
   {
-  "fieldname": "workflow_state",
-  "fieldtype": "Select",
-  "label": "Workflow State",
-  "allow_on_submit": 1,
-  "options": "Draft\nUnder Review\nApproved\nActive\nCancelled\nClosed",
+   "fieldname": "workflow_state",
+   "fieldtype": "Select",
+   "label": "Workflow State",
+   "allow_on_submit": 1,
+   "options": "Draft\nUnder Review\nApproved\nActive\nCancelled\nClosed",
    "default": "Draft",
    "in_standard_filter": 1,
    "in_list_view": 0,
@@ -217,7 +219,8 @@
    "reqd": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "description": "Real estate unit being sold under this contract."
+   "description": "Real estate unit being sold under this contract.",
+   "hidden": 0
   },
   {
    "fieldname": "unit_details_column_break",
@@ -290,7 +293,8 @@
    "label": "Customer",
    "options": "Customer",
    "in_list_view": 1,
-   "description": "Existing customer linked to this sales contract."
+   "description": "Existing customer linked to this sales contract.",
+   "hidden": 0
   },
   {
    "fieldname": "lead",
@@ -386,7 +390,8 @@
    "label": "Net Price",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Calculated as sale price minus discount amount. This is the amount used for installment calculations."
+   "description": "Calculated as sale price minus discount amount. This is the amount used for installment calculations.",
+   "hidden": 0
   },
   {
    "fieldname": "currency",
@@ -507,8 +512,9 @@
    "fieldtype": "Currency",
    "label": "Total Outstanding Amount",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Remaining amount outstanding for this contract's invoiced installments. Calculated automatically."
+   "in_list_view": 1,
+   "description": "Remaining amount outstanding for this contract's invoiced installments. Calculated automatically.",
+   "hidden": 0
   },
   {
    "fieldname": "collection_tracking_column_break",
@@ -523,7 +529,8 @@
    "read_only": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "description": "Overall invoicing and collection status for this contract. Calculated automatically."
+   "description": "Overall invoicing and collection status for this contract. Calculated automatically.",
+   "hidden": 0
   },
   {
    "fieldname": "latest_payment_entry",

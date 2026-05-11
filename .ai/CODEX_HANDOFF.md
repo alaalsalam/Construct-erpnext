@@ -524,3 +524,16 @@ CMD-DELIVERY-01 final PROJ-0002 handover readiness:
   - `.ai/PROJ_0002_FINAL_PRESENTATION_READINESS.md`
   - `.ai/CLIENT_HANDOVER_NOTES_PHASE_1.md`
 - Current next action: Present PROJ-0002 Phase 1 to client and collect handover feedback.
+
+CMD-UX-02 connections/grid presentation status:
+- Branch: feature/connections-grid-proj-0002-depth.
+- Added custom DocType dashboard connection files for BOQ, Work Item, Measurement/IPC, Contractor, CFO, Real Estate, Unit Costing, Reservation, and Sales Contract forms.
+- Added `override_doctype_dashboards` hooks for ERPNext Project, procurement/stock documents, Sales Invoice, Customer, and Supplier.
+- Validated linked-document sidebar counts:
+  - Project `PROJ-0002`: 72 Work Items, 33 Material Requests, 4 IPCs, 8 Contractor Accounts, 24 Units, 17 Reservations, 3 Sales Contracts, 3 Sales Invoices.
+  - BOQ `BOQ-PROJ-0002-001`: Work Items, procurement, stock, Measurement Entries, and IPCs.
+  - Sales Invoice `ACC-SINV-2026-00002`: Sales Contract, Unit Reservation, Unit, Real Estate Project.
+- Improved grid columns for Construction BOQ Item, Sales Installment Schedule, Rent Schedule, Project Cash Flow Forecast Period, IPC Line, Unit Cost Allocation Line, and IPC Deduction.
+- Added list indicators for key custom parent DocTypes.
+- PROJ-0002 data was not further enriched because validation already meets the requested depth.
+- Current next action: Present PROJ-0002 Phase 1 using improved form connections and grid views, then collect client feedback.

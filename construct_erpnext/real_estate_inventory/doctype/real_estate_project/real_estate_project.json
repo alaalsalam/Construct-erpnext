@@ -50,7 +50,8 @@
    "label": "Project",
    "options": "Project",
    "reqd": 1,
-   "description": "Links this record to the related Project."
+   "description": "Links this record to the related Project.",
+   "hidden": 0
   },
   {
    "fieldname": "basic_information_column_break",
@@ -59,9 +60,10 @@
   {
    "fieldname": "project_name_ar",
    "fieldtype": "Data",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "label": "Project Name Arabic",
-   "description": "Specifies the project name arabic for this Real Estate Project."
+   "description": "Specifies the project name arabic for this Real Estate Project.",
+   "hidden": 0
   },
   {
    "fieldname": "status",
@@ -70,7 +72,8 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Planning\nUnder Construction\nReady for Sale\nReady for Rent\nOperating\nClosed",
-   "description": "Current status used to track this Real Estate Project through its workflow or reporting lifecycle."
+   "description": "Current status used to track this Real Estate Project through its workflow or reporting lifecycle.",
+   "hidden": 0
   },
   {
    "fieldname": "classification_section",
@@ -117,7 +120,8 @@
    "label": "Total Units",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "available_units",
@@ -125,7 +129,8 @@
    "label": "Available Units",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "area_and_unit_counts_column_break",
@@ -137,23 +142,26 @@
    "label": "Reserved Units",
    "read_only": 1,
    "in_list_view": 1,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "sold_units",
    "fieldtype": "Int",
    "label": "Sold Units",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "rented_units",
    "fieldtype": "Int",
    "label": "Rented Units",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "blocked_units",

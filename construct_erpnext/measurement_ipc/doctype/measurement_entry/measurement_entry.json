@@ -84,12 +84,13 @@
   {
    "fieldname": "measurement_book",
    "fieldtype": "Link",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Measurement Book",
    "options": "Measurement Book",
    "reqd": 1,
-   "description": "Links this record to the related Measurement Book."
+   "description": "Links this record to the related Measurement Book.",
+   "hidden": 0
   },
   {
    "fieldname": "measurement_date",
@@ -110,7 +111,8 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Draft\nSubmitted\nVerified\nRejected\nLocked\nCancelled",
-   "description": "Current status used to track this Measurement Entry through its workflow or reporting lifecycle."
+   "description": "Current status used to track this Measurement Entry through its workflow or reporting lifecycle.",
+   "hidden": 0
   },
   {
    "fieldname": "rejection_reason",
@@ -145,7 +147,8 @@
    "options": "Project",
    "reqd": 1,
    "in_list_view": 1,
-   "description": "Links this record to the related Project."
+   "description": "Links this record to the related Project.",
+   "hidden": 0
   },
   {
    "fieldname": "contractor",
@@ -171,7 +174,8 @@
    "label": "Construction Work Item",
    "options": "Construction Work Item",
    "reqd": 1,
-   "description": "Work Item being measured in the field."
+   "description": "Work Item being measured in the field.",
+   "hidden": 0
   },
   {
    "fieldname": "work_item_details_column_break",
@@ -245,9 +249,10 @@
   {
    "fieldname": "current_measured_qty",
    "fieldtype": "Float",
-   "in_list_view": 0,
+   "in_list_view": 1,
    "label": "Current Measured Qty",
-   "description": "Quantity measured in this entry before cumulative calculation."
+   "description": "Quantity measured in this entry before cumulative calculation.",
+   "hidden": 0
   },
   {
    "fieldname": "cumulative_measured_qty",
@@ -262,8 +267,9 @@
    "fieldtype": "Float",
    "label": "Remaining Qty",
    "read_only": 1,
-   "in_list_view": 0,
-   "description": "Calculated value updated automatically from linked records or document lines."
+   "in_list_view": 1,
+   "description": "Calculated value updated automatically from linked records or document lines.",
+   "hidden": 0
   },
   {
    "fieldname": "unit_rate",
@@ -334,7 +340,8 @@
    "fieldtype": "Float",
    "label": "Accepted Qty",
    "description": "Quantity accepted by QS verification for this entry.",
-   "in_list_view": 1
+   "in_list_view": 1,
+   "hidden": 0
   },
   {
    "fieldname": "variance_qty",

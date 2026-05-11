@@ -98,3 +98,15 @@
 - جداول BOQ Items وIPC Lines وInstallments وUnit Cost Allocation Lines أصبحت تعرض الأعمدة المهمة مباشرة في Grid View.
 
 أثناء العرض، افتح Connections من الشريط الجانبي لإثبات أن المستندات ليست منفصلة، بل مترابطة عبر نفس المشروع والوحدة وبند العمل.
+
+## 10. تحديث ربط Project بكل العلاقات المهمة
+
+- شاشة Project `PROJ-0002` أصبحت نقطة الدخول التشغيلية الرئيسية، وليست مجرد تعريف مشروع.
+- من Connections داخل Project يمكن فتح:
+  - WBS Element للتخطيط.
+  - Construction BOQ وConstruction Work Item وMeasurement Book وMeasurement Entry وInterim Payment Certificate.
+  - Material Request وPurchase Order وPurchase Receipt وPurchase Invoice وStock Entry.
+  - Contractor Account وContractor Ledger Entry وRetention Register وAdvance Register وGuarantee Register.
+  - Project Financial Snapshot وProject Cash Flow Forecast وProject EVM Metrics.
+  - Real Estate Project وBuilding وUnit وUnit Cost Allocation وUnit Reservation وSales Contract وSales Invoice المسودة.
+- مسار العرض الموصى به الآن: ابدأ من Project `PROJ-0002`، افتح Connections لإظهار الترابط الكامل، ثم انتقل للتقارير التفصيلية عند شرح المخطط/الفعلي/المتبقي.

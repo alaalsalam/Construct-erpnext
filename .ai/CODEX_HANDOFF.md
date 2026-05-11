@@ -536,4 +536,9 @@ CMD-UX-02 connections/grid presentation status:
 - Improved grid columns for Construction BOQ Item, Sales Installment Schedule, Rent Schedule, Project Cash Flow Forecast Period, IPC Line, Unit Cost Allocation Line, and IPC Deduction.
 - Added list indicators for key custom parent DocTypes.
 - PROJ-0002 data was not further enriched because validation already meets the requested depth.
-- Current next action: Present PROJ-0002 Phase 1 using improved form connections and grid views, then collect client feedback.
+- Follow-up branch `feature/project-complete-related-connections` makes the Project form the main connected entry point:
+  - Procurement/stock documents now count through child item `project` links.
+  - Sales Invoice now counts through Sales Invoice Item `project` links.
+  - Contractor Ledger Entry and WBS Element are visible from Project connections.
+  - `PROJ-0002` live counts confirm construction, procurement, contractor, CFO, real estate, reservation, sales, and draft invoice documents are all reachable from the Project form.
+- Current next action: Present PROJ-0002 Phase 1 from the Project form with complete related-document connections, then collect client feedback.

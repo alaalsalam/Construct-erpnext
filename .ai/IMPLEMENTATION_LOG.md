@@ -1079,3 +1079,21 @@
   - Customer and Supplier dashboards show sales/contractor links.
 - Re-ran official PROJ-0002 validation successfully; safety remains Payment Entries 0, Journal Entries 0, submitted Sales Invoices 0.
 - NEXT_ACTION set to Present PROJ-0002 Phase 1 using improved form connections and grid views, then collect client feedback.
+
+## 2026-05-11 Project complete related connections follow-up
+
+- Created branch `feature/project-complete-related-connections` from `feature/connections-grid-proj-0002-depth`.
+- Expanded Project dashboard relationships so the Project form acts as the main connected entry point for Phase 1:
+  - Project planning: WBS Element.
+  - Construction: Construction BOQ, Construction Work Item, Measurement Book, Measurement Entry, IPC.
+  - Procurement and stock counts through child item project links: Material Request, Purchase Order, Purchase Receipt, Purchase Invoice, Stock Entry.
+  - Contractor control: Contractor Account, Contractor Ledger Entry, Retention Register, Advance Register, Guarantee Register.
+  - Executive analytics: Project Financial Snapshot, Cash Flow Forecast, EVM Metrics.
+  - Real estate development: Real Estate Project, Building, Unit, Unit Cost Allocation, Unit Reservation, Sales Contract, Lease Contract where applicable.
+- Kept ERPNext standard Sales Invoice under the standard Sales group, but fixed its count through Sales Invoice Item project links.
+- Validated live linked-document counts for `PROJ-0002`:
+  - 33 Material Requests, 1 Purchase Order, 1 Purchase Receipt, 5 Purchase Invoices, 2 Stock Entries.
+  - 1 BOQ, 72 Work Items, 5 Measurement Books, 20 Measurement Entries, 4 IPCs.
+  - 8 Contractor Accounts, 13 Contractor Ledger Entries, 4 Retention, 4 Advance, 4 Guarantee Registers.
+  - 1 Real Estate Project, 1 Building, 24 Units, 2 Unit Cost Allocations, 17 Unit Reservations, 3 Sales Contracts, 3 Sales Invoices.
+- No data records, accounting documents, Payment Entries, Journal Entries, submitted Sales Invoices, or GL backfill were created.

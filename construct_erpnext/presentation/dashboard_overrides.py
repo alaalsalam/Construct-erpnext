@@ -5,6 +5,7 @@ from frappe import _
 def extend_project_dashboard(data=None):
 	data = _ensure_dashboard(data)
 	data.fieldname = data.get("fieldname") or "project"
+	_add_group(data, _("Project Planning"), ["WBS Element"])
 	_add_group(
 		data,
 		_("Construction Control"),
@@ -19,7 +20,13 @@ def extend_project_dashboard(data=None):
 	_add_group(
 		data,
 		_("Contractor Control"),
-		["Contractor Account", "Retention Register", "Advance Register", "Guarantee Register"],
+		[
+			"Contractor Account",
+			"Contractor Ledger Entry",
+			"Retention Register",
+			"Advance Register",
+			"Guarantee Register",
+		],
 	)
 	_add_group(
 		data,
@@ -28,17 +35,35 @@ def extend_project_dashboard(data=None):
 	)
 	_add_group(
 		data,
-		_("Real Estate"),
-		["Real Estate Project", "Unit", "Unit Cost Allocation", "Unit Reservation", "Sales Contract"],
+		_("Real Estate Development"),
+		[
+			"Real Estate Project",
+			"Building",
+			"Unit",
+			"Unit Cost Allocation",
+			"Unit Reservation",
+			"Sales Contract",
+			"Lease Contract",
+		],
 	)
 	data.non_standard_fieldnames.update({
+		"WBS Element": "project",
 		"Real Estate Project": "project",
+		"Building": "project",
 		"Unit": "project",
 		"Unit Cost Allocation": "project",
 		"Unit Reservation": "project",
 		"Sales Contract": "project",
+		"Lease Contract": "project",
 	})
-	data.internal_links.update({"Sales Invoice": ["items", "project"]})
+	data.internal_links.update({
+		"Material Request": ["items", "project"],
+		"Purchase Order": ["items", "project"],
+		"Purchase Receipt": ["items", "project"],
+		"Purchase Invoice": ["items", "project"],
+		"Stock Entry": ["items", "project"],
+		"Sales Invoice": ["items", "project"],
+	})
 	return data
 
 

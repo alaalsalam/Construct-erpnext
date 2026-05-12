@@ -143,6 +143,13 @@ BOQ -> Work Item -> Procurement -> Measurement -> IPC -> Contractor Ledger -> CF
 
 Phase 1 جاهزة للعرض المهني للعميل، بشرط تقديمها بوضوح كأساس تشغيلي ومالي متكامل، مع توضيح أن التحصيل الكامل والتأجير الكامل والتكاملات الذكية هي Phase 2.
 
+## 11.1 تحديث تقارير ولوحات العرض
+
+- تم تحسين التقارير العربية بإضافة Summary Cards ومؤشرات لونية للحالات والمخاطر.
+- أصبحت `Project Purchase Control Summary` شاشة العرض الرئيسية لقيم المخطط والمتوقع والفعلي والمتبقي والانحراف في `PROJ-0002`.
+- أضيفت KPI Cards خاصة بـ `PROJ-0002` للعرض التنفيذي السريع.
+- Dashboard Charts النهائية ما زالت مؤجلة عمداً حتى اعتماد تعريفات المؤشرات والرسوم من الإدارة المالية.
+
 ## 12. Recommended Records to Open During Presentation
 
 ### Executive overview

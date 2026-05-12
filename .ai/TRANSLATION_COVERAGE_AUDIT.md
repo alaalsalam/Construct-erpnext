@@ -70,3 +70,9 @@ Branch: feature/final-form-workspace-ux-hardening
 - Arabic label translation coverage meets the 100% target for reviewed custom DocTypes, workspace labels, report names/labels, and Number Cards.
 - Arabic description translation coverage meets the 100% target for reviewed custom DocType field descriptions.
 - ar.csv remains the source for Arabic UX; no technical DocType labels or fieldnames were replaced with Arabic.
+
+## 2026-05-12 Report Polish Update
+
+- Added Arabic translations for report summary labels, KPI card labels, status values, risk values, and visual indicator terms used in the client presentation reports.
+- Translation CSV parsed successfully after update.
+- Current translation rows: 2136.

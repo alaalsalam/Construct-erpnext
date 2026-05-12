@@ -1,9 +1,11 @@
 import frappe
 from frappe import _
+from construct_erpnext.reporting.report_utils import sum_field, summary_value
 
 
 def execute(filters=None):
-	return get_columns(), get_data(filters or {})
+	data = get_data(filters or {})
+	return get_columns(), data, None, None, get_report_summary(data)
 
 
 def get_columns():
@@ -58,3 +60,12 @@ def get_conditions(filters):
 		conditions.append("sc.contract_date <= %(to_date)s")
 		values["to_date"] = filters["to_date"]
 	return (" AND " + " AND ".join(conditions)) if conditions else "", values
+
+
+def get_report_summary(data):
+	return [
+		summary_value("Contracted Sales Value", sum_field(data, "net_price"), "Currency", "Blue"),
+		summary_value("Invoiced Amount", sum_field(data, "total_invoiced_amount"), "Currency", "Orange"),
+		summary_value("Collected Amount", sum_field(data, "total_collected_amount"), "Currency", "Green"),
+		summary_value("Outstanding Amount", sum_field(data, "total_outstanding_amount"), "Currency", "Red"),
+	]

@@ -1,10 +1,12 @@
 import frappe
 from frappe import _
+from construct_erpnext.reporting.report_utils import sum_field, summary_value
 
 
 def execute(filters=None):
 	filters = filters or {}
-	return get_columns(), get_data(filters)
+	data = get_data(filters)
+	return get_columns(), data, None, None, get_report_summary(data)
 
 
 def get_columns():
@@ -56,3 +58,14 @@ def get_data(filters):
 		values,
 		as_dict=True,
 	)
+
+
+def get_report_summary(data):
+	return [
+		summary_value("Requested Qty", sum_field(data, "requested_qty"), "Float", "Blue"),
+		summary_value("Ordered Qty", sum_field(data, "ordered_qty"), "Float", "Blue"),
+		summary_value("Received Qty", sum_field(data, "received_qty"), "Float", "Green"),
+		summary_value("Invoiced Qty", sum_field(data, "invoiced_qty"), "Float", "Orange"),
+		summary_value("Consumed Qty", sum_field(data, "consumed_qty"), "Float", "Blue"),
+		summary_value("Remaining Qty", sum_field(data, "remaining_qty"), "Float", "Grey"),
+	]

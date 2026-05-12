@@ -6,5 +6,12 @@ frappe.query_reports["Unit Profitability Report"] = {
 		{fieldname: "unit_type", label: __("Unit Type"), fieldtype: "Link", options: "Unit Type"},
 		{fieldname: "unit_status", label: __("Unit Status"), fieldtype: "Select", options: "\nAvailable\nReserved\nSold\nRented\nBlocked\nUnder Maintenance\nUnder Construction"},
 		{fieldname: "profitability_status", label: __("Profitability Status"), fieldtype: "Select", options: "\nProfitable\nWatch\nLoss Risk\nNot Priced"}
-	]
+	],
+	formatter(value, row, column, data, default_formatter) {
+		value = default_formatter(value, row, column, data);
+		if (["status", "profitability_status"].includes(column.fieldname)) {
+			return window.construct_erpnext_report_badge(data[column.fieldname]);
+		}
+		return value;
+	},
 };

@@ -1,5 +1,6 @@
 import frappe
 from frappe import _
+from construct_erpnext.reporting.report_utils import sum_field, summary_value
 
 
 def execute(filters=None):
@@ -48,4 +49,16 @@ def execute(filters=None):
 		values,
 		as_dict=True,
 	)
-	return columns, data
+	return columns, data, None, None, get_report_summary(data)
+
+
+def get_report_summary(data):
+	latest = data[0] if data else {}
+	return [
+		summary_value("BAC", sum_field(data, "budget_at_completion"), "Currency", "Blue"),
+		summary_value("EV", sum_field(data, "earned_value"), "Currency", "Green"),
+		summary_value("AC", sum_field(data, "actual_cost"), "Currency", "Orange"),
+		summary_value("CPI", latest.get("cost_performance_index") or 0, "Float", "Green" if (latest.get("cost_performance_index") or 0) >= 1 else "Red"),
+		summary_value("SPI", latest.get("schedule_performance_index") or 0, "Float", "Green" if (latest.get("schedule_performance_index") or 0) >= 1 else "Orange"),
+		summary_value("Overall EVM Status", latest.get("overall_evm_status") or "N/A", "Data", "Green" if latest.get("overall_evm_status") == "On Track" else "Red"),
+	]

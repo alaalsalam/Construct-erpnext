@@ -218,6 +218,22 @@ Ready with caveats.
 | Retention Registers | 4 |
 | Guarantee Registers | 4 |
 | Advance Registers | 4 |
+
+## 10. تحديث جاهزية التقارير العربية
+
+- تقارير PROJ-0002 المحورية تعمل وتعرض بيانات غير صفرية وغنية.
+- أضيفت Report Summary Cards إلى:
+  - Project Purchase Control Summary.
+  - Work Item Procurement Summary.
+  - IPC Register.
+  - Contractor Exposure Summary.
+  - Project Financial Snapshot Report.
+  - Project Cash Flow Forecast Report.
+  - Project EVM Metrics Report.
+  - Unit Profitability Report.
+  - Unit Reservation Impact.
+  - Sales Collection Report.
+- تم التحقق من تحميل التقارير الأساسية لـ `PROJ-0002` و`REP-2026-00002` بدون أعطال.
 | Financial Snapshot | 1 |
 | Cash Flow Forecast | 1 |
 | EVM Metrics | 1 |

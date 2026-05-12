@@ -1,11 +1,13 @@
 import frappe
 from frappe import _
 from frappe.utils import flt
+from construct_erpnext.reporting.report_utils import count_where, sum_field, summary_value
 
 
 def execute(filters=None):
 	filters = frappe._dict(filters or {})
-	return get_columns(), get_data(filters)
+	data = get_data(filters)
+	return get_columns(), data, None, None, get_report_summary(data)
 
 
 def get_columns():
@@ -181,3 +183,14 @@ def _risk_status(execution_status, variance_percent, actual_qty, expected_qty):
 	if variance_percent > 0 or (expected_qty and actual_qty > expected_qty):
 		return "Watch"
 	return "Normal"
+
+
+def get_report_summary(data):
+	return [
+		summary_value("Planned Amount", sum_field(data, "planned_amount"), "Currency", "Blue"),
+		summary_value("Actual Amount", sum_field(data, "actual_amount"), "Currency", "Orange"),
+		summary_value("Remaining Amount", sum_field(data, "remaining_amount"), "Currency", "Blue"),
+		summary_value("Overrun Items", count_where(data, "risk_status", "Overrun"), "Int", "Red"),
+		summary_value("Underrun Items", count_where(data, "risk_status", "Underrun"), "Int", "Orange"),
+		summary_value("Not Started Items", count_where(data, "risk_status", "Not Started"), "Int", "Grey"),
+	]

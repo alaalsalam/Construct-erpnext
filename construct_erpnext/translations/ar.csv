@@ -2033,3 +2033,104 @@ Review status of this financial snapshot.,حالة مراجعة هذه اللق�
 "Cost risk level calculated from budget, commitment, invoice, measurement, and certification indicators.",مستوى مخاطر التكلفة المحسوب من مؤشرات الميزانية والالتزام والفوترة والقياس والاعتماد.
 "Cash risk level based on expected inflows, outflows, and upcoming obligations.",مستوى مخاطر السيولة بناءً على التدفقات الداخلة والخارجة والالتزامات القادمة.
 "Overall executive status combining cost, cash, progress, and EVM indicators.",الحالة التنفيذية العامة التي تجمع مؤشرات التكلفة والسيولة والتقدم والقيمة المكتسبة.
+Project Purchase Control Summary,ملخص رقابة مشتريات المشروع
+Work Item Procurement Summary,ملخص مشتريات بنود العمل
+BOQ Procurement Pipeline,مسار مشتريات جدول الكميات
+Procurement Budget Control,رقابة ميزانية المشتريات
+IPC Register,سجل المستخلصات
+Contractor Exposure Summary,ملخص تعرض المقاولين
+Project Financial Snapshot Report,تقرير الملخص المالي للمشروع
+Project Cash Flow Forecast Report,تقرير توقع التدفق النقدي للمشروع
+Project EVM Metrics Report,تقرير مؤشرات القيمة المكتسبة للمشروع
+Unit Profitability Report,تقرير ربحية الوحدات
+Unit Reservation Impact,أثر الحجوزات على الوحدات
+Sales Collection Report,تقرير تحصيلات البيع
+Overdue Sales Installments,أقساط البيع المتأخرة
+Planned Qty,الكمية المخططة
+Expected Qty,الكمية المتوقعة
+Actual Qty,الكمية الفعلية
+Remaining Qty,الكمية المتبقية
+Requested Qty,الكمية المطلوبة
+Ordered Qty,الكمية المطلوبة بالشراء
+Received Qty,الكمية المستلمة
+Invoiced Qty,الكمية المفوترة
+Consumed Qty,الكمية المستهلكة
+Measured Qty,الكمية المقاسة
+Certified Qty,الكمية المعتمدة
+Wastage %,نسبة الهالك
+Planned Amount,المبلغ المخطط
+Actual Amount,المبلغ الفعلي
+Remaining Amount,المبلغ المتبقي
+Variance Amount,مبلغ الانحراف
+Variance %,نسبة الانحراف
+Execution Status,حالة التنفيذ
+Risk Status,حالة المخاطر
+Overrun,تجاوز
+Underrun,أقل من المخطط
+Normal,طبيعي
+Watch,يحتاج متابعة
+At Risk,عالي المخاطر
+On Track,ضمن المسار
+Not Started,لم يبدأ
+Fully Consumed,مستهلك بالكامل
+Partially Consumed,مستهلك جزئياً
+Partially Measured,مقاس جزئياً
+Certified,معتمد
+Requested,مطلوب
+Ordered,تم طلب الشراء
+Received,مستلم
+Invoiced,مفوتر
+Invoice Created,تم إنشاء الفاتورة
+Partially Paid,مدفوع جزئياً
+Paid,مدفوع
+Overdue,متأخر
+Cash Flow Risk,مخاطر التدفق النقدي
+Contractor Outstanding,مستحقات المقاولين
+Certified Amount,المبلغ المعتمد
+Certified Gross Amount,إجمالي المبلغ المعتمد
+Net Payable,صافي المستحق
+Retention Held,المحتجزات
+Total Certified,إجمالي المعتمد
+Total Retention,إجمالي المحتجزات
+Total Paid,إجمالي المدفوع
+Outstanding Balance,الرصيد المستحق
+Gross Amount,إجمالي المبلغ
+Retention Amount,مبلغ المحتجز
+IPC Count,عدد المستخلصات
+Total Inflow,إجمالي التدفقات الداخلة
+Total Outflow,إجمالي التدفقات الخارجة
+Net Cash Flow,صافي التدفق النقدي
+Cash Risk,مخاطر السيولة
+Overall Status,الحالة العامة
+Overall EVM Status,الحالة العامة للقيمة المكتسبة
+BAC,الميزانية عند الإكمال
+EV,القيمة المكتسبة
+AC,التكلفة الفعلية
+CPI,مؤشر أداء التكلفة
+SPI,مؤشر أداء الجدول
+Expected Sales Value,قيمة البيع المتوقعة
+Allocated Cost,التكلفة الموزعة
+Expected Gross Margin,الهامش الإجمالي المتوقع
+Profitable Units,الوحدات الرابحة
+Watch Units,وحدات تحتاج متابعة
+Loss Risk Units,وحدات معرضة للخسارة
+Reservation Rate,نسبة الحجز
+Reservation Rate %,نسبة الحجز
+Contracted Sales Value,قيمة عقود البيع
+Invoiced Amount,المبلغ المفوتر
+Collected Amount,المبلغ المحصل
+Outstanding Amount,المبلغ المستحق
+Total Invoiced,إجمالي المفوتر
+Total Collected,إجمالي المحصل
+Draft Invoice,فاتورة مسودة
+Draft Sales Invoices,فواتير بيع مسودة
+Sales Contracts,عقود البيع
+PROJ-0002 BOQ Total,إجمالي جدول كميات PROJ-0002
+PROJ-0002 Actual Amount,المبلغ الفعلي لـ PROJ-0002
+PROJ-0002 Remaining Amount,المبلغ المتبقي لـ PROJ-0002
+PROJ-0002 Overrun Items,بنود التجاوز في PROJ-0002
+PROJ-0002 Certified Amount,المبلغ المعتمد لـ PROJ-0002
+PROJ-0002 Unit Profitability,ربحية وحدات PROJ-0002
+Linked Documents,المستندات المرتبطة
+Visual Indicators,المؤشرات اللونية
+Report Summary,ملخص التقرير

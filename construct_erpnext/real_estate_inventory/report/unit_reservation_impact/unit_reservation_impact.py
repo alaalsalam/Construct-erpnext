@@ -1,11 +1,13 @@
 import frappe
 from frappe import _
 from frappe.utils import flt
+from construct_erpnext.reporting.report_utils import sum_field, summary_value
 
 
 def execute(filters=None):
 	filters = frappe._dict(filters or {})
-	return get_columns(), get_data(filters)
+	data = get_data(filters)
+	return get_columns(), data, None, None, get_report_summary(data)
 
 
 def get_columns():
@@ -51,3 +53,14 @@ def get_data(filters):
 	for row in rows:
 		row.reservation_rate = flt(row.reserved_units) / flt(row.total_units) * 100 if row.total_units else 0
 	return rows
+
+
+def get_report_summary(data):
+	total_units = sum_field(data, "total_units")
+	reserved_units = sum_field(data, "reserved_units")
+	return [
+		summary_value("Total Units", total_units, "Int", "Blue"),
+		summary_value("Available Units", sum_field(data, "available_units"), "Int", "Green"),
+		summary_value("Reserved Units", reserved_units, "Int", "Orange"),
+		summary_value("Reservation Rate", (reserved_units / total_units * 100) if total_units else 0, "Percent", "Orange"),
+	]

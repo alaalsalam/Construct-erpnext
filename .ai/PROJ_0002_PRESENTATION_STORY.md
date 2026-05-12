@@ -146,3 +146,16 @@
 - تم حذف عناوين الأقسام الداخلية المتكررة من محتوى Workspaces لتقليل طول الصفحة.
 - أصبحت البطاقات تظهر بشكل أكثر كثافة في الصف الواحد، مع بقاء التقسيم المنطقي داخل Cards.
 - أثناء العرض، ابدأ من أول Workspace ثم تحرك بالتسلسل دون الحاجة للنزول الطويل داخل كل صفحة.
+
+## 13. تحديث التقارير والمؤشرات التنفيذية
+
+- أضيفت Summary Cards إلى التقارير المحورية مثل Project Purchase Control Summary وIPC Register وContractor Exposure Summary وProject Financial Snapshot Report وProject Cash Flow Forecast Report وProject EVM Metrics Report وUnit Profitability Report.
+- أضيفت مؤشرات لونية للحالات والمخاطر في تقارير الشراء وIPC وCFO والربحية والتحصيل.
+- أضيفت KPI Cards خاصة بـ `PROJ-0002` في Executive Presentation Center:
+  - PROJ-0002 BOQ Total.
+  - PROJ-0002 Actual Amount.
+  - PROJ-0002 Remaining Amount.
+  - PROJ-0002 Overrun Items.
+  - PROJ-0002 Certified Amount.
+  - PROJ-0002 Unit Profitability.
+- استخدم `Project Purchase Control Summary` كأول تقرير تفصيلي بعد Executive Presentation Center لأنه يعرض المخطط والمتوقع والفعلي والمتبقي والانحراف بشكل مباشر.

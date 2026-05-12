@@ -604,3 +604,13 @@ PROJ-0002 diversified payment presentation follow-up:
 - Contractor Account Statement filters out reversed ledger rows; use it and Contractor Exposure Summary as the main contractor-control presentation screens.
 - Purchase Invoice outstanding may include retention/deduction balances; explain this as ERPNext accounting payable view versus contractor net payable/control view.
 - Current next action: Review PROJ-0002 diversified presentation data across all Phase 1 reports before the client presentation.
+
+Arabic reports/dashboard polish follow-up:
+- Branch: `feature/arabic-reports-dashboard-polish`.
+- Added report summary cards to the key PROJ-0002 presentation reports across procurement, IPC, contractor, CFO, unit profitability, reservation impact, and sales collection.
+- Added visual indicator formatting for status/risk fields in prioritized reports using a safe global badge helper in `construct_erpnext.bundle.js`.
+- Added PROJ-0002-specific Number Cards in Executive Presentation Center for BOQ total, actual amount, remaining amount, overrun items, certified amount, and unit profitability.
+- Added `Sales Contracts` and `Draft Sales Invoices` KPI cards.
+- Dashboard Charts remain intentionally deferred until KPI/chart definitions are signed off.
+- New guide: `.ai/REPORTS_DASHBOARD_PRESENTATION_GUIDE.md`.
+- Current next action: Present PROJ-0002 to client using polished Arabic reports and dashboards.

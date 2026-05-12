@@ -1,5 +1,6 @@
 import frappe
 from frappe import _
+from construct_erpnext.reporting.report_utils import sum_field, summary_value
 
 
 def execute(filters=None):
@@ -44,4 +45,13 @@ def execute(filters=None):
 		values,
 		as_dict=True,
 	)
-	return columns, data
+	return columns, data, None, None, get_report_summary(data)
+
+
+def get_report_summary(data):
+	return [
+		summary_value("Gross Amount", sum_field(data, "gross_amount"), "Currency", "Blue"),
+		summary_value("Retention Held", sum_field(data, "retention_amount"), "Currency", "Orange"),
+		summary_value("Net Payable", sum_field(data, "net_payable"), "Currency", "Green"),
+		summary_value("IPC Count", len(data or []), "Int", "Blue"),
+	]

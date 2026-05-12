@@ -6,4 +6,11 @@ frappe.query_reports["Work Item Procurement Summary"] = {
 		{ fieldname: "item_category", label: __("Item Category"), fieldtype: "Select", options: "\nMaterial\nLabor\nEquipment\nSubcontract\nOverhead\nContingency\nOther" },
 		{ fieldname: "procurement_status", label: __("Procurement Status"), fieldtype: "Select", options: "\nNot Requested\nPartially Requested\nFully Requested\nPartially Ordered\nFully Ordered\nPartially Received\nFully Received\nPartially Invoiced\nFully Invoiced\nOver Requested\nOver Ordered\nOver Received" },
 	],
+	formatter(value, row, column, data, default_formatter) {
+		value = default_formatter(value, row, column, data);
+		if (column.fieldname === "procurement_status") {
+			return window.construct_erpnext_report_badge(data.procurement_status);
+		}
+		return value;
+	},
 };

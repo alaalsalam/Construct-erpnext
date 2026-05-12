@@ -127,3 +127,5 @@ Updated risks:
 - PROJ-0002 now has net Payment Entries against contractor Purchase Invoices. Purchase Invoice outstanding can still show retained/deducted balances because the payment is intentionally made at IPC net payable level; contractor-facing outstanding is shown correctly in Contractor Account and Contractor Exposure reports.
 - PROJ-0002 payment data is intentionally diversified for presentation: one IPC is fully paid, one is partially paid, and two are invoiced but unpaid. Do not "clean up" this variation before the client presentation unless the user asks for a uniform accounting state.
 - Cancelled Payment Entries remain in ERPNext history by design; client-facing contractor statements hide reversed ledger rows, but accounting users can still see cancelled vouchers in ERPNext standard lists.
+- Report summary cards and visual badges are presentation helpers; exported report data still contains the underlying plain values.
+- Dashboard Charts remain deferred until the client/finance team approves chart definitions and KPI thresholds; do not present missing charts as a defect.

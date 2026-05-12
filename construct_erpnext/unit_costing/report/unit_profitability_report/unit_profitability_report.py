@@ -1,5 +1,6 @@
 import frappe
 from frappe import _
+from construct_erpnext.reporting.report_utils import count_where, sum_field, summary_value
 
 
 def execute(filters=None):
@@ -40,4 +41,16 @@ def execute(filters=None):
 		values,
 		as_dict=True,
 	)
-	return columns, data
+	return columns, data, None, None, get_report_summary(data)
+
+
+def get_report_summary(data):
+	return [
+		summary_value("Total Units", len(data or []), "Int", "Blue"),
+		summary_value("Expected Sales Value", sum_field(data, "expected_sale_price"), "Currency", "Green"),
+		summary_value("Allocated Cost", sum_field(data, "allocated_cost"), "Currency", "Orange"),
+		summary_value("Expected Gross Margin", sum_field(data, "expected_margin"), "Currency", "Green"),
+		summary_value("Profitable Units", count_where(data, "profitability_status", "Profitable"), "Int", "Green"),
+		summary_value("Watch Units", count_where(data, "profitability_status", "Watch"), "Int", "Orange"),
+		summary_value("Loss Risk Units", count_where(data, "profitability_status", "Loss Risk"), "Int", "Red"),
+	]

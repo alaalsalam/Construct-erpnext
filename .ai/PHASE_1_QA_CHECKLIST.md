@@ -180,3 +180,14 @@ Ready with caveats.
 | IPC Lines grid columns | Passed | الكميات والمبالغ والاحتجاز ظاهرة |
 | Unit Cost Allocation grid columns | Passed | الوحدة والتكلفة والهامش ظاهرة |
 | PROJ-0002 data depth | Passed | لا حاجة لإضافة بيانات جديدة |
+
+## تحديث QA - Arabic Reports and Dashboards
+
+| البند | الحالة | الملاحظة |
+|---|---|---|
+| Summary Cards للتقارير الرئيسية | Passed | أضيفت للتقارير التنفيذية وتشغيل PROJ-0002 |
+| المؤشرات اللونية | Passed | حالات المخاطر والتنفيذ والدفع والربحية تظهر بشارات لونية |
+| KPI Cards خاصة بـ PROJ-0002 | Passed | أضيفت في Executive Presentation Center |
+| ترجمة عربية للتسميات الجديدة | Passed | تم تحديث ar.csv |
+| Dashboard Charts النهائية | Deferred | مؤجلة حتى اعتماد تعريفات الرسوم والمؤشرات |
+| تقارير PROJ-0002 | Passed | تم اختبار التحميل والملخصات للعرض |

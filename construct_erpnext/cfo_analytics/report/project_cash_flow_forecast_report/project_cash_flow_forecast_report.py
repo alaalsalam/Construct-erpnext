@@ -1,5 +1,6 @@
 import frappe
 from frappe import _
+from construct_erpnext.reporting.report_utils import sum_field, summary_value
 
 
 def execute(filters=None):
@@ -46,4 +47,19 @@ def execute(filters=None):
 		values,
 		as_dict=True,
 	)
-	return columns, data
+	return columns, data, None, None, get_report_summary(data)
+
+
+def get_report_summary(data):
+	risk = "N/A"
+	for row in data or []:
+		if row.get("risk") in ("Red", "At Risk"):
+			risk = row.get("risk")
+			break
+		risk = row.get("risk") or risk
+	return [
+		summary_value("Total Inflow", sum_field(data, "total_inflow"), "Currency", "Green"),
+		summary_value("Total Outflow", sum_field(data, "total_outflow"), "Currency", "Orange"),
+		summary_value("Net Cash Flow", sum_field(data, "net_cash_flow"), "Currency", "Red" if sum_field(data, "net_cash_flow") < 0 else "Green"),
+		summary_value("Cash Risk", risk, "Data", "Red" if risk in ("Red", "At Risk") else "Green"),
+	]

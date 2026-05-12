@@ -1,5 +1,6 @@
 import frappe
 from frappe import _
+from construct_erpnext.reporting.report_utils import sum_field, summary_value
 
 
 def execute(filters=None):
@@ -27,7 +28,7 @@ def execute(filters=None):
 		values,
 		as_dict=True,
 	)
-	return columns, data
+	return columns, data, None, None, get_report_summary(data)
 
 
 def get_columns():
@@ -47,4 +48,15 @@ def get_columns():
 		{"label": _("Certification Progress %"), "fieldname": "certification_progress_percent", "fieldtype": "Percent", "width": 160},
 		{"label": _("Cost Risk"), "fieldname": "cost_risk_status", "fieldtype": "Data", "width": 100},
 		{"label": _("Overall Status"), "fieldname": "overall_status", "fieldtype": "Data", "width": 120},
+	]
+
+
+def get_report_summary(data):
+	status = data[0].overall_status if data else "N/A"
+	return [
+		summary_value("BOQ Total", sum_field(data, "boq_total_amount"), "Currency", "Blue"),
+		summary_value("Committed Amount", sum_field(data, "committed_amount"), "Currency", "Blue"),
+		summary_value("Certified Amount", sum_field(data, "certified_gross_amount"), "Currency", "Green"),
+		summary_value("Contractor Outstanding", sum_field(data, "contractor_outstanding_amount"), "Currency", "Red"),
+		summary_value("Overall Status", status, "Data", "Green" if status == "On Track" else "Red"),
 	]

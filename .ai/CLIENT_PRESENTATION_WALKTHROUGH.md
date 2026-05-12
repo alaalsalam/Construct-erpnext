@@ -182,6 +182,30 @@
 - حجز وحدة عقارية مع منع الحجز المكرر وتحديث حالة الوحدة.
 - تجربة تنقل ثنائية اللغة عبر مصدر إنجليزي وترجمة عربية.
 
+## تحديث تقارير العرض والمؤشرات
+
+تم تحسين تقارير العرض التنفيذية بإضافة بطاقات ملخص أعلى التقارير ومؤشرات لونية للحالات والمخاطر.
+
+أثناء العرض استخدم الترتيب التالي بعد فتح Executive Presentation Center:
+
+1. Project Purchase Control Summary لشرح المخطط والمتوقع والفعلي والمتبقي.
+2. Work Item Procurement Summary لشرح المشتريات والمخزون.
+3. IPC Register لشرح المستخلصات والمدفوع والمتبقي.
+4. Contractor Exposure Summary لشرح تعرض المقاولين.
+5. Project Financial Snapshot Report لشرح الصورة المالية.
+6. Project Cash Flow Forecast Report لشرح التدفق النقدي.
+7. Project EVM Metrics Report لشرح الأداء.
+8. Unit Profitability Report لشرح ربحية الوحدات.
+9. Unit Reservation Impact لشرح أثر الحجوزات.
+10. Sales Collection Report وSales Invoice from Installments Report لشرح أساس البيع والفوترة المسودة.
+
+اشرح الألوان ببساطة:
+
+- أخضر: طبيعي أو ضمن المسار.
+- برتقالي: يحتاج متابعة أو مدفوع/مفوتر جزئياً.
+- أحمر: تجاوز أو خطر أو متأخر.
+- رمادي: مسودة أو لم يبدأ أو مؤجل.
+
 ## Presentation UX and Dashboard Flow
 
 ابدأ العرض من:

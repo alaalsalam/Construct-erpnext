@@ -1,10 +1,12 @@
 import frappe
 from frappe import _
+from construct_erpnext.reporting.report_utils import count_where, sum_field, summary_value
 
 
 def execute(filters=None):
 	filters = filters or {}
-	return get_columns(), get_data(filters)
+	data = get_data(filters)
+	return get_columns(), data, None, None, get_report_summary(data)
 
 
 def get_columns():
@@ -59,3 +61,13 @@ def get_data(filters):
 		values,
 		as_dict=True,
 	)
+
+
+def get_report_summary(data):
+	return [
+		summary_value("Planned Amount", sum_field(data, "planned_amount"), "Currency", "Blue"),
+		summary_value("Committed Amount", sum_field(data, "committed_amount"), "Currency", "Orange"),
+		summary_value("Invoiced Amount", sum_field(data, "invoiced_amount"), "Currency", "Green"),
+		summary_value("Variance Amount", sum_field(data, "procurement_variance_amount"), "Currency", "Red"),
+		summary_value("Overrun Items", count_where(data, "risk_status", "Overrun"), "Int", "Red"),
+	]

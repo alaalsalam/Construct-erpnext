@@ -1208,3 +1208,34 @@
   - Real estate inventory statuses including Available, Reserved, Sold, Rented, and Blocked.
   - Reservations including Reserved, Converted, Expired, Cancelled, and Draft.
   - Sales Contracts and draft Sales Invoices.
+
+## 2026-05-12 Arabic reports, dashboards, KPI cards, and indicators polish
+
+- Created branch `feature/arabic-reports-dashboard-polish` from the latest presentation branch containing PROJ-0002 data, BOQ screen polish, workspace compaction, Arabic field help, and diversified contractor payment scenarios.
+- Added shared report summary helper module `construct_erpnext.reporting.report_utils`.
+- Added report summary cards to the main presentation reports:
+  - Project Purchase Control Summary.
+  - Work Item Procurement Summary.
+  - Procurement Budget Control.
+  - IPC Register.
+  - Contractor Exposure Summary.
+  - Project Financial Snapshot Report.
+  - Project Cash Flow Forecast Report.
+  - Project EVM Metrics Report.
+  - Unit Profitability Report.
+  - Unit Reservation Impact.
+  - Sales Collection Report.
+- Added Frappe-compatible visual indicator formatting for key status and risk columns in report JS files.
+- Added deterministic PROJ-0002 KPI Number Card methods and Executive Presentation Center cards:
+  - PROJ-0002 BOQ Total.
+  - PROJ-0002 Actual Amount.
+  - PROJ-0002 Remaining Amount.
+  - PROJ-0002 Overrun Items.
+  - PROJ-0002 Certified Amount.
+  - PROJ-0002 Unit Profitability.
+  - Sales Contracts.
+  - Draft Sales Invoices.
+- Extended Arabic translations for report names, report columns, summary labels, status values, KPI cards, and visual indicator terms.
+- Dashboard Charts remain deferred because final chart definitions and KPI thresholds require finance/client sign-off; report summaries and KPI Number Cards are the reliable presentation layer.
+- Created `.ai/REPORTS_DASHBOARD_PRESENTATION_GUIDE.md`.
+- Validated core PROJ-0002 reports with row counts and summary-card counts before migration.

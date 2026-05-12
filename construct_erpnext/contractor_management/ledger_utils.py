@@ -430,7 +430,7 @@ def reverse_ledger_for_reference(reference_doctype, reference_name):
 	accounts = set()
 	for entry in entries:
 		accounts.add(frappe.db.get_value("Contractor Ledger Entry", entry, "contractor_account"))
-		create_reversal_entry(entry, reference_doctype, f"{reference_name}-CANCEL")
+		create_reversal_entry(entry, reference_doctype, reference_name)
 	for account in accounts:
 		recalculate_contractor_account(account)
 

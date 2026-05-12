@@ -585,3 +585,11 @@ PROJ-0002 contractor invoicing follow-up:
 - No Payment Entries were created; collection/payment remains open.
 - A fresh financial snapshot `PFS-2026-00005` and EVM snapshot `EVM-2026-00005` were created after invoicing.
 - `Project Financial Snapshot Report` now excludes archived snapshots, so PROJ-0002 presentation shows the current snapshot only.
+
+PROJ-0002 contractor payment follow-up:
+- Payment Entries were created for the net payable amount of each IPC-linked Purchase Invoice:
+  - `ACC-PAY-2026-00005` through `ACC-PAY-2026-00008`.
+- Earlier full-gross payments `ACC-PAY-2026-00001` through `ACC-PAY-2026-00004` were cancelled because they overpaid retention from the contractor-control perspective.
+- Contractor Account outstanding balances are now zero while retention remains held.
+- Purchase Invoice outstanding still reflects retained/deducted balances; use Contractor Account Statement and Contractor Exposure Summary to explain net payment vs retention.
+- Contractor ledger reversal was fixed to use the original Payment Entry as the valid Dynamic Link reference during cancellation.

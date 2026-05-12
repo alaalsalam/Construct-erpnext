@@ -1165,3 +1165,19 @@
 - Updated `Project Financial Snapshot Report` to exclude archived snapshots from report output.
 - Confirmed Contractor Account Statement, Contractor Exposure Summary, IPC Register, Project Financial Snapshot Report, and Project Performance Dashboard Report load for PROJ-0002.
 - No Payment Entry was created and no Journal Entry document was created.
+
+## 2026-05-12 PROJ-0002 contractor payment entries
+
+- Created Payment Entries linked to the four submitted PROJ-0002 contractor Purchase Invoices.
+- Corrected the first full-gross payment attempt by cancelling `ACC-PAY-2026-00001` through `ACC-PAY-2026-00004`.
+- Recreated payments for net payable amounts only so retention and deductions remain visible in contractor control:
+  - `ACC-PAY-2026-00005` pays `ACC-PINV-2026-00004` / `IPC-2026-00002` for `98,867,790.00`.
+  - `ACC-PAY-2026-00006` pays `ACC-PINV-2026-00005` / `IPC-2026-00003` for `44,600,220.00`.
+  - `ACC-PAY-2026-00007` pays `ACC-PINV-2026-00006` / `IPC-2026-00004` for `23,753,247.50`.
+  - `ACC-PAY-2026-00008` pays `ACC-PINV-2026-00007` / `IPC-2026-00005` for `15,111,270.00`.
+- Total paid net amount is `182,332,527.50`.
+- Contractor Account outstanding balances are now `0.00`; retention held remains `20,261,947.50`.
+- Purchase Invoices still show outstanding amounts equal to retention/deduction balances, while IPCs are marked `Paid` at the net payable level.
+- Fixed contractor ledger reversal logic so cancelled Payment Entries create valid reversal ledger rows using the original Payment Entry reference.
+- Created refreshed financial and EVM snapshots `PFS-2026-00006` and `EVM-2026-00006`.
+- Validated Contractor Account Statement, Contractor Exposure Summary, and Project Financial Snapshot Report for PROJ-0002 after payment.

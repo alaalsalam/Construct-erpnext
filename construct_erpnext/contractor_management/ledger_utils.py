@@ -400,7 +400,7 @@ def update_ipc_payment_from_purchase_invoice(ipc):
 			status = "Paid"
 		elif paid_amount > 0:
 			status = "Partially Paid"
-		elif status == "Approved":
+		else:
 			status = "Invoice Created"
 	frappe.db.set_value(
 		"Interim Payment Certificate",
@@ -433,6 +433,19 @@ def reverse_ledger_for_reference(reference_doctype, reference_name):
 		create_reversal_entry(entry, reference_doctype, reference_name)
 	for account in accounts:
 		recalculate_contractor_account(account)
+
+
+def sync_ipc_payments_for_payment_entry(pe):
+	for ref in getattr(pe, "references", []) or []:
+		if ref.reference_doctype != "Purchase Invoice":
+			continue
+		ipc_name = frappe.db.get_value(
+			"Interim Payment Certificate", {"purchase_invoice": ref.reference_name}, "name"
+		)
+		if ipc_name:
+			update_ipc_payment_from_purchase_invoice(
+				frappe.get_doc("Interim Payment Certificate", ipc_name)
+			)
 
 
 def link_retention_to_purchase_invoice(ipc_name, purchase_invoice):

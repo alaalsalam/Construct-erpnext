@@ -593,3 +593,14 @@ PROJ-0002 contractor payment follow-up:
 - Contractor Account outstanding balances are now zero while retention remains held.
 - Purchase Invoice outstanding still reflects retained/deducted balances; use Contractor Account Statement and Contractor Exposure Summary to explain net payment vs retention.
 - Contractor ledger reversal was fixed to use the original Payment Entry as the valid Dynamic Link reference during cancellation.
+
+PROJ-0002 diversified payment presentation follow-up:
+- To avoid a flat all-paid presentation, PROJ-0002 now intentionally includes three contractor payment states:
+  - Fully paid: `IPC-2026-00002` / `ACC-PINV-2026-00004` / `ACC-PAY-2026-00005`, paid `98,867,790.00`, contractor outstanding `0.00`.
+  - Partially paid: `IPC-2026-00003` / `ACC-PINV-2026-00005` / `ACC-PAY-2026-00009`, paid `22,300,110.00`, contractor outstanding `22,300,110.00`.
+  - Invoiced but unpaid: `IPC-2026-00004` and `IPC-2026-00005`, contractor outstanding `23,753,247.50` and `15,111,270.00`.
+- Full net payments `ACC-PAY-2026-00006`, `ACC-PAY-2026-00007`, and `ACC-PAY-2026-00008` were cancelled through normal ERPNext cancellation to create partial/unpaid presentation states.
+- Contractor payment reversal now refreshes IPC payment status, so cancelled payments do not leave stale `Paid` statuses.
+- Contractor Account Statement filters out reversed ledger rows; use it and Contractor Exposure Summary as the main contractor-control presentation screens.
+- Purchase Invoice outstanding may include retention/deduction balances; explain this as ERPNext accounting payable view versus contractor net payable/control view.
+- Current next action: Review PROJ-0002 diversified presentation data across all Phase 1 reports before the client presentation.

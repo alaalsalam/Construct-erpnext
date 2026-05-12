@@ -21,7 +21,7 @@ def execute(filters=None):
 		{"label": _("Running Balance"), "fieldname": "running_balance", "fieldtype": "Currency", "width": 140},
 		{"label": _("Remarks"), "fieldname": "remarks", "fieldtype": "Data", "width": 220},
 	]
-	conditions = ["1=1"]
+	conditions = ["IFNULL(is_reversed, 0) = 0"]
 	values = {}
 	for field in ("project", "contractor", "contractor_account"):
 		if filters.get(field):

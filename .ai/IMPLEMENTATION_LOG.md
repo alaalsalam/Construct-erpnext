@@ -1181,3 +1181,30 @@
 - Fixed contractor ledger reversal logic so cancelled Payment Entries create valid reversal ledger rows using the original Payment Entry reference.
 - Created refreshed financial and EVM snapshots `PFS-2026-00006` and `EVM-2026-00006`.
 - Validated Contractor Account Statement, Contractor Exposure Summary, and Project Financial Snapshot Report for PROJ-0002 after payment.
+
+## 2026-05-12 PROJ-0002 diversified payment presentation scenarios
+
+- Adjusted PROJ-0002 contractor payment presentation data so reports show varied statuses instead of all-zero or all-paid values.
+- Kept `ACC-PAY-2026-00005` active as the fully paid IPC scenario:
+  - `IPC-2026-00002` / `ACC-PINV-2026-00004`.
+  - Net paid amount: `98,867,790.00`.
+  - Contractor Account outstanding: `0.00`.
+- Cancelled the full net payments for `ACC-PAY-2026-00006`, `ACC-PAY-2026-00007`, and `ACC-PAY-2026-00008` through normal ERPNext cancellation.
+- Created `ACC-PAY-2026-00009` as a partial payment for `IPC-2026-00003` / `ACC-PINV-2026-00005`:
+  - Partial paid amount: `22,300,110.00`.
+  - Contractor Account outstanding: `22,300,110.00`.
+- Left `IPC-2026-00004` and `IPC-2026-00005` invoiced but unpaid:
+  - Outstanding net payable examples: `23,753,247.50` and `15,111,270.00`.
+- Updated contractor payment reversal synchronization so cancelled Payment Entries also refresh IPC payment status.
+- Updated Contractor Account Statement to hide reversed ledger rows, keeping the client-facing statement clean.
+- Refreshed CFO snapshots after diversification:
+  - `PFS-2026-00007`.
+  - `EVM-2026-00007`.
+- Validated that PROJ-0002 now has clear presentation variety across:
+  - BOQ planned / expected / actual / remaining / variance.
+  - Procurement requested / ordered / received / invoiced / consumed quantities.
+  - IPC paid / partially paid / invoiced-unpaid statuses.
+  - Contractor exposure with paid, outstanding, retention, and deduction amounts.
+  - Real estate inventory statuses including Available, Reserved, Sold, Rented, and Blocked.
+  - Reservations including Reserved, Converted, Expired, Cancelled, and Draft.
+  - Sales Contracts and draft Sales Invoices.

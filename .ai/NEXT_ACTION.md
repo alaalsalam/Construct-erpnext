@@ -1,3 +1,3 @@
 # Next Action
 
-Present PROJ-0002 with submitted contractor Purchase Invoices, net Payment Entries, IPC Register, Contractor Account Statement, Contractor Exposure Summary, and refreshed CFO dashboards.
+Review PROJ-0002 diversified presentation data across BOQ, procurement, IPC, contractor exposure, CFO dashboards, inventory, reservations, sales contracts, and draft invoices before the client presentation.

@@ -1148,3 +1148,20 @@
 - Ran migrate and cleared site and website cache successfully.
 - Confirmed live DocField metadata contains the updated descriptions for `Project Financial Snapshot` and `Construction BOQ`.
 - No business records, accounting documents, Payment Entries, Journal Entries, submitted Sales Invoices, or GL backfill were created.
+
+## 2026-05-12 PROJ-0002 contractor invoicing activation
+
+- Submitted the four Purchase Invoices generated from approved PROJ-0002 IPCs through the normal ERPNext Purchase Invoice flow after creating and submitting Invoice Authorization records:
+  - `IPC-2026-00002` -> `ACC-PINV-2026-00004`.
+  - `IPC-2026-00003` -> `ACC-PINV-2026-00005`.
+  - `IPC-2026-00004` -> `ACC-PINV-2026-00006`.
+  - `IPC-2026-00005` -> `ACC-PINV-2026-00007`.
+- Total submitted contractor Purchase Invoice value for PROJ-0002 is `202,619,475.00`.
+- Total certified net payable is `182,332,527.50`.
+- Total retention held is `20,261,947.50`.
+- Refreshed contractor ledger links and created a new Project Financial Snapshot `PFS-2026-00005`.
+- Created a new EVM snapshot `EVM-2026-00005` after invoicing so the performance dashboard shows Actual Cost instead of zero.
+- Archived stale PROJ-0002 financial/EVM snapshots so presentation reports focus on the current project position.
+- Updated `Project Financial Snapshot Report` to exclude archived snapshots from report output.
+- Confirmed Contractor Account Statement, Contractor Exposure Summary, IPC Register, Project Financial Snapshot Report, and Project Performance Dashboard Report load for PROJ-0002.
+- No Payment Entry was created and no Journal Entry document was created.

@@ -5,7 +5,7 @@ from frappe import _
 def execute(filters=None):
 	filters = filters or {}
 	columns = get_columns()
-	conditions = ["1=1"]
+	conditions = ["IFNULL(status, '') != 'Archived'"]
 	values = {}
 	if filters.get("project"):
 		conditions.append("project = %(project)s")

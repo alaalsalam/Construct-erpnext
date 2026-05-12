@@ -576,3 +576,12 @@ Arabic field help hardening follow-up:
 - `Construction BOQ` now has clearer source descriptions explaining planned, expected, actual, remaining, variance, totals, and linked Work Items.
 - `ar.csv` parsing passed, migrate passed, and cache clear passed on `construction.yemenfrappe.com`.
 - Current next action: Review Arabic field help on key presentation screens, then present PROJ-0002 Phase 1.
+
+PROJ-0002 contractor invoicing follow-up:
+- Four IPC-linked Purchase Invoices were authorized and submitted through normal ERPNext controls:
+  - `ACC-PINV-2026-00004` through `ACC-PINV-2026-00007`.
+- These are linked to IPCs `IPC-2026-00002` through `IPC-2026-00005`.
+- Total submitted contractor invoicing for PROJ-0002 is `202,619,475.00`; contractor net outstanding after retention/deduction tracking is `182,332,527.50`.
+- No Payment Entries were created; collection/payment remains open.
+- A fresh financial snapshot `PFS-2026-00005` and EVM snapshot `EVM-2026-00005` were created after invoicing.
+- `Project Financial Snapshot Report` now excludes archived snapshots, so PROJ-0002 presentation shows the current snapshot only.

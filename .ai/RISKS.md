@@ -123,3 +123,4 @@ Updated risks:
 - Form Connections now rely on Frappe dashboard metadata and child-row internal links. Parent references such as Unit -> Building are intentionally handled by visible form fields/workspaces rather than unsafe reverse dashboard counts.
 - Some grid views now show many business-critical columns; if users find a child table crowded on small screens, reduce visible columns after the client presentation while keeping the fields available inside the row dialog.
 - Arabic help text was hardened first for the most visible presentation screens (`Project Financial Snapshot` and `Construction BOQ`). Other less-used forms may still need a second translation pass if the client reviews every field in Arabic.
+- PROJ-0002 now has submitted Purchase Invoices for contractor IPCs. These create normal ERPNext GL Entries through Purchase Invoice submission; no Payment Entries were created, so payable/collection status remains outstanding until payments are processed.

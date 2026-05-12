@@ -625,3 +625,7 @@ CMD-REPORT-02 report table and generic KPI follow-up:
 Report table visibility hotfix:
 - The affected reports now return `None` for `report_summary` to avoid the UI blank-table rendering issue seen with dashboard summaries.
 - Do not re-enable report_summary until the desk/theme rendering issue is confirmed fixed in the browser.
+
+Final report UI reset:
+- Custom report JS formatters were removed from the affected reports after browser screenshots showed blank table cells despite valid server data.
+- The current intended state is plain Frappe query report rendering: filters plus table data only.

@@ -1256,3 +1256,9 @@
 - Disabled in-report `report_summary` cards for the affected Script Reports because the current client-side report view/theme renders blank table cells when summary/dashboard cards are present.
 - Kept all report table data, filters, columns, and visual formatters intact.
 - Executive KPI cards remain available in general workspaces; project-specific presentation remains through filtered reports instead of in-report summary cards.
+
+## 2026-05-12 Report table final UI reset
+
+- Removed custom JavaScript formatters from the affected query reports so Frappe renders tables with the standard DataTable pipeline only.
+- Kept filters and server-side data intact; report dashboards/summaries remain disabled until browser rendering is confirmed stable.
+- Confirmed Arabic visible project names are normalized to Project IDs server-side, so Arabic filters such as `مشروع برج الياسمين السكني` return the same rows as `PROJ-0002`.

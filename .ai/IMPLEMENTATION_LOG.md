@@ -1262,3 +1262,9 @@
 - Removed custom JavaScript formatters from the affected query reports so Frappe renders tables with the standard DataTable pipeline only.
 - Kept filters and server-side data intact; report dashboards/summaries remain disabled until browser rendering is confirmed stable.
 - Confirmed Arabic visible project names are normalized to Project IDs server-side, so Arabic filters such as `مشروع برج الياسمين السكني` return the same rows as `PROJ-0002`.
+
+## 2026-05-12 Safe report dashboard restoration
+
+- Restored report dashboard cards using the standard report `message` return slot instead of Frappe `report_summary`.
+- This keeps DataTable rendering untouched while showing KPI-style cards above the table.
+- Validated Arabic visible project filters return rows and dashboard message for Project Financial Snapshot, Project EVM Metrics, Procurement Budget Control, and Project Purchase Control Summary.

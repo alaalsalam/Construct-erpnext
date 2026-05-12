@@ -1,6 +1,6 @@
 import frappe
 from frappe import _
-from construct_erpnext.reporting.report_utils import count_where, sum_field, summary_value
+from construct_erpnext.reporting.report_utils import count_where, sum_field, summary_value, report_dashboard_message
 
 
 def execute(filters=None):
@@ -41,7 +41,7 @@ def execute(filters=None):
 		values,
 		as_dict=True,
 	)
-	return columns, data, None, None, None, False
+	return columns, data, report_dashboard_message(get_report_summary(data)), None, None, False
 
 
 def get_report_summary(data):

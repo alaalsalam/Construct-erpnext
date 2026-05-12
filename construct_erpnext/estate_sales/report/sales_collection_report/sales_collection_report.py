@@ -1,11 +1,11 @@
 import frappe
 from frappe import _
-from construct_erpnext.reporting.report_utils import sum_field, summary_value
+from construct_erpnext.reporting.report_utils import sum_field, summary_value, report_dashboard_message
 
 
 def execute(filters=None):
 	data = get_data(filters or {})
-	return get_columns(), data, None, None, None, False
+	return get_columns(), data, report_dashboard_message(get_report_summary(data)), None, None, False
 
 
 def get_columns():

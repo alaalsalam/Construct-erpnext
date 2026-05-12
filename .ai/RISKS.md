@@ -136,3 +136,5 @@ Updated risks:
 - In-report dashboard summaries are temporarily disabled for affected reports because they caused blank report tables in the current browser/theme presentation. Use workspace KPI cards and filtered report tables until the frontend rendering issue is resolved.
 
 - Avoid adding custom report formatters back to the affected reports until the blank table rendering issue is tested in the browser. Use standard Frappe report tables for the client presentation.
+
+- Report KPI dashboards currently use the report message area rather than native `report_summary` because native summaries caused blank table rendering in the deployed UI. This is intentional for presentation stability.

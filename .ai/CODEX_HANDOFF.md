@@ -629,3 +629,7 @@ Report table visibility hotfix:
 Final report UI reset:
 - Custom report JS formatters were removed from the affected reports after browser screenshots showed blank table cells despite valid server data.
 - The current intended state is plain Frappe query report rendering: filters plus table data only.
+
+Safe report dashboard restoration:
+- Report dashboards are now rendered as HTML in the report message area, not through `report_summary`.
+- Keep `report_summary` disabled until the Frappe/theme interaction that blanked table cells is fully isolated.

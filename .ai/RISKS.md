@@ -132,3 +132,5 @@ Updated risks:
 
 - Workspace KPI cards must remain generic. Do not reintroduce hardcoded PROJ-0002 Number Cards into general workspaces; use report filters for project-specific presentation analysis.
 - If a report shows summary cards but no table rows, check the report JavaScript formatter first because a client-side formatter exception can hide table rendering even when the server returns rows.
+
+- In-report dashboard summaries are temporarily disabled for affected reports because they caused blank report tables in the current browser/theme presentation. Use workspace KPI cards and filtered report tables until the frontend rendering issue is resolved.

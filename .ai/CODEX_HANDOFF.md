@@ -621,3 +621,7 @@ CMD-REPORT-02 report table and generic KPI follow-up:
 - PROJ-0002 presentation should use filtered reports, especially Project Purchase Control Summary, Project Financial Snapshot Report, Project Cash Flow Forecast Report, Project EVM Metrics Report, Unit Profitability Report, and Sales Contract Register.
 - Report execute outputs were made explicit six-value returns so report summaries remain additive and do not replace table rows.
 - Report JS formatters now have a local fallback to avoid blank tables if the global indicator helper is unavailable.
+
+Report table visibility hotfix:
+- The affected reports now return `None` for `report_summary` to avoid the UI blank-table rendering issue seen with dashboard summaries.
+- Do not re-enable report_summary until the desk/theme rendering issue is confirmed fixed in the browser.

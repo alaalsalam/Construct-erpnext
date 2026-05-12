@@ -28,7 +28,7 @@ def execute(filters=None):
 		values,
 		as_dict=True,
 	)
-	return columns, data, None, None, get_report_summary(data), False
+	return columns, data, None, None, None, False
 
 
 def get_columns():

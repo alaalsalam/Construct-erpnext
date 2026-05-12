@@ -1250,3 +1250,9 @@
 - Added cleanup for deprecated PROJ-0002 Number Cards created by the previous report polish pass.
 - Kept generic executive cards such as BOQ Total, Committed Amount, Certified Amount, Contractor Outstanding, Total Units, Available Units, Reserved Units, Sales Contracts, and Draft Sales Invoices.
 - Added Executive Presentation Center report links for Project Purchase Control Summary and Sales Contract Register so PROJ-0002 is presented through filters instead of hardcoded workspace cards.
+
+## 2026-05-12 Report table visibility hotfix
+
+- Disabled in-report `report_summary` cards for the affected Script Reports because the current client-side report view/theme renders blank table cells when summary/dashboard cards are present.
+- Kept all report table data, filters, columns, and visual formatters intact.
+- Executive KPI cards remain available in general workspaces; project-specific presentation remains through filtered reports instead of in-report summary cards.

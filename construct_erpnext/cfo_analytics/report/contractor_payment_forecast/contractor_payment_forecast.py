@@ -1,9 +1,10 @@
 import frappe
 from frappe import _
+from construct_erpnext.reporting.report_utils import normalize_common_filters
 
 
 def execute(filters=None):
-	filters = filters or {}
+	filters = normalize_common_filters(filters)
 	columns = [
 		{"label": _("Contractor"), "fieldname": "contractor", "fieldtype": "Link", "options": "Supplier", "width": 170},
 		{"label": _("Project"), "fieldname": "project", "fieldtype": "Link", "options": "Project", "width": 160},

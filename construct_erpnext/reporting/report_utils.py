@@ -1,5 +1,24 @@
+import frappe
 from frappe import _
 from frappe.utils import flt
+
+
+def resolve_project_filter(value):
+	if not value:
+		return value
+
+	if frappe.db.exists("Project", value):
+		return value
+
+	project = frappe.db.get_value("Project", {"project_name": value}, "name")
+	return project or value
+
+
+def normalize_common_filters(filters):
+	filters = frappe._dict(filters or {})
+	if filters.get("project"):
+		filters.project = resolve_project_filter(filters.project)
+	return filters
 
 
 def sum_field(rows, fieldname):

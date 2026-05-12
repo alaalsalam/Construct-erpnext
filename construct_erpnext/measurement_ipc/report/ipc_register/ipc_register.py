@@ -1,10 +1,10 @@
 import frappe
 from frappe import _
-from construct_erpnext.reporting.report_utils import sum_field, summary_value
+from construct_erpnext.reporting.report_utils import sum_field, summary_value, normalize_common_filters
 
 
 def execute(filters=None):
-	filters = filters or {}
+	filters = normalize_common_filters(filters)
 	columns = [
 		{"label": _("IPC"), "fieldname": "name", "fieldtype": "Link", "options": "Interim Payment Certificate", "width": 160},
 		{"label": _("Project"), "fieldname": "project", "fieldtype": "Link", "options": "Project", "width": 160},

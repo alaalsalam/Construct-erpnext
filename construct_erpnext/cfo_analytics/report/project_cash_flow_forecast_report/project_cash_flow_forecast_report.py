@@ -1,10 +1,10 @@
 import frappe
 from frappe import _
-from construct_erpnext.reporting.report_utils import sum_field, summary_value
+from construct_erpnext.reporting.report_utils import sum_field, summary_value, normalize_common_filters
 
 
 def execute(filters=None):
-	filters = filters or {}
+	filters = normalize_common_filters(filters)
 	columns = [
 		{"label": _("Period"), "fieldname": "period_label", "fieldtype": "Data", "width": 190},
 		{"label": _("Expected Inflow"), "fieldname": "total_inflow", "fieldtype": "Currency", "width": 130},

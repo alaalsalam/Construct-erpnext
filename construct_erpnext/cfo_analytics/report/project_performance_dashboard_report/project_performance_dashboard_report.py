@@ -1,12 +1,13 @@
 import frappe
 from frappe import _
+from construct_erpnext.reporting.report_utils import normalize_common_filters
 
 from construct_erpnext.cfo_analytics.evm_metrics import get_evm_metrics
 from construct_erpnext.cfo_analytics.project_financials import get_project_financial_snapshot
 
 
 def execute(filters=None):
-	filters = filters or {}
+	filters = normalize_common_filters(filters)
 	columns = [
 		{"label": _("Project"), "fieldname": "project", "fieldtype": "Link", "options": "Project", "width": 150},
 		{"label": _("BOQ Total"), "fieldname": "boq_total_amount", "fieldtype": "Currency", "width": 120},

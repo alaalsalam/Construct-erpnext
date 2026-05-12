@@ -13,6 +13,9 @@ frappe.query_reports["Project EVM Metrics Report"] = {
 	],
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
+		if (!data) {
+			return value;
+		}
 		if (["cost_status", "schedule_status", "overall_evm_status"].includes(column.fieldname)) {
 			return construct_erpnext_report_badge(data[column.fieldname]);
 		}

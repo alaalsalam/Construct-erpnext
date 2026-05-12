@@ -5,6 +5,9 @@ frappe.query_reports["Contractor Exposure Summary"] = {
 	],
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
+		if (!data) {
+			return value;
+		}
 		if (column.fieldname === "outstanding_balance" && data.outstanding_balance > 0) {
 			return `<span class="text-danger font-weight-bold">${value}</span>`;
 		}

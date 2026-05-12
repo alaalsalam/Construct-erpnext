@@ -16,6 +16,9 @@ frappe.query_reports["Project Purchase Control Summary"] = {
 	],
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
+		if (!data) {
+			return value;
+		}
 		if (["execution_status", "risk_status"].includes(column.fieldname)) {
 			return construct_erpnext_report_badge(data[column.fieldname]);
 		}

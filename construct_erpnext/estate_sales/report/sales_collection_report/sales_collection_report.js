@@ -16,6 +16,9 @@ frappe.query_reports["Sales Collection Report"] = {
 	],
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
+		if (!data) {
+			return value;
+		}
 		if (column.fieldname === "collection_status") {
 			return construct_erpnext_report_badge(data.collection_status);
 		}

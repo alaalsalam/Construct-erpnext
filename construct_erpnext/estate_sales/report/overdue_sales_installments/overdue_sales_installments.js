@@ -13,6 +13,9 @@ frappe.query_reports["Overdue Sales Installments"] = {
 	],
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
+		if (!data) {
+			return value;
+		}
 		if (column.fieldname === "invoice_status") {
 			return construct_erpnext_report_badge(data.invoice_status);
 		}

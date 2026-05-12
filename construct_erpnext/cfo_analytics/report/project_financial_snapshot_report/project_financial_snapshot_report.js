@@ -12,6 +12,9 @@ frappe.query_reports["Project Financial Snapshot Report"] = {
 	],
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
+		if (!data) {
+			return value;
+		}
 		if (["cost_risk_status", "overall_status"].includes(column.fieldname)) {
 			return construct_erpnext_report_badge(data[column.fieldname]);
 		}

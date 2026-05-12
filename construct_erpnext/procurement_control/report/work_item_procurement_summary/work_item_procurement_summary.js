@@ -15,6 +15,9 @@ frappe.query_reports["Work Item Procurement Summary"] = {
 	],
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
+		if (!data) {
+			return value;
+		}
 		if (column.fieldname === "procurement_status") {
 			return construct_erpnext_report_badge(data.procurement_status);
 		}

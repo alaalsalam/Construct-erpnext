@@ -13,6 +13,9 @@ frappe.query_reports["Procurement Budget Control"] = {
 	],
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
+		if (!data) {
+			return value;
+		}
 		if (column.fieldname === "risk_status") {
 			return construct_erpnext_report_badge(data.risk_status);
 		}

@@ -15,6 +15,9 @@ frappe.query_reports["IPC Register"] = {
 	],
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
+		if (!data) {
+			return value;
+		}
 		if (column.fieldname === "status") {
 			return construct_erpnext_report_badge(data.status);
 		}

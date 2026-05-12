@@ -614,3 +614,10 @@ Arabic reports/dashboard polish follow-up:
 - Dashboard Charts remain intentionally deferred until KPI/chart definitions are signed off.
 - New guide: `.ai/REPORTS_DASHBOARD_PRESENTATION_GUIDE.md`.
 - Current next action: Present PROJ-0002 to client using polished Arabic reports and dashboards.
+
+CMD-REPORT-02 report table and generic KPI follow-up:
+- Project-specific PROJ-0002 Number Cards were removed from the general Executive Presentation Center workspace.
+- Product readiness setup now cleans deprecated PROJ-0002 Number Cards and keeps only generic workspace KPIs.
+- PROJ-0002 presentation should use filtered reports, especially Project Purchase Control Summary, Project Financial Snapshot Report, Project Cash Flow Forecast Report, Project EVM Metrics Report, Unit Profitability Report, and Sales Contract Register.
+- Report execute outputs were made explicit six-value returns so report summaries remain additive and do not replace table rows.
+- Report JS formatters now have a local fallback to avoid blank tables if the global indicator helper is unavailable.

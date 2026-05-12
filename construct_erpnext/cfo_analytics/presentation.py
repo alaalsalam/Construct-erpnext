@@ -52,10 +52,6 @@ def _report_route(report_name):
 	return ["query-report", report_name]
 
 
-def _project_filter(project="PROJ-0002"):
-	return {"project": project}
-
-
 @frappe.whitelist()
 def boq_total(filters=None):
 	total = _sum("Project Financial Snapshot", "boq_total_amount", {"status": ["!=", "Archived"]})
@@ -322,87 +318,3 @@ def sales_contracts(filters=None):
 @frappe.whitelist()
 def draft_sales_invoices(filters=None):
 	return _card(_count("Sales Invoice", {"docstatus": 0}), "Int", _report_route("Sales Invoice from Installments Report"))
-
-
-@frappe.whitelist()
-def proj_0002_boq_total(filters=None):
-	total = _sum("Construction Work Item", "planned_amount", {"project": "PROJ-0002", "disabled": 0})
-	return _card(total, route=_report_route("Project Purchase Control Summary"), route_options=_project_filter())
-
-
-@frappe.whitelist()
-def proj_0002_actual_amount(filters=None):
-	if not _doctype_exists("Construction Work Item"):
-		return _card(0, route=_report_route("Project Purchase Control Summary"), route_options=_project_filter())
-	rows = frappe.get_all(
-		"Construction Work Item",
-		filters={"project": "PROJ-0002", "disabled": 0},
-		fields=[
-			"committed_amount",
-			"invoiced_amount",
-			"consumed_amount",
-			"measurement_amount",
-			"certified_amount",
-		],
-	)
-	total = sum(
-		max(
-			flt(row.committed_amount),
-			flt(row.invoiced_amount),
-			flt(row.consumed_amount),
-			flt(row.measurement_amount),
-			flt(row.certified_amount),
-		)
-		for row in rows
-	)
-	return _card(total, route=_report_route("Project Purchase Control Summary"), route_options=_project_filter())
-
-
-@frappe.whitelist()
-def proj_0002_remaining_amount(filters=None):
-	planned = flt(proj_0002_boq_total().get("value"))
-	actual = flt(proj_0002_actual_amount().get("value"))
-	return _card(max(planned - actual, 0), route=_report_route("Project Purchase Control Summary"), route_options=_project_filter())
-
-
-@frappe.whitelist()
-def proj_0002_overrun_items(filters=None):
-	if not _doctype_exists("Construction Work Item"):
-		return _card(0, "Int", _report_route("Project Purchase Control Summary"), _project_filter())
-	rows = frappe.get_all(
-		"Construction Work Item",
-		filters={"project": "PROJ-0002", "disabled": 0},
-		fields=["planned_amount", "committed_amount", "invoiced_amount", "consumed_amount", "measurement_amount", "certified_amount"],
-	)
-	count = 0
-	for row in rows:
-		actual = max(
-			flt(row.committed_amount),
-			flt(row.invoiced_amount),
-			flt(row.consumed_amount),
-			flt(row.measurement_amount),
-			flt(row.certified_amount),
-		)
-		if flt(row.planned_amount) and actual > flt(row.planned_amount) * 1.1:
-			count += 1
-	return _card(count, "Int", _report_route("Project Purchase Control Summary"), _project_filter())
-
-
-@frappe.whitelist()
-def proj_0002_certified_amount(filters=None):
-	return _card(
-		_sum("Interim Payment Certificate", "gross_amount", {"project": "PROJ-0002", "docstatus": ["!=", 2]}),
-		route=_report_route("IPC Register"),
-		route_options=_project_filter(),
-	)
-
-
-@frappe.whitelist()
-def proj_0002_unit_profitability(filters=None):
-	project = "REP-2026-00002"
-	margin = _sum("Unit", "expected_margin", {"real_estate_project": project})
-	return _card(
-		margin,
-		route=_report_route("Unit Profitability Report"),
-		route_options={"real_estate_project": project},
-	)

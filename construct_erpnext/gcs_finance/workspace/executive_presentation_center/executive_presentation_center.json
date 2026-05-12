@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Executive Presentation Center</b></span>\",\"col\":12}},{\"id\":\"nc1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"BOQ Total\",\"col\":3}},{\"id\":\"nc2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Committed Amount\",\"col\":3}},{\"id\":\"nc3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Certified Amount\",\"col\":3}},{\"id\":\"nc4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Net Payable\",\"col\":3}},{\"id\":\"nc5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Retention Held\",\"col\":3}},{\"id\":\"nc6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Contractor Outstanding\",\"col\":3}},{\"id\":\"nc7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cash Flow Risk\",\"col\":3}},{\"id\":\"nc8\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"EVM CPI\",\"col\":3}},{\"id\":\"nc9\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"EVM SPI\",\"col\":3}},{\"id\":\"nc10\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Units\",\"col\":3}},{\"id\":\"nc11\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Available Units\",\"col\":3}},{\"id\":\"nc12\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Reserved Units\",\"col\":3}},{\"id\":\"nc13\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Expected Gross Margin\",\"col\":3}},{\"id\":\"nc_proj_100\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sales Contracts\",\"col\":3}},{\"id\":\"nc_proj_101\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Draft Sales Invoices\",\"col\":3}},{\"id\":\"nc_proj_102\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"PROJ-0002 BOQ Total\",\"col\":3}},{\"id\":\"nc_proj_103\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"PROJ-0002 Actual Amount\",\"col\":3}},{\"id\":\"nc_proj_104\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"PROJ-0002 Remaining Amount\",\"col\":3}},{\"id\":\"nc_proj_105\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"PROJ-0002 Overrun Items\",\"col\":3}},{\"id\":\"nc_proj_106\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"PROJ-0002 Certified Amount\",\"col\":3}},{\"id\":\"nc_proj_107\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"PROJ-0002 Unit Profitability\",\"col\":3}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Executive Overview\",\"col\":3}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"End-to-End Flow\",\"col\":3}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Construction Cost Control\",\"col\":3}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement & Site Warehouses\",\"col\":3}},{\"id\":\"card_5\",\"type\":\"card\",\"data\":{\"card_name\":\"Measurement & IPC\",\"col\":3}},{\"id\":\"card_6\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor Financial Control\",\"col\":3}},{\"id\":\"card_7\",\"type\":\"card\",\"data\":{\"card_name\":\"CFO Forecasting\",\"col\":3}},{\"id\":\"card_8\",\"type\":\"card\",\"data\":{\"card_name\":\"Real Estate Inventory\",\"col\":3}},{\"id\":\"card_9\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Profitability\",\"col\":3}},{\"id\":\"card_10\",\"type\":\"card\",\"data\":{\"card_name\":\"Reservation\",\"col\":3}},{\"id\":\"card_11\",\"type\":\"card\",\"data\":{\"card_name\":\"Deep Financial Traceability\",\"col\":3}}]",
+ "content": "[{\"id\":\"h1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Executive Presentation Center</b></span>\",\"col\":12}},{\"id\":\"nc1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"BOQ Total\",\"col\":3}},{\"id\":\"nc2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Committed Amount\",\"col\":3}},{\"id\":\"nc3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Certified Amount\",\"col\":3}},{\"id\":\"nc4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Net Payable\",\"col\":3}},{\"id\":\"nc5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Retention Held\",\"col\":3}},{\"id\":\"nc6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Contractor Outstanding\",\"col\":3}},{\"id\":\"nc7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cash Flow Risk\",\"col\":3}},{\"id\":\"nc8\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"EVM CPI\",\"col\":3}},{\"id\":\"nc9\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"EVM SPI\",\"col\":3}},{\"id\":\"nc10\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Units\",\"col\":3}},{\"id\":\"nc11\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Available Units\",\"col\":3}},{\"id\":\"nc12\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Reserved Units\",\"col\":3}},{\"id\":\"nc13\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Expected Gross Margin\",\"col\":3}},{\"id\":\"nc_proj_100\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Sales Contracts\",\"col\":3}},{\"id\":\"nc_proj_101\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Draft Sales Invoices\",\"col\":3}},{\"id\":\"card_1\",\"type\":\"card\",\"data\":{\"card_name\":\"Executive Overview\",\"col\":3}},{\"id\":\"card_2\",\"type\":\"card\",\"data\":{\"card_name\":\"End-to-End Flow\",\"col\":3}},{\"id\":\"card_3\",\"type\":\"card\",\"data\":{\"card_name\":\"Construction Cost Control\",\"col\":3}},{\"id\":\"card_4\",\"type\":\"card\",\"data\":{\"card_name\":\"Procurement & Site Warehouses\",\"col\":3}},{\"id\":\"card_5\",\"type\":\"card\",\"data\":{\"card_name\":\"Measurement & IPC\",\"col\":3}},{\"id\":\"card_6\",\"type\":\"card\",\"data\":{\"card_name\":\"Contractor Financial Control\",\"col\":3}},{\"id\":\"card_7\",\"type\":\"card\",\"data\":{\"card_name\":\"CFO Forecasting\",\"col\":3}},{\"id\":\"card_8\",\"type\":\"card\",\"data\":{\"card_name\":\"Real Estate Inventory\",\"col\":3}},{\"id\":\"card_9\",\"type\":\"card\",\"data\":{\"card_name\":\"Unit Profitability\",\"col\":3}},{\"id\":\"card_10\",\"type\":\"card\",\"data\":{\"card_name\":\"Reservation\",\"col\":3}},{\"id\":\"card_11\",\"type\":\"card\",\"data\":{\"card_name\":\"Deep Financial Traceability\",\"col\":3}}]",
  "creation": "2026-05-10 15:24:37.591407",
  "custom_blocks": [],
  "docstatus": 0,
@@ -234,6 +234,16 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "type": "Link",
+   "label": "Project Purchase Control Summary",
+   "link_type": "Report",
+   "link_to": "Project Purchase Control Summary",
+   "is_query_report": 1,
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 0
   },
   {
    "hidden": 0,
@@ -602,6 +612,16 @@
    "type": "Card Break"
   },
   {
+   "type": "Link",
+   "label": "Sales Contract Register",
+   "link_type": "Report",
+   "link_to": "Sales Contract Register",
+   "is_query_report": 1,
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 0
+  },
+  {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Sales Contract",
@@ -842,30 +862,6 @@
   {
    "label": "Draft Sales Invoices",
    "number_card_name": "Draft Sales Invoices"
-  },
-  {
-   "label": "PROJ-0002 BOQ Total",
-   "number_card_name": "PROJ-0002 BOQ Total"
-  },
-  {
-   "label": "PROJ-0002 Actual Amount",
-   "number_card_name": "PROJ-0002 Actual Amount"
-  },
-  {
-   "label": "PROJ-0002 Remaining Amount",
-   "number_card_name": "PROJ-0002 Remaining Amount"
-  },
-  {
-   "label": "PROJ-0002 Overrun Items",
-   "number_card_name": "PROJ-0002 Overrun Items"
-  },
-  {
-   "label": "PROJ-0002 Certified Amount",
-   "number_card_name": "PROJ-0002 Certified Amount"
-  },
-  {
-   "label": "PROJ-0002 Unit Profitability",
-   "number_card_name": "PROJ-0002 Unit Profitability"
   }
  ],
  "owner": "Administrator",

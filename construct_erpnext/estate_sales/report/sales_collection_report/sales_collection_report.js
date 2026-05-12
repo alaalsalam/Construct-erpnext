@@ -1,3 +1,10 @@
+function construct_erpnext_report_badge(value) {
+	if (window.construct_erpnext_report_badge) {
+		return window.construct_erpnext_report_badge(value);
+	}
+	return value || "";
+}
+
 frappe.query_reports["Sales Collection Report"] = {
 	filters: [
 		{fieldname: "company", label: __("Company"), fieldtype: "Link", options: "Company"},
@@ -10,7 +17,7 @@ frappe.query_reports["Sales Collection Report"] = {
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
 		if (column.fieldname === "collection_status") {
-			return window.construct_erpnext_report_badge(data.collection_status);
+			return construct_erpnext_report_badge(data.collection_status);
 		}
 		if (column.fieldname === "total_outstanding_amount" && data.total_outstanding_amount > 0) {
 			return `<span class="text-danger font-weight-bold">${value}</span>`;

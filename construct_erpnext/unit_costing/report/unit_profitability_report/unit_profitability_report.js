@@ -1,3 +1,10 @@
+function construct_erpnext_report_badge(value) {
+	if (window.construct_erpnext_report_badge) {
+		return window.construct_erpnext_report_badge(value);
+	}
+	return value || "";
+}
+
 frappe.query_reports["Unit Profitability Report"] = {
 	filters: [
 		{fieldname: "real_estate_project", label: __("Real Estate Project"), fieldtype: "Link", options: "Real Estate Project"},
@@ -10,7 +17,7 @@ frappe.query_reports["Unit Profitability Report"] = {
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
 		if (["status", "profitability_status"].includes(column.fieldname)) {
-			return window.construct_erpnext_report_badge(data[column.fieldname]);
+			return construct_erpnext_report_badge(data[column.fieldname]);
 		}
 		return value;
 	},

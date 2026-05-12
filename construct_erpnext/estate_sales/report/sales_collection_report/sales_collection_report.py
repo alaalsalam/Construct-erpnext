@@ -5,7 +5,7 @@ from construct_erpnext.reporting.report_utils import sum_field, summary_value
 
 def execute(filters=None):
 	data = get_data(filters or {})
-	return get_columns(), data, None, None, get_report_summary(data)
+	return get_columns(), data, None, None, get_report_summary(data), False
 
 
 def get_columns():

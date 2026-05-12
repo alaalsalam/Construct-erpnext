@@ -1,3 +1,10 @@
+function construct_erpnext_report_badge(value) {
+	if (window.construct_erpnext_report_badge) {
+		return window.construct_erpnext_report_badge(value);
+	}
+	return value || "";
+}
+
 frappe.query_reports["Project Purchase Control Summary"] = {
 	filters: [
 		{ fieldname: "project", label: __("Project"), fieldtype: "Link", options: "Project", reqd: 1 },
@@ -10,7 +17,7 @@ frappe.query_reports["Project Purchase Control Summary"] = {
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
 		if (["execution_status", "risk_status"].includes(column.fieldname)) {
-			return window.construct_erpnext_report_badge(data[column.fieldname]);
+			return construct_erpnext_report_badge(data[column.fieldname]);
 		}
 		if (column.fieldname === "variance_percent" && data.variance_percent > 10) {
 			return `<span class="text-danger font-weight-bold">${value}</span>`;

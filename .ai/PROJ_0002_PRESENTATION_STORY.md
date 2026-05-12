@@ -159,3 +159,14 @@
   - PROJ-0002 Certified Amount.
   - PROJ-0002 Unit Profitability.
 - استخدم `Project Purchase Control Summary` كأول تقرير تفصيلي بعد Executive Presentation Center لأنه يعرض المخطط والمتوقع والفعلي والمتبقي والانحراف بشكل مباشر.
+
+## تحديث CMD-REPORT-02 - طريقة عرض مؤشرات PROJ-0002
+
+تمت إزالة كروت KPI الخاصة بـ `PROJ-0002` من مساحة Executive Presentation Center لأنها مساحة عامة وليست مساحة مشروع واحد.
+
+طريقة العرض الصحيحة الآن:
+
+1. ابدأ بالكروت العامة في Executive Presentation Center لشرح الصورة التنفيذية العامة.
+2. افتح `Project Purchase Control Summary` وفلتر على `PROJ-0002` لشرح Planned / Expected / Actual / Remaining.
+3. افتح تقارير CFO وEVM وUnit Profitability بفلتر المشروع/المشروع العقاري.
+4. استخدم روابط التقارير بدلاً من كروت hardcoded للمشروع.

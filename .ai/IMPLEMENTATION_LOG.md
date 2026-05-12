@@ -1239,3 +1239,14 @@
 - Dashboard Charts remain deferred because final chart definitions and KPI thresholds require finance/client sign-off; report summaries and KPI Number Cards are the reliable presentation layer.
 - Created `.ai/REPORTS_DASHBOARD_PRESENTATION_GUIDE.md`.
 - Validated core PROJ-0002 reports with row counts and summary-card counts before migration.
+
+## 2026-05-12 CMD-REPORT-02 Fix Report Tables and Generic KPI Cards
+
+- Created branch `feature/fix-report-tables-and-generic-kpis` from `feature/arabic-reports-dashboard-polish`.
+- Audited report return formats for the CMD-REPORT-01 reports and made report returns explicit as columns, data, message, chart, report_summary, and skip_total_row.
+- Kept report summaries as additive cards only; report data remains returned as normal table rows.
+- Added local formatter fallback helpers in report JavaScript files so visual badges do not break table rendering if the global bundle is not available during report rendering.
+- Removed hardcoded PROJ-0002 KPI cards from Executive Presentation Center and from product readiness setup.
+- Added cleanup for deprecated PROJ-0002 Number Cards created by the previous report polish pass.
+- Kept generic executive cards such as BOQ Total, Committed Amount, Certified Amount, Contractor Outstanding, Total Units, Available Units, Reserved Units, Sales Contracts, and Draft Sales Invoices.
+- Added Executive Presentation Center report links for Project Purchase Control Summary and Sales Contract Register so PROJ-0002 is presented through filters instead of hardcoded workspace cards.

@@ -15,6 +15,15 @@ PRODUCT_WORKSPACE_PATHS = {
 	"Reports & Analytics": "gcs_projects/workspace/reports_analytics/reports_analytics.json",
 }
 
+DEPRECATED_PROJECT_NUMBER_CARDS = {
+	"PROJ-0002 BOQ Total",
+	"PROJ-0002 Actual Amount",
+	"PROJ-0002 Remaining Amount",
+	"PROJ-0002 Overrun Items",
+	"PROJ-0002 Certified Amount",
+	"PROJ-0002 Unit Profitability",
+}
+
 PRESENTATION_NUMBER_CARDS = [
 	{"label": "BOQ Total", "method": "construct_erpnext.cfo_analytics.presentation.boq_total", "document_type": "Project Financial Snapshot", "color": "#2563eb"},
 	{"label": "Committed Amount", "method": "construct_erpnext.cfo_analytics.presentation.committed_amount", "document_type": "Construction Work Item", "color": "#7c3aed"},
@@ -48,12 +57,6 @@ PRESENTATION_NUMBER_CARDS = [
 	{"label": "Overdue Installments Amount", "method": "construct_erpnext.cfo_analytics.presentation.overdue_installments_amount", "document_type": "Sales Contract", "color": "#b45309"},
 	{"label": "Sales Contracts", "method": "construct_erpnext.cfo_analytics.presentation.sales_contracts", "document_type": "Sales Contract", "color": "#2563eb"},
 	{"label": "Draft Sales Invoices", "method": "construct_erpnext.cfo_analytics.presentation.draft_sales_invoices", "document_type": "Sales Invoice", "color": "#64748b"},
-	{"label": "PROJ-0002 BOQ Total", "method": "construct_erpnext.cfo_analytics.presentation.proj_0002_boq_total", "document_type": "Construction Work Item", "color": "#2563eb"},
-	{"label": "PROJ-0002 Actual Amount", "method": "construct_erpnext.cfo_analytics.presentation.proj_0002_actual_amount", "document_type": "Construction Work Item", "color": "#ea580c"},
-	{"label": "PROJ-0002 Remaining Amount", "method": "construct_erpnext.cfo_analytics.presentation.proj_0002_remaining_amount", "document_type": "Construction Work Item", "color": "#0891b2"},
-	{"label": "PROJ-0002 Overrun Items", "method": "construct_erpnext.cfo_analytics.presentation.proj_0002_overrun_items", "document_type": "Construction Work Item", "color": "#dc2626"},
-	{"label": "PROJ-0002 Certified Amount", "method": "construct_erpnext.cfo_analytics.presentation.proj_0002_certified_amount", "document_type": "Interim Payment Certificate", "color": "#059669"},
-	{"label": "PROJ-0002 Unit Profitability", "method": "construct_erpnext.cfo_analytics.presentation.proj_0002_unit_profitability", "document_type": "Unit", "color": "#16a34a"},
 	{"label": "Active Lease Contracts", "method": "construct_erpnext.cfo_analytics.presentation.active_lease_contracts", "document_type": "Lease Contract", "color": "#2563eb"},
 	{"label": "Scheduled Rental Value", "method": "construct_erpnext.cfo_analytics.presentation.scheduled_rental_value", "document_type": "Lease Contract", "color": "#059669"},
 	{"label": "Expiring Leases", "method": "construct_erpnext.cfo_analytics.presentation.expiring_leases", "document_type": "Lease Contract", "color": "#ea580c"},
@@ -115,6 +118,8 @@ def sync_product_workspace_readiness():
 
 
 def ensure_presentation_number_cards():
+	remove_deprecated_project_number_cards()
+
 	for card in PRESENTATION_NUMBER_CARDS:
 		if not frappe.db.exists("DocType", card["document_type"]):
 			continue
@@ -132,3 +137,9 @@ def ensure_presentation_number_cards():
 			"color": card.get("color"),
 		})
 		doc.save(ignore_permissions=True)
+
+
+def remove_deprecated_project_number_cards():
+	for card_name in DEPRECATED_PROJECT_NUMBER_CARDS:
+		if frappe.db.exists("Number Card", card_name):
+			frappe.delete_doc("Number Card", card_name, ignore_permissions=True)

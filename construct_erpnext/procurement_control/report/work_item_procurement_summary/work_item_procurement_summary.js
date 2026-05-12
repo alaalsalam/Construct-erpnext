@@ -1,3 +1,10 @@
+function construct_erpnext_report_badge(value) {
+	if (window.construct_erpnext_report_badge) {
+		return window.construct_erpnext_report_badge(value);
+	}
+	return value || "";
+}
+
 frappe.query_reports["Work Item Procurement Summary"] = {
 	filters: [
 		{ fieldname: "project", label: __("Project"), fieldtype: "Link", options: "Project" },
@@ -9,7 +16,7 @@ frappe.query_reports["Work Item Procurement Summary"] = {
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
 		if (column.fieldname === "procurement_status") {
-			return window.construct_erpnext_report_badge(data.procurement_status);
+			return construct_erpnext_report_badge(data.procurement_status);
 		}
 		return value;
 	},

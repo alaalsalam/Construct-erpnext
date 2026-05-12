@@ -1,3 +1,10 @@
+function construct_erpnext_report_badge(value) {
+	if (window.construct_erpnext_report_badge) {
+		return window.construct_erpnext_report_badge(value);
+	}
+	return value || "";
+}
+
 frappe.query_reports["Overdue Sales Installments"] = {
 	filters: [
 		{fieldname: "real_estate_project", label: __("Real Estate Project"), fieldtype: "Link", options: "Real Estate Project"},
@@ -7,7 +14,7 @@ frappe.query_reports["Overdue Sales Installments"] = {
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
 		if (column.fieldname === "invoice_status") {
-			return window.construct_erpnext_report_badge(data.invoice_status);
+			return construct_erpnext_report_badge(data.invoice_status);
 		}
 		if (column.fieldname === "overdue_days" && data.overdue_days > 0) {
 			return `<span class="text-danger font-weight-bold">${value}</span>`;

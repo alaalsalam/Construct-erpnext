@@ -129,3 +129,6 @@ Updated risks:
 - Cancelled Payment Entries remain in ERPNext history by design; client-facing contractor statements hide reversed ledger rows, but accounting users can still see cancelled vouchers in ERPNext standard lists.
 - Report summary cards and visual badges are presentation helpers; exported report data still contains the underlying plain values.
 - Dashboard Charts remain deferred until the client/finance team approves chart definitions and KPI thresholds; do not present missing charts as a defect.
+
+- Workspace KPI cards must remain generic. Do not reintroduce hardcoded PROJ-0002 Number Cards into general workspaces; use report filters for project-specific presentation analysis.
+- If a report shows summary cards but no table rows, check the report JavaScript formatter first because a client-side formatter exception can hide table rendering even when the server returns rows.

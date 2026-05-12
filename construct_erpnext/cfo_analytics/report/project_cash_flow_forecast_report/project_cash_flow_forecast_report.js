@@ -1,3 +1,10 @@
+function construct_erpnext_report_badge(value) {
+	if (window.construct_erpnext_report_badge) {
+		return window.construct_erpnext_report_badge(value);
+	}
+	return value || "";
+}
+
 frappe.query_reports["Project Cash Flow Forecast Report"] = {
 	filters: [
 		{fieldname: "project", label: __("Project"), fieldtype: "Link", options: "Project"},
@@ -9,7 +16,7 @@ frappe.query_reports["Project Cash Flow Forecast Report"] = {
 	formatter(value, row, column, data, default_formatter) {
 		value = default_formatter(value, row, column, data);
 		if (column.fieldname === "risk") {
-			return window.construct_erpnext_report_badge(data.risk);
+			return construct_erpnext_report_badge(data.risk);
 		}
 		if (column.fieldname === "net_cash_flow" && data.net_cash_flow < 0) {
 			return `<span class="text-danger font-weight-bold">${value}</span>`;

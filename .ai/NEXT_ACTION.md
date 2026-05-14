@@ -1,3 +1,3 @@
 # Next Action
 
-Continue CMD-FINAL-01 Phase K: prepare permissions, print format readiness, and final QA documentation.
+Continue CMD-FINAL-01 Phase L: run final validation, update closure memory, and push final completion branch.

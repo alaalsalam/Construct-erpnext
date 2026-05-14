@@ -291,3 +291,10 @@
 - Viewing Appointment and Real Estate Follow Up remain operational CRM records and do not change Unit status.
 - CRM does not create Sales Contracts, Lease Contracts, Sales Invoices, Payment Entries, or Journal Entries.
 - Matching and backlog automation are separate foundations and must consume Customer Requirement data without bypassing reservation rules.
+
+## ADR-037: Smart Matching Is Advisory and Uses Available Units Only
+
+- Smart Matching consumes Customer Requirement records and existing Unit inventory.
+- Match Result records store ranked recommendations and explanation notes but do not create reservations or contracts.
+- Reserved, Sold, Rented, Blocked, or otherwise unavailable Units are excluded from recommendations.
+- Requirements with no result above the configured minimum score remain available for Backlog Matching.

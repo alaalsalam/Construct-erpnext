@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "MATCH-.YYYY.-.#####",
+ "creation": "2026-05-14 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["match_section", "customer_requirement", "match_date", "status", "total_matches", "best_score", "items_section", "items", "remarks_section", "remarks"],
+ "fields": [
+  {"fieldname": "match_section", "fieldtype": "Section Break", "label": "Match Result"},
+  {"description": "Customer Requirement used as the source for this matching run.", "fieldname": "customer_requirement", "fieldtype": "Link", "in_list_view": 1, "label": "Customer Requirement", "options": "Customer Requirement", "reqd": 1},
+  {"default": "Today", "description": "Date when matching was run.", "fieldname": "match_date", "fieldtype": "Date", "in_list_view": 1, "label": "Match Date"},
+  {"default": "Open", "description": "Operational status of this matching result.", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Open\nReviewed\nConverted\nNo Suitable Match\nClosed"},
+  {"description": "Number of recommended units in this result.", "fieldname": "total_matches", "fieldtype": "Int", "in_list_view": 1, "label": "Total Matches", "read_only": 1},
+  {"description": "Highest score among recommended units.", "fieldname": "best_score", "fieldtype": "Float", "in_list_view": 1, "label": "Best Score", "read_only": 1},
+  {"fieldname": "items_section", "fieldtype": "Section Break", "label": "Recommended Units"},
+  {"description": "Recommended units ranked by score.", "fieldname": "items", "fieldtype": "Table", "label": "Items", "options": "Match Result Item"},
+  {"fieldname": "remarks_section", "fieldtype": "Section Break", "label": "Remarks"},
+  {"description": "Internal matching notes.", "fieldname": "remarks", "fieldtype": "Text", "label": "Remarks"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Smart Matching",
+ "name": "Match Result",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "description": "Ranked unit recommendations generated from a Customer Requirement."
+}

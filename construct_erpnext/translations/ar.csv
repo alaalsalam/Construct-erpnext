@@ -1874,6 +1874,36 @@ Requirements Count,عدد المتطلبات
 Pipeline Value,قيمة المسار
 Won Count,عدد النجاحات
 Backlog Count,عدد قوائم الانتظار
+Smart Matching,المطابقة الذكية
+Matching Settings,إعدادات المطابقة
+Minimum Score,الحد الأدنى للنقاط
+Location Weight,وزن الموقع
+Price Weight,وزن السعر
+Area Weight,وزن المساحة
+Type Weight,وزن النوع
+Feature Weight,وزن المزايا
+Match Result,نتيجة المطابقة
+Match Results,نتائج المطابقة
+Match Result Item,بند نتيجة المطابقة
+Recommended Units,الوحدات المقترحة
+Items,البنود
+Match Date,تاريخ المطابقة
+Total Matches,إجمالي المطابقات
+Best Score,أفضل درجة
+Score,الدرجة
+Unit Status,حالة الوحدة
+Price or Rent,السعر أو الإيجار
+Matched Criteria,معايير مطابقة
+Missed Criteria,معايير غير مطابقة
+Recommendation Notes,ملاحظات التوصية
+No Suitable Match,لا توجد مطابقة مناسبة
+Reviewed,تمت المراجعة
+Converted,تم التحويل
+Match Result Register,سجل نتائج المطابقة
+Recommended Units Report,تقرير الوحدات المقترحة
+Matching Performance Summary,ملخص أداء المطابقة
+Results Count,عدد النتائج
+Average Best Score,متوسط أفضل درجة
 Rent Invoice Collection Settings,إعدادات فواتير وتحصيل الإيجارات
 Enable Rent Invoice Generation,تفعيل إنشاء فواتير الإيجار
 Auto Submit Rent Invoice,ترحيل فاتورة الإيجار تلقائياً

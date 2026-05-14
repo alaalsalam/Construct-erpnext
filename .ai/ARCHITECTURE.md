@@ -569,3 +569,11 @@ Integration:
 - `Real Estate Follow Up` stores follow-up activities, communication channel, result, and next action.
 - CRM reports summarize requirements, pipeline value, viewing schedule, follow-ups, and lead/source performance.
 - CRM does not create accounting documents, reservations, contracts, invoices, or payments automatically.
+
+## Smart Matching Foundation
+
+- `construct_erpnext/smart_matching` contains advisory matching between Customer Requirements and available Units.
+- `Matching Settings` controls score thresholds and weights for project/location, price, area, unit type, and feature notes.
+- `Match Result` stores a matching run for one Customer Requirement.
+- `Match Result Item` stores recommended Units with score, matched criteria, missed criteria, and recommendation notes.
+- Smart Matching uses available Units only and does not reserve, sell, rent, invoice, collect, or post accounting entries.

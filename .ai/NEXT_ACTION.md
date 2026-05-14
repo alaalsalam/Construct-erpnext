@@ -1,3 +1,3 @@
 # Next Action
 
-Continue CMD-FINAL-01 Phase E: implement Smart Matching foundation.
+Continue CMD-FINAL-01 Phase F: implement Backlog Matching foundation.

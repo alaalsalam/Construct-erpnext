@@ -1429,3 +1429,23 @@
   - Created 4 Real Estate Follow Ups: `REFU-2026-00001` to `REFU-2026-00004`.
   - CRM reports load with rows and show a combined pipeline value of `9,110,000.00`.
 - No invoices, Payment Entries, Journal Entries, GL Entries, or accounting documents were created by CRM.
+
+## 2026-05-14 CMD-FINAL-01 Phase E Smart Matching Foundation
+
+- Added new `Smart Matching` module with:
+  - `Matching Settings` singleton.
+  - `Match Result`.
+  - `Match Result Item`.
+- Added matching service `run_matching_for_requirement(requirement)` that scores available Units against Customer Requirement budget, area, unit type, preferred project, and feature notes.
+- Hard filter now recommends only Units with `Available` status/marketing status; Reserved units are intentionally excluded from recommendations.
+- Added reports:
+  - Match Result Register.
+  - Recommended Units Report.
+  - Matching Performance Summary.
+- Added Smart Matching workspace links to Sales & Rental, Executive Control Center, Reports & Analytics, and Real Estate Inventory.
+- Added Arabic translations for matching settings, match results, recommendation columns, statuses, and reports.
+- Validation on `REP-2026-00002`:
+  - Ran matching for 5 Customer Requirements.
+  - Created/updated Match Results `MATCH-2026-00001` to `MATCH-2026-00005`.
+  - Final performance summary: 2 Open results with 4 available-unit recommendations, 3 No Suitable Match results.
+- No reservations, contracts, invoices, Payment Entries, Journal Entries, or GL Entries were created by Smart Matching.

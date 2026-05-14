@@ -156,3 +156,4 @@ Updated risks:
 - Commission entries are operational accrual records only. They do not create broker payable accounting, Payment Entries, Journal Entries, or GL Entries until a future finance-approved commission payout design is implemented.
 - Commission duplicate prevention is based on broker, commission rule, and source transaction; future split-commission or multi-broker scenarios require an approved design before enabling multiple active entries for the same source.
 - Real Estate CRM is an operational sales pipeline layer. It does not reserve units, create contracts, create invoices, or trigger notifications automatically; users must deliberately convert qualified requirements through reservation/sales processes.
+- Smart Matching recommendations are advisory only. They intentionally do not reserve units or guarantee availability after the match is generated; users must re-check availability before reservation or contract creation.

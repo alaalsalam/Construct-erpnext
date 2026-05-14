@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "creation": "2026-05-14 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["unit", "score", "unit_status", "unit_type", "area", "price_or_rent", "matched_criteria", "missed_criteria", "recommendation_notes"],
+ "fields": [
+  {"description": "Recommended Unit.", "fieldname": "unit", "fieldtype": "Link", "in_list_view": 1, "label": "Unit", "options": "Unit", "reqd": 1},
+  {"description": "Calculated match score.", "fieldname": "score", "fieldtype": "Float", "in_list_view": 1, "label": "Score"},
+  {"description": "Unit status when the match was generated.", "fieldname": "unit_status", "fieldtype": "Data", "in_list_view": 1, "label": "Unit Status"},
+  {"description": "Unit type when the match was generated.", "fieldname": "unit_type", "fieldtype": "Link", "in_list_view": 1, "label": "Unit Type", "options": "Unit Type"},
+  {"description": "Unit area used for matching.", "fieldname": "area", "fieldtype": "Float", "label": "Area"},
+  {"description": "Expected sale price or monthly rent used for matching.", "fieldname": "price_or_rent", "fieldtype": "Currency", "label": "Price or Rent"},
+  {"description": "Criteria that matched the requirement.", "fieldname": "matched_criteria", "fieldtype": "Small Text", "label": "Matched Criteria"},
+  {"description": "Criteria that did not match the requirement.", "fieldname": "missed_criteria", "fieldtype": "Small Text", "label": "Missed Criteria"},
+  {"description": "Operational recommendation notes for the sales team.", "fieldname": "recommendation_notes", "fieldtype": "Small Text", "label": "Recommendation Notes"}
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-05-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Smart Matching",
+ "name": "Match Result Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

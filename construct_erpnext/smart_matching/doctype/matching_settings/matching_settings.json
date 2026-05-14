@@ -1,0 +1,33 @@
+{
+ "actions": [],
+ "creation": "2026-05-14 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["general_section", "minimum_score", "location_weight", "price_weight", "area_weight", "type_weight", "feature_weight"],
+ "fields": [
+  {"fieldname": "general_section", "fieldtype": "Section Break", "label": "Matching Settings"},
+  {"default": "60", "description": "Minimum score required for a unit to be recommended.", "fieldname": "minimum_score", "fieldtype": "Float", "label": "Minimum Score"},
+  {"default": "10", "description": "Weight for matching the preferred project/location.", "fieldname": "location_weight", "fieldtype": "Float", "label": "Location Weight"},
+  {"default": "35", "description": "Weight for matching sale price or rent budget.", "fieldname": "price_weight", "fieldtype": "Float", "label": "Price Weight"},
+  {"default": "25", "description": "Weight for matching preferred area range.", "fieldname": "area_weight", "fieldtype": "Float", "label": "Area Weight"},
+  {"default": "20", "description": "Weight for matching unit type.", "fieldname": "type_weight", "fieldtype": "Float", "label": "Type Weight"},
+  {"default": "10", "description": "Weight for simple feature notes matching.", "fieldname": "feature_weight", "fieldtype": "Float", "label": "Feature Weight"}
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-05-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Smart Matching",
+ "name": "Matching Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "description": "Controls scoring weights for matching customer requirements with available units."
+}

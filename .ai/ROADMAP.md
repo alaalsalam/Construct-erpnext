@@ -184,4 +184,6 @@ Phase 1 client presentation closure:
 - Enhance `BOQ-PROJ-0002-001` screen with Work Item linkage, execution summary, and actual/remaining/variance display fields. Completed.
 - Add Project Purchase Control Summary for Expected / Actual / Remaining presentation. Completed.
 - Add Contractor Agreement linkage from BOQ Work Items to Measurement and IPC. Completed.
-- Next action: Present PROJ-0002 Phase 1 to client using the contractor agreement linkage story and collect handover feedback.
+- Complete Sales Invoice Posting and Collections for one controlled PROJ-0002 sales invoice/payment validation. Completed.
+- Complete Rent Invoice and Rent Collections foundation using ERPNext Sales Invoice and Payment Entry on retained lease `LC-2026-00001`. Completed.
+- Next CMD-FINAL phase: Brokerage and Commission foundation.

@@ -323,3 +323,56 @@ def draft_sales_invoices(filters=None):
 @frappe.whitelist()
 def submitted_sales_invoices(filters=None):
 	return _card(_count("Sales Invoice", {"docstatus": 1}), "Int", _report_route("Sales Invoice from Installments Report"))
+
+
+@frappe.whitelist()
+def submitted_rent_invoices(filters=None):
+	invoices = _distinct_rent_invoice_count({"docstatus": 1})
+	return _card(invoices, "Int", _report_route("Rent Invoice from Schedule Report"))
+
+
+@frappe.whitelist()
+def collected_rent_amount(filters=None):
+	return _card(
+		_sum("Lease Contract", "total_collected_rent", {"docstatus": ["!=", 2]}),
+		route=_report_route("Rent Collection Report"),
+	)
+
+
+@frappe.whitelist()
+def outstanding_rent_amount(filters=None):
+	return _card(
+		_sum("Lease Contract", "total_outstanding_rent", {"docstatus": ["!=", 2]}),
+		route=_report_route("Rent Collection Report"),
+	)
+
+
+@frappe.whitelist()
+def overdue_rent_count(filters=None):
+	return _card(
+		_count("Rent Schedule", {"parenttype": "Lease Contract", "rent_status": "Overdue"}),
+		"Int",
+		_report_route("Overdue Rent Report"),
+	)
+
+
+@frappe.whitelist()
+def overdue_rent_amount(filters=None):
+	return _card(
+		_sum("Rent Schedule", "outstanding_amount", {"parenttype": "Lease Contract", "rent_status": "Overdue"}),
+		route=_report_route("Overdue Rent Report"),
+	)
+
+
+def _distinct_rent_invoice_count(invoice_filters):
+	if not (_doctype_exists("Sales Invoice Item") and _has_field("Sales Invoice Item", "lease_contract")):
+		return 0
+	parents = frappe.get_all(
+		"Sales Invoice Item",
+		filters={"lease_contract": ["is", "set"]},
+		fields=["parent"],
+		group_by="parent",
+	)
+	if not parents:
+		return 0
+	return _count("Sales Invoice", {"name": ["in", [row.parent for row in parents]], **invoice_filters})

@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-14 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice_generation_section",
+  "enable_rent_invoice_generation",
+  "auto_submit_rent_invoice",
+  "allow_grouped_rent_invoice",
+  "default_rent_item",
+  "require_unit_dimension",
+  "collection_tracking_section",
+  "auto_update_rent_status",
+  "overdue_grace_days",
+  "allow_partial_collection",
+  "validation_rules_section",
+  "block_duplicate_invoice_for_rent_schedule",
+  "require_customer_on_lease",
+  "require_unit_on_invoice_item",
+  "defaults_section",
+  "use_company_default_currency"
+ ],
+ "fields": [
+  {
+   "description": "Controls Sales Invoice creation from Lease Contract rent schedule rows. Invoices are not submitted automatically unless explicitly enabled.",
+   "fieldname": "invoice_generation_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice Generation"
+  },
+  {
+   "default": "1",
+   "description": "Allow users and services to create rent Sales Invoices from Rent Schedule rows.",
+   "fieldname": "enable_rent_invoice_generation",
+   "fieldtype": "Check",
+   "label": "Enable Rent Invoice Generation"
+  },
+  {
+   "default": "0",
+   "description": "Submit generated rent Sales Invoices automatically only when this is explicitly enabled and ERPNext accounting validation passes.",
+   "fieldname": "auto_submit_rent_invoice",
+   "fieldtype": "Check",
+   "label": "Auto Submit Rent Invoice"
+  },
+  {
+   "default": "1",
+   "description": "Allow one Sales Invoice to include more than one Rent Schedule row from the same Lease Contract.",
+   "fieldname": "allow_grouped_rent_invoice",
+   "fieldtype": "Check",
+   "label": "Allow Grouped Rent Invoice"
+  },
+  {
+   "description": "Default non-stock item used on rent Sales Invoice rows.",
+   "fieldname": "default_rent_item",
+   "fieldtype": "Link",
+   "label": "Default Rent Item",
+   "options": "Item"
+  },
+  {
+   "default": "1",
+   "description": "Require Unit accounting dimension on rent Sales Invoice Items for future GL-level rental revenue traceability.",
+   "fieldname": "require_unit_dimension",
+   "fieldtype": "Check",
+   "label": "Require Unit Dimension"
+  },
+  {
+   "fieldname": "collection_tracking_section",
+   "fieldtype": "Section Break",
+   "label": "Collection Tracking"
+  },
+  {
+   "default": "1",
+   "description": "Automatically refresh Rent Schedule and Lease Contract collection totals when rent invoices or payment entries are submitted or cancelled.",
+   "fieldname": "auto_update_rent_status",
+   "fieldtype": "Check",
+   "label": "Auto Update Rent Status"
+  },
+  {
+   "default": "0",
+   "description": "Grace days after the due date before unpaid rent is treated as overdue.",
+   "fieldname": "overdue_grace_days",
+   "fieldtype": "Int",
+   "label": "Overdue Grace Days"
+  },
+  {
+   "default": "1",
+   "description": "Allow partial rent collections through standard ERPNext Payment Entry references.",
+   "fieldname": "allow_partial_collection",
+   "fieldtype": "Check",
+   "label": "Allow Partial Collection"
+  },
+  {
+   "fieldname": "validation_rules_section",
+   "fieldtype": "Section Break",
+   "label": "Validation Rules"
+  },
+  {
+   "default": "1",
+   "description": "Prevent creating more than one active Sales Invoice for the same Rent Schedule row.",
+   "fieldname": "block_duplicate_invoice_for_rent_schedule",
+   "fieldtype": "Check",
+   "label": "Block Duplicate Invoice for Rent Schedule"
+  },
+  {
+   "default": "1",
+   "description": "Require a Customer tenant on Lease Contract before rent invoice generation.",
+   "fieldname": "require_customer_on_lease",
+   "fieldtype": "Check",
+   "label": "Require Customer on Lease"
+  },
+  {
+   "default": "1",
+   "description": "Require Unit on every rent Sales Invoice Item linked to a Lease Contract.",
+   "fieldname": "require_unit_on_invoice_item",
+   "fieldtype": "Check",
+   "label": "Require Unit on Invoice Item"
+  },
+  {
+   "fieldname": "defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Defaults"
+  },
+  {
+   "default": "1",
+   "description": "Use the company default currency for generated rent Sales Invoices.",
+   "fieldname": "use_company_default_currency",
+   "fieldtype": "Check",
+   "label": "Use Company Default Currency"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-05-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Estate Rental",
+ "name": "Rent Invoice Collection Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "print": 1, "read": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"email": 1, "print": 1, "read": 1, "role": "Accounts Manager", "share": 1, "write": 1},
+  {"email": 1, "print": 1, "read": 1, "role": "Sales Manager", "share": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "description": "Controls rent Sales Invoice creation and collection tracking from Lease Contract Rent Schedule rows."
+}

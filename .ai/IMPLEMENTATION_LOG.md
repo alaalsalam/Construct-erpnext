@@ -1349,3 +1349,32 @@
   - GL Entries for the submitted Sales Invoice carry Unit dimension.
   - Key baseline reports load with rows.
 - Non-critical build warning remains from unrelated bench app `doppio` missing `node_modules`; construct_erpnext asset build completed successfully.
+
+## 2026-05-14 CMD-FINAL-01 Phase B Rent Invoice and Rent Collections
+
+- Added `Rent Invoice Collection Settings` as the rental finance control singleton.
+- Added rent invoice generation from `Lease Contract` / `Rent Schedule` into standard ERPNext `Sales Invoice`.
+- Added safe rent Sales Invoice submission service and rent Payment Entry creation service; both use normal ERPNext APIs and validations.
+- Added Sales Invoice and Payment Entry hooks to update Rent Schedule and Lease Contract collection totals without touching sales installment logic.
+- Added reports:
+  - Tenant Statement.
+  - Rent Invoice from Schedule Report.
+  - Rent Collection Report.
+  - Overdue Rent Report.
+  - Unit Rental Revenue Report.
+  - Lease Collection Summary.
+- Added generic rent KPI cards:
+  - Submitted Rent Invoices.
+  - Collected Rent Amount.
+  - Outstanding Rent Amount.
+  - Overdue Rent Count.
+  - Overdue Rent Amount.
+- Updated product workspace sync to add rent reports and cards to Sales & Rental, Executive Control Center, Executive Presentation Center, Reports & Analytics, and Real Estate Inventory.
+- Updated Arabic translations and corrected malformed/blank translation rows so `ar.csv` parses cleanly as two-column CSV.
+- Validation on `LC-2026-00001`:
+  - Created and submitted one rent Sales Invoice: `ACC-SINV-2026-00005`, amount `350,000.00`.
+  - GL Entries for `ACC-SINV-2026-00005` carry Unit `A-G01` and Project `PROJ-0001`.
+  - Created and submitted one partial Payment Entry: `ACC-PAY-2026-00011`, amount `175,000.00`.
+  - Rent Schedule row `1jlcv8vu0g` is `Partially Paid`, paid `175,000.00`, outstanding `175,000.00`.
+  - Lease Contract `LC-2026-00001` is `Partially Collected`.
+- No Journal Entry was manually created, no GL backfill was run, and no ERPNext accounting validation was bypassed.

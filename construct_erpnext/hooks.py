@@ -88,10 +88,12 @@ doc_events = {
         "on_submit": [
             "construct_erpnext.contractor_management.events.sync_payment_entry",
             "construct_erpnext.estate_sales.collections_utils.update_contract_from_payment_entry",
+            "construct_erpnext.estate_rental.rent_collections_utils.update_lease_from_payment_entry",
         ],
         "on_cancel": [
             "construct_erpnext.contractor_management.events.reverse_payment_entry",
             "construct_erpnext.estate_sales.collections_utils.update_contract_from_payment_entry",
+            "construct_erpnext.estate_rental.rent_collections_utils.update_lease_from_payment_entry",
         ],
     },
     "Material Request": {
@@ -121,13 +123,18 @@ doc_events = {
     "Sales Invoice": {
         "validate": [
             "construct_erpnext.estate_sales.sales_invoice_utils.validate_sales_invoice_dimensions",
+            "construct_erpnext.estate_rental.rent_invoice_utils.validate_rent_invoice_dimensions",
             "construct_erpnext.cfo_analytics.financial_dimensions.validate_dimension_doc",
         ],
         "on_submit": [
             "construct_erpnext.gcs_admin.reminders.schedule_payment_reminders",
             "construct_erpnext.estate_sales.sales_invoice_utils.sync_installments_from_sales_invoice",
+            "construct_erpnext.estate_rental.rent_invoice_utils.sync_rent_schedule_from_sales_invoice",
         ],
-        "on_cancel": "construct_erpnext.estate_sales.sales_invoice_utils.release_installments_on_invoice_cancel",
+        "on_cancel": [
+            "construct_erpnext.estate_sales.sales_invoice_utils.release_installments_on_invoice_cancel",
+            "construct_erpnext.estate_rental.rent_invoice_utils.release_rent_schedule_on_invoice_cancel",
+        ],
     },
     "Stock Entry": {
         "validate": [
@@ -161,6 +168,7 @@ scheduler_events = {
         "construct_erpnext.gcs_maintenance.routines.check_preventive_schedules",
         "construct_erpnext.real_estate_inventory.reservation_utils.expire_overdue_reservations",
         "construct_erpnext.estate_sales.collections_utils.mark_overdue_installments",
+        "construct_erpnext.estate_rental.rent_invoice_utils.mark_overdue_rent_schedules",
     ],
     "hourly": [
         "construct_erpnext.gcs_security.audit.process_audit_queue",

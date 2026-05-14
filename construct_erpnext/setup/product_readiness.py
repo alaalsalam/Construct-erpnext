@@ -61,6 +61,28 @@ PRESENTATION_NUMBER_CARDS = [
 	{"label": "Active Lease Contracts", "method": "construct_erpnext.cfo_analytics.presentation.active_lease_contracts", "document_type": "Lease Contract", "color": "#2563eb"},
 	{"label": "Scheduled Rental Value", "method": "construct_erpnext.cfo_analytics.presentation.scheduled_rental_value", "document_type": "Lease Contract", "color": "#059669"},
 	{"label": "Expiring Leases", "method": "construct_erpnext.cfo_analytics.presentation.expiring_leases", "document_type": "Lease Contract", "color": "#ea580c"},
+	{"label": "Submitted Rent Invoices", "method": "construct_erpnext.cfo_analytics.presentation.submitted_rent_invoices", "document_type": "Sales Invoice", "color": "#059669"},
+	{"label": "Collected Rent Amount", "method": "construct_erpnext.cfo_analytics.presentation.collected_rent_amount", "document_type": "Lease Contract", "color": "#059669"},
+	{"label": "Outstanding Rent Amount", "method": "construct_erpnext.cfo_analytics.presentation.outstanding_rent_amount", "document_type": "Lease Contract", "color": "#dc2626"},
+	{"label": "Overdue Rent Count", "method": "construct_erpnext.cfo_analytics.presentation.overdue_rent_count", "document_type": "Lease Contract", "color": "#ea580c"},
+	{"label": "Overdue Rent Amount", "method": "construct_erpnext.cfo_analytics.presentation.overdue_rent_amount", "document_type": "Lease Contract", "color": "#b45309"},
+]
+
+RENT_COLLECTION_REPORT_LINKS = [
+	"Tenant Statement",
+	"Rent Invoice from Schedule Report",
+	"Rent Collection Report",
+	"Overdue Rent Report",
+	"Unit Rental Revenue Report",
+	"Lease Collection Summary",
+]
+
+RENT_COLLECTION_NUMBER_CARDS = [
+	"Submitted Rent Invoices",
+	"Collected Rent Amount",
+	"Outstanding Rent Amount",
+	"Overdue Rent Count",
+	"Overdue Rent Amount",
 ]
 
 
@@ -117,6 +139,8 @@ def sync_product_workspace_readiness():
 
 		workspace.save(ignore_permissions=True)
 
+	ensure_rent_collection_workspace_links()
+
 
 def ensure_presentation_number_cards():
 	remove_deprecated_project_number_cards()
@@ -144,3 +168,42 @@ def remove_deprecated_project_number_cards():
 	for card_name in DEPRECATED_PROJECT_NUMBER_CARDS:
 		if frappe.db.exists("Number Card", card_name):
 			frappe.delete_doc("Number Card", card_name, ignore_permissions=True)
+
+
+def ensure_rent_collection_workspace_links():
+	target_workspaces = (
+		"Sales & Rental",
+		"Executive Control Center",
+		"Executive Presentation Center",
+		"Reports & Analytics",
+		"Real Estate Inventory",
+	)
+	for workspace_name in target_workspaces:
+		if not frappe.db.exists("Workspace", workspace_name):
+			continue
+		workspace = frappe.get_doc("Workspace", workspace_name)
+		existing_links = {row.link_to for row in workspace.links if row.link_to}
+		for report_name in RENT_COLLECTION_REPORT_LINKS:
+			if not frappe.db.exists("Report", report_name) or report_name in existing_links:
+				continue
+			workspace.append(
+				"links",
+				{
+					"type": "Link",
+					"label": report_name,
+					"link_type": "Report",
+					"link_to": report_name,
+					"is_query_report": 1,
+				},
+			)
+			existing_links.add(report_name)
+
+		if workspace_name in ("Sales & Rental", "Executive Control Center", "Executive Presentation Center"):
+			existing_cards = {row.number_card_name for row in workspace.number_cards if row.number_card_name}
+			for card_name in RENT_COLLECTION_NUMBER_CARDS:
+				if not frappe.db.exists("Number Card", card_name) or card_name in existing_cards:
+					continue
+				workspace.append("number_cards", {"number_card_name": card_name, "label": card_name})
+				existing_cards.add(card_name)
+
+		workspace.save(ignore_permissions=True)

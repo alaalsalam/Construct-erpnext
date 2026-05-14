@@ -674,3 +674,14 @@ CMD-FINAL-01 Phase A baseline:
 - PROJ-0002 Contractor Agreements remain active.
 - `ACC-SINV-2026-00002` remains submitted / partly paid and GL carries Unit dimension.
 - Current next action: Continue CMD-FINAL-01 Phase B: implement Rent Invoice and Rent Collections foundation.
+
+CMD-FINAL-01 Phase B rent invoice and collections:
+- Branch: `feature/final-real-estate-erp-completion`.
+- Added `Rent Invoice Collection Settings`, rent invoice services, rent Payment Entry services, rent reports, rent KPI cards, workspace links, and Arabic translations.
+- Submitted one rent invoice through standard ERPNext validation: `ACC-SINV-2026-00005` for `LC-2026-00001`, amount `350,000.00`.
+- Created/submitted one partial rent Payment Entry: `ACC-PAY-2026-00011`, amount `175,000.00`.
+- GL Entries for the rent invoice carry Unit `A-G01`.
+- `LC-2026-00001` collection status is `Partially Collected`.
+- Reports validated with rows: Tenant Statement, Rent Invoice from Schedule Report, Rent Collection Report, Overdue Rent Report, Unit Rental Revenue Report, Lease Collection Summary.
+- `ar.csv` parses cleanly after removing old blank/comment rows and fixing comma-heavy source strings.
+- Current next action: Continue CMD-FINAL-01 Phase C: implement Brokerage and Commission foundation.

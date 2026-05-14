@@ -150,3 +150,6 @@ Updated risks:
 - Mode of Payment `نقداً` was created as minimal safe master data for the one sales collection validation and linked to `Cash - YCRE`.
 - Sales collection GL traceability is now validated for one unit-specific invoice/payment pair; broader production rollout still needs finance approval for tax, receivable, payment modes, permissions, and print formats.
 - CMD-FINAL-01 baseline passed, but swap usage remains high. Continue checking `free -h` and `swapon --show` before migrations and stop if MariaDB becomes unstable.
+- CMD-FINAL-01 Phase B created one real submitted rent Sales Invoice and one real submitted rent Payment Entry. Do not cancel or amend `ACC-SINV-2026-00005` or `ACC-PAY-2026-00011` unless the finance owner requests a controlled rollback through normal ERPNext cancellation.
+- Rental GL traceability is validated for one lease invoice through Unit `A-G01`; broader rental production rollout still needs finance approval for tax, receivable accounts, rent item income accounts, payment modes, permissions, and print formats.
+- `LC-2026-00001` belongs to `PROJ-0001` / `REP-2026-00001`; PROJ-0002 remains the main construction/sales presentation project, while this lease is the retained rental validation record until a PROJ-0002 lease is explicitly created.

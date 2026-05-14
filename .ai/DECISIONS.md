@@ -267,3 +267,12 @@
 - Payment Entry is the official collection document and is created against submitted Sales Invoice references only.
 - Unit dimension must remain present on Sales Invoice Item and resulting GL Entry so unit-level revenue traceability is preserved.
 - Automatic bulk submission remains disabled; only controlled finance-approved invoices should be submitted.
+
+## ADR-034: Rent Invoice and Rent Collections Use ERPNext Sales Invoice and Payment Entry
+
+- Rent invoices are generated from Lease Contract Rent Schedule rows into standard ERPNext Sales Invoice.
+- Rent Schedule remains the operational rental schedule source; each row can link to one active rent Sales Invoice.
+- Unit is copied to Sales Invoice Item so rental revenue GL entries carry the Unit accounting dimension after normal Sales Invoice submission.
+- Payment Entry remains ERPNext's official collection document for rent collections.
+- Lease Contract totals and Rent Schedule statuses are synchronized from submitted Sales Invoices and Payment Entry references.
+- Automatic bulk rent invoice submission remains disabled; controlled validation may submit one invoice/payment only through standard ERPNext validation.

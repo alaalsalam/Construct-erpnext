@@ -1643,14 +1643,10 @@ Workflow & Status,الحالة وسير الاعتماد
 {0}: Cost Code is recommended for project financial traceability.,{0}: كود التكلفة is recommended for project financial traceability.
 {0}: Unit is required when unit-specific cost tracking is enabled.,{0}: الوحدة is required when unit-specific cost tracking is enabled.
 مستخلص مقاول عن قياسات معتمدة لأعمال المشروع,مستخلص مقاول عن قياسات معتمدة لأعمال المشروع
-
-# --- Sales Contract Foundation ---
 Sales Contract Settings,إعدادات عقد البيع
 Sales Contract,عقد البيع
 Sales Installment Schedule,جدول أقساط البيع
 Estate Sales,المبيعات العقارية
-
-# --- Sales Contract Fields ---
 Contract Number,رقم العقد
 Contract Date,تاريخ العقد
 Valid Until,صالح حتى
@@ -1685,8 +1681,6 @@ Cancellation Reason,سبب الإلغاء
 Cancellation Date,تاريخ الإلغاء
 Previous Unit Status,الحالة السابقة للوحدة
 Previous Marketing Status,الحالة التسويقية السابقة للوحدة
-
-# --- Installment Fields ---
 Seq,التسلسل
 Installment No,رقم القسط
 Label,الوصف
@@ -1714,8 +1708,6 @@ Paid,مدفوع
 Overdue,متأخر
 Waived,مُعفًى
 Cancelled,ملغى
-
-# --- Sales Contract Settings Fields ---
 General Settings,الإعدادات العامة
 Default Contract Validity Days,أيام صلاحية العقد الافتراضية
 Contract Number Prefix,بادئة رقم العقد
@@ -1730,24 +1722,18 @@ Mark Unit Sold On Approval,وضع الوحدة كمباع عند الاعتما�
 Enable Sales Invoice Generation,تفعيل إنشاء فاتورة البيع
 Defaults,القيم الافتراضية
 Default Currency From Company,العملة الافتراضية من الشركة
-
-# --- Workflow States ---
 Draft,مسودة
 Under Review,قيد المراجعة
 Approved,معتمد
 Active,نشط
 Closed,مغلق
 Return to Draft,إرجاع إلى المسودة
-
-# --- Reports ---
 Sales Contract Register,سجل عقود البيع
 Installment Schedule Report,تقرير جدول الأقساط
 Unit Sales Pipeline,خط أنابيب مبيعات الوحدات
 Sales Value Summary,ملخص قيمة المبيعات
 Reserved to Sold Conversion,تحويل من الحجز للبيع
 Reserved to Sold Conversion Report,تقرير التحويل من الحجز للبيع
-
-# --- Report Columns ---
 Contract,العقد
 Contract Date,تاريخ العقد
 Project,المشروع
@@ -1776,8 +1762,6 @@ Scheduled Installment,قسط مجدول
 Pending Scheduled,الأقساط المجدولة المتبقية
 Sold Units,الوحدات المباعة
 Reserved Units,الوحدات المحجوزة
-
-# --- Validation Messages ---
 Unit {0} cannot be sold because its status is {1}.,الوحدة {0} لا يمكن بيعها لأن حالتها {1}.
 Unit {0} already has an active sales contract {1}.,الوحدة {0} لديها عقد بيع نشط {1} بالفعل.
 "Customer, Lead, or Buyer Name is required for a sales contract.",يُطلب وجود عميل أو عميل محتمل أو اسم مشتري لعقد البيع.
@@ -1833,6 +1817,43 @@ Total Collected Sales,إجمالي مبيعات محصلة
 Outstanding Sales Amount,مبلغ المبيعات المتبقي
 Overdue Installments Count,عدد الأقساط المتأخرة
 Overdue Installments Amount,مبلغ الأقساط المتأخرة
+Rent Invoice Collection Settings,إعدادات فواتير وتحصيل الإيجارات
+Enable Rent Invoice Generation,تفعيل إنشاء فواتير الإيجار
+Auto Submit Rent Invoice,ترحيل فاتورة الإيجار تلقائياً
+Allow Grouped Rent Invoice,السماح بفوترة عدة فترات إيجار
+Default Rent Item,بند الإيجار الافتراضي
+Require Customer on Lease,اشتراط العميل في عقد الإيجار
+Block Duplicate Invoice for Rent Schedule,منع تكرار الفاتورة لفترة الإيجار
+Require Unit on Invoice Item,اشتراط الوحدة في بند الفاتورة
+Auto Update Rent Status,تحديث حالة الإيجار تلقائياً
+Tenant Statement,كشف حساب المستأجر
+Rent Invoice from Schedule Report,تقرير فواتير الإيجار من الجدول
+Rent Collection Report,تقرير تحصيل الإيجارات
+Overdue Rent Report,تقرير الإيجارات المتأخرة
+Unit Rental Revenue Report,تقرير إيراد إيجار الوحدة
+Lease Collection Summary,ملخص تحصيل عقود الإيجار
+Rent Period,فترة الإيجار
+Rent Invoice,فاتورة إيجار
+Rent Collection,تحصيل الإيجارات
+Tenant,المستأجر
+Total Invoiced Rent,إجمالي الإيجار المفوتر
+Total Collected Rent,إجمالي الإيجار المحصل
+Total Outstanding Rent,إجمالي الإيجار المتبقي
+Rent Collection Status,حالة تحصيل الإيجار
+Submitted Rent Invoices,فواتير إيجار مرحلة
+Collected Rent Amount,مبلغ إيجار محصل
+Outstanding Rent Amount,مبلغ إيجار متبقٍ
+Overdue Rent Count,عدد الإيجارات المتأخرة
+Overdue Rent Amount,مبلغ الإيجارات المتأخرة
+Scheduled Rent,الإيجار المجدول
+Invoiced Rent,الإيجار المفوتر
+Collected Rent,الإيجار المحصل
+Outstanding Rent,الإيجار المتبقي
+Minimum Overdue Days,الحد الأدنى لأيام التأخير
+Draft Invoice,فاتورة مسودة
+Create Rent Invoice,إنشاء فاتورة إيجار
+Submit Rent Invoice,ترحيل فاتورة الإيجار
+Create Rent Payment Entry,إنشاء سند تحصيل إيجار
 Contract Information,بيانات العقد
 Installments,الأقساط
 Real estate unit sales installment {0} for contract {1},قسط بيع وحدة عقارية {0} للعقد {1}
@@ -2134,7 +2155,6 @@ PROJ-0002 Unit Profitability,ربحية وحدات PROJ-0002
 Linked Documents,المستندات المرتبطة
 Visual Indicators,المؤشرات اللونية
 Report Summary,ملخص التقرير
-
 Unit is required on Sales Invoice Item for Sales Contract invoices.,الوحدة مطلوبة في بند فاتورة البيع لفواتير عقود البيع.
 Estate Rental,إدارة التأجير العقاري
 Lease Contract Settings,إعدادات عقد الإيجار
@@ -2283,11 +2303,11 @@ Quantity consumed through Stock Entries for this BOQ line.,الكمية المص
 Quantity measured and verified through Measurement Book entries.,الكمية المقاسة والمعتمدة ميدانياً عبر قيود دفتر القياسات.
 Quantity financially certified through approved IPCs.,الكمية المعتمدة مالياً عبر المستخلصات المعتمدة.
 Expected quantity still remaining after actual execution quantities.,الكمية المتوقعة المتبقية بعد كميات التنفيذ الفعلية.
-Actual cost amount from committed, invoiced, consumed, measured, or certified downstream activity.,المبلغ الفعلي من الالتزامات أو الفواتير أو الصرف أو القياس أو الاعتماد المرتبط بالبند.
+Actual cost amount from committed/invoiced/consumed/measured/certified downstream activity.,المبلغ الفعلي من الالتزامات أو الفواتير أو الصرف أو القياس أو الاعتماد المرتبط بالبند.
 Expected BOQ amount still remaining after actual downstream cost.,مبلغ جدول الكميات المتوقع المتبقي بعد تكلفة التنفيذ الفعلية.
 Difference between actual downstream cost and expected BOQ amount.,الفرق بين تكلفة التنفيذ الفعلية ومبلغ جدول الكميات المتوقع.
 Variance percentage between actual downstream cost and expected BOQ amount.,نسبة الفرق بين تكلفة التنفيذ الفعلية ومبلغ جدول الكميات المتوقع.
-Presentation status derived from procurement, consumption, measurement, certification, and variance.,حالة عرض مستنتجة من المشتريات والصرف والقياس والاعتماد والانحراف.
+Presentation status derived from procurement/consumption/measurement/certification/variance.,حالة عرض مستنتجة من المشتريات والصرف والقياس والاعتماد والانحراف.
 Contractor Agreement,اتفاقية مقاول
 Agreement Information,بيانات الاتفاقية
 Agreement Number,رقم الاتفاقية

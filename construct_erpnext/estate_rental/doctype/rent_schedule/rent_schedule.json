@@ -82,39 +82,39 @@
   },
   {
    "default": "Pending",
-   "description": "Operational rent schedule status. Rent invoicing and collection are implemented in a later phase.",
+   "description": "Operational rent schedule status used for rent invoice and collection tracking.",
    "fieldname": "rent_status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Pending\nDue\nInvoiced\nPartially Paid\nPaid\nOverdue\nWaived\nCancelled",
+   "options": "Pending\nDue\nDraft Invoice\nInvoiced\nPartially Paid\nPaid\nOverdue\nWaived\nCancelled",
    "columns": 1,
    "hidden": 0
   },
   {
-   "description": "Future Sales Invoice linked to this rent schedule row. Not generated in this phase.",
+   "description": "Sales Invoice linked to this rent schedule row.",
    "fieldname": "sales_invoice",
    "fieldtype": "Link",
    "label": "Invoice",
    "options": "Sales Invoice"
   },
   {
-   "description": "Future Payment Entry linked to this rent schedule row. Not generated in this phase.",
+   "description": "Payment Entry linked to this rent schedule row when rent collection is received.",
    "fieldname": "payment_entry",
    "fieldtype": "Link",
    "label": "Payment",
    "options": "Payment Entry"
   },
   {
-   "description": "Amount invoiced for this rent schedule row. Calculated automatically after future rent invoice generation.",
+   "description": "Amount invoiced for this rent schedule row. Calculated automatically after rent invoice generation.",
    "fieldname": "invoice_amount",
    "fieldtype": "Currency",
    "label": "Invoice Amount",
    "read_only": 1
   },
   {
-   "description": "Amount collected for this rent schedule row. Calculated automatically after future Payment Entry processing.",
+   "description": "Amount collected for this rent schedule row. Calculated automatically after Payment Entry processing.",
    "fieldname": "paid_amount",
    "fieldtype": "Currency",
    "label": "Paid Amount",
@@ -128,7 +128,7 @@
    "read_only": 1
   },
   {
-   "description": "Date when this row is linked to a future rent invoice.",
+   "description": "Date when this row is linked to a rent invoice.",
    "fieldname": "invoiced_on",
    "fieldtype": "Date",
    "label": "Invoiced On",

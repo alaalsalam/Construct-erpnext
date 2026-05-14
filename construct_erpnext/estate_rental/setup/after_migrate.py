@@ -1,4 +1,5 @@
 import frappe
+from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
 
 
 WORKFLOW_NAME = "Lease Contract Approval Workflow"
@@ -26,6 +27,8 @@ WORKFLOW_ACTIONS = [
 
 def after_migrate():
 	ensure_lease_contract_settings()
+	ensure_rent_invoice_collection_settings()
+	ensure_rent_invoice_collection_custom_fields()
 	ensure_lease_contract_workflow()
 
 
@@ -58,6 +61,72 @@ def ensure_lease_contract_settings():
 			changed = True
 	if changed:
 		settings.save(ignore_permissions=True)
+
+
+def ensure_rent_invoice_collection_settings():
+	if not frappe.db.exists("DocType", "Rent Invoice Collection Settings"):
+		return
+
+	settings = frappe.get_single("Rent Invoice Collection Settings")
+	defaults = {
+		"enable_rent_invoice_generation": 1,
+		"auto_submit_rent_invoice": 0,
+		"allow_grouped_rent_invoice": 1,
+		"require_unit_dimension": 1,
+		"auto_update_rent_status": 1,
+		"overdue_grace_days": 0,
+		"allow_partial_collection": 1,
+		"block_duplicate_invoice_for_rent_schedule": 1,
+		"require_customer_on_lease": 1,
+		"require_unit_on_invoice_item": 1,
+		"use_company_default_currency": 1,
+	}
+	changed = False
+	for fieldname, value in defaults.items():
+		if not frappe.db.exists(
+			"Singles",
+			{"doctype": "Rent Invoice Collection Settings", "field": fieldname},
+		):
+			settings.set(fieldname, value)
+			changed = True
+	if changed:
+		settings.save(ignore_permissions=True)
+
+
+def ensure_rent_invoice_collection_custom_fields():
+	if not frappe.db.exists("DocType", "Sales Invoice Item"):
+		return
+
+	custom_fields = {
+		"Sales Invoice Item": [
+			{
+				"fieldname": "lease_contract",
+				"label": "Lease Contract",
+				"fieldtype": "Link",
+				"options": "Lease Contract",
+				"insert_after": "unit" if frappe.get_meta("Sales Invoice Item").has_field("unit") else "project",
+				"description": "Lease Contract from which this rent invoice item was generated.",
+			},
+			{
+				"fieldname": "rent_schedule_reference",
+				"label": "Rent Schedule Reference",
+				"fieldtype": "Data",
+				"insert_after": "lease_contract",
+				"description": "Internal child-row reference for the Rent Schedule row represented by this invoice item.",
+			},
+		],
+		"Sales Invoice": [
+			{
+				"fieldname": "lease_contract",
+				"label": "Lease Contract",
+				"fieldtype": "Link",
+				"options": "Lease Contract",
+				"insert_after": "real_estate_project" if frappe.get_meta("Sales Invoice").has_field("real_estate_project") else "project",
+				"description": "Lease Contract from which this rent Sales Invoice was generated.",
+			},
+		],
+	}
+	create_custom_fields(custom_fields, ignore_validate=True)
 
 
 def ensure_lease_contract_workflow():

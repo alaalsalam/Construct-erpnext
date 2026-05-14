@@ -529,8 +529,11 @@ Integration:
 - Lease Contract Approval Workflow is created through Frappe ORM in idempotent after_migrate setup; direct SQL workflow creation is not part of the architecture.
 - Approved/Active Lease Contract marks the Unit as Rented and converts the Unit Reservation to Converted.
 - Tenant/customer is stored on Lease Contract only; Unit remains a stable real estate asset and does not store tenant fields.
-- Rent Invoice and Payment Entry creation are deferred to the next rental finance phase.
-- Unit dimension is prepared through the Lease Contract Unit reference for future propagation to Sales Invoice Item when Rent Invoice is implemented.
+- Rent Invoice Collection Settings controls rent invoice generation, grouping, Unit dimension requirement, partial collection, duplicate invoice blocking, and collection status sync.
+- Rent invoices are standard ERPNext Sales Invoices generated from Rent Schedule rows.
+- Payment Entry remains ERPNext's official collection document; hooks recalculate Rent Schedule and Lease Contract collection status from linked Sales Invoice references.
+- Unit dimension is copied to Sales Invoice Item so rental revenue GL entries remain traceable by Unit after normal ERPNext Sales Invoice submission.
+- No custom accounting document, manual Journal Entry, or GL backfill is part of the rental finance architecture.
 
 ## BOQ Presentation Execution Layer
 

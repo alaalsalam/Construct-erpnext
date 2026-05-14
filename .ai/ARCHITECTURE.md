@@ -591,3 +591,10 @@ Integration:
 - `Property Maintenance Request` links a Unit to issue type, requester, status, priority, estimated cost, and actual cost.
 - `Property Maintenance Task` tracks execution tasks under a maintenance request.
 - Maintenance cost fields are operational management values only and do not create accounting documents or stock/work orders.
+
+## Property Documents Foundation
+
+- `construct_erpnext/property_documents` contains property and contract document metadata.
+- `Property Document` links document records to projects, units, owners, customers, suppliers, contracts, and contractor agreements.
+- `Contract Attachment Register` links attachments to Sales Contract, Lease Contract, or Subcontract records.
+- This foundation does not provide external storage, e-signature, portal access, or document workflow automation.

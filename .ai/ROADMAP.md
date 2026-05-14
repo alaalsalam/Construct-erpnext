@@ -191,4 +191,5 @@ Phase 1 client presentation closure:
 - Add Smart Matching foundation for matching Customer Requirements to available Units. Completed.
 - Add Backlog Matching foundation for unmet requirements and retry history. Completed.
 - Add Maintenance foundation for Unit-linked operational requests, tasks, and reports. Completed.
-- Next CMD-FINAL phase: Document Management foundation.
+- Add Document Management foundation for property/contract document metadata and reports. Completed.
+- Next CMD-FINAL phase: Portal Readiness foundation.

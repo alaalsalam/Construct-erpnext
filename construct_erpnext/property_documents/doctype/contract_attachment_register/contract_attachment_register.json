@@ -1,0 +1,35 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CAR-.YYYY.-.#####",
+ "creation": "2026-05-14 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["register_section", "reference_doctype", "reference_name", "document_title", "status", "attachment", "remarks"],
+ "fields": [
+  {"fieldname": "register_section", "fieldtype": "Section Break", "label": "Contract Attachment Register"},
+  {"description": "Contract document type.", "fieldname": "reference_doctype", "fieldtype": "Select", "in_list_view": 1, "label": "Reference DocType", "options": "Sales Contract\nLease Contract\nSubcontract", "reqd": 1},
+  {"description": "Contract document name.", "fieldname": "reference_name", "fieldtype": "Dynamic Link", "in_list_view": 1, "label": "Reference Name", "options": "reference_doctype", "reqd": 1},
+  {"description": "Readable attachment title.", "fieldname": "document_title", "fieldtype": "Data", "in_list_view": 1, "label": "Document Title", "reqd": 1},
+  {"default": "Active", "description": "Attachment register status.", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Active\nArchived\nUnder Review"},
+  {"description": "Optional attached file.", "fieldname": "attachment", "fieldtype": "Attach", "label": "Attachment"},
+  {"description": "Attachment notes.", "fieldname": "remarks", "fieldtype": "Small Text", "label": "Remarks"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Property Documents",
+ "name": "Contract Attachment Register",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "description": "Operational register for contract attachments without external storage integration."
+}

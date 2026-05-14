@@ -159,3 +159,4 @@ Updated risks:
 - Smart Matching recommendations are advisory only. They intentionally do not reserve units or guarantee availability after the match is generated; users must re-check availability before reservation or contract creation.
 - Backlog Matching records unmet demand and retry attempts only. It does not notify customers or reserve units automatically; stale backlog records need periodic sales review.
 - Property Maintenance cost fields are management estimates only. They do not create Purchase Invoices, Work Orders, Payment Entries, Journal Entries, or GL Entries.
+- Property Document attachment fields are operational records only. External document storage, retention policy, access control review, and signed document workflow remain production-hardening tasks.

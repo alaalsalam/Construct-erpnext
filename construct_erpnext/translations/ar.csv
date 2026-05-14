@@ -1961,6 +1961,31 @@ Maintenance Cost Summary,ملخص تكلفة الصيانة
 Maintenance by Unit Report,تقرير الصيانة حسب الوحدة
 Requests Count,عدد الطلبات
 Open Count,عدد المفتوح
+Property Documents,وثائق العقار
+Property Document,وثيقة عقار
+Property Documents,وثائق العقار
+Contract Attachment Register,سجل مرفقات العقد
+Document,الوثيقة
+Document Type,نوع الوثيقة
+Document Title,عنوان الوثيقة
+Document Date,تاريخ الوثيقة
+Expiry Date,تاريخ الانتهاء
+Linked Records,السجلات المرتبطة
+Attachment,المرفق
+Title Deed,صك ملكية
+Contract,عقد
+ID,هوية
+Drawing,مخطط
+License,رخصة
+Archived,مؤرشف
+Reference DocType,نوع المستند المرجعي
+Reference Name,اسم المستند المرجعي
+Property Document Register,سجل وثائق العقار
+Expiring Documents Report,تقرير الوثائق قاربت الانتهاء
+Documents by Unit Report,تقرير الوثائق حسب الوحدة
+Documents Count,عدد الوثائق
+Expired Count,عدد المنتهي
+Within Days,خلال أيام
 Rent Invoice Collection Settings,إعدادات فواتير وتحصيل الإيجارات
 Enable Rent Invoice Generation,تفعيل إنشاء فواتير الإيجار
 Auto Submit Rent Invoice,ترحيل فاتورة الإيجار تلقائياً

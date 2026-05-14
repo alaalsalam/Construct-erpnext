@@ -742,3 +742,13 @@ CMD-FINAL-01 Phase G property maintenance:
 - Workspace links are present in Real Estate Inventory, Executive Control Center, and Reports & Analytics.
 - No accounting documents were created.
 - Current next action: Continue CMD-FINAL-01 Phase H: implement Document Management foundation.
+
+CMD-FINAL-01 Phase H property documents:
+- Added `Property Document` and `Contract Attachment Register`.
+- Validation records:
+  - `PDOC-2026-00001` to `PDOC-2026-00003`.
+  - `CAR-2026-00001` linked to `SC-PROJ-0002-001`.
+- Reports load with rows: Property Document Register, Expiring Documents Report, Documents by Unit Report.
+- Workspace links are present in Real Estate Inventory, Sales & Rental, Contractor Management, and Reports & Analytics.
+- No external storage integration or accounting documents were created.
+- Current next action: Continue CMD-FINAL-01 Phase I: implement Portal Readiness foundation.

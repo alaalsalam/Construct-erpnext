@@ -1491,3 +1491,22 @@
   - Estimated maintenance cost total: `9,000.00`.
   - Actual maintenance cost total: `2,050.00`.
 - No Work Orders, Purchase Invoices, Payment Entries, Journal Entries, GL Entries, or accounting documents were created by Maintenance.
+
+## 2026-05-14 CMD-FINAL-01 Phase H Document Management Foundation
+
+- Added new `Property Documents` module with:
+  - `Property Document`.
+  - `Contract Attachment Register`.
+- Property Document links document records to Real Estate Project, Unit, Owner, Customer, Supplier, Sales Contract, Lease Contract, or Contractor Agreement.
+- Contract Attachment Register tracks attachments for Sales Contract, Lease Contract, or Subcontract references without external storage integration.
+- Added reports:
+  - Property Document Register.
+  - Expiring Documents Report.
+  - Documents by Unit Report.
+- Added document workspace links to Real Estate Inventory, Sales & Rental, Contractor Management, and Reports & Analytics.
+- Added Arabic translations for property documents, attachment register, document types, expiry labels, and reports.
+- Validation:
+  - Created 3 Property Documents: `PDOC-2026-00001` to `PDOC-2026-00003`.
+  - Created Contract Attachment Register `CAR-2026-00001` for Sales Contract `SC-PROJ-0002-001`.
+  - Expiring Documents Report shows the license document expiring within 90 days.
+- No external storage integration, accounting document, Payment Entry, Journal Entry, or GL Entry was created.

@@ -311,3 +311,10 @@
 - Property Maintenance Request and Property Maintenance Task track unit maintenance operations.
 - Estimated and actual costs are management fields and do not post accounting.
 - ERPNext Work Order, Purchase Invoice, Payment Entry, Journal Entry, and GL integration are deferred until a maintenance accounting design is approved.
+
+## ADR-040: Property Document Management Is Metadata and Attachment Readiness
+
+- Property Document stores document metadata and optional attachment links for projects, units, parties, and contracts.
+- Contract Attachment Register stores contract-specific attachment references.
+- No external storage, signing workflow, or portal document access is created in this phase.
+- Access policy and retention controls are deferred to production hardening.

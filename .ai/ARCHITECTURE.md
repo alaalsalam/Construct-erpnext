@@ -598,3 +598,9 @@ Integration:
 - `Property Document` links document records to projects, units, owners, customers, suppliers, contracts, and contractor agreements.
 - `Contract Attachment Register` links attachments to Sales Contract, Lease Contract, or Subcontract records.
 - This foundation does not provide external storage, e-signature, portal access, or document workflow automation.
+## Portal Readiness Foundation
+
+- `Portal Access Profile` stores future access scope for Buyer, Tenant, Owner, and Contractor audiences.
+- `Portal Display Settings` is a Single DocType for internal portal readiness status.
+- The foundation is metadata-only and does not expose public routes, create users, or process portal payments.
+- Links remain connected to existing Customer, Supplier, Property Owner, Unit, Sales Contract, Lease Contract, and Contractor Agreement records.

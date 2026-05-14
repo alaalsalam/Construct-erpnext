@@ -318,3 +318,10 @@
 - Contract Attachment Register stores contract-specific attachment references.
 - No external storage, signing workflow, or portal document access is created in this phase.
 - Access policy and retention controls are deferred to production hardening.
+
+## ADR-041: Portal Readiness Is Access Scope Metadata Only
+
+- Portal Access Profile records which buyer, tenant, owner, or contractor records may be shown in a future portal.
+- Portal Display Settings records planned audience readiness and internal messaging.
+- This phase does not create portal users, public routes, payment portal pages, or external authentication.
+- Portal access enforcement, route design, document exposure policy, and payment portal controls are deferred to production hardening.

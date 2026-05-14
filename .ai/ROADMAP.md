@@ -193,3 +193,9 @@ Phase 1 client presentation closure:
 - Add Maintenance foundation for Unit-linked operational requests, tasks, and reports. Completed.
 - Add Document Management foundation for property/contract document metadata and reports. Completed.
 - Next CMD-FINAL phase: Portal Readiness foundation.
+## CMD-FINAL-01 Phase I Portal Readiness
+
+- Completed portal readiness metadata foundation.
+- Added Portal Access Profile and Portal Display Settings.
+- Added portal readiness reports and workspace links.
+- Public portal UI, authentication policy, document exposure, and payment portal remain deferred to production hardening.

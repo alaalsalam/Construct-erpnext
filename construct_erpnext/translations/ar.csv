@@ -2596,3 +2596,36 @@ Collected Sales Amount,مبلغ مبيعات محصل
 Outstanding Sales Amount,مبلغ مبيعات متبقٍ
 Overdue Installments Count,عدد الأقساط المتأخرة
 Overdue Installments Amount,مبلغ الأقساط المتأخرة
+Portal Readiness,جاهزية البوابة
+Portal Access Profile,ملف صلاحية البوابة
+Portal Display Settings,إعدادات عرض البوابة
+Portal Access Register,سجل صلاحيات البوابة
+Portal Access by Party,صلاحيات البوابة حسب الطرف
+Access Type,نوع الوصول
+Party Type,نوع الطرف
+Allowed Records,السجلات المسموح بها
+Access Notes,ملاحظات الوصول
+Portal Message,رسالة البوابة
+Buyer Enabled,تفعيل نطاق المشتري
+Tenant Enabled,تفعيل نطاق المستأجر
+Owner Enabled,تفعيل نطاق المالك
+Contractor Enabled,تفعيل نطاق المقاول
+Ready for Review,جاهز للمراجعة
+Suspended,معلق
+Portal audience type.,نوع الجمهور المستهدف لجاهزية البوابة.
+Linked party DocType.,نوع سجل الطرف المرتبط.
+Linked party record.,سجل الطرف المرتبط.
+Access readiness status; does not create a user automatically.,حالة جاهزية الوصول؛ لا تنشئ مستخدم بوابة تلقائياً.
+Allowed Unit for future portal display.,الوحدة المسموح عرضها مستقبلاً في البوابة.
+Allowed Sales Contract for future portal display.,عقد البيع المسموح عرضه مستقبلاً في البوابة.
+Allowed Lease Contract for future portal display.,عقد الإيجار المسموح عرضه مستقبلاً في البوابة.
+Allowed Contractor Agreement for future portal display.,اتفاقية المقاول المسموح عرضها مستقبلاً في البوابة.
+Internal access readiness notes.,ملاحظات داخلية لجاهزية الوصول.
+Portal scope readiness settings without enabling public portal routes.,إعدادات جاهزية نطاق البوابة دون تفعيل مسارات عامة.
+Portal readiness status. This does not enable public routes.,حالة جاهزية البوابة. هذا لا يفعّل مسارات عامة.
+Internal message explaining portal readiness scope.,رسالة داخلية توضّح نطاق جاهزية البوابة.
+Marks buyer portal scope as planned.,يحدد نطاق بوابة المشتري كجزء مخطط.
+Marks tenant portal scope as planned.,يحدد نطاق بوابة المستأجر كجزء مخطط.
+Marks owner portal scope as planned.,يحدد نطاق بوابة المالك كجزء مخطط.
+Marks contractor portal scope as planned.,يحدد نطاق بوابة المقاول كجزء مخطط.
+Profiles Count,عدد الملفات

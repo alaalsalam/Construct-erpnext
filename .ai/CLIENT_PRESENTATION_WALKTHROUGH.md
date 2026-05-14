@@ -868,3 +868,8 @@
 - افتح Contract Attachment Register `CAR-2026-00001` المرتبط بعقد البيع `SC-PROJ-0002-001`.
 
 ملاحظة العرض: هذه مرحلة جاهزية لإدارة الوثائق، وليست بوابة ملفات أو توقيع إلكتروني.
+## Portal Readiness Note
+
+- The system now includes an internal Portal Readiness foundation.
+- During presentation, explain it as a controlled preparation layer for future buyer, tenant, owner, and contractor portals.
+- Do not present it as a live public portal; user creation, public pages, document exposure rules, and payment portal controls remain production-hardening items.

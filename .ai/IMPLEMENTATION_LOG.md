@@ -1510,3 +1510,21 @@
   - Created Contract Attachment Register `CAR-2026-00001` for Sales Contract `SC-PROJ-0002-001`.
   - Expiring Documents Report shows the license document expiring within 90 days.
 - No external storage integration, accounting document, Payment Entry, Journal Entry, or GL Entry was created.
+
+## 2026-05-14 CMD-FINAL-01 Phase I Portal Readiness Foundation
+
+- Added new `Portal Readiness` module with:
+  - `Portal Access Profile`.
+  - `Portal Display Settings`.
+- Portal Access Profile records future buyer, tenant, owner, and contractor access scope without creating portal users or public routes.
+- Portal Display Settings records planned portal audiences and internal readiness message.
+- Added reports:
+  - Portal Access Register.
+  - Portal Access by Party.
+- Added workspace links to Sales & Rental, Real Estate Inventory, Contractor Management, Executive Control Center, and Reports & Analytics.
+- Added Arabic translations for portal readiness DocTypes, fields, reports, statuses, and help text.
+- Validation:
+  - Created 4 Portal Access Profiles: `PAP-2026-00001` to `PAP-2026-00004`.
+  - Covered Buyer, Tenant, Owner, and Contractor access scopes.
+  - Portal reports load and show rows.
+- No public portal route, portal user, external payment portal, Payment Entry, Journal Entry, GL Entry, or accounting document was created.

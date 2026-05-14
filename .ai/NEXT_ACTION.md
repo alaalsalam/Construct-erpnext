@@ -1,3 +1,3 @@
 # Next Action
 
-Continue CMD-FINAL-01 Phase I: implement Portal Readiness foundation.
+Continue CMD-FINAL-01 Phase J: implement Notifications and Automation Readiness foundation.

@@ -374,3 +374,7 @@ Phase 1 جاهزة للعرض المهني للعميل، بشرط تقديمه�
 - تقارير لسجل الوثائق، الوثائق قاربت الانتهاء، والوثائق حسب الوحدة.
 
 هذا يجهز النظام لتتبع المستندات والملفات، مع بقاء التخزين الخارجي والتوقيع الإلكتروني والصلاحيات التفصيلية ضمن مرحلة الإنتاج.
+## Portal Readiness Addition
+
+- Portal Access Profiles can now map future buyer, tenant, owner, and contractor access to existing operational records.
+- This is readiness only: no public portal, no online payment portal, and no external authentication have been activated.

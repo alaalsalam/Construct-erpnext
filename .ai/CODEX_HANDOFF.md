@@ -752,3 +752,15 @@ CMD-FINAL-01 Phase H property documents:
 - Workspace links are present in Real Estate Inventory, Sales & Rental, Contractor Management, and Reports & Analytics.
 - No external storage integration or accounting documents were created.
 - Current next action: Continue CMD-FINAL-01 Phase I: implement Portal Readiness foundation.
+
+CMD-FINAL-01 Phase I portal readiness:
+- Added `Portal Access Profile` and `Portal Display Settings` under `Portal Readiness`.
+- Validation records:
+  - `PAP-2026-00001` Buyer linked to Sales Contract `SC-PROJ-0002-001`.
+  - `PAP-2026-00002` Tenant linked to Lease Contract `LC-2026-00001`.
+  - `PAP-2026-00003` Contractor linked to a PROJ-0002 Contractor Agreement / Subcontract.
+  - `PAP-2026-00004` Owner linked to a Property Owner and Unit.
+- Reports load with rows: Portal Access Register, Portal Access by Party.
+- Workspace links are present in Sales & Rental, Real Estate Inventory, Contractor Management, Executive Control Center, and Reports & Analytics.
+- No portal users, public routes, payment portal, Payment Entries, Journal Entries, or GL Entries were created.
+- Current next action: Continue CMD-FINAL-01 Phase J: implement Notifications and Automation Readiness foundation.

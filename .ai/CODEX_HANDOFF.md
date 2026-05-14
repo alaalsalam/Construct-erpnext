@@ -524,3 +524,15 @@ CMD-DELIVERY-01 final PROJ-0002 handover readiness:
   - `.ai/PROJ_0002_FINAL_PRESENTATION_READINESS.md`
   - `.ai/CLIENT_HANDOVER_NOTES_PHASE_1.md`
 - Current next action: Present PROJ-0002 Phase 1 to client and collect handover feedback.
+
+CMD-CONTRACTOR-01 contractor agreement linkage:
+- Existing `Subcontract` is now the Contractor Agreement layer; do not create a competing Contractor Agreement DocType unless a future migration plan is approved.
+- PROJ-0002 active agreements:
+  - `SC-2026-0002` الإنشائي.
+  - `SC-2026-0003` الكهرباء.
+  - `SC-2026-0004` التشطيبات.
+  - `SC-2026-0005` الواجهات.
+- Work Items carry `subcontract`, `contractor`, and `agreement_item_reference`.
+- Measurement Book, Measurement Entry, IPC, and IPC Line carry `subcontract` where linked.
+- New reports are the preferred presentation layer for agreement progress and IPC traceability.
+- Current next action: Present PROJ-0002 Phase 1 to client using the contractor agreement linkage story and collect handover feedback.

@@ -43,6 +43,7 @@ class MeasurementEntry(Document):
 		work_item = frappe.get_doc("Construction Work Item", self.construction_work_item)
 		self.project = work_item.project
 		self.construction_boq = work_item.construction_boq
+		self.subcontract = work_item.subcontract or self.subcontract
 		self.wbs_element = work_item.wbs_element
 		self.cost_code = work_item.cost_code
 		self.item_code = work_item.item_code
@@ -61,6 +62,8 @@ class MeasurementEntry(Document):
 			self.company = book.company
 			if not self.contractor:
 				self.contractor = book.contractor
+			if not self.subcontract:
+				self.subcontract = book.subcontract
 
 	def calculate_quantities(self):
 		if not self.measurement_method:
@@ -129,6 +132,12 @@ class MeasurementEntry(Document):
 	def on_update(self):
 		recalculate_work_item_measurement(self.construction_work_item)
 		recalculate_measurement_book_totals(self.measurement_book)
+		if self.subcontract:
+			from construct_erpnext.contractor_management.agreement_utils import (
+				update_agreement_from_measurement_entry,
+			)
+
+			update_agreement_from_measurement_entry(self)
 
 	def on_trash(self):
 		recalculate_work_item_measurement(self.construction_work_item)

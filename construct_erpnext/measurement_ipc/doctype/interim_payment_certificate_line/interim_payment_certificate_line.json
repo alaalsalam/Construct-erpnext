@@ -10,6 +10,8 @@
   "measurement_entry",
   "measurement_book",
   "construction_work_item",
+  "subcontract",
+  "agreement_item_reference",
   "construction_boq",
   "wbs_element",
   "measurement_source_column_break",
@@ -278,6 +280,21 @@
    "label": "Remarks",
    "in_list_view": 0,
    "description": "Additional notes or explanation for this Interim Payment Certificate Line."
+  },
+  {
+   "fieldname": "subcontract",
+   "fieldtype": "Link",
+   "label": "Contractor Agreement",
+   "options": "Subcontract",
+   "in_list_view": 1,
+   "description": "Contractor agreement linked to this IPC line."
+  },
+  {
+   "fieldname": "agreement_item_reference",
+   "fieldtype": "Data",
+   "label": "Agreement Item Reference",
+   "read_only": 1,
+   "description": "Child row reference linking this IPC line to the contractor agreement item."
   }
  ],
  "istable": 1,

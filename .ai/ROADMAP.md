@@ -183,4 +183,5 @@ Phase 1 client presentation closure:
 - Enrich PROJ-0002 as the main connected presentation scenario. Completed.
 - Enhance `BOQ-PROJ-0002-001` screen with Work Item linkage, execution summary, and actual/remaining/variance display fields. Completed.
 - Add Project Purchase Control Summary for Expected / Actual / Remaining presentation. Completed.
-- Next action: Finalize PROJ-0002 presentation readiness after BOQ screen enhancement.
+- Add Contractor Agreement linkage from BOQ Work Items to Measurement and IPC. Completed.
+- Next action: Present PROJ-0002 Phase 1 to client using the contractor agreement linkage story and collect handover feedback.

@@ -1997,3 +1997,53 @@ Expected BOQ amount still remaining after actual downstream cost.,مبلغ جد�
 Difference between actual downstream cost and expected BOQ amount.,الفرق بين تكلفة التنفيذ الفعلية ومبلغ جدول الكميات المتوقع.
 Variance percentage between actual downstream cost and expected BOQ amount.,نسبة الفرق بين تكلفة التنفيذ الفعلية ومبلغ جدول الكميات المتوقع.
 Presentation status derived from procurement, consumption, measurement, certification, and variance.,حالة عرض مستنتجة من المشتريات والصرف والقياس والاعتماد والانحراف.
+Contractor Agreement,اتفاقية مقاول
+Agreement Information,بيانات الاتفاقية
+Agreement Number,رقم الاتفاقية
+Agreement Date,تاريخ الاتفاقية
+Agreement Type,نوع الاتفاقية
+Lump Sum,مبلغ مقطوع
+Labor Only,عمالة فقط
+Material & Labor,مواد وعمالة
+BOQ / Scope,جدول الكميات / نطاق العمل
+Scope Summary,ملخص نطاق العمل
+Agreement Items,بنود الاتفاقية
+Progress Summary,ملخص التقدم
+Total Agreement Amount,إجمالي مبلغ الاتفاقية
+Remaining Agreement Amount,المبلغ المتبقي من الاتفاقية
+Measured Percent,نسبة القياس
+Certified Percent,نسبة الاعتماد
+Retention / Advances / Guarantees,المحتجزات / الدفعات المقدمة / الضمانات
+Penalty Terms,شروط الغرامات
+Guarantee Terms,شروط الضمان
+BOQ / Work Item Links,روابط جدول الكميات وبنود العمل
+Agreement Item Title,عنوان بند الاتفاقية
+Agreed Values,القيم المتفق عليها
+Agreed Quantity,الكمية المتفق عليها
+Agreed Rate,السعر المتفق عليه
+Agreed Amount,المبلغ المتفق عليه
+Measured / Certified Progress,تقدم القياس والاعتماد
+Measured Quantity,الكمية المقاسة
+Certified Quantity,الكمية المعتمدة
+Invoiced Quantity,الكمية المفوترة
+Remaining Quantity,الكمية المتبقية
+Item Status,حالة البند
+Contractor Agreement Register,سجل اتفاقيات المقاولين
+Contractor Agreement Item Progress,تقدم بنود اتفاقيات المقاولين
+Contractor Agreement to IPC Traceability,تتبع اتفاقية المقاول إلى المستخلص
+Contractor Agreement Exposure Summary,ملخص تعرض اتفاقيات المقاولين
+Agreements Count,عدد الاتفاقيات
+Agreement Scope,نطاق الاتفاقية
+Certification,الاعتماد
+Contractor Controls,ضوابط المقاول
+Contractor Agreement that covers this Work Item.,اتفاقية المقاول التي تغطي بند العمل هذا.
+Contractor assigned through the contractor agreement.,المقاول المسند من خلال اتفاقية المقاول.
+Contractor agreement used as the source scope for this Measurement Book.,اتفاقية المقاول المستخدمة كنطاق مصدر لدفتر القياس هذا.
+Contractor agreement fetched from the linked Work Item or Measurement Book.,اتفاقية المقاول التي يتم جلبها من بند العمل أو دفتر القياس المرتبط.
+Contractor agreement covered by this IPC.,اتفاقية المقاول التي يغطيها هذا المستخلص.
+Operational Work Item covered by this contractor agreement row.,بند العمل التشغيلي الذي يغطيه هذا الصف من اتفاقية المقاول.
+Quantity agreed with the contractor for this Work Item.,الكمية المتفق عليها مع المقاول لهذا البند.
+Unit rate agreed with the contractor for this Work Item.,سعر الوحدة المتفق عليه مع المقاول لهذا البند.
+Agreed amount calculated automatically from quantity and rate.,المبلغ المتفق عليه محسوب تلقائياً من الكمية والسعر.
+Measured quantity calculated automatically from linked Measurement Entries.,الكمية المقاسة محسوبة تلقائياً من القياسات المرتبطة.
+Certified quantity calculated automatically from linked IPC lines.,الكمية المعتمدة محسوبة تلقائياً من بنود المستخلصات المرتبطة.

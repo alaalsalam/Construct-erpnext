@@ -540,3 +540,11 @@ Integration:
 - `Construction BOQ` has an Execution Summary tab for requested, ordered, invoiced, consumed, measured, and certified totals.
 - `Project Purchase Control Summary` is the preferred report for presenting Planned / Expected / Actual / Remaining / Variance by Work Item.
 - Workspace links for this report are added idempotently after product workspace sync during migration.
+
+## Contractor Agreement Linkage Layer
+
+- Existing `Subcontract` is the contractor agreement document for construction contractor scope.
+- Existing `Subcontract Activity` is the agreement item child table and links to Construction Work Item, Construction BOQ, WBS Element, Cost Code, Item, and UOM.
+- Construction Work Item is the operational bridge across BOQ, procurement, contractor agreement, measurement, IPC, contractor ledger, retention, and CFO reporting.
+- Measurement Book, Measurement Entry, Interim Payment Certificate, and IPC Line carry the contractor agreement link where available.
+- Contractor Agreement progress is operational; it does not create accounting documents, Payment Entries, Journal Entries, Sales Invoices, or GL backfills.

@@ -74,10 +74,14 @@
 - Contractor Account Statement
 - Retention Register Report
 - Contractor Exposure Summary
+- Contractor Agreement Register
+- Contractor Agreement Item Progress
+- Contractor Agreement to IPC Traceability
 
 ما يثبته:
 - النظام يشرح المبلغ المعتمد، المحتجز، المفوتر، المدفوع، والمتبقي على المقاول.
 - كشف المقاول طبقة تشغيلية للرقابة، ولا يستبدل دفتر الأستاذ العام في ERPNext.
+- اتفاقية المقاول تربط نطاق التعاقد ببنود العمل، ثم بالقياسات والمستخلصات.
 
 8. Executive Control Center -> Project Financial Snapshot
 

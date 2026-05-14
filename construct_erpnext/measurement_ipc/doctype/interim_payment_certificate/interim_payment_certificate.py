@@ -78,6 +78,8 @@ class InterimPaymentCertificate(Document):
 		work_item = frappe.get_doc("Construction Work Item", entry.construction_work_item)
 		line.measurement_book = entry.measurement_book
 		line.construction_work_item = work_item.name
+		line.subcontract = entry.subcontract or work_item.subcontract or self.subcontract
+		line.agreement_item_reference = work_item.agreement_item_reference
 		line.construction_boq = work_item.construction_boq
 		line.wbs_element = work_item.wbs_element
 		line.cost_code = work_item.cost_code
@@ -114,6 +116,10 @@ class InterimPaymentCertificate(Document):
 		)
 		self.net_payable = flt(self.gross_amount) - total_deductions
 		self.payment_difference_amount = flt(self.net_payable) - flt(self.paid_amount)
+		if not self.subcontract:
+			agreements = {line.subcontract for line in self.lines if line.subcontract}
+			if len(agreements) == 1:
+				self.subcontract = agreements.pop()
 
 	def validate_lines(self):
 		if self.status in ("Approved", "Invoice Created", "Partially Paid", "Paid", "Closed") and not self.lines:
@@ -155,6 +161,9 @@ class InterimPaymentCertificate(Document):
 		from construct_erpnext.contractor_management.ledger_utils import update_ledger_from_ipc
 
 		update_ledger_from_ipc(self)
+		from construct_erpnext.contractor_management.agreement_utils import update_agreement_from_ipc
+
+		update_agreement_from_ipc(self)
 
 	def on_cancel(self):
 		if self.purchase_invoice and frappe.db.get_value("Purchase Invoice", self.purchase_invoice, "docstatus") == 1:
@@ -164,6 +173,9 @@ class InterimPaymentCertificate(Document):
 		from construct_erpnext.contractor_management.ledger_utils import reverse_ledger_for_reference
 
 		reverse_ledger_for_reference("Interim Payment Certificate", self.name)
+		from construct_erpnext.contractor_management.agreement_utils import update_agreement_from_ipc
+
+		update_agreement_from_ipc(self)
 
 	def link_measurement_entries(self):
 		for line in self.lines:

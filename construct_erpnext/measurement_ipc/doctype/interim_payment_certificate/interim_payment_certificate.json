@@ -199,10 +199,10 @@
   {
    "fieldname": "subcontract",
    "fieldtype": "Link",
-   "label": "Subcontract",
+   "label": "Contractor Agreement",
    "options": "Subcontract",
    "in_list_view": 0,
-   "description": "Links this record to the related Subcontract."
+   "description": "Contractor agreement covered by this IPC."
   },
   {
    "fieldname": "construction_boq",

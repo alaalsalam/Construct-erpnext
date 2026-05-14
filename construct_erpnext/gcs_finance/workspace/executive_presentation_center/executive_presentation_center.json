@@ -744,6 +744,56 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contractor Agreement",
+   "link_count": 0,
+   "link_to": "Subcontract",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Contractor Agreement Register",
+   "link_count": 0,
+   "link_to": "Contractor Agreement Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Contractor Agreement Item Progress",
+   "link_count": 0,
+   "link_to": "Contractor Agreement Item Progress",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Contractor Agreement to IPC Traceability",
+   "link_count": 0,
+   "link_to": "Contractor Agreement to IPC Traceability",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Contractor Agreement Exposure Summary",
+   "link_count": 0,
+   "link_to": "Contractor Agreement Exposure Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
  "modified": "2026-05-10 16:34:02.956463",

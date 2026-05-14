@@ -4,33 +4,63 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "links_section",
+  "construction_work_item",
+  "construction_boq",
+  "wbs_element",
+  "links_column_break",
+  "cost_code",
+  "item_code",
+  "uom",
   "activity_name",
   "description",
+  "agreement_values_section",
+  "agreed_quantity",
+  "agreed_rate",
+  "agreed_amount",
   "negotiated_amount",
   "column_break_pct",
   "advancement_pct",
   "authorized_pct",
-  "budget_level_code"
+  "budget_level_code",
+  "progress_values_section",
+  "measured_qty",
+  "certified_qty",
+  "invoiced_qty",
+  "remaining_qty",
+  "progress_values_column_break",
+  "previous_certified_amount",
+  "current_certified_amount",
+  "total_certified_amount",
+  "remaining_amount",
+  "status_section",
+  "item_status",
+  "remarks"
  ],
  "fields": [
   {
    "fieldname": "activity_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Activity Name",
-   "reqd": 1
+   "label": "Agreement Item Title",
+   "reqd": 1,
+   "description": "Short title for this contractor agreement item."
   },
   {
    "fieldname": "description",
    "fieldtype": "Small Text",
-   "label": "Description"
+   "label": "Description",
+   "description": "Scope description for this contractor agreement item."
   },
   {
    "fieldname": "negotiated_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Negotiated Amount",
-   "reqd": 1
+   "reqd": 1,
+   "read_only": 1,
+   "description": "Legacy agreed amount kept for compatibility; updated from Agreed Amount.",
+   "allow_on_submit": 1
   },
   {
    "fieldname": "column_break_pct",
@@ -41,19 +71,201 @@
    "fieldtype": "Percent",
    "default": "0",
    "in_list_view": 1,
-   "label": "Advancement %"
+   "label": "Advancement %",
+   "allow_on_submit": 1
   },
   {
    "fieldname": "authorized_pct",
    "fieldtype": "Percent",
    "default": "0",
    "in_list_view": 1,
-   "label": "Authorized %"
+   "label": "Authorized %",
+   "allow_on_submit": 1
   },
   {
    "fieldname": "budget_level_code",
    "fieldtype": "Data",
-   "label": "Budget Level Code"
+   "label": "Budget Level Code",
+   "description": "Legacy budget level reference retained for compatibility."
+  },
+  {
+   "fieldname": "links_section",
+   "fieldtype": "Section Break",
+   "label": "BOQ / Work Item Links"
+  },
+  {
+   "fieldname": "construction_work_item",
+   "fieldtype": "Link",
+   "label": "Construction Work Item",
+   "options": "Construction Work Item",
+   "in_list_view": 1,
+   "description": "Operational Work Item covered by this contractor agreement row."
+  },
+  {
+   "fieldname": "construction_boq",
+   "fieldtype": "Link",
+   "label": "Construction BOQ",
+   "options": "Construction BOQ",
+   "description": "BOQ linked to the covered Work Item."
+  },
+  {
+   "fieldname": "wbs_element",
+   "fieldtype": "Link",
+   "label": "WBS Element",
+   "options": "WBS Element",
+   "in_list_view": 1,
+   "description": "WBS element linked to the covered Work Item."
+  },
+  {
+   "fieldname": "links_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_code",
+   "fieldtype": "Link",
+   "label": "Cost Code",
+   "options": "Cost Code",
+   "in_list_view": 1,
+   "description": "Cost code linked to the covered Work Item."
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item",
+   "description": "Item linked to the covered Work Item where available."
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM",
+   "description": "Unit of measure for the agreed quantity."
+  },
+  {
+   "fieldname": "agreement_values_section",
+   "fieldtype": "Section Break",
+   "label": "Agreed Values"
+  },
+  {
+   "fieldname": "agreed_quantity",
+   "fieldtype": "Float",
+   "label": "Agreed Quantity",
+   "in_list_view": 1,
+   "description": "Quantity agreed with the contractor for this Work Item."
+  },
+  {
+   "fieldname": "agreed_rate",
+   "fieldtype": "Currency",
+   "label": "Agreed Rate",
+   "in_list_view": 1,
+   "description": "Unit rate agreed with the contractor for this Work Item."
+  },
+  {
+   "fieldname": "agreed_amount",
+   "fieldtype": "Currency",
+   "label": "Agreed Amount",
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Agreed amount calculated automatically from quantity and rate."
+  },
+  {
+   "fieldname": "progress_values_section",
+   "fieldtype": "Section Break",
+   "label": "Measured / Certified Progress"
+  },
+  {
+   "fieldname": "measured_qty",
+   "fieldtype": "Float",
+   "label": "Measured Quantity",
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Measured quantity calculated automatically from linked Measurement Entries.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "certified_qty",
+   "fieldtype": "Float",
+   "label": "Certified Quantity",
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Certified quantity calculated automatically from linked IPC lines.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "invoiced_qty",
+   "fieldtype": "Float",
+   "label": "Invoiced Quantity",
+   "read_only": 1,
+   "description": "Invoiced quantity where linked contractor invoices are available.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "remaining_qty",
+   "fieldtype": "Float",
+   "label": "Remaining Quantity",
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Remaining agreement quantity after certification.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "progress_values_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "previous_certified_amount",
+   "fieldtype": "Currency",
+   "label": "Previous Certified Amount",
+   "read_only": 1,
+   "description": "Amount certified before the current IPC context.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "current_certified_amount",
+   "fieldtype": "Currency",
+   "label": "Current Certified Amount",
+   "read_only": 1,
+   "description": "Latest current certified amount calculated from IPC lines.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "total_certified_amount",
+   "fieldtype": "Currency",
+   "label": "Total Certified Amount",
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Total certified amount calculated automatically from IPC lines.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "remaining_amount",
+   "fieldtype": "Currency",
+   "label": "Remaining Amount",
+   "read_only": 1,
+   "description": "Remaining amount after total certified amount.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "item_status",
+   "fieldtype": "Select",
+   "label": "Item Status",
+   "options": "Planned\nIn Progress\nPartially Measured\nPartially Certified\nFully Certified\nOverrun\nClosed",
+   "default": "Planned",
+   "in_list_view": 1,
+   "description": "Progress status of this contractor agreement item.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks",
+   "description": "Additional notes for this contractor agreement item."
   }
  ],
  "index_web_pages_for_search": 0,

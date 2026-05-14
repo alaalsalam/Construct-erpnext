@@ -24,6 +24,10 @@
   "wbs_code",
   "cost_code",
   "item_code",
+  "contractor_agreement_section",
+  "subcontract",
+  "contractor",
+  "agreement_item_reference",
   "planned_scope_tab",
   "planned_scope_section",
   "planned_quantity",
@@ -544,6 +548,36 @@
    "read_only": 1,
    "in_list_view": 0,
    "description": "Calculated value updated automatically from linked records or document lines."
+  },
+  {
+   "fieldname": "contractor_agreement_section",
+   "fieldtype": "Section Break",
+   "label": "Contractor Agreement",
+   "description": "Contractor agreement assignment for this Work Item."
+  },
+  {
+   "fieldname": "subcontract",
+   "fieldtype": "Link",
+   "label": "Contractor Agreement",
+   "options": "Subcontract",
+   "in_standard_filter": 1,
+   "in_list_view": 1,
+   "description": "Contractor agreement that covers this Work Item."
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "label": "Contractor",
+   "options": "Supplier",
+   "in_standard_filter": 1,
+   "description": "Contractor assigned through the contractor agreement."
+  },
+  {
+   "fieldname": "agreement_item_reference",
+   "fieldtype": "Data",
+   "label": "Agreement Item Reference",
+   "read_only": 1,
+   "description": "Child row reference linking this Work Item to its contractor agreement item."
   }
  ],
  "index_web_pages_for_search": 1,

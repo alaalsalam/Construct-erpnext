@@ -250,3 +250,12 @@
 - Lease/Rent foundation records may exist, but full Lease/Rent cycle is treated as Phase 2 and is marked as Upcoming in primary presentation workspaces.
 - Draft Sales Invoice from installment demonstrates traceability only; it is not submitted and does not create GL or Payment Entry.
 - Phase 2 will be planned after client feedback and will cover collections, rent invoicing, commission, CRM, matching, portals, WhatsApp/Meta, and production accounting automation.
+
+## ADR-032: Contractor Agreement Layer Uses Existing Subcontract
+
+- The existing `Subcontract` DocType is enhanced and presented as `Contractor Agreement / اتفاقية مقاول` instead of creating a competing contractor contract structure.
+- `Subcontract Activity` is enhanced as the agreement item table and links each row to Construction Work Item, BOQ, WBS, Cost Code, Item, UOM, measured quantities, certified quantities, and remaining values.
+- Construction Work Item remains the operational bridge between BOQ, procurement, measurement, IPC, contractor ledger, and retention.
+- Contractor Agreement activation links Work Items to the contractor/agreement and creates or reuses the operational Contractor Account.
+- Measurement Entry and IPC now carry the Contractor Agreement where available so reports can trace BOQ -> Work Item -> Agreement -> Measurement -> IPC.
+- Contractor Agreements do not create Purchase Invoices, Payment Entries, Journal Entries, or GL Entries.

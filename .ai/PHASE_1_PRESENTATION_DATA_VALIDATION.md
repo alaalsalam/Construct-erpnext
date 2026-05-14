@@ -317,3 +317,28 @@ Ready to present now with clear caveats.
 - لا يوجد GL backfill.
 
 قرار البيانات: جاهزة للعرض الآن حول `PROJ-0002`.
+
+## تحديث اتفاقيات المقاولين - PROJ-0002
+
+تمت إضافة طبقة اتفاقيات المقاولين وربطها ببيانات العرض:
+
+- Contractor Agreements: 4.
+- Work Items linked to Contractor Agreements: 38.
+- Measurement Entries linked to Contractor Agreements: 16.
+- IPC line-level agreement traceability: متاح في Contractor Agreement to IPC Traceability.
+
+السجلات الرئيسية:
+
+- `SC-2026-0002` — اتفاقية مقاول الأعمال الإنشائية.
+- `SC-2026-0003` — اتفاقية مقاول أعمال الكهرباء.
+- `SC-2026-0004` — اتفاقية مقاول أعمال التشطيبات.
+- `SC-2026-0005` — اتفاقية مقاول أعمال الواجهات.
+
+التقارير الجديدة:
+
+- Contractor Agreement Register: يعمل ويعرض 4 صفوف لـ `PROJ-0002`.
+- Contractor Agreement Item Progress: يعمل ويعرض 39 صفاً.
+- Contractor Agreement to IPC Traceability: يعمل ويعرض 21 صفاً.
+- Contractor Agreement Exposure Summary: يعمل ويعرض 5 صفوف.
+
+قرار البيانات: جاهزة لشرح مسار اتفاقية المقاول من BOQ إلى Work Item ثم Measurement Book وIPC وكشف المقاول.

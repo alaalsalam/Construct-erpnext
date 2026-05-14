@@ -1041,3 +1041,21 @@
 - Created `.ai/PROJ_0002_FINAL_PRESENTATION_READINESS.md`.
 - Created `.ai/CLIENT_HANDOVER_NOTES_PHASE_1.md`.
 - NEXT_ACTION set to Present PROJ-0002 Phase 1 to client and collect handover feedback.
+
+## 2026-05-14 CMD-CONTRACTOR-01 Contractor Agreements and BOQ-to-IPC Contract Linkage
+
+- Enhanced existing `Subcontract` as the client-facing Contractor Agreement layer instead of creating duplicate contractor agreement DocTypes.
+- Enhanced `Subcontract Activity` as linked agreement items with Construction Work Item, BOQ, WBS, Cost Code, Item, UOM, agreed quantity/rate/amount, measured quantity, certified quantity, remaining quantity, and item status.
+- Added Contractor Agreement links to Construction Work Item, Measurement Book, Measurement Entry, Interim Payment Certificate, and IPC Line.
+- Added contractor agreement service utilities for creating agreements from Work Items, validating Work Item assignment, recalculating progress, and syncing from Measurement Entry / IPC.
+- Added Contractor Agreement Approval Workflow through idempotent after_migrate setup using Frappe ORM.
+- Added reports: Contractor Agreement Register, Contractor Agreement Item Progress, Contractor Agreement to IPC Traceability, and Contractor Agreement Exposure Summary.
+- Updated Contractor Management, Measurement & IPC, Construction Control, Executive Presentation Center, and Reports & Analytics workspaces with agreement links/reports.
+- Created 4 active PROJ-0002 contractor agreements:
+  - SC-2026-0002: اتفاقية مقاول الأعمال الإنشائية.
+  - SC-2026-0003: اتفاقية مقاول أعمال الكهرباء.
+  - SC-2026-0004: اتفاقية مقاول أعمال التشطيبات.
+  - SC-2026-0005: اتفاقية مقاول أعمال الواجهات.
+- Linked 38 PROJ-0002 Work Items, 16 Measurement Entries, and IPC lines to contractor agreements where available.
+- No Payment Entry, Journal Entry, Sales Invoice submission, GL backfill, raw SQL, Server Script, or ERPNext core modification was performed.
+- NEXT_ACTION set to Present PROJ-0002 Phase 1 to client using the contractor agreement linkage story and collect handover feedback.

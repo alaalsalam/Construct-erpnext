@@ -71,6 +71,7 @@ Phase 1 من Real Estate Development ERP جاهزة للعرض كمنصة تحك
 - Procurement Traceability: تتبع الشراء والمخزون حسب بند العمل.
 - Measurement to IPC: ربط القياس بالمستخلص.
 - Contractor Control: رؤية المعتمد والمحتجز والمتبقي للمقاول.
+- Contractor Agreements: ربط ما تم الاتفاق عليه مع المقاول ببنود BOQ والقياس والمستخلص.
 - CFO Dashboard: مؤشرات مالية ومخاطر قابلة للشرح.
 - Unit Costing and Profitability: تحويل تكلفة المشروع إلى ربحية وحدة.
 - Reservation and Sales Foundation: حجز الوحدة ثم عقد بيع وجدول أقساط وفاتورة مسودة.

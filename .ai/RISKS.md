@@ -120,3 +120,8 @@ Updated risks:
 - `BOQ-PROJ-0002-001` has 72 BOQ rows and 72 linked Work Items. Some rows may look repetitive because the presentation enrichment creates a broad linked story; do not delete or merge them casually because downstream Material Requests, Measurement Entries, IPCs, and reports may depend on the links.
 - `CWI-2026-00060` currently shows an overrun due measurement/certification above plan; use `CWI-2026-00003` as the clearer partial/remaining example during presentation.
 - PROJ-0002 BOQ Items now use presentation Item master links for clarity. Work Item item_code remains unchanged where saving the Work Item would trigger existing overrun validations; the BOQ screen and Project Purchase Control Summary show the Item through the BOQ row link.
+
+- Contractor Agreement uses the existing `Subcontract` technical DocType. User-facing labels and reports present it as Contractor Agreement / اتفاقية مقاول, but technical references may still show Subcontract in advanced metadata.
+- Work Item splitting across multiple active contractor agreements is intentionally blocked for now; partial split scopes should be handled as a future enhancement if needed.
+- Some PROJ-0002 IPC parent records can cover lines from more than one contractor agreement, so line-level Contractor Agreement traceability is more precise than parent-level linkage in those cases.
+- Agreement progress fields are operational management summaries and do not replace ERPNext accounting or GL.

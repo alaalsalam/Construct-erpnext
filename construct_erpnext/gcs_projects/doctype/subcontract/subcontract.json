@@ -6,23 +6,55 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "agreement_information_tab",
+  "agreement_information_section",
   "naming_series",
+  "agreement_number",
+  "agreement_date",
+  "agreement_type",
+  "workflow_state",
+  "contract_status",
+  "company",
+  "column_break_amounts",
   "project",
   "contractor",
   "contractor_name",
   "contract_title",
-  "contract_status",
-  "company",
-  "column_break_amounts",
+  "start_date",
+  "end_date",
+  "expected_end_date",
+  "boq_scope_tab",
+  "boq_scope_section",
+  "construction_boq",
+  "scope_summary",
+  "section_break_activities",
+  "activities",
+  "progress_summary_tab",
+  "progress_summary_section",
+  "total_agreement_amount",
+  "measured_amount",
+  "certified_amount",
+  "invoiced_amount",
+  "progress_summary_column_break",
+  "remaining_agreement_amount",
+  "measured_percent",
+  "certified_percent",
   "negotiated_amount",
   "paid_amount",
   "remaining_amount",
-  "start_date",
-  "end_date",
-  "section_break_activities",
-  "activities",
+  "contractor_controls_tab",
+  "contractor_controls_section",
+  "retention_percent",
+  "advance_amount",
+  "penalty_terms",
+  "contractor_controls_column_break",
+  "payment_terms",
+  "guarantee_terms",
   "section_break_terms",
-  "terms"
+  "terms",
+  "remarks_tab",
+  "remarks_section",
+  "remarks"
  ],
  "fields": [
   {
@@ -64,7 +96,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Contract Title",
-   "reqd": 1
+   "reqd": 1,
+   "description": "Business title of the contractor agreement as shown to users and reports."
   },
   {
    "fieldname": "contract_status",
@@ -72,7 +105,9 @@
    "default": "Draft",
    "in_standard_filter": 1,
    "label": "Contract Status",
-   "options": "Draft\nAuthorized\nActive\nCompleted\nCancelled"
+   "options": "Draft\nUnder Review\nAuthorized\nApproved\nActive\nCompleted\nCancelled\nClosed",
+   "description": "Operational status of this contractor agreement.",
+   "allow_on_submit": 1
   },
   {
    "fieldname": "company",
@@ -90,7 +125,10 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Negotiated Amount",
-   "reqd": 1
+   "reqd": 1,
+   "read_only": 1,
+   "description": "Legacy total amount kept for compatibility; updated from Total Agreement Amount.",
+   "allow_on_submit": 1
   },
   {
    "fieldname": "paid_amount",
@@ -102,7 +140,9 @@
    "fieldname": "remaining_amount",
    "fieldtype": "Currency",
    "label": "Remaining Amount",
-   "read_only": 1
+   "read_only": 1,
+   "description": "Legacy remaining amount kept for compatibility; updated from agreement progress.",
+   "allow_on_submit": 1
   },
   {
    "fieldname": "start_date",
@@ -122,8 +162,10 @@
   {
    "fieldname": "activities",
    "fieldtype": "Table",
-   "label": "Activities",
-   "options": "Subcontract Activity"
+   "label": "Agreement Items",
+   "options": "Subcontract Activity",
+   "description": "Agreement item rows linked to BOQ Work Items, measurement, and IPC progress.",
+   "allow_on_submit": 1
   },
   {
    "fieldname": "section_break_terms",
@@ -134,7 +176,219 @@
   {
    "fieldname": "terms",
    "fieldtype": "Text Editor",
-   "label": "Terms"
+   "label": "Terms",
+   "description": "Legacy terms and conditions retained for compatibility."
+  },
+  {
+   "fieldname": "agreement_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Agreement Information"
+  },
+  {
+   "fieldname": "agreement_information_section",
+   "fieldtype": "Section Break",
+   "label": "Agreement Information"
+  },
+  {
+   "fieldname": "agreement_number",
+   "fieldtype": "Data",
+   "label": "Agreement Number",
+   "unique": 1,
+   "in_list_view": 1,
+   "description": "Commercial agreement number used to identify the contractor agreement.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "agreement_date",
+   "fieldtype": "Date",
+   "label": "Agreement Date",
+   "in_standard_filter": 1,
+   "description": "Date when the contractor agreement was agreed or issued."
+  },
+  {
+   "fieldname": "agreement_type",
+   "fieldtype": "Select",
+   "label": "Agreement Type",
+   "options": "Unit Rate\nLump Sum\nLabor Only\nMaterial & Labor\nOther",
+   "default": "Unit Rate",
+   "in_standard_filter": 1,
+   "description": "Commercial pricing basis agreed with the contractor."
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Select",
+   "label": "Workflow State",
+   "options": "Draft\nUnder Review\nAuthorized\nApproved\nActive\nCompleted\nCancelled\nClosed",
+   "in_standard_filter": 1,
+   "description": "Workflow state used to track agreement review, approval, activation, and closure.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "boq_scope_tab",
+   "fieldtype": "Tab Break",
+   "label": "BOQ / Scope"
+  },
+  {
+   "fieldname": "boq_scope_section",
+   "fieldtype": "Section Break",
+   "label": "BOQ / Scope"
+  },
+  {
+   "fieldname": "construction_boq",
+   "fieldtype": "Link",
+   "label": "Construction BOQ",
+   "options": "Construction BOQ",
+   "in_standard_filter": 1,
+   "description": "Approved BOQ that defines the planned scope covered by this contractor agreement."
+  },
+  {
+   "fieldname": "scope_summary",
+   "fieldtype": "Small Text",
+   "label": "Scope Summary",
+   "description": "Short business summary of the work scope included in this contractor agreement."
+  },
+  {
+   "fieldname": "agreement_items_section",
+   "fieldtype": "Section Break",
+   "label": "Agreement Items"
+  },
+  {
+   "fieldname": "progress_summary_tab",
+   "fieldtype": "Tab Break",
+   "label": "Progress Summary"
+  },
+  {
+   "fieldname": "progress_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Progress Summary"
+  },
+  {
+   "fieldname": "total_agreement_amount",
+   "fieldtype": "Currency",
+   "label": "Total Agreement Amount",
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Total agreed amount calculated automatically from agreement item rows.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "measured_amount",
+   "fieldtype": "Currency",
+   "label": "Measured Amount",
+   "read_only": 1,
+   "description": "Total measured amount calculated automatically from linked Measurement Entries.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "certified_amount",
+   "fieldtype": "Currency",
+   "label": "Certified Amount",
+   "read_only": 1,
+   "description": "Total certified amount calculated automatically from linked IPC lines.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "invoiced_amount",
+   "fieldtype": "Currency",
+   "label": "Invoiced Amount",
+   "read_only": 1,
+   "description": "Total invoiced amount read from linked contractor Purchase Invoices where available.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "progress_summary_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remaining_agreement_amount",
+   "fieldtype": "Currency",
+   "label": "Remaining Agreement Amount",
+   "read_only": 1,
+   "description": "Agreement amount remaining after certified work, calculated automatically.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "measured_percent",
+   "fieldtype": "Percent",
+   "label": "Measured Percent",
+   "read_only": 1,
+   "description": "Measured progress percentage calculated automatically against the agreement amount.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "certified_percent",
+   "fieldtype": "Percent",
+   "label": "Certified Percent",
+   "read_only": 1,
+   "description": "Certified progress percentage calculated automatically against the agreement amount.",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "contractor_controls_tab",
+   "fieldtype": "Tab Break",
+   "label": "Retention / Advances / Guarantees"
+  },
+  {
+   "fieldname": "contractor_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Retention / Advances / Guarantees"
+  },
+  {
+   "fieldname": "retention_percent",
+   "fieldtype": "Percent",
+   "label": "Retention Percent",
+   "default": "10",
+   "description": "Retention percentage applied to contractor IPCs for this agreement."
+  },
+  {
+   "fieldname": "advance_amount",
+   "fieldtype": "Currency",
+   "label": "Advance Amount",
+   "description": "Operational advance amount agreed with the contractor. No accounting entry is created by this field."
+  },
+  {
+   "fieldname": "penalty_terms",
+   "fieldtype": "Small Text",
+   "label": "Penalty Terms",
+   "description": "Summary of penalty terms agreed with the contractor."
+  },
+  {
+   "fieldname": "contractor_controls_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Text Editor",
+   "label": "Payment Terms",
+   "description": "Commercial payment terms for the contractor agreement."
+  },
+  {
+   "fieldname": "guarantee_terms",
+   "fieldtype": "Small Text",
+   "label": "Guarantee Terms",
+   "description": "Guarantee or performance bond terms agreed with the contractor."
+  },
+  {
+   "fieldname": "remarks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks",
+   "description": "Additional notes for this contractor agreement."
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date",
+   "description": "Expected completion date for the contractor agreement."
   }
  ],
  "index_web_pages_for_search": 1,

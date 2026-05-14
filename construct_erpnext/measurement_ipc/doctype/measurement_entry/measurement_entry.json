@@ -18,6 +18,7 @@
   "company",
   "project",
   "contractor",
+  "subcontract",
   "construction_boq",
   "construction_work_item",
   "work_item_details_column_break",
@@ -505,6 +506,15 @@
    "label": "IPC Line Reference",
    "in_list_view": 0,
    "description": "Specifies the ipc line reference for this Measurement Entry."
+  },
+  {
+   "fieldname": "subcontract",
+   "fieldtype": "Link",
+   "label": "Contractor Agreement",
+   "options": "Subcontract",
+   "in_standard_filter": 1,
+   "in_list_view": 1,
+   "description": "Contractor agreement fetched from the linked Work Item or Measurement Book."
   }
  ],
  "index_web_pages_for_search": 1,

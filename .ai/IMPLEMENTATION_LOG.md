@@ -1562,3 +1562,40 @@
 - Permission matrix remains a draft for UAT and production hardening; no restrictive permissions were applied.
 - Print format plan identifies priority documents and required legal/finance approvals.
 - QA scenarios cover construction, procurement, measurement, IPC, contractor agreements, CFO, inventory, sales, rent, CRM, matching, maintenance, documents, portal readiness, and notification readiness.
+
+## 2026-05-14 CMD-FINAL-01 Phase L Final Validation
+
+- Final system validation completed on branch `feature/final-real-estate-erp-completion`.
+- Ran:
+  - `bench --site construction.yemenfrappe.com migrate`.
+  - `bench --site construction.yemenfrappe.com clear-cache`.
+  - `bench --site construction.yemenfrappe.com clear-website-cache`.
+  - `bench build --app construct_erpnext`.
+- Build completed successfully for `construct_erpnext`; a known non-blocking asset link warning remains for unrelated `doppio/node_modules`.
+- Validated workspaces are not hidden:
+  - Executive Presentation Center.
+  - Executive Control Center.
+  - Construction Control.
+  - Procurement & Site Warehouses.
+  - Measurement & IPC.
+  - Contractor Management.
+  - Real Estate Inventory.
+  - Sales & Rental.
+  - Reports & Analytics.
+- Validated representative reports with rows:
+  - Project Purchase Control Summary.
+  - Contractor Agreement Register.
+  - Buyer Statement.
+  - Rent Collection Report.
+  - Commission Register.
+  - Customer Requirement Register.
+  - Match Result Register.
+  - Backlog Request Register.
+  - Maintenance Request Register.
+  - Property Document Register.
+  - Portal Access Register.
+  - Pending Reminder Actions.
+- Sales invoice `ACC-SINV-2026-00002` remains submitted and partially outstanding.
+- Rent invoice `ACC-SINV-2026-00005` remains submitted and partially outstanding.
+- Arabic translation CSV parses successfully.
+- No GL backfill, manual Journal Entry, portal route activation, WhatsApp/Meta integration, or new feature outside CMD-FINAL-01 scope was introduced during final validation.

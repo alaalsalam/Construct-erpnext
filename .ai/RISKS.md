@@ -164,3 +164,4 @@ Updated risks:
 - Notification Readiness currently records settings and pending internal logs only. Email/SMS/WhatsApp delivery, escalation rules, retry policy, and consent controls must be approved before live automation.
 - Role and permission matrix is documented as a draft only; production permissions must be tested with real user roles before client go-live.
 - Print format readiness is documented but final legal/finance print formats still need client-approved wording and branding.
+- Final build still reports a non-blocking missing `doppio/node_modules` asset link warning from an unrelated app; it did not block `construct_erpnext` asset build but should be cleaned by the server owner before production hardening.

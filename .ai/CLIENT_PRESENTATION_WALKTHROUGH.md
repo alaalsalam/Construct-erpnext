@@ -879,3 +879,8 @@
 - The system now includes internal reminder readiness for reservation expiry, installment due dates, rent due dates, lease expiry, document expiry, and backlog matching.
 - Present it as controlled automation preparation only.
 - Do not present WhatsApp, SMS, or email sending as live functionality.
+
+## Final Presentation Close
+
+- Close the walkthrough by showing PROJ-0002 as the integrated scenario from BOQ to contractor agreements, IPC, CFO analytics, inventory, unit costing, sales collections, rental collections, CRM, matching, maintenance, documents, portal readiness, and notification readiness.
+- Clarify that production hardening will focus on UAT feedback, final permissions, print formats, finance/tax approval, portal security, and notification channel approval.

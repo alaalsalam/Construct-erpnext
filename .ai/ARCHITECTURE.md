@@ -577,3 +577,10 @@ Integration:
 - `Match Result` stores a matching run for one Customer Requirement.
 - `Match Result Item` stores recommended Units with score, matched criteria, missed criteria, and recommendation notes.
 - Smart Matching uses available Units only and does not reserve, sell, rent, invoice, collect, or post accounting entries.
+
+## Backlog Matching Foundation
+
+- `construct_erpnext/backlog_matching` stores unmet customer demand from Smart Matching.
+- `Backlog Request` links to one Customer Requirement and records gap reason, priority, waiting date, and latest retry status.
+- `Backlog Match Attempt` records retry attempts, available units checked, best score, result, and matched unit when found.
+- Backlog Matching is operational only; it does not notify, reserve, contract, invoice, collect, or post accounting entries.

@@ -113,6 +113,14 @@ SMART_MATCHING_WORKSPACE_LINKS = [
 	("Matching Performance Summary", "Report"),
 ]
 
+BACKLOG_MATCHING_WORKSPACE_LINKS = [
+	("Backlog Request", "DocType"),
+	("Backlog Match Attempt", "DocType"),
+	("Backlog Request Register", "Report"),
+	("Market Demand Gap Report", "Report"),
+	("Backlog Matching Attempts Report", "Report"),
+]
+
 
 def sync_product_workspace_readiness():
 	"""Keep installed product workspace records aligned with curated readiness JSON."""
@@ -171,6 +179,7 @@ def sync_product_workspace_readiness():
 	ensure_commission_workspace_links()
 	ensure_crm_workspace_links()
 	ensure_smart_matching_workspace_links()
+	ensure_backlog_matching_workspace_links()
 
 
 def ensure_presentation_number_cards():
@@ -304,6 +313,34 @@ def ensure_smart_matching_workspace_links():
 		workspace = frappe.get_doc("Workspace", workspace_name)
 		existing_links = {row.link_to for row in workspace.links if row.link_to}
 		for link_to, link_type in SMART_MATCHING_WORKSPACE_LINKS:
+			if link_to in existing_links:
+				continue
+			if link_type == "DocType" and not frappe.db.exists("DocType", link_to):
+				continue
+			if link_type == "Report" and not frappe.db.exists("Report", link_to):
+				continue
+			workspace.append(
+				"links",
+				{
+					"type": "Link",
+					"label": link_to,
+					"link_type": link_type,
+					"link_to": link_to,
+					"is_query_report": 1 if link_type == "Report" else 0,
+				},
+			)
+			existing_links.add(link_to)
+		workspace.save(ignore_permissions=True)
+
+
+def ensure_backlog_matching_workspace_links():
+	target_workspaces = ("Sales & Rental", "Executive Control Center", "Reports & Analytics", "Real Estate Inventory")
+	for workspace_name in target_workspaces:
+		if not frappe.db.exists("Workspace", workspace_name):
+			continue
+		workspace = frappe.get_doc("Workspace", workspace_name)
+		existing_links = {row.link_to for row in workspace.links if row.link_to}
+		for link_to, link_type in BACKLOG_MATCHING_WORKSPACE_LINKS:
 			if link_to in existing_links:
 				continue
 			if link_type == "DocType" and not frappe.db.exists("DocType", link_to):

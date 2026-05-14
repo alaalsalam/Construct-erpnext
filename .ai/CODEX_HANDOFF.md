@@ -720,3 +720,14 @@ CMD-FINAL-01 Phase E smart matching:
 - Final Matching Performance Summary: 2 Open results, 4 available-unit recommendations, and 3 No Suitable Match results.
 - No reservations, contracts, invoices, Payment Entries, Journal Entries, or GL Entries were created.
 - Current next action: Continue CMD-FINAL-01 Phase F: implement Backlog Matching foundation.
+
+CMD-FINAL-01 Phase F backlog matching:
+- Added `Backlog Request` and `Backlog Match Attempt` under `Backlog Matching`.
+- Backlogs were created from unmatched Smart Matching results.
+- Validation records:
+  - Backlog Requests `BLR-2026-00001` to `BLR-2026-00003`.
+  - Attempts `BMA-2026-00001` to `BMA-2026-00006`; latest attempts show 6 available units checked and no match.
+- Reports load with rows: Backlog Request Register, Market Demand Gap Report, Backlog Matching Attempts Report.
+- Workspace links are present in Sales & Rental, Executive Control Center, Reports & Analytics, and Real Estate Inventory.
+- No notifications, reservations, contracts, invoices, Payment Entries, Journal Entries, or GL Entries were created.
+- Current next action: Continue CMD-FINAL-01 Phase G: implement Maintenance foundation.

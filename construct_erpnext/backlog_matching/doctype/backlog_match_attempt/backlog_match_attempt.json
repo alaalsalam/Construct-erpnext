@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "BMA-.YYYY.-.#####",
+ "creation": "2026-05-14 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["attempt_section", "backlog_request", "attempt_date", "result", "matched_unit", "metrics_column", "units_checked", "best_score", "remarks"],
+ "fields": [
+  {"fieldname": "attempt_section", "fieldtype": "Section Break", "label": "Backlog Match Attempt"},
+  {"description": "Backlog Request being retried.", "fieldname": "backlog_request", "fieldtype": "Link", "in_list_view": 1, "label": "Backlog Request", "options": "Backlog Request", "reqd": 1},
+  {"description": "Date and time of this retry attempt.", "fieldname": "attempt_date", "fieldtype": "Datetime", "in_list_view": 1, "label": "Attempt Date"},
+  {"description": "Retry result.", "fieldname": "result", "fieldtype": "Select", "in_list_view": 1, "label": "Result", "options": "No Match\nMatched\nBelow Threshold"},
+  {"description": "Best matched Unit if one was found.", "fieldname": "matched_unit", "fieldtype": "Link", "label": "Matched Unit", "options": "Unit"},
+  {"fieldname": "metrics_column", "fieldtype": "Column Break"},
+  {"description": "Number of Units checked in this attempt.", "fieldname": "units_checked", "fieldtype": "Int", "label": "Units Checked"},
+  {"description": "Best score found in this attempt.", "fieldname": "best_score", "fieldtype": "Float", "label": "Best Score"},
+  {"description": "Operational notes for this retry attempt.", "fieldname": "remarks", "fieldtype": "Small Text", "label": "Remarks"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Backlog Matching",
+ "name": "Backlog Match Attempt",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 1, "write": 1}
+ ],
+ "sort_field": "attempt_date",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "description": "Retry attempt for an unmet real estate customer requirement."
+}

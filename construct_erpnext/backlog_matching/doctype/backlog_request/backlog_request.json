@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "BLR-.YYYY.-.#####",
+ "creation": "2026-05-14 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["request_section", "customer_requirement", "lead", "customer", "status", "reason", "priority_score", "dates_column", "waiting_since", "last_match_attempt", "matched_unit", "summary_section", "requirement_summary", "remarks"],
+ "fields": [
+  {"fieldname": "request_section", "fieldtype": "Section Break", "label": "Backlog Request"},
+  {"description": "Customer Requirement that could not be matched yet.", "fieldname": "customer_requirement", "fieldtype": "Link", "in_list_view": 1, "label": "Customer Requirement", "options": "Customer Requirement", "reqd": 1, "unique": 1},
+  {"description": "Related ERPNext Lead if available.", "fieldname": "lead", "fieldtype": "Link", "label": "Lead", "options": "Lead"},
+  {"description": "Related ERPNext Customer if available.", "fieldname": "customer", "fieldtype": "Link", "label": "Customer", "options": "Customer"},
+  {"default": "Active", "description": "Current backlog status.", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "in_standard_filter": 1, "label": "Status", "options": "Active\nMatched\nClosed\nCancelled"},
+  {"default": "No Match", "description": "Main reason why the request is in backlog.", "fieldname": "reason", "fieldtype": "Select", "in_list_view": 1, "label": "Reason", "options": "No Match\nBudget Gap\nArea Gap\nType Gap"},
+  {"default": "50", "description": "Priority score used to sort backlog follow-up.", "fieldname": "priority_score", "fieldtype": "Float", "in_list_view": 1, "label": "Priority Score"},
+  {"fieldname": "dates_column", "fieldtype": "Column Break"},
+  {"default": "Today", "description": "Date when this backlog request started waiting.", "fieldname": "waiting_since", "fieldtype": "Date", "label": "Waiting Since"},
+  {"description": "Last date/time when backlog matching was retried.", "fieldname": "last_match_attempt", "fieldtype": "Datetime", "label": "Last Match Attempt", "read_only": 1},
+  {"description": "Matched Unit when a later retry finds a suitable unit.", "fieldname": "matched_unit", "fieldtype": "Link", "label": "Matched Unit", "options": "Unit", "read_only": 1},
+  {"fieldname": "summary_section", "fieldtype": "Section Break", "label": "Summary"},
+  {"description": "Readable summary of the customer requirement gap.", "fieldname": "requirement_summary", "fieldtype": "Small Text", "label": "Requirement Summary"},
+  {"description": "Internal backlog notes.", "fieldname": "remarks", "fieldtype": "Text", "label": "Remarks"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Backlog Matching",
+ "name": "Backlog Request",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "description": "Unmet real estate customer requirement waiting for future matching."
+}

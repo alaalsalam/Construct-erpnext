@@ -1904,6 +1904,31 @@ Recommended Units Report,تقرير الوحدات المقترحة
 Matching Performance Summary,ملخص أداء المطابقة
 Results Count,عدد النتائج
 Average Best Score,متوسط أفضل درجة
+Backlog Matching,مطابقة قائمة الانتظار
+Backlog Request,طلب قائمة انتظار
+Backlog Requests,طلبات قائمة الانتظار
+Backlog Match Attempt,محاولة مطابقة قائمة انتظار
+Backlog Match Attempts,محاولات مطابقة قائمة الانتظار
+Reason,السبب
+No Match,لا توجد مطابقة
+Budget Gap,فجوة الميزانية
+Area Gap,فجوة المساحة
+Type Gap,فجوة النوع
+Priority Score,درجة الأولوية
+Waiting Since,ينتظر منذ
+Last Match Attempt,آخر محاولة مطابقة
+Matched Unit,الوحدة المطابقة
+Requirement Summary,ملخص المتطلب
+Attempt,المحاولة
+Attempt Date,تاريخ المحاولة
+Units Checked,الوحدات المفحوصة
+Below Threshold,أقل من الحد المطلوب
+Backlog Request Register,سجل طلبات قائمة الانتظار
+Market Demand Gap Report,تقرير فجوات طلب السوق
+Backlog Matching Attempts Report,تقرير محاولات مطابقة قائمة الانتظار
+Active Count,عدد النشط
+Matched Count,عدد المطابق
+Average Priority,متوسط الأولوية
 Rent Invoice Collection Settings,إعدادات فواتير وتحصيل الإيجارات
 Enable Rent Invoice Generation,تفعيل إنشاء فواتير الإيجار
 Auto Submit Rent Invoice,ترحيل فاتورة الإيجار تلقائياً

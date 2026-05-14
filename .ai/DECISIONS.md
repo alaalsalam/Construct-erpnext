@@ -298,3 +298,10 @@
 - Match Result records store ranked recommendations and explanation notes but do not create reservations or contracts.
 - Reserved, Sold, Rented, Blocked, or otherwise unavailable Units are excluded from recommendations.
 - Requirements with no result above the configured minimum score remain available for Backlog Matching.
+
+## ADR-038: Backlog Matching Records Unmet Demand Without Automation Side Effects
+
+- Backlog Request is created from Customer Requirements that do not receive a suitable Smart Matching result.
+- Backlog Match Attempt records retry history and available units checked.
+- Backlog Matching does not reserve units, create tasks, send external notifications, or create accounting documents.
+- Notifications and automation are handled in a later readiness phase.

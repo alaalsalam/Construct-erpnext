@@ -1449,3 +1449,24 @@
   - Created/updated Match Results `MATCH-2026-00001` to `MATCH-2026-00005`.
   - Final performance summary: 2 Open results with 4 available-unit recommendations, 3 No Suitable Match results.
 - No reservations, contracts, invoices, Payment Entries, Journal Entries, or GL Entries were created by Smart Matching.
+
+## 2026-05-14 CMD-FINAL-01 Phase F Backlog Matching Foundation
+
+- Added new `Backlog Matching` module with:
+  - `Backlog Request`.
+  - `Backlog Match Attempt`.
+- Added backlog services to create backlog requests from unmatched Customer Requirements and retry matching later.
+- Backlog Request captures reason, priority score, waiting date, latest retry, matched unit if found, and requirement summary.
+- Backlog Match Attempt records each retry with units checked, best score, result, and matched unit if any.
+- Added reports:
+  - Backlog Request Register.
+  - Market Demand Gap Report.
+  - Backlog Matching Attempts Report.
+- Added Backlog Matching workspace links to Sales & Rental, Executive Control Center, Reports & Analytics, and Real Estate Inventory.
+- Added Arabic translations for backlog requests, attempts, gap reasons, and reports.
+- Validation:
+  - Created 3 Backlog Requests: `BLR-2026-00001` to `BLR-2026-00003`.
+  - Created initial retry attempts `BMA-2026-00001` to `BMA-2026-00003`.
+  - Re-ran retry after correcting Units Checked logic, creating `BMA-2026-00004` to `BMA-2026-00006`.
+  - Latest attempts checked 6 available units each and remained `No Match`, which is expected for the retained backlog scenario.
+- No notifications, reservations, contracts, invoices, Payment Entries, Journal Entries, or GL Entries were created by Backlog Matching.

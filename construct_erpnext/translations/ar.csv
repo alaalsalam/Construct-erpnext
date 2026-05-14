@@ -1854,6 +1854,46 @@ Draft Invoice,فاتورة مسودة
 Create Rent Invoice,إنشاء فاتورة إيجار
 Submit Rent Invoice,ترحيل فاتورة الإيجار
 Create Rent Payment Entry,إنشاء سند تحصيل إيجار
+Brokerage,الوساطة العقارية
+Broker,وسيط
+Broker Details,بيانات الوسيط
+Broker Name,اسم الوسيط
+Broker Type,نوع الوسيط
+Commission Rule,قاعدة العمولة
+Commission Entry,قيد عمولة
+Rule Details,بيانات القاعدة
+Rule Name,اسم القاعدة
+Transaction Type,نوع العملية
+Sale,بيع
+Rent,إيجار
+Applies To,ينطبق على
+Commission Terms,شروط العمولة
+Commission Basis,أساس العمولة
+Contract Amount,قيمة العقد
+Invoice Amount,قيمة الفاتورة
+Collected Amount,المبلغ المحصل
+Commission Percent,نسبة العمولة
+Fixed Amount,مبلغ ثابت
+Commission Information,بيانات العمولة
+Source References,مراجع المصدر
+Calculation,الحساب
+Commission Base Amount,مبلغ أساس العمولة
+Commission Amount,مبلغ العمولة
+Payment Status,حالة الدفع
+Payment Reference,مرجع الدفع
+Accrued,مستحقة
+Commission Register,سجل العمولات
+Broker Performance Report,تقرير أداء الوسطاء
+Commission Payable Summary,ملخص العمولات المستحقة
+Commission Entries,عدد قيود العمولة
+Sales Count,عدد عمليات البيع
+Rent Count,عدد عمليات الإيجار
+Approved Amount,المبلغ المعتمد
+Accrued Amount,المبلغ المستحق
+Payable Amount,المبلغ واجب السداد
+Commission Rule requires either Commission Percent or Fixed Amount.,قاعدة العمولة تتطلب نسبة عمولة أو مبلغاً ثابتاً.
+Commission Entry requires at least one source transaction reference.,قيد العمولة يتطلب مرجع عملية واحداً على الأقل.
+Commission Entry already exists for this broker/rule/transaction.,يوجد قيد عمولة سابق لنفس الوسيط والقاعدة والعملية.
 Contract Information,بيانات العقد
 Installments,الأقساط
 Real estate unit sales installment {0} for contract {1},قسط بيع وحدة عقارية {0} للعقد {1}

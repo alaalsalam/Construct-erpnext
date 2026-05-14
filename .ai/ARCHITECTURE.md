@@ -551,3 +551,12 @@ Integration:
 - Construction Work Item is the operational bridge across BOQ, procurement, contractor agreement, measurement, IPC, contractor ledger, retention, and CFO reporting.
 - Measurement Book, Measurement Entry, Interim Payment Certificate, and IPC Line carry the contractor agreement link where available.
 - Contractor Agreement progress is operational; it does not create accounting documents, Payment Entries, Journal Entries, Sales Invoices, or GL backfills.
+
+## Brokerage and Commission Foundation
+
+- `construct_erpnext/brokerage` contains the operational brokerage and commission foundation.
+- `Broker` represents a broker or brokerage office without duplicating ERPNext Customer/Supplier structures.
+- `Commission Rule` defines sale/rent commission basis, percentage, fixed amount, and applicable source document.
+- `Commission Entry` records calculated commission against Sales Contract, Lease Contract, Sales Invoice, or Payment Entry references where applicable.
+- Commission calculation is operational only and does not create Payment Entry, Purchase Invoice, Journal Entry, or GL Entry.
+- Reports summarize commission register, broker performance, and payable commission exposure for management review.

@@ -276,3 +276,11 @@
 - Payment Entry remains ERPNext's official collection document for rent collections.
 - Lease Contract totals and Rent Schedule statuses are synchronized from submitted Sales Invoices and Payment Entry references.
 - Automatic bulk rent invoice submission remains disabled; controlled validation may submit one invoice/payment only through standard ERPNext validation.
+
+## ADR-035: Brokerage Commission Is Operational Until Finance Payout Design
+
+- Broker commission is tracked through `Broker`, `Commission Rule`, and `Commission Entry`.
+- Commission can be calculated from Sales Contract, Lease Contract, or Sales Invoice source documents according to an active Commission Rule.
+- Commission Entry does not create Payment Entry, Journal Entry, Purchase Invoice, or GL Entry.
+- Broker payout accounting is deferred until finance approves accounts, taxes, payout workflow, and document controls.
+- Duplicate commission entries are blocked for the same broker, rule, and source transaction unless a future split-commission design is approved.

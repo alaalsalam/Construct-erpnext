@@ -1378,3 +1378,30 @@
   - Rent Schedule row `1jlcv8vu0g` is `Partially Paid`, paid `175,000.00`, outstanding `175,000.00`.
   - Lease Contract `LC-2026-00001` is `Partially Collected`.
 - No Journal Entry was manually created, no GL backfill was run, and no ERPNext accounting validation was bypassed.
+
+## 2026-05-14 CMD-FINAL-01 Phase C Brokerage and Commission Foundation
+
+- Added new `Brokerage` module with operational commission tracking DocTypes:
+  - `Broker`.
+  - `Commission Rule`.
+  - `Commission Entry`.
+- Added commission services that calculate commission from Sales Contract, Lease Contract, or Sales Invoice sources depending on the selected rule.
+- Commission remains operational only:
+  - no Payment Entry is created for broker commission.
+  - no Journal Entry is created.
+  - no GL posting or accounting bypass is performed.
+- Added reports:
+  - Commission Register.
+  - Broker Performance Report.
+  - Commission Payable Summary.
+- Added brokerage links to Sales & Rental, Executive Control Center, and Reports & Analytics through idempotent workspace setup.
+- Added Arabic translations for broker, commission rules, commission entries, reports, and payable summary labels.
+- Validation scenario:
+  - Broker: `وسيط عقاري رئيسي`.
+  - Commission Rule: `عمولة مبيعات عقارية 2.5%`.
+  - Commission Entry: `COM-2026-00001`.
+  - Source Sales Contract: `SC-PROJ-0002-001`.
+  - Commission base amount: `12,100,000.00`.
+  - Commission amount: `302,500.00`.
+  - Status: `Accrued`.
+- Reports loaded with rows and workspace links were validated.

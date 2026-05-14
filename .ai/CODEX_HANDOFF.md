@@ -685,3 +685,17 @@ CMD-FINAL-01 Phase B rent invoice and collections:
 - Reports validated with rows: Tenant Statement, Rent Invoice from Schedule Report, Rent Collection Report, Overdue Rent Report, Unit Rental Revenue Report, Lease Collection Summary.
 - `ar.csv` parses cleanly after removing old blank/comment rows and fixing comma-heavy source strings.
 - Current next action: Continue CMD-FINAL-01 Phase C: implement Brokerage and Commission foundation.
+
+CMD-FINAL-01 Phase C brokerage and commission:
+- Branch: `feature/final-real-estate-erp-completion`.
+- Added `Broker`, `Commission Rule`, and `Commission Entry` DocTypes under the new `Brokerage` module.
+- Added `construct_erpnext.brokerage.commission_utils` for safe operational commission creation from Sales Contract, Lease Contract, or Sales Invoice.
+- Validation records:
+  - Broker `وسيط عقاري رئيسي`.
+  - Rule `عمولة مبيعات عقارية 2.5%`.
+  - Entry `COM-2026-00001` for `SC-PROJ-0002-001`.
+  - Commission amount `302,500.00` on base `12,100,000.00`.
+- Commission reports load with rows: Commission Register, Broker Performance Report, Commission Payable Summary.
+- Workspace links are present in Sales & Rental, Executive Control Center, and Reports & Analytics.
+- No broker Payment Entry, Journal Entry, or GL posting was created.
+- Current next action: Continue CMD-FINAL-01 Phase D: implement Real Estate CRM foundation.

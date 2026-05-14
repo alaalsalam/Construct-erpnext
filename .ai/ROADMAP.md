@@ -187,4 +187,5 @@ Phase 1 client presentation closure:
 - Complete Sales Invoice Posting and Collections for one controlled PROJ-0002 sales invoice/payment validation. Completed.
 - Complete Rent Invoice and Rent Collections foundation using ERPNext Sales Invoice and Payment Entry on retained lease `LC-2026-00001`. Completed.
 - Add Brokerage and Commission foundation for operational broker commission tracking. Completed.
-- Next CMD-FINAL phase: Real Estate CRM foundation.
+- Add Real Estate CRM foundation for customer requirements, viewing appointments, follow-ups, and pipeline reports. Completed.
+- Next CMD-FINAL phase: Smart Matching foundation.

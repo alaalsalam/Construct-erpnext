@@ -560,3 +560,12 @@ Integration:
 - `Commission Entry` records calculated commission against Sales Contract, Lease Contract, Sales Invoice, or Payment Entry references where applicable.
 - Commission calculation is operational only and does not create Payment Entry, Purchase Invoice, Journal Entry, or GL Entry.
 - Reports summarize commission register, broker performance, and payable commission exposure for management review.
+
+## Real Estate CRM Foundation
+
+- `construct_erpnext/real_estate_crm` contains the operational real estate CRM layer.
+- `Customer Requirement` stores buyer, renter, and investor preferences before reservation or contract creation.
+- `Viewing Appointment` links a requirement to a Unit for scheduled viewing and feedback.
+- `Real Estate Follow Up` stores follow-up activities, communication channel, result, and next action.
+- CRM reports summarize requirements, pipeline value, viewing schedule, follow-ups, and lead/source performance.
+- CRM does not create accounting documents, reservations, contracts, invoices, or payments automatically.

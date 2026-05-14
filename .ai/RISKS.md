@@ -155,3 +155,4 @@ Updated risks:
 - `LC-2026-00001` belongs to `PROJ-0001` / `REP-2026-00001`; PROJ-0002 remains the main construction/sales presentation project, while this lease is the retained rental validation record until a PROJ-0002 lease is explicitly created.
 - Commission entries are operational accrual records only. They do not create broker payable accounting, Payment Entries, Journal Entries, or GL Entries until a future finance-approved commission payout design is implemented.
 - Commission duplicate prevention is based on broker, commission rule, and source transaction; future split-commission or multi-broker scenarios require an approved design before enabling multiple active entries for the same source.
+- Real Estate CRM is an operational sales pipeline layer. It does not reserve units, create contracts, create invoices, or trigger notifications automatically; users must deliberately convert qualified requirements through reservation/sales processes.

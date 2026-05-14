@@ -1817,6 +1817,63 @@ Total Collected Sales,إجمالي مبيعات محصلة
 Outstanding Sales Amount,مبلغ المبيعات المتبقي
 Overdue Installments Count,عدد الأقساط المتأخرة
 Overdue Installments Amount,مبلغ الأقساط المتأخرة
+Real Estate CRM,إدارة علاقات العملاء العقارية
+Customer Requirement,متطلب العميل
+Customer Requirements,متطلبات العملاء
+Viewing Appointment,موعد معاينة
+Viewing Appointments,مواعيد المعاينة
+Real Estate Follow Up,متابعة عقارية
+Real Estate Follow Ups,متابعات عقارية
+Requirement,المتطلب
+Requirement Title,عنوان المتطلب
+Requirement Date,تاريخ المتطلب
+Requirement Type,نوع المتطلب
+Buy,شراء
+Rent,إيجار
+Investment,استثمار
+Qualified,مؤهل
+Matched,تمت المطابقة
+Won,مغلق بنجاح
+Lost,مغلق بخسارة
+Backlog,قائمة انتظار
+Priority,الأولوية
+Urgent,عاجل
+Lead Source,مصدر العميل المحتمل
+Preferences,التفضيلات
+Preferred Project,المشروع المفضل
+Preferred Floor,الدور المفضل
+Preferred Area Min,أقل مساحة مفضلة
+Preferred Area Max,أعلى مساحة مفضلة
+Budget Min,أقل ميزانية
+Budget Max,أعلى ميزانية
+Bedrooms,غرف النوم
+Bathrooms,دورات المياه
+Location Notes,ملاحظات الموقع
+Required Features,المزايا المطلوبة
+Appointment,الموعد
+Appointment Date,تاريخ الموعد
+Feedback,ملاحظات المعاينة
+Follow Up,متابعة
+Follow Up Date,تاريخ المتابعة
+Channel,قناة التواصل
+Result,النتيجة
+Next Step,الخطوة التالية
+Next Action,الإجراء التالي
+Needs More Options,يحتاج خيارات إضافية
+Scheduled Viewing,تم تحديد معاينة
+Not Interested,غير مهتم
+No Response,لا يوجد رد
+No Show,لم يحضر
+Message,رسالة
+Customer Requirement Register,سجل متطلبات العملاء
+Sales Pipeline by Requirement,مسار المبيعات حسب المتطلبات
+Viewing Schedule Report,تقرير جدول المعاينات
+Follow Up Report,تقرير المتابعات
+Lead Source Summary,ملخص مصادر العملاء المحتملين
+Requirements Count,عدد المتطلبات
+Pipeline Value,قيمة المسار
+Won Count,عدد النجاحات
+Backlog Count,عدد قوائم الانتظار
 Rent Invoice Collection Settings,إعدادات فواتير وتحصيل الإيجارات
 Enable Rent Invoice Generation,تفعيل إنشاء فواتير الإيجار
 Auto Submit Rent Invoice,ترحيل فاتورة الإيجار تلقائياً

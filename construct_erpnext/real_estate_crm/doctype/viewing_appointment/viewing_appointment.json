@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "VA-.YYYY.-.#####",
+ "creation": "2026-05-14 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "appointment_section",
+  "requirement",
+  "unit",
+  "appointment_date",
+  "status",
+  "party_column",
+  "lead",
+  "customer",
+  "assigned_to",
+  "feedback_section",
+  "feedback",
+  "remarks"
+ ],
+ "fields": [
+  {"fieldname": "appointment_section", "fieldtype": "Section Break", "label": "Appointment"},
+  {"description": "Customer Requirement that triggered this viewing appointment.", "fieldname": "requirement", "fieldtype": "Link", "in_list_view": 1, "label": "Customer Requirement", "options": "Customer Requirement", "reqd": 1},
+  {"description": "Unit scheduled for viewing.", "fieldname": "unit", "fieldtype": "Link", "in_list_view": 1, "label": "Unit", "options": "Unit", "reqd": 1},
+  {"description": "Date and time agreed with the customer or lead.", "fieldname": "appointment_date", "fieldtype": "Datetime", "in_list_view": 1, "label": "Appointment Date", "reqd": 1},
+  {"default": "Scheduled", "description": "Current viewing appointment status.", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "in_standard_filter": 1, "label": "Status", "options": "Scheduled\nCompleted\nCancelled\nNo Show"},
+  {"fieldname": "party_column", "fieldtype": "Column Break"},
+  {"description": "ERPNext Lead attending the appointment.", "fieldname": "lead", "fieldtype": "Link", "label": "Lead", "options": "Lead"},
+  {"description": "ERPNext Customer attending the appointment.", "fieldname": "customer", "fieldtype": "Link", "label": "Customer", "options": "Customer"},
+  {"description": "User responsible for managing the appointment.", "fieldname": "assigned_to", "fieldtype": "Link", "label": "Assigned To", "options": "User"},
+  {"fieldname": "feedback_section", "fieldtype": "Section Break", "label": "Feedback"},
+  {"description": "Customer or lead feedback after the viewing.", "fieldname": "feedback", "fieldtype": "Small Text", "label": "Feedback"},
+  {"description": "Internal appointment notes.", "fieldname": "remarks", "fieldtype": "Text", "label": "Remarks"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate CRM",
+ "name": "Viewing Appointment",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 1, "write": 1}
+ ],
+ "sort_field": "appointment_date",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "description": "Scheduled real estate unit viewing linked to a customer requirement."
+}

@@ -284,3 +284,10 @@
 - Commission Entry does not create Payment Entry, Journal Entry, Purchase Invoice, or GL Entry.
 - Broker payout accounting is deferred until finance approves accounts, taxes, payout workflow, and document controls.
 - Duplicate commission entries are blocked for the same broker, rule, and source transaction unless a future split-commission design is approved.
+
+## ADR-036: Real Estate CRM Captures Requirements Before Reservation
+
+- Customer Requirement is the CRM source for buyer, renter, and investor needs before reservation or contract creation.
+- Viewing Appointment and Real Estate Follow Up remain operational CRM records and do not change Unit status.
+- CRM does not create Sales Contracts, Lease Contracts, Sales Invoices, Payment Entries, or Journal Entries.
+- Matching and backlog automation are separate foundations and must consume Customer Requirement data without bypassing reservation rules.

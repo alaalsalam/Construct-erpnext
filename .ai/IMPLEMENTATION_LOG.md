@@ -1405,3 +1405,27 @@
   - Commission amount: `302,500.00`.
   - Status: `Accrued`.
 - Reports loaded with rows and workspace links were validated.
+
+## 2026-05-14 CMD-FINAL-01 Phase D Real Estate CRM Foundation
+
+- Added new `Real Estate CRM` module with operational CRM DocTypes:
+  - `Customer Requirement`.
+  - `Viewing Appointment`.
+  - `Real Estate Follow Up`.
+- Customer Requirement captures buyer/renter/investor needs, preferred project, area range, budget range, unit type, source, priority, and status.
+- Viewing Appointment links a requirement to a Unit and captures appointment status and feedback.
+- Real Estate Follow Up links a requirement to a communication channel, result, next action, and assigned user.
+- Added reports:
+  - Customer Requirement Register.
+  - Sales Pipeline by Requirement.
+  - Viewing Schedule Report.
+  - Follow Up Report.
+  - Lead Source Summary.
+- Added CRM links to Sales & Rental, Executive Control Center, and Reports & Analytics through idempotent workspace setup.
+- Added Arabic translations for CRM DocTypes, fields, statuses, and reports.
+- Validation scenario for `REP-2026-00002`:
+  - Created 5 Customer Requirements: `REQ-2026-00001` to `REQ-2026-00005`.
+  - Created 3 Viewing Appointments: `VA-2026-00001` to `VA-2026-00003`.
+  - Created 4 Real Estate Follow Ups: `REFU-2026-00001` to `REFU-2026-00004`.
+  - CRM reports load with rows and show a combined pipeline value of `9,110,000.00`.
+- No invoices, Payment Entries, Journal Entries, GL Entries, or accounting documents were created by CRM.

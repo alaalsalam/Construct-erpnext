@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "REFU-.YYYY.-.#####",
+ "creation": "2026-05-14 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "follow_up_section",
+  "requirement",
+  "follow_up_date",
+  "channel",
+  "result",
+  "party_column",
+  "lead",
+  "customer",
+  "assigned_to",
+  "next_section",
+  "next_action",
+  "remarks"
+ ],
+ "fields": [
+  {"fieldname": "follow_up_section", "fieldtype": "Section Break", "label": "Follow Up"},
+  {"description": "Customer Requirement being followed up.", "fieldname": "requirement", "fieldtype": "Link", "in_list_view": 1, "label": "Customer Requirement", "options": "Customer Requirement", "reqd": 1},
+  {"default": "Today", "description": "Date of the follow-up activity.", "fieldname": "follow_up_date", "fieldtype": "Date", "in_list_view": 1, "label": "Follow Up Date"},
+  {"description": "Communication channel used for this follow-up.", "fieldname": "channel", "fieldtype": "Select", "in_list_view": 1, "label": "Channel", "options": "Call\nEmail\nVisit\nMessage\nOther"},
+  {"description": "Outcome or current result of the follow-up.", "fieldname": "result", "fieldtype": "Select", "in_list_view": 1, "label": "Result", "options": "Interested\nNeeds More Options\nScheduled Viewing\nReserved\nNot Interested\nNo Response"},
+  {"fieldname": "party_column", "fieldtype": "Column Break"},
+  {"description": "ERPNext Lead related to this follow-up.", "fieldname": "lead", "fieldtype": "Link", "label": "Lead", "options": "Lead"},
+  {"description": "ERPNext Customer related to this follow-up.", "fieldname": "customer", "fieldtype": "Link", "label": "Customer", "options": "Customer"},
+  {"description": "User responsible for the next step.", "fieldname": "assigned_to", "fieldtype": "Link", "label": "Assigned To", "options": "User"},
+  {"fieldname": "next_section", "fieldtype": "Section Break", "label": "Next Step"},
+  {"description": "Recommended next action after this follow-up.", "fieldname": "next_action", "fieldtype": "Small Text", "label": "Next Action"},
+  {"description": "Internal sales follow-up notes.", "fieldname": "remarks", "fieldtype": "Text", "label": "Remarks"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate CRM",
+ "name": "Real Estate Follow Up",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 1, "write": 1}
+ ],
+ "sort_field": "follow_up_date",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "description": "Operational real estate sales follow-up linked to a customer requirement."
+}

@@ -699,3 +699,15 @@ CMD-FINAL-01 Phase C brokerage and commission:
 - Workspace links are present in Sales & Rental, Executive Control Center, and Reports & Analytics.
 - No broker Payment Entry, Journal Entry, or GL posting was created.
 - Current next action: Continue CMD-FINAL-01 Phase D: implement Real Estate CRM foundation.
+
+CMD-FINAL-01 Phase D real estate CRM:
+- Branch: `feature/final-real-estate-erp-completion`.
+- Added `Customer Requirement`, `Viewing Appointment`, and `Real Estate Follow Up`.
+- Validation records for `REP-2026-00002`:
+  - Requirements `REQ-2026-00001` to `REQ-2026-00005`.
+  - Viewing Appointments `VA-2026-00001` to `VA-2026-00003`.
+  - Follow Ups `REFU-2026-00001` to `REFU-2026-00004`.
+- Reports load with rows: Customer Requirement Register, Sales Pipeline by Requirement, Viewing Schedule Report, Follow Up Report, Lead Source Summary.
+- Workspace links are present in Sales & Rental, Executive Control Center, and Reports & Analytics.
+- No accounting documents were created.
+- Current next action: Continue CMD-FINAL-01 Phase E: implement Smart Matching foundation.

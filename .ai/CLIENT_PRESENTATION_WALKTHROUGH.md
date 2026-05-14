@@ -873,3 +873,9 @@
 - The system now includes an internal Portal Readiness foundation.
 - During presentation, explain it as a controlled preparation layer for future buyer, tenant, owner, and contractor portals.
 - Do not present it as a live public portal; user creation, public pages, document exposure rules, and payment portal controls remain production-hardening items.
+
+## Notification Readiness Note
+
+- The system now includes internal reminder readiness for reservation expiry, installment due dates, rent due dates, lease expiry, document expiry, and backlog matching.
+- Present it as controlled automation preparation only.
+- Do not present WhatsApp, SMS, or email sending as live functionality.

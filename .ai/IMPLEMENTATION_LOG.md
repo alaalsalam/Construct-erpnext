@@ -1528,3 +1528,26 @@
   - Covered Buyer, Tenant, Owner, and Contractor access scopes.
   - Portal reports load and show rows.
 - No public portal route, portal user, external payment portal, Payment Entry, Journal Entry, GL Entry, or accounting document was created.
+
+## 2026-05-14 CMD-FINAL-01 Phase J Notifications and Automation Readiness
+
+- Added new `Notification Readiness` module with:
+  - `Reminder Setting`.
+  - `Automation Log`.
+- Added default reminder scenarios:
+  - Reservation Expiry.
+  - Installment Due.
+  - Rent Due.
+  - Lease Expiry.
+  - Document Expiry.
+  - Backlog Matched Unit.
+- Added reports:
+  - Notification Readiness Report.
+  - Pending Reminder Actions.
+- Added workspace links to Sales & Rental, Real Estate Inventory, Contractor Management, Executive Control Center, and Reports & Analytics.
+- Added Arabic translations for reminder settings, automation logs, scenarios, channels, statuses, and reports.
+- Validation:
+  - Created 6 Reminder Settings: `REMSET-2026-00001` to `REMSET-2026-00006`.
+  - Created 6 pending internal Automation Logs: `AUTOLOG-2026-00001` to `AUTOLOG-2026-00006`.
+  - Reports load and show reminder/readiness rows.
+- No WhatsApp, Meta, SMS, email sending, Payment Entry, Journal Entry, GL Entry, or accounting document was created.

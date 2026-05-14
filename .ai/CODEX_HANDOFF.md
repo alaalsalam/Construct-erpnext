@@ -764,3 +764,14 @@ CMD-FINAL-01 Phase I portal readiness:
 - Workspace links are present in Sales & Rental, Real Estate Inventory, Contractor Management, Executive Control Center, and Reports & Analytics.
 - No portal users, public routes, payment portal, Payment Entries, Journal Entries, or GL Entries were created.
 - Current next action: Continue CMD-FINAL-01 Phase J: implement Notifications and Automation Readiness foundation.
+
+CMD-FINAL-01 Phase J notifications and automation readiness:
+- Added `Reminder Setting` and `Automation Log` under `Notification Readiness`.
+- Default scenarios now exist for Reservation Expiry, Installment Due, Rent Due, Lease Expiry, Document Expiry, and Backlog Matched Unit.
+- Validation records:
+  - Reminder Settings `REMSET-2026-00001` to `REMSET-2026-00006`.
+  - Pending internal Automation Logs `AUTOLOG-2026-00001` to `AUTOLOG-2026-00006`.
+- Reports load with rows: Notification Readiness Report, Pending Reminder Actions.
+- Workspace links are present in Sales & Rental, Real Estate Inventory, Contractor Management, Executive Control Center, and Reports & Analytics.
+- No external messages, WhatsApp/Meta integration, Payment Entries, Journal Entries, or GL Entries were created.
+- Current next action: Continue CMD-FINAL-01 Phase K: prepare permissions, print format readiness, and final QA documentation.

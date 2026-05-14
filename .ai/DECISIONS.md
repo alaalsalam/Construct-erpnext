@@ -325,3 +325,10 @@
 - Portal Display Settings records planned audience readiness and internal messaging.
 - This phase does not create portal users, public routes, payment portal pages, or external authentication.
 - Portal access enforcement, route design, document exposure policy, and payment portal controls are deferred to production hardening.
+
+## ADR-042: Notifications Are Internal Readiness Logs Until Automation Approval
+
+- Reminder Setting defines future reminder scenarios but does not send external messages.
+- Automation Log records pending reminder actions for internal review.
+- Reservation expiry, installment due, rent due, lease expiry, document expiry, and backlog matched-unit reminders are prepared as scenarios.
+- WhatsApp/Meta, SMS, email delivery, escalation rules, and consent handling are deferred until client-approved automation design.

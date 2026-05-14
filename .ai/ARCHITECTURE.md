@@ -604,3 +604,10 @@ Integration:
 - `Portal Display Settings` is a Single DocType for internal portal readiness status.
 - The foundation is metadata-only and does not expose public routes, create users, or process portal payments.
 - Links remain connected to existing Customer, Supplier, Property Owner, Unit, Sales Contract, Lease Contract, and Contractor Agreement records.
+
+## Notification Readiness Foundation
+
+- `Reminder Setting` stores reminder scenario configuration.
+- `Automation Log` stores internal pending reminder actions.
+- The foundation does not send email, SMS, WhatsApp, or external messages.
+- Reminder records connect to source documents through `source_doctype` and `source_document` for future automation routing.

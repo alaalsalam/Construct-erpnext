@@ -378,3 +378,8 @@ Phase 1 جاهزة للعرض المهني للعميل، بشرط تقديمه�
 
 - Portal Access Profiles can now map future buyer, tenant, owner, and contractor access to existing operational records.
 - This is readiness only: no public portal, no online payment portal, and no external authentication have been activated.
+
+## Notification Readiness Addition
+
+- Reminder settings and pending internal action logs are now available for key real estate operations.
+- External notification delivery is intentionally deferred until the client approves channels, wording, escalation, and consent rules.

@@ -199,3 +199,10 @@ Phase 1 client presentation closure:
 - Added Portal Access Profile and Portal Display Settings.
 - Added portal readiness reports and workspace links.
 - Public portal UI, authentication policy, document exposure, and payment portal remain deferred to production hardening.
+
+## CMD-FINAL-01 Phase J Notification Readiness
+
+- Completed notification readiness foundation.
+- Added Reminder Setting and Automation Log.
+- Added internal pending reminder reports for reservation, installment, rent, lease, document, and backlog scenarios.
+- External notification delivery remains deferred until automation approval.

@@ -161,3 +161,4 @@ Updated risks:
 - Property Maintenance cost fields are management estimates only. They do not create Purchase Invoices, Work Orders, Payment Entries, Journal Entries, or GL Entries.
 - Property Document attachment fields are operational records only. External document storage, retention policy, access control review, and signed document workflow remain production-hardening tasks.
 - Portal Readiness records access scope only. It does not create portal users, public pages, payment portal features, or enforce production access controls; security review is required before any public portal activation.
+- Notification Readiness currently records settings and pending internal logs only. Email/SMS/WhatsApp delivery, escalation rules, retry policy, and consent controls must be approved before live automation.

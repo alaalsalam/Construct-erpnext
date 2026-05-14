@@ -2629,3 +2629,42 @@ Marks tenant portal scope as planned.,يحدد نطاق بوابة المستأ�
 Marks owner portal scope as planned.,يحدد نطاق بوابة المالك كجزء مخطط.
 Marks contractor portal scope as planned.,يحدد نطاق بوابة المقاول كجزء مخطط.
 Profiles Count,عدد الملفات
+Notification Readiness,جاهزية الإشعارات
+Reminder Setting,إعداد تذكير
+Automation Log,سجل الأتمتة
+Notification Readiness Report,تقرير جاهزية الإشعارات
+Pending Reminder Actions,إجراءات التذكير المعلقة
+Scenario,السيناريو
+Lead Days,أيام التذكير المسبق
+Channel,القناة
+Target DocType,نوع المستند المستهدف
+Last Evaluated On,آخر تاريخ تقييم
+Source DocType,نوع مستند المصدر
+Source Document,مستند المصدر
+Due Date,تاريخ الاستحقاق
+Action Notes,ملاحظات الإجراء
+Message Template,قالب الرسالة
+Reservation Expiry,انتهاء الحجز
+Installment Due,استحقاق قسط
+Rent Due,استحقاق إيجار
+Lease Expiry,انتهاء عقد الإيجار
+Document Expiry,انتهاء مستند
+Backlog Matched Unit,وحدة مطابقة من قائمة الانتظار
+Internal Log,سجل داخلي
+Email,بريد إلكتروني
+SMS,رسالة قصيرة
+Enabled,مفعل
+Disabled,معطل
+Pending,معلق
+Skipped,تم التجاوز
+Failed,فشل
+Ready,جاهز
+Completed,مكتمل
+Business reminder scenario prepared for future automation.,سيناريو تذكير تشغيلي معد للأتمتة المستقبلية.
+Readiness status for this reminder scenario.,حالة جاهزية سيناريو التذكير هذا.
+Number of days before the target date when this reminder should be reviewed.,عدد الأيام قبل التاريخ المستهدف لمراجعة هذا التذكير.
+Prepared delivery channel. External sending is not enabled in this phase.,قناة الإرسال المعدة. الإرسال الخارجي غير مفعل في هذه المرحلة.
+Source DocType expected for this reminder.,نوع المستند المتوقع لهذا التذكير.
+Internal reminder message template.,قالب رسالة التذكير الداخلي.
+Last date when this reminder setting was evaluated.,آخر تاريخ تم فيه تقييم إعداد التذكير.
+Internal pending reminder log. It does not send external notifications.,سجل تذكير داخلي معلق. لا يرسل إشعارات خارجية.

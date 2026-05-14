@@ -1333,3 +1333,19 @@
 - Updated Sales & Rental, Executive Presentation Center, Executive Control Center, Real Estate Inventory, and Reports & Analytics workspace links for the new sales collection reports.
 - Added Submitted Sales Invoices KPI card and Arabic translations for sales collection labels.
 - No Journal Entry was manually created, no GL backfill was run, no Lease/Rent/Commission/CRM/Portal/WhatsApp features were created, and old contractor Payment Entries were not modified.
+
+## 2026-05-14 CMD-FINAL-01 Phase A Pre-Flight Integration and System Health
+
+- Created branch `feature/final-real-estate-erp-completion` from `feature/sales-invoice-posting-collections-completion`.
+- Confirmed latest baseline includes sales collections commit `23de8e7`, contractor agreements, report dashboard fixes, PROJ-0002 enriched data, and sales invoice posting/payment validation.
+- Memory check passed with approximately 3.1 GiB available memory; swap remains heavily used and should continue to be monitored before heavy operations.
+- MariaDB check passed with `select 1`.
+- Ran migrate, clear-cache, clear-website-cache, and `bench build --app construct_erpnext` successfully.
+- Baseline validation passed:
+  - Executive Presentation Center exists.
+  - `BOQ-PROJ-0002-001` is Approved / docstatus 1.
+  - PROJ-0002 has four active Contractor Agreement records using `Subcontract`.
+  - `ACC-SINV-2026-00002` is submitted and partly paid.
+  - GL Entries for the submitted Sales Invoice carry Unit dimension.
+  - Key baseline reports load with rows.
+- Non-critical build warning remains from unrelated bench app `doppio` missing `node_modules`; construct_erpnext asset build completed successfully.

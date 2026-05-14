@@ -665,3 +665,12 @@ CMD-27 sales collections completion:
 - New sales reports: Buyer Statement, Sales Installment Collection Status, Unit Revenue and Collection Summary.
 - Do not submit the remaining draft sales invoices unless the user explicitly asks and accounting review approves it.
 - Current next action: Review completed sales collections, then decide whether to proceed with rent invoice collections or Phase 2 CRM.
+
+CMD-FINAL-01 Phase A baseline:
+- Branch: `feature/final-real-estate-erp-completion`.
+- Started from `feature/sales-invoice-posting-collections-completion` at `23de8e7`.
+- Baseline migrate/cache/build passed on `construction.yemenfrappe.com`.
+- `BOQ-PROJ-0002-001` remains Approved.
+- PROJ-0002 Contractor Agreements remain active.
+- `ACC-SINV-2026-00002` remains submitted / partly paid and GL carries Unit dimension.
+- Current next action: Continue CMD-FINAL-01 Phase B: implement Rent Invoice and Rent Collections foundation.

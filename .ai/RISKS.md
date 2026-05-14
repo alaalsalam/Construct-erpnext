@@ -149,3 +149,4 @@ Updated risks:
 - Only `ACC-SINV-2026-00002` was submitted. Remaining draft invoices `ACC-SINV-2026-00003` and `ACC-SINV-2026-00004` remain unsubmitted by design.
 - Mode of Payment `نقداً` was created as minimal safe master data for the one sales collection validation and linked to `Cash - YCRE`.
 - Sales collection GL traceability is now validated for one unit-specific invoice/payment pair; broader production rollout still needs finance approval for tax, receivable, payment modes, permissions, and print formats.
+- CMD-FINAL-01 baseline passed, but swap usage remains high. Continue checking `free -h` and `swapon --show` before migrations and stop if MariaDB becomes unstable.

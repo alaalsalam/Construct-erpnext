@@ -6,11 +6,13 @@ def get_data():
 		"fieldname": "interim_payment_certificate",
 		"non_standard_fieldnames": {
 			"Measurement Entry": "interim_payment_certificate",
+			"Subcontract": "subcontract",
+			"Contractor Account": "last_ipc",
 			"Contractor Ledger Entry": "ipc",
 			"Retention Register": "ipc",
 		},
 		"transactions": [
-			{"label": _("Measurement"), "items": ["Measurement Entry"]},
-			{"label": _("Contractor Control"), "items": ["Contractor Ledger Entry", "Retention Register"]},
+			{"label": _("Agreement"), "items": ["Subcontract", "Measurement Book", "Measurement Entry"]},
+			{"label": _("Contractor Ledger"), "items": ["Contractor Account", "Contractor Ledger Entry", "Retention Register"]},
 		],
 	}

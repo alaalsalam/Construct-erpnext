@@ -1268,3 +1268,43 @@
 - Restored report dashboard cards using the standard report `message` return slot instead of Frappe `report_summary`.
 - This keeps DataTable rendering untouched while showing KPI-style cards above the table.
 - Validated Arabic visible project filters return rows and dashboard message for Project Financial Snapshot, Project EVM Metrics, Procurement Budget Control, and Project Purchase Control Summary.
+
+## 2026-05-14 CMD-CONTRACTOR-01 Contractor Agreements and BOQ-to-IPC Contract Linkage
+
+- Enhanced existing `Subcontract` as the client-facing Contractor Agreement layer instead of creating duplicate contractor agreement DocTypes.
+- Enhanced `Subcontract Activity` as linked agreement items with Construction Work Item, BOQ, WBS, Cost Code, Item, UOM, agreed quantity/rate/amount, measured quantity, certified quantity, remaining quantity, and item status.
+- Added Contractor Agreement links to Construction Work Item, Measurement Book, Measurement Entry, Interim Payment Certificate, and IPC Line.
+- Added contractor agreement service utilities for creating agreements from Work Items, validating Work Item assignment, recalculating progress, and syncing from Measurement Entry / IPC.
+- Added Contractor Agreement Approval Workflow through idempotent after_migrate setup using Frappe ORM.
+- Added reports: Contractor Agreement Register, Contractor Agreement Item Progress, Contractor Agreement to IPC Traceability, and Contractor Agreement Exposure Summary.
+- Updated Contractor Management, Measurement & IPC, Construction Control, Executive Presentation Center, and Reports & Analytics workspaces with agreement links/reports.
+- Created 4 active PROJ-0002 contractor agreements:
+  - SC-2026-0002: اتفاقية مقاول الأعمال الإنشائية.
+  - SC-2026-0003: اتفاقية مقاول أعمال الكهرباء.
+  - SC-2026-0004: اتفاقية مقاول أعمال التشطيبات.
+  - SC-2026-0005: اتفاقية مقاول أعمال الواجهات.
+- Linked 38 PROJ-0002 Work Items, 16 Measurement Entries, and IPC lines to contractor agreements where available.
+- No Payment Entry, Journal Entry, Sales Invoice submission, GL backfill, raw SQL, Server Script, or ERPNext core modification was performed.
+- NEXT_ACTION set to Present PROJ-0002 Phase 1 to client using the contractor agreement linkage story and collect handover feedback.
+
+## 2026-05-14 CMD-INTEGRATION-01 Create Integrated Phase 1 Branch Before CMD-27
+
+- Created branch `feature/phase-1-integrated-presentation-ready` from `feature/fix-report-tables-and-generic-kpis`.
+- Merged `feature/contractor-agreements-boq-ipc-linkage` to preserve both report/dashboard table fixes and Contractor Agreement linkage.
+- Resolved conflicts in `.ai` memory files, dashboard connection files, and Arabic translations by keeping generic report KPI behavior plus contractor agreement references.
+- Corrected the bench app registry from `frappe_book_tutor` to `book_tutor` in `/home/frappe/frappe-bench/sites/apps.txt` after bench commands failed before site initialization; backup saved as `apps.txt.bak-cmd-integration-01`.
+- Ran migrate, clear-cache, clear-website-cache, and `bench build --app construct_erpnext` successfully.
+- Validated report/dashboard fixes:
+  - Project Purchase Control Summary: 72 rows with message dashboard and no native report_summary.
+  - Project Financial Snapshot Report: 2 rows with message dashboard and no native report_summary.
+  - Work Item Procurement Summary: 72 rows.
+  - Procurement Budget Control: 72 rows.
+  - IPC Register: 5 rows.
+  - Contractor Exposure Summary: 13 rows.
+  - No `PROJ-0002` hardcoded Number Cards remain.
+- Validated Contractor Agreement linkage:
+  - 4 PROJ-0002 agreements: `SC-2026-0002` to `SC-2026-0005`.
+  - 38 Work Items, 16 Measurement Entries, and 3 IPC headers are linked to agreements; IPC line-level traceability remains available through the agreement reports.
+  - Contractor Agreement Register, Item Progress, IPC Traceability, and Exposure Summary reports load.
+- Safety validation: no Journal Entries or submitted Sales Invoices exist; existing 9 Payment Entries are retained from the previous contractor payment presentation scenario and none were created by this integration task.
+- The integrated branch is now the required source branch for CMD-27 Sales Invoice Posting and Collections Completion.

@@ -1,3 +1,3 @@
 # Next Action
 
-Present PROJ-0002 using filtered reports and generic executive KPI cards.
+Start CMD-27 Sales Invoice Posting and Collections Completion from feature/phase-1-integrated-presentation-ready.

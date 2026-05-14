@@ -15,6 +15,7 @@ after_migrate = [
     "construct_erpnext.procurement_control.setup.after_migrate",
     "construct_erpnext.measurement_ipc.setup.ensure_measurement_book_workflow",
     "construct_erpnext.measurement_ipc.setup.ensure_interim_payment_certificate_workflow",
+    "construct_erpnext.contractor_management.setup.after_migrate",
     "construct_erpnext.cfo_analytics.setup.after_migrate",
     "construct_erpnext.unit_costing.setup.after_migrate",
     "construct_erpnext.real_estate_inventory.setup.after_migrate",

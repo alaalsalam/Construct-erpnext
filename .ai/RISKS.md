@@ -138,3 +138,10 @@ Updated risks:
 - Avoid adding custom report formatters back to the affected reports until the blank table rendering issue is tested in the browser. Use standard Frappe report tables for the client presentation.
 
 - Report KPI dashboards currently use the report message area rather than native `report_summary` because native summaries caused blank table rendering in the deployed UI. This is intentional for presentation stability.
+
+- Contractor Agreement uses the existing `Subcontract` technical DocType. User-facing labels and reports present it as Contractor Agreement / اتفاقية مقاول, but technical references may still show Subcontract in advanced metadata.
+- Work Item splitting across multiple active contractor agreements is intentionally blocked for now; partial split scopes should be handled as a future enhancement if needed.
+- Some PROJ-0002 IPC parent records can cover lines from more than one contractor agreement, so line-level Contractor Agreement traceability is more precise than parent-level linkage in those cases.
+- Agreement progress fields are operational management summaries and do not replace ERPNext accounting or GL.
+- Integrated Phase 1 branch now combines report-dashboard table stability fixes with contractor agreement linkage. Future CMD-27 work should start from `feature/phase-1-integrated-presentation-ready` to avoid losing either feature set.
+- Bench global `sites/apps.txt` previously listed `frappe_book_tutor` while the Python package is `book_tutor`, which blocked all bench commands. It was corrected during integration with a backup file, but future app installs should verify app name/package name alignment.

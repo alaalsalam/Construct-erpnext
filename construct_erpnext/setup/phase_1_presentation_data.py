@@ -1832,6 +1832,7 @@ def enrich_proj_0002_presentation_data():
         summary["measurements"] = enrich_proj_0002_measurements(ctx)
         summary["ipcs"] = enrich_proj_0002_ipcs(ctx)
         summary["contractors"] = enrich_proj_0002_contractors(ctx)
+        summary["contractor_agreements"] = enrich_proj_0002_contractor_agreements(ctx)
         summary["cfo"] = enrich_proj_0002_cfo(ctx)
         summary["inventory"] = enrich_proj_0002_real_estate_inventory(ctx)
         summary["unit_costing"] = enrich_proj_0002_unit_costing(ctx)
@@ -2228,6 +2229,178 @@ def enrich_proj_0002_contractors(ctx=None):
         }, {"guarantee_number": f"PG-PROJ-0002-{i:02d}"})
         guarantees.append(gr.name)
     return {"contractor_accounts": accounts, "advance_registers": advances, "guarantee_registers": guarantees}
+
+
+def enrich_proj_0002_contractor_agreements(ctx=None):
+    ctx = ctx or _get_proj_0002_context_docs()
+    project = ctx["project"].name
+    boq = ctx["boq"].name
+    specs = [
+        (
+            "اتفاقية مقاول الأعمال الإنشائية",
+            "مقاول الأعمال الإنشائية",
+            ("حفر", "ردم", "تسوية", "خرسانة", "حديد", "أعمدة", "أسقف", "أساسات"),
+        ),
+        (
+            "اتفاقية مقاول أعمال الكهرباء",
+            "مقاول أعمال الكهرباء",
+            ("كهرباء", "تمديدات الكهرباء", "لوحات", "إنارة"),
+        ),
+        (
+            "اتفاقية مقاول أعمال التشطيبات",
+            "مقاول أعمال التشطيبات",
+            ("لياسة", "دهانات", "أرضيات", "أبواب", "نوافذ", "تشطيبات"),
+        ),
+        (
+            "اتفاقية مقاول أعمال الواجهات",
+            "مقاول أعمال الواجهات",
+            ("واجهات", "عزل", "موقع عام", "موقع", "مصاعد"),
+        ),
+    ]
+    from construct_erpnext.contractor_management.agreement_utils import (
+        append_agreement_item_from_work_item,
+        link_work_items_to_agreement,
+        recalculate_agreement_totals,
+        sync_agreement_items_from_work_items,
+        update_agreement_from_ipc,
+    )
+
+    created = []
+    for title, contractor_name, keywords in specs:
+        contractor = _get_or_create_named_supplier(contractor_name)
+        existing = frappe.db.exists(
+            "Subcontract",
+            {"project": project, "contractor": contractor, "contract_title": title, "docstatus": ["!=", 2]},
+        )
+        if existing:
+            agreement = frappe.get_doc("Subcontract", existing)
+            created.append(agreement.name)
+            continue
+
+        work_items = _select_proj2_work_items_for_agreement(project, keywords)
+        if not work_items:
+            continue
+
+        agreement = frappe.new_doc("Subcontract")
+        agreement.company = ctx["company"]
+        agreement.project = project
+        agreement.contractor = contractor
+        agreement.contract_title = title
+        agreement.agreement_number = title.replace(" ", "-")
+        agreement.agreement_date = nowdate()
+        agreement.agreement_type = "Unit Rate"
+        agreement.construction_boq = boq
+        agreement.contract_status = "Draft"
+        agreement.workflow_state = "Draft"
+        agreement.retention_percent = 10
+        agreement.start_date = add_days(nowdate(), -120)
+        agreement.end_date = add_days(nowdate(), 180)
+        agreement.expected_end_date = add_days(nowdate(), 180)
+        agreement.scope_summary = f"نطاق اتفاقية مقاول مرتبط ببنود عمل PROJ-0002 - {PROJ_0002_BATCH}"
+        agreement.payment_terms = "الدفع حسب المستخلصات المعتمدة مع احتجاز 10%."
+        agreement.penalty_terms = "تطبق غرامات التأخير حسب شروط العقد عند تجاوز المدة دون اعتماد تمديد."
+        agreement.guarantee_terms = "ضمان أداء تشغيلي مسجل في سجل الضمانات عند توفره."
+        agreement.remarks = "اتفاقية مقاول مخصصة لعرض الربط من BOQ إلى القياس والمستخلص."
+
+        for work_item in work_items:
+            append_agreement_item_from_work_item(agreement, frappe.get_doc("Construction Work Item", work_item))
+
+        sync_agreement_items_from_work_items(agreement)
+        recalculate_agreement_totals(agreement)
+        agreement.insert(ignore_permissions=True)
+        _activate_contractor_agreement_with_workflow(agreement.name)
+        agreement = frappe.get_doc("Subcontract", agreement.name)
+        link_work_items_to_agreement(agreement)
+        created.append(agreement.name)
+
+    _link_proj2_measurements_and_ipcs_to_agreements(project)
+    for agreement_name in created:
+        agreement = frappe.get_doc("Subcontract", agreement_name)
+        update_agreement_from_ipc_for_work_items(agreement)
+    return {"contractor_agreements": created, "count": len(created)}
+
+
+def _activate_contractor_agreement_with_workflow(agreement_name):
+    from frappe.model.workflow import apply_workflow
+
+    doc = frappe.get_doc("Subcontract", agreement_name)
+    for action in ("Submit for Review", "Approve", "Activate"):
+        if action == "Activate" and doc.workflow_state == "Active":
+            break
+        doc = apply_workflow(doc.as_dict(), action)
+    return doc.name
+
+
+def update_agreement_from_ipc_for_work_items(agreement):
+    from construct_erpnext.contractor_management.agreement_utils import update_agreement_from_ipc, refresh_contractor_agreement
+
+    ipc_names = set()
+    for row in agreement.activities:
+        if not row.construction_work_item:
+            continue
+        for line in frappe.get_all(
+            "Interim Payment Certificate Line",
+            filters={"construction_work_item": row.construction_work_item},
+            fields=["parent"],
+            limit=1000,
+        ):
+            ipc_names.add(line.parent)
+    for ipc_name in ipc_names:
+        update_agreement_from_ipc(ipc_name)
+    refresh_contractor_agreement(agreement.name)
+
+
+def _select_proj2_work_items_for_agreement(project, keywords):
+    rows = frappe.get_all(
+        "Construction Work Item",
+        filters={"project": project},
+        fields=["name", "description", "subcontract"],
+        order_by="name asc",
+        limit=1000,
+    )
+    selected = []
+    for row in rows:
+        if row.subcontract:
+            continue
+        text = row.description or ""
+        if any(keyword in text for keyword in keywords):
+            selected.append(row.name)
+    return selected[:18]
+
+
+def _link_proj2_measurements_and_ipcs_to_agreements(project):
+    for entry in frappe.get_all(
+        "Measurement Entry",
+        filters={"project": project},
+        fields=["name", "measurement_book", "construction_work_item"],
+        limit=1000,
+    ):
+        agreement = frappe.db.get_value("Construction Work Item", entry.construction_work_item, "subcontract")
+        if not agreement:
+            continue
+        frappe.db.set_value("Measurement Entry", entry.name, "subcontract", agreement, update_modified=False)
+        if entry.measurement_book:
+            frappe.db.set_value("Measurement Book", entry.measurement_book, "subcontract", agreement, update_modified=False)
+
+    for ipc_ref in frappe.get_all(
+        "Interim Payment Certificate",
+        filters={"project": project, "docstatus": ["!=", 2]},
+        fields=["name"],
+        limit=1000,
+    ):
+        ipc = frappe.get_doc("Interim Payment Certificate", ipc_ref.name)
+        agreements = set()
+        for line in ipc.lines:
+            agreement = frappe.db.get_value("Construction Work Item", line.construction_work_item, "subcontract")
+            if not agreement:
+                continue
+            agreements.add(agreement)
+            frappe.db.set_value("Interim Payment Certificate Line", line.name, "subcontract", agreement, update_modified=False)
+            ref = frappe.db.get_value("Construction Work Item", line.construction_work_item, "agreement_item_reference")
+            if ref:
+                frappe.db.set_value("Interim Payment Certificate Line", line.name, "agreement_item_reference", ref, update_modified=False)
+        if len(agreements) == 1:
+            frappe.db.set_value("Interim Payment Certificate", ipc.name, "subcontract", list(agreements)[0], update_modified=False)
 
 
 def enrich_proj_0002_cfo(ctx=None):

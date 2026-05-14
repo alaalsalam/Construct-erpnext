@@ -633,3 +633,22 @@ Final report UI reset:
 Safe report dashboard restoration:
 - Report dashboards are now rendered as HTML in the report message area, not through `report_summary`.
 - Keep `report_summary` disabled until the Frappe/theme interaction that blanked table cells is fully isolated.
+
+CMD-CONTRACTOR-01 contractor agreement linkage:
+- Existing `Subcontract` is now the Contractor Agreement layer; do not create a competing Contractor Agreement DocType unless a future migration plan is approved.
+- PROJ-0002 active agreements:
+  - `SC-2026-0002` الإنشائي.
+  - `SC-2026-0003` الكهرباء.
+  - `SC-2026-0004` التشطيبات.
+  - `SC-2026-0005` الواجهات.
+- Work Items carry `subcontract`, `contractor`, and `agreement_item_reference`.
+- Measurement Book, Measurement Entry, IPC, and IPC Line carry `subcontract` where linked.
+- New reports are the preferred presentation layer for agreement progress and IPC traceability.
+- Current next action: Present PROJ-0002 Phase 1 to client using the contractor agreement linkage story and collect handover feedback.
+
+CMD-INTEGRATION-01 integrated Phase 1 source branch:
+- Branch: `feature/phase-1-integrated-presentation-ready`.
+- Integrates report/dashboard table stability fixes from `feature/fix-report-tables-and-generic-kpis` with contractor agreement linkage from `feature/contractor-agreements-boq-ipc-linkage`.
+- Bench validation initially failed because `/home/frappe/frappe-bench/sites/apps.txt` listed `frappe_book_tutor`; corrected it to `book_tutor` and kept backup `apps.txt.bak-cmd-integration-01`.
+- Migrate, cache clear, website cache clear, and `bench build --app construct_erpnext` passed after the correction.
+- This is the source branch for CMD-27 Sales Invoice Posting and Collections Completion.

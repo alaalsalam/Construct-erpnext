@@ -2134,3 +2134,207 @@ PROJ-0002 Unit Profitability,ربحية وحدات PROJ-0002
 Linked Documents,المستندات المرتبطة
 Visual Indicators,المؤشرات اللونية
 Report Summary,ملخص التقرير
+
+Unit is required on Sales Invoice Item for Sales Contract invoices.,الوحدة مطلوبة في بند فاتورة البيع لفواتير عقود البيع.
+Estate Rental,إدارة التأجير العقاري
+Lease Contract Settings,إعدادات عقد الإيجار
+Lease Contract,عقد إيجار
+Rent Schedule,جدول الإيجار
+Lease Contract Register,سجل عقود الإيجار
+Rent Schedule Report,تقرير جدول الإيجار
+Active Leases Report,تقرير عقود الإيجار النشطة
+Lease Expiry Report,تقرير انتهاء عقود الإيجار
+Rental Value Summary,ملخص قيمة الإيجارات
+Lease & Rent Schedule,عقود الإيجار وجداول الإيجار
+Lease & Rental,الإيجار والتأجير
+Rental Operations,عمليات التأجير
+Default Lease Period Months,مدة الإيجار الافتراضية بالأشهر
+Contract Number Prefix,بادئة رقم العقد
+Default Billing Frequency,دورية الفوترة الافتراضية
+Default Security Deposit Months,أشهر التأمين الافتراضية
+Allow Duplicate Active Lease For Unit,السماح بتكرار عقد إيجار نشط لنفس الوحدة
+Require Customer,اشتراط العميل
+Require Rent Schedule,اشتراط جدول الإيجار
+Allow Backdated Lease,السماح بعقد إيجار بتاريخ سابق
+Mark Unit Rented On Activation,تحديث الوحدة كمؤجرة عند التفعيل
+Enable Rent Invoice Generation,تفعيل إنشاء فواتير الإيجار
+Auto Generate Rent Schedule,إنشاء جدول الإيجار تلقائياً
+Use Company Default Currency,استخدام عملة الشركة الافتراضية
+Lease Start Date,تاريخ بداية الإيجار
+Lease End Date,تاريخ نهاية الإيجار
+Lease Status,حالة عقد الإيجار
+Lease Type,نوع الإيجار
+Tenant Details,بيانات المستأجر
+Tenant Name,اسم المستأجر
+Rental Terms,شروط الإيجار
+Monthly Rent,الإيجار الشهري
+Billing Frequency,دورية الفوترة
+Security Deposit Amount,مبلغ التأمين
+Total Contract Rent,إجمالي إيجار العقد
+Payment Terms,شروط الدفع
+Lease Terms,شروط عقد الإيجار
+Actual Vacating Date,تاريخ الإخلاء الفعلي
+Rent Totals,إجماليات الإيجار
+Total Scheduled Rent,إجمالي الإيجار المجدول
+Total Invoiced Rent,إجمالي الإيجار المفوتر
+Total Collected Rent,إجمالي الإيجار المحصل
+Total Outstanding Rent,إجمالي الإيجار المتبقي
+Rent Collection Status,حالة تحصيل الإيجار
+Future Accounting References,مراجع محاسبية مستقبلية
+Future References,مراجع مستقبلية
+First Rent Invoice,أول فاتورة إيجار
+Latest Payment Entry,آخر سند قبض
+Invoices Created,تم إنشاء الفواتير
+Previous Unit State,حالة الوحدة السابقة
+Previous Unit Status,حالة الوحدة السابقة
+Previous Marketing Status,الحالة التسويقية السابقة
+Termination Reason,سبب الإنهاء
+Cancellation Reason,سبب الإلغاء
+Cancellation Date,تاريخ الإلغاء
+Period Start,بداية الفترة
+Period End,نهاية الفترة
+Rent Amount,مبلغ الإيجار
+Rent Period {0},فترة الإيجار {0}
+Long Term Rent,إيجار طويل الأجل
+Short Term Rent,إيجار قصير الأجل
+Commercial Rent,إيجار تجاري
+Monthly,شهري
+Quarterly,ربع سنوي
+Semi Annual,نصف سنوي
+Annual,سنوي
+Terminated,منهي
+Create Lease Contract,إنشاء عقد إيجار
+Generate Rent Schedule,إنشاء جدول الإيجار
+Active Lease Contracts,عقود الإيجار النشطة
+Scheduled Rental Value,قيمة الإيجار المجدولة
+Expiring Leases,عقود إيجار قاربت الانتهاء
+Tenant / Customer,المستأجر / العميل
+Lease Start,بداية الإيجار
+Lease End,نهاية الإيجار
+Days Remaining,الأيام المتبقية
+Monthly Rent Value,قيمة الإيجار الشهري
+Active Leases,عقود إيجار نشطة
+Only Rent reservations can be converted to Lease Contract.,يمكن تحويل حجوزات الإيجار فقط إلى عقد إيجار.
+Only active reservations can be converted to Lease Contract.,يمكن تحويل الحجوزات النشطة فقط إلى عقد إيجار.
+Lease End Date must be on or after Lease Start Date.,يجب أن يكون تاريخ نهاية الإيجار في أو بعد تاريخ بداية الإيجار.
+Customer is required for a Lease Contract.,العميل مطلوب في عقد الإيجار.
+Monthly Rent must be greater than zero.,يجب أن يكون الإيجار الشهري أكبر من صفر.
+Rent Schedule is required for this Lease Contract.,جدول الإيجار مطلوب لهذا العقد.
+Rent Amount cannot be negative.,لا يمكن أن يكون مبلغ الإيجار سالباً.
+Reservation must be Reserved before conversion to Lease Contract.,يجب أن يكون الحجز محجوزاً قبل تحويله إلى عقد إيجار.
+Phase 2 - Lease & Rent (Upcoming),المرحلة الثانية - الإيجار والتأجير (قادمة)
+Phase 2 - Rental Operations (Upcoming),المرحلة الثانية - عمليات الإيجار (قادمة)
+Phase 2 - Lease & Rental (Upcoming),المرحلة الثانية - الإيجار والتأجير (قادمة)
+Project Purchase Control Summary,ملخص رقابة مشتريات المشروع
+BOQ Line Scope,نطاق بند جدول الكميات
+Quantity & Rate,الكمية والسعر
+Execution Tracking,تتبع التنفيذ
+Execution Summary,ملخص التنفيذ
+Category Summary,ملخص التصنيفات
+Construction Work Item,بند عمل إنشائي
+Requested Qty,الكمية المطلوبة
+Ordered Qty,الكمية المطلوبة بأمر شراء
+Received Qty,الكمية المستلمة
+Invoiced Qty,الكمية المفوترة
+Consumed Qty,الكمية المصروفة
+Measured Qty,الكمية المقاسة
+Certified Qty,الكمية المعتمدة
+Remaining Qty,الكمية المتبقية
+Planned Qty,الكمية المخططة
+Expected Qty,الكمية المتوقعة
+Wastage %,نسبة الهالك %
+Wastage Percent,نسبة الهالك
+Planned Amount,المبلغ المخطط
+Actual Amount,المبلغ الفعلي
+Remaining Amount,المبلغ المتبقي
+Variance Amount,مبلغ الانحراف
+Variance %,نسبة الانحراف %
+Variance Percent,نسبة الانحراف
+Execution Status,حالة التنفيذ
+Risk Status,حالة المخاطر
+Overrun,تجاوز
+Underrun,أقل من المخطط
+Not Started,لم يبدأ
+Requested,تم الطلب
+Ordered,تم إصدار أمر شراء
+Received,تم الاستلام
+Invoiced,تمت الفوترة
+Partially Consumed,مصروف جزئياً
+Fully Consumed,مصروف بالكامل
+Partially Measured,مقاس جزئياً
+Certified,معتمد
+Normal,طبيعي
+Watch,تحت المراقبة
+Refresh Execution Summary,تحديث ملخص التنفيذ
+Refreshing execution summary...,جاري تحديث ملخص التنفيذ...
+Legacy / Additional Breakdown,تفصيل إضافي / سابق
+Total Requested Amount,إجمالي المبلغ المطلوب
+Total Ordered Amount,إجمالي المبلغ بأوامر الشراء
+Total Invoiced Amount,إجمالي المبلغ المفوتر
+Total Consumed Amount,إجمالي المبلغ المصروف
+Total Measured Amount,إجمالي المبلغ المقاس
+Total Certified Amount,إجمالي المبلغ المعتمد
+Operational work item generated from or linked to this BOQ line.,بند العمل التشغيلي المنشأ من بند جدول الكميات أو المرتبط به.
+Quantity requested through Material Requests for this BOQ line.,الكمية المطلوبة عبر طلبات المواد لهذا البند.
+Quantity ordered through Purchase Orders for this BOQ line.,الكمية المطلوبة عبر أوامر الشراء لهذا البند.
+Quantity received through Purchase Receipts for this BOQ line.,الكمية المستلمة عبر سندات الاستلام لهذا البند.
+Quantity invoiced through Purchase Invoices for this BOQ line.,الكمية المفوترة عبر فواتير الشراء لهذا البند.
+Quantity consumed through Stock Entries for this BOQ line.,الكمية المصروفة عبر قيود المخزون لهذا البند.
+Quantity measured and verified through Measurement Book entries.,الكمية المقاسة والمعتمدة ميدانياً عبر قيود دفتر القياسات.
+Quantity financially certified through approved IPCs.,الكمية المعتمدة مالياً عبر المستخلصات المعتمدة.
+Expected quantity still remaining after actual execution quantities.,الكمية المتوقعة المتبقية بعد كميات التنفيذ الفعلية.
+Actual cost amount from committed, invoiced, consumed, measured, or certified downstream activity.,المبلغ الفعلي من الالتزامات أو الفواتير أو الصرف أو القياس أو الاعتماد المرتبط بالبند.
+Expected BOQ amount still remaining after actual downstream cost.,مبلغ جدول الكميات المتوقع المتبقي بعد تكلفة التنفيذ الفعلية.
+Difference between actual downstream cost and expected BOQ amount.,الفرق بين تكلفة التنفيذ الفعلية ومبلغ جدول الكميات المتوقع.
+Variance percentage between actual downstream cost and expected BOQ amount.,نسبة الفرق بين تكلفة التنفيذ الفعلية ومبلغ جدول الكميات المتوقع.
+Presentation status derived from procurement, consumption, measurement, certification, and variance.,حالة عرض مستنتجة من المشتريات والصرف والقياس والاعتماد والانحراف.
+Contractor Agreement,اتفاقية مقاول
+Agreement Information,بيانات الاتفاقية
+Agreement Number,رقم الاتفاقية
+Agreement Date,تاريخ الاتفاقية
+Agreement Type,نوع الاتفاقية
+Lump Sum,مبلغ مقطوع
+Labor Only,عمالة فقط
+Material & Labor,مواد وعمالة
+BOQ / Scope,جدول الكميات / نطاق العمل
+Scope Summary,ملخص نطاق العمل
+Agreement Items,بنود الاتفاقية
+Progress Summary,ملخص التقدم
+Total Agreement Amount,إجمالي مبلغ الاتفاقية
+Remaining Agreement Amount,المبلغ المتبقي من الاتفاقية
+Measured Percent,نسبة القياس
+Certified Percent,نسبة الاعتماد
+Retention / Advances / Guarantees,المحتجزات / الدفعات المقدمة / الضمانات
+Penalty Terms,شروط الغرامات
+Guarantee Terms,شروط الضمان
+BOQ / Work Item Links,روابط جدول الكميات وبنود العمل
+Agreement Item Title,عنوان بند الاتفاقية
+Agreed Values,القيم المتفق عليها
+Agreed Quantity,الكمية المتفق عليها
+Agreed Rate,السعر المتفق عليه
+Agreed Amount,المبلغ المتفق عليه
+Measured / Certified Progress,تقدم القياس والاعتماد
+Measured Quantity,الكمية المقاسة
+Certified Quantity,الكمية المعتمدة
+Invoiced Quantity,الكمية المفوترة
+Remaining Quantity,الكمية المتبقية
+Item Status,حالة البند
+Contractor Agreement Register,سجل اتفاقيات المقاولين
+Contractor Agreement Item Progress,تقدم بنود اتفاقيات المقاولين
+Contractor Agreement to IPC Traceability,تتبع اتفاقية المقاول إلى المستخلص
+Contractor Agreement Exposure Summary,ملخص تعرض اتفاقيات المقاولين
+Agreements Count,عدد الاتفاقيات
+Agreement Scope,نطاق الاتفاقية
+Certification,الاعتماد
+Contractor Controls,ضوابط المقاول
+Contractor Agreement that covers this Work Item.,اتفاقية المقاول التي تغطي بند العمل هذا.
+Contractor assigned through the contractor agreement.,المقاول المسند من خلال اتفاقية المقاول.
+Contractor agreement used as the source scope for this Measurement Book.,اتفاقية المقاول المستخدمة كنطاق مصدر لدفتر القياس هذا.
+Contractor agreement fetched from the linked Work Item or Measurement Book.,اتفاقية المقاول التي يتم جلبها من بند العمل أو دفتر القياس المرتبط.
+Contractor agreement covered by this IPC.,اتفاقية المقاول التي يغطيها هذا المستخلص.
+Operational Work Item covered by this contractor agreement row.,بند العمل التشغيلي الذي يغطيه هذا الصف من اتفاقية المقاول.
+Quantity agreed with the contractor for this Work Item.,الكمية المتفق عليها مع المقاول لهذا البند.
+Unit rate agreed with the contractor for this Work Item.,سعر الوحدة المتفق عليه مع المقاول لهذا البند.
+Agreed amount calculated automatically from quantity and rate.,المبلغ المتفق عليه محسوب تلقائياً من الكمية والسعر.
+Measured quantity calculated automatically from linked Measurement Entries.,الكمية المقاسة محسوبة تلقائياً من القياسات المرتبطة.
+Certified quantity calculated automatically from linked IPC lines.,الكمية المعتمدة محسوبة تلقائياً من بنود المستخلصات المرتبطة.

@@ -1,3 +1,3 @@
 # Next Action
 
-Start CMD-27 Sales Invoice Posting and Collections Completion from feature/phase-1-integrated-presentation-ready.
+Review completed sales collections, then decide whether to proceed with rent invoice collections or Phase 2 CRM.

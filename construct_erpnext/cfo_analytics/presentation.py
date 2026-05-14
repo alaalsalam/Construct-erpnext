@@ -318,3 +318,8 @@ def sales_contracts(filters=None):
 @frappe.whitelist()
 def draft_sales_invoices(filters=None):
 	return _card(_count("Sales Invoice", {"docstatus": 0}), "Int", _report_route("Sales Invoice from Installments Report"))
+
+
+@frappe.whitelist()
+def submitted_sales_invoices(filters=None):
+	return _card(_count("Sales Invoice", {"docstatus": 1}), "Int", _report_route("Sales Invoice from Installments Report"))

@@ -652,3 +652,16 @@ CMD-INTEGRATION-01 integrated Phase 1 source branch:
 - Bench validation initially failed because `/home/frappe/frappe-bench/sites/apps.txt` listed `frappe_book_tutor`; corrected it to `book_tutor` and kept backup `apps.txt.bak-cmd-integration-01`.
 - Migrate, cache clear, website cache clear, and `bench build --app construct_erpnext` passed after the correction.
 - This is the source branch for CMD-27 Sales Invoice Posting and Collections Completion.
+
+CMD-27 sales collections completion:
+- Branch: `feature/sales-invoice-posting-collections-completion`.
+- Backup before accounting posting:
+  - `./construction.yemenfrappe.com/private/backups/20260514_220814-construction_yemenfrappe_com-database.sql.gz`.
+- Submitted Sales Invoice: `ACC-SINV-2026-00002`.
+- Created/submitted Payment Entry: `ACC-PAY-2026-00010`.
+- Payment amount is intentionally partial: `1,210,000.00` of `2,420,000.00`.
+- `SC-PROJ-0002-001` collection status is now `Partially Collected`.
+- GL Entries for the Sales Invoice and Payment Entry carry Unit `BLD-PROJ-000-001-S-01-03`.
+- New sales reports: Buyer Statement, Sales Installment Collection Status, Unit Revenue and Collection Summary.
+- Do not submit the remaining draft sales invoices unless the user explicitly asks and accounting review approves it.
+- Current next action: Review completed sales collections, then decide whether to proceed with rent invoice collections or Phase 2 CRM.

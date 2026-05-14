@@ -1308,3 +1308,28 @@
   - Contractor Agreement Register, Item Progress, IPC Traceability, and Exposure Summary reports load.
 - Safety validation: no Journal Entries or submitted Sales Invoices exist; existing 9 Payment Entries are retained from the previous contractor payment presentation scenario and none were created by this integration task.
 - The integrated branch is now the required source branch for CMD-27 Sales Invoice Posting and Collections Completion.
+
+## 2026-05-14 CMD-27 Sales Invoice Posting and Collections Completion
+
+- Created branch `feature/sales-invoice-posting-collections-completion` from `feature/phase-1-integrated-presentation-ready`.
+- Created pre-posting backup for `construction.yemenfrappe.com`:
+  - Config: `./construction.yemenfrappe.com/private/backups/20260514_220814-construction_yemenfrappe_com-site_config_backup.json`.
+  - Database: `./construction.yemenfrappe.com/private/backups/20260514_220814-construction_yemenfrappe_com-database.sql.gz`.
+  - Public files: `./construction.yemenfrappe.com/private/backups/20260514_220814-construction_yemenfrappe_com-files.tar`.
+  - Private files: `./construction.yemenfrappe.com/private/backups/20260514_220814-construction_yemenfrappe_com-private-files.tar`.
+- Added safe Sales Contract invoice submission service `submit_sales_invoice_from_contract_invoice`.
+- Added safe Sales Invoice Payment Entry service `create_payment_entry_for_sales_invoice`.
+- Submitted only one Sales Invoice through normal ERPNext validation:
+  - `ACC-SINV-2026-00002`, amount `2,420,000.00`, status `Partly Paid`.
+- Created and submitted only one linked Payment Entry:
+  - `ACC-PAY-2026-00010`, amount `1,210,000.00`, mode of payment `نقداً`.
+- GL Entries for both the Sales Invoice and Payment Entry carry Unit `BLD-PROJ-000-001-S-01-03` and Project `PROJ-0002`.
+- Sales Contract `SC-PROJ-0002-001` now shows:
+  - total invoiced `2,420,000.00`.
+  - total collected `1,210,000.00`.
+  - total outstanding `1,210,000.00`.
+  - collection status `Partially Collected`.
+- Added reports: Buyer Statement, Sales Installment Collection Status, and Unit Revenue and Collection Summary.
+- Updated Sales & Rental, Executive Presentation Center, Executive Control Center, Real Estate Inventory, and Reports & Analytics workspace links for the new sales collection reports.
+- Added Submitted Sales Invoices KPI card and Arabic translations for sales collection labels.
+- No Journal Entry was manually created, no GL backfill was run, no Lease/Rent/Commission/CRM/Portal/WhatsApp features were created, and old contractor Payment Entries were not modified.

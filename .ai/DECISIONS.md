@@ -259,3 +259,11 @@
 - Contractor Agreement activation links Work Items to the contractor/agreement and creates or reuses the operational Contractor Account.
 - Measurement Entry and IPC now carry the Contractor Agreement where available so reports can trace BOQ -> Work Item -> Agreement -> Measurement -> IPC.
 - Contractor Agreements do not create Purchase Invoices, Payment Entries, Journal Entries, or GL Entries.
+
+## ADR-033: Sales Invoice Posting and Payment Entry Use ERPNext Standard Accounting
+
+- Submitted Sales Invoices are created from Sales Installment Schedule rows and remain linked to Sales Contract, Unit, Real Estate Project, and Unit Reservation where available.
+- Sales Invoice submission uses normal ERPNext `doc.submit()` validation; no accounting bypass or manual Journal Entry is allowed.
+- Payment Entry is the official collection document and is created against submitted Sales Invoice references only.
+- Unit dimension must remain present on Sales Invoice Item and resulting GL Entry so unit-level revenue traceability is preserved.
+- Automatic bulk submission remains disabled; only controlled finance-approved invoices should be submitted.

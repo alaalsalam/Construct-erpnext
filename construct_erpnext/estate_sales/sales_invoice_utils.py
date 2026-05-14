@@ -106,6 +106,23 @@ def create_invoice_from_contract_installments(sales_contract, installment_rows=N
 	)
 
 
+@frappe.whitelist()
+def submit_sales_invoice_from_contract_invoice(sales_invoice_name):
+	"""Submit one Sales Contract invoice through normal ERPNext accounting validation."""
+	invoice = frappe.get_doc("Sales Invoice", sales_invoice_name)
+	if invoice.docstatus != 0:
+		frappe.throw(_("Sales Invoice {0} must be Draft before submission.").format(invoice.name))
+
+	installments = _get_installments_for_invoice(invoice.name)
+	if not installments:
+		frappe.throw(_("Sales Invoice {0} is not linked to a Sales Contract installment.").format(invoice.name))
+
+	_validate_invoice_for_contract_submission(invoice, installments)
+	invoice.submit()
+	sync_installments_from_sales_invoice(invoice)
+	return invoice.name
+
+
 def create_sales_invoice_from_installments(sales_contract, installment_rows=None, submit=False):
 	"""Create a draft Sales Invoice from one or more Sales Contract installment rows."""
 	settings = get_sales_invoice_collection_settings()
@@ -281,14 +298,14 @@ def recalculate_sales_contract_collection_status(sales_contract):
 
 	if total_invoiced <= 0:
 		status = "Not Invoiced"
+	elif total_collected > 0 and total_outstanding > 0:
+		status = "Partially Collected"
+	elif total_collected > 0 and total_outstanding <= 0:
+		status = "Fully Collected" if total_invoiced + 0.01 >= contract_total else "Partially Collected"
 	elif total_invoiced + 0.01 < contract_total:
 		status = "Partially Invoiced"
-	elif total_collected <= 0:
-		status = "Fully Invoiced"
-	elif total_outstanding > 0:
-		status = "Partially Collected"
 	else:
-		status = "Fully Collected"
+		status = "Fully Invoiced"
 
 	if any(row.invoice_status == "Overdue" for row in rows):
 		status = "Overdue"
@@ -411,8 +428,39 @@ def _get_installments_for_invoice(invoice_name):
 			"due_date",
 			"installment_status",
 			"invoice_status",
+			"sales_invoice",
 		],
 	)
+
+
+def _validate_invoice_for_contract_submission(invoice, installments):
+	if not invoice.customer:
+		frappe.throw(_("Customer is required before submitting Sales Invoice {0}.").format(invoice.name))
+	if not invoice.company:
+		frappe.throw(_("Company is required before submitting Sales Invoice {0}.").format(invoice.name))
+
+	for item in invoice.items:
+		if getattr(item, "sales_contract", None) and not getattr(item, "unit", None):
+			frappe.throw(_("Unit is required on every Sales Invoice Item linked to a Sales Contract."))
+
+	for row in installments:
+		if row.invoice_status in ("Invoiced", "Partially Paid", "Paid") and row.sales_invoice == invoice.name:
+			continue
+		if row.sales_invoice != invoice.name:
+			frappe.throw(_("Installment {0} is not linked to Sales Invoice {1}.").format(row.name, invoice.name))
+
+		for duplicate in frappe.get_all(
+			"Sales Invoice Item",
+			filters={"sales_installment_reference": row.name, "parent": ["!=", invoice.name]},
+			fields=["parent"],
+		):
+			if frappe.db.get_value("Sales Invoice", duplicate.parent, "docstatus") == 1:
+				frappe.throw(
+					_("Installment {0} is already linked to submitted Sales Invoice {1}.").format(
+						row.name,
+						duplicate.parent,
+					)
+				)
 
 
 def _get_installment_invoice_status(sales_invoice, paid, outstanding, row):

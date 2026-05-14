@@ -145,3 +145,7 @@ Updated risks:
 - Agreement progress fields are operational management summaries and do not replace ERPNext accounting or GL.
 - Integrated Phase 1 branch now combines report-dashboard table stability fixes with contractor agreement linkage. Future CMD-27 work should start from `feature/phase-1-integrated-presentation-ready` to avoid losing either feature set.
 - Bench global `sites/apps.txt` previously listed `frappe_book_tutor` while the Python package is `book_tutor`, which blocked all bench commands. It was corrected during integration with a backup file, but future app installs should verify app name/package name alignment.
+- CMD-27 submitted one real Sales Invoice and one real Payment Entry for PROJ-0002. Do not cancel or amend them casually; use normal ERPNext cancellation only if the finance owner requests rollback.
+- Only `ACC-SINV-2026-00002` was submitted. Remaining draft invoices `ACC-SINV-2026-00003` and `ACC-SINV-2026-00004` remain unsubmitted by design.
+- Mode of Payment `نقداً` was created as minimal safe master data for the one sales collection validation and linked to `Cash - YCRE`.
+- Sales collection GL traceability is now validated for one unit-specific invoice/payment pair; broader production rollout still needs finance approval for tax, receivable, payment modes, permissions, and print formats.

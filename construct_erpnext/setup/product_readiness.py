@@ -57,6 +57,7 @@ PRESENTATION_NUMBER_CARDS = [
 	{"label": "Overdue Installments Amount", "method": "construct_erpnext.cfo_analytics.presentation.overdue_installments_amount", "document_type": "Sales Contract", "color": "#b45309"},
 	{"label": "Sales Contracts", "method": "construct_erpnext.cfo_analytics.presentation.sales_contracts", "document_type": "Sales Contract", "color": "#2563eb"},
 	{"label": "Draft Sales Invoices", "method": "construct_erpnext.cfo_analytics.presentation.draft_sales_invoices", "document_type": "Sales Invoice", "color": "#64748b"},
+	{"label": "Submitted Sales Invoices", "method": "construct_erpnext.cfo_analytics.presentation.submitted_sales_invoices", "document_type": "Sales Invoice", "color": "#059669"},
 	{"label": "Active Lease Contracts", "method": "construct_erpnext.cfo_analytics.presentation.active_lease_contracts", "document_type": "Lease Contract", "color": "#2563eb"},
 	{"label": "Scheduled Rental Value", "method": "construct_erpnext.cfo_analytics.presentation.scheduled_rental_value", "document_type": "Lease Contract", "color": "#059669"},
 	{"label": "Expiring Leases", "method": "construct_erpnext.cfo_analytics.presentation.expiring_leases", "document_type": "Lease Contract", "color": "#ea580c"},

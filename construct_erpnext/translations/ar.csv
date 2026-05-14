@@ -2338,3 +2338,32 @@ Unit rate agreed with the contractor for this Work Item.,سعر الوحدة ا�
 Agreed amount calculated automatically from quantity and rate.,المبلغ المتفق عليه محسوب تلقائياً من الكمية والسعر.
 Measured quantity calculated automatically from linked Measurement Entries.,الكمية المقاسة محسوبة تلقائياً من القياسات المرتبطة.
 Certified quantity calculated automatically from linked IPC lines.,الكمية المعتمدة محسوبة تلقائياً من بنود المستخلصات المرتبطة.
+Buyer Statement,كشف حساب المشتري
+Sales Installment Collection Status,حالة تحصيل أقساط البيع
+Unit Revenue and Collection Summary,ملخص إيراد وتحصيل الوحدة
+Submit Sales Invoice,ترحيل فاتورة المبيعات
+Create Payment Entry,إنشاء سند قبض
+Collected Amount,المبلغ المحصل
+Outstanding Amount,المبلغ المتبقي
+Partially Collected,محصل جزئياً
+Fully Collected,محصل بالكامل
+Buyer,المشتري
+Installment Collection,تحصيل الأقساط
+Collection Status,حالة التحصيل
+Unit Revenue,إيراد الوحدة
+Invoice Posting,ترحيل الفاتورة
+Payment Tracking,متابعة التحصيل
+Payment Received,تم استلام دفعة
+Debit,مدين
+Credit,دائن
+Installment,القسط
+Contract Amount,قيمة العقد
+Unit Dimension Status,حالة بُعد الوحدة
+No Invoice Item,لا يوجد بند فاتورة
+Needs Review,يحتاج مراجعة
+Ready,جاهز
+Submitted Sales Invoices,فواتير مبيعات مرحلة
+Collected Sales Amount,مبلغ مبيعات محصل
+Outstanding Sales Amount,مبلغ مبيعات متبقٍ
+Overdue Installments Count,عدد الأقساط المتأخرة
+Overdue Installments Amount,مبلغ الأقساط المتأخرة

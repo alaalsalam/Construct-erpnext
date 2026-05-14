@@ -114,3 +114,18 @@
 - استخدام فلتر `PROJ-0002` لعرض سيناريو المشروع الرئيسي.
 
 لا يتم إعادة تفعيل report summaries داخل التقارير إلا بعد التأكد من أن مشكلة عرض الجدول في المتصفح/الثيم انتهت.
+
+## 11. تحديث CMD-27 لتقارير التحصيل
+
+أضيفت تقارير تحصيل جديدة للعرض:
+
+- Buyer Statement: يعرض حركة الفاتورة والتحصيل للعميل.
+- Sales Installment Collection Status: يعرض حالة كل قسط والفاتورة والتحصيل والمتبقي.
+- Unit Revenue and Collection Summary: يعرض الإيراد والتحصيل والمتبقي لكل وحدة/عقد.
+
+للعرض على `PROJ-0002`:
+
+1. افتح Buyer Statement وفلتر على `SC-PROJ-0002-001`.
+2. افتح Sales Installment Collection Status وفلتر على `SC-PROJ-0002-001`.
+3. افتح Unit Revenue and Collection Summary وفلتر على `REP-2026-00002`.
+4. افتح GL Dimension Traceability للتأكيد أن الفاتورة وسند القبض يحملان Unit dimension.

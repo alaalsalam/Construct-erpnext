@@ -584,3 +584,10 @@ Integration:
 - `Backlog Request` links to one Customer Requirement and records gap reason, priority, waiting date, and latest retry status.
 - `Backlog Match Attempt` records retry attempts, available units checked, best score, result, and matched unit when found.
 - Backlog Matching is operational only; it does not notify, reserve, contract, invoice, collect, or post accounting entries.
+
+## Property Maintenance Foundation
+
+- `construct_erpnext/property_maintenance` contains operational maintenance request tracking.
+- `Property Maintenance Request` links a Unit to issue type, requester, status, priority, estimated cost, and actual cost.
+- `Property Maintenance Task` tracks execution tasks under a maintenance request.
+- Maintenance cost fields are operational management values only and do not create accounting documents or stock/work orders.

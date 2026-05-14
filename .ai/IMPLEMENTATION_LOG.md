@@ -1470,3 +1470,24 @@
   - Re-ran retry after correcting Units Checked logic, creating `BMA-2026-00004` to `BMA-2026-00006`.
   - Latest attempts checked 6 available units each and remained `No Match`, which is expected for the retained backlog scenario.
 - No notifications, reservations, contracts, invoices, Payment Entries, Journal Entries, or GL Entries were created by Backlog Matching.
+
+## 2026-05-14 CMD-FINAL-01 Phase G Maintenance Foundation
+
+- Added new `Property Maintenance` module with:
+  - `Property Maintenance Request`.
+  - `Property Maintenance Task`.
+- Maintenance Request links to Unit, Real Estate Project, Building, Floor, requester, issue type, priority, status, estimated cost, and actual cost.
+- Maintenance Task links to a maintenance request and tracks planned dates, status, assignment, and task-level costs.
+- Added reports:
+  - Maintenance Request Register.
+  - Open Maintenance Requests.
+  - Maintenance Cost Summary.
+  - Maintenance by Unit Report.
+- Added maintenance workspace links to Real Estate Inventory, Executive Control Center, and Reports & Analytics.
+- Added Arabic translations for maintenance requests, tasks, statuses, issue types, and reports.
+- Validation on `REP-2026-00002`:
+  - Created 4 Maintenance Requests: `PMR-2026-00001` to `PMR-2026-00004`.
+  - Created linked maintenance tasks for each request.
+  - Estimated maintenance cost total: `9,000.00`.
+  - Actual maintenance cost total: `2,050.00`.
+- No Work Orders, Purchase Invoices, Payment Entries, Journal Entries, GL Entries, or accounting documents were created by Maintenance.

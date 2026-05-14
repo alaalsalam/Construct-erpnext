@@ -25,6 +25,7 @@ after_migrate = [
     "construct_erpnext.real_estate_crm.setup.after_migrate.after_migrate",
     "construct_erpnext.smart_matching.setup.after_migrate.after_migrate",
     "construct_erpnext.backlog_matching.setup.after_migrate.after_migrate",
+    "construct_erpnext.property_maintenance.setup.after_migrate.after_migrate",
     "construct_erpnext.setup.product_readiness.sync_product_workspace_readiness",
     "construct_erpnext.procurement_control.setup.ensure_purchase_control_summary_workspace_links",
 ]

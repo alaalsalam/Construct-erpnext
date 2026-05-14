@@ -1929,6 +1929,38 @@ Backlog Matching Attempts Report,تقرير محاولات مطابقة قائم
 Active Count,عدد النشط
 Matched Count,عدد المطابق
 Average Priority,متوسط الأولوية
+Property Maintenance,صيانة العقارات
+Property Maintenance Request,طلب صيانة عقار
+Property Maintenance Requests,طلبات صيانة العقار
+Property Maintenance Task,مهمة صيانة عقار
+Property Maintenance Tasks,مهام صيانة العقار
+Maintenance Request,طلب الصيانة
+Maintenance Task,مهمة الصيانة
+Requester Type,نوع مقدم الطلب
+Requester Name,اسم مقدم الطلب
+Owner,مالك
+Tenant,مستأجر
+Internal,داخلي
+Issue Type,نوع المشكلة
+Electrical,كهرباء
+Plumbing,سباكة
+AC,تكييف
+Civil,مدني
+Cleaning,نظافة
+Work Details,تفاصيل العمل
+Estimated Cost,التكلفة التقديرية
+Actual Cost,التكلفة الفعلية
+Photos,صور
+Task Title,عنوان المهمة
+Planned Start,بداية مخططة
+Planned End,نهاية مخططة
+Completed On,تاريخ الإنجاز
+Maintenance Request Register,سجل طلبات الصيانة
+Open Maintenance Requests,طلبات الصيانة المفتوحة
+Maintenance Cost Summary,ملخص تكلفة الصيانة
+Maintenance by Unit Report,تقرير الصيانة حسب الوحدة
+Requests Count,عدد الطلبات
+Open Count,عدد المفتوح
 Rent Invoice Collection Settings,إعدادات فواتير وتحصيل الإيجارات
 Enable Rent Invoice Generation,تفعيل إنشاء فواتير الإيجار
 Auto Submit Rent Invoice,ترحيل فاتورة الإيجار تلقائياً

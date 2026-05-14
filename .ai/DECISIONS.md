@@ -305,3 +305,9 @@
 - Backlog Match Attempt records retry history and available units checked.
 - Backlog Matching does not reserve units, create tasks, send external notifications, or create accounting documents.
 - Notifications and automation are handled in a later readiness phase.
+
+## ADR-039: Property Maintenance Is Operational Cost Tracking Only
+
+- Property Maintenance Request and Property Maintenance Task track unit maintenance operations.
+- Estimated and actual costs are management fields and do not post accounting.
+- ERPNext Work Order, Purchase Invoice, Payment Entry, Journal Entry, and GL integration are deferred until a maintenance accounting design is approved.

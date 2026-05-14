@@ -731,3 +731,14 @@ CMD-FINAL-01 Phase F backlog matching:
 - Workspace links are present in Sales & Rental, Executive Control Center, Reports & Analytics, and Real Estate Inventory.
 - No notifications, reservations, contracts, invoices, Payment Entries, Journal Entries, or GL Entries were created.
 - Current next action: Continue CMD-FINAL-01 Phase G: implement Maintenance foundation.
+
+CMD-FINAL-01 Phase G property maintenance:
+- Added `Property Maintenance Request` and `Property Maintenance Task`.
+- Validation records for `REP-2026-00002`:
+  - Requests `PMR-2026-00001` to `PMR-2026-00004`.
+  - Linked maintenance tasks were created for each request.
+  - Total estimated cost `9,000.00`; total actual cost `2,050.00`.
+- Reports load with rows: Maintenance Request Register, Open Maintenance Requests, Maintenance Cost Summary, Maintenance by Unit Report.
+- Workspace links are present in Real Estate Inventory, Executive Control Center, and Reports & Analytics.
+- No accounting documents were created.
+- Current next action: Continue CMD-FINAL-01 Phase H: implement Document Management foundation.

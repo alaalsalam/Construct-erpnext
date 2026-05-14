@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PMT-.YYYY.-.#####",
+ "creation": "2026-05-14 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["task_section", "maintenance_request", "task_title", "status", "priority", "assigned_to", "dates_column", "planned_start", "planned_end", "completed_on", "cost_section", "estimated_cost", "actual_cost", "remarks"],
+ "fields": [
+  {"fieldname": "task_section", "fieldtype": "Section Break", "label": "Maintenance Task"},
+  {"description": "Parent maintenance request.", "fieldname": "maintenance_request", "fieldtype": "Link", "in_list_view": 1, "label": "Maintenance Request", "options": "Property Maintenance Request", "reqd": 1},
+  {"description": "Short task title.", "fieldname": "task_title", "fieldtype": "Data", "in_list_view": 1, "label": "Task Title", "reqd": 1},
+  {"default": "Open", "description": "Task status.", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Open\nIn Progress\nCompleted\nCancelled"},
+  {"default": "Medium", "description": "Task priority.", "fieldname": "priority", "fieldtype": "Select", "label": "Priority", "options": "Low\nMedium\nHigh\nUrgent"},
+  {"description": "User assigned to execute or coordinate this task.", "fieldname": "assigned_to", "fieldtype": "Link", "label": "Assigned To", "options": "User"},
+  {"fieldname": "dates_column", "fieldtype": "Column Break"},
+  {"description": "Planned task start date.", "fieldname": "planned_start", "fieldtype": "Date", "label": "Planned Start"},
+  {"description": "Planned task end date.", "fieldname": "planned_end", "fieldtype": "Date", "label": "Planned End"},
+  {"description": "Actual completion date.", "fieldname": "completed_on", "fieldtype": "Date", "label": "Completed On"},
+  {"fieldname": "cost_section", "fieldtype": "Section Break", "label": "Cost"},
+  {"description": "Estimated task cost for management tracking only.", "fieldname": "estimated_cost", "fieldtype": "Currency", "label": "Estimated Cost"},
+  {"description": "Actual task cost for management tracking only.", "fieldname": "actual_cost", "fieldtype": "Currency", "label": "Actual Cost"},
+  {"description": "Task notes.", "fieldname": "remarks", "fieldtype": "Small Text", "label": "Remarks"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Property Maintenance",
+ "name": "Property Maintenance Task",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Projects Manager", "share": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "description": "Operational task under a Property Maintenance Request."
+}

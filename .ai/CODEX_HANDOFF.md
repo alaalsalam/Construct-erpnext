@@ -2,7 +2,7 @@
 
 Read project memory and working rules first, continue from NEXT_ACTION, implement one task at a time, update memory after every task.
 
-Current branch: feature/ipc-foundation.
+Current branch: feature/final-real-estate-erp-completion (review branch: feature/final-business-logic-review-uat)
 
 Canonical repository path: /home/frappe/frappe-bench/apps/construct_erpnext.
 Old path /home/frappe/frappe-bench/apps/Construct-erpnext was removed by renaming the real repository folder.

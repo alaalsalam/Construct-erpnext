@@ -249,23 +249,31 @@ type: reference
 
 ---
 
-#### UAT-C3: عرض إعدادات الإيجار (عرض توضيحي)
+#### UAT-C3: عرض عقد إيجار PROJ-0002 وجدول الإيجار
 
-**الهدف:** التأكد من إعدادات الإيجار جاهزة
+**الهدف:** التأكد من أن دورة الإيجار التشغيلية جاهزة للـ UAT داخل PROJ-0002.
 
 **الخطوات:**
-1. الانتقال إلى Lease Contract Settings
-2. مراجعة: default_billing_frequency, default_lease_period_months
-3. الانتقال إلى Rent Invoice Collection Settings
-4. مراجعة: enable_rent_invoice_generation (False — مؤجل)
+1. الانتقال إلى Lease Contract
+2. فتح `LC-2026-00003`
+3. مراجعة: unit, customer, lease_start_date, lease_end_date, monthly_rent, lease_status
+4. مراجعة جدول Rent Schedule
+5. فتح Active Leases Report مع فلتر `REP-2026-00002`
+6. فتح Rent Schedule Report مع فلتر `LC-2026-00003`
+7. فتح Rental Value Summary مع فلتر `REP-2026-00002`
 
 **نتيجة متوقعة:**
-- الإعدادات موجودة وصحيحة
-- Invoice generation معطل (مؤجل)
+- العقد Active
+- الوحدة `BLD-PROJ-000-001-S-G-02` حالتها Rented
+- الحجز `RES-2026-00006` حالته Converted
+- Rent Schedule يحتوي 12 صفاً بإجمالي `948,000`
+- لا توجد فاتورة إيجار أو Payment Entry لهذا العقد ضمن هذا الاختبار
 
 **حقل Pass/Fail:**
-- إعدادات الإيجار موجودة؟ (نعم/لا)
-- Invoice generation معطل؟ (نعم/لا — صحيح)
+- عقد الإيجار Active؟ (نعم/لا)
+- جدول الإيجار 12 صفاً؟ (نعم/لا)
+- الوحدة Rented؟ (نعم/لا)
+- لم يتم إنشاء Rent Invoice أو Payment Entry؟ (نعم/لا)
 
 ---
 
@@ -484,7 +492,7 @@ type: reference
 | UAT-B3: GL Dimension Traceability | Pass / Fail | |
 | UAT-C1: Unit Reservation | Pass / Fail | |
 | UAT-C2: Sales Contract | Pass / Fail | |
-| UAT-C3: Lease Contract Settings | Pass / Fail | (عرض توضيحي) |
+| UAT-C3: Lease Contract + Rent Schedule | Pass / Fail | LC-2026-00003 |
 | UAT-D1: Customer Requirement | Pass / Fail | |
 | UAT-D2: Smart Matching | Pass / Fail | |
 | UAT-E1: CFO Dashboard | Pass / Fail | |

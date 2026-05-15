@@ -792,3 +792,23 @@ CMD-FINAL-01 Phase L final validation:
 - `ACC-SINV-2026-00005` remains submitted with outstanding `175,000.00`.
 - `ar.csv` parses cleanly.
 - Current next action: Review final completed real estate ERP system and prepare production hardening / client UAT plan.
+
+CMD-UAT-01 PROJ-0002 lease UAT finalization:
+- Branch: `feature/proj-0002-uat-lease-demo-finalization`.
+- Created one PROJ-0002 Lease Contract scenario through normal workflow:
+  - Unit: `BLD-PROJ-000-001-S-G-02`.
+  - Customer / tenant: `مستأجر تجاري محتمل`.
+  - Reservation: `RES-2026-00006`.
+  - Lease Contract: `LC-2026-00003`.
+  - Lease status/workflow_state: `Active`.
+  - Rent Schedule rows: 12.
+  - Total scheduled rent: `948,000.00`.
+- Unit status is now `Rented`.
+- Reservation status is now `Converted`.
+- Validated reports with rows:
+  - Active Leases Report for `REP-2026-00002`.
+  - Rent Schedule Report for `LC-2026-00003`.
+  - Rental Value Summary for `REP-2026-00002`.
+- No Rent Invoice, rent Payment Entry, Journal Entry, GL backfill, or raw SQL was created.
+- Documentation corrected: `ACC-SINV-2026-00002` and `ACC-PAY-2026-00010` are no longer described as fully deferred; they are submitted/created controlled validation records for sales collections.
+- Current next action: Run client UAT using PROJ-0002 scenario and collect feedback.

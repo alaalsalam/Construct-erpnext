@@ -112,7 +112,7 @@ Updated risks:
 - Phase 1 presentation must not imply that collections, rent invoicing, commissions, CRM, portals, WhatsApp, or full production accounting automation are complete; these are Phase 2 items.
 - Phase 1 presentation data is strong for BOQ, Work Items, executive reporting, inventory, profitability, reservations, and sales foundation, but procurement downstream after Material Request is intentionally thin; do not present PO/PR/PI/Stock as complete for every project.
 - Phase 1 presentation data contains one complete IPC example only; additional IPC scenarios should be added later if the client wants broader contractor billing coverage during the presentation.
-- Phase 1 sales presentation contains one Sales Contract and one draft Sales Invoice only; collections, submitted invoice accounting, Payment Entry, and sales GL validation remain Phase 2/finance-readiness work.
+- Historical note corrected by CMD-UAT-01: PROJ-0002 now has a submitted Sales Invoice `ACC-SINV-2026-00002` and partial Payment Entry `ACC-PAY-2026-00010`; only bulk automation and wider finance rollout remain pending.
 - PROJ-0002 is now the preferred presentation project and contains richer procurement, measurement, IPC, contractor, CFO, inventory, reservation, sales contract, and draft invoice data. Presentation should use PROJ-0002 instead of older spread-out examples.
 - `BOQ-PROJ-0002-001` is now Approved through the normal Construction BOQ workflow. Continue to avoid direct status edits or SQL workflow manipulation in future presentation corrections.
 - PROJ-0002 has draft Purchase Invoices from IPC and draft Sales Invoices from installments; these are presentation/foundation records and must not be described as posted receivables/payables or collections.
@@ -165,3 +165,6 @@ Updated risks:
 - Role and permission matrix is documented as a draft only; production permissions must be tested with real user roles before client go-live.
 - Print format readiness is documented but final legal/finance print formats still need client-approved wording and branding.
 - Final build still reports a non-blocking missing `doppio/node_modules` asset link warning from an unrelated app; it did not block `construct_erpnext` asset build but should be cleaned by the server owner before production hardening.
+- CMD-UAT-01 created PROJ-0002 Lease Contract `LC-2026-00003` and changed Unit `BLD-PROJ-000-001-S-G-02` to `Rented`; do not reset this unit before UAT unless the client requests a controlled rollback.
+- CMD-UAT-01 did not create Rent Invoice or Rent Payment Entry for `LC-2026-00003`; rental invoicing on PROJ-0002 remains optional for later UAT if explicitly requested.
+- Sales accounting should be described accurately: `ACC-SINV-2026-00002` is submitted and partially paid by `ACC-PAY-2026-00010`; only bulk/automatic sales invoicing and collection automation remain disabled.

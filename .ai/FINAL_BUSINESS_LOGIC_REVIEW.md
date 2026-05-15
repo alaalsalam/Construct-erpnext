@@ -283,7 +283,7 @@ type: project
 **المدخلات:** Unit Reservation (محول)، Unit، Customer
 **المخرجات:** تحديث Unit status → Sold على الإرسال
 **الوحدة السابقة:** Unit Reservation
-**الوحدة التالية:** Sales Invoice (مؤجل للخطوة القادمة)
+**الوحدة التالية:** Sales Invoice / Payment Entry (تم إثباتها جزئياً في UAT عبر فاتورة واحدة وسند قبض واحد)
 
 **التقارير:** (مدمجة في Sales & Rental workspace)
 **الإعدادات:** SalesContractSettings, SalesInvoiceCollectionSettings
@@ -294,11 +294,11 @@ type: project
 
 ### 1.11 فاتورة البيع والتحصيل (Sales Invoice & Payment)
 
-**الوحدة:** estate_sales (مؤجل لهذه المرحلة)
+**الوحدة:** estate_sales
 
-**الحالة:** الإعدادات موجودة لكن إنشاء الفواتير والإيصالات مؤجل للخطوة القادمة.
+**الحالة:** تم إثبات المسار مالياً على PROJ-0002 عبر Sales Invoice `ACC-SINV-2026-00002` وPayment Entry `ACC-PAY-2026-00010`. الإنشاء التلقائي بالجملة ما زال غير مفعل.
 
-**القيمة للعميل:** جاهز للتفعيل بتفعيل إعداد واحد.
+**القيمة للعميل:** يمكن عرض فاتورة مبيعات مرحلة جزئياً مع تحصيل جزئي ووصول Unit Dimension إلى GL.
 
 ---
 
@@ -314,10 +314,10 @@ type: project
 - `estate_rental/rent_invoice_utils.py`
 - `estate_rental/rent_collections_utils.py`
 
-**الغرض التجاري:** إدارة عقد الإيجار وجدول الإيجار. لا يولد فواتير أو إيصالات في هذه المرحلة.
+**الغرض التجاري:** إدارة عقد الإيجار وجدول الإيجار. سيناريو PROJ-0002 الحالي يثبت العقد والجدول فقط، بدون فاتورة إيجار أو سند قبض.
 
 **الشاشات الرئيسية:**
-- Lease Contract (0 عقود في PROJ-0002 — لا يوجد عقد إيجار منشأ بعد)
+- Lease Contract `LC-2026-00003` في PROJ-0002 — Active
 - Rent Schedule (جدول الإيجارات)
 
 **المدخلات:** Unit Reservation (النوع Rent)، Unit، Customer
@@ -335,7 +335,7 @@ type: project
 
 **الوحدة:** estate_rental (مؤجل لهذه المرحلة)
 
-**الحالة:** الإعدادات موجودة لكن إنشاء الفواتير والإيصالات مؤجل.
+**الحالة:** عقد الإيجار وجدول الإيجار جاهزان للـ UAT في PROJ-0002. إنشاء فاتورة الإيجار وسند قبض الإيجار يمكن اختباره لاحقاً إذا طلب العميل ذلك.
 
 ---
 
@@ -602,11 +602,11 @@ type: project
 - الحجز يمنع التعارض
 - Sales Contract يحول الحجز
 - Unit تصبح Sold عند إرسال العقد
-- الأقساط تغذي الفواتير (مؤجل للخطوة التالية)
-- الـ dimension (project/unit) يصل إلى Sales Invoice Item وGL (مؤجل)
+- الأقساط تغذي الفواتير، وتم إثبات ذلك جزئياً عبر `ACC-SINV-2026-00002`
+- الـ dimension (project/unit) يصل إلى Sales Invoice Item وGL في مسار البيع المثبت
 - كشف المشتري وتقارير التحصيل منطقية
 
-**ملاحظة:** إنشاء Sales Invoice و Payment Entry مؤجل لهذه المرحلة. الإعدادات موجودة وجاهزة.
+**ملاحظة:** تم ترحيل فاتورة بيع واحدة وإنشاء سند قبض جزئي واحد للـ UAT. الإنشاء التلقائي الكامل ما زال غير مفعل.
 
 ---
 
@@ -624,7 +624,7 @@ type: project
 - تحصيل الإيجار يحدث تحديث حالة العقد
 - تقارير المستأجرين منطقية
 
-**ملاحظة:** لا يوجد عقد إيجار في PROJ-0002. هذا مقبول لأن النظام جاهز.
+**ملاحظة:** يوجد الآن عقد إيجار UAT في PROJ-0002: `LC-2026-00003` للوحدة `BLD-PROJ-000-001-S-G-02` مع 12 صف Rent Schedule.
 
 ---
 
@@ -683,11 +683,12 @@ Lead/Customer → Customer Requirement → Viewing Appointment / Follow Up
 
 ### Major (Confusing but can be explained)
 
-1. **Lease Contract Count = 0 in PROJ-0002**
-   - لا يوجد عقد إيجار منشأ في بيانات PROJ-0002
-   - التأثير: العميل لا يرى إيجار حقيقي في العرض
-   - الحل: إنشاء عقد إيجار واحد على الأقل كعرض توضيحي
-   - ملاحظة: النظام جاهز. البيانات غير موجودة.
+1. **Lease Contract scenario completed in PROJ-0002**
+   - تم إنشاء عقد إيجار UAT واضح في بيانات PROJ-0002.
+   - العقد: `LC-2026-00003`.
+   - الوحدة: `BLD-PROJ-000-001-S-G-02`.
+   - الحالة: Active، والوحدة Rented، والحجز Converted.
+   - لا توجد فاتورة إيجار أو سند قبض إيجار لهذا العقد ضمن هذه المهمة.
 
 2. **Match Result Table Naming**
    - الجدول في قاعدة البيانات `tabMatch Result` (المسافة)
@@ -709,9 +710,9 @@ Lead/Customer → Customer Requirement → Viewing Appointment / Follow Up
    - التأثير: منخفض
 
 2. **Sales Invoice / Payment Entry Links**
-   - العقود تخزن `first_invoice_reference` و `latest_payment_entry` كـ stubs
-   - لا يتم ملؤها فعلياً في هذه المرحلة
-   - التأثير: منخفض — مؤجل للخطوة التالية
+   - تم إثبات رابط البيع عبر `ACC-SINV-2026-00002` و`ACC-PAY-2026-00010`.
+   - بقيت بعض الفواتير الأخرى مسودة عمداً لعرض حالات متنوعة.
+   - التأثير: منخفض — يحتاج مراجعة مالية قبل توسيع الترحيل والتحصيل.
 
 3. **Unit Profitability — Source Calculation**
    - `expected_margin = expected_sale_price - allocated_cost`
@@ -724,8 +725,8 @@ Lead/Customer → Customer Requirement → Viewing Appointment / Follow Up
 
 ### Deferred (Phase 2 / Production Hardening)
 
-1. **Sales Invoice Generation** — مؤجل للخطوة القادمة
-2. **Payment Entry Auto-Creation** — مؤجل
+1. **Bulk / automatic Sales Invoice Generation** — غير مفعل تلقائياً
+2. **Payment Entry Auto-Creation** — غير مفعل تلقائياً
 3. **Rent Invoice Auto-Creation** — مؤجل
 4. **Portal User Auto-Provisioning** — مؤجل للخطوة القادمة
 5. **External Email/SMS Sending** — مؤجل
@@ -746,7 +747,7 @@ Lead/Customer → Customer Requirement → Viewing Appointment / Follow Up
 - ✅ Unit Cost Allocation + Unit Profitability + 4 Reports
 - ✅ Unit Reservation (17 record, mixed statuses)
 - ✅ Sales Contract (3 records, all Approved) + Installment Schedule
-- ✅ Lease Contract (settings ready, data not created)
+- ✅ Lease Contract (`LC-2026-00003` Active in PROJ-0002)
 - ✅ Brokerage (Broker + Commission Rule + Commission Entry)
 - ✅ Real Estate CRM (5 Requirements + Viewing + Follow Up)
 - ✅ Smart Matching + Match Result
@@ -760,8 +761,8 @@ Lead/Customer → Customer Requirement → Viewing Appointment / Follow Up
 - ✅ 40+ Reports across all modules
 - ✅ Arabic translations in all major screens
 
-### يحتاج عرض توضيحي (Demo Only):
-- ⚠️ Lease Contract — النظام جاهز لكن لا يوجد بيانات. الحل: إنشاء عرض توضيحي واحد.
+### يحتاج توضيح أثناء العرض:
+- ⚠️ Rent Invoice / Rent Payment Entry — لم يتم إنشاؤهما لعقد PROJ-0002 الجديد؛ العقد وجدول الإيجار فقط جاهزان للـ UAT.
 
 ---
 
@@ -872,7 +873,7 @@ Lead/Customer → Customer Requirement → Viewing Appointment / Follow Up
 **نعم ✅**
 
 مع الملاحظات التالية:
-1. إنشاء عرض توضيحي واحد لعقد الإيجار (Lease Contract) لإظهار قدرة النظام
-2. توضيح للعميل أن Sales Invoice و Payment Entry مؤجلان للخطوة التالية
+1. عرض عقد الإيجار `LC-2026-00003` كجزء من سيناريو PROJ-0002
+2. توضيح أن Sales Invoice `ACC-SINV-2026-00002` وPayment Entry `ACC-PAY-2026-00010` موجودان ومثبتان جزئياً، بينما الترحيل التلقائي الكامل غير مفعل
 3. توضيح أن Portal و Notification هما وضع الأساس فقط (Foundation Only)
 4. LOW memory — تجنب العمليات الثقيلة على الخادم

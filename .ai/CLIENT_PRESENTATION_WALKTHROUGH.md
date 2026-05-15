@@ -713,7 +713,8 @@
   - Sales Contract: `SC-2026-00001`.
   - Real Estate Project: `REP-2026-00001`.
   - Unit Reservation: `RES-2026-00001`.
-- يجب التأكيد أن الفاتورة غير مرحّلة ولا يوجد Payment Entry أو GL Entry من مسار البيع في هذه المرحلة.
+- هذه النقطة تخص السجل القديم `ACC-SINV-2026-00001` فقط، وهو ما يزال مسودة وغير مرحل.
+- تحديث CMD-UAT-01: في PROJ-0002 توجد فاتورة بيع مرحلة `ACC-SINV-2026-00002` وسند قبض جزئي `ACC-PAY-2026-00010` مع تتبع بعد الوحدة في القيود الناتجة عن الفاتورة.
 
 ## PROJ-0002 Presentation Route — المسار الرئيسي الجديد
 
@@ -731,9 +732,10 @@
 10. Unit Profitability: افتح `UCA-2026-00005`, Unit Profitability Report, Project Unit Cost Matrix.
 11. Reservation: افتح `RES-PROJ-0002-001` إلى `RES-PROJ-0002-010` لشرح Reserved / Converted / Expired / Cancelled.
 12. Sales Contract: افتح `SC-PROJ-0002-001`, `SC-PROJ-0002-002`, `SC-PROJ-0002-003`.
-13. Draft Sales Invoice: افتح `ACC-SINV-2026-00002`, `ACC-SINV-2026-00003`, `ACC-SINV-2026-00004`.
+13. Sales Invoices: افتح `ACC-SINV-2026-00002` كفاتورة مرحلة ومدفوعة جزئياً، ثم افتح `ACC-SINV-2026-00003`, `ACC-SINV-2026-00004` كفواتير مسودة باقية.
+14. Lease Contract: افتح `LC-2026-00003` لعرض عقد إيجار PROJ-0002 وجدول الإيجار.
 
-نقطة مهمة للعميل: لا توجد Payment Entries أو Journal Entries، ولا توجد Sales Invoice submitted. الهدف هو عرض foundation متصل وقابل للفهم قبل مرحلة التحصيل والترحيل الكامل.
+نقطة مهمة للعميل: توجد فاتورة بيع واحدة مرحلة وسند قبض جزئي واحد للتحقق من التحصيل ووصول Unit Dimension إلى GL. لا توجد Journal Entries يدوية، ولا يوجد GL backfill، ولا توجد فاتورة إيجار أو سند قبض إيجار لعقد PROJ-0002 الجديد.
 ## تحديث نهائي لمسار PROJ-0002 - جاهزية التسليم
 
 استخدم `PROJ-0002` كسيناريو العرض الرئيسي للمرحلة الأولى.
@@ -884,3 +886,20 @@
 
 - Close the walkthrough by showing PROJ-0002 as the integrated scenario from BOQ to contractor agreements, IPC, CFO analytics, inventory, unit costing, sales collections, rental collections, CRM, matching, maintenance, documents, portal readiness, and notification readiness.
 - Clarify that production hardening will focus on UAT feedback, final permissions, print formats, finance/tax approval, portal security, and notification channel approval.
+
+## CMD-UAT-01 PROJ-0002 Lease Scenario Update
+
+- افتح Lease Contract `LC-2026-00003`.
+- اشرح أن الوحدة `BLD-PROJ-000-001-S-G-02` أصبحت `Rented` من خلال workflow طبيعي.
+- افتح Unit Reservation `RES-2026-00006` ووضح أنها `Converted`.
+- افتح Rent Schedule Report بفلتر `LC-2026-00003` لعرض 12 صفاً شهرياً بإجمالي `948,000`.
+- افتح Active Leases Report وRental Value Summary بفلتر `REP-2026-00002`.
+- لا تعرض هذا العقد كفاتورة إيجار أو تحصيل إيجار؛ لم يتم إنشاء Rent Invoice أو Rent Payment Entry لهذا السيناريو.
+
+## CMD-UAT-01 Sales Accounting Correction
+
+- لم تعد فواتير البيع والتحصيل مؤجلة بالكامل.
+- افتح Sales Invoice `ACC-SINV-2026-00002` كفاتورة بيع مرحلة مرتبطة بـ `SC-PROJ-0002-001`.
+- افتح Payment Entry `ACC-PAY-2026-00010` كسند قبض جزئي.
+- وضح أن Unit Dimension ظاهر في GL لمسار البيع المثبت.
+- بقيت الفواتير الأخرى مسودة عمداً، والترحيل التلقائي الكامل يحتاج اعتماداً مالياً.

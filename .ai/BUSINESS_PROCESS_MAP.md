@@ -223,7 +223,7 @@ Sales Installment Schedule
       ├── Installment 2: Construction Milestone
       ├── Installment 3: Handover
       │
-      ▼ (Phase 2 — not yet active)
+      ▼ (validated for one controlled invoice/payment; bulk automation not active)
 Sales Invoice ──► Payment Entry
       │
       ▼
@@ -238,9 +238,9 @@ Unit (Sold)
 | Sales Contract | العقد — يربط المشتري بالوحدة. يُحدث Unit status. |
 | Sales Installment Schedule | الجدول — يحدد الأقساط (مبلغ/تاريخ/نوع). المرحلة الأولى: قابل للإرسال فقط. |
 | SalesContractSettings | التحكم — يحدد قواعد التحقق والتسلسل |
-| SalesInvoiceCollectionSettings | التحكم — يحدد قواعد إنشاء الفواتير (مؤجل) |
-| SalesInvoiceUtils | الأداة — لإنشاء الفواتير (مؤجل) |
-| CollectionsUtils | الأداة — لتتبع التحصيل (مؤجل) |
+| SalesInvoiceCollectionSettings | التحكم — يحدد قواعد إنشاء الفواتير والتحصيل |
+| SalesInvoiceUtils | الأداة — لإنشاء وترحيل فاتورة بيع عند اعتماد المالية |
+| CollectionsUtils | الأداة — لتتبع التحصيل عبر Payment Entry |
 
 ### 4.3 دورة الإيجار
 
@@ -262,7 +262,7 @@ Rent Schedule
       ├── Rent 2: YYYY-MM-01
       ├── ...
       │
-      ▼ (Phase 2 — not yet active)
+      ▼ (جاهز للاختبار لاحقاً عند طلب العميل)
 Rent Invoice ──► Payment Entry
       │
       ▼
@@ -439,10 +439,10 @@ Property Document (linked to project/unit/owner/contract)
 
 | الوظيفة | السبب |
 |---|---|
-| Sales Invoice auto-creation | مؤجل للخطوة القادمة |
-| Payment Entry auto-creation | مؤجل |
+| Sales Invoice bulk/auto-creation | غير مفعل تلقائياً؛ يوجد تحقق جزئي عبر `ACC-SINV-2026-00002` |
+| Payment Entry auto-creation | غير مفعل تلقائياً؛ يوجد تحقق جزئي عبر `ACC-PAY-2026-00010` |
 | Rent Invoice auto-creation | مؤجل |
-| GL entries from Contract/Installment | مؤجل |
+| GL backfill from historical Contract/Installment | مؤجل؛ GL تحقق لمسار فاتورة البيع المرحّلة |
 | Portal user provisioning | وضع الأساس فقط |
 | External email/SMS sending | وضع الأساس فقط |
 | GL backfill for historical data | مؤجل |

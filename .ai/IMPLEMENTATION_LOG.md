@@ -1599,3 +1599,30 @@
 - Rent invoice `ACC-SINV-2026-00005` remains submitted and partially outstanding.
 - Arabic translation CSV parses successfully.
 - No GL backfill, manual Journal Entry, portal route activation, WhatsApp/Meta integration, or new feature outside CMD-FINAL-01 scope was introduced during final validation.
+
+## 2026-05-15 CMD-UAT-01 PROJ-0002 UAT Lease Scenario Finalization
+
+- Created final PROJ-0002 UAT lease scenario through normal Frappe workflow.
+- Selected Unit: `BLD-PROJ-000-001-S-G-02`.
+- Created tenant Customer if missing: `مستأجر تجاري محتمل`.
+- Created and reserved Unit Reservation: `RES-2026-00006`.
+- Created Lease Contract from reservation: `LC-2026-00003`.
+- Activated lease through workflow:
+  - Lease status: `Active`.
+  - Workflow state: `Active`.
+  - Docstatus: `1`.
+- Rent Schedule generated:
+  - 12 monthly rows.
+  - Monthly rent: `79,000.00`.
+  - Total scheduled rent: `948,000.00`.
+- Unit status result: `Rented`.
+- Reservation status result: `Converted`.
+- Validated reports with rows:
+  - Active Leases Report.
+  - Rent Schedule Report.
+  - Rental Value Summary.
+- Documentation corrected so sales accounting is no longer described as fully deferred:
+  - Sales Invoice `ACC-SINV-2026-00002` is submitted and partly paid.
+  - Payment Entry `ACC-PAY-2026-00010` exists.
+  - Unit dimension is visible in GL for the sales flow.
+- No Rent Invoice, rent Payment Entry, Journal Entry, GL backfill, raw SQL, or Server Script was created.

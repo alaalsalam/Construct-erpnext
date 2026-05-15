@@ -1,6 +1,6 @@
 # Next Action
 
-Review final business logic documents, then run client UAT using PROJ-0002 scenario.
+Run client UAT using PROJ-0002 scenario and collect feedback.
 
 ## Completed — CMD-FINAL-02 Business Logic Review
 
@@ -17,7 +17,7 @@ Key findings:
 - All 26 modules logically connected — no critical gaps
 - 7 workflows reviewed and validated (A: Construction/Contractor, B: Inventory/Profitability, C: Sales, D: Rental, E: CRM/Matching, F: Maintenance, G: Documents/Portal)
 - PROJ-0002 data confirmed: 72 Work Items, 1 BOQ, 12 Contractor Accounts, 4 IPCs, 17 Reservations, 3 Sales Contracts, 24 Units
-- 1 major gap: no Lease Contract data in PROJ-0002 (system ready, demo data needed for presentation)
+- Lease Contract gap closed: `LC-2026-00003` created for PROJ-0002 with 12 monthly Rent Schedule rows
 - System health: MariaDB OK, memory low (3.3GB available, swap full) — avoid heavy operations
 - Recommendation: READY for client UAT with PROJ-0002
 
